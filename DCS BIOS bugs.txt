@@ -1,0 +1,30 @@
+Mi-8
+	Misspellings: RIGTH instead of RIGHT
+
+AH-64
+	In C:\Users\<username>\Saved Games\DCS.openbeta\Scripts\DCS-BIOS\lib\AH-64D.lua
+		defineRotary("PLT_SAI_PITCH_TRIM", 13, 3002, 619, "PLT SAI", "Pilot SAI Cage Knob, (MW) Adjust aircraft reference symbol")
+	doesn't work.  However this works:
+		defineRotary("PLT_SAI_PITCH_TRIM", 13, 3004, 619, "PLT SAI", "Pilot SAI Cage Knob, (MW) Adjust aircraft reference symbol")
+	In command_defs.lua, 3002 refers to CageKnobPull, and 3004 refers to CageKnobRotate_ITER
+
+C-101
+	FRONT GPU Button is listed twice, once for "FRONT_ABORT" (actually the ABORT START switch) and once for "FRONT_GPU" (the correct button)
+	'FRONT_BAK_ADI_CAGE_BNT' should probably be 'BTN'
+	
+Ka-50
+	ENG_ROTOR_BREAK should be ENG_ROTOR_BRAKE
+
+A-4E-C
+	"Canopy" instead of 'CANOPY"
+
+F/A-18C
+	COCKKPIT_LIGHT_MODE_SW
+
+AJS37
+	PARKING_BRAKE TOGGLE doesn't seem to do anything.
+
+F-16C
+	CMDS_PWR_SOURCHE_SW, should be SOURCE?
+
+	
