@@ -31,7 +31,7 @@ def ColdStart(config):
 	int16 = 65535
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	pushSeqCmd(dt, '', '', "WARNING - Uses non-standard keybindings.")
+	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	pushSeqCmd(dt, '', '', 'Set collective full down.')
 	pushSeqCmd(dt, 'scriptSpeech', 'Set collective full down.')
 

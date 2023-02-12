@@ -5,16 +5,42 @@ def getScriptFunctions():
 		'Cold Start Ground (night)': 'ColdStartGroundNight',
 		'Cold Start Carrier (day)': 'ColdStartCarrierDay',
 		'Cold Start Carrier (night)': 'ColdStartCarrierNight',
+		'Shutdown': 'Shutdown',
 		'Flashpoint Levant Waypoints': 'FlashpointLevantWaypoints',
+		#'Test': 'Test',
 	}
 
 def getInfo():
-	return """ATTENTION: You must remap "Throttle (Left) - IDLE" to LAlt+Home.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+	return """ATTENTION: You must remap "Throttle (Left) - IDLE" to LAlt+Home, and "Throttle (Left) - OFF" to LAlt+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
+
+def Test(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+	
+	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
+	pushSeqCmd(4.3, 'IFEI_UP_BTN', 0)
+
+	return seq
 
 def ColdStartGroundDay(config):
 	return ColdStart(groundStart = True, dayStart = True)
@@ -55,7 +81,7 @@ def ColdStart(groundStart = True, dayStart = True):
 	insAlignTime = 1 * 60 + 55 # 1m55s
 	
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	pushSeqCmd(dt, '', '', "WARNING - Uses non-standard key bindings.")
+	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	
 	pushSeqCmd(dt, 'BATTERY_SW', 2, 'BATT switch - On')
 	
@@ -303,9 +329,8 @@ def ColdStart(groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'scriptSpeech', 'Press and hold uncage to align.  Press and release uncage to go to next mode, use T D C to align.  Unbox align O S B when complete.')
 
 	#pushSeqCmd(dt, '', '', "SET BINGO FUEL - 3000 LBS")
-	for i in range(30):
-		pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
-		pushSeqCmd(dt, 'IFEI_UP_BTN', 0)
+	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
+	pushSeqCmd(4.3, 'IFEI_UP_BTN', 0) # Release after 4.3 seconds to get 3000 lbs.
 	
 	#pushSeqCmd(dt, '', '', "IFF - ON")
 	pushSeqCmd(dt, 'UFC_IFF', 1) # UFC IFF button
@@ -344,6 +369,121 @@ def ColdStart(groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'EJECTION_SEAT_ARMED', 0)
 	
 	return seq
+
+
+def Shutdown(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	canopyCloseTime = 9
+	
+	pushSeqCmd(0, '', '', "Running Shutdown sequence")
+	
+	#pushSeqCmd(dt, '', '', "EJECTION SEAT SAFE/ARM HANDLE - SAFE")
+	pushSeqCmd(dt, 'EJECTION_SEAT_ARMED', 1)
+
+	#pushSeqCmd(dt, '', '', "OBOGS CONTROL SWITCH - OFF")
+	pushSeqCmd(dt, 'OBOGS_SW', 0)
+
+	#pushSeqCmd(dt, '', '', "FLAP SWITCH - FULL")
+	pushSeqCmd(dt, 'FLAP_SW', 0)
+
+	#pushSeqCmd(dt, '', '', "T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED")
+	pushSeqCmd(dt, 'TO_TRIM_BTN', 1)
+	pushSeqCmd(dt, 'TO_TRIM_BTN', 0)
+
+	#pushSeqCmd(dt, '', '', "PARK BRK HANDLE - ON")
+	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_ROTATE', 1)
+	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_PULL', 0)
+	
+	#pushSeqCmd(dt, '', '', "INS KNOB - OFF")
+	pushSeqCmd(dt, 'INS_SW', 0)
+
+	#pushSeqCmd(dt, '', '', "STANDBY ATTITUDE REFERENCE INDICATOR - CAGE")
+	pushSeqCmd(dt, 'SAI_CAGE', '1') # Pull knob.
+	pushSeqCmd(dt, 'SAI_SET', '+100') # Rotate CW slightly to hold.
+
+	#pushSeqCmd(dt, '', '', "RADAR KNOB - OFF")
+	pushSeqCmd(dt, 'RADAR_SW', 0)
+
+	#pushSeqCmd(dt, '', '', "RADAR ALTIMETER - OFF")
+	maxRadAlt = int(int16() * 3 + 8194) # Just over 3 full turns of the knob from 0 to max.
+	pushSeqCmd(dt, 'RADALT_HEIGHT', '-'+str(maxRadAlt)) # All the way off
+	
+	#pushSeqCmd(dt, '', '', "HUD ALT SWITCH - BARO")
+	pushSeqCmd(dt, 'HUD_ALT_SW', 1)
+
+	#pushSeqCmd(dt, '', '', "IR COOL SWITCH - OFF")
+	pushSeqCmd(dt, 'IR_COOL_SW', 0)
+
+	#pushSeqCmd(dt, '', '', "DISPENSER SWITCH - OFF")
+	pushSeqCmd(dt, 'CMSD_DISPENSE_SW', 0)
+	#pushSeqCmd(dt, '', '', "ECM - OFF")
+	pushSeqCmd(dt, 'ECM_MODE_SW', 0)
+
+	canopyTimerStart = getLastSeqTime()
+	#pushSeqCmd(dt, '', '', "CANOPY - OPEN")
+	pushSeqCmd(dt, 'CANOPY_SW', 2)
+	canopyTimerEnd = canopyCloseTime - (getLastSeqTime() - canopyTimerStart)
+	pushSeqCmd(canopyTimerEnd, 'CANOPY_SW', 1, 'Canopy closed') # Turn off canopy switch 8 seconds later.
+
+	# Left engine off
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_END}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - OFF to LAlt+End') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+
+	#pushSeqCmd(dt, '', '', "LEFT DDI - OFF")
+	pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 0)
+	
+	#pushSeqCmd(dt, '', '', "RIGHT DDI - OFF")
+	pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 0)
+	
+	#pushSeqCmd(dt, '', '', "HUD - OFF")
+	pushSeqCmd(dt, 'HUD_SYM_BRT', 0)
+	pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
+
+	#pushSeqCmd(dt, '', '', "AMPCD - OFF")
+	pushSeqCmd(dt, 'AMPCD_BRT_CTL', 0)
+	
+	#pushSeqCmd(dt, '', '', "UFC BRIGHTNESS - OFF")
+	pushSeqCmd(dt, 'UFC_BRT', 0)
+
+	#pushSeqCmd(dt, '', '', "HMD knob - OFF")
+	pushSeqCmd(dt, 'HMD_OFF_BRT', 0)
+
+	# Right engine off
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_END}{VK_RSHIFT up}')
+	
+	# Exterior lights off
+	pushSeqCmd(dt, 'FORMATION_DIMMER', 0)
+	pushSeqCmd(dt, 'POSITION_DIMMER', 0)
+	pushSeqCmd(dt, 'STROBE_SW', 0)
+	pushSeqCmd(dt, 'LDG_TAXI_SW', 0)
+
+	# Interior lights off
+	pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 0) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
+	pushSeqCmd(dt, 'CONSOLES_DIMMER', 0)
+	pushSeqCmd(dt, 'INST_PNL_DIMMER', 0)
+	pushSeqCmd(dt, 'FLOOD_DIMMER', 0)
+	pushSeqCmd(dt, 'CHART_DIMMER', 0)
+
+	pushSeqCmd(dt, 'BATTERY_SW', 1, 'BATT switch - OFF')
+
+	return seq
+
 
 # Adds waypoints with the HSI DATA screen.
 def FlashpointLevantWaypoints(config):
@@ -402,21 +542,28 @@ def FlashpointLevantWaypoints(config):
 		# End result should be ['N', '36', '21', '0739', 'E', '36', '17', '0249']
 		return ddmList
 
-	# Pass in "N 36°21.0739', E 36°17.0249'" or "N 36 21 0739 E 36 17 0249"
-	# Returns ['N', '36', '21', '0739', 'E', '36', '17', '0249']
+	# Pass in "N 36°21.0739', E 36°17.0249'" or "N 36 21 0739 E 36 17 0249, 77 m"
+	# Returns ['N', '36', '21', '0739', 'E', '36', '17', '0249', '77', 'm']
 	def ddmStringToList(ddm):
 		ddm = re.sub(r"[°.',]", ' ', ddm) # Replace all delimiters with spaces.
-		return ddm.split() # Then split the string on whitespace and we have the result.
+		#print(ddm.split());quit()
+		return ddm.split() # Then split the string on contiguous whitespace and we have the result.
 	
-	# Pass in "N 36°21'44.37\", E 36°17'14.99\"" or "N 36 21 44.37 E 36 17 14.99"
-	# Returns ['N', '36', '21', '44', '37', 'E', '36', '17', '14', '99']
+	# Pass in "N 36°21'44.37\", E 36°17'14.99\"" or "N 36 21 44.37 E 36 17 14.99, 77 m"
+	# Returns ['N', '36', '21', '44', '37', 'E', '36', '17', '14', '99', '77', 'm']
 	def dmsStringToList(dms):
 		dms = re.sub(r"[°'.\",]", ' ', dms) # Replace all delimiters with spaces.
-		return dms.split() # Then split the string on whitespace and we have the result.
+		return dms.split() # Then split the string on contiguous whitespace and we have the result.
 
 	# Presses the keys necessary to enter the waypoint.
-	# Starting state: Desired waypoint number selected, in HSI DATA page, with PRECISE boxed.
+	# Starting state: Go to HSI page, select desired waypoint, press DATA OSB, PRECISE boxed.
 	def ddmInput(ddmList):
+		# Select UFC OSB to prepare for data entry.
+		pressRelease('RIGHT_DDI_PB_05') # UFC OSB
+		
+		# Select POSN for lat/long entry.
+		pressRelease('UFC_OS1') # UFC POSN OSB
+		
 		# Enter the Northing.
 		# Northing direction
 		pressRelease(ufcKeys[ddmList[0]])
@@ -450,6 +597,21 @@ def FlashpointLevantWaypoints(config):
 			pressRelease(ufcKeys[key])
 		# Enter
 		pressRelease(ufcKeys['ENT'])
+
+		# Enter the altitude.
+		pressRelease(ufcKeys['OSB3'])
+		# If units is 'm', select MTRS
+		if ddmList[9] == 'm':
+			pressRelease(ufcKeys['OSB2'])
+		# Else select FEET.
+		else:
+			pressRelease(ufcKeys['OSB1'])
+		# Altitude
+		for key in ddmList[8]:
+			pressRelease(ufcKeys[key])
+		# Enter
+		pressRelease(ufcKeys['ENT'])
+
 	
 	ufcKeys = {
 		'N': 'UFC_2',
@@ -480,48 +642,25 @@ def FlashpointLevantWaypoints(config):
 	pressRelease('RIGHT_DDI_PB_02') # HSI OSB
 	pressRelease('RIGHT_DDI_PB_10') # DATA OSB
 	pressRelease('RIGHT_DDI_PB_19') # PRECISE OSB
-	pressRelease('RIGHT_DDI_PB_12') # Up Arrow OSB, changes to waypoint 1
-	pressRelease('RIGHT_DDI_PB_12') # Up Arrow OSB, changes to waypoint 2
-	pressRelease('RIGHT_DDI_PB_12') # Up Arrow OSB, changes to waypoint 3
-	pressRelease('RIGHT_DDI_PB_05') # UFC OSB
-	pressRelease('UFC_OS1') # UFC POSN OSB
+	for i in range(10):
+		pressRelease('RIGHT_DDI_PB_12') # Up Arrow OSB, increments waypoint number
+	
+	# Waypoints will be entered starting with the first one as waypoint 10.
+	waypoints = [
+		"N 37°00.0122', E 35°25.0565', 58 m", # Incirlik
+		"N 36°21.0739', E 36°17.0249', 77 m", # Hatay
+		"N 35°24.1140', E 35°57.0247', 29 m", # Bassel Al-Assad
+		"N 35°43.9384', E 37°06.2477', 250 m", # Abu al-Duhur
+	]
 
-	wp = "N 36°21.0739', E 36°17.0249'"
-	# Convert the wp string into a list with all its elements.
-	ddmList = ddmStringToList(wp)
-	# Enter the waypoint into the HSI.
-	ddmInput(ddmList)
+	for waypoint in waypoints:	
+		# Convert the wp string into a list with all its elements.
+		ddmList = ddmStringToList(waypoint)
+		# Enter the waypoint into the HSI.
+		ddmInput(ddmList)
+		# Select next waypoint.
+		pressRelease('RIGHT_DDI_PB_12') # Up Arrow OSB, increments waypoint number
 
 	pressRelease('RIGHT_DDI_PB_10') # HSI OSB
 
 	return seq
-
-
-"""	
-Hatay:
-DMS: N 36°21'44.37", E 36°17'14.99"
-DDM: N 36°21.0739', E 36°17.0249'
-MGRS: 37 S BA 56624 27553
-77m, 253ft
-
-Incirlik:
-DMS: N 37°00'07.37", E 35°25'33.91"
-DDM: N 37°00.0122', E 35°25.0565'
-MGRS: 36 S YF 15875 97851
-N/S (m): 221207, E/W (m): -35240
-58m, 191ft
-
-Taftanaz:
-DMS: N 35°58'26.77", E 36°46'53.19"
-DDM: N 35°58.0446', E 36°46.0886'
-MGRS: 37 S BV 99965 83351
-N/S (m): 103485, E/W (m): 82766
-311m, 1020ft
-
-Abu al-Duhur:
-DMS: N 35°43'56.30", E 37°06'14.85"
-DDM: N 35°43.9384', E 37°06.2477'
-MGRS: 37 S CV 28543 55914
-N/S (m): 76048, E/W (m): 111344
-250m, 820ft
-"""
