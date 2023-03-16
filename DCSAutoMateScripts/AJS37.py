@@ -112,6 +112,5 @@ def ColdStart(config):
 	#pushSeqCmd(dt, '', '', "Parking brake - OFF")
 	pushSeqCmd(dt, 'PARKING_BRAKE', 'TOGGLE') # FIXME This should work, but doesn't.  Brake must be released manually.
 	pushSeqCmd(dt, 'scriptSpeech', 'Release parking brake.')
-	#pushSeqCmd(dt, '', '', "HAVOC'S QUICK AUTOSTART IS COMPLETE"), message_timeout = 60)
 
 	return seq

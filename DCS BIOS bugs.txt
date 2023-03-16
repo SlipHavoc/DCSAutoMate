@@ -27,4 +27,11 @@ AJS37
 F-16C
 	CMDS_PWR_SOURCHE_SW, should be SOURCE?
 
-	
+F-5E-3
+	Something is messed up with the F-5's IFF panel controls...  Doesn't seem to be a way to turn the IFF Master Mode knob, and some of the controls are not shown correctly in the Chrome App (haven't tried in Bort though).
+	CHAFF_MODE and FLARE_MODE_SEL, inconsistent naming
+	SAI_PITCH_TRIM control seems to need the value to increase (or maybe decrease) in size each time its called in order to move the control repeatedly.
+
+UH-1H
+	"Emergency Govenor Switch" label
+

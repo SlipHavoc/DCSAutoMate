@@ -3,15 +3,23 @@ def getScriptFunctions():
 	return {
 		'Cold Start C-101CC': 'ColdStartCC',
 		'Cold Start C-101EB': 'ColdStartEB',
+		'Hot Start C-101CC': 'HotStartCC',
+		'Hot Start C-101EB': 'HotStartEB',
 	}
 
 def ScriptColdStartCC(config):
-	return ColdStart('C-101CC')
+	return ColdStart(config, 'C-101CC')
 
 def ScriptColdStartEB(config):
-	return ColdStart('C-101EB')
+	return ColdStart(config, 'C-101EB')
 
-def ColdStart(airplaneName = 'C-101CC'):
+def ScriptHotStartCC(config):
+	return HotStart(config, 'C-101CC')
+
+def ScriptHotStartEB(config):
+	return HotStart(config, 'C-101EB')
+
+def ColdStart(config, airplaneName = 'C-101CC'):
 	seq = []
 	seqTime = 0
 	dt = 0.2
@@ -86,7 +94,7 @@ def ColdStart(airplaneName = 'C-101CC'):
 	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{F1}')
-	pushSeqCmd(12.0, '', '', "Ground power is on")
+	pushSeqCmd(12, '', '', "Ground power is on")
 	
 	#pushSeqCmd(dt, '', '', "Accelerometer - Reset")
 	pushSeqCmd(dt, 'FRONT_GMETER_RESET', 1)
@@ -164,7 +172,7 @@ def ColdStart(airplaneName = 'C-101CC'):
 	pushSeqCmd(2, 'FRONT_CONT_ING_START', 1)
 	
 	#pushSeqCmd(dt, '', '', "At 10% N2: power lever - Idle")
-	pushSeqCmd(5.0, 'scriptKeyboard', '{VK_RSHIFT down}{HOME down}{HOME up}{VK_RSHIFT up}')
+	pushSeqCmd(5, 'scriptKeyboard', '{VK_RSHIFT down}{HOME down}{HOME up}{VK_RSHIFT up}')
 	
 	#pushSeqCmd(dt, '', '', "Wait for engine instruments to stabilize (30s)")
 	pushSeqCmd(30, '', '', "Engine instruments - Stabilized")
@@ -227,6 +235,79 @@ def ColdStart(airplaneName = 'C-101CC'):
 	# Wait until the TARSYN sync is complete (total process time minus the difference between now and when the process started).
 	tarsynSyncTimerEnd = tarsynSyncTime - (getLastSeqTime() - tarsynSyncTimerStart)
 	pushSeqCmd(tarsynSyncTimerEnd, '', '', "TARSYN alignment complete")
+
+	#pushSeqCmd(dt, '', '', "Manual steps remaining:")
+	#pushSeqCmd(dt, '', '', "Lights ... As needed")
+	#pushSeqCmd(dt, '', '', "Radios ... As needed")
+	#pushSeqCmd(dt, '', '', "Navigation ... As needed")
+	#pushSeqCmd(dt, '', '', "Set altimeter to match QFE (airfield elevation) or QNH (sea level altitude) as desired")
+	#pushSeqCmd(dt, '', '', "Set gunsight to 010 mils for aircraft centerline")
+	manualSteps = "Manual steps remaining: Set lights.  Tune radios.  Set navigation system.  Set altimeter to Q F E or Q N H."
+	if airplaneName == 'C-101CC':
+		manualSteps += "  Set gunsight to 0 1 0 mils for aircraft centerline."
+	pushSeqCmd(dt, 'scriptSpeech', manualSteps)
+	
+	return seq
+
+
+def HotStart(config, airplaneName = 'C-101CC'):
+	seq = []
+	seqTime = 0
+	dt = 0.2
+
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+	
+	int16 = 65535
+
+	pushSeqCmd(0, '', '', "Running Hot Start sequence")
+
+	#pushSeqCmd(dt, '', '', "Accelerometer - Reset")
+	pushSeqCmd(dt, 'FRONT_GMETER_RESET', 1)
+	pushSeqCmd(dt, 'FRONT_GMETER_RESET', 0)
+
+	# Radios
+	if airplaneName == 'C-101CC':
+		# V/TVU-740 radio, front instrument panel
+		#pushSeqCmd(dt, '', '', "V/TVU-740 V/UHF radio - On")
+		pushSeqCmd(dt, 'CC_FRONT_UHF_FUNCT', 1) # 0 = OFF, 1 = A3 (on), 2 = A3+G (on+guard), 3 = DF (not implemented)
+		
+		#  VHF-20B radio, right console
+		#pushSeqCmd(dt, '', '', "VHF-20B VHF radio - On")
+		pushSeqCmd(dt, 'CC_FRONT_VHF_COMM_PW', 1) # 0 = OFF, 1 = PWR, 2 = TEST
+	elif airplaneName == 'C-101EB':
+		# ARC-164(V) radio, front instrument panel
+		#pushSeqCmd(dt, '', '', "ARC-164(V) UHF radio - On")
+		pushSeqCmd(dt, 'EB_FRONT_UHF_FUNCT', 1) # 0 = OFF, 1 = MAIN, 2 = BOTH, 3 = ADF
+		
+		# ARC-134 radio, right console
+		#pushSeqCmd(dt, '', '', "ARC-134 VHF radio - On")
+		pushSeqCmd(dt, 'EB_FRONT_VHF_COMM_PW', 1)
+	
+	# Gunsight (C-101CC only)
+	if airplaneName == 'C-101CC':
+		# Gunsight
+		#pushSeqCmd(dt, '', '', "Gunsight - On, Man")
+		pushSeqCmd(dt, 'CC_FRONT_HUD_SIGHT', 1) # On
+		pushSeqCmd(dt, 'CC_FRONT_HUD_DEPRESS_MODE', 1) # Man
+		# NOTE The gunsight starts at 030 mils, and should be set to 010 mils initially for a waterline reference, but we can't guarantee the value on a cold restart after a shutdown, so leaving this to be set manually.
+		##pushSeqCmd(dt, '', '', "Gunsight depression - 010 mils (waterline)")
+		#pushSeqCmd(dt, 'CC_FRONT_HUD_DEPRESS_XX0', 'DEC')
+		#pushSeqCmd(dt, 'CC_FRONT_HUD_DEPRESS_XX0', 'DEC')
+
+	#pushSeqCmd(dt, '', '', "Flaps - Takeoff")
+	pushSeqCmd(dt, 'FRONT_FLAP_SEL', 1)
 
 	#pushSeqCmd(dt, '', '', "Manual steps remaining:")
 	#pushSeqCmd(dt, '', '', "Lights ... As needed")

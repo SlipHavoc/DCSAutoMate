@@ -324,3 +324,122 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'scriptSpeech', '', "Manual steps remaining:  Set lights.  Tune radios.  Set unguided weapon pylon ballistic knob to match rockets (middle knob on right rear wall).  Set altimeter to Q F E or Q N H.")
 
 	return seq
+
+
+def HotStart(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	# Start sequence
+	pushSeqCmd(0, '', '', "Running Hot Start sequence.")
+	
+	#pushSeqCmd(dt, '', '', "SPU-9 radio selector knob - Ground Crew (allows rearming)")
+	pushSeqCmd(dt, 'RADIO_SELECTOR', 3)
+
+		#pushSeqCmd(dt, '', '', "Voice message system (Betty) - On")
+	pushSeqCmd(dt, 'VOICE_MSG_EMER', 1)
+
+	#pushSeqCmd(dt, '', '', "Engine anti-ice/dust protection - As needed")
+	pushSeqCmd(dt, 'scriptSpeech', 'Set anti dust as needed')
+
+	# Heading source selector (needed after v.2.8)
+	#pushSeqCmd(dt, '', '', "Gyro/Mag/Manual heading switch - GYRO (middle)")
+	pushSeqCmd(dt, 'NAV_GYRO_MAG_MAN_HDG', 1) # 0 = MH, 1 = GYRO, 2 = MAN
+
+	# PVI and datalink, right console forward
+	#pushSeqCmd(dt, '', '', "Datalink master mode knob - WINGM")
+	pushSeqCmd(dt, 'DLNK_MASTER_MODE', 2) # 0 = OFF, 1 = REC, 2 = WINGM, 3 = COM
+
+	# Lights, uncomment as needed
+	##pushSeqCmd(dt, '', '', "Anticollision beacon - On")
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3003, 1)
+	#pushSeqCmd(dt, '', '', "Blade tip lights - On")
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3001, 1)
+	#pushSeqCmd(dt, '', '', "Formation lights - ")
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, 0) # Off (center switch position)
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.1) # 10%
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.2) # 30%
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.3) # 100%
+	#pushSeqCmd(dt, '', '', "Nav lights - On") # Front upper canopy frame, left side
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3004, 0) # Off (center switch position)
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3004, value = 0.1) # 10%
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3004, value = 0.2) # 30%
+	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3004, value = 0.3) # 100%
+
+	# Default startup done, doing post-startup tasks.
+	#pushSeqCmd(dt, '', '', "Laser rangefinder - Arm")
+	pushSeqCmd(dt, 'LASER_STANDBY', 1)
+	#pushSeqCmd(dt, '', '', "Master Arm - Arm")
+	pushSeqCmd(dt, 'WEAPONS_MASTER_ARM', 1)
+	#pushSeqCmd(dt, '', '', "Man/Auto weapon - Man")
+	pushSeqCmd(dt, 'WEAPONS_MANUAL_AUTO', 1)
+	
+	# UV-26 countermeasures dispenser
+	#pushSeqCmd(dt, '', '', "UV-26 Dispenser - Both sides")
+	pushSeqCmd(dt, 'UV26_DISPENSERS_SELECTOR', 1) # Switch to middle
+	#pushSeqCmd(dt, '', '', "UV-26 Program - Reset (to default program 110)")
+	pushSeqCmd(dt, 'UV26_RESET', 1) # Press
+	pushSeqCmd(dt, 'UV26_RESET', 0) # Release
+	#pushSeqCmd(dt, '', '', "UV-26 Num of sequences - 4")
+	pushSeqCmd(dt, 'UV26_SERIES', 1) # Press
+	pushSeqCmd(dt, 'UV26_SERIES', 0) # Release
+	pushSeqCmd(dt, 'UV26_SERIES', 1) # Press
+	pushSeqCmd(dt, 'UV26_SERIES', 0) # Release
+	pushSeqCmd(dt, 'UV26_SERIES', 1) # Press
+	pushSeqCmd(dt, 'UV26_SERIES', 0) # Release
+	#pushSeqCmd(dt, '', '', "UV-26 Dispense interval - 1 SEC")
+	pushSeqCmd(dt, 'UV26_INTERVAL', 1) # Press
+	pushSeqCmd(dt, 'UV26_INTERVAL', 0) # Release
+
+	# Set up ABRIS
+	#pushSeqCmd(dt, '', '', "ABRIS - Geo grid off, UTM grid (10 km grid) on")
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 1) # OPTION
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 1) # SETUP
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_3', 1) # Up arrow to wrap around
+	pushSeqCmd(dt, 'ABRIS_BTN_3', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 1) # CHART
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 0) # release
+	for i in range(24):
+		pushSeqCmd(dt, 'ABRIS_BTN_2', 1) # Down arrow
+		pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_4', 1) # CHANGE
+	pushSeqCmd(dt, 'ABRIS_BTN_4', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_2', 1) # Down arrow
+	pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_4', 1) # CHANGE
+	pushSeqCmd(dt, 'ABRIS_BTN_4', 0) # release
+	# Return to main setup screen.
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 1) # SETUP
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_2', 1) # Down arrow
+	pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 1) # SETUP
+	pushSeqCmd(dt, 'ABRIS_BTN_1', 0) # release
+	# Go to map.
+	pushSeqCmd(dt, 'ABRIS_BTN_5', 1) # MENU
+	pushSeqCmd(dt, 'ABRIS_BTN_5', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_5', 1) # NAV
+	pushSeqCmd(dt, 'ABRIS_BTN_5', 0) # release
+	pushSeqCmd(dt, 'ABRIS_BTN_2', 1) # MAP
+	pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
+
+	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining:  Set lights.  Tune radios.  Set unguided weapon pylon ballistic knob to match rockets (middle knob on right rear wall).  Set altimeter to Q F E or Q N H.")
+
+	return seq

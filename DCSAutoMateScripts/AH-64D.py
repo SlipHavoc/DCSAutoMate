@@ -363,7 +363,7 @@ def ColdStart(config):
 	#pushSeqCmd(dt, '', '', "POWER levers - Smoothly to FLY")
 	powerLeverStart = int(int16 * 0.25) # Power levers start at 25% - IDLE.
 	powerLeverEnd = int(int16 * 0.9) # Power levers end at 90% - FLY.
-	powerLeverTime = 10 # Number of seconds to advance the power levers.  9 seconds is minimum to avoid "Rotor RPM Low" warning.  Default autostart is about 11 seconds.
+	powerLeverTime = 11 # Number of seconds to advance the power levers.  9 seconds is minimum to avoid "Rotor RPM Low" warning, ISA at sea level.  Default autostart is about 11 seconds.
 	powerLeverDt = dt # Time between power lever steps.  If this is too fast, it could possibly lag or something on MP servers.
 	powerLeverSteps = int((powerLeverTime / powerLeverDt) / 2) # Divide by 2 here because there are two power levers that need to be advanced.
 	powerLeverIncrement = (powerLeverEnd - powerLeverStart) / powerLeverSteps # Increment (step size) is the total amount we need to go divided by the number of steps we're doing to get there.
@@ -496,7 +496,7 @@ def ColdStart(config):
 
 
 
-def HotStart():
+def HotStart(config):
 	seq = []
 	seqTime = 0
 	dt = 0.3

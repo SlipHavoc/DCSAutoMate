@@ -2,6 +2,7 @@
 def getScriptFunctions():
 	return {
 		'Cold Start': 'ColdStart',
+		'Hot Start': 'HotStart',
 	}
 
 def ColdStart(config):
@@ -66,8 +67,23 @@ def ColdStart(config):
 	pushSeqCmd(25, '', '', 'Engine started.')
 	
 	# Go to EHSD screen.
-	pushSeqCmd(dt, 'MPCD_L_2', 1)
-	pushSeqCmd(dt, 'MPCD_L_2', 0)
+	pushSeqCmd(dt, 'MPCD_L_2', 1) # EHSD OSB
+	pushSeqCmd(dt, 'MPCD_L_2', 0) # release
+
+	# Set EHSD color to be readable in VR.
+	pushSeqCmd(dt, 'MPCD_L_2', 1) # MAPM OSB
+	pushSeqCmd(dt, 'MPCD_L_2', 0) # release
+	pushSeqCmd(dt, 'MPCD_L_17', 1) # COLOR OSB
+	pushSeqCmd(dt, 'MPCD_L_17', 0) # release
+	pushSeqCmd(dt, 'MPCD_L_17', 1) # COLOR OSB
+	pushSeqCmd(dt, 'MPCD_L_17', 0) # release
+	pushSeqCmd(dt, 'MPCD_L_17', 1) # COLOR OSB
+	pushSeqCmd(dt, 'MPCD_L_17', 0) # release
+	pushSeqCmd(dt, 'MPCD_L_17', 1) # COLOR OSB
+	pushSeqCmd(dt, 'MPCD_L_17', 0) # release
+	pushSeqCmd(dt, 'MPCD_L_2', 1) # MAPM OSB
+	pushSeqCmd(dt, 'MPCD_L_2', 0) # release
+
 	
 	# Set INS to IFA, going through all the other positions on the way.
 	for i in range(5):
@@ -79,7 +95,55 @@ def ColdStart(config):
 	# Turn on FLIR, DMT, and chaff/flare dispenser.
 	pushSeqCmd(dt, 'FLIR', 1)
 	pushSeqCmd(dt, 'DMT', 1)
-	pushSeqCmd(dt, 'DECOY_CONTROL', 1)
+	pushSeqCmd(dt, 'DECOY_CONTROL', 1) # 0 = OFF, 1 = AUT, 2 = UP, 3 = DWN, 4 = RWR
+	# Volume 11141 is equivalent to one mousewheel-up on the knob (powered on, minimum volume)
+	pushSeqCmd(dt, 'RWR_VOL', 11141)
+	
+	# Fuel totalizer to TOT
+	pushSeqCmd(dt, 'FUEL_SEL', 4) # 0 = OUTBD, 1 = INBD, 2 = WING, 3 = INT, 4 = TOT, 5 = FEED, 6 = BIT
+
+	# Increment 25 times to set bingo to 2500 lbs
+	for i in range(25):
+		pushSeqCmd(dt, 'BINGO_SET', 'INC')
+	
+	# External lights
+	pushSeqCmd(dt, 'EXT_LIGHTS', 2) # 0 = OFF, 1 = NVG, 2 = NORM
+	
+	pushSeqCmd(dt, 'SEAT_SAFE_LEVER', 1)
+	
+	return seq
+	
+
+def HotStart(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+	
+	int16 = 65535
+	
+	pushSeqCmd(0, '', '', "Running Hot Start sequence")
+	# Internal lights
+	pushSeqCmd(dt, 'INST_LIGHTS', int16)
+	pushSeqCmd(dt, 'CONSOLE_LIGHTS', int16)
+	
+	pushSeqCmd(dt, 'EDP_BRIGHT', int16)
+	
+	# Volume 68% is about lined up with the little mark.
+	pushSeqCmd(dt, 'ICS_GND_VOL', int(int16 * 0.68))
+	pushSeqCmd(dt, 'ICS_AUX_VOL', int(int16 * 0.68))
+	
+	# Turn on FLIR, DMT, and chaff/flare dispenser.
+	pushSeqCmd(dt, 'DECOY_CONTROL', 1) # 0 = OFF, 1 = AUT, 2 = UP, 3 = DWN, 4 = RWR
 	# Volume 11141 is equivalent to one mousewheel-up on the knob (powered on, minimum volume)
 	pushSeqCmd(dt, 'RWR_VOL', 11141)
 	
@@ -88,9 +152,7 @@ def ColdStart(config):
 		pushSeqCmd(dt, 'BINGO_SET', 'INC')
 	
 	# External lights
-	pushSeqCmd(dt, 'EXT_LIGHTS', 2)
-	
-	pushSeqCmd(dt, 'SEAT_SAFE_LEVER', 1)
+	pushSeqCmd(dt, 'EXT_LIGHTS', 2) # 0 = OFF, 1 = NVG, 2 = NORM
 	
 	return seq
 	
