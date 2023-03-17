@@ -35,3 +35,6 @@ F-5E-3
 UH-1H
 	"Emergency Govenor Switch" label
 
+AV8BNA
+	M_Caution, mixed case
+	FUEL_SEL (fuel totalizer select knob) Actual values: 0 = INT, 1 = TOT, 2 = FEED, 3 = BIT.  Should be: 0 = OUTBD, 1 = INBD, 2 = WING, 3 = INT, 4 = TOT, 5 = FEED, 6 = BIT
