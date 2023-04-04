@@ -161,7 +161,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ENG_START', 0) # Release
 	pushSeqCmd(15, '', '', "Left engine at 20% RPM: cut-off valve - Open")
 	pushSeqCmd(dt, 'ENG_L_CUTOFF_VLV_HANDLE', 1)
-	pushSeqCmd(37, '', '', "Left engine - Started")
+	pushSeqCmd(45, '', '', "Left engine - Started")
 
 	# Right engine start
 	#pushSeqCmd(dt, '', '', "Engine selector switch - Right engine")
@@ -171,7 +171,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ENG_START', 0) # Release
 	pushSeqCmd(15, '', '', "Right engine at 20% RPM: cut-off valve - Open")
 	pushSeqCmd(dt, 'ENG_R_CUTOFF_VLV_HANDLE', 1)
-	pushSeqCmd(37, '', '', "Right engine - Started")
+	pushSeqCmd(45, '', '', "Right engine - Started")
 
 	#pushSeqCmd(dt, '', '', "APU - Stop")
 	pushSeqCmd(dt, 'ENG_APU_STOP', 1)

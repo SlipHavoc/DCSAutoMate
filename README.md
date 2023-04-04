@@ -19,7 +19,7 @@ DCS AutoMate can also be used to script any other cockpit commands, such as addi
 
 You can run any script at any time; it's up to you to run the right scripts at the right time.  To stop a script, alt-tab to the DCSAutoMate window and press Ctrl-C a few times, or just close the window.
 
-(Optionally, you can set a few configuration options configure the program by editing DCSAutoMateConfig.ini, see below for explanation of settings.
+(Optionally, you can set a few configuration options for the program by editing DCSAutoMateConfig.json, see below for explanation of settings.)
 
 **Advanced use:**
 
@@ -31,7 +31,7 @@ $> DCSAutoMate --file \<scriptFile\> --function \<functionName\> [--debug] [--no
 
 \<functionName\> should be the name of a function in that file.
 
-Optional parameters (if passed, these override the settings in the .ini file):
+Optional parameters (if passed, these override the settings in the DCSAutoMateConfig.json file):
 
 --debug If passed, disables actually sending the commands to DCS (DCS doesn't have to be running either).  Everything else in the script works as normal.
 
@@ -39,9 +39,25 @@ Optional parameters (if passed, these override the settings in the .ini file):
 
 --dvorak If passed, sets a flag for the script functions to read so that certain keyboard commands can be changed depending on whether you have a Dvorak keyboard layout or not.  (If you don't know whether you do or not, you don't, and shouldn't pass this parameter.)
 
+--dcspath If passed, specifies the full path of the DCS.exe file so we can find the window to send commands to.  This may be needed if the window title changes.
+
 All of the parameters are case-sensitive.  If the filename has a space, enclose it in "double quotes".
 	
 Example: $> DCSAutoMate FA-18C ColdStartGroundDay
+
+Example DCSAutoMateConfig.json file:
+
+{
+	"debug": false,
+	"nospeech": false,
+	"dvorak": false,
+	"dcspath": [
+		"C:\\Games\\DCS World OpenBeta\\bin-mt\\DCS.exe",
+		"C:\\Games\\DCS World OpenBeta\\bin\\DCS.exe"
+	]
+}
+
+Note that dcspath can either be a single value or an array.  If an array, they will be checked in order from first to last.  Backslashes in the path must be escaped, or they can be replaced with forward slashes.
 
 # How to make your own scripts or modify existing scripts:
 Use the scripts that come with DCSAutoMate as examples.  The script functions in the .py files in the DCSAutoMateScripts subfolder return a Python List.  Each element in the list must be a Dictionary with the following keys:
@@ -75,7 +91,7 @@ If using DCSAutoMate.py, you will need to have [Python 3.7](https://www.python.o
 * Because the script is being run by an external program on its own clock, it will not work correctly if you do time accel in the game (unlike the built-in startup scripts, which work fine with time accel).  Likewise, if you pause in the game, the program has no way to tell, and will continue sending commands.
 * DCSAutoMate will continue to send commands even if the script has failed somehow in the game (e.g. if you clicked something in the cockpit and changed the state, etc.).  There is no condition-checking like the built-in startup scripts have.  It's up to you to monitor the script as it runs.
 * If commands are sent too fast, sometimes they may not be caught by the game.  So far, even in busy MP servers, 0.3 seconds between commands has been enough for me, but if you have a slower computer or more network lag or something, you may have to increase that time.  Simply change the "dt = " value near the top of each script function.
-* A user reports that if you are running the Skatezilla DCS Updater Utility, DCSAutoMate may not be able to find the DCS window, and will not run.  If DCS is run on its own as normal, that may allow DCSAutoMate to work correctly.  I haven't confirmed this, but including it here in case other people run into this problem.
+* A user reports that if you are running the Skatezilla DCS Updater Utility, DCSAutoMate may not be able to find the DCS window, and will not run.  If DCS is run on its own as normal, that may allow DCSAutoMate to work correctly.  I haven't confirmed this, but including it here in case other people run into this problem.  Another workaround might be to use the "dcspath"
 
 # TODO, in no particular priority:
 * General code cleanup and refactoring.  In particular, wrap the whole thing up in at least one class for neatness.

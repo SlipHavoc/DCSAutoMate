@@ -205,30 +205,31 @@ def showFunctionMenu(moduleName):
 	return functionName
 
 def makeDefaultConfigFile():
-	import configparser
-	config = configparser.ConfigParser()
-	config['options'] = {
-		'debug': False,
-		'nospeech': False,
-		'dvorak': False,
-	}
-	with open('DCSAutoMateConfig.ini', 'w') as configfile:
-		config.write(configfile)
+	jsonConfig = """{
+	"debug": false,
+	"nospeech": false,
+	"dvorak": false,
+	"dcspath": []
+}"""
+	with open('DCSAutoMateConfig.json', 'w') as configFileHandle:
+		configFileHandle.write(jsonConfig)
 
 def getConfigFromFile():
-	import configparser
-	configparser = configparser.ConfigParser()
-	configFile = './DCSAutoMateConfig.ini'
+	import json
+	configFile = './DCSAutoMateConfig.json'
 	if not os.path.isfile(configFile):
 		print('Creating default config file.')
 		makeDefaultConfigFile()
-	configparser.read(configFile)
-	# Make a config Dictionary with the values from the .ini converted to their correct types, with fallback to the defaults just in case.
-	config = {
-		'debug': configparser['options'].getboolean('debug', fallback=False),
-		'nospeech': configparser['options'].getboolean('nospeech', fallback=False),
-		'dvorak': configparser['options'].getboolean('dvorak', fallback=False),
-	}
+	with open(configFile) as configFileHandle:
+		try:
+			config = json.load(configFileHandle)
+		except:
+			print("Couldn't parse DCSAutoMateConfig.json, please check syntax.")
+			quit()
+	if type(config['dcspath']) is not list:
+		config['dcspath'] = [
+			config['dcspath']
+		]
 	return config
 	
 
@@ -243,7 +244,7 @@ def getConfigFromFile():
 applicationPath = os.path.dirname(sys.executable)
 sys.path.append(applicationPath)
 
-# First, get the config from the .ini file.  If the file doesn't exist, this will create it with the defaults.
+# First, get the config from the .json file.  If the file doesn't exist, this will create it with the defaults.  Anything set up here may be overridden later by command-line parameters.
 config = getConfigFromFile()
 
 # Initialize parser for command line arguments.
@@ -277,6 +278,12 @@ parser.add_argument(
 	action = 'store_true', # Stores True if passed, otherwise False.
 	help = "If passed, sets a flag for the scripts to detect whether keyboard is using Dvorak layout."
 )
+parser.add_argument(
+	'--dcspath',
+	action = 'store',
+	help = "If passed, specifies the full path to the DCS.exe file so we can find the DCS window to send commands to."
+)
+
 args = parser.parse_args()
 #print(args.debug)
 moduleName = args.file
@@ -287,6 +294,10 @@ if args.nospeech:
 	config['nospeech'] = args.nospeech
 if args.dvorak:
 	config['dvorak'] = args.dvorak
+if args.dcspath:
+	config['dcspath'] = [
+		args.dcspath
+	]
 
 isCommandLine = False
 if args.file and args.function:
@@ -326,16 +337,32 @@ while True:
 	sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 	# Find the open DCS window to send keyboard commands.
 	if not config['debug']:
-		try:
-			app = Application().connect(title="DCS.openbeta")
-		except:
+		appFound = False
+		if config.get('dcspath') and config.get('dcspath') != []: # Use config.get('dcspath') instead of config['dcspath'] to avoid key not exists error.
+			for dcsPath in config['dcspath']:
+				try:
+					print(f"Trying to connect to DCS window by path: {dcsPath}")
+					app = Application().connect(path=dcsPath)
+					appFound = True;
+					break
+				except:
+					continue
+			# Fallthrough
+			if not appFound:
+				print("Couldn't find any active DCS window by path.  Trying by title...")
+		
+		if not appFound:
 			try:
-				app = Application().connect(title="DCS")
+				print('Trying to connect to DCS window by title: "DCS.openbeta"...')
+				app = Application().connect(title="DCS.openbeta")
 			except:
-				print("Couldn't find active DCS window.  Please make sure DCS is running before running script.")
-				# Keep the window open after program ends.			
-				input('Press enter to exit')
-				quit()
+				try:
+					print('Trying to connect to DCS window by title: "DCS"')
+					app = Application().connect(title="DCS")
+				except:
+					print("Couldn't find any active DCS window.  Please make sure DCS is running before running script, or use debug flag.")
+					quit('')
+
 	try:
 		executeSeq(seq)
 	except:

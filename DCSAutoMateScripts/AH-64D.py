@@ -6,6 +6,9 @@ def getScriptFunctions():
 		#'Test': 'Test',
 	}
 
+def getInfo():
+	return """ATTENTION: You must remap "Power Lever (Left) - IDLE" to LAlt+Home, and "Power Lever (Left) - OFF" to LAlt+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+
 def Test(config):
 	seq = []
 	seqTime = 0
@@ -205,7 +208,7 @@ def ColdStart(config):
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	#pushSeqCmd(dt, '', '', 'Set collective full down.')
+	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	pushSeqCmd(dt, 'scriptSpeech', 'Set collective full down.')
 	
 	# Canopy close
