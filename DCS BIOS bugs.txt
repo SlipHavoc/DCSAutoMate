@@ -7,6 +7,7 @@ AH-64
 	doesn't work.  However this works:
 		defineRotary("PLT_SAI_PITCH_TRIM", 13, 3004, 619, "PLT SAI", "Pilot SAI Cage Knob, (MW) Adjust aircraft reference symbol")
 	In command_defs.lua, 3002 refers to CageKnobPull, and 3004 refers to CageKnobRotate_ITER
+	PLT_EXTL_FROMATION_L_KNB -- misspelling
 
 C-101
 	FRONT GPU Button is listed twice, once for "FRONT_ABORT" (actually the ABORT START switch) and once for "FRONT_GPU" (the correct button)

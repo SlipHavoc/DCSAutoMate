@@ -1,13 +1,20 @@
 # Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
 def getScriptFunctions():
 	return {
-		'Cold Start': 'ColdStart',
-		'Hot Start': 'HotStart',
+		'Cold Start, day': 'ColdStartDay',
+		'Cold Start, night': 'ColdStartNight',
+		'Hot Start, day': 'HotStartDay',
+		'Hot Start, night': 'HotStartNight',
 		#'Test': 'Test',
 	}
 
 def getInfo():
 	return """ATTENTION: You must remap "Power Lever (Left) - IDLE" to LAlt+Home, and "Power Lever (Left) - OFF" to LAlt+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+
+# Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
+def int16(mult = 1):
+	int16 = 65535
+	return int(mult * int16)
 
 def Test(config):
 	seq = []
@@ -28,10 +35,17 @@ def Test(config):
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
 
+	# Test code here...
 	
 	return seq
 
-def ColdStart(config):
+def ColdStartDay(config):
+	return ColdStart(config, dayStart = True)
+
+def ColdStartNight(config):
+	return ColdStart(config, dayStart = False)
+
+def ColdStart(config, dayStart = True):
 	seq = []
 	seqTime = 0
 	dt = 0.3
@@ -54,8 +68,6 @@ def ColdStart(config):
 	alignTime = 3 * 60 + 55 # 3m55s
 	engine1StartTime = 30
 	engine2StartTime = 40
-	
-	int16 = 65535
 	
 	##################################################
 	##################################################
@@ -222,11 +234,79 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PLT_PARK_BRAKE', 1)
 	#pushSeqCmd(dt, '', '', "RTR BRK switch - OFF")
 	pushSeqCmd(dt, 'PLT_ROTOR_BRK', 2)
+
+	# Lights
+	if dayStart:
+		# PLT lights...
+		# PLT Internal Lights
+		pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16())
+		pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', int16())
+		pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', int16())
+		pushSeqCmd(dt, 'PLT_INTL_FLOOD_L_KNB', 0)
+		# PLT External lights
+		pushSeqCmd(dt, 'PLT_EXTL_NAV_L_SW', 1) # 0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'PLT_EXTL_FROMATION_L_KNOB', 0) # NOTE misspelling, 0 = off, int16 = full on
+		pushSeqCmd(dt, 'PLT_EXTL_ACOL_L_SW', 1) # 0 = RED, 1 = OFF, 2 = WHT
+		# PLT CMWS
+		pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16())
+
+		# CPG lights...
+		# CPG Internal Lights
+		pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16())
+		pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16())
+		pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16())
+		pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+	else:
+		# PLT lights...
+		# PLT Internal Lights
+		pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PLT_INTL_FLOOD_L_KNB', 0)
+		# PLT External lights
+		pushSeqCmd(dt, 'PLT_EXTL_NAV_L_SW', 1) # 0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'PLT_EXTL_FROMATION_L_KNOB', 0) # NOTE misspelling, 0 = off, int16 = full on
+		pushSeqCmd(dt, 'PLT_EXTL_ACOL_L_SW', 1) # 0 = RED, 1 = OFF, 2 = WHT
+		# PLT MPDs
+		pushSeqCmd(dt, 'PLT_MPD_L_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'PLT_MPD_L_BRT', int16(0.5))
+		pushSeqCmd(dt, 'PLT_MPD_L_VIDEO', int16(0.25))
+		pushSeqCmd(dt, 'PLT_MPD_R_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'PLT_MPD_R_BRT', int16(0.5))
+		pushSeqCmd(dt, 'PLT_MPD_R_VIDEO', int16(0.25))
+		# PLT UFC
+		pushSeqCmd(dt, 'PLT_EUFD_BRT', int16(0.25))
+		# PLT KU
+		pushSeqCmd(dt, 'PLT_KU_BRT', int16(0.5))
+		# PLT CMWS
+		pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16(0.25))
+		# PLT FLIR Level (IHADSS FLIR brightness)
+		pushSeqCmd(dt, 'PLT_VIDEO_FLIR_LVL', int16(0.4))
+
+		# CPG lights...
+		# CPG Internal Lights
+		pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+		# CPG MPDs
+		pushSeqCmd(dt, 'CPG_MPD_L_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'CPG_MPD_L_BRT', int16(0.5))
+		pushSeqCmd(dt, 'CPG_MPD_L_VIDEO', int16(0.25))
+		pushSeqCmd(dt, 'CPG_MPD_R_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'CPG_MPD_R_BRT', int16(0.5))
+		pushSeqCmd(dt, 'CPG_MPD_R_VIDEO', int16(0.25))
+		# CPG UFC
+		pushSeqCmd(dt, 'CPG_EUFD_BRT', int16(0.25))
+		# CPG KU
+		pushSeqCmd(dt, 'CPG_KU_BRT', int16(0.5))
+		# CPG FLIR Level (IHADSS FLIR brightness)
+		pushSeqCmd(dt, 'CPG_VIDEO_FLIR_LVL', int16(0.4))
 	
 	# Starting APU - PILOT
-	#pushSeqCmd(dt, '', '', "MSTR IGN switch - BATT")
+	# MSTR IGN switch - BATT
 	pushSeqCmd(dt, 'PLT_MASTER_IGN_SW', 1)
-	#pushSeqCmd(dt, '', '', "Starting APU (20s)")
+	# Starting APU (20s)
 	pushSeqCmd(dt, 'PLT_APU_BTN_CVR', 1) # Cover open
 	pushSeqCmd(dt, 'PLT_APU_BTN', 1) # Press
 	pushSeqCmd(dt, 'PLT_APU_BTN', 0) # Release
@@ -239,8 +319,7 @@ def ColdStart(config):
 	# After starting APU
 	
 	# Radio volumes and squelch
-	# PLT
-	#pushSeqCmd(dt, '', '', "PLT Radio squelch switches - ON (also squelches CPG radios)")
+	# PLT Radio squelch switches - ON (also squelches CPG radios)
 	pushSeqCmd(dt, 'PLT_COM_VHF_SQL', 2)
 	pushSeqCmd(dt, 'PLT_COM_VHF_SQL', 1)
 	pushSeqCmd(dt, 'PLT_COM_UHF_SQL', 2)
@@ -251,8 +330,8 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PLT_COM_FM2_SQL', 1)
 	pushSeqCmd(dt, 'PLT_COM_HF_SQL', 2)
 	pushSeqCmd(dt, 'PLT_COM_HF_SQL', 1)
-	#pushSeqCmd(dt, '', '', "PLT Radio RLWR volume - 75%")
-	pushSeqCmd(dt, 'PLT_COM_RLWR_VOL', int(int16 * 0.75))
+	#pushSeqCmd(dt, '', '', "PLT Radio RLWR volume - 75%") # Already set by default.
+	pushSeqCmd(dt, 'PLT_COM_RLWR_VOL', int16(0.75))
 	## CPG
 	##pushSeqCmd(dt, '', '', "CPG Radio squelch switches - ON")
 	#pushSeqCmd(dt, device = devices.COMM_PANEL_CPG, action = comm_commands.VHF_SQL, 1)
@@ -261,25 +340,15 @@ def ColdStart(config):
 	#pushSeqCmd(dt, device = devices.COMM_PANEL_CPG, action = comm_commands.FM2_SQL, 1)
 	#pushSeqCmd(dt, device = devices.COMM_PANEL_CPG, action = comm_commands.HF_SQL, 1)
 	#pushSeqCmd(dt, '', '', "CPG Radio RLWR volume - 75%")
-	pushSeqCmd(dt, 'CPG_COM_RLWR_VOL', int(int16 * 0.75))
+	pushSeqCmd(dt, 'CPG_COM_RLWR_VOL', int16(0.75))
 	
-	# Internal lights
-	#pushSeqCmd(dt, '', '', "PLT Internal Lights - ON")
-	pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16)
-	pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', int16)
-	pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', int16)
-	#pushSeqCmd(dt, '', '', "CPG Internal Lights - ON")
-	pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16)
-	pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16)
-	pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16)
-
 	# TEDAC
-	#pushSeqCmd(dt, '', '', "CPG TEDAC TDU power knob - ON")
-	# FIXME: TDU power knob is a little weird... "TDU_MODE_KNOB" command seems to set it to DAY no matter what value is used.  "TDU_MODE_KNOB_ITER" command allows changing the knob one position at a time (positive value for right/CW rotation, negative value for left/CCW), but this command only works if the command executes while you're sitting in the CPG seat.  Therefore, I'm using "TDU_MODE_KNOB".  The shutdown sequence will not turn it off (because every value sets it to DAY), but it doesn't really matter.
-	pushSeqCmd(dt, 'CPG_TEDAC_DISP_MODE', 0)
+	if dayStart:
+		pushSeqCmd(dt, 'CPG_TEDAC_DISP_MODE', 2) # 0 = OFF, 1 = NT, 2 = DAY
+	else:
+		pushSeqCmd(dt, 'CPG_TEDAC_DISP_MODE', 1) # 0 = OFF, 1 = NT, 2 = DAY
 	
 	# Use local time
-	#pushSeqCmd(dt, '', '', "TIME - LOCAL")
 	pushSeqCmd(dt, 'PLT_MPD_R_TSD', 1) # TSD
 	pushSeqCmd(dt, 'PLT_MPD_R_TSD', 0) # release
 	pushSeqCmd(dt, 'PLT_MPD_R_T6', 1) # UTIL
@@ -294,22 +363,19 @@ def ColdStart(config):
 	setCpgTsdShowOptions()
 
 	# CMWS
-	#pushSeqCmd(dt, '', '', "CMWS PWR knob - ON")
+	# CMWS PWR knob - ON
 	pushSeqCmd(dt, 'PLT_CMWS_PW', 1)
-	#pushSeqCmd(dt, '', '', "CMWS ARM/SAFE switch - ARM")
+	# CMWS ARM/SAFE switch - ARM
 	pushSeqCmd(dt, 'PLT_CMWS_ARM', 1)
-	#pushSeqCmd(dt, '', '', "CMWS CMWS/NAV switch - CMWS")
+	# CMWS CMWS/NAV switch - CMWS
 	pushSeqCmd(dt, 'PLT_CMWS_MODE', 1)
-	#pushSeqCmd(dt, '', '', "CMWS BYPASS/AUTO switch - BYPASS")
+	# CMWS BYPASS/AUTO switch - BYPASS
 	pushSeqCmd(dt, 'PLT_CMWS_BYPASS', 1)
 
-	# GND ORIDE
-	#pushSeqCmd(dt, '', '', "GND ORIDE - ON (needed to arm chaff)")
+	# GND ORIDE - ON (needed to arm chaff)
 	pushSeqCmd(dt, 'PLT_GROUND_OVERRIDE_BTN', 1) # Press
 	pushSeqCmd(dt, 'PLT_GROUND_OVERRIDE_BTN', 0) # Release
-
-	# ASE CHAFF
-	#pushSeqCmd(dt, '', '', "ASE CHAFF - ARM")
+	# ASE CHAFF - ARM
 	pushSeqCmd(dt, 'PLT_MPD_L_B1', 1) # MENU
 	pushSeqCmd(dt, 'PLT_MPD_L_B1', 0) # release
 	pushSeqCmd(dt, 'PLT_MPD_L_L3', 1) # ASE
@@ -317,8 +383,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PLT_MPD_L_T1', 1) # CHAFF (to ARM)
 	pushSeqCmd(dt, 'PLT_MPD_L_T1', 0) # release
 
-	# RLWS enable
-	#pushSeqCmd(dt, '', '', "RLWR - ON")
+	# RLWR - ON
 	pushSeqCmd(dt, 'PLT_MPD_L_B1', 1) # MENU
 	pushSeqCmd(dt, 'PLT_MPD_L_B1', 0) # release
 	pushSeqCmd(dt, 'PLT_MPD_L_L3', 1) # ASE
@@ -333,7 +398,7 @@ def ColdStart(config):
 	#pushSeqCmd(dt, device = devices.SAI, action = sai_commands.CageKnobRotate_ITER, value = -1.8) # Turn left to unlock, note "CageKnobRotate" does not seem to work, only "CageKnobRotate_ITER" and "CageKnobRotate_AXIS"
 	pushSeqCmd(dt, 'PLT_SAI_CAGE', 0) # fixme Turn left to unlock, note "CageKnobRotate" does not seem to work, only "CageKnobRotate_ITER" and "CageKnobRotate_AXIS"
 	#pushSeqCmd(dt, device = devices.SAI, action = sai_commands.CageKnobPull, 0) # Press knob in to uncage
-	pushSeqCmd(dt, 'PLT_SAI_PITCH_TRIM', int(int16 * 0.6)) # Center SAI
+	pushSeqCmd(dt, 'PLT_SAI_PITCH_TRIM', int16(0.6)) # Center SAI
 
 	# Starting engines - PILOT
 	#pushSeqCmd(dt, '', '', "Starting engines (1m25s)")
@@ -364,8 +429,8 @@ def ColdStart(config):
 	# TODO: check engine params
 	
 	#pushSeqCmd(dt, '', '', "POWER levers - Smoothly to FLY")
-	powerLeverStart = int(int16 * 0.25) # Power levers start at 25% - IDLE.
-	powerLeverEnd = int(int16 * 0.9) # Power levers end at 90% - FLY.
+	powerLeverStart = int16(0.25) # Power levers start at 25% - IDLE.
+	powerLeverEnd = int16(0.9) # Power levers end at 90% - FLY.
 	powerLeverTime = 11 # Number of seconds to advance the power levers.  9 seconds is minimum to avoid "Rotor RPM Low" warning, ISA at sea level.  Default autostart is about 11 seconds.
 	powerLeverDt = dt # Time between power lever steps.  If this is too fast, it could possibly lag or something on MP servers.
 	powerLeverSteps = int((powerLeverTime / powerLeverDt) / 2) # Divide by 2 here because there are two power levers that need to be advanced.
@@ -498,8 +563,13 @@ def ColdStart(config):
 	return seq
 
 
+def HotStartDay(config):
+	return HotStart(config, dayStart = True)
 
-def HotStart(config):
+def HotStartNight(config):
+	return HotStart(config, dayStart = False)
+
+def HotStart(config, dayStart = True):
 	seq = []
 	seqTime = 0
 	dt = 0.3
@@ -523,8 +593,6 @@ def HotStart(config):
 	engine1StartTime = 30
 	engine2StartTime = 40
 	
-	int16 = 65535
-
 	# Function to set all the PLT TSD SHOW options.
 	def setPltTsdShowOptions():
 		# TSD SHOW options
@@ -657,23 +725,81 @@ def HotStart(config):
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
 	
+	# Lights
+	if dayStart:
+		# PLT lights...
+		# PLT Internal Lights
+		pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16())
+		pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', int16())
+		pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', int16())
+		pushSeqCmd(dt, 'PLT_INTL_FLOOD_L_KNB', 0)
+		# PLT External lights
+		pushSeqCmd(dt, 'PLT_EXTL_NAV_L_SW', 1) # 0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'PLT_EXTL_FROMATION_L_KNOB', 0) # NOTE misspelling, 0 = off, int16 = full on
+		pushSeqCmd(dt, 'PLT_EXTL_ACOL_L_SW', 1) # 0 = RED, 1 = OFF, 2 = WHT
+		# PLT CMWS
+		pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16())
+
+		# CPG lights...
+		# CPG Internal Lights
+		pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16())
+		pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16())
+		pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16())
+		pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+	else:
+		# PLT lights...
+		# PLT Internal Lights
+		pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PLT_INTL_FLOOD_L_KNB', 0)
+		# PLT External lights
+		pushSeqCmd(dt, 'PLT_EXTL_NAV_L_SW', 1) # 0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'PLT_EXTL_FROMATION_L_KNOB', 0) # NOTE misspelling, 0 = off, int16 = full on
+		pushSeqCmd(dt, 'PLT_EXTL_ACOL_L_SW', 1) # 0 = RED, 1 = OFF, 2 = WHT
+		# PLT MPDs
+		pushSeqCmd(dt, 'PLT_MPD_L_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'PLT_MPD_L_BRT', int16(0.5))
+		pushSeqCmd(dt, 'PLT_MPD_L_VIDEO', int16(0.25))
+		pushSeqCmd(dt, 'PLT_MPD_R_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'PLT_MPD_R_BRT', int16(0.5))
+		pushSeqCmd(dt, 'PLT_MPD_R_VIDEO', int16(0.25))
+		# PLT UFC
+		pushSeqCmd(dt, 'PLT_EUFD_BRT', int16(0.25))
+		# PLT KU
+		pushSeqCmd(dt, 'PLT_KU_BRT', int16(0.5))
+		# PLT CMWS
+		pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16(0.25))
+		# PLT FLIR Level (IHADSS FLIR brightness)
+		pushSeqCmd(dt, 'PLT_VIDEO_FLIR_LVL', int16(0.4))
+
+		# CPG lights...
+		# CPG Internal Lights
+		pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16(0.5))
+		pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+		# CPG MPDs
+		pushSeqCmd(dt, 'CPG_MPD_L_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'CPG_MPD_L_BRT', int16(0.5))
+		pushSeqCmd(dt, 'CPG_MPD_L_VIDEO', int16(0.25))
+		pushSeqCmd(dt, 'CPG_MPD_R_MODE', 1) # 0 = MONO, 1 = NT, 2 = DAY
+		pushSeqCmd(dt, 'CPG_MPD_R_BRT', int16(0.5))
+		pushSeqCmd(dt, 'CPG_MPD_R_VIDEO', int16(0.25))
+		# CPG UFC
+		pushSeqCmd(dt, 'CPG_EUFD_BRT', int16(0.25))
+		# CPG KU
+		pushSeqCmd(dt, 'CPG_KU_BRT', int16(0.5))
+		# CPG FLIR Level (IHADSS FLIR brightness)
+		pushSeqCmd(dt, 'CPG_VIDEO_FLIR_LVL', int16(0.4))
+
 	# Radio volumes and squelch
 	# PLT
 	#pushSeqCmd(dt, '', '', "PLT Radio RLWR volume - 75%")
-	pushSeqCmd(dt, 'PLT_COM_RLWR_VOL', int(int16 * 0.75))
+	pushSeqCmd(dt, 'PLT_COM_RLWR_VOL', int16(0.75))
 	#pushSeqCmd(dt, '', '', "CPG Radio RLWR volume - 75%")
-	pushSeqCmd(dt, 'CPG_COM_RLWR_VOL', int(int16 * 0.75))
+	pushSeqCmd(dt, 'CPG_COM_RLWR_VOL', int16(0.75))
 	
-	# Internal lights
-	#pushSeqCmd(dt, '', '', "PLT Internal Lights - ON")
-	pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16)
-	pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', int16)
-	pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', int16)
-	#pushSeqCmd(dt, '', '', "CPG Internal Lights - ON")
-	pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16)
-	pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16)
-	pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16)
-
 	# Use local time
 	#pushSeqCmd(dt, '', '', "TIME - LOCAL")
 	pushSeqCmd(dt, 'PLT_MPD_R_TSD', 1) # TSD

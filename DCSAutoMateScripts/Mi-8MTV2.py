@@ -1,13 +1,22 @@
 # Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
 def getScriptFunctions():
 	return {
-		'Cold Start': 'ColdStart',
+		'Cold Start, day, unarmed': 'ColdStartDayUnarmed',
+		'Cold Start, night, unarmed': 'ColdStartNightUnarmed',
+		'Cold Start, day, armed': 'ColdStartDayArmed',
+		'Cold Start, night, armed': 'ColdStartNightArmed',
+		#'Test': 'Test',
 	}
 
 def getInfo():
 	return """ATTENTION: You must remap "Throttle Levers - UP" to LCtrl+Home and "Throttle Levers - DOWN" to LCtrl+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
 
-def ColdStart(config):
+# Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
+def int16(mult = 1):
+	int16 = 65535
+	return int(mult * int16)
+
+def Test(config):
 	seq = []
 	seqTime = 0
 	dt = 0.3
@@ -25,10 +34,41 @@ def ColdStart(config):
 	def getLastSeqTime():
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
-
-	apuStartTime = 25
 	
-	int16 = 65535
+	# Test code here...
+
+	return seq
+
+def ColdStartDayUnarmed(config):
+	return ColdStart(config, dayStart = True, armed = False)
+
+def ColdStartNightUnarmed(config):
+	return ColdStart(config, dayStart = False, armed = False)
+
+def ColdStartDayArmed(config):
+	return ColdStart(config, dayStart = True, armed = True)
+
+def ColdStartNightArmed(config):
+	return ColdStart(config, dayStart = False, armed = True)
+
+def ColdStart(config, dayStart = True, armed = False):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
 	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
@@ -66,7 +106,29 @@ def ColdStart(config):
 	#pushSeqCmd(dt, '', '', "BATTERY 2 - ON")
 	pushSeqCmd(dt, 'BATT2_SWITCH', 1)
 	#pushSeqCmd(dt, '', '', "115V INVERTER - AUTO (down)")
-	pushSeqCmd(dt, 'INV_115V_SWITCH', 0)#fixme
+	pushSeqCmd(dt, 'INV_115V_SWITCH', 0)
+
+	if not dayStart:
+		# Dome lights.
+		pushSeqCmd(dt, 'LGHT_L_CEIL', 2) # 0 = White, 1 = Off, 2 = Red
+		pushSeqCmd(dt, 'LGHT_R_CEIL', 2) # 0 = White, 1 = Off, 2 = Red
+		# Left red light knobs.
+		pushSeqCmd(dt, 'L_RED_LGHT_1', int16())
+		pushSeqCmd(dt, 'L_RED_LGHT_2', int16())
+		# Right red light knobs.
+		pushSeqCmd(dt, 'R_RED_LGHT_1', int16())
+		pushSeqCmd(dt, 'R_RED_LGHT_2', int16())
+		# Center red light knobs.
+		pushSeqCmd(dt, 'C_RED_LGHT_1', int16())
+		pushSeqCmd(dt, 'C_RED_LGHT_2', int16())
+		# 5.5V lights (radar altimeter and other instruments)
+		# Switch
+		pushSeqCmd(dt, 'LGHT_5_5V', 1)
+		# Brightness
+		pushSeqCmd(dt, 'LGHT_55V', int16())
+		# ANNUC switch - NIGHT
+		pushSeqCmd(dt, 'SAS_TRANS', 1)
+
 
 	#pushSeqCmd(dt, '', '', "DC VOLTMETER SELECTOR - BATT BUS")
 	pushSeqCmd(dt, 'DC_VOLT_SEL', 4)
@@ -112,7 +174,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'FUEL_RIGHT_COVER', 0) # switch cover
 
 	#pushSeqCmd(dt, '', '', "SERVICE TANK PUMP - ON")
-	pushSeqCmd(dt, 'FUEL_FEED_PUMP', 1)#fixme
+	pushSeqCmd(dt, 'FUEL_FEED_PUMP', 1)
 	#pushSeqCmd(dt, '', '', "LEFT TANK PUMP - ON")
 	pushSeqCmd(dt, 'FUEL_LEFT_PUMP', 1)
 	#pushSeqCmd(dt, '', '', "RIGHT TANK PUMP - ON")
@@ -208,7 +270,7 @@ def ColdStart(config):
 	#pushSeqCmd(dt, '', '', "RIGHT ATT IND - ON")
 	pushSeqCmd(dt, 'ADI_R_ATT_PWR', 1)
 	#pushSeqCmd(dt, '', '', "COMM RADIO - ON")
-	pushSeqCmd(dt, 'JAD1A_PWR', 1)#fixme
+	pushSeqCmd(dt, 'JAD1A_PWR', 1)
 
 	# Other
 	#pushSeqCmd(dt, '', '', "RADAR ALTIMETER - ON")
@@ -227,12 +289,15 @@ def ColdStart(config):
 	#pushSeqCmd(dt, '', '', "UV-26 RESET TO DEFAULT PROGRAM (110)")
 	pushSeqCmd(dt, 'UV26_RST', 1) # Press
 	pushSeqCmd(dt, 'UV26_RST', 0) # Release
-	#pushSeqCmd(dt, '', '', "UV-26 SET NUM SEQUENCES - 4")
+	# Set "411" (4 flares, 1 second apart)...
+	# Press "Num Of Sequences" button 3x.
 	for i in range(3): # Press and release 3 times
-		pushSeqCmd(dt, 'CMD_FLARE_NUM', 1) # Press
-		pushSeqCmd(dt, 'CMD_FLARE_NUM', 0) # Release
-	
-	#pushSeqCmd(dt, '', '', "UV-26 SET DISPENSER INTERVAL - 1 SEC")
+		pushSeqCmd(dt, 'UV26_SEQ', 1) # Press
+		pushSeqCmd(dt, 'UV26_SEQ', 0) # Release
+	# "Num In Sequence" is already set to 1.
+	#pushSeqCmd(dt, 'CMD_FLARE_NUM', 1) # Press
+	#pushSeqCmd(dt, 'CMD_FLARE_NUM', 0) # Release
+	# Press "Dispense Interval" button 1x.
 	pushSeqCmd(dt, 'CMD_INTERVAL', 1) # Press
 	pushSeqCmd(dt, 'CMD_INTERVAL', 0) # Release
 
@@ -241,6 +306,37 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'CPIT_AIR_L_FAN', 1)
 	#pushSeqCmd(dt, '', '', "COPILOT'S FAN - ON")
 	pushSeqCmd(dt, 'CPIT_AIR_R_FAN', 1)
+
+	# Reset G-meter
+	pushSeqCmd(dt, 'ACC_RST', 1) # Press
+	pushSeqCmd(dt, 'ACC_RST', 0) # Release
+
+	if armed:
+		# CB Group 1 - ON
+		pushSeqCmd(dt, 'AZS_GRP_BTN1', 1)
+		pushSeqCmd(dt, 'AZS_GRP_BTN1', 0)
+		# CB Group 2 - ON
+		pushSeqCmd(dt, 'AZS_GRP_BTN2', 1)
+		pushSeqCmd(dt, 'AZS_GRP_BTN2', 0)
+		# CB Group 3 - ON
+		pushSeqCmd(dt, 'AZS_GRP_BTN3', 1)
+		pushSeqCmd(dt, 'AZS_GRP_BTN3', 0)
+		# Main Switch - ON
+		pushSeqCmd(dt, 'WPN_RS_GUV_SEL', 1)
+		# Master Arm - ON
+		pushSeqCmd(dt, 'WPN_ARM', 1)
+		
+		# Arm rocket systems...
+		# UPK/PKT/RS switch - RS
+		pushSeqCmd(dt, 'WPN_SEL', 0)
+		# Push and hold FIRE TEST UNIT ARM button for 4 seconds.
+		pushSeqCmd(dt, 'WPN_PUS_ARM', 1)
+		pushSeqCmd(4, 'WPN_PUS_ARM', 0) # Release after 4 seconds.
+		# UPK/PKT/RS switch - PKT (default)
+		pushSeqCmd(dt, 'WPN_SEL', 1)
+
+		# Set sight depression to red index marker.
+		pushSeqCmd(dt, 'SGHT_KNOB', 17427)
 
 	#pushSeqCmd(dt, '', '', "Manual steps remaining:")
 	#pushSeqCmd(dt, '', '', "Lights ... As needed")

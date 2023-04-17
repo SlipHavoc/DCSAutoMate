@@ -105,11 +105,9 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	if dayStart:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16())
-		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 0) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	else:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16(0.5))
-		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	
 	apuTimerStart = getLastSeqTime()
 	#pushSeqCmd(dt, '', '', "Starting APU ("+str(apuStartTime)+"s)")
@@ -178,6 +176,12 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(rightEngineStartTimerEnd, '', '', 'Right engine started')
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END RIGHT ENGINE
+
+	# FIXME The engine monitor instrument doesn't pick up the cockpit lighting mode switch position unless it's set after the right engine starts.
+	if dayStart:
+		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 0) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
+	else:
+		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	
 	#pushSeqCmd(dt, '', '', "HMD knob - ON")
 	if dayStart:
