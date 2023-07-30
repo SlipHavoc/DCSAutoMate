@@ -112,14 +112,14 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PITCH_DAMPER', 1)
 	pushSeqCmd(dt, 'YAW_DAMPER', 1)
 	
-	#pushSeqCmd(dt, '', '', "BACKUP ATTITUDE INDICATOR - UNCAGE")
+	# BACKUP ATTITUDE INDICATOR - UNCAGE
 	inc = 1000
 	val = 5000
 	for i in range(30):
 		pushSeqCmd(dt, 'SAI_PITCH_TRIM', val)
 		val += inc
 	
-	#pushSeqCmd(dt, '', '', "SPEED INDEX - 325KTS (CORNER SPEED)")
+	# SPEED INDEX - 325KTS (CORNER SPEED
 	# Set index to 0 first (29 iterations of value=1.0 resets it to 0 from max).
 	for i in range(29):
 		pushSeqCmd(dt, 'IAS_SET', int16(-1))
@@ -143,17 +143,6 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PITOT_HEATER', 1)
 	
 	pushSeqCmd(dt, 'EMER_JETT_COVER', 1)
-	
-	#pushSeqCmd(dt, '', '', "HAVOC'S QUICK AUTOSTART IS COMPLETE"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "Manual steps remaining:"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "Lights ... As needed"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "Radios ... As needed"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "If carrying drop tanks: Fuel EXT PYLON switches ... As needed"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "Set pitch trim for takeoff (see dial, instrument panel upper left):"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "# empty = 6 deg"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "# gun+missiles+droptanks = 7 deg"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "# gun+missiles+droptanks+bombs/rockets = 8 deg"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "# max load = 9 deg"), message_timeout = 60.0)
 	
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Lights, Radios, If carrying drop tanks set Fuel EXTERNAL PYLON switches, Set pitch trim for takeoff, see kneeboard.")
 	
@@ -191,7 +180,7 @@ def HotStart(config):
 	
 	pushSeqCmd(dt, 'RWR_PWR', 1)
 	
-	#pushSeqCmd(dt, '', '', "SPEED INDEX - 325KTS (CORNER SPEED)")
+	# SPEED INDEX - 325KTS (CORNER SPEED)
 	# Set index to 0 first (29 iterations of value=1.0 resets it to 0 from max).
 	for i in range(29):
 		pushSeqCmd(dt, 'IAS_SET', int16(-1))

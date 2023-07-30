@@ -1,16 +1,20 @@
 # Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
 def getScriptFunctions():
 	return {
-		'Cold Start Ground (day)': 'ColdStartGroundDay',
-		'Cold Start Ground (night)': 'ColdStartGroundNight',
-		'Cold Start Carrier (day)': 'ColdStartCarrierDay',
-		'Cold Start Carrier (night)': 'ColdStartCarrierNight',
-		'Hot Start Ground (day)': 'HotStartGroundDay',
-		'Hot Start Ground (night)': 'HotStartGroundNight',
-		'Hot Start Carrier (day)': 'HotStartCarrierDay',
-		'Hot Start Carrier (night)': 'HotStartCarrierNight',
+		'Cold Start, Ground, Day, With HMD': 'ColdStartGroundDayWithHmd',
+		'Cold Start, Ground, Day, No HMD': 'ColdStartGroundDayNoHmd',
+		'Cold Start, Ground, Night, With HMD': 'ColdStartGroundNightWithHmd',
+		'Cold Start, Ground, Night, No HMD': 'ColdStartGroundNightNoHmd',
+		'Cold Start, Carrier, Day, With HMD': 'ColdStartCarrierDayWithHmd',
+		'Cold Start, Carrier, Day, No HMD': 'ColdStartCarrierDayNoHmd',
+		'Cold Start, Carrier, Night, With HMD': 'ColdStartCarrierNightWithHmd',
+		'Cold Start, Carrier, Night, No HMD': 'ColdStartCarrierNightNoHmd',
+		'Hot Start, Ground, Day': 'HotStartGroundDay',
+		'Hot Start, Ground, Night': 'HotStartGroundNight',
+		'Hot Start, Carrier, Day': 'HotStartCarrierDay',
+		'Hot Start, Carrier, Night': 'HotStartCarrierNight',
 		'Shutdown': 'Shutdown',
-		'Flashpoint Levant Waypoints': 'FlashpointLevantWaypoints',
+		#'Flashpoint Levant Waypoints': 'FlashpointLevantWaypoints',
 		#'Test': 'Test',
 	}
 
@@ -46,17 +50,29 @@ def Test(config):
 
 	return seq
 
-def ColdStartGroundDay(config):
-	return ColdStart(config, groundStart = True, dayStart = True)
+def ColdStartGroundDayWithHmd(config):
+	return ColdStart(config, groundStart = True, dayStart = True, hmd = True)
 
-def ColdStartCarrierDay(config):
-	return ColdStart(config, groundStart = False, dayStart = True)
+def ColdStartGroundDayNoHmd(config):
+	return ColdStart(config, groundStart = True, dayStart = True, hmd = False)
 
-def ColdStartGroundNight(config):
-	return ColdStart(config, groundStart = True, dayStart = False)
+def ColdStartGroundNightWithHmd(config):
+	return ColdStart(config, groundStart = True, dayStart = False, hmd = True)
 
-def ColdStartCarrierNight(config):
-	return ColdStart(config, groundStart = False, dayStart = False)
+def ColdStartGroundNightNoHmd(config):
+	return ColdStart(config, groundStart = True, dayStart = False, hmd = False)
+
+def ColdStartCarrierDayWithHmd(config):
+	return ColdStart(config, groundStart = False, dayStart = True, hmd = True)
+
+def ColdStartCarrierDayNoHmd(config):
+	return ColdStart(config, groundStart = False, dayStart = True, hmd = False)
+
+def ColdStartCarrierNightWithHmd(config):
+	return ColdStart(config, groundStart = False, dayStart = False, hmd = True)
+
+def ColdStartCarrierNightNoHmd(config):
+	return ColdStart(config, groundStart = False, dayStart = False, hmd = False)
 
 def HotStartGroundDay(config):
 	return HotStart(config, groundStart = True, dayStart = True)
@@ -72,7 +88,7 @@ def HotStartCarrierNight(config):
 
 
 # Some settings change depending on whether you're starting from the ground or from a carrier.
-def ColdStart(config, groundStart = True, dayStart = True):
+def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	seq = []
 	seqTime = 0
 	dt = 0.3
@@ -91,7 +107,6 @@ def ColdStart(config, groundStart = True, dayStart = True):
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
 
-	canopyCloseTime = 9
 	apuStartTime = 15
 	engineCrankTime = 7 # Seconds until engine is at 15% after setting crank switch.
 	engineStartTime = 35 # Seconds until engine is fully started after moving throttle to idle.
@@ -109,71 +124,49 @@ def ColdStart(config, groundStart = True, dayStart = True):
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16(0.5))
 	
+	# Start APU
 	apuTimerStart = getLastSeqTime()
-	#pushSeqCmd(dt, '', '', "Starting APU ("+str(apuStartTime)+"s)")
 	pushSeqCmd(dt, 'APU_CONTROL_SW', 1, 'APU switch - On')
 	
-	canopyTimerStart = getLastSeqTime()
-	#pushSeqCmd(dt, '', '', "CANOPY - CLOSE")
+	# Close canopy while waiting for APU
 	pushSeqCmd(dt, 'CANOPY_SW', 0)
-	canopyTimerEnd = canopyCloseTime - (getLastSeqTime() - canopyTimerStart)
-	pushSeqCmd(canopyTimerEnd, 'CANOPY_SW', 1, 'Canopy closed') # Turn off canopy switch 8 seconds later.
+	pushSeqCmd(9, 'CANOPY_SW', 1) # Turn off canopy switch 9 seconds later.
 	
 	apuTimerEnd = apuStartTime - (getLastSeqTime() - apuTimerStart)
 	pushSeqCmd(apuTimerEnd, '', '', "APU started")
+	# APU started
 
-	#pushSeqCmd(dt, '', '', "LEFT DDI - ON")
+	# All MFDs on
 	if dayStart:
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 2) # DAY
+		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 2) # DAY
+		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
 	else:
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 1) # NIGHT
-	
-	#pushSeqCmd(dt, '', '', "RIGHT DDI - ON")
-	if dayStart:
-		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 2) # DAY
-	else:
 		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 1) # NIGHT
+		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
 	
-	#pushSeqCmd(dt, '', '', "HUD - ON")
+	# HUD, UFC, IFEI brightness
 	if dayStart:
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16())
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
+		pushSeqCmd(dt, 'UFC_BRT', int16())
+		pushSeqCmd(dt, 'IFEI', int16()) # IFEI brightness to max
 	else:
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16(0.5))
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 0) # 0 = NIGHT, 1 = DAY
-
-	#pushSeqCmd(dt, '', '', "AMPCD - ON")
-	if dayStart:
-		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
-	else:
-		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
-	
-	#pushSeqCmd(dt, '', '', "UFC BRIGHTNESS - MAX")
-	if dayStart:
-		pushSeqCmd(dt, 'UFC_BRT', int16())
-	else:
 		pushSeqCmd(dt, 'UFC_BRT', int16(0.5))
-
-	# IFEI brightness
-	if dayStart:
-		pushSeqCmd(dt, 'IFEI', int16()) # IFEI brightness to max
-	else:
 		pushSeqCmd(dt, 'IFEI', 1000) # IFEI brightness to min
 
+	# Radio volume
 	pushSeqCmd(dt, 'UFC_COMM1_VOL', int16(0.8), 'COMM 1 vol - 80%')
 	pushSeqCmd(dt, 'UFC_COMM2_VOL', int16(0.8), 'COMM 2 vol - 80%')
 	
 	# RIGHT ENGINE
-	rightEngineCrankTimerStart = getLastSeqTime()
-	#pushSeqCmd(dt, '', '', "RIGHT ENGINE - START (40s)")
-	#pushSeqCmd(dt, '', '', "ENG CRANK SWITCH - R")
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 2) # Right
-	rightEngineCrankTimerEnd = engineCrankTime - (getLastSeqTime() - rightEngineCrankTimerStart)
-	pushSeqCmd(rightEngineCrankTimerEnd, '', '', "Right engine at 15%, right throttle to IDLE")
+	pushSeqCmd(7, '', '', "Right engine at 15%, right throttle to IDLE")
 	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_HOME}{VK_RSHIFT up}')
-	rightEngineStartTimerStart = getLastSeqTime()
-	rightEngineStartTimerEnd = engineStartTime - (getLastSeqTime() - rightEngineStartTimerStart)
-	pushSeqCmd(rightEngineStartTimerEnd, '', '', 'Right engine started')
+	pushSeqCmd(35, '', '', 'Right engine started')
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END RIGHT ENGINE
 
@@ -184,79 +177,77 @@ def ColdStart(config, groundStart = True, dayStart = True):
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	
 	#pushSeqCmd(dt, '', '', "HMD knob - ON")
-	if dayStart:
-		pushSeqCmd(dt, 'HMD_OFF_BRT', int16())
-	else:
-		pushSeqCmd(dt, 'HMD_OFF_BRT', int16(0.5))
+	if hmd:
+		if dayStart:
+			pushSeqCmd(dt, 'HMD_OFF_BRT', int16())
+		else:
+			pushSeqCmd(dt, 'HMD_OFF_BRT', int16(0.5))
 	
-	#pushSeqCmd(dt, '', '', "BLEED AIR KNOB - CYCLE THRU OFF TO NORM")
+	# BLEED AIR KNOB - CYCLE THRU OFF TO NORM
 	pushSeqCmd(dt, 'BLEED_AIR_KNOB', 3)
 	pushSeqCmd(dt, 'BLEED_AIR_KNOB', 0)
 	pushSeqCmd(dt, 'BLEED_AIR_KNOB', 1)
 	pushSeqCmd(dt, 'BLEED_AIR_KNOB', 2)
 
+	# RADAR ALTIMETER - ON, SET TO 50 FT
 	maxRadAlt = int(int16() * 3 + 8194) # Just over 3 full turns of the knob from 0 to max.
-	#pushSeqCmd(dt, '', '', "RADAR ALTIMETER - ON, SET TO 50 FT")
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '-'+str(maxRadAlt)) # All the way off
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '+'+str(int16(0.28))) # Turn knob up 28% of one turn to get 50 ft.
 
-	#pushSeqCmd(dt, '', '', "RADAR KNOB - OPR")
+	# RADAR KNOB - OPR
 	pushSeqCmd(dt, 'RADAR_SW', 2)
-	#pushSeqCmd(dt, '', '', "FCS RESET BUTTON - PUSH")
+	# FCS RESET BUTTON - PUSH
 	pushSeqCmd(dt, 'FCS_RESET_BTN', 1) # Press
 	pushSeqCmd(dt, 'FCS_RESET_BTN', 0) # Release
 	
-	#pushSeqCmd(dt, '', '', "FLAP SWITCH - HALF")
+	# FLAP SWITCH - HALF
 	pushSeqCmd(dt, 'FLAP_SW', 1)
-	#pushSeqCmd(dt, '', '', "T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED")
+	# T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED (only momentary press actually necessary??)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 1)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 0)
 	
-	#pushSeqCmd(dt, '', '', "STANDBY ATTITUDE REFERENCE INDICATOR - UNCAGE")
+	# STANDBY ATTITUDE REFERENCE INDICATOR - UNCAGE
 	pushSeqCmd(dt, 'SAI_SET', '-100')
 	pushSeqCmd(dt, 'SAI_SET', '+100')
 	
-	#pushSeqCmd(dt, '', '', "ATT SWITCH - STBY")
+	# ATT SWITCH - STBY
 	pushSeqCmd(dt, 'HUD_ATT_SW', 0)
-	#pushSeqCmd(dt, '', '', "ATT SWITCH - AUTO")
+	# ATT SWITCH - AUTO
 	pushSeqCmd(dt, 'HUD_ATT_SW', 1)
-	#pushSeqCmd(dt, '', '', "OBOGS CONTROL SWITCH - ON")
+	# OBOGS CONTROL SWITCH - ON
 	pushSeqCmd(dt, 'OBOGS_SW', 1)
 	
-	#pushSeqCmd(dt, '', '', "HMD - AUTOSTART ALIGN")
-	#pushSeqCmd(1, {check_condition = F18_AD_HMD_ALIGN)
-
 	if groundStart:
-		#pushSeqCmd(dt, '', '', 'HOOK BYPASS switch - FIELD')
+		# HOOK BYPASS switch - FIELD
 		pushSeqCmd(dt, 'HOOK_BYPASS_SW', 1)
 		pushSeqCmd(dt, 'ANTI-SKID switch - ON', 1)
 		pushSeqCmd(dt, 'ANTI_SKID_SW', 1)
 	else:
-		#pushSeqCmd(dt, '', '', 'HOOK BYPASS switch - CARRIER')
+		# HOOK BYPASS switch - CARRIER
 		pushSeqCmd(dt, 'HOOK_BYPASS_SW', 0)
 		pushSeqCmd(dt, 'ANTI-SKID switch - OFF', 1)
 		pushSeqCmd(dt, 'ANTI_SKID_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "HUD ALT SWITCH - RDR")
+	# HUD ALT SWITCH - RDR
 	pushSeqCmd(dt, 'HUD_ALT_SW', 0)
-	#pushSeqCmd(dt, '', '', "IR COOL SWITCH - NORM")
+	# IR COOL SWITCH - NORM
 	pushSeqCmd(dt, 'IR_COOL_SW', 1)
-	#pushSeqCmd(dt, '', '', "DISPENSER SWITCH - ON")
+	# DISPENSER SWITCH - ON
 	pushSeqCmd(dt, 'CMSD_DISPENSE_SW', 1)
-	#pushSeqCmd(dt, '', '', "ECM - REC")
+	# ECM - REC
 	pushSeqCmd(dt, 'ECM_MODE_SW', 3)
-	#pushSeqCmd(dt, '', '', "RWR POWER - ON")
+	# RWR POWER - ON
 	pushSeqCmd(dt, 'RWR_POWER_BTN', 1)
 
 	# BEGIN INS START ALIGN
 	insAlignTimerStart = getLastSeqTime()
 	if groundStart:
-		#pushSeqCmd(dt, '', '', "INS KNOB - GND")
+		# INS KNOB - GND
 		pushSeqCmd(dt, 'INS_SW', 2)
 	else:
-		#pushSeqCmd(dt, '', '', "INS KNOB - CV")
+		# INS KNOB - CV
 		pushSeqCmd(dt, 'INS_SW', 1)
-	#pushSeqCmd(dt, '', '', "WAITING FOR INS ALIGN")
+	# Select stored heading alignment.
 	pushSeqCmd(dt, 'AMPCD_PB_19', 1) # STD HDG OSB
 	pushSeqCmd(dt, 'AMPCD_PB_19', 0) # release
 	# END INS START ALIGN
@@ -269,16 +260,10 @@ def ColdStart(config, groundStart = True, dayStart = True):
 		pushSeqCmd(dt, 'AMPCD_NIGHT_DAY', 1) # Release
 
 	# LEFT ENGINE
-	leftEngineCrankTimerStart = getLastSeqTime()
-	#pushSeqCmd(dt, '', '', "LEFT ENGINE - START (40s)")
-	#pushSeqCmd(dt, '', '', "ENG CRANK SWITCH - L")
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 0) # Left
-	leftEngineCrankTimerEnd = engineCrankTime - (getLastSeqTime() - leftEngineCrankTimerStart)
-	pushSeqCmd(leftEngineCrankTimerEnd, '', '', "Left engine at 15%, left throttle to IDLE")
+	pushSeqCmd(7, '', '', "Left engine at 15%, left throttle to IDLE")
 	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_HOME}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
-	leftEngineStartTimerStart = getLastSeqTime()
-	leftEngineStartTimerEnd = engineStartTime - (getLastSeqTime() - leftEngineStartTimerStart)
-	pushSeqCmd(leftEngineStartTimerEnd, '', '', 'Left engine started')
+	pushSeqCmd(35, '', '', 'Left engine started')
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END LEFT ENGINE
 	
@@ -296,8 +281,8 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 1) # BIT page STOP OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
 	
-	# Dispenser mode MAN 1 and RWR to HUD
-	#pushSeqCmd(dt, '', '', "DISPENSER MODE - MAN 1")
+	# EW page...
+	# Dispenser mode MAN 1
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_17', 1) # EW OSB
@@ -306,12 +291,11 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_19', 1) # MODE OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_19', 0) # release
-	#pushSeqCmd(dt, '', '', "RWR display to HUD")
+	# RWR display to HUD
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 1) # HUD OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 0) # release
 	
 	# RWR show on SA page
-	#pushSeqCmd(dt, '', '', "SA page show RWR")
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_13', 1) # SA OSB
@@ -324,7 +308,6 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
 	
 	# Go to FCS page
-	##pushSeqCmd(dt, '', '', "Return to FCS page")
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
@@ -332,47 +315,47 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_15', 1) # FCS OSB
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_15', 0) # release
 
-	# Prepare for HMD align
-	#pushSeqCmd(dt, '', '', "Align HMD")
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 1) # BIT OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 1) # DISPLAYS OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 1) # HMD OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 0) # release
-	pushSeqCmd(8, '', '', "HMD test complete")
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 1) # STOP OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_03', 1) # HMD OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_03', 0) # release
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_20', 1) # ALIGN OSB
-	pushSeqCmd(dt, 'RIGHT_DDI_PB_20', 0) # release
-	pushSeqCmd(dt, 'scriptSpeech', 'Press and hold uncage to align.  Press and release uncage to go to next mode, use T D C to align.  Unbox align O S B when complete.')
+	if hmd:
+		# Prepare for HMD align
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 1) # BIT OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 1) # DISPLAYS OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 1) # HMD OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_11', 0) # release
+		pushSeqCmd(8, '', '', "HMD test complete")
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 1) # STOP OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_03', 1) # HMD OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_03', 0) # release
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_20', 1) # ALIGN OSB
+		pushSeqCmd(dt, 'RIGHT_DDI_PB_20', 0) # release
+		pushSeqCmd(dt, 'scriptSpeech', 'Press and hold uncage to align.  Press and release uncage to go to next mode, use T D C to align.  Unbox align O S B when complete.')
 
-	#pushSeqCmd(dt, '', '', "SET BINGO FUEL - 3000 LBS")
+	# SET BINGO FUEL - 3000 LBS
 	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
 	pushSeqCmd(4.25, 'IFEI_UP_BTN', 0) # Release after 4.25 seconds to get 3000 lbs.
 	
-	#pushSeqCmd(dt, '', '', "IFF - ON")
+	# IFF - ON
 	pushSeqCmd(dt, 'UFC_IFF', 1) # UFC IFF button
 	pushSeqCmd(dt, 'UFC_IFF', 0) # release
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
 	pushSeqCmd(1, 'UFC_ONOFF', 0) # release after 1 second
 
-	#pushSeqCmd(dt, '', '', "DATALINK - Link 4 ON")
+	#DATALINK - Link 4 ON
 	pushSeqCmd(dt, 'UFC_DL', 1) # UFC D/L button
 	pushSeqCmd(dt, 'UFC_DL', 0) # release
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
 	pushSeqCmd(1, 'UFC_ONOFF', 0) # release after 1 second
-	#pushSeqCmd(dt, '', '', "DATALINK - Link 16 ON")
+	# DATALINK - Link 16 ON
 	pushSeqCmd(dt, 'UFC_DL', 1) # UFC D/L button, press again to go to the second D/L page
 	pushSeqCmd(dt, 'UFC_DL', 0) # release
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
@@ -381,41 +364,33 @@ def ColdStart(config, groundStart = True, dayStart = True):
 	# Trigger the INS alignment check after the correct time (total process time minus the difference between now and when the process started).
 	insAlignTimerEnd = insAlignTime - (getLastSeqTime() - insAlignTimerStart)
 	pushSeqCmd(insAlignTimerEnd, '', '', "INS ALIGNMENT - READY")
-	#pushSeqCmd(dt, '', '', "INS KNOB - IFA")
+	#INS KNOB - IFA
 	pushSeqCmd(dt, 'INS_SW', 4)
 	
+	# AMPCD GAIN - DOWN TO MIN FOR VR
 	# NOTE Should be done after INS alignement is complete.
-	#pushSeqCmd(dt, '', '', "AMPCD GAIN - DOWN TO MIN FOR VR")
 	pushSeqCmd(dt, 'AMPCD_GAIN_SW', 0) # Down
 	pushSeqCmd(3, 'AMPCD_GAIN_SW', 1) # Center after 3 seconds
 	
 	# Show local time in HUD
-	# IMPORTANT If you are doing a CV alignment, this must be done either before starting alignment, or after alignment is complete and INS knob is set to IFA.  That is because when doing a CV alignment, PB 17 says MAN instead of TIMEUFC, and if pressed, it turns off the STD HDG.  We'll do this on the left MFD instead of the right because the right will have had the HMD alignment on it.
-	pushSeqCmd(dt, 'LEFT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'LEFT_DDI_PB_18', 0) # release
-	pushSeqCmd(dt, 'LEFT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'LEFT_DDI_PB_18', 0) # release
-	pushSeqCmd(dt, 'LEFT_DDI_PB_02', 1) # HSI OSB
-	pushSeqCmd(dt, 'LEFT_DDI_PB_02', 0) # release
-	pushSeqCmd(dt, 'LEFT_DDI_PB_17', 1) # TIMEUFC OSB
-	pushSeqCmd(dt, 'LEFT_DDI_PB_17', 0) # release
+	# IMPORTANT If you are doing a CV alignment, this must be done either before starting alignment, or after alignment is complete and INS knob is set to IFA.  That is because when doing a CV alignment, PB 17 says MAN instead of TIMEUFC, and if pressed, it turns off the STD HDG.  We'll do this on the center MFD because it will already have the HSI on it for the alignment.
+	pushSeqCmd(dt, 'AMPCD_PB_17', 1) # TIMEUFC OSB
+	pushSeqCmd(dt, 'AMPCD_PB_17', 0) # release
 	pushSeqCmd(dt, 'UFC_OS5', 1) # LTOD OSB
 	pushSeqCmd(dt, 'UFC_OS5', 0) # release
-	pushSeqCmd(dt, 'LEFT_DDI_PB_17', 1) # TIMEUFC OSB
-	pushSeqCmd(dt, 'LEFT_DDI_PB_17', 0) # release
+	pushSeqCmd(dt, 'AMPCD_PB_17', 1) # TIMEUFC OSB
+	pushSeqCmd(dt, 'AMPCD_PB_17', 0) # release
 	
-	# Put left MFD on STORES page
-	pushSeqCmd(dt, 'LEFT_DDI_PB_18', 1) # MENU OSB
-	pushSeqCmd(dt, 'LEFT_DDI_PB_18', 0) # release
+	# Put left MFD on STORES page (it should already be on the TAC menu)
 	pushSeqCmd(dt, 'LEFT_DDI_PB_05', 1) # STORES OSB
 	pushSeqCmd(dt, 'LEFT_DDI_PB_05', 0) # release
 
-	#pushSeqCmd(dt, '', '', "PARK BRK HANDLE - FULLY STOWED")
+	# PARK BRK HANDLE - FULLY STOWED
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_ROTATE', 2)
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_PULL', 1)
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_ROTATE', 0)
 	
-	#pushSeqCmd(dt, '', '', "EJECTION SEAT SAFE/ARM HANDLE - ARM")
+	# EJECTION SEAT SAFE/ARM HANDLE - ARM
 	pushSeqCmd(dt, 'EJECTION_SEAT_ARMED', 0)
 	
 	return seq
@@ -451,81 +426,63 @@ def HotStart(config, groundStart = True, dayStart = True):
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	
-	#pushSeqCmd(dt, '', '', "LEFT DDI - ON")
+	# All MFDs on
 	if dayStart:
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 2) # DAY
+		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 2) # DAY
+		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
 	else:
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 1) # NIGHT
-	
-	#pushSeqCmd(dt, '', '', "RIGHT DDI - ON")
-	if dayStart:
-		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 2) # DAY
-	else:
 		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 1) # NIGHT
+		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
 	
-	#pushSeqCmd(dt, '', '', "HUD - ON")
+	# HUD, UFC, IFEI brightness
 	if dayStart:
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16())
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
+		pushSeqCmd(dt, 'UFC_BRT', int16())
+		pushSeqCmd(dt, 'IFEI', int16()) # IFEI brightness to max
 	else:
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16(0.5))
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 0) # 0 = NIGHT, 1 = DAY
-
-	#pushSeqCmd(dt, '', '', "AMPCD - ON")
-	if dayStart:
-		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
-	else:
-		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
-	
-	#pushSeqCmd(dt, '', '', "UFC BRIGHTNESS - MAX")
-	if dayStart:
-		pushSeqCmd(dt, 'UFC_BRT', int16())
-	else:
 		pushSeqCmd(dt, 'UFC_BRT', int16(0.5))
-
-	# IFEI brightness
-	if dayStart:
-		pushSeqCmd(dt, 'IFEI', int16()) # IFEI brightness to max
-	else:
 		pushSeqCmd(dt, 'IFEI', 1000) # IFEI brightness to min
 
-	#pushSeqCmd(dt, '', '', "HMD knob - ON")
-	if dayStart:
-		pushSeqCmd(dt, 'HMD_OFF_BRT', int16())
-	else:
-		pushSeqCmd(dt, 'HMD_OFF_BRT', int16(0.5))
-	
-	#pushSeqCmd(dt, '', '', "RADAR ALTIMETER - ON, SET TO 50 FT")
+	# Radio volume
+	pushSeqCmd(dt, 'UFC_COMM1_VOL', int16(0.8), 'COMM 1 vol - 80%')
+	pushSeqCmd(dt, 'UFC_COMM2_VOL', int16(0.8), 'COMM 2 vol - 80%')
+
+	# RADAR ALTIMETER - ON, SET TO 50 FT
 	maxRadAlt = int(int16() * 3 + 8194) # Just over 3 full turns of the knob from 0 to max.
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '-'+str(maxRadAlt)) # All the way off
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '+'+str(int16(0.28))) # Turn knob up 28% of one turn to get 50 ft.
 
-	#pushSeqCmd(dt, '', '', "FLAP SWITCH - HALF")
+	# FLAP SWITCH - HALF
 	pushSeqCmd(dt, 'FLAP_SW', 1)
-	#pushSeqCmd(dt, '', '', "T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED")
+	# T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 1)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 0)
 	
 	if groundStart:
-		#pushSeqCmd(dt, '', '', 'HOOK BYPASS switch - FIELD')
+		# HOOK BYPASS switch - FIELD
 		pushSeqCmd(dt, 'HOOK_BYPASS_SW', 1)
 		pushSeqCmd(dt, 'ANTI-SKID switch - ON', 1)
 		pushSeqCmd(dt, 'ANTI_SKID_SW', 1)
 	else:
-		#pushSeqCmd(dt, '', '', 'HOOK BYPASS switch - CARRIER')
+		# HOOK BYPASS switch - CARRIER
 		pushSeqCmd(dt, 'HOOK_BYPASS_SW', 0)
 		pushSeqCmd(dt, 'ANTI-SKID switch - OFF', 1)
 		pushSeqCmd(dt, 'ANTI_SKID_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "HUD ALT SWITCH - RDR")
+	# HUD ALT SWITCH - RDR
 	pushSeqCmd(dt, 'HUD_ALT_SW', 0)
-	#pushSeqCmd(dt, '', '', "IR COOL SWITCH - NORM")
+	# IR COOL SWITCH - NORM
 	pushSeqCmd(dt, 'IR_COOL_SW', 1)
-	#pushSeqCmd(dt, '', '', "DISPENSER SWITCH - ON")
+	# DISPENSER SWITCH - ON
 	pushSeqCmd(dt, 'CMSD_DISPENSE_SW', 1)
-	#pushSeqCmd(dt, '', '', "ECM - REC")
+	# ECM - REC
 	pushSeqCmd(dt, 'ECM_MODE_SW', 3)
-	#pushSeqCmd(dt, '', '', "RWR POWER - ON")
+	# RWR POWER - ON
 	pushSeqCmd(dt, 'RWR_POWER_BTN', 1)
 
 	# After the AMPCD (center MFD) powers on, set it to night mode if doing night start.
@@ -536,8 +493,8 @@ def HotStart(config, groundStart = True, dayStart = True):
 		pushSeqCmd(dt, 'AMPCD_NIGHT_DAY', 0) # Press
 		pushSeqCmd(dt, 'AMPCD_NIGHT_DAY', 1) # Release
 
-	# Dispenser mode MAN 1 and RWR to HUD
-	#pushSeqCmd(dt, '', '', "DISPENSER MODE - MAN 1")
+	# EW page...
+	# Dispenser mode MAN 1
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_17', 1) # EW OSB
@@ -547,12 +504,11 @@ def HotStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_19', 1) # MODE OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_19', 0) # release
-	#pushSeqCmd(dt, '', '', "RWR display to HUD")
+	# RWR display to HUD
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 1) # HUD OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 0) # release
 	
 	# RWR show on SA page
-	#pushSeqCmd(dt, '', '', "SA page show RWR")
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_13', 1) # SA OSB
@@ -579,7 +535,6 @@ def HotStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_17', 0) # release
 	
 	# Prepare for HMD align
-	#pushSeqCmd(dt, '', '', "Align HMD")
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
@@ -603,23 +558,23 @@ def HotStart(config, groundStart = True, dayStart = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_20', 0) # release
 	pushSeqCmd(dt, 'scriptSpeech', 'Press and hold uncage to align.  Press and release uncage to go to next mode, use T D C to align.  Unbox align O S B when complete.')
 
-	#pushSeqCmd(dt, '', '', "SET BINGO FUEL - 3000 LBS")
+	# SET BINGO FUEL - 3000 LBS
 	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
 	pushSeqCmd(4.25, 'IFEI_UP_BTN', 0) # Release after 4.25 seconds to get 3000 lbs.
 	
-	#pushSeqCmd(dt, '', '', "DATALINK - Link 4 ON")
+	# DATALINK - Link 4 ON
 	pushSeqCmd(dt, 'UFC_DL', 1) # UFC D/L button
 	pushSeqCmd(dt, 'UFC_DL', 0) # release
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
 	pushSeqCmd(1, 'UFC_ONOFF', 0) # release after 1 second
-	#pushSeqCmd(dt, '', '', "DATALINK - Link 16 ON")
+	# DATALINK - Link 16 ON
 	pushSeqCmd(dt, 'UFC_DL', 1) # UFC D/L button, press again to go to the second D/L page
 	pushSeqCmd(dt, 'UFC_DL', 0) # release
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
 	pushSeqCmd(1, 'UFC_ONOFF', 0) # release after 1 second
 
 	# NOTE Should be done after INS alignement is complete.
-	#pushSeqCmd(dt, '', '', "AMPCD GAIN - DOWN TO MIN FOR VR")
+	# AMPCD GAIN - DOWN TO MIN FOR VR
 	pushSeqCmd(dt, 'AMPCD_GAIN_SW', 0) # Down
 	pushSeqCmd(3, 'AMPCD_GAIN_SW', 1) # Center after 3 seconds
 	
@@ -649,74 +604,68 @@ def Shutdown(config):
 	
 	pushSeqCmd(0, '', '', "Running Shutdown sequence")
 	
-	#pushSeqCmd(dt, '', '', "EJECTION SEAT SAFE/ARM HANDLE - SAFE")
+	# EJECTION SEAT SAFE/ARM HANDLE - SAFE
 	pushSeqCmd(dt, 'EJECTION_SEAT_ARMED', 1)
 
-	#pushSeqCmd(dt, '', '', "OBOGS CONTROL SWITCH - OFF")
+	# OBOGS CONTROL SWITCH - OFF
 	pushSeqCmd(dt, 'OBOGS_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "FLAP SWITCH - FULL")
+	# FLAP SWITCH - FULL
 	pushSeqCmd(dt, 'FLAP_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED")
+	# T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 1)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 0)
 
-	#pushSeqCmd(dt, '', '', "PARK BRK HANDLE - ON")
+	# PARK BRK HANDLE - ON
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_ROTATE', 1)
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_PULL', 0)
 	
-	#pushSeqCmd(dt, '', '', "INS KNOB - OFF")
+	# INS KNOB - OFF
 	pushSeqCmd(dt, 'INS_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "STANDBY ATTITUDE REFERENCE INDICATOR - CAGE")
+	# STANDBY ATTITUDE REFERENCE INDICATOR - CAGE
 	pushSeqCmd(dt, 'SAI_CAGE', '1') # Pull knob.
 	pushSeqCmd(dt, 'SAI_SET', '+100') # Rotate CW slightly to hold.
 
-	#pushSeqCmd(dt, '', '', "RADAR KNOB - OFF")
+	# RADAR KNOB - OFF
 	pushSeqCmd(dt, 'RADAR_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "RADAR ALTIMETER - OFF")
+	#RADAR ALTIMETER - OFF
 	maxRadAlt = int(int16() * 3 + 8194) # Just over 3 full turns of the knob from 0 to max.
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '-'+str(maxRadAlt)) # All the way off
 	
-	#pushSeqCmd(dt, '', '', "HUD ALT SWITCH - BARO")
+	# HUD ALT SWITCH - BARO
 	pushSeqCmd(dt, 'HUD_ALT_SW', 1)
 
-	#pushSeqCmd(dt, '', '', "IR COOL SWITCH - OFF")
+	# IR COOL SWITCH - OFF
 	pushSeqCmd(dt, 'IR_COOL_SW', 0)
 
-	#pushSeqCmd(dt, '', '', "DISPENSER SWITCH - OFF")
+	# DISPENSER SWITCH - OFF
 	pushSeqCmd(dt, 'CMSD_DISPENSE_SW', 0)
-	#pushSeqCmd(dt, '', '', "ECM - OFF")
+	# ECM - OFF
 	pushSeqCmd(dt, 'ECM_MODE_SW', 0)
 
-	canopyTimerStart = getLastSeqTime()
-	#pushSeqCmd(dt, '', '', "CANOPY - OPEN")
+	# CANOPY - OPEN
 	pushSeqCmd(dt, 'CANOPY_SW', 2)
-	canopyTimerEnd = canopyCloseTime - (getLastSeqTime() - canopyTimerStart)
-	pushSeqCmd(canopyTimerEnd, 'CANOPY_SW', 1, 'Canopy closed') # Turn off canopy switch 8 seconds later.
+	pushSeqCmd(9, 'CANOPY_SW', 1, 'Canopy closed') # Turn off canopy switch 9 seconds later.
 
 	# Left engine off
 	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_END}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - OFF to LAlt+End') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
 
-	#pushSeqCmd(dt, '', '', "LEFT DDI - OFF")
+	# MFDs - OFF
 	pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 0)
-	
-	#pushSeqCmd(dt, '', '', "RIGHT DDI - OFF")
 	pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 0)
+	pushSeqCmd(dt, 'AMPCD_BRT_CTL', 0)
 	
-	#pushSeqCmd(dt, '', '', "HUD - OFF")
+	# HUD - OFF
 	pushSeqCmd(dt, 'HUD_SYM_BRT', 0)
 	pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
 
-	#pushSeqCmd(dt, '', '', "AMPCD - OFF")
-	pushSeqCmd(dt, 'AMPCD_BRT_CTL', 0)
-	
-	#pushSeqCmd(dt, '', '', "UFC BRIGHTNESS - OFF")
+	# UFC BRIGHTNESS - OFF
 	pushSeqCmd(dt, 'UFC_BRT', 0)
 
-	#pushSeqCmd(dt, '', '', "HMD knob - OFF")
+	# HMD knob - OFF
 	pushSeqCmd(dt, 'HMD_OFF_BRT', 0)
 
 	# Right engine off

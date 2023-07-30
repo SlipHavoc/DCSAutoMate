@@ -1,10 +1,13 @@
 # Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
 def getScriptFunctions():
 	return {
-		'Cold Start (day)': 'ColdStartDay',
-		'Cold Start (night)': 'ColdStartNight',
-		'Hot Start (day)': 'HotStartDay',
-		'Hot Start (night)': 'HotStartNight',
+		'Cold Start, Day': 'ColdStartDay',
+		'Cold Start, Night': 'ColdStartNight',
+		'Hot Start, Day': 'HotStartDay',
+		'Hot Start, Night': 'HotStartNight',
+		'Air Start, Day': 'AirStartDay',
+		'Air Start, Night': 'AirStartNight',
+		'Shutdown': 'Shutdown',
 	}
 
 def getInfo():
@@ -27,6 +30,12 @@ def HotStartDay(config):
 
 def HotStartNight(config):
 	return HotStart(config, dayStart = False)
+
+def AirStartDay(config):
+	return AirStart(config, dayStart = True)
+
+def AirStartNight(config):
+	return AirStart(config, dayStart = False)
 
 
 # Starting state should be NAV Master Mode, not in the menu screen for the left MFD's B3 OSB.
@@ -223,15 +232,14 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'MAIN_PWR_SW', 2, "MAIN PWR SWITCH - ON") # 0 = OFF, 1 = BATT, 2 = MAIN PWR
 	pushSeqCmd(dt, 'ANTI_SKID_SW', 2, "PARKING BRAKE/ANTI-SKID SWITCH - PARKING BRAKE") # 0 = OFF, 1 = ANTI-SKID, 2 = PARKING BRAKE
 
-	# Starting Engine
-	#pushSeqCmd(dt, '', '', "STARTING UP (60s)"), message_timeout = 60.0)
-	#pushSeqCmd(dt, '', '', "SPOOL UP (25s) - 20% RPM MINIMUM"), message_timeout = 25.0)
+	# Starting Engine (60s)
+	# SPOOL UP (25s) - 20% RPM MINIMUM
 	engineSpoolTimerStart = getLastSeqTime()
 	pushSeqCmd(dt, 'JFS_SW', 0, "JFS SWITCH - START 2") # 0 = START 2, 1 = OFF, 2 = START 1
 	pushSeqCmd(dt, 'JFS_SW', 1, "JFS SWITCH - OFF") # 0 = START 2, 1 = OFF, 2 = START 1
 
 	# Close canopy while we wait
-	#pushSeqCmd(dt, '', '', "CANOPY - CLOSE AND LOCK"), message_timeout = 8.0)
+	#pushSeqCmd(dt, '', '', "CANOPY - CLOSE AND LOCK
 	pushSeqCmd(dt, 'CANOPY_HANDLE', 0) # Unlock, up
 	pushSeqCmd(dt, 'CANOPY_SW', 0)
 	pushSeqCmd(7, 'CANOPY_SW', 1)
@@ -240,8 +248,8 @@ def ColdStart(config, dayStart = True):
 	engineSpoolTimerEnd = engineSpoolTime - (getLastSeqTime() - engineSpoolTimerStart)
 	pushSeqCmd(engineSpoolTimerEnd, '', '', 'Engine at 25%')
 
-	#pushSeqCmd(dt, '', '', "ENGINE START (35s)"), message_timeout = 35.0)
-	#pushSeqCmd(dt, '', '', "THROTTLE - IDLE")
+	# ENGINE START (35s)
+	# THROTTLE - IDLE 
 	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_HOME}{VK_RSHIFT up}')
 	pushSeqCmd(25, '', '', 'Engine started')
 
@@ -256,9 +264,11 @@ def ColdStart(config, dayStart = True):
 		pushSeqCmd(dt, 'PRI_INST_PNL_BRT_KNB', int16(0.5))
 		pushSeqCmd(dt, 'AOA_INDEX_BRT_KNB', int16(0.5))
 		pushSeqCmd(dt, 'AR_STATUS_BRT_KNB', int16(0.5))
+		# Cockpit flood lights start on at night, so turn them off.
+		pushSeqCmd(dt, 'FLOOD_CONSOLES_BRT_KNB', 0)
+		pushSeqCmd(dt, 'FLOOD_INST_PNL_BRT_KNB', 0)
 	
 	# AVIONICS POWER panel
-	#pushSeqCmd(dt, '', '', "AVIONICS POWER PANEL...")
 	pushSeqCmd(dt, 'MMC_PWR_SW', 1, "MMC SWITCH - ON")
 	pushSeqCmd(dt, 'ST_STA_SW', 1, "ST STA SWITCH - ON")
 	pushSeqCmd(dt, 'MFD_SW', 1, "MFD SWITCH - ON")
@@ -269,7 +279,6 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'MIDS_LVT_KNB', 2, "MDS LVT KNOB - ON") # Required for Link16 to work. 0 = ZERO, 1 = OFF, 2 = ON
 
 	# Begin alignment, takes 90 seconds for STOR HDG.
-	#pushSeqCmd(dt, '', '', "INS ALIGNMENT (90s)..."), message_timeout = ins_align_time)
 	pushSeqCmd(dt, 'INS_KNB', 1, "INS KNOB - STOR HDG") # 0 = OFF, 1 = STOR HDG, 2 = NORM, 3 = NAV, 4 = CAL, 5 = IN FLT ALIGN, 6 = ATT
 	insAlignTimerStart = getLastSeqTime()
 	# Shouldn't have to verify starting coordinates when using STOR HDG, but might not hurt to do it anyway...
@@ -282,7 +291,6 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'ICP_ENTR_BTN', 0)
 	
 	# SNSR PWR panel
-	#pushSeqCmd(dt, '', '', "SNSR PWR PANEL...")
 	pushSeqCmd(dt, 'FCR_PWR_SW', 1, "FCR SWITCH - ON")
 	pushSeqCmd(dt, 'RDR_ALT_PWR_SW', 1, "RDR ALT SWITCH - ON")
 	
@@ -316,8 +324,7 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'RWR_PWR_BTN', 1, "RWR INDICATOR CONTROL POWER - ON") # Press only
 	pushSeqCmd(dt, 'RWR_SEARCH_BTN', 1, "RWR INDICATOR SEARCH BUTTON - ON") # Press only
 
-	# Datalink
-	#pushSeqCmd(dt, '', '', "DATALINK XMT - L16 (RMFD OSB 6/R1)")
+	# DATALINK XMT - L16 (RMFD OSB 6/R1)
 	pushSeqCmd(dt, 'MFD_R_6', 1) # Press
 	pushSeqCmd(dt, 'MFD_R_6', 0) # Release
 
@@ -331,17 +338,15 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'INS_KNB', 3, "INS KNOB - NAV") # 0 = OFF, 1 = STOR HDG, 2 = NORM, 3 = NAV, 4 = CAL, 5 = IN FLT ALIGN, 6 = ATT
 	pushSeqCmd(dt, 'scriptSpeech', 'Alignment complete, you may now rearm.')
 
-	#pushSeqCmd(dt, '', '', "RETURN TO MAIN DED PAGE")
+	# RETURN TO MAIN DED PAGE
 	pushSeqCmd(dt, 'ICP_DATA_RTN_SEQ_SW', 0) # 0 = RTN, 1 = center, 2 = SEQ
 	pushSeqCmd(0.5, 'ICP_DATA_RTN_SEQ_SW', 1) # 0 = RTN, 1 = center, 2 = SEQ
 
 	# ECM
-	#pushSeqCmd(dt, '', '', "ECM POWER SWITCH - ON")
+	# ECM POWER SWITCH - ON
 	pushSeqCmd(dt, 'ECM_PW_SW', 1) # Must go through center position first.  0 = OFF, 1 = STBY, 2 = OPR
 	pushSeqCmd(dt, 'ECM_PW_SW', 2)
-	#pushSeqCmd(dt, '', '', "ECM XMIT SWITCH - 3 (BARRAGE JAMMING)")
-	#pushSeqCmd(dt, 'ECM_XMIT_SW', 1) # Must go through center position first.  0 = 3, 1 = 2, 2 = 1
-	#pushSeqCmd(dt, 'ECM_XMIT_SW', 2)
+	# ECM modules ON
 	pushSeqCmd(dt, 'ECM_1_BTN', 1, "ECM 1 MODULE - ON")
 	pushSeqCmd(dt, 'ECM_2_BTN', 1, "ECM 2 MODULE - ON")
 	pushSeqCmd(dt, 'ECM_3_BTN', 1, "ECM 3 MODULE - ON")
@@ -366,8 +371,7 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'ANTI_SKID_SW', 1, "PARKING BRAKE/ANTI-SKID SWITCH - ANTI-SKID") # 0 = OFF, 1 = ANTI-SKID, 2 = PARKING BRAKE
 
 	# Probe Heat (only when icing conditions on the ground, must take off within 5 minutes to prevent overheat)
-	##pushSeqCmd(dt, '', '', "PROBE HEAT - HEAT")
-	#pushSeqCmd(dt, ELEC_INTERFACE, action = elec_commands.ProbeHeatSw, 1)
+	#FIXME: pushSeqCmd(dt, ELEC_INTERFACE, action = elec_commands.ProbeHeatSw, 1)
 	pushSeqCmd(dt, 'scriptSpeech', 'Manual steps remaining: Set cat 1 or cat 3.')
 
 	return seq
@@ -405,9 +409,9 @@ def HotStart(config, dayStart = True):
 		pushSeqCmd(dt, 'PRI_INST_PNL_BRT_KNB', int16(0.5))
 		pushSeqCmd(dt, 'AOA_INDEX_BRT_KNB', int16(0.5))
 		pushSeqCmd(dt, 'AR_STATUS_BRT_KNB', int16(0.5))
-	
-	# SNSR PWR panel
-	#pushSeqCmd(dt, '', '', "SNSR PWR PANEL...")
+		# Cockpit flood lights start on at night, so turn them off.
+		pushSeqCmd(dt, 'FLOOD_CONSOLES_BRT_KNB', 0)
+		pushSeqCmd(dt, 'FLOOD_INST_PNL_BRT_KNB', 0)
 	
 	if dayStart:
 		pushSeqCmd(dt, 'HMCS_INT_KNB', int16(), "HMCS BRIGHTNESS - MAX")
@@ -430,16 +434,15 @@ def HotStart(config, dayStart = True):
 	pushSeqCmd(dt, 'RWR_PWR_BTN', 1, "RWR INDICATOR CONTROL POWER - ON") # Press only
 	pushSeqCmd(dt, 'RWR_SEARCH_BTN', 1, "RWR INDICATOR SEARCH BUTTON - ON") # Press only
 
-	# Datalink
-	#pushSeqCmd(dt, '', '', "DATALINK XMT - L16 (RMFD OSB 6/R1)")
+	# DATALINK XMT - L16 (RMFD OSB 6/R1)
 	pushSeqCmd(dt, 'MFD_R_6', 1) # Press
 	pushSeqCmd(dt, 'MFD_R_6', 0) # Release
 
 	# ECM
-	#pushSeqCmd(dt, '', '', "ECM POWER SWITCH - ON")
+	# ECM POWER SWITCH - ON
 	pushSeqCmd(dt, 'ECM_PW_SW', 1) # Must go through center position first.  0 = OFF, 1 = STBY, 2 = OPR
 	pushSeqCmd(dt, 'ECM_PW_SW', 2)
-	#pushSeqCmd(dt, '', '', "ECM XMIT SWITCH - 3 (BARRAGE JAMMING)")
+	# ECM XMIT SWITCH - 3 (BARRAGE JAMMING)
 	#pushSeqCmd(dt, 'ECM_XMIT_SW', 1) # Must go through center position first.  0 = 3, 1 = 2, 2 = 1
 	#pushSeqCmd(dt, 'ECM_XMIT_SW', 2)
 	pushSeqCmd(dt, 'ECM_1_BTN', 1, "ECM 1 MODULE - ON")
@@ -453,4 +456,179 @@ def HotStart(config, dayStart = True):
 
 	pushSeqCmd(dt, 'scriptSpeech', 'Manual steps remaining: Set cat 1 or cat 3.')
 	
+	return seq
+
+
+def AirStart(config, dayStart = True):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+	
+	pushSeqCmd(0, '', '', "Running Air Start sequence")
+
+	# Interior lights
+	if dayStart:
+		pushSeqCmd(dt, 'PRI_CONSOLES_BRT_KNB', int16())
+		pushSeqCmd(dt, 'PRI_INST_PNL_BRT_KNB', int16())
+		pushSeqCmd(dt, 'AOA_INDEX_BRT_KNB', int16())
+		pushSeqCmd(dt, 'AR_STATUS_BRT_KNB', int16())
+	else:
+		pushSeqCmd(dt, 'PRI_CONSOLES_BRT_KNB', int16(0.5))
+		pushSeqCmd(dt, 'PRI_INST_PNL_BRT_KNB', int16(0.5))
+		pushSeqCmd(dt, 'AOA_INDEX_BRT_KNB', int16(0.5))
+		pushSeqCmd(dt, 'AR_STATUS_BRT_KNB', int16(0.5))
+		# Cockpit flood lights start on at night, so turn them off.
+		pushSeqCmd(dt, 'FLOOD_CONSOLES_BRT_KNB', 0)
+		pushSeqCmd(dt, 'FLOOD_INST_PNL_BRT_KNB', 0)
+	
+	if dayStart:
+		pushSeqCmd(dt, 'HMCS_INT_KNB', int16(), "HMCS BRIGHTNESS - MAX")
+		pushSeqCmd(dt, 'ICP_HUD_BRT_KNB', int16(), "HUD BRIGHTNESS - MAX")
+	else:
+		pushSeqCmd(dt, 'HMCS_INT_KNB', int16(0.5), "HMCS BRIGHTNESS - 50%")
+		pushSeqCmd(dt, 'ICP_HUD_BRT_KNB', int16(0.5), "HUD BRIGHTNESS - 50%")
+	
+	# UHF Radio
+	pushSeqCmd(dt, 'UHF_FUNC_KNB', 1, "UHF FUNCTION KNOB - MAIN") # 0 = OFF, 1 = MAIN, 2 = BOTH, 3 = ADF
+
+	# Left and right hardpoints on
+	pushSeqCmd(dt, 'HDPT_SW_L', 1)
+	pushSeqCmd(dt, 'HDPT_SW_R', 1)
+
+	# RWR
+	pushSeqCmd(dt, 'RWR_SEARCH_BTN', 1, "RWR INDICATOR SEARCH BUTTON - ON") # Press only
+
+	# DATALINK XMT - L16 (RMFD OSB 6/R1)
+	pushSeqCmd(dt, 'MFD_R_6', 1) # Press
+	pushSeqCmd(dt, 'MFD_R_6', 0) # Release
+
+	# ECM
+	pushSeqCmd(dt, 'ECM_1_BTN', 1, "ECM 1 MODULE - ON")
+	pushSeqCmd(dt, 'ECM_2_BTN', 1, "ECM 2 MODULE - ON")
+	pushSeqCmd(dt, 'ECM_3_BTN', 1, "ECM 3 MODULE - ON")
+	pushSeqCmd(dt, 'ECM_4_BTN', 1, "ECM 4 MODULE - ON")
+	pushSeqCmd(dt, 'ECM_5_BTN', 1, "ECM 5 MODULE - ON")
+	pushSeqCmd(dt, 'ECM_6_BTN', 1, "ECM 6 MODULE - ON")
+
+	setupMFDs(dt, seq, pushSeqCmd)
+
+	pushSeqCmd(dt, 'scriptSpeech', 'Manual steps remaining: Set cat 1 or cat 3.')
+
+	return seq
+
+
+def Shutdown(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	pushSeqCmd(0, '', '', "Running Shutdown sequence")
+	
+	# AVIONICS POWER panel
+	pushSeqCmd(dt, 'MMC_PWR_SW', 0) # MMC SWITCH - OFF
+	pushSeqCmd(dt, 'ST_STA_SW', 0) # ST STA SWITCH - OFF
+	pushSeqCmd(dt, 'MFD_SW', 0) # MFD SWITCH - OFF
+	pushSeqCmd(dt, 'UFC_SW', 0) #, "UFC SWITCH - OFF
+	#pushSeqCmd(dt, 'MAP_SW', 0) # MAP SWITCH - OFF (not used)
+	pushSeqCmd(dt, 'GPS_SW', 0) # GPS SWITCH - OFF
+	#pushSeqCmd(dt, 'DL_SW', 0) # DL SWITCH - OFF (not used)
+	pushSeqCmd(dt, 'MIDS_LVT_KNB', 0) # MDS LVT KNOB - OFF
+
+	# INS off
+	pushSeqCmd(dt, 'INS_KNB', 0) # INS KNOB - OFF # 0 = OFF, 1 = STOR HDG, 2 = NORM, 3 = NAV, 4 = CAL, 5 = IN FLT ALIGN, 6 = ATT
+	
+	# SNSR PWR panel
+	pushSeqCmd(dt, 'FCR_PWR_SW', 0) # FCR SWITCH - OFF
+	pushSeqCmd(dt, 'RDR_ALT_PWR_SW', 0) # RDR ALT SWITCH - OFF
+	
+	pushSeqCmd(dt, 'HMCS_INT_KNB', 0)
+	pushSeqCmd(dt, 'ICP_HUD_BRT_KNB', 0)
+	
+	#pushSeqCmd(dt, 'SAI_PITCH_TRIM', int16(0.5), "STANDBY ATTITUDE INDICATOR - UNCAGE AND CENTER")
+	
+	# UHF Radio
+	pushSeqCmd(dt, 'UHF_FUNC_KNB', 0) # 0 = OFF, 1 = MAIN, 2 = BOTH, 3 = ADF
+
+	# IFF
+	pushSeqCmd(dt, 'IFF_MASTER_KNB', 0) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
+
+	# CMDS panel
+	pushSeqCmd(dt, 'CMDS_PWR_SOURCHE_SW', 0, "CMDS RWR SWITCH - OFF")
+	pushSeqCmd(dt, 'CMDS_JMR_SOURCHE_SW', 0, "CMDS JMR SWITCH - OFF")
+	pushSeqCmd(dt, 'CMDS_CH_EXP_CAT_SW', 0, "CMDS CH SWITCH - OFF")
+	pushSeqCmd(dt, 'CMDS_FL_EXP_CAT_SW', 0, "CMDS FL SWITCH - OFF")
+	pushSeqCmd(dt, 'CMDS_MODE_KNB', 0, "CMDS MODE KNOB - MAN (MANUAL CHAFF/FLARES)") # 0 = OFF, 1 = STBY, 2 = MAN, 3 = SEMI, 4 = AUTO, 5 = BYP
+
+	# Left and right hardpoints off
+	pushSeqCmd(dt, 'HDPT_SW_L', 0)
+	pushSeqCmd(dt, 'HDPT_SW_R', 0)
+
+	# RWR
+	pushSeqCmd(dt, 'RWR_PWR_BTN', 1, "RWR INDICATOR CONTROL POWER - OFF") # Press only
+	pushSeqCmd(dt, 'RWR_SEARCH_BTN', 1, "RWR INDICATOR SEARCH BUTTON - OFF") # Press only
+
+	# ECM
+	# ECM POWER SWITCH - OFF
+	pushSeqCmd(dt, 'ECM_PW_SW', 1) # Must go through center position first.  0 = OFF, 1 = STBY, 2 = OPR
+	pushSeqCmd(dt, 'ECM_PW_SW', 0)
+	# ECM modules OFF
+	pushSeqCmd(dt, 'ECM_1_BTN', 0, "ECM 1 MODULE - OFF")
+	pushSeqCmd(dt, 'ECM_2_BTN', 0, "ECM 2 MODULE - OFF")
+	pushSeqCmd(dt, 'ECM_3_BTN', 0, "ECM 3 MODULE - OFF")
+	pushSeqCmd(dt, 'ECM_4_BTN', 0, "ECM 4 MODULE - OFF")
+	pushSeqCmd(dt, 'ECM_5_BTN', 0, "ECM 5 MODULE - OFF")
+	pushSeqCmd(dt, 'ECM_6_BTN', 0, "ECM 6 MODULE - OFF")
+
+	pushSeqCmd(dt, 'SEAT_EJECT_SAFE', 0, "EJECTION SAFETY LEVER - SAFE (UP)")
+	pushSeqCmd(dt, 'ANTI_SKID_SW', 2, "PARKING BRAKE/ANTI-SKID SWITCH - PARKING BRAKE") # 0 = OFF, 1 = ANTI-SKID, 2 = PARKING BRAKE
+
+	# Probe Heat (only when icing conditions on the ground, must take off within 5 minutes to prevent overheat)
+	#FIXME: pushSeqCmd(dt, ELEC_INTERFACE, action = elec_commands.ProbeHeatSw, 0)
+	
+	# Interior lights
+	pushSeqCmd(dt, 'PRI_CONSOLES_BRT_KNB', 0)
+	pushSeqCmd(dt, 'PRI_INST_PNL_BRT_KNB', 0)
+	pushSeqCmd(dt, 'AOA_INDEX_BRT_KNB', 0)
+	pushSeqCmd(dt, 'AR_STATUS_BRT_KNB', 0)
+	pushSeqCmd(dt, 'FLOOD_CONSOLES_BRT_KNB', 0)
+	pushSeqCmd(dt, 'FLOOD_INST_PNL_BRT_KNB', 0)
+	
+	# Open canopy
+	pushSeqCmd(dt, 'CANOPY_HANDLE', 0) # Unlock, up
+	pushSeqCmd(dt, 'CANOPY_SW', 2)
+	pushSeqCmd(11, 'CANOPY_SW', 1)
+	
+	# THROTTLE - OFF
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_END}{VK_RSHIFT up}')
+
+	pushSeqCmd(dt, 'MAIN_PWR_SW', 0, "MAIN PWR SWITCH - ON") # 0 = OFF, 1 = BATT, 2 = MAIN PWR
+
 	return seq

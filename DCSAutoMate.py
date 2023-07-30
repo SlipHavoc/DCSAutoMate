@@ -165,14 +165,6 @@ def getModuleNames():
 		modules.append(filenameNoExt)
 	return modules
 
-# Returns List of function names in the passed moduleName (no extension).
-# Code adapted from https://stackoverflow.com/a/46105518 .
-def getFunctionNamesOLD(moduleName):
-	source = open(f'./DCSAutoMateScripts/{moduleName}.py').read()
-	functions = [f.name for f in ast.parse(source).body if isinstance(f, ast.FunctionDef)]
-	#print(functions)
-	return functions
-
 # Returns Dictionary of function names that are runnable scripts (as opposed to utility functions in the module).
 def getFunctionNames(moduleName):
 	module = getModule(moduleName)

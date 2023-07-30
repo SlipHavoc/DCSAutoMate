@@ -4,6 +4,10 @@ def getScriptFunctions():
 		'Cold Start': 'ColdStart',
 	}
 
+# Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
+def int16(mult = 1):
+	int16 = 65535
+	return int(mult * int16)
 
 def ColdStart(config):
 	seq = []
@@ -20,10 +24,9 @@ def ColdStart(config):
 		})
 	
 	dt = 0.3
-	int16 = 65535
 	
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	#pushSeqCmd(dt, '', '', "Ground power supply - On")
+	# Ground power supply - On
 	pushSeqCmd(dt, 'scriptKeyboard', '{\ down}{\ up}') # Must have separate down and up to register key press.
 	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
@@ -31,8 +34,8 @@ def ColdStart(config):
 	pushSeqCmd(15, '', '', "Ground power is on")
 
 	# Interior lights
-	pushSeqCmd(dt, 'LIGHT_INT_INSTR', int16)
-	pushSeqCmd(dt, 'LIGHT_INT_CONSOLE', int16)
+	pushSeqCmd(dt, 'LIGHT_INT_INSTR', int16())
+	pushSeqCmd(dt, 'LIGHT_INT_CONSOLE', int16())
 	
 	# Start engine
 	pushSeqCmd(dt, 'STARTER_BTN', 1)
@@ -41,7 +44,7 @@ def ColdStart(config):
 	pushSeqCmd(20, '', '', "Engine at 40% RPM")
 
 
-	#pushSeqCmd(dt, '', '', "Ground power supply - Off")
+	# Ground power supply - Off
 	pushSeqCmd(dt, 'scriptKeyboard', '{\ down}{\ up}') # Must have separate down and up to register key press.
 	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
@@ -59,8 +62,8 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ECM_APR25_PW', 1)
 	pushSeqCmd(dt, 'ECM_APR27_PW', 1)
 	#pushSeqCmd(dt, 'ECM_AUDIO', 1) # 0 = APR 25, 1 = AUDIO ALQ (APR 27)
-	pushSeqCmd(dt, 'ECM_PRF_VOL', int(0.5 * int16))
-	pushSeqCmd(dt, 'ECM_MSL_VOL', int(0.5 * int16))
+	pushSeqCmd(dt, 'ECM_PRF_VOL', int16(0.5))
+	pushSeqCmd(dt, 'ECM_MSL_VOL', int16(0.5))
 	pushSeqCmd(dt, 'ECM_SEL', 2) # 0 = OFF, 1 = STBY, 2 = REC, 3 = RPT
 	
 	# UHF radio
