@@ -276,7 +276,7 @@ def ColdStart(config, dayStart = True):
 	#pushSeqCmd(dt, 'MAP_SW', 1, "MAP SWITCH - ON") # Not used.
 	pushSeqCmd(dt, 'GPS_SW', 1, "GPS SWITCH - ON")
 	#pushSeqCmd(dt, 'DL_SW', 1, "DL SWITCH - ON") # Not used, see MDS LVT knob for datalink.
-	pushSeqCmd(dt, 'MIDS_LVT_KNB', 2, "MDS LVT KNOB - ON") # Required for Link16 to work. 0 = ZERO, 1 = OFF, 2 = ON
+	# v.2.9.3.51704: MIDS switch should be left OFF until 60 seconds after GPS switch is set to ON.
 
 	# Begin alignment, takes 90 seconds for STOR HDG.
 	pushSeqCmd(dt, 'INS_KNB', 1, "INS KNOB - STOR HDG") # 0 = OFF, 1 = STOR HDG, 2 = NORM, 3 = NAV, 4 = CAL, 5 = IN FLT ALIGN, 6 = ATT
@@ -331,12 +331,17 @@ def ColdStart(config, dayStart = True):
 	# Set up the MFDs while we wait for alignment to complete.
 	setupMFDs(dt, seq, pushSeqCmd)
 
+	pushSeqCmd(dt, 'scriptSpeech', 'Don\'t rearm until alignment complete.') # Reminder not to rearm until alignment is complete.
+
 	insAlignTimerEnd = insAlignTime - (getLastSeqTime() - insAlignTimerStart)
 	pushSeqCmd(insAlignTimerEnd, '', '', 'INS alignment complete')
 
 	# INS Knob - NAV after aligning
 	pushSeqCmd(dt, 'INS_KNB', 3, "INS KNOB - NAV") # 0 = OFF, 1 = STOR HDG, 2 = NORM, 3 = NAV, 4 = CAL, 5 = IN FLT ALIGN, 6 = ATT
 	pushSeqCmd(dt, 'scriptSpeech', 'Alignment complete, you may now rearm.')
+
+	# MIDS switch - ON
+	pushSeqCmd(dt, 'MIDS_LVT_KNB', 2, "MDS LVT KNOB - ON") # Required for Link16 to work. 0 = ZERO, 1 = OFF, 2 = ON
 
 	# RETURN TO MAIN DED PAGE
 	pushSeqCmd(dt, 'ICP_DATA_RTN_SEQ_SW', 0) # 0 = RTN, 1 = center, 2 = SEQ
@@ -366,6 +371,12 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'ICP_BTN_0', 1) # COARSE in DED
 	pushSeqCmd(dt, 'ICP_BTN_0', 0)
 	pushSeqCmd(dt, 'scriptSpeech', 'Press shift T D C press to align.  Press M SELL twice to go to next mode, use T D C to align, then go to next mode and align.  When all modes are aligned press Return on Dobber to exit align.')
+
+	# Laser arm switch - ARM
+	pushSeqCmd(dt, 'LASER_ARM_SW', 1)
+
+	# Master arm switch - ARM
+	pushSeqCmd(dt, 'MASTER_ARM_SW', 2)
 
 	pushSeqCmd(dt, 'SEAT_EJECT_SAFE', 1, "EJECTION SAFETY LEVER - ARM (DOWN)")
 	pushSeqCmd(dt, 'ANTI_SKID_SW', 1, "PARKING BRAKE/ANTI-SKID SWITCH - ANTI-SKID") # 0 = OFF, 1 = ANTI-SKID, 2 = PARKING BRAKE
@@ -454,6 +465,12 @@ def HotStart(config, dayStart = True):
 
 	setupMFDs(dt, seq, pushSeqCmd)
 
+	# Laser arm switch - ARM
+	pushSeqCmd(dt, 'LASER_ARM_SW', 1)
+
+	# Master arm switch - ARM
+	pushSeqCmd(dt, 'MASTER_ARM_SW', 2)
+
 	pushSeqCmd(dt, 'scriptSpeech', 'Manual steps remaining: Set cat 1 or cat 3.')
 	
 	return seq
@@ -525,6 +542,12 @@ def AirStart(config, dayStart = True):
 	pushSeqCmd(dt, 'ECM_6_BTN', 1, "ECM 6 MODULE - ON")
 
 	setupMFDs(dt, seq, pushSeqCmd)
+
+	# Laser arm switch - ARM
+	pushSeqCmd(dt, 'LASER_ARM_SW', 1)
+
+	# Master arm switch - ARM
+	pushSeqCmd(dt, 'MASTER_ARM_SW', 2)
 
 	pushSeqCmd(dt, 'scriptSpeech', 'Manual steps remaining: Set cat 1 or cat 3.')
 

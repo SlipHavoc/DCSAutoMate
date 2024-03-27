@@ -2,12 +2,15 @@
 def getScriptFunctions():
 	return {
 		'Cold Start': 'ColdStart',
+		'Hot Start': 'HotStart',
+		'Reload Data Cartridge': 'ReloadDataCartridge',
 	}
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
+
 
 def ColdStart(config):
 	seq = []
@@ -111,5 +114,117 @@ def ColdStart(config):
 	# Parking brake - OFF
 	pushSeqCmd(dt, 'PARKING_BRAKE', 'TOGGLE') # FIXME This should work, but doesn't.  Brake must be released manually.
 	pushSeqCmd(dt, 'scriptSpeech', 'Release parking brake.')
+
+	return seq
+
+
+def HotStart(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	pushSeqCmd(0, '', '', "Running Hot Start sequence")
+	
+	# Instrument lights - 100%
+	pushSeqCmd(dt, 'INSTRUMENT_LIGHTS', int16())
+	# Panel lights - 100%
+	pushSeqCmd(dt, 'PANEL_LIGHTS', int16())
+	
+	# LOADING DATA CARTRIDGE
+	# Data Cartridge - REMOVE
+	pushSeqCmd(dt, 'DATA_CARTRIDGE', 0)
+	pushSeqCmd(2, '', '', "Data Cartridge removed")
+	# Data Cartridge - INSERT
+	pushSeqCmd(dt, 'DATA_CARTRIDGE', 1)
+	pushSeqCmd(2, '', '', "Data Cartridge inserted")
+	
+	# Data selector knob - REF/LOLA, IN
+	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 5) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
+	pushSeqCmd(dt, 'DATA_IN_OUT', 1) # In/Out switch, 1 = IN, 2 = OUT
+	# Enter data - 9099, LS/SKU
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 0) # Release
+	pushSeqCmd(dt, 'DATAPANEL_KEY_0', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_0', 0) # Release
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 0) # Release
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 0) # Release
+	pushSeqCmd(dt, 'NAV_SELECT_BTN_LS', 1) # Press
+	pushSeqCmd(dt, 'NAV_SELECT_BTN_LS', 0) # Release
+	# Wait for cartridge to be read (7s)
+	pushSeqCmd(7, '', '', "Data loaded")
+	# Data selector knob - AKT/POS, OUT
+	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 6) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
+	pushSeqCmd(dt, 'DATA_IN_OUT', 0) # In/Out switch, 1 = IN, 2 = OUT
+
+	# Slav SI switch - F
+	pushSeqCmd(dt, 'SLAV_SI', 0) # 0 = F, 1 = T
+
+	return seq
+
+
+def ReloadDataCartridge(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	pushSeqCmd(0, '', '', "Reloading Data Cartridge")
+	
+	# LOADING DATA CARTRIDGE
+	# Data Cartridge - REMOVE
+	pushSeqCmd(dt, 'DATA_CARTRIDGE', 0)
+	pushSeqCmd(2, '', '', "Data Cartridge removed")
+	# Data Cartridge - INSERT
+	pushSeqCmd(dt, 'DATA_CARTRIDGE', 1)
+	pushSeqCmd(2, '', '', "Data Cartridge inserted")
+	
+	# Data selector knob - REF/LOLA, IN
+	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 5) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
+	pushSeqCmd(dt, 'DATA_IN_OUT', 1) # In/Out switch, 1 = IN, 2 = OUT
+	# Enter data - 9099, LS/SKU
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 0) # Release
+	pushSeqCmd(dt, 'DATAPANEL_KEY_0', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_0', 0) # Release
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 0) # Release
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 1) # Press
+	pushSeqCmd(dt, 'DATAPANEL_KEY_9', 0) # Release
+	pushSeqCmd(dt, 'NAV_SELECT_BTN_LS', 1) # Press
+	pushSeqCmd(dt, 'NAV_SELECT_BTN_LS', 0) # Release
+	# Wait for cartridge to be read (7s)
+	pushSeqCmd(7, '', '', "Data loaded")
+	# Data selector knob - AKT/POS, OUT
+	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 6) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
+	pushSeqCmd(dt, 'DATA_IN_OUT', 0) # In/Out switch, 1 = IN, 2 = OUT
 
 	return seq

@@ -3,6 +3,7 @@ def getScriptFunctions():
 	return {
 		'Cold Start': 'ColdStart',
 		'Hot Start': 'HotStart',
+		'Shutdown': 'Shutdown',
 	}
 
 def getInfo():
@@ -12,7 +13,7 @@ def ColdStart(config):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
+
 	def pushSeqCmd(dt, cmd, arg, msg = ''):
 		nonlocal seq, seqTime
 		seqTime += dt
@@ -22,14 +23,14 @@ def ColdStart(config):
 			'arg': arg,
 			'msg': msg,
 		})
-		
+
 	def getLastSeqTime():
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
 
 	int16 = 65535
 	inuAlignTime = 3 * 60  # 3m00s
-	
+
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Cold Start sequence.")
 	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
@@ -78,7 +79,7 @@ def ColdStart(config):
 	# INU accelerated alignment in process (3m)
 	# SAI power - On # Right wall
 	pushSeqCmd(dt, 'SAI_POWER', 1)
-	
+
 
 	# Right wall radio switches:
 	# Fuel gauge power - On
@@ -101,7 +102,7 @@ def ColdStart(config):
 	# EKRAN HYD TRANS PWR switch - AUTO BASE # Right rear wall, black guarded switch
 	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER', 0) # Switch
 	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER_COVER', 0) # FIXME Doesn't matter what value you send, the cover is always toggled, not set to a specific state.  Since it starts open on cold start, only toggle it after flipping the switch.  On shutdown, toggle it back open again and leave it open.
-	
+
 	# UV-26 countermeasures dispenser (CMD) power - On # Right rear wall, black guarded switch
 	pushSeqCmd(dt, 'UV26_POWER_COVER', 1) # Cover open
 	pushSeqCmd(dt, 'UV26_POWER', 1) # Switch
@@ -132,7 +133,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ENG_START', 1) # Press
 	pushSeqCmd(dt, 'ENG_START', 0) # Release
 	pushSeqCmd(20, '', '', "APU started")
-	
+
 	# Prepare for engine start
 	# Rotor brake - Off
 	pushSeqCmd(dt, 'ENG_ROTOR_BREAK', 0) # NOTE Misspelling, "ENG_ROTOR_BREAK" is the DCS BIOS command.
@@ -184,7 +185,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP}') # Needs two "presses" to get to Auto.
 	pushSeqCmd(10, '', '', "Engines - spooled up")
-	
+
 	# Left AC generator - On
 	pushSeqCmd(dt, 'ELEC_AC_L_GEN', 1)
 	# Right AC generator - On
@@ -217,7 +218,7 @@ def ColdStart(config):
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3003, 1)
 	# Blade tip lights - On
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3001, 1)
-	# Formation lights - 
+	# Formation lights -
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, 0) # Off (center switch position)
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.1) # 10%
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.2) # 30%
@@ -241,7 +242,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
 	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
 	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	
+
 	# Default startup done, doing post-startup tasks.
 	# Laser rangefinder - Arm
 	pushSeqCmd(dt, 'LASER_STANDBY', 1)
@@ -249,7 +250,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'WEAPONS_MASTER_ARM', 1)
 	# Man/Auto weapon - Man
 	pushSeqCmd(dt, 'WEAPONS_MANUAL_AUTO', 1)
-	
+
 	# UV-26 countermeasures dispenser
 	# UV-26 Dispenser - Both sides
 	pushSeqCmd(dt, 'UV26_DISPENSERS_SELECTOR', 1) # Switch to middle
@@ -328,7 +329,7 @@ def HotStart(config):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
+
 	def pushSeqCmd(dt, cmd, arg, msg = ''):
 		nonlocal seq, seqTime
 		seqTime += dt
@@ -338,14 +339,14 @@ def HotStart(config):
 			'arg': arg,
 			'msg': msg,
 		})
-		
+
 	def getLastSeqTime():
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Hot Start sequence.")
-	
+
 	# SPU-9 radio selector knob - Ground Crew (allows rearming)
 	pushSeqCmd(dt, 'RADIO_SELECTOR', 3)
 
@@ -364,7 +365,7 @@ def HotStart(config):
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3003, 1)
 	# Blade tip lights - On
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3001, 1)
-	# Formation lights - 
+	# Formation lights -
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, 0) # Off (center switch position)
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.1) # 10%
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.2) # 30%
@@ -382,7 +383,7 @@ def HotStart(config):
 	pushSeqCmd(dt, 'WEAPONS_MASTER_ARM', 1)
 	# Man/Auto weapon - Man
 	pushSeqCmd(dt, 'WEAPONS_MANUAL_AUTO', 1)
-	
+
 	# UV-26 countermeasures dispenser
 	# UV-26 Dispenser - Both sides
 	pushSeqCmd(dt, 'UV26_DISPENSERS_SELECTOR', 1) # Switch to middle
@@ -437,5 +438,184 @@ def HotStart(config):
 	pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
 
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining:  Set lights.  Tune radios.  Set unguided weapon pylon ballistic knob to match rockets (middle knob on right rear wall).  Set altimeter to Q F E or Q N H.")
+
+	return seq
+
+def Shutdown(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	int16 = 65535
+	inuAlignTime = 3 * 60  # 3m00s
+
+	# Start sequence
+	pushSeqCmd(0, '', '', "Running Shutdown sequence.")
+
+	# Ejection system - Off
+	pushSeqCmd(dt, 'EJECT_POWER_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'EJECT_POWER_1', 0) # Switch 1
+	pushSeqCmd(dt, 'EJECT_POWER_2', 0) # Switch 2
+	pushSeqCmd(dt, 'EJECT_POWER_3', 0) # Switch 3
+	pushSeqCmd(dt, 'EJECT_POWER_COVER', 0) # Cover close
+
+	# Laser rangefinder - Safe
+	pushSeqCmd(dt, 'LASER_STANDBY', 0)
+	# Master Arm - Safe
+	pushSeqCmd(dt, 'WEAPONS_MASTER_ARM', 0)
+	# Man/Auto weapon - Auto
+	pushSeqCmd(dt, 'WEAPONS_MANUAL_AUTO', 0)
+
+	# Weapons control system power - Off # Right wall lower row, next to ejection system switches
+	pushSeqCmd(dt, 'WEAPONS_POWER_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'WEAPONS_POWER', 0) # Switch
+	pushSeqCmd(dt, 'WEAPONS_POWER_COVER', 0) # Cover open
+
+	# IFF power - Off
+	pushSeqCmd(dt, 'IFF_POWER_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'IFF_POWER', 0) # Switch
+	pushSeqCmd(dt, 'IFF_POWER_COVER', 0) # Cover close
+
+	# ABRIS power, turn on as soon as possible so it finishes booting up by the time we're done.
+	# ABRIS power - On
+	pushSeqCmd(dt, 'ABRIS_POWER', 0)
+
+	# K-041 targeting-navigation system power - Off # Left console in front of collective
+	pushSeqCmd(dt, 'K041_POWER', 0)
+	# PVI NAV master mode knob - OFF
+	pushSeqCmd(dt, 'PVI_MODES', 0) # 0 = OFF, 1 = CHECK, 2 = ENT, 3 = OPER, 4 = STM, 5 = K-1, 6 = K-2
+	# PVI NAV datalink power - Off
+	pushSeqCmd(dt, 'PVI_POWER', 0)
+	# INU heat - Off # Right rear wall
+	pushSeqCmd(dt, 'PPK800_INU_HEAT', 0)
+	# INU power - Off # Right rear wall
+	pushSeqCmd(dt, 'PPK800_INU_POWER', 0)
+	# SAI power - Off # Right wall
+	pushSeqCmd(dt, 'SAI_POWER', 0)
+
+	# Right wall radio switches:
+	# Fuel gauge power - Off
+	pushSeqCmd(dt, 'FUEL_METER_POWER', 0)
+	# Intercom (SPU-9) power - Off
+	pushSeqCmd(dt, 'COMM_INTERCOM_POWER', 0)
+	# VHF-1 (R-828) power - Off
+	pushSeqCmd(dt, 'COMM_VHF1_POWER', 0)
+	# VHF-2 (R-800) power - Off
+	pushSeqCmd(dt, 'COMM_VHF2_POWER', 0)
+	# Datalink radio (TLK) power - Off
+	pushSeqCmd(dt, 'COMM_DATALINK_TLK_POWER', 0)
+	# VHF-TLK power - Off
+	pushSeqCmd(dt, 'COMM_DATALINK_VHF_TLK_POWER', 0)
+	# NOTE: SA-TLF switch has no function in game.
+
+	# Various avionics systems
+	# K-041 targeting-navigation system power - Off # Left console in front of collective
+	pushSeqCmd(dt, 'NAV_POWER', 0)
+	# EKRAN HYD TRANS PWR switch - AUTO BASE # Right rear wall, black guarded switch
+	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER_COVER', 0) # FIXME Doesn't matter what value you send, the cover is always toggled, not set to a specific state.  Since it starts open on cold start, only toggle it after flipping the switch.  On shutdown, toggle it back open again and leave it open.
+	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER', 0) # Switch
+	
+	# UV-26 countermeasures dispenser (CMD) power - Off # Right rear wall, black guarded switch
+	pushSeqCmd(dt, 'UV26_POWER_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'UV26_POWER', 0) # Switch
+	pushSeqCmd(dt, 'UV26_POWER_COVER', 1) # Cover close
+	# L-140 laser warning (LWS) power - Off # Right rear wall
+	pushSeqCmd(dt, 'LWS_POWER', 0)
+	
+	# Left AC generator - Off
+	pushSeqCmd(dt, 'ELEC_AC_L_GEN', 0)
+	# Right AC generator - Off
+	pushSeqCmd(dt, 'ELEC_AC_R_GEN', 0)
+
+	# Left and right throttles - Idle (10s)
+	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN}')
+	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN}') # Needs two "presses" to get to Idle.
+	pushSeqCmd(10, '', '', "Engines - spooled down")
+
+	# Left engine stop
+	pushSeqCmd(dt, 'ENG_L_CUTOFF_VLV_HANDLE', 0)
+
+	# Right engine stop
+	pushSeqCmd(dt, 'ENG_R_CUTOFF_VLV_HANDLE', 0)
+
+	# Left engine fuel shut-off switch - Off
+	pushSeqCmd(dt, 'FUEL_L_ENG_VLV_COVER', 0) # Cover toggle
+	pushSeqCmd(dt, 'FUEL_L_ENG_VLV', 0) # Switch
+	pushSeqCmd(dt, 'FUEL_L_ENG_VLV_COVER', 0) # Cover toggle
+	# Right engine fuel shut-off switch - Off
+	pushSeqCmd(dt, 'FUEL_R_ENG_VLV_COVER', 0) # Cover toggle
+	pushSeqCmd(dt, 'FUEL_R_ENG_VLV', 0) # Switch
+	pushSeqCmd(dt, 'FUEL_R_ENG_VLV_COVER', 0) # Cover toggle
+	# Left engine EEG - Off
+	pushSeqCmd(dt, 'ENG_L_ENG_EEG_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'ENG_L_ENG_EEG', 0) # Switch
+	pushSeqCmd(dt, 'ENG_L_ENG_EEG_COVER', 0) # Cover close
+	# Right engine EEG - Off
+	pushSeqCmd(dt, 'ENG_R_ENG_EEG_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'ENG_R_ENG_EEG', 0) # Switch
+	pushSeqCmd(dt, 'ENG_R_ENG_EEG_COVER', 0) # Cover close
+
+	# Forward fuel tank pump - Off
+	pushSeqCmd(dt, 'FUEL_FORWARD_PUMP_POWER', 0)
+	# Aft fuel tank pump - Off
+	pushSeqCmd(dt, 'FUEL_AFT_PUMP_POWER', 0)
+
+	# Fire extinguishers - Off # Right wall upper row, black guarded switch
+	pushSeqCmd(dt, 'FIREEXT_EXT_MODE_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'FIREEXT_EXT_MODE', 0) # Switch
+	pushSeqCmd(dt, 'FIREEXT_EXT_MODE_COVER', 0) # Cover close
+
+
+	
+
+	# PVI and datalink, right console forward
+	# Datalink master mode knob - OFF
+	pushSeqCmd(dt, 'DLNK_MASTER_MODE', 0) # 0 = OFF, 1 = REC, 2 = WINGM, 3 = COM
+
+	
+	# SAI - Cage
+	#TODO
+
+	
+	# Battery 1 - Off
+	pushSeqCmd(dt, 'ELEC_BATTERY_1_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'ELEC_BATTERY_1', 0) # Switch
+	pushSeqCmd(dt, 'ELEC_BATTERY_1_COVER', 0) # Cover close
+	# Battery 2 - Off
+	pushSeqCmd(dt, 'ELEC_BATTERY_2_COVER', 1) # Cover open
+	pushSeqCmd(dt, 'ELEC_BATTERY_2', 0) # Switch
+	pushSeqCmd(dt, 'ELEC_BATTERY_2_COVER', 0) # Cover close
+
+	# Voice message system (Betty) - OFF
+	pushSeqCmd(dt, 'VOICE_MSG_EMER', 0)
+
+	
+
+	# Cockpit door - Open
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}')
+	if config['dvorak']:
+		pushSeqCmd(dt, 'scriptKeyboard', '{j down}{j up}') # QWERTY 'c', Dvorak 'j'.
+	else:
+		pushSeqCmd(dt, 'scriptKeyboard', '{c down}{c up}') # QWERTY 'c', Dvorak 'j'.
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT up}')
+
+
+	# Rotor brake - On
+	pushSeqCmd(15, '', '', 'Waiting for rotor to spin down to 30%')
+	pushSeqCmd(dt, 'ENG_ROTOR_BREAK', 1) # NOTE Misspelling, "ENG_ROTOR_BREAK" is the DCS BIOS command.
 
 	return seq

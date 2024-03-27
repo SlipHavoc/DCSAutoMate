@@ -40,6 +40,8 @@ def Test(config):
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
 	
+	# Test code here...
+
 	return seq
 
 def ColdStartDaySH(config):
@@ -66,6 +68,16 @@ def AirStartDay(config):
 def AirStartNight(config):
 	return AirStart(config, dayStart = False)
 
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
 def ColdStart(config, dayStart = True, alignSH = True):
 	seq = []
 	seqTime = 0
@@ -94,6 +106,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	
 	# Set lights
 	if dayStart:
+		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16())
 		# Rear console lights
@@ -112,9 +125,24 @@ def ColdStart(config, dayStart = True, alignSH = True):
 		pushSeqCmd(dt, 'F_HUD_D_A_N_MODE', 0) # 0 = DAY, 1 = AUTO, 2 = NIGHT??
 		# Front UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', int16())
+		# Front Gauges/UFC backlights
+		pushSeqCmd(dt, 'F_INTL_BACK', int16())
 		# Rear UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16())
+		# Rear Gauges/UFC backlights
+		pushSeqCmd(dt, 'R_INTL_BACK', int16())
+
+		# External lights:
+		# Anti-collision light
+		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
+		# Formation lights
+		pushSeqCmd(dt, 'F_EXTL_FORMATION', 0)
+		# Position lights
+		pushSeqCmd(dt, 'F_EXTL_POS', 0)
+		# Tail flood lights
+		pushSeqCmd(dt, 'F_EXTL_TFLOOD', 0)
 	else:
+		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16(0.5))
 		# Rear console lights
@@ -133,8 +161,22 @@ def ColdStart(config, dayStart = True, alignSH = True):
 		pushSeqCmd(dt, 'F_HUD_D_A_N_MODE', 2) # 0 = DAY, 1 = AUTO, 2 = NIGHT??
 		# Front UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', int16(0.5))
+		# Front Gauges/UFC backlights
+		pushSeqCmd(dt, 'F_INTL_BACK', int16(0.5))
 		# Rear UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16(0.5))
+		# Rear Gauges/UFC backlights
+		pushSeqCmd(dt, 'R_INTL_BACK', int16(0.5))
+
+		# External lights:
+		# Anti-collision light
+		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
+		# Formation lights
+		pushSeqCmd(dt, 'F_EXTL_FORMATION', 0)
+		# Position lights
+		pushSeqCmd(dt, 'F_EXTL_POS', 0)
+		# Tail flood lights
+		pushSeqCmd(dt, 'F_EXTL_TFLOOD', 0)
 
 	# L and R GEN switches ... ON
 	pushSeqCmd(dt, 'F_GEN_L', 1)
@@ -153,6 +195,8 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'F_GEN_JET_START', 1)
 	# AIR COND switch ... AUTO (right console forward outboard)
 	pushSeqCmd(dt, 'F_AC_AUTO_MAN_OFF', 2)
+	# Air conditioner ... MIN
+	pushSeqCmd(dt, 'F_AC_MAX_NORM_MIN', 0) # 0 = MIN, 1 = NORM, 2 = MAX
 	# CONF TANK switch ... TRANS (left console forward)
 	#pushSeqCmd(dt, 'F_FUEL_CONF_CONTL', 2) # Should be on NORM I think??
 	# L and R INLET switches ... AUTO (left console forward outboard)
@@ -197,6 +241,12 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	# Radio 2 ... ON
 	pushSeqCmd(dt, 'F_UFC_PRE_CHAN_R_PULL', 1)
 	pushSeqCmd(dt, 'F_UFC_PRE_CHAN_R_PULL', 0)
+	# Radio 1 Manual mode
+	pushSeqCmd(dt, 'F_UFC_KEY_L_GUARD', 1) # Press
+	pushSeqCmd(dt, 'F_UFC_KEY_L_GUARD', 0) # Release
+	# Radio 2 Manual mode
+	pushSeqCmd(dt, 'F_UFC_KEY_R_GUARD', 1) # Press
+	pushSeqCmd(dt, 'F_UFC_KEY_R_GUARD', 0) # Release
 	# Radio volumes
 	pushSeqCmd(dt, 'F_UFC_COM1_VOL', int16())
 	pushSeqCmd(dt, 'F_UFC_COM2_VOL', int16())
@@ -220,7 +270,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'F_MPCD_C_PW', 1)
 
 	# Begin alignment
-	pushSeqCmd(dt, 'scriptSpeech', "Beginning INS alignment.  Do not rearm or move controls until alignment is complete.")
+	pushSeqCmd(dt, 'scriptSpeech', "Beginning INS alignment.")
 	# INS knob ... STORE for stored heading (1 min), or GC ALIGN (gyrocompass) for full alignment (4 mins)
 	insAlignTimerStart = getLastSeqTime()
 	if alignSH:
@@ -236,6 +286,12 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	
 	# TF RDR switch ... STBY (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_TER_FOL', 1) # 0 = OFF, 1 = STBY, 2 = ON
+
+	# Auto Fly Up switch
+	# FIXME DCS-BIOS bug: You need to edit <username>\Saved Games\DCS.openbeta\Scripts\DCS-BIOS\lib\F-15E.lua and change the "F_BH_FLYUP_CVR" and "F_BH_FLYUP" lines to use device 65, instead of device 17 (second function parameter).  This should be fixed in current DCS-BIOS versions.
+	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 1) # Cover open
+	pushSeqCmd(dt, 'F_BH_FLYUP', 1) # 0 = ARMED (down), 1 = DISARMED (up)
+	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 0) # Cover close
 	
 	# RDR ALT switch ... ON (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_ALT', 1) # 0 = OFF, 1 = ON, 2 = OVERIDE
@@ -287,26 +343,42 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	# Return to MENU 1.
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+	# Disable LAW
+	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
+	pushSeqCmd(dt, 'F_UFC_B1', 0)
 
 	# PROGRAM MFDS
-	def pressMfdButtons(mfd, buttons):
-		prefixes = {
+	def pressMfdButtons(frontRear, mfd, buttons):
+		frontPrefixes = {
 			'left': 'F_MPD_L_',
 			'right': 'F_MPD_R_',
 			'center': 'F_MPCD_C_',
 		}
-		prefix = prefixes[mfd]
+		rearPrefixes = {
+			'leftColor': 'R_MPCD_L_',
+			'left': 'R_MPD_L_',
+			'right': 'R_MPD_R_',
+			'rightColor': 'R_MPCD_R_',
+		}
+
 		for button in buttons:
+			if frontRear == 'front':
+				prefix = frontPrefixes[mfd]
+			elif frontRear == 'rear':
+				prefix = rearPrefixes[mfd]
+
+			# If it's the POWER button, 0 is on and 1 is back to middle position.
 			if button == 'PW':
 				# 0 = ON, 1 = middle, 2 = OFF
 				pushSeqCmd(dt, prefix + button, 0) # ON
 				pushSeqCmd(dt, prefix + button, 1) # middle
+			# Else it's a regular button where 1 is press and 0 is release.
 			else:
 				pushSeqCmd(dt, prefix + button, 1) # Press
 				pushSeqCmd(dt, prefix + button, 0) # Release
 
 	# Left MFD
-	pressMfdButtons('left', [
+	pressMfdButtons('front', 'left', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
@@ -319,20 +391,20 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	])
 	
 	# Right MFD
-	pressMfdButtons('right', [
+	pressMfdButtons('front', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
 		'B6', # PROG
 		'B12', # TPOD
 		'B3', # HSI
-		'B2', # ARMT
+		'B4', # TF
 		# End programming.
 		'B6', # PROG
 	])
 
 	# Center MFD
-	pressMfdButtons('center', [
+	pressMfdButtons('front', 'center', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
@@ -345,8 +417,25 @@ def ColdStart(config, dayStart = True, alignSH = True):
 		# END PROGRAM MFDS
 	])
 
+	# Set up TF radar on Right MFD
+	pressMfdButtons('front', 'right', [
+		# Start programming.
+		'B4', # TF
+		'B10', # VLC
+		'B1', # 100
+		'B5', # SOFT toggle to HARD
+		'B11', # M, return to menu
+	])
+
+	# Set takeoff trim.
+	pushSeqCmd(dt, 'F_CAS_TO_TRIM', 1) # Press
+	pushSeqCmd(5, 'F_CAS_TO_TRIM', 0) # Release after 5 seconds
+
 	# Ejection seat ... ARM (lever on left forward base of seat)
 	pushSeqCmd(dt, 'F_BH_SEAT_ARM', 1)
+
+	# Master Arm ... ON
+	pushSeqCmd(dt, 'F_ARM_MASTER_ARM', 1)
 
 	# SET UP BACK SEAT
 	# All MFDs ... ON
@@ -393,7 +482,37 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'R_TEWS_EWWS_PW', 1)
 	# CMD MODE knob ... SEMIAUTO (right console middle)
 	pushSeqCmd(dt, 'R_CMD_OP_MODE', 3) # 0 = OFF, 1 = STBY, 2 = MAN ONLY, 3 = SEMIAUTO, 4 = AUTO
+
+	# Left MFCD
+	pressMfdButtons('rear', 'leftColor', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B17', # HUD
+		'B16' if dayStart else 'B20', # CAM else N-F
+	])
+
+	# Left MFD
+	pressMfdButtons('rear', 'left', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B14', # A/G RDR
+	])
 	
+	# Right MFD
+	pressMfdButtons('rear', 'right', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B12', # TPOD
+	])
+
+	# Right MFCD
+	pressMfdButtons('rear', 'rightColor', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		# Start programming.
+		'B13', # TEWS
+	])
+
 	# Ejection seat ... ARM (lever on left forward base of seat)
 	pushSeqCmd(dt, 'R_TQ_SEAT_ARM', 1)
 	# END SET UP BACK SEAT
@@ -406,17 +525,27 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(insAlignTimerEnd, '', '', "INS Aligned")
 	# INS knob ... NAV
 	pushSeqCmd(dt, 'F_S_INS', 3) # 0 = OFF, 1 = STORE, 2 = GC, 3 = NAV
-	pushSeqCmd(dt, 'scriptSpeech', "INS aiignment is complete, you may rearm and move the controls.")
+	pushSeqCmd(dt, 'scriptSpeech', "INS aiignment is complete.")
 	
 	# NOTE Should be done after INS alignement is complete.
 	# BRAKEHOLD switch ... OFF (right lower instrument panel)
 	pushSeqCmd(dt, 'F_B_P_BRAKE', 0)
 
-	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set up armament page.  Set lights.  Tune radios.")
+	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set up armament page.  Set laser code.  Set lights.  Tune radios.")
 
 	return seq
 
 
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
 def HotStart(config, dayStart = True):
 	seq = []
 	seqTime = 0
@@ -440,6 +569,7 @@ def HotStart(config, dayStart = True):
 	
 	# Set lights
 	if dayStart:
+		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16())
 		# Rear console lights
@@ -458,9 +588,24 @@ def HotStart(config, dayStart = True):
 		pushSeqCmd(dt, 'F_HUD_D_A_N_MODE', 0) # 0 = DAY, 1 = AUTO, 2 = NIGHT??
 		# Front UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', int16())
+		# Front Gauges/UFC backlights
+		pushSeqCmd(dt, 'F_INTL_BACK', int16())
 		# Rear UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16())
+		# Rear Gauges/UFC backlights
+		pushSeqCmd(dt, 'R_INTL_BACK', int16())
+		
+		# External lights:
+		# Anti-collision light
+		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
+		# Formation lights
+		pushSeqCmd(dt, 'F_EXTL_FORMATION', 0)
+		# Position lights
+		pushSeqCmd(dt, 'F_EXTL_POS', 0)
+		# Tail flood lights
+		pushSeqCmd(dt, 'F_EXTL_TFLOOD', 0)
 	else:
+		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16(0.5))
 		# Rear console lights
@@ -479,9 +624,26 @@ def HotStart(config, dayStart = True):
 		pushSeqCmd(dt, 'F_HUD_D_A_N_MODE', 2) # 0 = DAY, 1 = AUTO, 2 = NIGHT??
 		# Front UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', int16(0.5))
+		# Front Gauges/UFC backlights
+		pushSeqCmd(dt, 'F_INTL_BACK', int16(0.5))
 		# Rear UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16(0.5))
+		# Rear Gauges/UFC backlights
+		pushSeqCmd(dt, 'R_INTL_BACK', int16(0.5))
 
+		# External lights:
+		# Anti-collision light
+		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
+		# Formation lights
+		pushSeqCmd(dt, 'F_EXTL_FORMATION', 0)
+		# Position lights
+		pushSeqCmd(dt, 'F_EXTL_POS', 0)
+		# Tail flood lights
+		pushSeqCmd(dt, 'F_EXTL_TFLOOD', 0)
+
+	# Air conditioner ... MIN
+	pushSeqCmd(dt, 'F_AC_MAX_NORM_MIN', 0) # 0 = MIN, 1 = NORM, 2 = MAX
+	
 	# Radio volumes
 	pushSeqCmd(dt, 'F_UFC_COM1_VOL', int16())
 	pushSeqCmd(dt, 'F_UFC_COM2_VOL', int16())
@@ -493,6 +655,12 @@ def HotStart(config, dayStart = True):
 
 	# IFF reply switch ... LIGHT
 	pushSeqCmd(dt, 'F_IFF_REPLY', 2)
+
+	# Auto Fly Up switch
+	# FIXME DCS-BIOS bug: You need to edit <username>\Saved Games\DCS.openbeta\Scripts\DCS-BIOS\lib\F-15E.lua and change the "F_BH_FLYUP_CVR" and "F_BH_FLYUP" lines to use device 65, instead of device 17 (second function parameter).  This should be fixed in current DCS-BIOS versions.
+	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 1) # Cover open
+	pushSeqCmd(dt, 'F_BH_FLYUP', 1) # 0 = ARMED (down), 1 = DISARMED (up)
+	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 0) # Cover close
 
 	# RADAR switch ... ON (radar will stay off while weight-on-wheels) (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_MODE', 2) # 0 = OFF, 1 = STBY, 2 = ON, 3 = EMERG
@@ -528,26 +696,42 @@ def HotStart(config, dayStart = True):
 	# Return to MENU 1.
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+	# Disable LAW
+	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
+	pushSeqCmd(dt, 'F_UFC_B1', 0)
 
 	# PROGRAM MFDS
-	def pressMfdButtons(mfd, buttons):
-		prefixes = {
+	def pressMfdButtons(frontRear, mfd, buttons):
+		frontPrefixes = {
 			'left': 'F_MPD_L_',
 			'right': 'F_MPD_R_',
 			'center': 'F_MPCD_C_',
 		}
-		prefix = prefixes[mfd]
+		rearPrefixes = {
+			'leftColor': 'R_MPCD_L_',
+			'left': 'R_MPD_L_',
+			'right': 'R_MPD_R_',
+			'rightColor': 'R_MPCD_R_',
+		}
+
 		for button in buttons:
+			if frontRear == 'front':
+				prefix = frontPrefixes[mfd]
+			elif frontRear == 'rear':
+				prefix = rearPrefixes[mfd]
+
+			# If it's the POWER button, 0 is on and 1 is back to middle position.
 			if button == 'PW':
 				# 0 = ON, 1 = middle, 2 = OFF
 				pushSeqCmd(dt, prefix + button, 0) # ON
 				pushSeqCmd(dt, prefix + button, 1) # middle
+			# Else it's a regular button where 1 is press and 0 is release.
 			else:
 				pushSeqCmd(dt, prefix + button, 1) # Press
 				pushSeqCmd(dt, prefix + button, 0) # Release
 
 	# Left MFD
-	pressMfdButtons('left', [
+	pressMfdButtons('front', 'left', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
@@ -560,20 +744,20 @@ def HotStart(config, dayStart = True):
 	])
 	
 	# Right MFD
-	pressMfdButtons('right', [
+	pressMfdButtons('front', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
 		'B6', # PROG
 		'B12', # TPOD
 		'B3', # HSI
-		'B2', # ARMT
+		'B4', # TF
 		# End programming.
 		'B6', # PROG
 	])
 
 	# Center MFD
-	pressMfdButtons('center', [
+	pressMfdButtons('front', 'center', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
@@ -585,6 +769,19 @@ def HotStart(config, dayStart = True):
 		'B6', # PROG
 		# END PROGRAM MFDS
 	])
+
+	# Set up TF radar on Right MFD
+	pressMfdButtons('front', 'right', [
+		# Start programming.
+		'B4', # TF
+		'B10', # VLC
+		'B1', # 100
+		'B5', # SOFT toggle to HARD
+		'B11', # M, return to menu
+	])
+
+	# Master Arm ... ON
+	pushSeqCmd(dt, 'F_ARM_MASTER_ARM', 1)
 
 	# SET UP BACK SEAT
 	# Radio volumes
@@ -605,13 +802,52 @@ def HotStart(config, dayStart = True):
 
 	# ICS power switch ... ON
 	pushSeqCmd(dt, 'R_TEWS_ICS_PW', 1)
+
+	# Left MFCD
+	pressMfdButtons('rear', 'leftColor', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B17', # HUD
+		'B16' if dayStart else 'B20', # CAM else N-F
+	])
+
+	# Left MFD
+	pressMfdButtons('rear', 'left', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B14', # A/G RDR
+	])
+	
+	# Right MFD
+	pressMfdButtons('rear', 'right', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B12', # TPOD
+	])
+
+	# Right MFCD
+	pressMfdButtons('rear', 'rightColor', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		# Start programming.
+		'B13', # TEWS
+	])
 	# END SET UP BACK SEAT
 	
-	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set up armament page.  Set lights.  Tune radios.")
+	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set up armament page.  Set laser code.  Set lights.  Tune radios.")
 
 	return seq
 
-
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
 def AirStart(config, dayStart = True):
 	seq = []
 	seqTime = 0
@@ -635,6 +871,7 @@ def AirStart(config, dayStart = True):
 	
 	# Set lights
 	if dayStart:
+		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16())
 		# Rear console lights
@@ -653,9 +890,24 @@ def AirStart(config, dayStart = True):
 		pushSeqCmd(dt, 'F_HUD_D_A_N_MODE', 0) # 0 = DAY, 1 = AUTO, 2 = NIGHT??
 		# Front UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', int16())
+		# Front Gauges/UFC backlights
+		pushSeqCmd(dt, 'F_INTL_BACK', int16())
 		# Rear UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16())
+		# Rear Gauges/UFC backlights
+		pushSeqCmd(dt, 'R_INTL_BACK', int16())
+
+		# External lights:
+		# Anti-collision light
+		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
+		# Formation lights
+		pushSeqCmd(dt, 'F_EXTL_FORMATION', 0)
+		# Position lights
+		pushSeqCmd(dt, 'F_EXTL_POS', 0)
+		# Tail flood lights
+		pushSeqCmd(dt, 'F_EXTL_TFLOOD', 0)
 	else:
+		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16(0.5))
 		# Rear console lights
@@ -674,8 +926,25 @@ def AirStart(config, dayStart = True):
 		pushSeqCmd(dt, 'F_HUD_D_A_N_MODE', 2) # 0 = DAY, 1 = AUTO, 2 = NIGHT??
 		# Front UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', int16(0.5))
+		# Front Gauges/UFC backlights
+		pushSeqCmd(dt, 'F_INTL_BACK', int16(0.5))
 		# Rear UFC brightness ... As desired (knob on UFC)
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16(0.5))
+		# Rear Gauges/UFC backlights
+		pushSeqCmd(dt, 'R_INTL_BACK', int16(0.5))
+
+		# External lights:
+		# Anti-collision light
+		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
+		# Formation lights
+		pushSeqCmd(dt, 'F_EXTL_FORMATION', 0)
+		# Position lights
+		pushSeqCmd(dt, 'F_EXTL_POS', 0)
+		# Tail flood lights
+		pushSeqCmd(dt, 'F_EXTL_TFLOOD', 0)
+
+	# Air conditioner ... MIN
+	pushSeqCmd(dt, 'F_AC_MAX_NORM_MIN', 0) # 0 = MIN, 1 = NORM, 2 = MAX
 
 	# Radio volumes
 	pushSeqCmd(dt, 'F_UFC_COM1_VOL', int16())
@@ -689,6 +958,12 @@ def AirStart(config, dayStart = True):
 	# IFF reply switch ... LIGHT
 	pushSeqCmd(dt, 'F_IFF_REPLY', 2)
 	
+	# Auto Fly Up switch
+	# FIXME DCS-BIOS bug: You need to edit <username>\Saved Games\DCS.openbeta\Scripts\DCS-BIOS\lib\F-15E.lua and change the "F_BH_FLYUP_CVR" and "F_BH_FLYUP" lines to use device 65, instead of device 17 (second function parameter).  This should be fixed in current DCS-BIOS versions.
+	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 1) # Cover open
+	pushSeqCmd(dt, 'F_BH_FLYUP', 1) # 0 = ARMED (down), 1 = DISARMED (up)
+	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 0) # Cover close
+
 	# NCTR switch ... ON
 	pushSeqCmd(dt, 'F_BH_NCTR', 1)
 	
@@ -715,26 +990,42 @@ def AirStart(config, dayStart = True):
 	# Return to MENU 1.
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+	# Disable LAW
+	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
+	pushSeqCmd(dt, 'F_UFC_B1', 0)
 
 	# PROGRAM MFDS
-	def pressMfdButtons(mfd, buttons):
-		prefixes = {
+	def pressMfdButtons(frontRear, mfd, buttons):
+		frontPrefixes = {
 			'left': 'F_MPD_L_',
 			'right': 'F_MPD_R_',
 			'center': 'F_MPCD_C_',
 		}
-		prefix = prefixes[mfd]
+		rearPrefixes = {
+			'leftColor': 'R_MPCD_L_',
+			'left': 'R_MPD_L_',
+			'right': 'R_MPD_R_',
+			'rightColor': 'R_MPCD_R_',
+		}
+
 		for button in buttons:
+			if frontRear == 'front':
+				prefix = frontPrefixes[mfd]
+			elif frontRear == 'rear':
+				prefix = rearPrefixes[mfd]
+
+			# If it's the POWER button, 0 is on and 1 is back to middle position.
 			if button == 'PW':
 				# 0 = ON, 1 = middle, 2 = OFF
 				pushSeqCmd(dt, prefix + button, 0) # ON
 				pushSeqCmd(dt, prefix + button, 1) # middle
+			# Else it's a regular button where 1 is press and 0 is release.
 			else:
 				pushSeqCmd(dt, prefix + button, 1) # Press
 				pushSeqCmd(dt, prefix + button, 0) # Release
 
 	# Left MFD
-	pressMfdButtons('left', [
+	pressMfdButtons('front', 'left', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
@@ -747,20 +1038,20 @@ def AirStart(config, dayStart = True):
 	])
 	
 	# Right MFD
-	pressMfdButtons('right', [
+	pressMfdButtons('front', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
 		'B6', # PROG
 		'B12', # TPOD
 		'B3', # HSI
-		'B2', # ARMT
+		'B4', # TF
 		# End programming.
 		'B6', # PROG
 	])
 
 	# Center MFD
-	pressMfdButtons('center', [
+	pressMfdButtons('front', 'center', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		# Start programming.
@@ -772,6 +1063,19 @@ def AirStart(config, dayStart = True):
 		'B6', # PROG
 		# END PROGRAM MFDS
 	])
+
+	# Set up TF radar on Right MFD
+	pressMfdButtons('front', 'right', [
+		# Start programming.
+		'B4', # TF
+		'B10', # VLC
+		'B1', # 100
+		'B5', # SOFT toggle to HARD
+		'B11', # M, return to menu
+	])
+
+	# Master Arm ... ON
+	pushSeqCmd(dt, 'F_ARM_MASTER_ARM', 1)
 
 	# SET UP BACK SEAT
 	# Radio volumes
@@ -786,12 +1090,51 @@ def AirStart(config, dayStart = True):
 	pushSeqCmd(dt, 'R_EW_ICS_OP_MODE', 1) # 0 = STBY, 1 = AUTO, 2 = MAN
 	# MIC switch ... ON
 	pushSeqCmd(dt, 'R_MIC_SW', 1) # FIXME not working??
+
+	# Left MFCD
+	pressMfdButtons('rear', 'leftColor', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B17', # HUD
+		'B16' if dayStart else 'B20', # CAM else N-F
+	])
+
+	# Left MFD
+	pressMfdButtons('rear', 'left', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B14', # A/G RDR
+	])
+	
+	# Right MFD
+	pressMfdButtons('rear', 'right', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		'B12', # TPOD
+	])
+
+	# Right MFCD
+	pressMfdButtons('rear', 'rightColor', [
+		# Return to MENU 1 page from anywhere with Power switch ON.
+		'PW', # POWER ON
+		# Start programming.
+		'B13', # TEWS
+	])
 	# END SET UP BACK SEAT
 	
 	return seq
 
 
-
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
 def Shutdown(config):
 	seq = []
 	seqTime = 0

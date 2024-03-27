@@ -7,16 +7,16 @@ def getScriptFunctions():
 		'Hot Start C-101EB': 'HotStartEB',
 	}
 
-def ScriptColdStartCC(config):
+def ColdStartCC(config):
 	return ColdStart(config, 'C-101CC')
 
-def ScriptColdStartEB(config):
+def ColdStartEB(config):
 	return ColdStart(config, 'C-101EB')
 
-def ScriptHotStartCC(config):
+def HotStartCC(config):
 	return HotStart(config, 'C-101CC')
 
-def ScriptHotStartEB(config):
+def HotStartEB(config):
 	return HotStart(config, 'C-101EB')
 
 def ColdStart(config, airplaneName = 'C-101CC'):
@@ -82,6 +82,7 @@ def ColdStart(config, airplaneName = 'C-101CC'):
 	##################################################
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
+	pushSeqCmd(dt, 'scriptSpeech', 'Set throttle to minimum.')
 
 	# Ignition - Off
 	pushSeqCmd(dt, 'FRONT_CONT_ING_START', 1) # 0 = CONT (back), 1 = OFF (middle), 2 = START (forward)
@@ -89,12 +90,12 @@ def ColdStart(config, airplaneName = 'C-101CC'):
 	# Parking brake - Set
 	pushSeqCmd(dt, 'FRONT_PARK_BRAKE_LVR', 1)
 	
-	# Ground power supply - On (waiting 12s)
+	# Ground power supply - On (waiting 13s)
 	pushSeqCmd(dt, 'scriptKeyboard', '{\ down}{\ up}') # Must have separate down and up to register key press.
 	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
 	pushSeqCmd(dt, 'scriptKeyboard', '{F1}')
-	pushSeqCmd(12, '', '', "Ground power is on")
+	pushSeqCmd(13, '', '', "Ground power is on")
 	
 	# Accelerometer - Reset
 	pushSeqCmd(dt, 'FRONT_GMETER_RESET', 1)
@@ -183,6 +184,13 @@ def ColdStart(config, airplaneName = 'C-101CC'):
 	pushSeqCmd(dt, 'FRONT_GPU', 0)
 	# Ground power supply is off
 
+	# Ground power supply - Off
+	pushSeqCmd(dt, 'scriptKeyboard', '{\ down}{\ up}') # Must have separate down and up to register key press.
+	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
+	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
+	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
+	pushSeqCmd(13, '', '', "Ground power is off")
+
 	# Generator - Reset, then On
 	pushSeqCmd(dt, 'FRONT_GEN_SW', 0)
 	pushSeqCmd(dt, 'FRONT_GEN_SW', 2)
@@ -227,9 +235,9 @@ def ColdStart(config, airplaneName = 'C-101CC'):
 	
 	# Canopy Fracture Safety Pin (C-101CC only) (right console)
 	if airplaneName == 'C-101CC':
-		# Canopy fracture satefy pin (Front seat) - Remove
+		# Canopy fracture safety pin (Front seat) - Remove
 		pushSeqCmd(dt, 'CC_FRONT_CANOPY_EMERG_FRAC_PIN', 1)
-		# Canopy fracture satefy pin (Rear seat) - Remove
+		# Canopy fracture safety pin (Rear seat) - Remove
 		pushSeqCmd(dt, 'CC_BACK_CANOPY_EMERG_FRAC_PIN', 1)
 
 	# Wait until the TARSYN sync is complete (total process time minus the difference between now and when the process started).

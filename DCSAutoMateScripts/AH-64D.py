@@ -5,6 +5,7 @@ def getScriptFunctions():
 		'Cold Start, night': 'ColdStartNight',
 		'Hot Start, day': 'HotStartDay',
 		'Hot Start, night': 'HotStartNight',
+		'Shutdown': 'Shutdown',
 		#'Test': 'Test',
 	}
 
@@ -241,12 +242,16 @@ def ColdStart(config, dayStart = True):
 		pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16())
 		# PLT IHADSS symbology brightness
 		pushSeqCmd(dt, 'PLT_VIDEO_SYM_BRT', int16())
+		# PLT MPDs
+		pushSeqCmd(dt, 'PLT_MPD_R_VIDEO', int16(0.25)) # Makes the TSD page easier to read.
 
 		# CPG Internal Lights
 		pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16())
 		pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16())
 		pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16())
 		pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+		#CPG MPDs
+		pushSeqCmd(dt, 'CPG_MPD_R_VIDEO', int16(0.25)) # Makes the TSD page easier to read.
 	else:
 		# PLT Internal Lights
 		pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16(0.5))
@@ -295,20 +300,9 @@ def ColdStart(config, dayStart = True):
 	# Starting APU - PILOT
 	# MSTR IGN switch - BATT
 	pushSeqCmd(dt, 'PLT_MASTER_IGN_SW', 1)
-	# Starting APU (20s)
-	pushSeqCmd(dt, 'PLT_APU_BTN_CVR', 1) # Cover open
-	pushSeqCmd(dt, 'PLT_APU_BTN', 1) # Press
-	pushSeqCmd(dt, 'PLT_APU_BTN', 0) # Release
-	pushSeqCmd(20, '', '', 'APU started')
-	
-	# Alignment begins automatically after APU starts.
-	# Waiting for EGI alignment, shows TSD chart background when finished (3m55s) ...
-	alignTimerStart = getLastSeqTime() # Start a timer for the alignment process at the current seq time.
 
-	# After starting APU
-	
-	# Radio volumes and squelch
-	# PLT Radio squelch switches - ON (al0so squelches CPG radios)
+	# Radio volumes and squelch -- Do this immediately after turning on the battery so we don't get blasted by radio static while waiting for the APU.
+	# PLT Radio squelch switches - ON (also squelches CPG radios)
 	pushSeqCmd(dt, 'PLT_COM_VHF_SQL', 2)
 	pushSeqCmd(dt, 'PLT_COM_VHF_SQL', 1)
 	pushSeqCmd(dt, 'PLT_COM_UHF_SQL', 2)
@@ -331,6 +325,18 @@ def ColdStart(config, dayStart = True):
 	# CPG Radio RLWR volume - 75%
 	pushSeqCmd(dt, 'CPG_COM_RLWR_VOL', int16(0.75))
 	
+	# Starting APU (20s)
+	pushSeqCmd(dt, 'PLT_APU_BTN_CVR', 1) # Cover open
+	pushSeqCmd(dt, 'PLT_APU_BTN', 1) # Press
+	pushSeqCmd(dt, 'PLT_APU_BTN', 0) # Release
+	pushSeqCmd(20, '', '', 'APU started')
+	
+	# Alignment begins automatically after APU starts.
+	# Waiting for EGI alignment, shows TSD chart background when finished (3m55s) ...
+	alignTimerStart = getLastSeqTime() # Start a timer for the alignment process at the current seq time.
+
+	# After starting APU
+		
 	# TEDAC
 	if dayStart:
 		pushSeqCmd(dt, 'CPG_TEDAC_DISP_MODE', 2) # 0 = OFF, 1 = NT, 2 = DAY
@@ -707,6 +713,19 @@ def HotStart(config, dayStart = True):
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
 	
+	# POWER levers - Smoothly to FLY
+	powerLeverStart = int16(0.25) # Power levers start at 25% - IDLE.
+	powerLeverEnd = int16(0.9) # Power levers end at 90% - FLY.
+	powerLeverTime = 11 # Number of seconds to advance the power levers.  9 seconds is minimum to avoid "Rotor RPM Low" warning, ISA at sea level.  Default autostart is about 11 seconds.
+	powerLeverDt = dt # Time between power lever steps.  If this is too fast, it could possibly lag or something on MP servers.
+	powerLeverSteps = int((powerLeverTime / powerLeverDt) / 2) # Divide by 2 here because there are two power levers that need to be advanced.
+	powerLeverIncrement = (powerLeverEnd - powerLeverStart) / powerLeverSteps # Increment (step size) is the total amount we need to go divided by the number of steps we're doing to get there.
+	powerLeverPosition = powerLeverStart # Power lever starts at start position.
+	for i in range(powerLeverSteps):
+		powerLeverPosition += int(powerLeverIncrement) # Add the step size to the lever position to make the next lever position.
+		pushSeqCmd(powerLeverDt, 'PLT_ENG_L_PW_LVR', powerLeverPosition) # Lever position is absolute.
+		pushSeqCmd(powerLeverDt, 'PLT_ENG_R_PW_LVR', powerLeverPosition) # Lever position is absolute.
+
 	# Lights
 	if dayStart:
 		# PLT Internal Lights
@@ -722,12 +741,17 @@ def HotStart(config, dayStart = True):
 		pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16())
 		# PLT IHADSS symbology brightness
 		pushSeqCmd(dt, 'PLT_VIDEO_SYM_BRT', int16())
+		# PLT MPDs
+		pushSeqCmd(dt, 'PLT_MPD_R_VIDEO', int16(0.25)) # Makes the TSD page easier to read.
 
 		# CPG Internal Lights
 		pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16())
 		pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16())
 		pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16())
 		pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+		# CPG MPDs
+		pushSeqCmd(dt, 'CPG_MPD_R_VIDEO', int16(0.25)) # Makes the TSD page easier to read.
+
 	else:
 		# PLT Internal Lights
 		pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', int16(0.5))
@@ -898,4 +922,128 @@ def HotStart(config, dayStart = True):
 	
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set Hellfire seeker and laser designator codes.  Tune radios.")
 	
+	return seq
+
+
+###############################################################################
+###############################################################################
+def Shutdown(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+		
+	def getLastSeqTime():
+		nonlocal seq
+		return float(seq[len(seq) - 1]['time'])
+
+	# Start sequence
+	pushSeqCmd(0, '', '', "Running Shutdown sequence")
+	#pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
+	#pushSeqCmd(dt, 'scriptSpeech', 'Set collective full down.')
+	
+	# Parking Brake - SET
+	pushSeqCmd(dt, 'PLT_PARK_BRAKE', 1)
+	
+	# Start APU to provide power during shutdown sequence.
+	# Starting APU - PILOT
+	# Starting APU (20s)
+	pushSeqCmd(dt, 'PLT_APU_BTN_CVR', 1) # Cover open
+	pushSeqCmd(dt, 'PLT_APU_BTN', 1) # Press
+	pushSeqCmd(dt, 'PLT_APU_BTN', 0) # Release
+	pushSeqCmd(20, '', '', 'APU started')
+	
+	# POWER levers - IDLE
+	pushSeqCmd(dt, 'PLT_ENG_L_PW_LVR', 0.25)
+	pushSeqCmd(dt, 'PLT_ENG_R_PW_LVR', 0.25)
+	pushSeqCmd(15, '', '', 'Wait 15 seconds for engines to spool down.')
+
+	# Left engine OFF
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{END down}{END up}{VK_LMENU up}') # NOTE Must remap Power Lever (Left) - OFF to LAlt-End.
+	
+	# Right engine OFF
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{END down}{END up}{VK_RSHIFT up}')
+	
+	# Lights
+	# PLT Internal Lights
+	pushSeqCmd(dt, 'PLT_INTL_SIGNAL_L_KNB', 0)
+	pushSeqCmd(dt, 'PLT_INTL_PRIMARY_L_KNB', 0)
+	pushSeqCmd(dt, 'PLT_INTL_STBYINST_L_KNB', 0)
+	pushSeqCmd(dt, 'PLT_INTL_FLOOD_L_KNB', 0)
+	# PLT External lights
+	pushSeqCmd(dt, 'PLT_EXTL_NAV_L_SW', 1) # 0 = DIM, 1 = OFF, 2 = BRT
+	pushSeqCmd(dt, 'PLT_EXTL_FROMATION_L_KNOB', 0) # NOTE misspelling, 0 = off, int16 = full on
+	pushSeqCmd(dt, 'PLT_EXTL_ACOL_L_SW', 1) # 0 = RED, 1 = OFF, 2 = WHT
+	# PLT MPDs
+	pushSeqCmd(dt, 'PLT_MPD_L_MODE', 2) # 0 = MONO, 1 = NT, 2 = DAY
+	pushSeqCmd(dt, 'PLT_MPD_L_BRT', int16())
+	pushSeqCmd(dt, 'PLT_MPD_L_VIDEO', int16(0.5))
+	pushSeqCmd(dt, 'PLT_MPD_R_MODE', 2) # 0 = MONO, 1 = NT, 2 = DAY
+	pushSeqCmd(dt, 'PLT_MPD_R_BRT', int16())
+	pushSeqCmd(dt, 'PLT_MPD_R_VIDEO', int16(0.5))
+	# PLT UFC
+	pushSeqCmd(dt, 'PLT_EUFD_BRT', int16())
+	# PLT KU
+	pushSeqCmd(dt, 'PLT_KU_BRT', int16())
+	# PLT CMWS
+	pushSeqCmd(dt, 'PLT_CMWS_LAMP', int16(1))
+	# PLT FLIR Level (IHADSS FLIR brightness)
+	pushSeqCmd(dt, 'PLT_VIDEO_FLIR_LVL', int16(0.75))
+
+	# CPG Internal Lights
+	pushSeqCmd(dt, 'CPG_INTL_SIGNAL_L_KNB', int16(0))
+	pushSeqCmd(dt, 'CPG_INTL_PRIMARY_L_KNB', int16(0))
+	pushSeqCmd(dt, 'CPG_INTL_STBYINST_L_KNB', int16(0))
+	pushSeqCmd(dt, 'CPG_INTL_FLOOD_L_KNB', 0)
+	# CPG MPDs
+	pushSeqCmd(dt, 'CPG_MPD_L_MODE', 2) # 0 = MONO, 1 = NT, 2 = DAY
+	pushSeqCmd(dt, 'CPG_MPD_L_BRT', int16())
+	pushSeqCmd(dt, 'CPG_MPD_L_VIDEO', int16(0.5))
+	pushSeqCmd(dt, 'CPG_MPD_R_MODE', 2) # 0 = MONO, 1 = NT, 2 = DAY
+	pushSeqCmd(dt, 'CPG_MPD_R_BRT', int16())
+	pushSeqCmd(dt, 'CPG_MPD_R_VIDEO', int16(0.5))
+	# CPG UFC
+	pushSeqCmd(dt, 'CPG_EUFD_BRT', int16())
+	# CPG KU
+	pushSeqCmd(dt, 'CPG_KU_BRT', int16())
+	# CPG FLIR Level (IHADSS FLIR brightness)
+	pushSeqCmd(dt, 'CPG_VIDEO_FLIR_LVL', int16(0.75))
+		
+	# TEDAC
+	pushSeqCmd(dt, 'CPG_TEDAC_DISP_MODE', 0) # 0 = OFF, 1 = NT, 2 = DAY
+	
+	# CMWS
+	# CMWS PWR knob - OFF
+	pushSeqCmd(dt, 'PLT_CMWS_PW', 0)
+	# CMWS ARM/SAFE switch - SAFE
+	pushSeqCmd(dt, 'PLT_CMWS_ARM', 0)
+	# CMWS CMWS/NAV switch - NAV
+	pushSeqCmd(dt, 'PLT_CMWS_MODE', 0)
+	# CMWS BYPASS/AUTO switch - AUTO
+	pushSeqCmd(dt, 'PLT_CMWS_BYPASS', 0)
+
+	# APU - OFF
+	pushSeqCmd(dt, 'PLT_APU_BTN', 1) # Press
+	pushSeqCmd(dt, 'PLT_APU_BTN', 0) # Release
+	pushSeqCmd(dt, 'PLT_APU_BTN_CVR', 0) # Cover close
+
+	# MSTR IGN switch - OFF
+	pushSeqCmd(dt, 'PLT_MASTER_IGN_SW', 0)
+
+	# RTR BRK switch - ON
+	pushSeqCmd(dt, 'PLT_ROTOR_BRK', 1)
+
+	# Canopy Door - Open
+	pushSeqCmd(dt, 'CPG_CANOPY', 1)
+	pushSeqCmd(dt, 'PLT_CANOPY', 1)
+
 	return seq

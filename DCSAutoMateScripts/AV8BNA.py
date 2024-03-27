@@ -5,12 +5,34 @@ def getScriptFunctions():
 		'Cold Start, night': 'ColdStartNight',
 		'Hot Start, day': 'HotStartDay',
 		'Hot Start, night': 'HotStartNight',
+		'Shutdown': 'Shutdown',
+		#'Test': 'Test',
 	}
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
+
+def Test(config):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+	
+	pushSeqCmd(0, '', '', "Running Test sequence")
+	# Test steps here...
+
+	return seq
 
 def ColdStartDay(config):
 	return ColdStart(config, dayStart = True)
@@ -19,10 +41,10 @@ def ColdStartNight(config):
 	return ColdStart(config, dayStart = False)
 
 def HotStartDay(config):
-	return ColdStart(config, dayStart = True)
+	return HotStart(config, dayStart = True)
 
 def HotStartNight(config):
-	return ColdStart(config, dayStart = False)
+	return HotStart(config, dayStart = False)
 
 def ColdStart(config, dayStart = True):
 	seq = []
@@ -41,32 +63,55 @@ def ColdStart(config, dayStart = True):
 	
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
 	pushSeqCmd(dt, 'scriptSpeech', 'Set throttle to minimum.')
-	pushSeqCmd(dt, 'CANOPY_HAND_L', 1)
+	
+	# Canopy - Close (locks automatically)
+	pushSeqCmd(dt, 'CANOPY_HAND_L', 1) # Toggle state
+	# DECS - ON
 	pushSeqCmd(dt, 'DECS_SW', 1)
+	# FUEL SHUTOFF - ON
 	pushSeqCmd(dt, 'FUEL_SHUTOFF', 1)
+	# OXY switch - ON
 	pushSeqCmd(dt, 'O2_SW', 1)
+	# Flaps power switch - ON
 	pushSeqCmd(dt, 'FLAP_POWER', 1)
 	
-	pushSeqCmd(dt, 'BATT_SW', 2)
+	# BATT switch - BATT
+	pushSeqCmd(dt, 'BATT_SW', 2) # 0 = ALERT, 1 = OFF, 2 = BATT
 	
 	# Internal lights
 	if dayStart:
+		# INST PNL
 		pushSeqCmd(dt, 'INST_LIGHTS', int16())
+		# CONSL
 		pushSeqCmd(dt, 'CONSOLE_LIGHTS', int16())
+		# Left MFD
 		pushSeqCmd(dt, 'MPCD_L_BRIGHT', int16())
+		# Right MFD
 		pushSeqCmd(dt, 'MPCD_R_BRIGHT', int16())
+		# HUD
 		pushSeqCmd(dt, 'HUD_BRIGHT', int16())
+		# UFC
 		pushSeqCmd(dt, 'UFC_BRIGHT', int16())
+		# EDP (Engine Display Panel)
 		pushSeqCmd(dt, 'EDP_BRIGHT', int16())
+		# HUD MODE switch - DAY
+		pushSeqCmd(dt, 'HUD_MODE', 0) # 0 = DAY, 1 = AUTO, 2 = NIGHT
 	else:
+		# INST PNL
 		pushSeqCmd(dt, 'INST_LIGHTS', int16(0.33))
+		# CONSL
 		pushSeqCmd(dt, 'CONSOLE_LIGHTS', int16(0.33))
+		# Left MFD
 		pushSeqCmd(dt, 'MPCD_L_BRIGHT', int16(0.5))
+		# Right MFD
 		pushSeqCmd(dt, 'MPCD_R_BRIGHT', int16(0.5))
+		# HUD
 		pushSeqCmd(dt, 'HUD_BRIGHT', int16(0.5))
+		# UFC
 		pushSeqCmd(dt, 'UFC_BRIGHT', int16(0.33))
+		# EDP (Engine Display Panel)
 		pushSeqCmd(dt, 'EDP_BRIGHT', int16(0.33))
-		# HUD MODE switch
+		# HUD MODE switch - NIGHT
 		pushSeqCmd(dt, 'HUD_MODE', 2) # 0 = DAY, 1 = AUTO, 2 = NIGHT
 		# Dim MPCDs for night.  FIXME The switch is pressed, but nothing changes; you have to press it manually.
 		#pushSeqCmd(dt, 'MPCD_L_DAY_NIGHT', 2) # Press NGT
@@ -78,12 +123,15 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'UFC_COM1_VOL', int16(0.5))
 	pushSeqCmd(dt, 'UFC_COM2_VOL', int16(0.5))
 	
+	# ICS GND and AUX volume
 	# Volume 68% is about lined up with the little mark.
 	pushSeqCmd(dt, 'ICS_GND_VOL', int16(0.68))
 	pushSeqCmd(dt, 'ICS_AUX_VOL', int16(0.68))
 	
 	# Starting engine
+	# ENG ST switch - ENG ST
 	pushSeqCmd(dt, 'ENG_START_SW', 1)
+	# Master Caution - Reset
 	pushSeqCmd(dt, 'M_Caution', 1) # NOTE Case sensitive
 	pushSeqCmd(dt, 'M_Caution', 0)
 	
@@ -98,14 +146,14 @@ def ColdStart(config, dayStart = True):
 	# Wait for 25 seconds for engine to spool up...
 	pushSeqCmd(25, '', '', 'Engine started.')
 	
-	# Go to EHSD screen.
+	# Go to EHSD screen or Left MFD.
 	pushSeqCmd(dt, 'MPCD_L_2', 1) # EHSD OSB
 	pushSeqCmd(dt, 'MPCD_L_2', 0) # release
 
 	# Set INS to IFA, going through all the other positions on the way.
 	for i in range(5):
 		pushSeqCmd(dt, 'INS_MODE', i)
-	# Reset Master Caution
+	# Master Caution - Reset
 	pushSeqCmd(dt, 'M_Caution', 1) # NOTE Case sensitive
 	pushSeqCmd(dt, 'M_Caution', 0)
 
@@ -188,9 +236,10 @@ def ColdStart(config, dayStart = True):
 	for i in range(25):
 		pushSeqCmd(dt, 'BINGO_SET', 'INC')
 	
-	# External lights
+	# External lights - NORM (means external light controls will work as expected)
 	pushSeqCmd(dt, 'EXT_LIGHTS', 2) # 0 = OFF, 1 = NVG, 2 = NORM
 	
+	# Ejection seat - Arm
 	pushSeqCmd(dt, 'SEAT_SAFE_LEVER', 1)
 
 	scriptCompleteSpeech = "Manual steps remaining: Tune radios.  Set laser codes.  Set map markers and import target points."
@@ -334,3 +383,93 @@ def HotStart(config, dayStart = True):
 
 	return seq
 	
+
+def Shutdown(config, dayStart = True):
+	seq = []
+	seqTime = 0
+	dt = 0.3
+	
+	def pushSeqCmd(dt, cmd, arg, msg = ''):
+		nonlocal seq, seqTime
+		seqTime += dt
+		seq.append({
+			'time': round(seqTime, 2),
+			'cmd': cmd,
+			'arg': arg,
+			'msg': msg,
+		})
+	
+	pushSeqCmd(0, '', '', "Running Shutdown sequence")
+
+	# Ejection seat - Safe
+	pushSeqCmd(dt, 'SEAT_SAFE_LEVER', 0)
+
+	# Internal lights
+	# INST PNL
+	pushSeqCmd(dt, 'INST_LIGHTS', 0)
+	# CONSL
+	pushSeqCmd(dt, 'CONSOLE_LIGHTS', 0)
+	# Left MFD
+	pushSeqCmd(dt, 'MPCD_L_BRIGHT', 0)
+	# Right MFD
+	pushSeqCmd(dt, 'MPCD_R_BRIGHT', 0)
+	# HUD
+	pushSeqCmd(dt, 'HUD_BRIGHT', 0)
+	# UFC
+	pushSeqCmd(dt, 'UFC_BRIGHT', 0)
+	# EDP (Engine Display Panel)
+	pushSeqCmd(dt, 'EDP_BRIGHT', 0)
+	# HUD MODE switch - DAY
+	pushSeqCmd(dt, 'HUD_MODE', 0) # 0 = DAY, 1 = AUTO, 2 = NIGHT
+	
+	# Radio volume
+	pushSeqCmd(dt, 'UFC_COM1_VOL', 0)
+	pushSeqCmd(dt, 'UFC_COM2_VOL', 0)
+	
+	# ICS GND and AUX volume
+	pushSeqCmd(dt, 'ICS_GND_VOL', 0)
+	pushSeqCmd(dt, 'ICS_AUX_VOL', 0)
+
+	# Turn off FLIR, DMT, and chaff/flare dispenser.
+	pushSeqCmd(dt, 'FLIR', 0)
+	pushSeqCmd(dt, 'DMT', 0)
+	pushSeqCmd(dt, 'DECOY_CONTROL', 0) # 0 = OFF, 1 = AUT, 2 = UP, 3 = DWN, 4 = RWR
+	pushSeqCmd(dt, 'RWR_VOL', 0)
+
+	# Set INS to OFF, going through all the other positions on the way.
+	for i in reversed(range(5)):
+		pushSeqCmd(dt, 'INS_MODE', i)
+	
+	# Throttle - Cutoff
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RWIN down}')
+	if config['dvorak']:
+		pushSeqCmd(dt, 'scriptKeyboard', '{y down}{y up}') # QWERTY 't', Dvorak 'y'.
+	else:
+		pushSeqCmd(dt, 'scriptKeyboard', '{t down}{t up}') # QWERTY 't', Dvorak 'y'.
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RWIN up}')
+
+	# ENG ST switch - OFF
+	pushSeqCmd(dt, 'ENG_START_SW', 0)
+	
+	# Flaps power switch - OFF
+	pushSeqCmd(dt, 'FLAP_POWER', 0)
+
+	# OXY switch - OFF
+	pushSeqCmd(dt, 'O2_SW', 0)
+
+	# FUEL SHUTOFF - OFF
+	pushSeqCmd(dt, 'FUEL_SHUTOFF', 0)
+
+	# DECS - OFF
+	pushSeqCmd(dt, 'DECS_SW', 0)
+
+	# BATT switch - OFF
+	pushSeqCmd(dt, 'BATT_SW', 1) # 0 = ALERT, 1 = OFF, 2 = BATT
+	
+	# Canopy - Unlock
+	pushSeqCmd(dt, 'CANOPY_LOCK', 0)
+	
+	# Canopy - Open
+	pushSeqCmd(dt, 'CANOPY_HAND_L', 1) # Toggle state
+	
+	return seq
