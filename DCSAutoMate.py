@@ -218,10 +218,12 @@ def getConfigFromFile():
 		except:
 			print("Couldn't parse DCSAutoMateConfig.json, please check syntax.")
 			quit()
-	if type(config['dcspath']) is not list:
+	
+	if 'dscpath' in config and type(config['dcspath']) is not list:
 		config['dcspath'] = [
 			config['dcspath']
 		]
+
 	return config
 	
 
@@ -333,7 +335,7 @@ while True:
 		if config.get('dcspath') and config.get('dcspath') != []: # Use config.get('dcspath') instead of config['dcspath'] to avoid key not exists error.
 			for dcsPath in config['dcspath']:
 				try:
-					print(f"Trying to connect to DCS window by path: {dcsPath}")
+					print(f"Trying to connect to DCS window by path in config file: {dcsPath}")
 					app = Application().connect(path=dcsPath)
 					appFound = True;
 					break
@@ -341,19 +343,16 @@ while True:
 					continue
 			# Fallthrough
 			if not appFound:
-				print("Couldn't find any active DCS window by path.  Trying by title...")
+				print("Couldn't find any active DCS window by path in config file.  Trying by title...")
 		
 		if not appFound:
 			try:
-				print('Trying to connect to DCS window by title: "DCS.openbeta"...')
-				app = Application().connect(title="DCS.openbeta")
+				print('Trying to connect to DCS window by title: "Digital Combat Simulator"...')
+				app = Application().connect(title="Digital Combat Simulator")
 			except:
-				try:
-					print('Trying to connect to DCS window by title: "DCS"')
-					app = Application().connect(title="DCS")
-				except:
-					print("Couldn't find any active DCS window.  Please make sure DCS is running before running script, or use debug flag.")
-					quit('')
+				print("Couldn't find any active DCS window.  Please make sure DCS is running before running script, or specify path in config file, or use debug flag.")
+				input('You can close this window, or press enter to exit')
+				quit('')
 
 	try:
 		executeSeq(seq)
