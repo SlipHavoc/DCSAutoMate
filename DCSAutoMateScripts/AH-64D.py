@@ -67,7 +67,7 @@ def ColdStart(config, dayStart = True):
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
 
-	alignTime = 3 * 60 + 55 # 3m55s
+	alignTime = 4 * 60 # 4m0s
 	engine1StartTime = 30
 	engine2StartTime = 40
 	
@@ -325,11 +325,11 @@ def ColdStart(config, dayStart = True):
 	# CPG Radio RLWR volume - 75%
 	pushSeqCmd(dt, 'CPG_COM_RLWR_VOL', int16(0.75))
 	
-	# Starting APU (20s)
+	# Starting APU (30s)
 	pushSeqCmd(dt, 'PLT_APU_BTN_CVR', 1) # Cover open
 	pushSeqCmd(dt, 'PLT_APU_BTN', 1) # Press
 	pushSeqCmd(dt, 'PLT_APU_BTN', 0) # Release
-	pushSeqCmd(20, '', '', 'APU started')
+	pushSeqCmd(30, '', '', 'APU started')
 	
 	# Alignment begins automatically after APU starts.
 	# Waiting for EGI alignment, shows TSD chart background when finished (3m55s) ...
@@ -550,6 +550,7 @@ def ColdStart(config, dayStart = True):
 	pushSeqCmd(dt, 'PLT_MPD_R_L4', 0) # release
 	
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining while waiting for alignment: Bore sight IHADSS. Set Hellfire seeker and laser designator codes.  Tune radios.  Set baro altitude.")
+	pushSeqCmd(dt, 'scriptSpeech', "Power on FCR if equipped, FCR page, util, MMA pinned, FCR bit override.")
 	
 	# Wait until the alignment is complete (total process time minus the difference between now and when the process started).
 	alignTimerEnd = alignTime - (getLastSeqTime() - alignTimerStart)
@@ -921,6 +922,7 @@ def HotStart(config, dayStart = True):
 	pushSeqCmd(dt, 'PLT_MPD_L_L3', 0) # release
 	
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set Hellfire seeker and laser designator codes.  Tune radios.")
+	pushSeqCmd(dt, 'scriptSpeech', "Power on FCR if equipped, FCR page, util, MMA pinned, FCR bit override.")
 	
 	return seq
 
