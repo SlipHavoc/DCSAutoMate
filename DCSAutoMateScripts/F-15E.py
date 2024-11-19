@@ -336,8 +336,8 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
 	pushSeqCmd(dt, 'F_UFC_KEY_DATA', 1)
 	pushSeqCmd(dt, 'F_UFC_KEY_DATA', 0)
-	pushSeqCmd(dt, 'F_UFC_B7', 1) # Radar alt in HUD # FIXME This is actually B9, but Front UFC B7 and B9 are swapped.
-	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # Radar alt in HUD
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
 	pushSeqCmd(dt, 'F_UFC_B3', 1) # TAS in HUD
 	pushSeqCmd(dt, 'F_UFC_B3', 0)
 	# Return to MENU 1.
@@ -346,6 +346,37 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	# Disable LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 0)
+
+	# Set Radio 2 MAN-AM mode ON
+	pushSeqCmd(dt, 'F_UFC_B6', 1) # Radio 2
+	pushSeqCmd(dt, 'F_UFC_B6', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # MAN-AM
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+
+	# Set up IFF
+	pushSeqCmd(dt, 'F_UFC_B3', 1) # IFF
+	pushSeqCmd(dt, 'F_UFC_B3', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # MC (Mode C/Charlie, adds pressure altitude to your Mode 3 transmissions)
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AAI SLV
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+
+	# Set up AAI/EID interrogation
+	pushSeqCmd(dt, 'F_UFC_B8', 1) # AAI/EID page
+	pushSeqCmd(dt, 'F_UFC_B8', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AUTO ID (first press sets to STT)
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AUTO ID (second press sets to PDT (which includes STT))
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
 
 	# PROGRAM MFDS
 	def pressMfdButtons(frontRear, mfd, buttons):
@@ -689,8 +720,8 @@ def HotStart(config, dayStart = True):
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
 	pushSeqCmd(dt, 'F_UFC_KEY_DATA', 1)
 	pushSeqCmd(dt, 'F_UFC_KEY_DATA', 0)
-	pushSeqCmd(dt, 'F_UFC_B7', 1) # Radar alt in HUD # FIXME This is actually B9, but Front UFC B7 and B9 are swapped.
-	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # Radar alt in HUD
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
 	pushSeqCmd(dt, 'F_UFC_B3', 1) # TAS in HUD
 	pushSeqCmd(dt, 'F_UFC_B3', 0)
 	# Return to MENU 1.
@@ -699,6 +730,37 @@ def HotStart(config, dayStart = True):
 	# Disable LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 0)
+	
+	# Set Radio 2 MAN-AM mode ON
+	pushSeqCmd(dt, 'F_UFC_B6', 1) # Radio 2
+	pushSeqCmd(dt, 'F_UFC_B6', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # MAN-AM
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+
+	# Set up IFF
+	pushSeqCmd(dt, 'F_UFC_B3', 1) # IFF
+	pushSeqCmd(dt, 'F_UFC_B3', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # MC (Mode C/Charlie, adds pressure altitude to your Mode 3 transmissions)
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AAI SLV
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+
+	# Set up AAI/EID interrogation
+	pushSeqCmd(dt, 'F_UFC_B8', 1) # AAI/EID page
+	pushSeqCmd(dt, 'F_UFC_B8', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AUTO ID (first press sets to STT)
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AUTO ID (second press sets to PDT (which includes STT))
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
 
 	# PROGRAM MFDS
 	def pressMfdButtons(frontRear, mfd, buttons):
@@ -983,8 +1045,8 @@ def AirStart(config, dayStart = True):
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
 	pushSeqCmd(dt, 'F_UFC_KEY_DATA', 1)
 	pushSeqCmd(dt, 'F_UFC_KEY_DATA', 0)
-	pushSeqCmd(dt, 'F_UFC_B7', 1) # Radar alt in HUD # FIXME This is actually B9, but Front UFC B7 and B9 are swapped.
-	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # Radar alt in HUD
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
 	pushSeqCmd(dt, 'F_UFC_B3', 1) # TAS in HUD
 	pushSeqCmd(dt, 'F_UFC_B3', 0)
 	# Return to MENU 1.
@@ -993,6 +1055,37 @@ def AirStart(config, dayStart = True):
 	# Disable LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 0)
+
+	# Set Radio 2 MAN-AM mode ON
+	pushSeqCmd(dt, 'F_UFC_B6', 1) # Radio 2
+	pushSeqCmd(dt, 'F_UFC_B6', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # MAN-AM
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+
+	# Set up IFF
+	pushSeqCmd(dt, 'F_UFC_B3', 1) # IFF
+	pushSeqCmd(dt, 'F_UFC_B3', 0)
+	pushSeqCmd(dt, 'F_UFC_B9', 1) # MC (Mode C/Charlie, adds pressure altitude to your Mode 3 transmissions)
+	pushSeqCmd(dt, 'F_UFC_B9', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AAI SLV
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
+
+	# Set up AAI/EID interrogation
+	pushSeqCmd(dt, 'F_UFC_B8', 1) # AAI/EID page
+	pushSeqCmd(dt, 'F_UFC_B8', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AUTO ID (first press sets to STT)
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	pushSeqCmd(dt, 'F_UFC_B7', 1) # AUTO ID (second press sets to PDT (which includes STT))
+	pushSeqCmd(dt, 'F_UFC_B7', 0)
+	# Return to MENU 1.
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
+	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 0)
 
 	# PROGRAM MFDS
 	def pressMfdButtons(frontRear, mfd, buttons):

@@ -142,7 +142,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'BATTERY_SW', 2, 'BATT switch - On')
 	
 	# Exterior light switch ... OFF
-	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 1) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 0) # 0 = OFF, 1 = ON
 	# Other lights
 	if dayStart:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
@@ -192,7 +192,9 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# RIGHT ENGINE
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 2) # Right
 	pushSeqCmd(7, '', '', "Right engine at 15%, right throttle to IDLE")
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_HOME}{VK_RSHIFT up}')
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}')
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_HOME}')
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT up}')
 	pushSeqCmd(35, '', '', 'Right engine started')
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END RIGHT ENGINE
@@ -289,7 +291,9 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# LEFT ENGINE
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 0) # Left
 	pushSeqCmd(7, '', '', "Left engine at 15%, left throttle to IDLE")
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_HOME}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_HOME}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
 	pushSeqCmd(35, '', '', 'Left engine started')
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END LEFT ENGINE
@@ -449,7 +453,7 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
 	
 	# Exterior light switch ... OFF
-	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 1) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 0) # 0 = OFF, 1 = ON
 	# Other lights
 	if dayStart:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
@@ -647,7 +651,7 @@ def AirStart(config, dayStart = True, hmd = True):
 	pushSeqCmd(0, '', '', "Running Air Start sequence")
 	
 	# Exterior light switch ... OFF
-	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 1) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 0) # 0 = OFF, 1 = ON
 	# Other lights
 	if dayStart:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
