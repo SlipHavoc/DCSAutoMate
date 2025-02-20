@@ -1,10 +1,36 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start': 'ColdStart',
-		'Hot Start': 'HotStart',
-		'Reload Data Cartridge': 'ReloadDataCartridge',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {
+					#'Time': ['Day', 'Night'],
+				},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {
+					#'Time': ['Day', 'Night'],
+				},
+			},
+			{
+				'name': 'Reload Data Cartridge',
+				'function': 'ReloadDataCartridge',
+				'vars': {}
+			},
+			#{
+			#	'name': 'Test',
+			#	'function': 'Test',
+			#	'vars': {
+			#		'Time': ['Day', 'Night'],
+			#	},
+			#},
+		],
 	}
+
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
@@ -12,27 +38,32 @@ def int16(mult = 1):
 	return int(mult * int16)
 
 
-def ColdStart(config):
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	
+
 	# Pre-start switch positions
 	# Main power (HUVUDSTRÖM) - OFF
 	pushSeqCmd(dt, 'MAIN_ELECTRIC_POWER', 0)
@@ -55,7 +86,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'MASTER_CAUTION_RESET', 0) # Release
 	# Low-pressure fuel valve (LT-KRAN) - ON
 	pushSeqCmd(dt, 'LOW_PRES_FUEL_VALVE', 1)
-	
+
 	# Instrument lights - 100%
 	pushSeqCmd(dt, 'INSTRUMENT_LIGHTS', int16())
 	# Panel lights - 100%
@@ -84,7 +115,7 @@ def ColdStart(config):
 	# Data Cartridge - INSERT
 	pushSeqCmd(dt, 'DATA_CARTRIDGE', 1)
 	pushSeqCmd(2, '', '', "Data Cartridge inserted")
-	
+
 	# Data selector knob - REF/LOLA, IN
 	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 5) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
 	pushSeqCmd(dt, 'DATA_IN_OUT', 1) # In/Out switch, 1 = IN, 2 = OUT
@@ -112,38 +143,42 @@ def ColdStart(config):
 	# Slav SI switch - F
 	pushSeqCmd(dt, 'SLAV_SI', 0) # 0 = F, 1 = T
 	# Parking brake - OFF
-	pushSeqCmd(dt, 'PARKING_BRAKE', 'TOGGLE') # FIXME This should work, but doesn't.  Brake must be released manually.
-	pushSeqCmd(dt, 'scriptSpeech', 'Release parking brake.')
+	pushSeqCmd(dt, 'PARKING_BRAKE', 'TOGGLE')
 
 	return seq
 
 
-def HotStart(config):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
-	
+
 	# Instrument lights - 100%
 	pushSeqCmd(dt, 'INSTRUMENT_LIGHTS', int16())
 	# Panel lights - 100%
 	pushSeqCmd(dt, 'PANEL_LIGHTS', int16())
-	
+
 	# LOADING DATA CARTRIDGE
 	# Data Cartridge - REMOVE
 	pushSeqCmd(dt, 'DATA_CARTRIDGE', 0)
@@ -151,7 +186,7 @@ def HotStart(config):
 	# Data Cartridge - INSERT
 	pushSeqCmd(dt, 'DATA_CARTRIDGE', 1)
 	pushSeqCmd(2, '', '', "Data Cartridge inserted")
-	
+
 	# Data selector knob - REF/LOLA, IN
 	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 5) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
 	pushSeqCmd(dt, 'DATA_IN_OUT', 1) # In/Out switch, 1 = IN, 2 = OUT
@@ -178,27 +213,32 @@ def HotStart(config):
 	return seq
 
 
-def ReloadDataCartridge(config):
+def ReloadDataCartridge(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Reloading Data Cartridge")
-	
+
 	# LOADING DATA CARTRIDGE
 	# Data Cartridge - REMOVE
 	pushSeqCmd(dt, 'DATA_CARTRIDGE', 0)
@@ -206,7 +246,7 @@ def ReloadDataCartridge(config):
 	# Data Cartridge - INSERT
 	pushSeqCmd(dt, 'DATA_CARTRIDGE', 1)
 	pushSeqCmd(2, '', '', "Data Cartridge inserted")
-	
+
 	# Data selector knob - REF/LOLA, IN
 	pushSeqCmd(dt, 'DATAPANEL_SELECTOR', 5) # Datapanel selector knob, 0 = ID-NR, 1 = TAKT, 2 = TID, 3 = VIND RUTA MAL, 4 = BANA GRANS, 5 = REF LOLA, 6 = AKT POS
 	pushSeqCmd(dt, 'DATA_IN_OUT', 1) # In/Out switch, 1 = IN, 2 = OUT

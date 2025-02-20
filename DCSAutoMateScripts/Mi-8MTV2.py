@@ -1,121 +1,131 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start, Day, Unarmed': 'ColdStartDayUnarmed',
-		'Cold Start, Day, Armed': 'ColdStartDayArmed',
-		'Cold Start, Night, Unarmed': 'ColdStartNightUnarmed',
-		'Cold Start, Night, Armed': 'ColdStartNightArmed',
-		'Hot Start, Day, Unarmed': 'HotStartDayUnarmed',
-		'Hot Start, Day, Armed': 'HotStartDayArmed',
-		'Hot Start, Night, Unarmed': 'HotStartNightUnarmed',
-		'Hot Start, Night, Armed': 'HotStartNightArmed',
-		'Shutdown': 'Shutdown',
-		#'Test': 'Test',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+					'Weapons': ['Armed', 'Unarmed'],
+				},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+					'Weapons': ['Armed', 'Unarmed'],
+				},
+			},
+			{
+				'name': 'Shutdown',
+				'function': 'Shutdown',
+				'vars': {},
+			},
+			#{
+			#	'name': 'Test',
+			#	'function': 'Test',
+			#	'vars': {
+			#		'Time': ['Day', 'Night'],
+			#		'Weapons': ['Armed', 'Unarmed'],
+			#	},
+			#},
+		],
 	}
 
 def getInfo():
-	return """ATTENTION: You must remap "Throttle Levers - UP" to LCtrl+Home and "Throttle Levers - DOWN" to LCtrl+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+	return ''
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def Test(config):
+def Test(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
-	
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
+
 	# Test code here...
 
 	return seq
 
-def ColdStartDayUnarmed(config):
-	return ColdStart(config, dayStart = True, armed = False)
 
-def ColdStartDayArmed(config):
-	return ColdStart(config, dayStart = True, armed = True)
-
-def ColdStartNightUnarmed(config):
-	return ColdStart(config, dayStart = False, armed = False)
-
-def ColdStartNightArmed(config):
-	return ColdStart(config, dayStart = False, armed = True)
-
-def HotStartDayUnarmed(config):
-	return HotStart(config, dayStart = True, armed = False)
-
-def HotStartDayArmed(config):
-	return HotStart(config, dayStart = True, armed = True)
-
-def HotStartNightUnarmed(config):
-	return HotStart(config, dayStart = False, armed = False)
-
-def HotStartNightArmed(config):
-	return HotStart(config, dayStart = False, armed = True)
-
-
-def ColdStart(config, dayStart = True, armed = False):
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	pushSeqCmd(dt, '', '', 'Set collective full down.')
 	pushSeqCmd(dt, 'scriptSpeech', 'Set collective full down.')
 
 	# RADIO/ICS SWITCH - ICS (allows rearming)
 	pushSeqCmd(dt, 'SPU7_L_ICS', 1)
-	
+
 	# LEFT COCKPIT WINDOW - CLOSE
-	pushSeqCmd(dt, 'BLST_L_OPEN', 0)
+	pushSeqCmd(dt, 'BLST_L_OPEN', 1)
 
 	# Power levers and throttle
 	# ENGINE POWER LEVERS - AUTO
 	# Throttles down twice first to make sure they're at min.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL down}{END down}{END up}{VK_LCONTROL up}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL down}{END down}{END up}{VK_LCONTROL up}')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'end')
+	pushSeqCmd(dt, 'scriptKeyboard', 'end')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl up')
 	# Then throttles up once to set to auto.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL down}{HOME down}{HOME up}{VK_LCONTROL up}')
-	
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'home')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl up')
+
 	# Twist grip to min (DECR)
 	# THROTTLE - MINIMUM (LEFT)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{PGDN up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgdn down')
+	pushSeqCmd(2, 'scriptKeyboard', 'pgdn up') # Hold down for 2 seconds
 	# Collective full down.
 	# COLLECTIVE - FULL DOWN
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_SUBTRACT down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{VK_SUBTRACT up}') # Hold down for 2 seconds
-	
+	pushSeqCmd(dt, 'scriptKeyboard', 'subtract down') # Numpad -
+	pushSeqCmd(2, 'scriptKeyboard', 'subtract up') # Hold down for 2 seconds
+
 	# ROTOR BRAKE - OFF
 	pushSeqCmd(dt, 'ENG_RTR_BRAKE', 0)
 
@@ -126,7 +136,7 @@ def ColdStart(config, dayStart = True, armed = False):
 	# 115V INVERTER - AUTO (down)
 	pushSeqCmd(dt, 'INV_115V_SWITCH', 0)
 
-	if not dayStart:
+	if vars.get('Time') != 'Day':
 		# Dome lights.
 		pushSeqCmd(dt, 'LGHT_L_CEIL', 2) # 0 = White, 1 = Off, 2 = Red
 		pushSeqCmd(dt, 'LGHT_R_CEIL', 2) # 0 = White, 1 = Off, 2 = Red
@@ -146,6 +156,8 @@ def ColdStart(config, dayStart = True, armed = False):
 		pushSeqCmd(dt, 'LGHT_55V', int16())
 		# ANNUC switch - NIGHT
 		pushSeqCmd(dt, 'SAS_TRANS', 1)
+		# Gunsight brightness
+		pushSeqCmd(dt, 'SGT_BRIGHT', int16(0.2))
 
 	# DC VOLTMETER SELECTOR - BATT BUS
 	pushSeqCmd(dt, 'DC_VOLT_SEL', 4)
@@ -196,7 +208,7 @@ def ColdStart(config, dayStart = True, armed = False):
 	pushSeqCmd(dt, 'FUEL_LEFT_PUMP', 1)
 	# RIGHT TANK PUMP - ON
 	pushSeqCmd(dt, 'FUEL_RIGTH_PUMP', 1) # NOTE Spelling error in command, "FUEL_RIGTH_PUMP" is the correct spelling for the command.
-	
+
 	# R-828 radio
 	# R-828 RADIO POWER - ON
 	pushSeqCmd(dt, 'R828_PWR', 1)
@@ -237,11 +249,11 @@ def ColdStart(config, dayStart = True, armed = False):
 	# Engines started, selector to neutral
 	# ENGINE SELECTOR SWITCH - CENTER
 	pushSeqCmd(dt, 'ENG_SEL', 1)
-	
+
 	# Twist grip to max (INCR)
 	# THROTTLE - MAXIMUM (RIGHT)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{PGUP up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgup down')
+	pushSeqCmd(2, 'scriptKeyboard', 'pgup up') # Hold down for 2 seconds
 	# ALLOW RPM TO STABILIZE (10 SEC)
 	pushSeqCmd(10, '', '', "RPM STABILIZED")
 
@@ -328,7 +340,7 @@ def ColdStart(config, dayStart = True, armed = False):
 	pushSeqCmd(dt, 'ACC_RST', 1) # Press
 	pushSeqCmd(dt, 'ACC_RST', 0) # Release
 
-	if armed:
+	if vars.get('Weapons') == 'Armed':
 		pushSeqCmd(dt, 'scriptSpeech', "Setting up weapon systems.")
 		# CB Group 1 - ON
 		pushSeqCmd(dt, 'AZS_GRP_BTN1', 1)
@@ -343,7 +355,7 @@ def ColdStart(config, dayStart = True, armed = False):
 		pushSeqCmd(dt, 'WPN_RS_GUV_SEL', 1)
 		# Master Arm - ON
 		pushSeqCmd(dt, 'WPN_ARM', 1)
-		
+
 		# Arm rocket systems...
 		# UPK/PKT/RS switch - RS
 		pushSeqCmd(dt, 'WPN_SEL', 0)
@@ -361,30 +373,35 @@ def ColdStart(config, dayStart = True, armed = False):
 	return seq
 
 
-def HotStart(config, dayStart = True, armed = False):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
-	
+
 	# RADIO/ICS SWITCH - ICS (allows rearming)
 	pushSeqCmd(dt, 'SPU7_L_ICS', 1)
-	
+
 	# Formation lights - Off
 	pushSeqCmd(dt, 'LGHT_FRM', 1)
 
@@ -397,7 +414,7 @@ def HotStart(config, dayStart = True, armed = False):
 	# Nav (ANO??) lights - Off
 	pushSeqCmd(dt, 'LGHT_ANO', 1)
 
-	if not dayStart:
+	if vars.get('Time') != 'Day':
 		# Dome lights.
 		pushSeqCmd(dt, 'LGHT_L_CEIL', 2) # 0 = White, 1 = Off, 2 = Red
 		pushSeqCmd(dt, 'LGHT_R_CEIL', 2) # 0 = White, 1 = Off, 2 = Red
@@ -417,6 +434,8 @@ def HotStart(config, dayStart = True, armed = False):
 		pushSeqCmd(dt, 'LGHT_55V', int16())
 		# ANNUC switch - NIGHT
 		pushSeqCmd(dt, 'SAS_TRANS', 1)
+		# Gunsight brightness
+		pushSeqCmd(dt, 'SGT_BRIGHT', int16(0.2))
 
 	# FUEL METER - TOTAL
 	pushSeqCmd(dt, 'FUEL_METER_SWITCH', 1)
@@ -445,7 +464,7 @@ def HotStart(config, dayStart = True, armed = False):
 	# COPILOT'S FAN - ON
 	pushSeqCmd(dt, 'CPIT_AIR_R_FAN', 1)
 
-	if armed:
+	if vars.get('Weapons') == 'Armed':
 		pushSeqCmd(dt, 'scriptSpeech', "Setting up weapon systems.")
 		# CB Group 1 - ON
 		pushSeqCmd(dt, 'AZS_GRP_BTN1', 1)
@@ -458,7 +477,7 @@ def HotStart(config, dayStart = True, armed = False):
 		pushSeqCmd(dt, 'AZS_GRP_BTN3', 0)
 		# Master Arm - ON
 		pushSeqCmd(dt, 'WPN_ARM', 1)
-		
+
 		# Arm rocket systems...
 		# UPK/PKT/RS switch - RS
 		pushSeqCmd(dt, 'WPN_SEL', 0)
@@ -476,29 +495,34 @@ def HotStart(config, dayStart = True, armed = False):
 	return seq
 
 
-def Shutdown(config):
+def Shutdown(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Shutdown sequence")
-	
+
 	# LEFT COCKPIT WINDOW - OPEN
-	pushSeqCmd(dt, 'BLST_L_OPEN', 1)
+	pushSeqCmd(dt, 'BLST_L_OPEN', 0)
 
 	# Fans
 	# PILOT'S FAN - OFF
@@ -535,7 +559,7 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'LGHT_55V', 0)
 	# ANNUC switch - DAY
 	pushSeqCmd(dt, 'SAS_TRANS', 0)
-	
+
 	# Formation lights - Off
 	pushSeqCmd(dt, 'LGHT_FRM', 1)
 	# Anti-collision/strobe light - Off
@@ -582,11 +606,11 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'GEN1_SWITCH', 0)
 	# GENERATOR 2 - OFF
 	pushSeqCmd(dt, 'GEN2_SWITCH', 0)
-	
+
 	# Twist grip to min (DECR)
 	# THROTTLE - MINIMUM (LEFT)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{PGDN up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgdn down')
+	pushSeqCmd(2, 'scriptKeyboard', 'pgdn up') # Hold down for 2 seconds
 
 	# Wait 1m10s for rotor to come down to idle RPM (70%)
 	pushSeqCmd(dt, 'scriptSpeech', 'Waiting for rotor to reach idle RPM, 70%')
@@ -623,7 +647,7 @@ def Shutdown(config):
 
 	# FIRE EXTINGUISHER - OFF
 	pushSeqCmd(dt, 'DCHARGE_FIRE_DETECT_TEST', 0)
-	
+
 	# R-828 radio
 	# R-828 RADIO POWER - OFF
 	pushSeqCmd(dt, 'R828_PWR', 0)

@@ -1,9 +1,23 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start': 'ColdStart',
-		'Hot Start': 'HotStart',
-		'Shutdown': 'Shutdown',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {},
+			},
+			{
+				'name': 'Shutdown',
+				'function': 'Shutdown',
+				'vars': {},
+			},
+		],
 	}
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
@@ -11,24 +25,29 @@ def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def ColdStart(config):
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
 
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	apuStartTime = 25 # APU takes 25 seconds to start.
 	engineStartTime = 55 # Engines each take 55 seconds to start.
@@ -43,12 +62,9 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PLT_SPU8_ICS', 1)
 
 	# Cockpit Doors - Close
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL down}')
-	if config['dvorak']:
-		pushSeqCmd(dt, 'scriptKeyboard', '{j down}{j up}') # QWERTY 'c', Dvorak 'j'.
-	else:
-		pushSeqCmd(dt, 'scriptKeyboard', '{c down}{c up}') # QWERTY 'c', Dvorak 'j'.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL up}')
+	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'c')
+	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl up')
 
 	# Left Engine Stop lever - OFF
 	pushSeqCmd(dt, 'PLT_ENG_STOP_L', 0)
@@ -64,11 +80,11 @@ def ColdStart(config):
 		pushSeqCmd(dt, 'PLT_ENG_THROTTLE_L', '+3000')
 		pushSeqCmd(dt, 'PLT_ENG_THROTTLE_R', '+3000')
 	# Twist grip to min (DECR)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{PGDN up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgdn down')
+	pushSeqCmd(2, 'scriptKeyboard', 'pgdn up') # Hold down for 2 seconds
 	# Collective full down
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_SUBTRACT down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{VK_SUBTRACT up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'subtract down') # Numpad -
+	pushSeqCmd(2, 'scriptKeyboard', 'subtract up') # Hold down for 2 seconds
 
 	# Electric Power
 	# Right Battery - ON
@@ -162,8 +178,8 @@ def ColdStart(config):
 	# Spool Up
 	# Collective Throttle - Set to max (INCR, right)
 	# Twist grip to max (INCR)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{PGUP up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgup down')
+	pushSeqCmd(2, 'scriptKeyboard', 'pgup up') # Hold down for 2 seconds
 	pushSeqCmd(engineSpoolTime, '', '', "Engines Spooled Up")
 
 	# Generators and other electrics
@@ -265,8 +281,8 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PLT_PUVL_FIRE_CONTROL', 1)
 	# MG Rate (Cannon ROF) switch - INCR # Weapons panel
 	pushSeqCmd(dt, 'PLT_PUVL_CANNON_FIRE_RATE', 1)
-	# Fixed Crosshair Brightness - 20% # Sight base.
-	pushSeqCmd(dt, 'PLT_ASP17_GRID_BRIGHT_ADJ', int16(0.2))
+	# Fixed Crosshair Brightness - 60% # Sight base.
+	pushSeqCmd(dt, 'PLT_ASP17_GRID_BRIGHT_ADJ', int16(0.6))
 	# Aux Stores Lights switch - ON # Right angled panel bottom.
 	pushSeqCmd(dt, 'PLT_ARM_RED_L_SW', 1)
 
@@ -309,24 +325,29 @@ def ColdStart(config):
 	return seq
 
 
-def HotStart(config):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
 
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Hot Start sequence.")
@@ -381,8 +402,8 @@ def HotStart(config):
 	pushSeqCmd(dt, 'PLT_PUVL_FIRE_CONTROL', 1)
 	# MG Rate (Cannon ROF) switch - INCR # Weapons panel
 	pushSeqCmd(dt, 'PLT_PUVL_CANNON_FIRE_RATE', 1)
-	# Fixed Crosshair Brightness - 20% # Sight base.
-	pushSeqCmd(dt, 'PLT_ASP17_GRID_BRIGHT_ADJ', int16(0.2))
+	# Fixed Crosshair Brightness - 60% # Sight base.
+	pushSeqCmd(dt, 'PLT_ASP17_GRID_BRIGHT_ADJ', int16(0.6))
 
 	# Pilot-Operator (front) seat
 	# Setting up Pilot-Operator switches...
@@ -421,24 +442,29 @@ def HotStart(config):
 	return seq
 
 
-def Shutdown(config):
+def Shutdown(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
 
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Shutdown sequence.")
@@ -535,16 +561,13 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'PLT_AC_MODE', 1)
 
 	# Cockpit Doors - Open
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL down}')
-	if config['dvorak']:
-		pushSeqCmd(dt, 'scriptKeyboard', '{j down}{j up}') # QWERTY 'c', Dvorak 'j'.
-	else:
-		pushSeqCmd(dt, 'scriptKeyboard', '{c down}{c up}') # QWERTY 'c', Dvorak 'j'.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LCONTROL up}')
+	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'c')
+	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl up')
 
 	# Twist grip to min (DECR)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN down}')
-	pushSeqCmd(2, 'scriptKeyboard', '{PGDN up}') # Hold down for 2 seconds
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgdn down')
+	pushSeqCmd(2, 'scriptKeyboard', 'pgdn up') # Hold down for 2 seconds
 
 	# Wait 40 seconds for rotor to spool down.
 	pushSeqCmd(dt, 'scriptSpeech', 'Waiting for rotor to spool down to 80%, 40 seconds')
@@ -554,7 +577,7 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'PLT_ENG_STOP_L', 1)
 	# Right Engine Stop lever - ON
 	pushSeqCmd(dt, 'PLT_ENG_STOP_R', 1)
-	
+
 	# Wait for rotor to get to 15%.
 	pushSeqCmd(dt, 'scriptSpeech', 'Waiting for rotor to spool down to 15%, 1 minute 10 seconds')
 	pushSeqCmd(1* 60 + 10, '', '', 'Rotor at 15%')
@@ -669,7 +692,7 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'PLT_D_RECT_R', 0)
 	# AC Voltmeter knob - OFF
 	pushSeqCmd(dt, 'PLT_A_VOLT_KNB', 0)
-	
+
 	# Electric Power
 	# Right Battery - OFF
 	pushSeqCmd(dt, 'PLT_D_BATT_R', 0)

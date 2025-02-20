@@ -1,42 +1,57 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start': 'ColdStart',
-		'Hot Start': 'HotStart',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {},
+			},
+		],
 	}
 
 def getInfo():
-	return """ATTENTION: You must remap "Cockpit door open/close" to RShift+C.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+	return ''
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def ColdStart(config):
+
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	inuAlignTime = 3 * 60  # 3m00s
-	
+
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Cold Start sequence.")
-	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	pushSeqCmd(dt, '', '', 'Set collective full down.')
 	pushSeqCmd(dt, 'scriptSpeech', 'Set collective full down.')
 
@@ -44,12 +59,9 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'RADIO_SELECTOR', 3)
 
 	# Cockpit door - Close
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}')
-	if config['dvorak']:
-		pushSeqCmd(dt, 'scriptKeyboard', '{j down}{j up}') # QWERTY 'c', Dvorak 'j'.
-	else:
-		pushSeqCmd(dt, 'scriptKeyboard', '{c down}{c up}') # QWERTY 'c', Dvorak 'j'.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT up}')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'c')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl up')
 
 	# Voice message system (Betty) - On
 	pushSeqCmd(dt, 'VOICE_MSG_EMER', 1)
@@ -78,11 +90,11 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PPK800_INU_HEAT', 1)
 	# INU power - On # Right rear wall
 	pushSeqCmd(dt, 'PPK800_INU_POWER', 1)
-	inuAlignTimerStart = getLastSeqTime() # Start a timer for the INU alignment at the current time.
+	pushSeqCmd(dt, 'scriptTimerStart', name='alignTimer', duration=inuAlignTime)
 	# INU accelerated alignment in process (3m)
 	# SAI power - On # Right wall
 	pushSeqCmd(dt, 'SAI_POWER', 1)
-	
+
 
 	# Right wall radio switches:
 	# Fuel gauge power - On
@@ -105,7 +117,7 @@ def ColdStart(config):
 	# EKRAN HYD TRANS PWR switch - AUTO BASE # Right rear wall, black guarded switch
 	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER', 0) # Switch
 	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER_COVER', 0) # FIXME Doesn't matter what value you send, the cover is always toggled, not set to a specific state.  Since it starts open on cold start, only toggle it after flipping the switch.  On shutdown, toggle it back open again and leave it open.
-	
+
 	# UV-26 countermeasures dispenser (CMD) power - On # Right rear wall, black guarded switch
 	pushSeqCmd(dt, 'UV26_POWER_COVER', 1) # Cover open
 	pushSeqCmd(dt, 'UV26_POWER', 1) # Switch
@@ -136,7 +148,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ENG_START', 1) # Press
 	pushSeqCmd(dt, 'ENG_START', 0) # Release
 	pushSeqCmd(20, '', '', "APU started")
-	
+
 	# Prepare for engine start
 	# Rotor brake - Off
 	pushSeqCmd(dt, 'ENG_ROTOR_BREAK', 0) # NOTE Misspelling, "ENG_ROTOR_BREAK" is the DCS BIOS command.
@@ -185,10 +197,10 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'FUEL_APU_VLV_COVER', 1) # Cover toggle
 
 	# Left and right throttles - Auto (10s)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP}') # Needs two "presses" to get to Auto.
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgup')
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgup') # Needs two "presses" to get to Auto.
 	pushSeqCmd(10, '', '', "Engines - spooled up")
-	
+
 	# Left AC generator - On
 	pushSeqCmd(dt, 'ELEC_AC_L_GEN', 1)
 	# Right AC generator - On
@@ -221,7 +233,7 @@ def ColdStart(config):
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3003, 1)
 	# Blade tip lights - On
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3001, 1)
-	# Formation lights - 
+	# Formation lights -
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, 0) # Off (center switch position)
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.1) # 10%
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.2) # 30%
@@ -245,7 +257,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
 	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
 	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
-	
+
 	# Default startup done, doing post-startup tasks.
 	# Laser rangefinder - Arm
 	pushSeqCmd(dt, 'LASER_STANDBY', 1)
@@ -253,7 +265,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'WEAPONS_MASTER_ARM', 1)
 	# Man/Auto weapon - Man
 	pushSeqCmd(dt, 'WEAPONS_MANUAL_AUTO', 1)
-	
+
 	# UV-26 countermeasures dispenser
 	# UV-26 Dispenser - Both sides
 	pushSeqCmd(dt, 'UV26_DISPENSERS_SELECTOR', 1) # Switch to middle
@@ -270,7 +282,7 @@ def ColdStart(config):
 	# UV-26 Dispense interval - 1 SEC
 	pushSeqCmd(dt, 'UV26_INTERVAL', 1) # Press
 	pushSeqCmd(dt, 'UV26_INTERVAL', 0) # Release
-	
+
 	# Set up ABRIS
 	# ABRIS - Geo grid off, UTM grid (10 km grid) on
 	pushSeqCmd(dt, 'ABRIS_BTN_1', 1) # OPTION
@@ -305,10 +317,8 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ABRIS_BTN_2', 1) # MAP
 	pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
 
-	inuAlignTimerEnd = inuAlignTime - (getLastSeqTime() - inuAlignTimerStart)
-	if inuAlignTimerEnd < dt:
-		inuAlignTimerEnd = dt
-	pushSeqCmd(inuAlignTimerEnd, '', '', "INU Accelerated Alignment - Complete")
+	pushSeqCmd(dt, 'scriptTimerEnd', name='alignTimer')
+	pushSeqCmd(dt, '', '', "INU Accelerated Alignment - Complete")
 
 	# Autopilot buttons
 	# Autopilot bank hold - On
@@ -321,33 +331,38 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'AP_HDG_HOLD_BTN', 1)
 	pushSeqCmd(dt, 'AP_HDG_HOLD_BTN', 0)
 
-	pushSeqCmd(dt, 'scriptSpeech', '', "Manual steps remaining:  Set lights.  Tune radios.  Set unguided weapon pylon ballistic knob to match rockets (middle knob on right rear wall).  Set altimeter to Q F E or Q N H.")
+	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining:  Set lights.  Tune radios.  Set unguided weapon pylon ballistic knob to match rockets (middle knob on right rear wall).  Set altimeter to Q F E or Q N H.")
 
 	return seq
 
 
-def HotStart(config):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Hot Start sequence.")
-	
+
 	# SPU-9 radio selector knob - Ground Crew (allows rearming)
 	pushSeqCmd(dt, 'RADIO_SELECTOR', 3)
 
@@ -370,7 +385,7 @@ def HotStart(config):
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3003, 1)
 	# Blade tip lights - On
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3001, 1)
-	# Formation lights - 
+	# Formation lights -
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, 0) # Off (center switch position)
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.1) # 10%
 	#pushSeqCmd(dt, NAVLIGHT_SYSTEM, 3002, value = 0.2) # 30%
@@ -388,7 +403,7 @@ def HotStart(config):
 	pushSeqCmd(dt, 'WEAPONS_MASTER_ARM', 1)
 	# Man/Auto weapon - Man
 	pushSeqCmd(dt, 'WEAPONS_MANUAL_AUTO', 1)
-	
+
 	# UV-26 countermeasures dispenser to "411" (4 flares, 1 second apart)
 	# UV-26 Dispenser - Both sides
 	pushSeqCmd(dt, 'UV26_DISPENSERS_SELECTOR', 1) # Switch to middle
