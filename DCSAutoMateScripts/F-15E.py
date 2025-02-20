@@ -1,31 +1,57 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start, day, Stored Heading (SH) align': 'ColdStartDaySH',
-		#'Cold Start, day, Full Gyrocompass (GC) align': 'ColdStartDayGC',
-		'Cold Start, night, Stored Heading (SH) align': 'ColdStartNightSH',
-		#'Cold Start, night, Full Gyrocompass (GC) align': 'ColdStartNightGC',
-		'Hot Start, day': 'HotStartDay',
-		'Hot Start, night': 'HotStartNight',
-		'Air Start, day': 'AirStartDay',
-		'Air Start, night': 'AirStartNight',
-		'Shutdown': 'Shutdown',
-		#'Test': 'Test',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+					'Alignment': ['Stored Heading'] # , 'Full']
+				},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+				},
+			},
+			{
+				'name': 'Air Start',
+				'function': 'AirStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+				},
+			},
+			{
+				'name': 'Shutdown',
+				'function': 'Shutdown',
+				'vars': {},
+			},
+			#{
+			#	'name': 'Test',
+			#	'function': 'Test',
+			#	'vars': {
+			#		'Time': ['Day', 'Night'],
+			#	},
+			#},
+		],
 	}
 
 def getInfo():
-	return """ATTENTION: You must remap "Throttle (Left) - IDLE" to LAlt+Home, and "Throttle (Left) - OFF" to LAlt+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+	return ''
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def Test(config):
+def Test(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
+
 	def pushSeqCmd(dt, cmd, arg, msg = ''):
 		nonlocal seq, seqTime
 		seqTime += dt
@@ -35,38 +61,15 @@ def Test(config):
 			'arg': arg,
 			'msg': msg,
 		})
-		
+
 	def getLastSeqTime():
 		nonlocal seq
 		return float(seq[len(seq) - 1]['time'])
-	
+
 	# Test code here...
 
 	return seq
 
-def ColdStartDaySH(config):
-	return ColdStart(config, dayStart = True, alignSH = True)
-
-def ColdStartDayGC(config):
-	return ColdStart(config, dayStart = True, alignSH = False)
-
-def ColdStartNightSH(config):
-	return ColdStart(config, dayStart = False, alignSH = True)
-
-def ColdStartNightGC(config):
-	return ColdStart(config, dayStart = False, alignSH = False)
-
-def HotStartDay(config):
-	return HotStart(config, dayStart = True)
-
-def HotStartNight(config):
-	return HotStart(config, dayStart = False)
-
-def AirStartDay(config):
-	return AirStart(config, dayStart = True)
-
-def AirStartNight(config):
-	return AirStart(config, dayStart = False)
 
 ###############################################################################
 ###############################################################################
@@ -78,34 +81,38 @@ def AirStartNight(config):
 ###############################################################################
 ###############################################################################
 ###############################################################################
-def ColdStart(config, dayStart = True, alignSH = True):
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	insAlignTimeSH = 1 * 60 + 10 # 1m5s, extra 10 seconds as buffer in case of MP lag.
 	insAlignTimeGC = 4 * 60 + 10 # 4m5s, extra 10 seconds as buffer in case of MP lag.
-	
+
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	pushSeqCmd(dt, 'scriptSpeech', 'Set throttle to minimum.')
-	
+
 	# Set lights
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16())
@@ -204,10 +211,10 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'F_IN_RAMP_R_SW', 0) # 0 = AUTO, 1 = EMERG
 	# JET FUEL STARTER handle ... Pull (left click) (right lower instrument panel)
 	pushSeqCmd(dt, 'F_B_JFS_CONT_PULL', 1)
-	#pushSeqCmd(1, 'F_B_JFS_CONT_PULL', 0) 
+	#pushSeqCmd(1, 'F_B_JFS_CONT_PULL', 0)
 	# Wait for Ready light to turn on.
 	pushSeqCmd(5, '', '', 'Starter Ready light is on')
-	
+
 	# Start right engine
 	# Right fingerlift
 	pushSeqCmd(dt, 'F_TQ_R_FINGER', 1)
@@ -215,7 +222,9 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, '', '', 'Wait for 26% RPM')
 	pushSeqCmd(23, '', '', 'Right engine at 26% RPM')
 	# Right throttle to IDLE
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_HOME}{VK_RSHIFT up}')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RShift down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'home')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RShift up')
 	pushSeqCmd(50, '', '', 'Right engine at 72% RPM')
 
 	# Start left engine
@@ -225,7 +234,9 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, '', '', 'Wait for 26% RPM')
 	pushSeqCmd(23, '', '', 'Left engine at 26% RPM')
 	# Left throttle to IDLE
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_HOME}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+	pushSeqCmd(dt, 'scriptKeyboard', 'RAlt down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'home')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RAlt up')
 	pushSeqCmd(50, '', '', 'Left engine at 72% RPM')
 
 	# BRAKEHOLD switch ... ON
@@ -233,7 +244,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 
 	# MIC switch ... ON
 	pushSeqCmd(dt, 'F_MIC_SW', 1)
-	
+
 	# Radios
 	# Radio 1 ... ON
 	pushSeqCmd(dt, 'F_UFC_PRE_CHAN_L_PULL', 1)
@@ -258,8 +269,8 @@ def ColdStart(config, dayStart = True, alignSH = True):
 
 	# Canopy ... Close and seal (lever on right canopy rail)
 	pushSeqCmd(dt, 'CANOPY_F_HND', 2)
-	pushSeqCmd(6, 'CANOPY_F_HND', 3)	
-	
+	pushSeqCmd(6, 'CANOPY_F_HND', 3)
+
 	# MFDs ... ON (click the rocker switch on each MFD)
 	# 0 = ON, 1 = middle, 2 = OFF
 	pushSeqCmd(dt, 'F_MPD_L_PW', 0)
@@ -272,10 +283,11 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	# Begin alignment
 	pushSeqCmd(dt, 'scriptSpeech', "Beginning INS alignment.")
 	# INS knob ... STORE for stored heading (1 min), or GC ALIGN (gyrocompass) for full alignment (4 mins)
-	insAlignTimerStart = getLastSeqTime()
-	if alignSH:
+	if vars.get('Alignment') == 'Stored Heading':
+		pushSeqCmd(dt, 'scriptTimerStart', name='alignTimer', duration=insAlignTimeSH)
 		pushSeqCmd(dt, 'F_S_INS', 1) # 0 = OFF, 1 = STORE, 2 = GC, 3 = NAV
 	else:
+		pushSeqCmd(dt, 'scriptTimerStart', name='alignTimer', duration=insAlignTimeGC)
 		pushSeqCmd(dt, 'F_S_INS', 2) # 0 = OFF, 1 = STORE, 2 = GC, 3 = NAV
 
 	# IFF mode ... 4A
@@ -283,7 +295,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 
 	# IFF reply switch ... LIGHT
 	pushSeqCmd(dt, 'F_IFF_REPLY', 2)
-	
+
 	# TF RDR switch ... STBY (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_TER_FOL', 1) # 0 = OFF, 1 = STBY, 2 = ON
 
@@ -292,7 +304,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 1) # Cover open
 	pushSeqCmd(dt, 'F_BH_FLYUP', 1) # 0 = ARMED (down), 1 = DISARMED (up)
 	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 0) # Cover close
-	
+
 	# RDR ALT switch ... ON (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_ALT', 1) # 0 = OFF, 1 = ON, 2 = OVERIDE
 
@@ -301,7 +313,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 
 	# NCTR switch ... ON
 	pushSeqCmd(dt, 'F_BH_NCTR', 1)
-	
+
 	# NAV FLIR switch ... ON (turns on NAV FLIR for use in both MFD and HUD) (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_NAV_FLIR_SW', 2) # 0 = OFF, 1 = STBY, 2 = ON
 	# NAV FLIR GAIN/BRIGHTNESS knob ... As desired (left console middle)
@@ -314,7 +326,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	pushSeqCmd(dt, 'F_CAS_YAW', 1)
 	pushSeqCmd(dt, 'F_CAS_ROLL', 1)
 	pushSeqCmd(dt, 'F_CAS_PITCH', 1)
-	
+
 	# SAI (Standby Attitude Indicator) ... Uncage and center (left lower instrument panel)
 	pushSeqCmd(dt, 'F_FI_BAK_ADI_CAGE_PULL', 1)
 	pushSeqCmd(dt, 'F_FI_BAK_ADI_CAGE_KNOB', 0)
@@ -329,7 +341,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	# BINGO fuel ... As desired (4000 lbs is a good default??) (right lower instrument panel, knob on fuel gauge)
 	for i in range(40):
 		pushSeqCmd(dt, 'F_FUEL_BINGO', 3200)
-	
+
 	# Add UFC DATA to HUD
 	# Return to MENU 1 screen from anywhere with DATA, MENU.  Go to DATA 1 screen from anywhere with MENU, DATA.
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
@@ -420,7 +432,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 		# End programming.
 		'B6', #PROG
 	])
-	
+
 	# Right MFD
 	pressMfdButtons('front', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
@@ -519,7 +531,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		'B17', # HUD
-		'B16' if dayStart else 'B20', # CAM else N-F
+		'B16' if vars.get('Time') == 'Day' else 'B20', # CAM else N-F
 	])
 
 	# Left MFD
@@ -528,7 +540,7 @@ def ColdStart(config, dayStart = True, alignSH = True):
 		'PW', # POWER ON
 		'B14', # A/G RDR
 	])
-	
+
 	# Right MFD
 	pressMfdButtons('rear', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
@@ -547,17 +559,14 @@ def ColdStart(config, dayStart = True, alignSH = True):
 	# Ejection seat ... ARM (lever on left forward base of seat)
 	pushSeqCmd(dt, 'R_TQ_SEAT_ARM', 1)
 	# END SET UP BACK SEAT
-	
+
 	# Wait for the INS to finish aligning (total process time minus the difference between now and when the process started).
-	if alignSH:
-		insAlignTimerEnd = insAlignTimeSH - (getLastSeqTime() - insAlignTimerStart)
-	else:
-		insAlignTimerEnd = insAlignTimeGC - (getLastSeqTime() - insAlignTimerStart)
-	pushSeqCmd(insAlignTimerEnd, '', '', "INS Aligned")
+	pushSeqCmd(dt, 'scriptTimerEnd', name='alignTimer')
+	pushSeqCmd(dt, '', '', "INS Aligned")
 	# INS knob ... NAV
 	pushSeqCmd(dt, 'F_S_INS', 3) # 0 = OFF, 1 = STORE, 2 = GC, 3 = NAV
 	pushSeqCmd(dt, 'scriptSpeech', "INS aiignment is complete.")
-	
+
 	# NOTE Should be done after INS alignement is complete.
 	# BRAKEHOLD switch ... OFF (right lower instrument panel)
 	pushSeqCmd(dt, 'F_B_P_BRAKE', 0)
@@ -577,29 +586,34 @@ def ColdStart(config, dayStart = True, alignSH = True):
 ###############################################################################
 ###############################################################################
 ###############################################################################
-def HotStart(config, dayStart = True):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
-	
+
 	# Set lights
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16())
@@ -625,7 +639,7 @@ def HotStart(config, dayStart = True):
 		pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', int16())
 		# Rear Gauges/UFC backlights
 		pushSeqCmd(dt, 'R_INTL_BACK', int16())
-		
+
 		# External lights:
 		# Anti-collision light
 		pushSeqCmd(dt, 'F_EXTL_ANTI_COL', 0)
@@ -674,7 +688,7 @@ def HotStart(config, dayStart = True):
 
 	# Air conditioner ... MIN
 	pushSeqCmd(dt, 'F_AC_MAX_NORM_MIN', 0) # 0 = MIN, 1 = NORM, 2 = MAX
-	
+
 	# Radio volumes
 	pushSeqCmd(dt, 'F_UFC_COM1_VOL', int16())
 	pushSeqCmd(dt, 'F_UFC_COM2_VOL', int16())
@@ -698,7 +712,7 @@ def HotStart(config, dayStart = True):
 
 	# NCTR switch ... ON
 	pushSeqCmd(dt, 'F_BH_NCTR', 1)
-	
+
 	# NAV FLIR switch ... ON (turns on NAV FLIR for use in both MFD and HUD) (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_NAV_FLIR_SW', 2) # 0 = OFF, 1 = STBY, 2 = ON
 	# NAV FLIR GAIN/BRIGHTNESS knob ... As desired (left console middle)
@@ -713,7 +727,7 @@ def HotStart(config, dayStart = True):
 	# BINGO fuel ... As desired (4000 lbs is a good default??) (right lower instrument panel, knob on fuel gauge)
 	for i in range(40):
 		pushSeqCmd(dt, 'F_FUEL_BINGO', 3200)
-	
+
 	# Add UFC DATA to HUD
 	# Return to MENU 1 screen from anywhere with DATA, MENU.  Go to DATA 1 screen from anywhere with MENU, DATA.
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
@@ -730,7 +744,7 @@ def HotStart(config, dayStart = True):
 	# Disable LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 1) # LAW
 	pushSeqCmd(dt, 'F_UFC_B1', 0)
-	
+
 	# Set Radio 2 MAN-AM mode ON
 	pushSeqCmd(dt, 'F_UFC_B6', 1) # Radio 2
 	pushSeqCmd(dt, 'F_UFC_B6', 0)
@@ -804,7 +818,7 @@ def HotStart(config, dayStart = True):
 		# End programming.
 		'B6', #PROG
 	])
-	
+
 	# Right MFD
 	pressMfdButtons('front', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
@@ -870,7 +884,7 @@ def HotStart(config, dayStart = True):
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		'B17', # HUD
-		'B16' if dayStart else 'B20', # CAM else N-F
+		'B16' if vars.get('Time') == 'Day' else 'B20', # CAM else N-F
 	])
 
 	# Left MFD
@@ -879,7 +893,7 @@ def HotStart(config, dayStart = True):
 		'PW', # POWER ON
 		'B14', # A/G RDR
 	])
-	
+
 	# Right MFD
 	pressMfdButtons('rear', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
@@ -895,11 +909,12 @@ def HotStart(config, dayStart = True):
 		'B13', # TEWS
 	])
 	# END SET UP BACK SEAT
-	
+
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Set up armament page.  Set laser code.  Set lights.  Tune radios.")
 
 	return seq
 
+
 ###############################################################################
 ###############################################################################
 ###############################################################################
@@ -910,29 +925,34 @@ def HotStart(config, dayStart = True):
 ###############################################################################
 ###############################################################################
 ###############################################################################
-def AirStart(config, dayStart = True):
+def AirStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Air Start sequence")
-	
+
 	# Set lights
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		# Internal lights:
 		# Front console lights
 		pushSeqCmd(dt, 'F_INTL_CONSOLE', int16())
@@ -1019,7 +1039,7 @@ def AirStart(config, dayStart = True):
 
 	# IFF reply switch ... LIGHT
 	pushSeqCmd(dt, 'F_IFF_REPLY', 2)
-	
+
 	# Auto Fly Up switch
 	# FIXME DCS-BIOS bug: You need to edit <username>\Saved Games\DCS.openbeta\Scripts\DCS-BIOS\lib\F-15E.lua and change the "F_BH_FLYUP_CVR" and "F_BH_FLYUP" lines to use device 65, instead of device 17 (second function parameter).  This should be fixed in current DCS-BIOS versions.
 	pushSeqCmd(dt, 'F_BH_FLYUP_CVR', 1) # Cover open
@@ -1028,7 +1048,7 @@ def AirStart(config, dayStart = True):
 
 	# NCTR switch ... ON
 	pushSeqCmd(dt, 'F_BH_NCTR', 1)
-	
+
 	# JTIDS knob ... NORM (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_JTIDS', 2) # 0 = OFF, 1 = POLL, 2 = NORM, 3 = SIL, 4 = HOLD
 
@@ -1038,7 +1058,7 @@ def AirStart(config, dayStart = True):
 	# BINGO fuel ... As desired (4000 lbs is a good default??) (right lower instrument panel, knob on fuel gauge)
 	for i in range(40):
 		pushSeqCmd(dt, 'F_FUEL_BINGO', 3200)
-	
+
 	# Add UFC DATA to HUD
 	# Return to MENU 1 screen from anywhere with DATA, MENU.  Go to DATA 1 screen from anywhere with MENU, DATA.
 	pushSeqCmd(dt, 'F_UFC_KEY_MENU', 1)
@@ -1129,7 +1149,7 @@ def AirStart(config, dayStart = True):
 		# End programming.
 		'B6', #PROG
 	])
-	
+
 	# Right MFD
 	pressMfdButtons('front', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
@@ -1189,7 +1209,7 @@ def AirStart(config, dayStart = True):
 		# Return to MENU 1 page from anywhere with Power switch ON.
 		'PW', # POWER ON
 		'B17', # HUD
-		'B16' if dayStart else 'B20', # CAM else N-F
+		'B16' if vars.get('Time') == 'Day' else 'B20', # CAM else N-F
 	])
 
 	# Left MFD
@@ -1198,7 +1218,7 @@ def AirStart(config, dayStart = True):
 		'PW', # POWER ON
 		'B14', # A/G RDR
 	])
-	
+
 	# Right MFD
 	pressMfdButtons('rear', 'right', [
 		# Return to MENU 1 page from anywhere with Power switch ON.
@@ -1214,7 +1234,7 @@ def AirStart(config, dayStart = True):
 		'B13', # TEWS
 	])
 	# END SET UP BACK SEAT
-	
+
 	return seq
 
 
@@ -1228,28 +1248,32 @@ def AirStart(config, dayStart = True):
 ###############################################################################
 ###############################################################################
 ###############################################################################
-def Shutdown(config):
+def Shutdown(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Shutdown sequence")
-	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
-	
+
 	# Canopy ... Open (lever on right canopy rail)
 	pushSeqCmd(dt, 'CANOPY_F_HND', 0)
 	pushSeqCmd(6, 'CANOPY_F_HND', 1)
@@ -1275,10 +1299,10 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'F_UFC_LCD_BRIGHT', 0)
 	# Rear UFC brightness ... As desired (knob on UFC)
 	pushSeqCmd(dt, 'R_UFC_LCD_BRIGHT', 0)
-	
+
 	# MIC switch ... OFF
 	pushSeqCmd(dt, 'F_MIC_SW', 0)
-	
+
 	# OXYGEN supply switch ... OFF (right console forward)
 	pushSeqCmd(dt, 'F_OXY_MODE', 0)
 
@@ -1293,7 +1317,7 @@ def Shutdown(config):
 
 	# INS ... OFF
 	pushSeqCmd(dt, 'F_S_INS', 0) # 0 = OFF, 1 = STORE, 2 = GC, 3 = NAV
-	
+
 	# IFF mode ... OFF
 	pushSeqCmd(dt, 'F_IFF_MODE', 0)
 
@@ -1302,7 +1326,7 @@ def Shutdown(config):
 
 	# TF RDR switch ... OFF (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_TER_FOL', 0) # 0 = OFF, 1 = STBY, 2 = ON
-	
+
 	# RDR ALT switch ... OFF (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_RDR_ALT', 0) # 0 = OFF, 1 = ON, 2 = OVERIDE
 
@@ -1311,7 +1335,7 @@ def Shutdown(config):
 
 	# NCTR switch ... OFF
 	pushSeqCmd(dt, 'F_BH_NCTR', 0)
-	
+
 	# NAV FLIR switch ... OFF (left console middle, behind throttle)
 	pushSeqCmd(dt, 'F_S_NAV_FLIR_SW', 0) # 0 = OFF, 1 = STBY, 2 = ON
 	# NAV FLIR GAIN/BRIGHTNESS knob ... As desired (left console middle)
@@ -1324,7 +1348,7 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'F_CAS_YAW', 0)
 	pushSeqCmd(dt, 'F_CAS_ROLL', 0)
 	pushSeqCmd(dt, 'F_CAS_PITCH', 0)
-	
+
 	# SAI (Standby Attitude Indicator) ... Uncage and center (left lower instrument panel)
 	pushSeqCmd(dt, 'F_FI_BAK_ADI_CAGE_PULL', 1)
 	pushSeqCmd(dt, 'F_FI_BAK_ADI_CAGE_KNOB', int16()) # FIXME??
@@ -1333,7 +1357,7 @@ def Shutdown(config):
 	# BINGO fuel ... zero (right lower instrument panel, knob on fuel gauge)
 	#for i in range(40):
 		#pushSeqCmd(dt, 'F_FUEL_BINGO', '-3200') # FIXME??  negative numbers not turning knob CCW
-	
+
 	# Ejection seat ... SAFE (lever on left forward base of seat)
 	pushSeqCmd(dt, 'F_BH_SEAT_ARM', 0)
 
@@ -1352,7 +1376,7 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'R_FI_BAK_ADI_CAGE_PULL', 1)
 	pushSeqCmd(dt, 'R_FI_BAK_ADI_CAGE_KNOB', int16()) #FIXME??
 	pushSeqCmd(dt, 'R_FI_BAK_ADI_CAGE_PULL', 0)
-	
+
 	# TGT FLIR switch ... OFF (left console middle, behind left hand controller)
 	pushSeqCmd(dt, 'R_TGP_PW', 0) # 0 = OFF, 1 = STBY, 2 = ON
 	# LASER switch ... SAFE (left console middle, behind left hand controller)
@@ -1374,18 +1398,22 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'R_TEWS_EWWS_PW', 0)
 	# CMD MODE knob ... OFF (right console middle)
 	pushSeqCmd(dt, 'R_CMD_OP_MODE', 0) # 0 = OFF, 1 = STBY, 2 = MAN ONLY, 3 = SEMIAUTO, 4 = AUTO
-	
+
 	# Ejection seat ... SAFE (lever on left forward base of seat)
 	pushSeqCmd(dt, 'R_TQ_SEAT_ARM', 0)
 	# END SET UP BACK SEAT
 
 	# Cut right engine
 	# Right throttle to OFF
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_END}{VK_RSHIFT up}')
-	
+	pushSeqCmd(dt, 'scriptKeyboard', 'RShift down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'end')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RShift up')
+
 	# Cut left engine
 	# Left throttle to OFF
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_END}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+	pushSeqCmd(dt, 'scriptKeyboard', 'LAlt down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'end')
+	pushSeqCmd(dt, 'scriptKeyboard', 'LAlt up')
 
 	# L and R GEN switches ... OFF
 	pushSeqCmd(dt, 'F_GEN_L', 0)
@@ -1407,5 +1435,5 @@ def Shutdown(config):
 	# L and R INLET switches ... EMERG (left console forward outboard)
 	pushSeqCmd(dt, 'F_IN_RAMP_L_SW', 1) # 0 = AUTO, 1 = EMERG
 	pushSeqCmd(dt, 'F_IN_RAMP_R_SW', 1) # 0 = AUTO, 1 = EMERG
-	
+
 	return seq

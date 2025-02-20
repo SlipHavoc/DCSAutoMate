@@ -1,8 +1,18 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start': 'ColdStart',
-		'Hot Start': 'HotStart',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {},
+			},
+		],
 	}
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
@@ -10,34 +20,43 @@ def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def ColdStart(config):
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-	
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
+
 	dt = 0.3
-	
+
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
 	# Ground power supply - On
-	pushSeqCmd(dt, 'scriptKeyboard', '{\ down}{\ up}') # Must have separate down and up to register key press.
-	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{F1}')
+	pushSeqCmd(dt, 'scriptKeyboard', '\\')
+	pushSeqCmd(dt, 'scriptKeyboard', 'F8')
+	pushSeqCmd(dt, 'scriptKeyboard', 'F2')
+	pushSeqCmd(dt, 'scriptKeyboard', 'F1')
 	pushSeqCmd(15, '', '', "Ground power is on")
 
 	# Interior lights
 	pushSeqCmd(dt, 'LIGHT_INT_INSTR', int16())
 	pushSeqCmd(dt, 'LIGHT_INT_CONSOLE', int16())
-	
+
 	# Start engine
 	pushSeqCmd(dt, 'STARTER_BTN', 1)
 	pushSeqCmd(5, 'THROTTLE_CLICK', 1) # IGN at 5% RPM (5 seconds)
@@ -45,10 +64,10 @@ def ColdStart(config):
 	pushSeqCmd(20, '', '', "Engine at 40% RPM")
 
 	# Ground power supply - Off
-	pushSeqCmd(dt, 'scriptKeyboard', '{\ down}{\ up}') # Must have separate down and up to register key press.
-	pushSeqCmd(dt, 'scriptKeyboard', '{F8}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{F2}')
+	pushSeqCmd(dt, 'scriptKeyboard', '\\')
+	pushSeqCmd(dt, 'scriptKeyboard', 'F8')
+	pushSeqCmd(dt, 'scriptKeyboard', 'F2')
+	pushSeqCmd(dt, 'scriptKeyboard', 'F2')
 	pushSeqCmd(15, '', '', "Ground power is off")
 
 	# NOTE Leave canopy open for rearming.
@@ -58,7 +77,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'AFCS_STBY', 1)
 	pushSeqCmd(dt, 'AFCS_STAB_AUG', 1)
 	pushSeqCmd(dt, 'RADAR_MODE', 1) # 0 = OFF, 1 = STBY, 2 = SRCH, 3 = TC, 4 = A/G
-	
+
 	# CM, RWR, and ECM
 	pushSeqCmd(dt, 'CM_PWR', 1) # Countermeasures system (chaff)
 	pushSeqCmd(dt, 'ECM_APR25_PW', 1)
@@ -67,10 +86,10 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ECM_PRF_VOL', int16(0.5))
 	pushSeqCmd(dt, 'ECM_MSL_VOL', int16(0.5))
 	pushSeqCmd(dt, 'ECM_SEL', 2) # 0 = OFF, 1 = STBY, 2 = REC, 3 = RPT
-	
+
 	# UHF radio
 	pushSeqCmd(dt, 'ARC51_MODE', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF
-	
+
 	#for i in range(88):
 	#	pushSeqCmd(dt, 'RADAR_ALT_INDEX', -1000)
 	pushSeqCmd(dt, 'scriptSpeech', 'Set radar altimeter index')
@@ -89,28 +108,37 @@ def ColdStart(config):
 
 	return seq
 
-	
-def HotStart(config):
+
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-	
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
+
 	dt = 0.3
-	
+
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
 	# Interior lights
 	pushSeqCmd(dt, 'LIGHT_INT_INSTR', int16())
 	pushSeqCmd(dt, 'LIGHT_INT_CONSOLE', int16())
-	
+
 	# NOTE Canopy open for rearming.
 	pushSeqCmd(dt, 'Canopy', 1) # Note Propercase, not lowercase.
 
@@ -122,10 +150,10 @@ def HotStart(config):
 	pushSeqCmd(dt, 'ECM_PRF_VOL', int16(0.25))
 	pushSeqCmd(dt, 'ECM_MSL_VOL', int16(0.25))
 	pushSeqCmd(dt, 'ECM_SEL', 2) # 0 = OFF, 1 = STBY, 2 = REC, 3 = RPT
-	
+
 	# UHF radio
 	pushSeqCmd(dt, 'ARC51_MODE', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF
-	
+
 	#for i in range(88):
 	#	pushSeqCmd(dt, 'RADAR_ALT_INDEX', -1000)
 	pushSeqCmd(dt, 'scriptSpeech', 'Set radar altimeter index')
@@ -137,4 +165,3 @@ def HotStart(config):
 	pushSeqCmd(dt, 'scriptSpeech', 'Close canopy after rearming.')
 
 	return seq
-	

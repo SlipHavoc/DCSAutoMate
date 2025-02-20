@@ -1,39 +1,62 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start': 'ColdStart',
-		'Hot Start': 'HotStart',
-		'Shutdown': 'Shutdown',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {},
+			},
+			{
+				'name': 'Shutdown',
+				'function': 'Shutdown',
+				'vars': {},
+			},
+		],
 	}
 
 def getInfo():
-	return """ATTENTION: You must remap "Cockpit door open/close" to RShift+C.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+	return ''
 
-def ColdStart(config):
+# Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
+def int16(mult = 1):
+	int16 = 65535
+	return int(mult * int16)
+
+
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
 
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
-	int16 = 65535
 	inuAlignTime = 3 * 60  # 3m00s
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Cold Start sequence.")
-	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
 	pushSeqCmd(dt, '', '', 'Set collective full down.')
 	pushSeqCmd(dt, 'scriptSpeech', 'Set collective full down.')
 
@@ -41,12 +64,9 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'RADIO_SELECTOR', 3)
 
 	# Cockpit door - Close
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}')
-	if config['dvorak']:
-		pushSeqCmd(dt, 'scriptKeyboard', '{j down}{j up}') # QWERTY 'c', Dvorak 'j'.
-	else:
-		pushSeqCmd(dt, 'scriptKeyboard', '{c down}{c up}') # QWERTY 'c', Dvorak 'j'.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT up}')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'c')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl up')
 
 	# Voice message system (Betty) - On
 	pushSeqCmd(dt, 'VOICE_MSG_EMER', 1)
@@ -75,7 +95,7 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'PPK800_INU_HEAT', 1)
 	# INU power - On # Right rear wall
 	pushSeqCmd(dt, 'PPK800_INU_POWER', 1)
-	inuAlignTimerStart = getLastSeqTime() # Start a timer for the INU alignment at the current time.
+	pushSeqCmd(dt, 'scriptTimerStart', name='alignTimer', duration=inuAlignTime)
 	# INU accelerated alignment in process (3m)
 	# SAI power - On # Right wall
 	pushSeqCmd(dt, 'SAI_POWER', 1)
@@ -182,8 +202,8 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'FUEL_APU_VLV_COVER', 1) # Cover toggle
 
 	# Left and right throttles - Auto (10s)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGUP}') # Needs two "presses" to get to Auto.
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgup')
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgup') # Needs two "presses" to get to Auto.
 	pushSeqCmd(10, '', '', "Engines - spooled up")
 
 	# Left AC generator - On
@@ -234,14 +254,14 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'IFF_POWER', 1) # Switch
 	pushSeqCmd(dt, 'IFF_POWER_COVER', 0) # Cover close
 	# SAI - Uncage and center
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
-	pushSeqCmd(dt, 'SAI_CTRL_ROT', int(int16 * -0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
+	pushSeqCmd(dt, 'SAI_CTRL_ROT', int16(-0.03))
 
 	# Default startup done, doing post-startup tasks.
 	# Laser rangefinder - Arm
@@ -304,10 +324,8 @@ def ColdStart(config):
 	pushSeqCmd(dt, 'ABRIS_BTN_2', 1) # MAP
 	pushSeqCmd(dt, 'ABRIS_BTN_2', 0) # release
 
-	inuAlignTimerEnd = inuAlignTime - (getLastSeqTime() - inuAlignTimerStart)
-	if inuAlignTimerEnd < dt:
-		inuAlignTimerEnd = dt
-	pushSeqCmd(inuAlignTimerEnd, '', '', "INU Accelerated Alignment - Complete")
+	pushSeqCmd(dt, 'scriptTimerEnd', name='alignTimer')
+	pushSeqCmd(dt, '', '', "INU Accelerated Alignment - Complete")
 
 	# Autopilot buttons
 	# Autopilot bank hold - On
@@ -325,24 +343,29 @@ def ColdStart(config):
 	return seq
 
 
-def HotStart(config):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
 
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	# Start sequence
 	pushSeqCmd(0, '', '', "Running Hot Start sequence.")
@@ -441,26 +464,31 @@ def HotStart(config):
 
 	return seq
 
-def Shutdown(config):
+
+def Shutdown(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
 
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
-	int16 = 65535
 	inuAlignTime = 3 * 60  # 3m00s
 
 	# Start sequence
@@ -528,22 +556,22 @@ def Shutdown(config):
 	# EKRAN HYD TRANS PWR switch - AUTO BASE # Right rear wall, black guarded switch
 	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER_COVER', 0) # FIXME Doesn't matter what value you send, the cover is always toggled, not set to a specific state.  Since it starts open on cold start, only toggle it after flipping the switch.  On shutdown, toggle it back open again and leave it open.
 	pushSeqCmd(dt, 'ELEC_HYD_TRAN_EKRAN_POWER', 0) # Switch
-	
+
 	# UV-26 countermeasures dispenser (CMD) power - Off # Right rear wall, black guarded switch
 	pushSeqCmd(dt, 'UV26_POWER_COVER', 1) # Cover open
 	pushSeqCmd(dt, 'UV26_POWER', 0) # Switch
 	pushSeqCmd(dt, 'UV26_POWER_COVER', 1) # Cover close
 	# L-140 laser warning (LWS) power - Off # Right rear wall
 	pushSeqCmd(dt, 'LWS_POWER', 0)
-	
+
 	# Left AC generator - Off
 	pushSeqCmd(dt, 'ELEC_AC_L_GEN', 0)
 	# Right AC generator - Off
 	pushSeqCmd(dt, 'ELEC_AC_R_GEN', 0)
 
 	# Left and right throttles - Idle (10s)
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{PGDN}') # Needs two "presses" to get to Idle.
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgdn')
+	pushSeqCmd(dt, 'scriptKeyboard', 'pgdn') # Needs two "presses" to get to Idle.
 	pushSeqCmd(10, '', '', "Engines - spooled down")
 
 	# Left engine stop
@@ -580,17 +608,17 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'FIREEXT_EXT_MODE_COVER', 0) # Cover close
 
 
-	
+
 
 	# PVI and datalink, right console forward
 	# Datalink master mode knob - OFF
 	pushSeqCmd(dt, 'DLNK_MASTER_MODE', 0) # 0 = OFF, 1 = REC, 2 = WINGM, 3 = COM
 
-	
+
 	# SAI - Cage
 	#TODO
 
-	
+
 	# Battery 1 - Off
 	pushSeqCmd(dt, 'ELEC_BATTERY_1_COVER', 1) # Cover open
 	pushSeqCmd(dt, 'ELEC_BATTERY_1', 0) # Switch
@@ -603,16 +631,12 @@ def Shutdown(config):
 	# Voice message system (Betty) - OFF
 	pushSeqCmd(dt, 'VOICE_MSG_EMER', 0)
 
-	
+
 
 	# Cockpit door - Open
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}')
-	if config['dvorak']:
-		pushSeqCmd(dt, 'scriptKeyboard', '{j down}{j up}') # QWERTY 'c', Dvorak 'j'.
-	else:
-		pushSeqCmd(dt, 'scriptKeyboard', '{c down}{c up}') # QWERTY 'c', Dvorak 'j'.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT up}')
-
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'c')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RCtrl up')
 
 	# Rotor brake - On
 	pushSeqCmd(15, '', '', 'Waiting for rotor to spin down to 30%')

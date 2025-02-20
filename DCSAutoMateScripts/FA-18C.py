@@ -1,170 +1,182 @@
-# Return a Dictionary of script titles and their corresponding function names.  This is a list of scripts that users will be selecting from.  The module may have other utility functions that will not be run directly by the users.
-def getScriptFunctions():
+# Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
+def getScriptData():
 	return {
-		'Cold Start, Ground, Day, With HMD': 'ColdStartGroundDayWithHmd',
-		'Cold Start, Ground, Day, No HMD': 'ColdStartGroundDayNoHmd',
-		'Cold Start, Ground, Night, With HMD': 'ColdStartGroundNightWithHmd',
-		'Cold Start, Ground, Night, No HMD': 'ColdStartGroundNightNoHmd',
-		'Cold Start, Carrier, Day, With HMD': 'ColdStartCarrierDayWithHmd',
-		'Cold Start, Carrier, Day, No HMD': 'ColdStartCarrierDayNoHmd',
-		'Cold Start, Carrier, Night, With HMD': 'ColdStartCarrierNightWithHmd',
-		'Cold Start, Carrier, Night, No HMD': 'ColdStartCarrierNightNoHmd',
-		'Hot Start, Ground, Day, With HMD': 'HotStartGroundDayWithHmd',
-		'Hot Start, Ground, Day, No HMD': 'HotStartGroundDayNoHmd',
-		'Hot Start, Ground, Night, With HMD': 'HotStartGroundNightWithHmd',
-		'Hot Start, Ground, Night, No HMD': 'HotStartGroundNightNoHmd',
-		'Hot Start, Carrier, Day, With HMD': 'HotStartCarrierDayWithHmd',
-		'Hot Start, Carrier, Day, No HMD': 'HotStartCarrierDayNoHmd',
-		'Hot Start, Carrier, Night, With HMD': 'HotStartCarrierNightWithHmd',
-		'Hot Start, Carrier, Night, No HMD': 'HotStartCarrierNightNoHmd',
-		'Air Start, Day': 'AirStartDay',
-		'Air Start, Night': 'AirStartNight',
-		'Shutdown': 'Shutdown',
-		#'Flashpoint Levant Waypoints': 'FlashpointLevantWaypoints',
-		#'Test': 'Test',
+		'scripts': [
+			{
+				'name': 'Cold Start',
+				'function': 'ColdStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+					'Location': ['Ground', 'Carrier'],
+					'HMD': ['With HMD', 'No HMD'],
+				},
+			},
+			{
+				'name': 'Hot Start',
+				'function': 'HotStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+					'Location': ['Ground', 'Carrier'],
+					'HMD': ['With HMD', 'No HMD'],
+				},
+			},
+			{
+				'name': 'Air Start',
+				'function': 'AirStart',
+				'vars': {
+					'Time': ['Day', 'Night'],
+				},
+			},
+			{
+				'name': 'Shutdown',
+				'function': 'Shutdown',
+				'vars': {},
+			},
+			#{
+			#	'name': 'Test',
+			#	'function': 'Test',
+			#	'vars': {
+			#		'Time': ['Day', 'Night'],
+			#		'Location': ['Ground', 'Carrier'],
+			#		'HMD': ['With HMD', 'No HMD'],
+			#	},
+			#},
+		],
 	}
 
+#def getDetectedVars(exportData):
+#	vars = {
+#		'Time': '',
+#		'Location': '',
+#		'HMD': '',
+#	}
+#	try:
+#		#moduleName = exportData['LoGetSelfData']['Name']
+
+#		altMSL = exportData['LoGetAltitudeAboveSeaLevel']
+#		altAGL = exportData['LoGetAltitudeAboveGroundLevel']
+#		#airspeedTAS = exportData['LoGetTrueAirSpeed']
+
+#		missionTimeHHMMSS = exportData['missionTimeHHMMSS']
+#		if missionTimeHHMMSS >= '06:00:00' and missionTimeHHMMSS <= '20:00:00':
+#			vars['Time'] = 'Day'
+#		else:
+#			vars['Time'] = 'Night'
+
+#		if altAGL < 5:
+#			vars['Location'] = 'Ground'
+#		elif altAGL - altMSL < 2 and altMSL > 15 and altMSL < 25:
+#			vars['Location'] = 'Carrier'
+#		else:
+#			vars['Location'] = 'Air'
+
+#		# Single-engined planes will only have RPM for left engine.
+#		if exportData['LoGetEngineInfo']['RPM']['left'] > 0:
+#			vars['Engines'] = 'Hot'
+#		else:
+#			vars['Engines'] = 'Cold'
+
+#		return vars
+
+#	except Exception as e:
+#		return vars
+
+
 def getInfo():
-	return """ATTENTION: You must remap "Throttle (Left) - IDLE" to LAlt+Home, and "Throttle (Left) - OFF" to LAlt+End.  This is because pyWinAuto doesn't support RAlt or RCtrl."""
+	return ''
 
 # Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
 def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def Test(config):
+
+def Test(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
-	
-	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
-	pushSeqCmd(4.3, 'IFEI_UP_BTN', 0)
 
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
+
+	# Test code here...
+
+
+
+	#print(seq)
 	return seq
-
-def ColdStartGroundDayWithHmd(config):
-	return ColdStart(config, groundStart = True, dayStart = True, hmd = True)
-
-def ColdStartGroundDayNoHmd(config):
-	return ColdStart(config, groundStart = True, dayStart = True, hmd = False)
-
-def ColdStartGroundNightWithHmd(config):
-	return ColdStart(config, groundStart = True, dayStart = False, hmd = True)
-
-def ColdStartGroundNightNoHmd(config):
-	return ColdStart(config, groundStart = True, dayStart = False, hmd = False)
-
-def ColdStartCarrierDayWithHmd(config):
-	return ColdStart(config, groundStart = False, dayStart = True, hmd = True)
-
-def ColdStartCarrierDayNoHmd(config):
-	return ColdStart(config, groundStart = False, dayStart = True, hmd = False)
-
-def ColdStartCarrierNightWithHmd(config):
-	return ColdStart(config, groundStart = False, dayStart = False, hmd = True)
-
-def ColdStartCarrierNightNoHmd(config):
-	return ColdStart(config, groundStart = False, dayStart = False, hmd = False)
-
-def HotStartGroundDayWithHmd(config):
-	return HotStart(config, groundStart = True, dayStart = True, hmd = True)
-
-def HotStartGroundDayNoHmd(config):
-	return HotStart(config, groundStart = True, dayStart = True, hmd = False)
-
-def HotStartGroundNightWithHmd(config):
-	return HotStart(config, groundStart = True, dayStart = False, hmd = True)
-
-def HotStartGroundNightNoHmd(config):
-	return HotStart(config, groundStart = True, dayStart = False, hmd = False)
-
-def HotStartCarrierDayWithHmd(config):
-	return HotStart(config, groundStart = False, dayStart = True, hmd = True)
-
-def HotStartCarrierDayNoHmd(config):
-	return HotStart(config, groundStart = False, dayStart = True, hmd = False)
-
-def HotStartCarrierNightWithHmd(config):
-	return HotStart(config, groundStart = False, dayStart = False, hmd = True)
-
-def HotStartCarrierNightNoHmd(config):
-	return HotStart(config, groundStart = False, dayStart = False, hmd = False)
-
-def AirStartDay(config):
-	return AirStart(config, dayStart = True)
-
-def AirStartNight(config):
-	return AirStart(config, dayStart = False)
 
 
 # Some settings change depending on whether you're starting from the ground or from a carrier.
-def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
+def ColdStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
-		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
 
-	apuStartTime = 15
-	engineCrankTime = 7 # Seconds until engine is at 15% after setting crank switch.
-	engineStartTime = 35 # Seconds until engine is fully started after moving throttle to idle.
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
+		nonlocal seq, seqTime
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
+
 	insAlignTime = 1 * 60 + 55 # 1m55s
-	
+
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
-	pushSeqCmd(dt, 'scriptSpeech', "Warning, uses non standard key bindings.")
-	
+
 	pushSeqCmd(dt, 'BATTERY_SW', 2, 'BATT switch - On')
-	
+
 	# Exterior light switch ... OFF
 	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 0) # 0 = OFF, 1 = ON
 	# Other lights
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16())
 	else:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16(0.5))
-	
+
 	# Start APU
-	apuTimerStart = getLastSeqTime()
 	pushSeqCmd(dt, 'APU_CONTROL_SW', 1, 'APU switch - On')
-	
+
 	# Close canopy while waiting for APU
 	pushSeqCmd(dt, 'CANOPY_SW', 0)
-	pushSeqCmd(9, 'CANOPY_SW', 1) # Turn off canopy switch 9 seconds later.
-	
-	apuTimerEnd = apuStartTime - (getLastSeqTime() - apuTimerStart)
-	pushSeqCmd(apuTimerEnd, '', '', "APU started")
+	pushSeqCmd(dt, 'scriptCockpitState', control='FA-18C_hornet/CANOPY_POS', value=0) # Wait for canopy to close.
+	pushSeqCmd(dt, 'CANOPY_SW', 1) # Turn off canopy switch after canopy is closed.
+
+	pushSeqCmd(dt, 'scriptCockpitState', control='FA-18C_hornet/APU_READY_LT', value=1) # Wait for APU light to turn on
 	# APU started
 
 	# All MFDs on
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 2) # DAY
 		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 2) # DAY
 		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
@@ -172,9 +184,9 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 1) # NIGHT
 		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 1) # NIGHT
 		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
-	
+
 	# HUD, UFC, IFEI brightness
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16())
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
 		pushSeqCmd(dt, 'UFC_BRT', int16())
@@ -188,30 +200,30 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# Radio volume
 	pushSeqCmd(dt, 'UFC_COMM1_VOL', int16(0.8), 'COMM 1 vol - 80%')
 	pushSeqCmd(dt, 'UFC_COMM2_VOL', int16(0.8), 'COMM 2 vol - 80%')
-	
+
 	# RIGHT ENGINE
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 2) # Right
-	pushSeqCmd(7, '', '', "Right engine at 15%, right throttle to IDLE")
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_HOME}')
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT up}')
-	pushSeqCmd(35, '', '', 'Right engine started')
+	pushSeqCmd(dt, 'scriptCockpitState', control='FA-18C_hornet/IFEI_RPM_R', condition='>=', value=15) # Wait for RPM >= 15%.
+	pushSeqCmd(dt, 'scriptKeyboard', 'RShift down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'home')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RShift up')
+	pushSeqCmd(dt, 'scriptCockpitState', control='FA-18C_hornet/IFEI_RPM_R', condition='>=', value=63, duration=5) # Wait for RPM >= 63% for 5 seconds.  In extreme cold, idle speed can be as low as 63%.
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END RIGHT ENGINE
 
 	# FIXME The engine monitor instrument doesn't pick up the cockpit lighting mode switch position unless it's set after the right engine starts.
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 0) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	else:
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
-	
+
 	# HMD knob - ON
-	if hmd:
-		if dayStart:
+	if vars.get('HMD') == 'With HMD':
+		if vars.get('Time') == 'Day':
 			pushSeqCmd(dt, 'HMD_OFF_BRT', int16())
 		else:
 			pushSeqCmd(dt, 'HMD_OFF_BRT', int16(0.5))
-	
+
 	# BLEED AIR KNOB - CYCLE THRU OFF TO NORM
 	pushSeqCmd(dt, 'BLEED_AIR_KNOB', 3)
 	pushSeqCmd(dt, 'BLEED_AIR_KNOB', 0)
@@ -228,25 +240,25 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# FCS RESET BUTTON - PUSH
 	pushSeqCmd(dt, 'FCS_RESET_BTN', 1) # Press
 	pushSeqCmd(dt, 'FCS_RESET_BTN', 0) # Release
-	
+
 	# FLAP SWITCH - HALF
 	pushSeqCmd(dt, 'FLAP_SW', 1)
 	# T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED (only momentary press actually necessary??)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 1)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 0)
-	
+
 	# STANDBY ATTITUDE REFERENCE INDICATOR - UNCAGE
 	pushSeqCmd(dt, 'SAI_SET', '-100')
 	pushSeqCmd(dt, 'SAI_SET', '+100')
-	
+
 	# ATT SWITCH - STBY
 	pushSeqCmd(dt, 'HUD_ATT_SW', 0)
 	# ATT SWITCH - AUTO
 	pushSeqCmd(dt, 'HUD_ATT_SW', 1)
 	# OBOGS CONTROL SWITCH - ON
 	pushSeqCmd(dt, 'OBOGS_SW', 1)
-	
-	if groundStart:
+
+	if vars.get('Location') == 'Ground':
 		# HOOK BYPASS switch - FIELD
 		pushSeqCmd(dt, 'HOOK_BYPASS_SW', 1)
 		pushSeqCmd(dt, 'ANTI-SKID switch - ON', 1)
@@ -269,8 +281,8 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'RWR_POWER_BTN', 1)
 
 	# BEGIN INS START ALIGN
-	insAlignTimerStart = getLastSeqTime()
-	if groundStart:
+	pushSeqCmd(dt, 'scriptTimerStart', name='alignTimer', duration=insAlignTime) # Starts a timer at the current time, with a duration.
+	if vars.get('Location') == 'Ground':
 		# INS KNOB - GND
 		pushSeqCmd(dt, 'INS_SW', 2)
 	else:
@@ -282,7 +294,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# END INS START ALIGN
 
 	# After the AMPCD (center MFD) powers on, set it to night mode if doing night start.
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pass
 	else:
 		pushSeqCmd(dt, 'AMPCD_NIGHT_DAY', 0) # Press
@@ -290,17 +302,17 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 
 	# LEFT ENGINE
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 0) # Left
-	pushSeqCmd(7, '', '', "Left engine at 15%, left throttle to IDLE")
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_HOME}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - IDLE to LAlt+Home') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
-	pushSeqCmd(35, '', '', 'Left engine started')
+	pushSeqCmd(dt, 'scriptCockpitState', control='FA-18C_hornet/IFEI_RPM_L', condition='>=', value=15) # Wait for RPM >= 15%.
+	pushSeqCmd(dt, 'scriptKeyboard', 'RAlt down')
+	pushSeqCmd(dt, 'scriptKeyboard', 'home')
+	pushSeqCmd(dt, 'scriptKeyboard', 'RAlt up')
+	pushSeqCmd(dt, 'scriptCockpitState', control='FA-18C_hornet/IFEI_RPM_L', condition='>=', value=63, duration=5) # Wait for RPM >= 63% for 5 seconds.  In extreme cold, idle speed can be as low as 63%.
 	pushSeqCmd(dt, 'ENGINE_CRANK_SW', 1, 'Engine Crank switch - Off')
 	# END LEFT ENGINE
-	
+
 	# Shut down APU
 	pushSeqCmd(dt, 'APU_CONTROL_SW', 0, 'APU switch - Off')
-	
+
 	# BIT STOP
 	# We start on the BIT page by default, but just in case the user hits a button, select it manually.
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
@@ -311,7 +323,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 1) # BIT page STOP OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
-	
+
 	# EW page...
 	# Dispenser mode MAN 1
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
@@ -325,7 +337,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# RWR display to HUD
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 1) # HUD OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 0) # release
-	
+
 	# RWR show on SA page
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -337,7 +349,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_07', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 1) # SA OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
-	
+
 	# Go to FCS page
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -346,7 +358,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_15', 1) # FCS OSB
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_15', 0) # release
 
-	if hmd:
+	if vars.get('HMD') == 'With HMD':
 		# Prepare for HMD align
 		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 		pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -374,7 +386,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	# SET BINGO FUEL - 3000 LBS
 	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
 	pushSeqCmd(4.25, 'IFEI_UP_BTN', 0) # Release after 4.25 seconds to get 3000 lbs.
-	
+
 	# IFF - ON
 	pushSeqCmd(dt, 'UFC_IFF', 1) # UFC IFF button
 	pushSeqCmd(dt, 'UFC_IFF', 0) # release
@@ -392,17 +404,16 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
 	pushSeqCmd(1, 'UFC_ONOFF', 0) # release after 1 second
 
-	# Trigger the INS alignment check after the correct time (total process time minus the difference between now and when the process started).
-	insAlignTimerEnd = insAlignTime - (getLastSeqTime() - insAlignTimerStart)
-	pushSeqCmd(insAlignTimerEnd, '', '', "INS ALIGNMENT - READY")
+	# Wait until alignment timer is done.
+	pushSeqCmd(dt, 'scriptTimerEnd', name='alignTimer') # Pause here until the timer's duration has passed.
 	#INS KNOB - IFA
 	pushSeqCmd(dt, 'INS_SW', 4)
-	
+
 	# AMPCD GAIN - DOWN TO MIN FOR VR
 	# NOTE Should be done after INS alignement is complete.
 	pushSeqCmd(dt, 'AMPCD_GAIN_SW', 0) # Down
 	pushSeqCmd(3, 'AMPCD_GAIN_SW', 1) # Center after 3 seconds
-	
+
 	# Show local time in HUD
 	# IMPORTANT If you are doing a CV alignment, this must be done either before starting alignment, or after alignment is complete and INS knob is set to IFA.  That is because when doing a CV alignment, PB 17 says MAN instead of TIMEUFC, and if pressed, it turns off the STD HDG.  We'll do this on the center MFD because it will already have the HSI on it for the alignment.
 	pushSeqCmd(dt, 'AMPCD_PB_17', 1) # TIMEUFC OSB
@@ -411,7 +422,7 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'UFC_OS5', 0) # release
 	pushSeqCmd(dt, 'AMPCD_PB_17', 1) # TIMEUFC OSB
 	pushSeqCmd(dt, 'AMPCD_PB_17', 0) # release
-	
+
 	# Put left MFD on STORES page (it should already be on the TAC menu)
 	pushSeqCmd(dt, 'LEFT_DDI_PB_05', 1) # STORES OSB
 	pushSeqCmd(dt, 'LEFT_DDI_PB_05', 0) # release
@@ -423,48 +434,53 @@ def ColdStart(config, groundStart = True, dayStart = True, hmd = True):
 
 	# MASTER ARM - ARM
 	pushSeqCmd(dt, 'MASTER_ARM_SW', 1)
-	
+
 	# EJECTION SEAT SAFE/ARM HANDLE - ARM
 	pushSeqCmd(dt, 'EJECTION_SEAT_ARMED', 0)
-	
+
 	return seq
 
 
 # Some settings change depending on whether you're starting from the ground or from a carrier.
-def HotStart(config, groundStart = True, dayStart = True, hmd = True):
+def HotStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
-	
+
 	# Exterior light switch ... OFF
 	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 0) # 0 = OFF, 1 = ON
 	# Other lights
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16())
 	else:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
-	
+
 	# All MFDs on
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 2) # DAY
 		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 2) # DAY
 		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
@@ -472,9 +488,9 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 		pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 1) # NIGHT
 		pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 1) # NIGHT
 		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
-	
+
 	# HUD, UFC, IFEI brightness
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16())
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
 		pushSeqCmd(dt, 'UFC_BRT', int16())
@@ -490,8 +506,8 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'UFC_COMM2_VOL', int16(0.8), 'COMM 2 vol - 80%')
 
 	# HMD knob - ON
-	if hmd:
-		if dayStart:
+	if vars.get('HMD') == 'With HMD':
+		if vars.get('Time') == 'Day':
 			pushSeqCmd(dt, 'HMD_OFF_BRT', int16())
 		else:
 			pushSeqCmd(dt, 'HMD_OFF_BRT', int16(0.5))
@@ -506,8 +522,8 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	# T/O TRIM BUTTON - PRESS UNTIL TRIM ADVISORY DISPLAYED
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 1)
 	pushSeqCmd(dt, 'TO_TRIM_BTN', 0)
-	
-	if groundStart:
+
+	if vars.get('Location') == 'Ground':
 		# HOOK BYPASS switch - FIELD
 		pushSeqCmd(dt, 'HOOK_BYPASS_SW', 1)
 		pushSeqCmd(dt, 'ANTI-SKID switch - ON', 1)
@@ -530,7 +546,7 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'RWR_POWER_BTN', 1)
 
 	# After the AMPCD (center MFD) powers on, set it to night mode if doing night start.
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'AMPCD_NIGHT_DAY', 2) # Press
 		pushSeqCmd(dt, 'AMPCD_NIGHT_DAY', 1) # Release
 	else:
@@ -551,7 +567,7 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	# RWR display to HUD
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 1) # HUD OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_14', 0) # release
-	
+
 	# RWR show on SA page
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -577,8 +593,8 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'UFC_OS5', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_17', 1) # TIMEUFC OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_17', 0) # release
-	
-	#if hmd:
+
+	#if vars.get('HMD') == 'With HMD':
 	#	# Prepare for HMD align
 	#	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	#	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -606,7 +622,7 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 	# SET BINGO FUEL - 3000 LBS
 	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
 	pushSeqCmd(4.25, 'IFEI_UP_BTN', 0) # Release after 4.25 seconds to get 3000 lbs.
-	
+
 	# DATALINK - Link 4 ON
 	pushSeqCmd(dt, 'UFC_DL', 1) # UFC D/L button
 	pushSeqCmd(dt, 'UFC_DL', 0) # release
@@ -625,49 +641,54 @@ def HotStart(config, groundStart = True, dayStart = True, hmd = True):
 
 	# MASTER ARM - ARM
 	pushSeqCmd(dt, 'MASTER_ARM_SW', 1)
-	
+
 	return seq
 
 
-def AirStart(config, dayStart = True, hmd = True):
+def AirStart(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	pushSeqCmd(0, '', '', "Running Air Start sequence")
-	
+
 	# Exterior light switch ... OFF
 	pushSeqCmd(dt, 'THROTTLE_EXT_L_SW', 0) # 0 = OFF, 1 = ON
 	# Other lights
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16())
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16())
 	else:
 		pushSeqCmd(dt, 'CONSOLES_DIMMER', int16(0.5))
 		pushSeqCmd(dt, 'INST_PNL_DIMMER', int16(0.5))
-	
+
 	# All MFDs on
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16())
 	else:
 		pushSeqCmd(dt, 'AMPCD_BRT_CTL', int16(0.5))
-	
+
 	# HUD, UFC, IFEI brightness
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'HUD_SYM_BRT', int16())
 		pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
 		pushSeqCmd(dt, 'UFC_BRT', int16())
@@ -681,20 +702,20 @@ def AirStart(config, dayStart = True, hmd = True):
 	# Radio volume
 	pushSeqCmd(dt, 'UFC_COMM1_VOL', int16(0.8), 'COMM 1 vol - 80%')
 	pushSeqCmd(dt, 'UFC_COMM2_VOL', int16(0.8), 'COMM 2 vol - 80%')
-	
+
 	# FIXME The engine monitor instrument doesn't pick up the cockpit lighting mode switch position unless it's set after the right engine starts.
-	if dayStart:
+	if vars.get('Time') == 'Day':
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 0) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
 	else:
 		pushSeqCmd(dt, 'COCKKPIT_LIGHT_MODE_SW', 1) # NOTE misspelling 0 = DAY (default), 1 = NITE, 2 = NVG
-	
+
 	# HMD knob - ON
-	if hmd:
-		if dayStart:
+	if vars.get('HMD') == 'With HMD':
+		if vars.get('Time') == 'Day':
 			pushSeqCmd(dt, 'HMD_OFF_BRT', int16())
 		else:
 			pushSeqCmd(dt, 'HMD_OFF_BRT', int16(0.5))
-	
+
 	# RADAR ALTIMETER - ON, SET TO 50 FT
 	maxRadAlt = int(int16() * 3 + 8194) # Just over 3 full turns of the knob from 0 to max.
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '-'+str(maxRadAlt)) # All the way off
@@ -721,7 +742,7 @@ def AirStart(config, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_08', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_19', 1) # MODE OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_19', 0) # release
-	
+
 	# RWR show on SA page
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -733,7 +754,7 @@ def AirStart(config, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_07', 0) # release
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 1) # SA OSB
 	pushSeqCmd(dt, 'RIGHT_DDI_PB_10', 0) # release
-	
+
 	# Go to FCS page
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 1) # MENU OSB
 	#pushSeqCmd(dt, 'RIGHT_DDI_PB_18', 0) # release
@@ -745,18 +766,18 @@ def AirStart(config, dayStart = True, hmd = True):
 	# SET BINGO FUEL - 3000 LBS
 	pushSeqCmd(dt, 'IFEI_UP_BTN', 1)
 	pushSeqCmd(4.25, 'IFEI_UP_BTN', 0) # Release after 4.25 seconds to get 3000 lbs.
-	
+
 	#DATALINK - Link 4 ON
 	pushSeqCmd(dt, 'UFC_DL', 1) # UFC D/L button
 	pushSeqCmd(dt, 'UFC_DL', 0) # release
 	pushSeqCmd(dt, 'UFC_ONOFF', 1) # UFC ON/OFF button
 	pushSeqCmd(1, 'UFC_ONOFF', 0) # release after 1 second
-	
+
 	# AMPCD GAIN - DOWN TO MIN FOR VR
 	# NOTE Should be done after INS alignement is complete.
 	pushSeqCmd(dt, 'AMPCD_GAIN_SW', 0) # Down
 	pushSeqCmd(3, 'AMPCD_GAIN_SW', 1) # Center after 3 seconds
-	
+
 	# Show local time in HUD
 	# IMPORTANT If you are doing a CV alignment, this must be done either before starting alignment, or after alignment is complete and INS knob is set to IFA.  That is because when doing a CV alignment, PB 17 says MAN instead of TIMEUFC, and if pressed, it turns off the STD HDG.  We'll do this on the center MFD because it will already have the HSI on it for the alignment.
 	pushSeqCmd(dt, 'AMPCD_PB_17', 1) # TIMEUFC OSB
@@ -765,7 +786,7 @@ def AirStart(config, dayStart = True, hmd = True):
 	pushSeqCmd(dt, 'UFC_OS5', 0) # release
 	pushSeqCmd(dt, 'AMPCD_PB_17', 1) # TIMEUFC OSB
 	pushSeqCmd(dt, 'AMPCD_PB_17', 0) # release
-	
+
 	# MASTER ARM - ARM
 	pushSeqCmd(dt, 'MASTER_ARM_SW', 1)
 
@@ -775,29 +796,32 @@ def AirStart(config, dayStart = True, hmd = True):
 	return seq
 
 
-def Shutdown(config):
+def Shutdown(config, vars):
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
-		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
 
-	canopyCloseTime = 9
-	
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
+		nonlocal seq, seqTime
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
+
 	pushSeqCmd(0, '', '', "Running Shutdown sequence")
-	
+
 	# EJECTION SEAT SAFE/ARM HANDLE - SAFE
 	pushSeqCmd(dt, 'EJECTION_SEAT_ARMED', 1)
 
@@ -814,7 +838,7 @@ def Shutdown(config):
 	# PARK BRK HANDLE - ON
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_ROTATE', 1)
 	pushSeqCmd(dt, 'EMERGENCY_PARKING_BRAKE_PULL', 0)
-	
+
 	# INS KNOB - OFF
 	pushSeqCmd(dt, 'INS_SW', 0)
 
@@ -828,7 +852,7 @@ def Shutdown(config):
 	#RADAR ALTIMETER - OFF
 	maxRadAlt = int(int16() * 3 + 8194) # Just over 3 full turns of the knob from 0 to max.
 	pushSeqCmd(dt, 'RADALT_HEIGHT', '-'+str(maxRadAlt)) # All the way off
-	
+
 	# HUD ALT SWITCH - BARO
 	pushSeqCmd(dt, 'HUD_ALT_SW', 1)
 
@@ -845,13 +869,15 @@ def Shutdown(config):
 	pushSeqCmd(9, 'CANOPY_SW', 1, 'Canopy closed') # Turn off canopy switch 9 seconds later.
 
 	# Left engine off
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_LMENU down}{VK_END}{VK_LMENU up}', 'ATTENTION: You must remap Throttle (Left) - OFF to LAlt+End') # FIXME pyWinAuto doesn't support RAlt or RCtrl.
+	pushSeqCmd(dt, 'scriptKeyboard', key='RAlt', action='keydown')
+	pushSeqCmd(dt, 'scriptKeyboard', key='end', action='press')
+	pushSeqCmd(dt, 'scriptKeyboard', key='RAlt', action='keyup')
 
 	# MFDs - OFF
 	pushSeqCmd(dt, 'LEFT_DDI_BRT_SELECT', 0)
 	pushSeqCmd(dt, 'RIGHT_DDI_BRT_SELECT', 0)
 	pushSeqCmd(dt, 'AMPCD_BRT_CTL', 0)
-	
+
 	# HUD - OFF
 	pushSeqCmd(dt, 'HUD_SYM_BRT', 0)
 	pushSeqCmd(dt, 'HUD_SYM_BRT_SELECT', 1) # 0 = NIGHT, 1 = DAY
@@ -863,8 +889,10 @@ def Shutdown(config):
 	pushSeqCmd(dt, 'HMD_OFF_BRT', 0)
 
 	# Right engine off
-	pushSeqCmd(dt, 'scriptKeyboard', '{VK_RSHIFT down}{VK_END}{VK_RSHIFT up}')
-	
+	pushSeqCmd(dt, 'scriptKeyboard', key='RShift', action='keydown')
+	pushSeqCmd(dt, 'scriptKeyboard', key='end', action='press')
+	pushSeqCmd(dt, 'scriptKeyboard', key='RShift', action='keyup')
+
 	# Exterior lights off
 	pushSeqCmd(dt, 'FORMATION_DIMMER', 0)
 	pushSeqCmd(dt, 'POSITION_DIMMER', 0)
@@ -884,25 +912,30 @@ def Shutdown(config):
 
 
 # Adds waypoints with the HSI DATA screen.
-def FlashpointLevantWaypoints(config):
+def FlashpointLevantWaypoints(config, vars):
 	import re # Needed for regular expression split.
 	seq = []
 	seqTime = 0
 	dt = 0.3
-	
-	def pushSeqCmd(dt, cmd, arg, msg = ''):
+
+	def pushSeqCmd(dt, cmd, *args, **kwargs):
 		nonlocal seq, seqTime
-		seqTime += dt
-		seq.append({
-			'time': round(seqTime, 2),
-			'cmd': cmd,
-			'arg': arg,
-			'msg': msg,
-		})
-		
-	def getLastSeqTime():
-		nonlocal seq
-		return float(seq[len(seq) - 1]['time'])
+
+		if len(args):
+			seq.append({
+				'time': round(dt, 2),
+				'cmd': cmd,
+				'arg': args[0],
+				'msg': args[1] if len(args) > 1 else '',
+			})
+		else:
+			step = {
+				'time': round(dt, 2),
+				'cmd': cmd,
+			}
+			for key in kwargs:
+				step[key] = kwargs[key]
+			seq.append(step)
 
 	def pressRelease(button):
 		nonlocal seq
@@ -946,7 +979,7 @@ def FlashpointLevantWaypoints(config):
 		ddm = re.sub(r"[°.',]", ' ', ddm) # Replace all delimiters with spaces.
 		#print(ddm.split());quit()
 		return ddm.split() # Then split the string on contiguous whitespace and we have the result.
-	
+
 	# Pass in "N 36°21'44.37\", E 36°17'14.99\"" or "N 36 21 44.37 E 36 17 14.99, 77 m"
 	# Returns ['N', '36', '21', '44', '37', 'E', '36', '17', '14', '99', '77', 'm']
 	def dmsStringToList(dms):
@@ -958,10 +991,10 @@ def FlashpointLevantWaypoints(config):
 	def ddmInput(ddmList):
 		# Select UFC OSB to prepare for data entry.
 		pressRelease('RIGHT_DDI_PB_05') # UFC OSB
-		
+
 		# Select POSN for lat/long entry.
 		pressRelease('UFC_OS1') # UFC POSN OSB
-		
+
 		# Enter the Northing.
 		# Northing direction
 		pressRelease(ufcKeys[ddmList[0]])
@@ -1010,7 +1043,7 @@ def FlashpointLevantWaypoints(config):
 		# Enter
 		pressRelease(ufcKeys['ENT'])
 
-	
+
 	ufcKeys = {
 		'N': 'UFC_2',
 		'S': 'UFC_8',
@@ -1042,7 +1075,7 @@ def FlashpointLevantWaypoints(config):
 	pressRelease('RIGHT_DDI_PB_19') # PRECISE OSB
 	for i in range(10):
 		pressRelease('RIGHT_DDI_PB_12') # Up Arrow OSB, increments waypoint number
-	
+
 	# Waypoints will be entered starting with the first one as waypoint 10.
 	waypoints = [
 		"N 37°00.0122', E 35°25.0565', 58 m", # Incirlik
@@ -1051,7 +1084,7 @@ def FlashpointLevantWaypoints(config):
 		"N 35°24.1140', E 35°57.0247', 29 m", # Bassel Al-Assad
 	]
 
-	for waypoint in waypoints:	
+	for waypoint in waypoints:
 		# Convert the wp string into a list with all its elements.
 		ddmList = ddmStringToList(waypoint)
 		# Enter the waypoint into the HSI.
