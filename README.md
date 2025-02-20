@@ -126,7 +126,7 @@ Because the script files are in Python, you can use the full power of Python to 
 * General code cleanup and refactoring.  Add more error catching and validation.
 * Improve the output format.  Could use a grid control to line up the columns better, or add color for different command types.  Figure out some way to predict the time, maybe by storing the time it took to run the script last time.  Add the time until the next command, so you can tell when it has a long delay in the script.
 * Store more items in the config, such as: text-to-speech reading speed, voice, and volume; ports for the DCS BIOS communication; anything else I can think of.
-* Pre-select module, script, and options based on data recived from DCS BIOS and/or the DCSAutoMateExport.lua.  Could also pass in game state to a function in the script file that could map game state flags to scripts.  This should always be overridable by the user though.
+* Pre-select module, script, and options based on data received from DCS BIOS and/or the DCSAutoMateExport.lua.  Could also pass in game state to a function in the script file that could map game state flags to scripts.  This should always be overridable by the user though.
 * Investigate possibility of detecting a hotkey or joystick button so a script can be triggered that way.  I believe this is possible using some Python libraries.
 * For scriptCockpitState commands where the value is a string, support 'startsWith', 'endsWith', and 'contains', as well as '='.
 * Investigate whether it's possible to extract the map name and especially the mission name or title.  It would already be possible to build scripts specialized for certain MP servers, where it would automatically input some known waypoints, set radios to particular channels, etc.
