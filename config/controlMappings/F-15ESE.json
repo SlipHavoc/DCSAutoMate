@@ -1,0 +1,9496 @@
+{
+	"controls": {
+		"AAWCTRL.cmd_3510": {
+			"bindings": [
+				{
+					"name": "Weapons Tone Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Weapons Tone Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3510,
+			"description": "Weapons Tone Volume DECR (+1 more)",
+			"deviceId": 47,
+			"type": "raw"
+		},
+		"AAWCTRL.rc_wpn_k_vol": {
+			"bindings": [
+				{
+					"name": "Weapons Tone Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Weapons Tone Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3610,
+			"description": "Weapons Tone Volume DECR (+1 more)",
+			"deviceId": 47,
+			"type": "raw"
+		},
+		"ACC.MM_AA_Switch": {
+			"arg": 126,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3126,
+			"description": "A/A Master Mode Selector",
+			"deviceId": 32,
+			"elementName": "PTN_126",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ACC.MM_AG_Switch": {
+			"arg": 127,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3127,
+			"description": "A/G Master Mode Selector",
+			"deviceId": 32,
+			"elementName": "PTN_127",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ACC.MM_INST_Switch": {
+			"arg": 129,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3129,
+			"description": "INST Master Mode Selector",
+			"deviceId": 32,
+			"elementName": "PTN_129",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ACC.MM_NAV_Switch": {
+			"arg": 128,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3128,
+			"description": "NAV Master Mode Selector",
+			"deviceId": 32,
+			"elementName": "PTN_128",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ACC.cmd_3114": {
+			"bindings": [
+				{
+					"name": "Weapons/Mode Switch Cycle AFT (MRM-SRM-GUN)",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Weapons/Mode Switch Cycle FWD (GUN-SRM-MRM)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3114,
+			"description": "Weapons/Mode Switch Cycle AFT (MRM-SRM-GUN) (+1 more)",
+			"deviceId": 32,
+			"type": "raw"
+		},
+		"ACC.cmd_3115": {
+			"bindings": [
+				{
+					"name": "Weapons/Mode Switch Cycle Loop (GUN-SRM-MRM-GUN)",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3115,
+			"description": "Weapons/Mode Switch Cycle Loop (GUN-SRM-MRM-GUN)",
+			"deviceId": 32,
+			"type": "raw"
+		},
+		"AFSS.cmd_3539": {
+			"arg": 539,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3539,
+			"description": "Emergency A/R Switch Cover",
+			"deviceId": 16,
+			"elementName": "PTN_539",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.cmd_3540": {
+			"arg": 540,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3540,
+			"description": "Emergency A/R Switch",
+			"deviceId": 16,
+			"elementName": "PTN_540",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.cmd_3601": {
+			"bindings": [
+				{
+					"name": "Air-To-Air Door Slipway: CLOSE/OPEN/ORRIDE",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Air-To-Air Door Slipway: ORRIDE/OPEN/CLOSE",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3601,
+			"description": "Air-To-Air Door Slipway: CLOSE/OPEN/ORRIDE (+1 more)",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AFSS.cmd_3602": {
+			"bindings": [
+				{
+					"name": "Air-To-Air Door Slipway: CLOSE/OPEN Toggle",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3602,
+			"description": "Air-To-Air Door Slipway: CLOSE/OPEN Toggle",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AFSS.fuel_AIR_sw": {
+			"arg": 533,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3533,
+			"description": "A/R Slipway",
+			"deviceId": 16,
+			"elementName": "PTN_533",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"AFSS.fuel_cft_emergtrf_sw": {
+			"arg": 531,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3531,
+			"description": "Conformal Tanks Emergency Transfer",
+			"deviceId": 16,
+			"elementName": "PTN_531",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.fuel_dump_sw": {
+			"arg": 530,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3530,
+			"description": "Fuel Dump",
+			"deviceId": 16,
+			"elementName": "PTN_530",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.fuel_ext_trfr_sw": {
+			"arg": 532,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3532,
+			"description": "External Fuel Transfer",
+			"deviceId": 16,
+			"elementName": "PTN_532",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.fueltrnfr_cft_sw": {
+			"arg": 529,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3529,
+			"description": "Fuel Control: Conformal Tanks",
+			"deviceId": 16,
+			"elementName": "PTN_529",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.fueltrnfr_ctr_sw": {
+			"arg": 528,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3528,
+			"description": "Fuel Control: Centerline Tank",
+			"deviceId": 16,
+			"elementName": "PTN_528",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFSS.fueltrnfr_wing_sw": {
+			"arg": 527,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3527,
+			"description": "Fuel Control: Wing Tanks",
+			"deviceId": 16,
+			"elementName": "PTN_527",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APG70.cmd_3103": {
+			"bindings": [
+				{
+					"name": "AN/APG-70 Radar: EMERG/ON/STBY/OFF",
+					"valueDown": -0.33
+				},
+				{
+					"name": "AN/APG-70 Radar: OFF/STBY/ON/EMERG",
+					"valueDown": 0.33
+				}
+			],
+			"commandId": 3103,
+			"description": "AN/APG-70 Radar: EMERG/ON/STBY/OFF (+1 more)",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"AN_APG70.nctr_sw": {
+			"arg": 524,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3524,
+			"description": "NCTR AUTO EID Enable Switch",
+			"deviceId": 3,
+			"elementName": "PTN_524",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APG70.rdr_power_sw": {
+			"arg": 471,
+			"argLim": [
+				0.0,
+				0.99
+			],
+			"commandId": 3471,
+			"description": "Radar Mode Selector",
+			"deviceId": 3,
+			"elementName": "PTN_471",
+			"positions": 4,
+			"step": 0.33,
+			"type": "discrete"
+		},
+		"CARA.rdr_alt_kb": {
+			"bindings": [
+				{
+					"name": "Radar Altimeter: OFF/ON/OVERRIDE",
+					"valueDown": 0.5
+				},
+				{
+					"name": "Radar Altimeter: OVERRIDE/ON/OFF",
+					"valueDown": -0.5
+				}
+			],
+			"commandId": 3102,
+			"description": "Radar Altimeter: OFF/ON/OVERRIDE (+1 more)",
+			"deviceId": 67,
+			"type": "raw"
+		},
+		"CARA.rdr_alt_sw": {
+			"arg": 470,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3470,
+			"description": "Radar Altitude Switch",
+			"deviceId": 67,
+			"elementName": "PTN_470",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"CNPYSYST.cmd_3001": {
+			"arg": 1001,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Show/Hide Controls",
+			"deviceId": 24,
+			"elementName": "PTN_1001",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.cmd_3010": {
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle",
+			"deviceId": 24,
+			"elementName": "PTN_1010",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.cmd_3011": {
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle",
+			"deviceId": 24,
+			"elementName": "PTN_1011",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.cmd_3012": {
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle",
+			"deviceId": 24,
+			"elementName": "PTN_1012",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.cmd_3431": {
+			"arg": 1431,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3431,
+			"description": "Seat Adjust Switch",
+			"deviceId": 24,
+			"elementName": "PTN_1431",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.cmd_3911": {
+			"arg": 11,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3911,
+			"description": "(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle",
+			"deviceId": 24,
+			"elementName": "PTN_1011",
+			"type": "continuous"
+		},
+		"CNPYSYST.cmd_3912": {
+			"arg": 12,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3912,
+			"description": "(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle",
+			"deviceId": 24,
+			"elementName": "PTN_1012",
+			"type": "continuous"
+		},
+		"CNPYSYST.cmd_3913": {
+			"bindings": [
+				{
+					"name": "Service hatches open/close",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3913,
+			"description": "Service hatches open/close",
+			"deviceId": 24,
+			"type": "raw"
+		},
+		"CNPYSYST.cmd_3914": {
+			"bindings": [
+				{
+					"name": "Service hatches open",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3914,
+			"description": "Service hatches open",
+			"deviceId": 24,
+			"type": "raw"
+		},
+		"CNPYSYST.cmd_3915": {
+			"bindings": [
+				{
+					"name": "Service hatches close",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3915,
+			"description": "Service hatches close",
+			"deviceId": 24,
+			"type": "raw"
+		},
+		"CNPYSYST.cnpy_lever": {
+			"arg": 599,
+			"argLim": [
+				-0.5,
+				1.0
+			],
+			"commandId": 3599,
+			"description": "Canopy Handle",
+			"deviceId": 24,
+			"elementName": "PTN_599",
+			"positions": 4,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"CNPYSYST.eject_select_valve": {
+			"arg": 1386,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3386,
+			"description": "Eject Selector Handle",
+			"deviceId": 24,
+			"elementName": "PTN_1386",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"CNPYSYST.em_cnpy_jett_lever": {
+			"arg": 428,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3428,
+			"description": "Emergency Canopy Jettison",
+			"deviceId": 24,
+			"elementName": "PTN_428",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.mirror_center_adjust": {
+			"arg": 10,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3910,
+			"description": "(LMB) Mirror Rendering Toggle / (SCROLL) Adjust Angle",
+			"deviceId": 24,
+			"elementName": "PTN_1010",
+			"type": "continuous"
+		},
+		"CNPYSYST.rear_cnpy_lever": {
+			"arg": 1479,
+			"argLim": [
+				-0.5,
+				1.0
+			],
+			"commandId": 3600,
+			"description": "Canopy Handle",
+			"deviceId": 24,
+			"elementName": "PTN_1479",
+			"positions": 4,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"CNPYSYST.rear_em_cnpy_jett_lever": {
+			"arg": 1385,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3385,
+			"description": "Emergency Canopy Jettison",
+			"deviceId": 24,
+			"elementName": "PTN_1385",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.seat_adj_sw": {
+			"arg": 521,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3521,
+			"description": "Seat Adjust Switch",
+			"deviceId": 24,
+			"elementName": "PTN_521",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.seat_arm_handle": {
+			"arg": 800,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3800,
+			"description": "Seat Arm Handle",
+			"deviceId": 24,
+			"elementName": "PTN_800",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CNPYSYST.seat_arm_handle_rc": {
+			"arg": 802,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3802,
+			"description": "Seat Arm Handle",
+			"deviceId": 24,
+			"elementName": "PTN_802",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.amad_sw": {
+			"arg": 316,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3316,
+			"description": "AMAD Fire Switch",
+			"deviceId": 15,
+			"elementName": "PTN_316",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.amad_sw_cover": {
+			"arg": 315,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3315,
+			"description": "AMAD Fire Switch Cover",
+			"deviceId": 15,
+			"elementName": "PTN_315",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.fire_ext_sw": {
+			"arg": 314,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3314,
+			"description": "Fire Extinguisher Switch",
+			"deviceId": 15,
+			"elementName": "PTN_314",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_eng_ctrl_sw": {
+			"arg": 590,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3590,
+			"description": "Left Engine Control Switch",
+			"deviceId": 15,
+			"elementName": "PTN_590",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_eng_finger_lift": {
+			"arg": 697,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3697,
+			"description": "Left Throttle Finger Lift",
+			"deviceId": 15,
+			"elementName": "PTN_697",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_eng_fire_cover": {
+			"arg": 317,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3317,
+			"description": "Left Engine Fire Switch Cover",
+			"deviceId": 15,
+			"elementName": "PTN_317",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_eng_fire_sw": {
+			"arg": 318,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3318,
+			"description": "Left Engine Fire Switch",
+			"deviceId": 15,
+			"elementName": "PTN_318",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_eng_master_cover": {
+			"arg": 592,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3592,
+			"description": "Left Engine Master Switch Cover",
+			"deviceId": 15,
+			"elementName": "PTN_592",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_eng_master_sw": {
+			"arg": 593,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3593,
+			"description": "Left Engine Master Switch",
+			"deviceId": 15,
+			"elementName": "PTN_593",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.left_inlet_sw": {
+			"arg": 535,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3535,
+			"description": "Left Inlet Ramp Switch",
+			"deviceId": 15,
+			"elementName": "PTN_535",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_eng_ctrl_sw": {
+			"arg": 591,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3591,
+			"description": "Right Engine Control Switch",
+			"deviceId": 15,
+			"elementName": "PTN_591",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_eng_finger_lift": {
+			"arg": 698,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3698,
+			"description": "Right Throttle Finger Lift",
+			"deviceId": 15,
+			"elementName": "PTN_698",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_eng_fire_cover": {
+			"arg": 319,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3319,
+			"description": "Right Engine Fire Switch Cover",
+			"deviceId": 15,
+			"elementName": "PTN_319",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_eng_fire_sw": {
+			"arg": 320,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3320,
+			"description": "Right Engine Fire Switch",
+			"deviceId": 15,
+			"elementName": "PTN_320",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_eng_master_cover": {
+			"arg": 597,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3597,
+			"description": "Right Engine Master Switch Cover",
+			"deviceId": 15,
+			"elementName": "PTN_597",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_eng_master_sw": {
+			"arg": 598,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3598,
+			"description": "Right Engine Master Switch",
+			"deviceId": 15,
+			"elementName": "PTN_598",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.right_inlet_sw": {
+			"arg": 536,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3536,
+			"description": "Right Inlet Ramp Switch",
+			"deviceId": 15,
+			"elementName": "PTN_536",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.vmax_cover": {
+			"arg": 525,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3525,
+			"description": "VMAX Switch cover",
+			"deviceId": 15,
+			"elementName": "PTN_525",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DEEC.vmax_sw": {
+			"arg": 526,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3526,
+			"description": "VMAX Switch",
+			"deviceId": 15,
+			"elementName": "PTN_526",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.airco_auto_man_off_sw": {
+			"arg": 562,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3562,
+			"description": "Air Conditiong Auto/Manual/Off",
+			"deviceId": 26,
+			"elementName": "PTN_562",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ECS.airco_cold_hot_knob": {
+			"arg": 564,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3564,
+			"description": "Air Conditiong Cold/Hot",
+			"deviceId": 26,
+			"elementName": "PTN_564",
+			"type": "continuous"
+		},
+		"ECS.airco_cold_hot_knob_kb": {
+			"bindings": [
+				{
+					"name": "Air Conditioning Temp Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Air Conditioning Temp Increase",
+					"valueDown": 0.05
+				}
+			],
+			"commandId": 3664,
+			"description": "Air Conditioning Temp Decrease (+1 more)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"ECS.airco_eng_knob": {
+			"arg": 565,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3565,
+			"description": "Air Conditioning Source",
+			"deviceId": 26,
+			"elementName": "PTN_565",
+			"positions": 4,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"ECS.airco_max_norm_min_sw": {
+			"arg": 563,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3563,
+			"description": "Air Conditiong Max/Norm/Min",
+			"deviceId": 26,
+			"elementName": "PTN_563",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ECS.anti_fog_sw": {
+			"arg": 558,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3558,
+			"description": "Anti-Fog",
+			"deviceId": 26,
+			"elementName": "PTN_558",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ECS.cmd_3427": {
+			"arg": 427,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3427,
+			"description": "Emergency Vent Handle",
+			"deviceId": 26,
+			"elementName": "PTN_427",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.cmd_3571": {
+			"arg": 1450,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3571,
+			"description": "Oxygen Emergency/Normal/Test Switch",
+			"deviceId": 26,
+			"elementName": "PTN_1450",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.cmd_3572": {
+			"arg": 1451,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3572,
+			"description": "Oxygen 100%/Normal Switch",
+			"deviceId": 26,
+			"elementName": "PTN_1451",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.cmd_3573": {
+			"arg": 1452,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3573,
+			"description": "Oxygen Supply/Mode Control Switch",
+			"deviceId": 26,
+			"elementName": "PTN_1452",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ECS.eng_heat_sw": {
+			"arg": 561,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3561,
+			"description": "Engine Heat Switch",
+			"deviceId": 26,
+			"elementName": "PTN_561",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.oxy_100_norm_sw": {
+			"arg": 552,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3552,
+			"description": "Oxygen 100%/Normal Switch",
+			"deviceId": 26,
+			"elementName": "PTN_552",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.oxy_emer_norm_test_sw": {
+			"arg": 551,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3551,
+			"description": "Oxygen Emergency/Normal/Test Switch",
+			"deviceId": 26,
+			"elementName": "PTN_551",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.oxy_pbg_on_off_sw": {
+			"arg": 553,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3553,
+			"description": "Oxygen Supply/Mode Control Switch",
+			"deviceId": 26,
+			"elementName": "PTN_553",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ECS.oxy_test_btn": {
+			"arg": 556,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3556,
+			"description": "Oxygen Test",
+			"deviceId": 26,
+			"elementName": "PTN_556",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.pitot_heat_sw": {
+			"arg": 560,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3560,
+			"description": "Pitot Heat Switch",
+			"deviceId": 26,
+			"elementName": "PTN_560",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.windshield_anti_ice_sw": {
+			"arg": 559,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3559,
+			"description": "Windshield Anti-ice Switch",
+			"deviceId": 26,
+			"elementName": "PTN_559",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ECS.wso_oxy_test_btn": {
+			"bindings": [
+				{
+					"name": "Oxygen Test Button",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3576,
+			"description": "Oxygen Test Button",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"EPSS.cmd_3386": {
+			"arg": 386,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3386,
+			"description": "JFS Control Handle, (LMB)PULL/(RMB)ROTATE",
+			"deviceId": 6,
+			"elementName": "PTN_386",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.cmd_3430": {
+			"arg": 430,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3430,
+			"description": "JFS Control Handle, (LMB)PULL/(RMB)ROTATE",
+			"deviceId": 6,
+			"elementName": "PTN_386",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.generator_emerg_sw": {
+			"arg": 589,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3589,
+			"description": "Emergency Generator",
+			"deviceId": 6,
+			"elementName": "PTN_589",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"EPSS.generator_left_sw": {
+			"arg": 587,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3587,
+			"description": "Left Generator",
+			"deviceId": 6,
+			"elementName": "PTN_587",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.generator_right_sw": {
+			"arg": 588,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3588,
+			"description": "Right Generator",
+			"deviceId": 6,
+			"elementName": "PTN_588",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.gnd_pwr_1_sw": {
+			"arg": 483,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3483,
+			"description": "Ground Power 1 Switch",
+			"deviceId": 6,
+			"elementName": "PTN_483",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.gnd_pwr_2_sw": {
+			"arg": 478,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3478,
+			"description": "Ground Power 2 Switch",
+			"deviceId": 6,
+			"elementName": "PTN_478",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.gnd_pwr_3_sw": {
+			"arg": 479,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3479,
+			"description": "Ground Power 3 Switch",
+			"deviceId": 6,
+			"elementName": "PTN_479",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.gnd_pwr_4_sw": {
+			"arg": 480,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3480,
+			"description": "Ground Power 4 Switch",
+			"deviceId": 6,
+			"elementName": "PTN_480",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.ground_power_sw": {
+			"arg": 594,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3594,
+			"description": "External Power Switch",
+			"deviceId": 6,
+			"elementName": "PTN_594",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.mpdp_A1U_sw": {
+			"arg": 484,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3484,
+			"description": "MPDP/A1U Switch",
+			"deviceId": 6,
+			"elementName": "PTN_484",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.pacs_sw": {
+			"arg": 481,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3481,
+			"description": "PACS Switch",
+			"deviceId": 6,
+			"elementName": "PTN_481",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EPSS.starter_gen_sw": {
+			"arg": 595,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3595,
+			"description": "Jet Starter",
+			"deviceId": 6,
+			"elementName": "PTN_595",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_CMD.cmd_disp_sel_sw": {
+			"arg": 1475,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3911,
+			"description": "CMD Dispenser Selection Switch FLARE/BOTH/CHAFF",
+			"deviceId": 60,
+			"elementName": "PTN_1475",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"EWS_CMD.cmd_disp_sel_sw_KB": {
+			"bindings": [
+				{
+					"name": "CMD Dispenser Selection DOWN CHAFF/BOTH/FLARE",
+					"valueDown": -0.5
+				},
+				{
+					"name": "CMD Dispenser Selection DOWN CHAFF/BOTH/FLARE",
+					"valueDown": -0.5
+				},
+				{
+					"name": "CMD Dispenser Selection UP FLARE/BOTH/CHAFF",
+					"valueDown": 0.5
+				},
+				{
+					"name": "CMD Dispenser Selection UP FLARE/BOTH/CHAFF",
+					"valueDown": 0.5
+				}
+			],
+			"commandId": 3916,
+			"description": "CMD Dispenser Selection DOWN CHAFF/BOTH/FLARE (+3 more)",
+			"deviceId": 60,
+			"type": "raw"
+		},
+		"EWS_CMD.cmd_jett_cover": {
+			"arg": 1477,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3913,
+			"description": "Flare Jettison Switch Cover",
+			"deviceId": 60,
+			"elementName": "PTN_1477",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_CMD.cmd_jett_cover_KB": {
+			"bindings": [
+				{
+					"name": "Flare Jettison Switch Cover Toggle Open/Close",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Flare Jettison Switch Cover Toggle Open/Close",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3917,
+			"description": "Flare Jettison Switch Cover Toggle Open/Close (+1 more)",
+			"deviceId": 60,
+			"type": "raw"
+		},
+		"EWS_CMD.cmd_jett_sw": {
+			"arg": 1478,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3914,
+			"description": "Flare Jettison Switch NORM/JETT",
+			"deviceId": 60,
+			"elementName": "PTN_1478",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_CMD.cmd_jett_sw_KB": {
+			"bindings": [
+				{
+					"name": "Flare Jettison Switch JETTISON",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Flare Jettison Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Flare Jettison Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3918,
+			"description": "Flare Jettison Switch JETTISON (+2 more)",
+			"deviceId": 60,
+			"type": "raw"
+		},
+		"EWS_CMD.cmd_mode_knob": {
+			"arg": 1476,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3912,
+			"description": "CMD Operational Mode OFF/STBY/MAN/SEMI/AUTO",
+			"deviceId": 60,
+			"elementName": "PTN_1476",
+			"positions": 5,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"EWS_CMD.cmd_mode_knob_KB": {
+			"bindings": [
+				{
+					"name": "CMD Operational Mode  CW OFF/STBY/MAN/SEMI/AUTO",
+					"valueDown": 0.25
+				},
+				{
+					"name": "CMD Operational Mode  CW OFF/STBY/MAN/SEMI/AUTO",
+					"valueDown": 0.25
+				},
+				{
+					"name": "CMD Operational Mode CCW AUTO/SEMI/MAN/STBY/OFF",
+					"valueDown": -0.25
+				},
+				{
+					"name": "CMD Operational Mode CCW AUTO/SEMI/MAN/STBY/OFF",
+					"valueDown": -0.25
+				}
+			],
+			"commandId": 3915,
+			"description": "CMD Operational Mode  CW OFF/STBY/MAN/SEMI/AUTO (+3 more)",
+			"deviceId": 60,
+			"type": "raw"
+		},
+		"EWS_JMR.ics_mode_sw": {
+			"arg": 1419,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3933,
+			"description": "ICS Operational Mode Switch STBY/AUTO/MAN",
+			"deviceId": 61,
+			"elementName": "PTN_1419",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"EWS_JMR.ics_power_sw": {
+			"arg": 1465,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3921,
+			"description": "ICS ON/OFF Switch",
+			"deviceId": 61,
+			"elementName": "PTN_1465",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_JMR.ics_set1_sw": {
+			"arg": 1466,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3922,
+			"description": "ICS SET 1 MAN/AUTO Switch",
+			"deviceId": 61,
+			"elementName": "PTN_1466",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_JMR.ics_set2_sw": {
+			"arg": 1467,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3923,
+			"description": "ICS SET 2 MAN/AUTO Switch",
+			"deviceId": 61,
+			"elementName": "PTN_1467",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_JMR.ics_set3_sw": {
+			"arg": 1468,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3924,
+			"description": "ICS SET 3 MAN/AUTO Switch",
+			"deviceId": 61,
+			"elementName": "PTN_1468",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EWS_JMR.pods_mode_sw": {
+			"arg": 1418,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3932,
+			"description": "ECM PODS Mode Switch XMIT/STBY",
+			"deviceId": 61,
+			"elementName": "PTN_1418",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXTLT.anticoll_lt_kb": {
+			"bindings": [
+				{
+					"name": "Anti-collision Lights ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3103,
+			"description": "Anti-collision Lights ON/OFF",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"EXTLT.anticoll_lt_sw": {
+			"arg": 466,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3466,
+			"description": "Anti Collison Light Switch",
+			"deviceId": 22,
+			"elementName": "PTN_466",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXTLT.formation_lt_kb": {
+			"bindings": [
+				{
+					"name": "Formation Lights BRT Decrease",
+					"valueDown": -0.17
+				},
+				{
+					"name": "Formation Lights BRT Increase",
+					"valueDown": 0.17
+				}
+			],
+			"commandId": 3102,
+			"description": "Formation Lights BRT Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"EXTLT.formation_lt_knob": {
+			"arg": 465,
+			"argLim": [
+				0.0,
+				1.02
+			],
+			"commandId": 3465,
+			"description": "Formation Lights Knob",
+			"deviceId": 22,
+			"elementName": "PTN_465",
+			"positions": 7,
+			"step": 0.17,
+			"type": "discrete"
+		},
+		"EXTLT.ldg_taxi_light_kb": {
+			"bindings": [
+				{
+					"name": "Landing/Taxi Light LNDG/OFF/TAXI",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Landing/Taxi Light TAXI/OFF/LNDG",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3101,
+			"description": "Landing/Taxi Light LNDG/OFF/TAXI (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"EXTLT.ldg_taxi_light_sw": {
+			"arg": 538,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3538,
+			"description": "Landing/Taxi Light Switch",
+			"deviceId": 22,
+			"elementName": "PTN_538",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXTLT.pos_lt_kb": {
+			"bindings": [
+				{
+					"name": "Position Lights BRT Decrease",
+					"valueDown": -0.17
+				},
+				{
+					"name": "Position Lights BRT Increase",
+					"valueDown": 0.17
+				}
+			],
+			"commandId": 3104,
+			"description": "Position Lights BRT Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"EXTLT.pos_lt_knob": {
+			"arg": 467,
+			"argLim": [
+				0.0,
+				1.02
+			],
+			"commandId": 3467,
+			"description": "Position Lights Knob",
+			"deviceId": 22,
+			"elementName": "PTN_467",
+			"positions": 7,
+			"step": 0.17,
+			"type": "discrete"
+		},
+		"EXTLT.vert_tail_lt_kb": {
+			"bindings": [
+				{
+					"name": "Tail Flood Lights BRT/DIM/OFF",
+					"valueDown": -0.5
+				},
+				{
+					"name": "Tail Flood Lights OFF/DIM/BRT",
+					"valueDown": 0.5
+				}
+			],
+			"commandId": 3105,
+			"description": "Tail Flood Lights BRT/DIM/OFF (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"EXTLT.vert_tail_lt_sw": {
+			"arg": 468,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3468,
+			"description": "Tail Flood Lights",
+			"deviceId": 22,
+			"elementName": "PTN_468",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"FLCTRL.bit_button": {
+			"arg": 455,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3455,
+			"description": "BIT Button",
+			"deviceId": 18,
+			"elementName": "PTN_455",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3342": {
+			"arg": 342,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3342,
+			"description": "Rudder Pedal Ajust Handle",
+			"deviceId": 18,
+			"elementName": "PTN_342",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3403": {
+			"arg": 1403,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3403,
+			"description": "Rudder Trim Switch",
+			"deviceId": 18,
+			"elementName": "PTN_1403",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3452": {
+			"arg": 452,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3452,
+			"description": "Yaw CAS Switch, when ON (LMB) RESET/(RMB) OFF",
+			"deviceId": 18,
+			"elementName": "PTN_452",
+			"positions": 3,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3453": {
+			"arg": 453,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3453,
+			"description": "Roll CAS Switch, when ON (LMB) RESET/(RMB) OFF",
+			"deviceId": 18,
+			"elementName": "PTN_453",
+			"positions": 3,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3457": {
+			"arg": 457,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3457,
+			"description": "T/O Trim Button",
+			"deviceId": 18,
+			"elementName": "PTN_457",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3459": {
+			"arg": 459,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3459,
+			"description": "Flaps Control Switch",
+			"deviceId": 18,
+			"elementName": "PTN_459",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.cmd_3460": {
+			"arg": 460,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3460,
+			"description": "Rudder Trim Switch",
+			"deviceId": 18,
+			"elementName": "PTN_460",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.pitch_ratio_sw": {
+			"arg": 335,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3335,
+			"description": "Pitch Ratio switch",
+			"deviceId": 18,
+			"elementName": "PTN_335",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.pitch_sw": {
+			"arg": 454,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3454,
+			"description": "Pitch CAS Switch, when ON (LMB) RESET/(RMB) OFF",
+			"deviceId": 18,
+			"elementName": "PTN_454",
+			"positions": 3,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"FLCTRL.roll_ratio_sw": {
+			"arg": 534,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3534,
+			"description": "Roll Ratio Switch",
+			"deviceId": 18,
+			"elementName": "PTN_534",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLCTRL.rud_adj_lever_rear": {
+			"arg": 1346,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3346,
+			"description": "Rudder Pedal Ajust Handle",
+			"deviceId": 18,
+			"elementName": "PTN_1346",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.alt_adj_knob": {
+			"arg": 360,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3360,
+			"description": "BARO Altitude setting adjustment",
+			"deviceId": 17,
+			"elementName": "PTN_360",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"FLINST.art_hor_adj": {
+			"arg": 351,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3351,
+			"description": "Backup ADI Cage/Pitch Adjust Knob - Pull and turn to uncage",
+			"deviceId": 17,
+			"elementName": "PTN_350",
+			"type": "continuous"
+		},
+		"FLINST.art_hor_uncage": {
+			"arg": 350,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3350,
+			"description": "Backup ADI Cage/Pitch Adjust Knob - Pull and turn to uncage",
+			"deviceId": 17,
+			"elementName": "PTN_350",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.clk_adj_knob": {
+			"arg": 366,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3366,
+			"description": "Clock Adjust",
+			"deviceId": 17,
+			"elementName": "PTN_366",
+			"type": "continuous"
+		},
+		"FLINST.cmd_3385": {
+			"arg": 385,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3385,
+			"description": "Bingo Selection",
+			"deviceId": 17,
+			"elementName": "PTN_385",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"FLINST.cmd_3401": {
+			"arg": 1354,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3401,
+			"description": "Backup ADI Cage/Pitch Adjust Knob - Pull and turn to uncage",
+			"deviceId": 17,
+			"elementName": "PTN_1354",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.cmd_3403": {
+			"arg": 1364,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3403,
+			"description": "Altitude adjust",
+			"deviceId": 17,
+			"elementName": "PTN_1364",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"FLINST.cmd_3430": {
+			"arg": 1430,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3430,
+			"description": "Cypher Text Switch",
+			"deviceId": 17,
+			"elementName": "PTN_1430",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.cmd_3452": {
+			"arg": 1401,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3452,
+			"description": "Nuclear Consent Switch Cover",
+			"deviceId": 17,
+			"elementName": "PTN_1401",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.cmd_3453": {
+			"arg": 1402,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3453,
+			"description": "Nuclear Consent Switch",
+			"deviceId": 17,
+			"elementName": "PTN_1402",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.cmd_3511": {
+			"arg": 511,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3511,
+			"description": "UHF Antenna Switch",
+			"deviceId": 17,
+			"elementName": "PTN_511",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.cmd_3512": {
+			"arg": 512,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3512,
+			"description": "VHF Antenna Switch",
+			"deviceId": 17,
+			"elementName": "PTN_512",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.ewws_cover": {
+			"arg": 518,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3518,
+			"description": "EWWS Enable Switch Cover",
+			"deviceId": 17,
+			"elementName": "PTN_518",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.ewws_sw": {
+			"arg": 519,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3519,
+			"description": "EWWS Enable Switch",
+			"deviceId": 17,
+			"elementName": "PTN_519",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.flyup_cover": {
+			"bindings": [
+				{
+					"name": "Flyup Enable Switch Cover CLOSED",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Flyup Enable Switch Cover OPEN",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3522,
+			"description": "Flyup Enable Switch Cover CLOSED (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"FLINST.flyup_sw": {
+			"bindings": [
+				{
+					"name": "Flyup Enable Switch DISABLE",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Flyup Enable Switch ENABLE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3523,
+			"description": "Flyup Enable Switch DISABLE (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"FLINST.fuelqty_totalizer": {
+			"arg": 381,
+			"description": "Fuel Totalizer Selector",
+			"elementName": "PTN_381",
+			"positionMap": [
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": -0.2
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": -0.1
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": 0.0
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": 0.1
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": 0.2
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": 0.3
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": 0.4
+				},
+				{
+					"commandId": 3381,
+					"deviceId": 17,
+					"value": 0.5
+				}
+			],
+			"positions": 8,
+			"type": "discrete"
+		},
+		"FLINST.fuelqty_totalizer_kb": {
+			"bindings": [
+				{
+					"name": "Fuel Totalizer Selector CCW",
+					"valueDown": -0.1
+				},
+				{
+					"name": "Fuel Totalizer Selector CW",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3382,
+			"description": "Fuel Totalizer Selector CCW (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"FLINST.nctr_sw": {
+			"bindings": [
+				{
+					"name": "NCTR Enable Switch OFF",
+					"valueDown": 0.0
+				},
+				{
+					"name": "NCTR Enable Switch ON",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3524,
+			"description": "NCTR Enable Switch OFF (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"FLINST.nuc_cover": {
+			"arg": 450,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3450,
+			"description": "Nuclear Consent Switch Cover",
+			"deviceId": 17,
+			"elementName": "PTN_450",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.nuc_sw": {
+			"arg": 451,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3451,
+			"description": "Nuclear Consent Switch",
+			"deviceId": 17,
+			"elementName": "PTN_451",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.rc_art_hor_adj": {
+			"arg": 1355,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3402,
+			"description": "Backup ADI Cage/Pitch Adjust Knob - Pull and turn to uncage",
+			"deviceId": 17,
+			"elementName": "PTN_1354",
+			"type": "continuous"
+		},
+		"FLINST.rc_clk_adj_knob": {
+			"arg": 1382,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3404,
+			"description": "Clock Adjust",
+			"deviceId": 17,
+			"elementName": "PTN_1382",
+			"type": "continuous"
+		},
+		"FLINST.rc_crypto_sw": {
+			"arg": 1426,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3426,
+			"description": "Crypto Switch",
+			"deviceId": 17,
+			"elementName": "PTN_1426",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.rc_tmr_stop_btn": {
+			"arg": 1383,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3405,
+			"description": "Timer Stop",
+			"deviceId": 17,
+			"elementName": "PTN_1383",
+			"type": "continuous"
+		},
+		"FLINST.rc_tone_sw": {
+			"arg": 1429,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3429,
+			"description": "Tone Switch",
+			"deviceId": 17,
+			"elementName": "PTN_1429",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLINST.tmr_stop_btn": {
+			"arg": 367,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3367,
+			"description": "Timer Stop",
+			"deviceId": 17,
+			"elementName": "PTN_367",
+			"type": "continuous"
+		},
+		"FLINST.tone_sw": {
+			"arg": 513,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3513,
+			"description": "Tone Switch",
+			"deviceId": 17,
+			"elementName": "PTN_513",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HOTASCTRL.Gear_lever": {
+			"bindings": [
+				{
+					"name": "RHC - Laser Fire",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3324,
+			"description": "RHC - Laser Fire",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_BIT_Button": {
+			"bindings": [
+				{
+					"name": "TDC Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3123,
+			"description": "TDC Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_BIT_Button_KB": {
+			"bindings": [
+				{
+					"name": "CMD Switch DOWN (Manual 1 Dispense)",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3133,
+			"description": "CMD Switch DOWN (Manual 1 Dispense)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_BRT_Knob_KB": {
+			"bindings": [
+				{
+					"name": "Boat Switch AFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3130,
+			"description": "Boat Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_MODE_Switch": {
+			"bindings": [
+				{
+					"name": "TDC Switch DOWN",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3122,
+			"description": "TDC Switch DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_MODE_Switch_KB": {
+			"bindings": [
+				{
+					"name": "CMD Switch UP (Manual 2 Dispense)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3132,
+			"description": "CMD Switch UP (Manual 2 Dispense)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_REJ_Switch": {
+			"bindings": [
+				{
+					"name": "TDC Switch UP",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3121,
+			"description": "TDC Switch UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_REJ_Switch_KB": {
+			"bindings": [
+				{
+					"name": "Left Multifunction Switch",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3131,
+			"description": "Left Multifunction Switch",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_VIDEO_BRT_Knob": {
+			"bindings": [
+				{
+					"name": "TDC Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3124,
+			"description": "TDC Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_VIDEO_BRT_Knob_KB": {
+			"bindings": [
+				{
+					"name": "NWS/Weapons Button",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3134,
+			"description": "NWS/Weapons Button",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.HUD_VIDEO_CONT_Knob": {
+			"bindings": [
+				{
+					"name": "TDC Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3125,
+			"description": "TDC Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.JETT_Button": {
+			"bindings": [
+				{
+					"name": "RHC - Trigger HA (Half)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3322,
+			"description": "RHC - Trigger HA (Half)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.JETT_Selector_Knob": {
+			"bindings": [
+				{
+					"name": "RHC - Auto Acquisition Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3321,
+			"description": "RHC - Auto Acquisition Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.MM_AA_Switch": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "TDC Slew Horizontal"
+				}
+			],
+			"commandId": 3126,
+			"description": "TDC Slew Horizontal",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.MM_AG_Switch": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "TDC Slew Vertical"
+				}
+			],
+			"commandId": 3127,
+			"description": "TDC Slew Vertical",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.MM_INST_Switch": {
+			"bindings": [
+				{
+					"name": "Boat Switch FWD",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3129,
+			"description": "Boat Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.MM_NAV_Switch": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Antenna Elevation"
+				}
+			],
+			"commandId": 3128,
+			"description": "Radar Antenna Elevation",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.Master_Arm_SW": {
+			"bindings": [
+				{
+					"name": "RHC - Trigger FA (FUll",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3323,
+			"description": "RHC - Trigger FA (FUll",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.amad_sw": {
+			"bindings": [
+				{
+					"name": "RHC - TDC Switch LEFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3316,
+			"description": "RHC - TDC Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.amad_sw_cover": {
+			"bindings": [
+				{
+					"name": "RHC - TDC Switch DOWN",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3315,
+			"description": "RHC - TDC Switch DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3101": {
+			"bindings": [
+				{
+					"name": "Castle Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3101,
+			"description": "Castle Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3102": {
+			"bindings": [
+				{
+					"name": "Castle Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3102,
+			"description": "Castle Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3103": {
+			"bindings": [
+				{
+					"name": "Castle Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3103,
+			"description": "Castle Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3104": {
+			"bindings": [
+				{
+					"name": "Castle Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3104,
+			"description": "Castle Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3105": {
+			"bindings": [
+				{
+					"name": "Castle Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3105,
+			"description": "Castle Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3109": {
+			"bindings": [
+				{
+					"name": "Coolie Switch UP",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3109,
+			"description": "Coolie Switch UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3116": {
+			"bindings": [
+				{
+					"name": "Radar Antenna Elevation UP",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3116,
+			"description": "Radar Antenna Elevation UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3117": {
+			"bindings": [
+				{
+					"name": "Radar Antenna Elevation DOWN",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3117,
+			"description": "Radar Antenna Elevation DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3118": {
+			"bindings": [
+				{
+					"name": "MIC Switch FWD (Call Radio 1 Menu)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3118,
+			"description": "MIC Switch FWD (Call Radio 1 Menu)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3119": {
+			"bindings": [
+				{
+					"name": "MIC Switch AFT (Call Radio 2 Menu)",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3119,
+			"description": "MIC Switch AFT (Call Radio 2 Menu)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3201": {
+			"bindings": [
+				{
+					"name": "LHC - CMD Switch UP (Manual 2 Dispense)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3201,
+			"description": "LHC - CMD Switch UP (Manual 2 Dispense)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3202": {
+			"bindings": [
+				{
+					"name": "LHC - CMD Switch DOWN (Manual 1 Dispense)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3202,
+			"description": "LHC - CMD Switch DOWN (Manual 1 Dispense)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3204": {
+			"bindings": [
+				{
+					"name": "LHC - Coolie Switch UP",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3204,
+			"description": "LHC - Coolie Switch UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3205": {
+			"bindings": [
+				{
+					"name": "LHC - Coolie Switch DOWN",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3205,
+			"description": "LHC - Coolie Switch DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3206": {
+			"bindings": [
+				{
+					"name": "LHC - Coolie Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3206,
+			"description": "LHC - Coolie Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3207": {
+			"bindings": [
+				{
+					"name": "LHC - Coolie Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3207,
+			"description": "LHC - Coolie Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3209": {
+			"bindings": [
+				{
+					"name": "LHC - Castle Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3209,
+			"description": "LHC - Castle Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3210": {
+			"bindings": [
+				{
+					"name": "LHC - Castle Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3210,
+			"description": "LHC - Castle Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3211": {
+			"bindings": [
+				{
+					"name": "LHC - Castle Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3211,
+			"description": "LHC - Castle Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3212": {
+			"bindings": [
+				{
+					"name": "LHC - Castle Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3212,
+			"description": "LHC - Castle Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3213": {
+			"bindings": [
+				{
+					"name": "LHC - Castle Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3213,
+			"description": "LHC - Castle Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3214": {
+			"bindings": [
+				{
+					"name": "LHC - TDC Switch UP",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3214,
+			"description": "LHC - TDC Switch UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3215": {
+			"bindings": [
+				{
+					"name": "LHC - TDC Switch DOWN",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3215,
+			"description": "LHC - TDC Switch DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3216": {
+			"bindings": [
+				{
+					"name": "LHC - TDC Switch LEFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3216,
+			"description": "LHC - TDC Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3217": {
+			"bindings": [
+				{
+					"name": "LHC - TDC Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3217,
+			"description": "LHC - TDC Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3218": {
+			"bindings": [
+				{
+					"name": "LHC - TDC Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3218,
+			"description": "LHC - TDC Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3219": {
+			"bindings": [
+				{
+					"name": "LHC - Auto Acquisition Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3219,
+			"description": "LHC - Auto Acquisition Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3220": {
+			"bindings": [
+				{
+					"name": "LHC - Auto Acquisition Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3220,
+			"description": "LHC - Auto Acquisition Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3221": {
+			"bindings": [
+				{
+					"name": "LHC - Auto Acquisition Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3221,
+			"description": "LHC - Auto Acquisition Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3222": {
+			"bindings": [
+				{
+					"name": "LHC - Trigger HA (Half)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3222,
+			"description": "LHC - Trigger HA (Half)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3223": {
+			"bindings": [
+				{
+					"name": "LHC - Trigger FA (FUll",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3223,
+			"description": "LHC - Trigger FA (FUll",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3224": {
+			"bindings": [
+				{
+					"name": "LHC - Laser Fire",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3224,
+			"description": "LHC - Laser Fire",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3225": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "LHC - TDC Slew Horizontal"
+				}
+			],
+			"commandId": 3225,
+			"description": "LHC - TDC Slew Horizontal",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3226": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "LHC - TDC Slew Vertical"
+				}
+			],
+			"commandId": 3226,
+			"description": "LHC - TDC Slew Vertical",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3301": {
+			"bindings": [
+				{
+					"name": "RHC - AAI Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3301,
+			"description": "RHC - AAI Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3302": {
+			"bindings": [
+				{
+					"name": "RHC - AAI Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3302,
+			"description": "RHC - AAI Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3304": {
+			"bindings": [
+				{
+					"name": "RHC - Coolie Switch UP",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3304,
+			"description": "RHC - Coolie Switch UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3305": {
+			"bindings": [
+				{
+					"name": "RHC - Coolie Switch DOWN",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3305,
+			"description": "RHC - Coolie Switch DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3306": {
+			"bindings": [
+				{
+					"name": "RHC - Coolie Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3306,
+			"description": "RHC - Coolie Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3307": {
+			"bindings": [
+				{
+					"name": "RHC - Coolie Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3307,
+			"description": "RHC - Coolie Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3309": {
+			"bindings": [
+				{
+					"name": "RHC - Castle Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3309,
+			"description": "RHC - Castle Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3310": {
+			"bindings": [
+				{
+					"name": "RHC - Castle Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3310,
+			"description": "RHC - Castle Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3311": {
+			"bindings": [
+				{
+					"name": "RHC - Castle Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3311,
+			"description": "RHC - Castle Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3312": {
+			"bindings": [
+				{
+					"name": "RHC - Castle Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3312,
+			"description": "RHC - Castle Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3313": {
+			"bindings": [
+				{
+					"name": "RHC - Castle Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3313,
+			"description": "RHC - Castle Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3326": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "RHC - TDC Slew Vertical"
+				}
+			],
+			"commandId": 3326,
+			"description": "RHC - TDC Slew Vertical",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3400": {
+			"bindings": [
+				{
+					"name": "Set hand controller swap",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3400,
+			"description": "Set hand controller swap",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.cmd_3401": {
+			"bindings": [
+				{
+					"name": "Toggle hand controller swap",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3401,
+			"description": "Toggle hand controller swap",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.fire_ext_sw": {
+			"bindings": [
+				{
+					"name": "RHC - TDC Switch UP",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3314,
+			"description": "RHC - TDC Switch UP",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.jtids_kb": {
+			"bindings": [
+				{
+					"name": "Auto Acquisition Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3108,
+			"description": "Auto Acquisition Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.left_eng_fire_cover": {
+			"bindings": [
+				{
+					"name": "RHC - TDC Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3317,
+			"description": "RHC - TDC Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.left_eng_fire_sw": {
+			"bindings": [
+				{
+					"name": "RHC - TDC Switch PRESS",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3318,
+			"description": "RHC - TDC Switch PRESS",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.nav_flir_KB": {
+			"bindings": [
+				{
+					"name": "Auto Acquisition Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3107,
+			"description": "Auto Acquisition Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.nav_flir_level_kb": {
+			"bindings": [
+				{
+					"name": "Auto Acquisition Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3106,
+			"description": "Auto Acquisition Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.right_eng_fire_cover": {
+			"bindings": [
+				{
+					"name": "RHC - Auto Acquisition Switch FWD",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3319,
+			"description": "RHC - Auto Acquisition Switch FWD",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.right_eng_fire_sw": {
+			"bindings": [
+				{
+					"name": "RHC - Auto Acquisition Switch AFT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3320,
+			"description": "RHC - Auto Acquisition Switch AFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.tpod_flir_gain_kb": {
+			"bindings": [
+				{
+					"name": "Coolie Switch LEFT",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3111,
+			"description": "Coolie Switch LEFT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.tpod_flir_level_kb": {
+			"bindings": [
+				{
+					"name": "Coolie Switch RIGHT",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3112,
+			"description": "Coolie Switch RIGHT",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.tpod_laser_kb": {
+			"bindings": [
+				{
+					"name": "Weapons/Mode Switch AFT (GUN)",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Weapons/Mode Switch CNT (SRM)",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Weapons/Mode Switch FWD (MRM)",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Weapons/Mode Switch GUN else SRM",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Weapons/Mode Switch MRM else SRM",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3113,
+			"description": "Weapons/Mode Switch AFT (GUN) (+4 more)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.tpod_pwr_kb": {
+			"bindings": [
+				{
+					"name": "Coolie Switch DOWN",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3110,
+			"description": "Coolie Switch DOWN",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HOTASCTRL.warn_tone_sil_btn": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "RHC - TDC Slew Horizontal"
+				}
+			],
+			"commandId": 3325,
+			"description": "RHC - TDC Slew Horizontal",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_BIT_Button": {
+			"arg": 123,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3123,
+			"description": "HUD BIT",
+			"deviceId": 55,
+			"elementName": "PTN_123",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HUDCTRL.HUD_BRT_Knob": {
+			"arg": 120,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3120,
+			"description": "HUD Brightness Control",
+			"deviceId": 55,
+			"elementName": "PTN_120",
+			"type": "continuous"
+		},
+		"HUDCTRL.HUD_BRT_Knob_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "HUD Brightness"
+				}
+			],
+			"commandId": 3136,
+			"description": "HUD Brightness",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_BRT_Knob_KB": {
+			"bindings": [
+				{
+					"name": "HUD Brightness +10%",
+					"valueDown": 0.1
+				},
+				{
+					"name": "HUD Brightness -10%",
+					"valueDown": -0.1
+				}
+			],
+			"commandId": 3130,
+			"description": "HUD Brightness +10% (+1 more)",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_MODE_Switch": {
+			"arg": 122,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3122,
+			"description": "HUD DAY/AUTO/NIGHT Mode Selector",
+			"deviceId": 55,
+			"elementName": "PTN_122",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HUDCTRL.HUD_MODE_Switch_KB": {
+			"bindings": [
+				{
+					"name": "HUD Display Mode DOWN",
+					"valueDown": -1.0
+				},
+				{
+					"name": "HUD Display Mode UP",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3132,
+			"description": "HUD Display Mode DOWN (+1 more)",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_REJ_Switch": {
+			"arg": 121,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3121,
+			"description": "HUD Symbology Reject Mode",
+			"deviceId": 55,
+			"elementName": "PTN_121",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"HUDCTRL.HUD_REJ_Switch_KB": {
+			"bindings": [
+				{
+					"name": "HUD Symbology Reject DOWN",
+					"valueDown": -0.5
+				},
+				{
+					"name": "HUD Symbology Reject UP",
+					"valueDown": 0.5
+				}
+			],
+			"commandId": 3131,
+			"description": "HUD Symbology Reject DOWN (+1 more)",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_VIDEO_BRT_Knob": {
+			"arg": 124,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3124,
+			"description": "HUD Video Brightness Control",
+			"deviceId": 55,
+			"elementName": "PTN_124",
+			"type": "continuous"
+		},
+		"HUDCTRL.HUD_VIDEO_BRT_Knob_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "HUD Video Brightness"
+				}
+			],
+			"commandId": 3137,
+			"description": "HUD Video Brightness",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_VIDEO_BRT_Knob_KB": {
+			"bindings": [
+				{
+					"name": "HUD Video Brightness +10%",
+					"valueDown": 0.1
+				},
+				{
+					"name": "HUD Video Brightness -10%",
+					"valueDown": -0.1
+				}
+			],
+			"commandId": 3134,
+			"description": "HUD Video Brightness +10% (+1 more)",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_VIDEO_CONT_Knob": {
+			"arg": 125,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3125,
+			"description": "HUD Contrast Control",
+			"deviceId": 55,
+			"elementName": "PTN_125",
+			"type": "continuous"
+		},
+		"HUDCTRL.HUD_VIDEO_CONT_Knob_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "HUD Video Contrast"
+				}
+			],
+			"commandId": 3138,
+			"description": "HUD Video Contrast",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"HUDCTRL.HUD_VIDEO_CONT_Knob_KB": {
+			"bindings": [
+				{
+					"name": "HUD Video Contrast +10%",
+					"valueDown": 0.1
+				},
+				{
+					"name": "HUD Video Contrast -10%",
+					"valueDown": -0.1
+				}
+			],
+			"commandId": 3135,
+			"description": "HUD Video Contrast +10% (+1 more)",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"ICS.cmd_3427": {
+			"arg": 1427,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3427,
+			"description": "MIC Switch",
+			"deviceId": 13,
+			"elementName": "PTN_1427",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ICS.cmd_3509": {
+			"arg": 509,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3509,
+			"description": "MIC Switch",
+			"deviceId": 13,
+			"elementName": "PTN_509",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ICS.cmd_3511": {
+			"bindings": [
+				{
+					"name": "UHF Antenna Switch LOWER",
+					"valueDown": 0.0
+				},
+				{
+					"name": "UHF Antenna Switch UPPER",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3511,
+			"description": "UHF Antenna Switch LOWER (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"ICS.cmd_3512": {
+			"bindings": [
+				{
+					"name": "VHF Antenna Switch LOWER",
+					"valueDown": 0.0
+				},
+				{
+					"name": "VHF Antenna Switch UPPER",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3512,
+			"description": "VHF Antenna Switch LOWER (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"ICS.cypher_txt_sw": {
+			"bindings": [
+				{
+					"name": "Cipher Text Switch NORM",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Cipher Text Switch ONLY",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3514,
+			"description": "Cipher Text Switch NORM (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"ICS.ics_vol": {
+			"arg": 504,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3503,
+			"description": "ICS Volume",
+			"deviceId": 13,
+			"elementName": "PTN_504",
+			"type": "continuous"
+		},
+		"ICS.rc_crypto_sw": {
+			"bindings": [
+				{
+					"name": "CRYPTO Switch HOLD",
+					"valueDown": 1.0
+				},
+				{
+					"name": "CRYPTO Switch NORMAL",
+					"valueDown": 0.0
+				},
+				{
+					"name": "CRYPTO Switch ZERO",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3426,
+			"description": "CRYPTO Switch HOLD (+2 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"ICS.rc_ics_k_vol": {
+			"bindings": [
+				{
+					"name": "Intercom Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Intercom Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3609,
+			"description": "Intercom Volume DECR (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"ICS.rc_ics_vol": {
+			"arg": 1422,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3603,
+			"description": "ICS Volume",
+			"deviceId": 13,
+			"elementName": "PTN_1422",
+			"type": "continuous"
+		},
+		"ICS.rc_wpn_vol": {
+			"arg": 1423,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3604,
+			"description": "WPN Voume",
+			"deviceId": 13,
+			"elementName": "PTN_1423",
+			"type": "continuous"
+		},
+		"ICS.tone_sw": {
+			"bindings": [
+				{
+					"name": "Tone Switch UHF1",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Tone Switch UHF2",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3513,
+			"description": "Tone Switch UHF1 (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"ICS.wpn_vol": {
+			"arg": 505,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3504,
+			"description": "WPN Voume",
+			"deviceId": 13,
+			"elementName": "PTN_505",
+			"type": "continuous"
+		},
+		"IFF_TRN.cmd_3508": {
+			"description": "Crypto Switch",
+			"elementName": "PTN_508",
+			"positionMap": [
+				{
+					"commandId": 3508,
+					"deviceId": 68,
+					"value": 1.0
+				},
+				null,
+				{
+					"commandId": 508,
+					"deviceId": 68,
+					"value": 0.5
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"IFF_TRN.cypher_txt_sw": {
+			"arg": 514,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3514,
+			"description": "Cypher Text Switch",
+			"deviceId": 68,
+			"elementName": "PTN_514",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF_TRN.iff_ant_sel_sw": {
+			"arg": 520,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3520,
+			"description": "IFF Antenna Select Switch",
+			"deviceId": 68,
+			"elementName": "PTN_520",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF_TRN.master_sw": {
+			"arg": 517,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3517,
+			"description": "IFF Master Switch",
+			"deviceId": 68,
+			"elementName": "PTN_517",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF_TRN.mode_sw": {
+			"arg": 515,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3515,
+			"description": "IFF Mode Switch",
+			"deviceId": 68,
+			"elementName": "PTN_515",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF_TRN.rec_sw": {
+			"arg": 516,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3516,
+			"description": "IFF Reply Switch",
+			"deviceId": 68,
+			"elementName": "PTN_516",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ILS.ils_keyb_vol": {
+			"bindings": [
+				{
+					"name": "ILS Tone Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "ILS Tone Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3511,
+			"description": "ILS Tone Volume DECR (+1 more)",
+			"deviceId": 11,
+			"type": "raw"
+		},
+		"ILS.ils_vol": {
+			"arg": 506,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3505,
+			"description": "ILS Volume",
+			"deviceId": 11,
+			"elementName": "PTN_506",
+			"type": "continuous"
+		},
+		"ILS.rc_ils_k_vol": {
+			"bindings": [
+				{
+					"name": "ILS Tone Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "ILS Tone Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3611,
+			"description": "ILS Tone Volume DECR (+1 more)",
+			"deviceId": 11,
+			"type": "raw"
+		},
+		"ILS.rc_ils_vol": {
+			"arg": 1424,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3605,
+			"description": "ILS Volume",
+			"deviceId": 11,
+			"elementName": "PTN_1424",
+			"type": "continuous"
+		},
+		"INS.ins_kb": {
+			"bindings": [
+				{
+					"name": "INS: NAV/ALIGN GC/STORE/OFF",
+					"valueDown": -0.33
+				},
+				{
+					"name": "INS: OFF/STORE/ALIGN GC/NAV",
+					"valueDown": 0.33
+				}
+			],
+			"commandId": 3104,
+			"description": "INS: NAV/ALIGN GC/STORE/OFF (+1 more)",
+			"deviceId": 42,
+			"type": "raw"
+		},
+		"INS.ins_knob": {
+			"arg": 472,
+			"argLim": [
+				0.0,
+				0.99
+			],
+			"commandId": 3472,
+			"description": "INS Knob",
+			"deviceId": 42,
+			"elementName": "PTN_472",
+			"positions": 4,
+			"step": 0.33,
+			"type": "discrete"
+		},
+		"INTLT.chart_lt_kb": {
+			"bindings": [
+				{
+					"name": "Charts Spot Light BRT Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Charts Spot Light BRT Decrease",
+					"valueDown": -0.05,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Charts Spot Light BRT Increase",
+					"valueDown": 0.05
+				},
+				{
+					"name": "Charts Spot Light BRT Incresae",
+					"valueDown": 0.05,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3170,
+			"description": "Charts Spot Light BRT Decrease (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.chart_lt_knob": {
+			"arg": 572,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3572,
+			"description": "Charts Spot Light",
+			"deviceId": 23,
+			"elementName": "PTN_572",
+			"type": "continuous"
+		},
+		"INTLT.chart_lt_lamp": {
+			"arg": 186,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3575,
+			"description": "Chart Spot Lamp",
+			"deviceId": 23,
+			"elementName": "PTN_186",
+			"type": "continuous"
+		},
+		"INTLT.compass_lt_sw": {
+			"arg": 570,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3570,
+			"description": "Compass Lights",
+			"deviceId": 23,
+			"elementName": "PTN_570",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTLT.compass_lt_tgl": {
+			"bindings": [
+				{
+					"name": "Compass Lights ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3165,
+			"description": "Compass Lights ON/OFF",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.console_lt_kb": {
+			"bindings": [
+				{
+					"name": "Console Lights BRT Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Console Lights BRT Decrease",
+					"valueDown": -0.05,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Console Lights BRT Increase",
+					"valueDown": 0.05
+				},
+				{
+					"name": "Console Lights BRT Incresae",
+					"valueDown": 0.05,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3167,
+			"description": "Console Lights BRT Decrease (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.console_lt_knob": {
+			"arg": 566,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3566,
+			"description": "Console Lights",
+			"deviceId": 23,
+			"elementName": "PTN_566",
+			"type": "continuous"
+		},
+		"INTLT.daynite_mode_sw": {
+			"arg": 571,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3571,
+			"description": "Day/Night Mode Selector",
+			"deviceId": 23,
+			"elementName": "PTN_571",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTLT.daynite_mode_tgl": {
+			"bindings": [
+				{
+					"name": "Display Mode DAY/NIGHT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3166,
+			"description": "Display Mode DAY/NIGHT",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.flood_lt_kb": {
+			"bindings": [
+				{
+					"name": "Storm Flood Lights BRT Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Storm Flood Lights BRT Decrease",
+					"valueDown": -0.05,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Storm Flood Lights BRT Increase",
+					"valueDown": 0.05
+				},
+				{
+					"name": "Storm Flood Lights BRT Increase",
+					"valueDown": 0.05,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3172,
+			"description": "Storm Flood Lights BRT Decrease (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.flood_lt_knob": {
+			"arg": 574,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3574,
+			"description": "Storm FLood Lights",
+			"deviceId": 23,
+			"elementName": "PTN_574",
+			"type": "continuous"
+		},
+		"INTLT.inst_bklt_kb": {
+			"bindings": [
+				{
+					"name": "Gauges/UFC Backlights BRT Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Gauges/UFC Backlights BRT Decrease",
+					"valueDown": -0.05,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Gauges/UFC Backlights BRT Increase",
+					"valueDown": 0.05
+				},
+				{
+					"name": "Gauges/UFC Backlights BRT Incresae",
+					"valueDown": 0.05,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3169,
+			"description": "Gauges/UFC Backlights BRT Decrease (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.inst_pnl_lt_kb": {
+			"bindings": [
+				{
+					"name": "Instruments Panel Lights BRT Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Instruments Panel Lights BRT Decrease",
+					"valueDown": -0.05,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Instruments Panel Lights BRT Increase",
+					"valueDown": 0.05
+				},
+				{
+					"name": "Instruments Panel Lights BRT Incresae",
+					"valueDown": 0.05,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3168,
+			"description": "Instruments Panel Lights BRT Decrease (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.inst_pnl_lt_knob": {
+			"arg": 567,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3567,
+			"description": "Instruments Panel Lights",
+			"deviceId": 23,
+			"elementName": "PTN_567",
+			"type": "continuous"
+		},
+		"INTLT.lights_test_sw": {
+			"arg": 569,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3569,
+			"description": "Warning/Caution Lights Test",
+			"deviceId": 23,
+			"elementName": "PTN_569",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTLT.rc_chart_lt_knob": {
+			"arg": 1462,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3462,
+			"description": "Chart Panel Lights",
+			"deviceId": 23,
+			"elementName": "PTN_1462",
+			"type": "continuous"
+		},
+		"INTLT.rc_chart_lt_lamp": {
+			"arg": 188,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3188,
+			"description": "Chart Light",
+			"deviceId": 23,
+			"elementName": "PTN_188",
+			"type": "continuous"
+		},
+		"INTLT.rc_compass_lt_sw": {
+			"arg": 1460,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3460,
+			"description": "Compass Lights",
+			"deviceId": 23,
+			"elementName": "PTN_1460",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTLT.rc_console_lt_knob": {
+			"arg": 1456,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3456,
+			"description": "Console Lights",
+			"deviceId": 23,
+			"elementName": "PTN_1456",
+			"type": "continuous"
+		},
+		"INTLT.rc_daynite_mode_sw": {
+			"arg": 1461,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3461,
+			"description": "Displays Day/Night Mode Selector",
+			"deviceId": 23,
+			"elementName": "PTN_1461",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTLT.rc_flood_lt_knob": {
+			"arg": 1464,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3464,
+			"description": "Storm FLood Lights",
+			"deviceId": 23,
+			"elementName": "PTN_1464",
+			"type": "continuous"
+		},
+		"INTLT.rc_inst_pnl_lt_knob": {
+			"arg": 1457,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3457,
+			"description": "Instruments Panel Lights",
+			"deviceId": 23,
+			"elementName": "PTN_1457",
+			"type": "continuous"
+		},
+		"INTLT.rc_lights_test_sw": {
+			"arg": 1459,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3459,
+			"description": "Warning/Caution Lights Test",
+			"deviceId": 23,
+			"elementName": "PTN_1459",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTLT.rc_ufc_bcklt_br_knob": {
+			"arg": 1458,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3458,
+			"description": "UFC Panel Backlights",
+			"deviceId": 23,
+			"elementName": "PTN_1458",
+			"type": "continuous"
+		},
+		"INTLT.rc_wac_bklt_knob": {
+			"arg": 1463,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3463,
+			"description": "Warning/Caution Lights (RMB to RESET when BRT)",
+			"deviceId": 23,
+			"elementName": "PTN_1463",
+			"sendProtocol": "S",
+			"type": "continuous"
+		},
+		"INTLT.rc_wac_bklt_knob_reset": {
+			"arg": 1463,
+			"argLim": [
+				0.75,
+				1.0
+			],
+			"commandId": 3474,
+			"description": "Warning/Caution Lights (RMB to RESET when BRT)",
+			"deviceId": 23,
+			"elementName": "PTN_1463",
+			"positions": 2,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"INTLT.ufc_bcklt_br_knob": {
+			"arg": 568,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3568,
+			"description": "Gauges/UFC Backlights",
+			"deviceId": 23,
+			"elementName": "PTN_568",
+			"type": "continuous"
+		},
+		"INTLT.wac_bklt_kb": {
+			"bindings": [
+				{
+					"name": "Warning/Caution Lights BRT Decrease",
+					"valueDown": -0.05
+				},
+				{
+					"name": "Warning/Caution Lights BRT Decrease",
+					"valueDown": -0.05,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Warning/Caution Lights BRT Increase",
+					"valueDown": 0.05
+				},
+				{
+					"name": "Warning/Caution Lights BRT Incresae",
+					"valueDown": 0.05,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3171,
+			"description": "Warning/Caution Lights BRT Decrease (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"INTLT.wac_bklt_knob": {
+			"arg": 573,
+			"argLim": [
+				0.0,
+				0.75
+			],
+			"commandId": 3573,
+			"description": "Warning/Caution Lights (RMB to RESET when BRT)",
+			"deviceId": 23,
+			"elementName": "PTN_573",
+			"sendProtocol": "S",
+			"type": "continuous"
+		},
+		"INTLT.wac_bklt_knob_reset": {
+			"arg": 573,
+			"argLim": [
+				0.75,
+				1.0
+			],
+			"commandId": 3473,
+			"description": "Warning/Caution Lights (RMB to RESET when BRT)",
+			"deviceId": 23,
+			"elementName": "PTN_573",
+			"positions": 2,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"LGS.Gear_lever": {
+			"arg": 324,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3324,
+			"description": "Landing Gear Lever",
+			"deviceId": 21,
+			"elementName": "PTN_324",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.anti_skid_sw": {
+			"arg": 537,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3537,
+			"description": "Anti Skid Switch",
+			"deviceId": 21,
+			"elementName": "PTN_537",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"LGS.arr_hook_lever": {
+			"arg": 336,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3336,
+			"description": "Arresting Hook Handle",
+			"deviceId": 21,
+			"elementName": "PTN_336",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.arr_hook_lever_rear": {
+			"arg": 1341,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3344,
+			"description": "Arresting Hook Handle",
+			"deviceId": 21,
+			"elementName": "PTN_1341",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.cmd_3342": {
+			"arg": 1342,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3342,
+			"description": "Emergency Landing Gear Handle",
+			"deviceId": 21,
+			"elementName": "PTN_1342",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.cmd_3431": {
+			"arg": 431,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3431,
+			"description": "Emergency Landing Gear Handle, (LMB)PUSH OR PULL/(RMB)ROTATE",
+			"deviceId": 21,
+			"elementName": "PTN_337",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.em_bk_steer_lever": {
+			"arg": 341,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3341,
+			"description": "Emergency Brake/Steering Handle",
+			"deviceId": 21,
+			"elementName": "PTN_341",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.em_bk_steer_lever_rear": {
+			"arg": 1345,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3345,
+			"description": "Emergency Brake/Steering Handle",
+			"deviceId": 21,
+			"elementName": "PTN_1345",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.em_gear_lever": {
+			"arg": 337,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3337,
+			"description": "Emergency Landing Gear Handle, (LMB)PUSH OR PULL/(RMB)ROTATE",
+			"deviceId": 21,
+			"elementName": "PTN_337",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.park_brake_sw": {
+			"arg": 387,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3387,
+			"description": "Parking Brake Switch",
+			"deviceId": 21,
+			"elementName": "PTN_387",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LGS.park_brake_sw_toggle": {
+			"bindings": [
+				{
+					"name": "Parking Brake Switch Toggle",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3487,
+			"description": "Parking Brake Switch Toggle",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"MPCD_FCENTER.Button_01": {
+			"arg": 251,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 35,
+			"elementName": "PTN_251",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_02": {
+			"arg": 250,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 35,
+			"elementName": "PTN_250",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_03": {
+			"arg": 249,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 35,
+			"elementName": "PTN_249",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_04": {
+			"arg": 248,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 35,
+			"elementName": "PTN_248",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_05": {
+			"arg": 247,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 35,
+			"elementName": "PTN_247",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_06": {
+			"arg": 266,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 35,
+			"elementName": "PTN_266",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_07": {
+			"arg": 265,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 35,
+			"elementName": "PTN_265",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_08": {
+			"arg": 264,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 35,
+			"elementName": "PTN_264",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_09": {
+			"arg": 263,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 35,
+			"elementName": "PTN_263",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_10": {
+			"arg": 262,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 35,
+			"elementName": "PTN_262",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_11": {
+			"arg": 261,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 35,
+			"elementName": "PTN_261",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_12": {
+			"arg": 260,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 35,
+			"elementName": "PTN_260",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_13": {
+			"arg": 259,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 35,
+			"elementName": "PTN_259",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_14": {
+			"arg": 258,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 35,
+			"elementName": "PTN_258",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_15": {
+			"arg": 257,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 35,
+			"elementName": "PTN_257",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_16": {
+			"arg": 256,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 35,
+			"elementName": "PTN_256",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_17": {
+			"arg": 255,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 35,
+			"elementName": "PTN_255",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_18": {
+			"arg": 254,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 35,
+			"elementName": "PTN_254",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_19": {
+			"arg": 253,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 35,
+			"elementName": "PTN_253",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Button_20": {
+			"arg": 252,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 35,
+			"elementName": "PTN_252",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Switch_BRT": {
+			"arg": 268,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 35,
+			"elementName": "PTN_268_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Switch_Cont": {
+			"arg": 269,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 35,
+			"elementName": "PTN_269_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_FCENTER.Switch_Power": {
+			"arg": 267,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 35,
+			"elementName": "PTN_267_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_01": {
+			"arg": 1204,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 37,
+			"elementName": "PTN_1204",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_02": {
+			"arg": 1203,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 37,
+			"elementName": "PTN_1203",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_03": {
+			"arg": 1202,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 37,
+			"elementName": "PTN_1202",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_04": {
+			"arg": 1201,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 37,
+			"elementName": "PTN_1201",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_05": {
+			"arg": 1200,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 37,
+			"elementName": "PTN_1200",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_06": {
+			"arg": 1219,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 37,
+			"elementName": "PTN_1219",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_07": {
+			"arg": 1218,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 37,
+			"elementName": "PTN_1218",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_08": {
+			"arg": 1217,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 37,
+			"elementName": "PTN_1217",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_09": {
+			"arg": 1216,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 37,
+			"elementName": "PTN_1216",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_10": {
+			"arg": 1215,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 37,
+			"elementName": "PTN_1215",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_11": {
+			"arg": 1214,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 37,
+			"elementName": "PTN_1214",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_12": {
+			"arg": 1213,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 37,
+			"elementName": "PTN_1213",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_13": {
+			"arg": 1212,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 37,
+			"elementName": "PTN_1212",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_14": {
+			"arg": 1211,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 37,
+			"elementName": "PTN_1211",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_15": {
+			"arg": 1210,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 37,
+			"elementName": "PTN_1210",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_16": {
+			"arg": 1209,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 37,
+			"elementName": "PTN_1209",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_17": {
+			"arg": 1208,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 37,
+			"elementName": "PTN_1208",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_18": {
+			"arg": 1207,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 37,
+			"elementName": "PTN_1207",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_19": {
+			"arg": 1206,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 37,
+			"elementName": "PTN_1206",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Button_20": {
+			"arg": 1205,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 37,
+			"elementName": "PTN_1205",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Switch_BRT": {
+			"arg": 1222,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 37,
+			"elementName": "PTN_1222_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Switch_Cont": {
+			"arg": 1223,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 37,
+			"elementName": "PTN_1223_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RLEFT.Switch_Power": {
+			"arg": 1221,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 37,
+			"elementName": "PTN_1221_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_01": {
+			"arg": 1274,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 40,
+			"elementName": "PTN_1274",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_02": {
+			"arg": 1273,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 40,
+			"elementName": "PTN_1273",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_03": {
+			"arg": 1272,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 40,
+			"elementName": "PTN_1272",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_04": {
+			"arg": 1271,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 40,
+			"elementName": "PTN_1271",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_05": {
+			"arg": 1270,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 40,
+			"elementName": "PTN_1270",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_06": {
+			"arg": 1289,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 40,
+			"elementName": "PTN_1289",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_07": {
+			"arg": 1288,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 40,
+			"elementName": "PTN_1288",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_08": {
+			"arg": 1287,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 40,
+			"elementName": "PTN_1287",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_09": {
+			"arg": 1286,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 40,
+			"elementName": "PTN_1286",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_10": {
+			"arg": 1285,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 40,
+			"elementName": "PTN_1285",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_11": {
+			"arg": 1284,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 40,
+			"elementName": "PTN_1284",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_12": {
+			"arg": 1283,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 40,
+			"elementName": "PTN_1283",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_13": {
+			"arg": 1282,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 40,
+			"elementName": "PTN_1282",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_14": {
+			"arg": 1281,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 40,
+			"elementName": "PTN_1281",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_15": {
+			"arg": 1280,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 40,
+			"elementName": "PTN_1280",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_16": {
+			"arg": 1279,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 40,
+			"elementName": "PTN_1279",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_17": {
+			"arg": 1278,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 40,
+			"elementName": "PTN_1278",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_18": {
+			"arg": 1277,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 40,
+			"elementName": "PTN_1277",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_19": {
+			"arg": 1276,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 40,
+			"elementName": "PTN_1276",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Button_20": {
+			"arg": 1275,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 40,
+			"elementName": "PTN_1275",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Switch_BRT": {
+			"arg": 1291,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 40,
+			"elementName": "PTN_1291_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Switch_Cont": {
+			"arg": 1292,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 40,
+			"elementName": "PTN_1292_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPCD_RRIGHT.Switch_Power": {
+			"arg": 1290,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 40,
+			"elementName": "PTN_1290_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_01": {
+			"arg": 204,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 34,
+			"elementName": "PTN_204",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_02": {
+			"arg": 203,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 34,
+			"elementName": "PTN_203",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_03": {
+			"arg": 202,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 34,
+			"elementName": "PTN_202",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_04": {
+			"arg": 201,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 34,
+			"elementName": "PTN_201",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_05": {
+			"arg": 200,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 34,
+			"elementName": "PTN_200",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_06": {
+			"arg": 219,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 34,
+			"elementName": "PTN_219",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_07": {
+			"arg": 218,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 34,
+			"elementName": "PTN_218",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_08": {
+			"arg": 217,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 34,
+			"elementName": "PTN_217",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_09": {
+			"arg": 216,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 34,
+			"elementName": "PTN_216",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_10": {
+			"arg": 215,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 34,
+			"elementName": "PTN_215",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_11": {
+			"arg": 214,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 34,
+			"elementName": "PTN_214",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_12": {
+			"arg": 213,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 34,
+			"elementName": "PTN_213",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_13": {
+			"arg": 212,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 34,
+			"elementName": "PTN_212",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_14": {
+			"arg": 211,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 34,
+			"elementName": "PTN_211",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_15": {
+			"arg": 210,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 34,
+			"elementName": "PTN_210",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_16": {
+			"arg": 209,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 34,
+			"elementName": "PTN_209",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_17": {
+			"arg": 208,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 34,
+			"elementName": "PTN_208",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_18": {
+			"arg": 207,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 34,
+			"elementName": "PTN_207",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_19": {
+			"arg": 206,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 34,
+			"elementName": "PTN_206",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Button_20": {
+			"arg": 205,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 34,
+			"elementName": "PTN_205",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Switch_BRT": {
+			"arg": 222,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 34,
+			"elementName": "PTN_222_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Switch_Cont": {
+			"arg": 223,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 34,
+			"elementName": "PTN_223_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FLEFT.Switch_Power": {
+			"arg": 221,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 34,
+			"elementName": "PTN_221_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_01": {
+			"arg": 228,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 36,
+			"elementName": "PTN_228",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_02": {
+			"arg": 227,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 36,
+			"elementName": "PTN_227",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_03": {
+			"arg": 226,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 36,
+			"elementName": "PTN_226",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_04": {
+			"arg": 225,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 36,
+			"elementName": "PTN_225",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_05": {
+			"arg": 224,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 36,
+			"elementName": "PTN_224",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_06": {
+			"arg": 243,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 36,
+			"elementName": "PTN_243",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_07": {
+			"arg": 242,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 36,
+			"elementName": "PTN_242",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_08": {
+			"arg": 241,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 36,
+			"elementName": "PTN_241",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_09": {
+			"arg": 240,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 36,
+			"elementName": "PTN_240",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_10": {
+			"arg": 239,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 36,
+			"elementName": "PTN_239",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_11": {
+			"arg": 238,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 36,
+			"elementName": "PTN_238",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_12": {
+			"arg": 237,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 36,
+			"elementName": "PTN_237",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_13": {
+			"arg": 236,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 36,
+			"elementName": "PTN_236",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_14": {
+			"arg": 235,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 36,
+			"elementName": "PTN_235",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_15": {
+			"arg": 234,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 36,
+			"elementName": "PTN_234",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_16": {
+			"arg": 233,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 36,
+			"elementName": "PTN_233",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_17": {
+			"arg": 232,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 36,
+			"elementName": "PTN_232",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_18": {
+			"arg": 231,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 36,
+			"elementName": "PTN_231",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_19": {
+			"arg": 230,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 36,
+			"elementName": "PTN_230",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Button_20": {
+			"arg": 229,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 36,
+			"elementName": "PTN_229",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Switch_BRT": {
+			"arg": 245,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 36,
+			"elementName": "PTN_245_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Switch_Cont": {
+			"arg": 246,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 36,
+			"elementName": "PTN_246_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_FRIGHT.Switch_Power": {
+			"arg": 244,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 36,
+			"elementName": "PTN_244_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_01": {
+			"arg": 1228,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 38,
+			"elementName": "PTN_1228",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_02": {
+			"arg": 1227,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 38,
+			"elementName": "PTN_1227",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_03": {
+			"arg": 1226,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 38,
+			"elementName": "PTN_1226",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_04": {
+			"arg": 1225,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 38,
+			"elementName": "PTN_1225",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_05": {
+			"arg": 1224,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 38,
+			"elementName": "PTN_1224",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_06": {
+			"arg": 1243,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 38,
+			"elementName": "PTN_1243",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_07": {
+			"arg": 1242,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 38,
+			"elementName": "PTN_1242",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_08": {
+			"arg": 1241,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 38,
+			"elementName": "PTN_1241",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_09": {
+			"arg": 1240,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 38,
+			"elementName": "PTN_1240",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_10": {
+			"arg": 1239,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 38,
+			"elementName": "PTN_1239",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_11": {
+			"arg": 1238,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 38,
+			"elementName": "PTN_1238",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_12": {
+			"arg": 1237,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 38,
+			"elementName": "PTN_1237",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_13": {
+			"arg": 1236,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 38,
+			"elementName": "PTN_1236",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_14": {
+			"arg": 1235,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 38,
+			"elementName": "PTN_1235",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_15": {
+			"arg": 1234,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 38,
+			"elementName": "PTN_1234",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_16": {
+			"arg": 1233,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 38,
+			"elementName": "PTN_1233",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_17": {
+			"arg": 1232,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 38,
+			"elementName": "PTN_1232",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_18": {
+			"arg": 1231,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 38,
+			"elementName": "PTN_1231",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_19": {
+			"arg": 1230,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 38,
+			"elementName": "PTN_1230",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Button_20": {
+			"arg": 1229,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 38,
+			"elementName": "PTN_1229",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Switch_BRT": {
+			"arg": 1245,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 38,
+			"elementName": "PTN_1245_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Switch_Cont": {
+			"arg": 1246,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 38,
+			"elementName": "PTN_1246_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RLEFT.Switch_Power": {
+			"arg": 1244,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 38,
+			"elementName": "PTN_1244_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_01": {
+			"arg": 1251,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Push Button 1",
+			"deviceId": 39,
+			"elementName": "PTN_1251",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_02": {
+			"arg": 1250,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Push Button 2",
+			"deviceId": 39,
+			"elementName": "PTN_1250",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_03": {
+			"arg": 1249,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "Push Button 3",
+			"deviceId": 39,
+			"elementName": "PTN_1249",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_04": {
+			"arg": 1248,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Push Button 4",
+			"deviceId": 39,
+			"elementName": "PTN_1248",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_05": {
+			"arg": 1247,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Push Button 5",
+			"deviceId": 39,
+			"elementName": "PTN_1247",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_06": {
+			"arg": 1266,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "Push Button 6",
+			"deviceId": 39,
+			"elementName": "PTN_1266",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_07": {
+			"arg": 1265,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3067,
+			"description": "Push Button 7",
+			"deviceId": 39,
+			"elementName": "PTN_1265",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_08": {
+			"arg": 1264,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Push Button 8",
+			"deviceId": 39,
+			"elementName": "PTN_1264",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_09": {
+			"arg": 1263,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "Push Button 9",
+			"deviceId": 39,
+			"elementName": "PTN_1263",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_10": {
+			"arg": 1262,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "Push Button 10",
+			"deviceId": 39,
+			"elementName": "PTN_1262",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_11": {
+			"arg": 1261,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "Push Button 11",
+			"deviceId": 39,
+			"elementName": "PTN_1261",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_12": {
+			"arg": 1260,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "Push Button 12",
+			"deviceId": 39,
+			"elementName": "PTN_1260",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_13": {
+			"arg": 1259,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Push Button 13",
+			"deviceId": 39,
+			"elementName": "PTN_1259",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_14": {
+			"arg": 1258,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Push Button 14",
+			"deviceId": 39,
+			"elementName": "PTN_1258",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_15": {
+			"arg": 1257,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Push Button 15",
+			"deviceId": 39,
+			"elementName": "PTN_1257",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_16": {
+			"arg": 1256,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Push Button 16",
+			"deviceId": 39,
+			"elementName": "PTN_1256",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_17": {
+			"arg": 1255,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Push Button 17",
+			"deviceId": 39,
+			"elementName": "PTN_1255",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_18": {
+			"arg": 1254,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Push Button 18",
+			"deviceId": 39,
+			"elementName": "PTN_1254",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_19": {
+			"arg": 1253,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Push Button 19",
+			"deviceId": 39,
+			"elementName": "PTN_1253",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Button_20": {
+			"arg": 1252,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Push Button 20",
+			"deviceId": 39,
+			"elementName": "PTN_1252",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Switch_BRT": {
+			"arg": 1268,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3083,
+			"description": "Brightness Control",
+			"deviceId": 39,
+			"elementName": "PTN_1268_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Switch_Cont": {
+			"arg": 1269,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3082,
+			"description": "Contrast Control",
+			"deviceId": 39,
+			"elementName": "PTN_1269_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MPD_RRIGHT.Switch_Power": {
+			"arg": 1267,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3081,
+			"description": "Power Switch",
+			"deviceId": 39,
+			"elementName": "PTN_1267_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVPOD.nav_flir_KB": {
+			"bindings": [
+				{
+					"name": "NAV FLIR: OFF/STBY/ON",
+					"valueDown": 0.5
+				},
+				{
+					"name": "NAV FLIR: ON/STBY/OFF",
+					"valueDown": -0.5
+				}
+			],
+			"commandId": 3107,
+			"description": "NAV FLIR: OFF/STBY/ON (+1 more)",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"NAVPOD.nav_flir_gain_kb": {
+			"bindings": [
+				{
+					"name": "NAV FLIR GAIN DECREASE",
+					"valueDown": -0.05
+				},
+				{
+					"name": "NAV FLIR GAIN INCREASE",
+					"valueDown": 0.05
+				}
+			],
+			"commandId": 3105,
+			"description": "NAV FLIR GAIN DECREASE (+1 more)",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"NAVPOD.nav_flir_gain_knob": {
+			"arg": 473,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3473,
+			"description": "Nav FLIR Gain",
+			"deviceId": 50,
+			"elementName": "PTN_473",
+			"type": "continuous"
+		},
+		"NAVPOD.nav_flir_gain_level": {
+			"arg": 474,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3474,
+			"description": "Nav FLIR Level",
+			"deviceId": 50,
+			"elementName": "PTN_474",
+			"type": "continuous"
+		},
+		"NAVPOD.nav_flir_level_kb": {
+			"bindings": [
+				{
+					"name": "NAV FLIR LEVEL DECREASE",
+					"valueDown": -0.05
+				},
+				{
+					"name": "NAV FLIR LEVEL INCREASE",
+					"valueDown": 0.05
+				}
+			],
+			"commandId": 3106,
+			"description": "NAV FLIR LEVEL DECREASE (+1 more)",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"NAVPOD.nav_flir_sw": {
+			"arg": 475,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3475,
+			"description": "Nav FLIR Switch",
+			"deviceId": 50,
+			"elementName": "PTN_475",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"PACS.EMER_JETT_Button": {
+			"arg": 340,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3340,
+			"description": "Emergency Jettison Button",
+			"deviceId": 44,
+			"elementName": "PTN_340",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PACS.JETT_Button": {
+			"arg": 322,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3322,
+			"description": "Armament Jettison Button",
+			"deviceId": 44,
+			"elementName": "PTN_322",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PACS.JETT_Selector_Knob": {
+			"arg": 321,
+			"argLim": [
+				-0.9,
+				0.9
+			],
+			"commandId": 3321,
+			"description": "Armament Jettison Selector",
+			"deviceId": 44,
+			"elementName": "PTN_321",
+			"positions": 7,
+			"step": 0.3,
+			"type": "discrete"
+		},
+		"PACS.Master_Arm_SW": {
+			"arg": 323,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3323,
+			"description": "Master Arm",
+			"deviceId": 44,
+			"elementName": "PTN_323",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PACS.laser_code_2": {
+			"arg": 71,
+			"argLim": [
+				0.2,
+				0.4
+			],
+			"commandId": 3071,
+			"description": "Laser digit 2",
+			"deviceId": 44,
+			"elementName": "PTN_71",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"PACS.laser_code_3": {
+			"arg": 72,
+			"argLim": [
+				0.0,
+				0.7
+			],
+			"commandId": 3072,
+			"description": "Laser digit 3",
+			"deviceId": 44,
+			"elementName": "PTN_72",
+			"positions": 8,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"PACS.laser_code_4": {
+			"arg": 73,
+			"argLim": [
+				0.0,
+				0.7
+			],
+			"commandId": 3073,
+			"description": "Laser digit 4",
+			"deviceId": 44,
+			"elementName": "PTN_73",
+			"positions": 8,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"RDRCTRL_AA.cc_reset_btn": {
+			"arg": 477,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3477,
+			"description": "CC Reset",
+			"deviceId": 1,
+			"elementName": "PTN_477",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RDRCTRL_AA.jtids_kb": {
+			"bindings": [
+				{
+					"name": "JTIDS: HOLD/SIL/NORM/POLL/OFF",
+					"valueDown": -0.25
+				},
+				{
+					"name": "JTIDS: OFF/POLL/NORM/SIL/HOLD",
+					"valueDown": 0.25
+				}
+			],
+			"commandId": 3108,
+			"description": "JTIDS: HOLD/SIL/NORM/POLL/OFF (+1 more)",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"RDRCTRL_AA.jtids_knob": {
+			"arg": 476,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3476,
+			"description": "JTIDS Knob",
+			"deviceId": 1,
+			"elementName": "PTN_476",
+			"positions": 5,
+			"step": 0.25,
+			"type": "discrete"
+		},
+		"TACAN.rc_tacan_k_vol": {
+			"bindings": [
+				{
+					"name": "TACAN Tone Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "TACAN Tone Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3612,
+			"description": "TACAN Tone Volume DECR (+1 more)",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"TACAN.rc_tacan_vol": {
+			"arg": 1425,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3606,
+			"description": "TACAN Volume",
+			"deviceId": 10,
+			"elementName": "PTN_1425",
+			"type": "continuous"
+		},
+		"TACAN.tacan_keyb_vol": {
+			"bindings": [
+				{
+					"name": "TACAN Tone Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "TACAN Tone Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3512,
+			"description": "TACAN Tone Volume DECR (+1 more)",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"TACAN.tacan_vol": {
+			"arg": 507,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3506,
+			"description": "TACAN Volume",
+			"deviceId": 10,
+			"elementName": "PTN_507",
+			"type": "continuous"
+		},
+		"TEWS.caution_keyb_vol": {
+			"bindings": [
+				{
+					"name": "TEWS Caution Warning Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "TEWS Caution Warning Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3507,
+			"description": "TEWS Caution Warning Volume DECR (+1 more)",
+			"deviceId": 59,
+			"type": "raw"
+		},
+		"TEWS.caution_vol": {
+			"arg": 502,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3501,
+			"description": "Caution Volume",
+			"deviceId": 59,
+			"elementName": "PTN_502",
+			"type": "continuous"
+		},
+		"TEWS.cmd_3508": {
+			"bindings": [
+				{
+					"name": "TEWS Launch Warning Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "TEWS Launch Warning Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3508,
+			"description": "TEWS Launch Warning Volume DECR (+1 more)",
+			"deviceId": 59,
+			"type": "raw"
+		},
+		"TEWS.cmd_3601": {
+			"arg": 1420,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3601,
+			"description": "Caution Volume",
+			"deviceId": 59,
+			"elementName": "PTN_1420",
+			"type": "continuous"
+		},
+		"TEWS.cmd_3602": {
+			"arg": 1421,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3602,
+			"description": "Launch Volume",
+			"deviceId": 59,
+			"elementName": "PTN_1421",
+			"type": "continuous"
+		},
+		"TEWS.ewss_power_sw": {
+			"arg": 1470,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3902,
+			"description": "EWWS ON/OFF Switch",
+			"deviceId": 59,
+			"elementName": "PTN_1470",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TEWS.ewss_tone_sw": {
+			"arg": 1471,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3903,
+			"description": "EWWS TONE/DEFEAT Switch",
+			"deviceId": 59,
+			"elementName": "PTN_1471",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TEWS.ics_mode_sw": {
+			"bindings": [
+				{
+					"name": "ICS Mode Switch: AUTO",
+					"valueDown": 0.5
+				},
+				{
+					"name": "ICS Mode Switch: MAN",
+					"valueDown": 1.0
+				},
+				{
+					"name": "ICS Mode Switch: STBY",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3933,
+			"description": "ICS Mode Switch: AUTO (+2 more)",
+			"deviceId": 59,
+			"type": "raw"
+		},
+		"TEWS.launch_vol": {
+			"arg": 503,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3502,
+			"description": "Launch Volume",
+			"deviceId": 59,
+			"elementName": "PTN_503",
+			"type": "continuous"
+		},
+		"TEWS.pods_mode_sw": {
+			"bindings": [
+				{
+					"name": "PODS Mode Switch: STBY",
+					"valueDown": 0.0
+				},
+				{
+					"name": "PODS Mode Switch: XMIT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3932,
+			"description": "PODS Mode Switch: STBY (+1 more)",
+			"deviceId": 59,
+			"type": "raw"
+		},
+		"TEWS.rc_caution_k_vol": {
+			"bindings": [
+				{
+					"name": "TEWS Caution Warning Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "TEWS Caution Warning Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3607,
+			"description": "TEWS Caution Warning Volume DECR (+1 more)",
+			"deviceId": 59,
+			"type": "raw"
+		},
+		"TEWS.rc_launch_k_vol": {
+			"bindings": [
+				{
+					"name": "TEWS Launch Warning Volume DECR",
+					"valuePressed": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "TEWS Launch Warning Volume INCR",
+					"valuePressed": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3608,
+			"description": "TEWS Launch Warning Volume DECR (+1 more)",
+			"deviceId": 59,
+			"type": "raw"
+		},
+		"TEWS.rwr_ics_mode_sw": {
+			"arg": 1417,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3931,
+			"description": "RWR/ICS Mode Switch COMBAT/TRNG",
+			"deviceId": 59,
+			"elementName": "PTN_1417",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TEWS.rwr_power_sw": {
+			"arg": 1469,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3901,
+			"description": "RWR ON/OFF Switch",
+			"deviceId": 59,
+			"elementName": "PTN_1469",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TFR.cmd_3101": {
+			"bindings": [
+				{
+					"name": "Terrain Follow Radar: OFF/STBY/ON",
+					"valueDown": 0.5
+				},
+				{
+					"name": "Terrain Follow Radar: ON/STBY/OFF",
+					"valueDown": -0.5
+				}
+			],
+			"commandId": 3101,
+			"description": "Terrain Follow Radar: OFF/STBY/ON (+1 more)",
+			"deviceId": 65,
+			"type": "raw"
+		},
+		"TFR.cmd_3456": {
+			"arg": 456,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3456,
+			"description": "TF Couple Switch",
+			"deviceId": 65,
+			"elementName": "PTN_456",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TFR.flyup_cover": {
+			"arg": 522,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3522,
+			"description": "Flyup Enable Switch cover",
+			"deviceId": 65,
+			"elementName": "PTN_522",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TFR.flyup_sw": {
+			"arg": 523,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3523,
+			"description": "Flyup Enable Switch",
+			"deviceId": 65,
+			"elementName": "PTN_523",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TFR.tf_rdr_sw": {
+			"arg": 469,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3469,
+			"description": "Terrain Follow Radar Switch",
+			"deviceId": 65,
+			"elementName": "PTN_469",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"TGPCTRL.tpod_flir_gain_kb": {
+			"bindings": [
+				{
+					"name": "TGP Power Gain CCW DECR",
+					"valueDown": -0.1
+				},
+				{
+					"name": "TGP Power Gain CCW DECR",
+					"valueDown": -0.1
+				},
+				{
+					"name": "TGP Power Gain CW INCR",
+					"valueDown": 0.1
+				},
+				{
+					"name": "TGP Power Gain CW INCR",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3111,
+			"description": "TGP Power Gain CCW DECR (+3 more)",
+			"deviceId": 54,
+			"type": "raw"
+		},
+		"TGPCTRL.tpod_flir_gain_knob": {
+			"arg": 1414,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3414,
+			"description": "TGP FLIR Gain",
+			"deviceId": 54,
+			"elementName": "PTN_1414",
+			"type": "continuous"
+		},
+		"TGPCTRL.tpod_flir_level_kb": {
+			"bindings": [
+				{
+					"name": "TGP Power Level CCW DECR",
+					"valueDown": -0.1
+				},
+				{
+					"name": "TGP Power Level CCW DECR",
+					"valueDown": -0.1
+				},
+				{
+					"name": "TGP Power Level CW INCR",
+					"valueDown": 0.1
+				},
+				{
+					"name": "TGP Power Level CW INCR",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3112,
+			"description": "TGP Power Level CCW DECR (+3 more)",
+			"deviceId": 54,
+			"type": "raw"
+		},
+		"TGPCTRL.tpod_flir_level_knob": {
+			"arg": 1415,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3415,
+			"description": "TGP FLIR Level",
+			"deviceId": 54,
+			"elementName": "PTN_1415",
+			"type": "continuous"
+		},
+		"TGPCTRL.tpod_laser_kb": {
+			"bindings": [
+				{
+					"name": "TGP Laser Switch: ARM",
+					"valueDown": 1.0
+				},
+				{
+					"name": "TGP Laser Switch: SAFE",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3113,
+			"description": "TGP Laser Switch: ARM (+1 more)",
+			"deviceId": 54,
+			"type": "raw"
+		},
+		"TGPCTRL.tpod_laser_sw": {
+			"arg": 1416,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3416,
+			"description": "TGP Laser Switch SAFE/ARM",
+			"deviceId": 54,
+			"elementName": "PTN_1416",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TGPCTRL.tpod_pwr_kb": {
+			"bindings": [
+				{
+					"name": "TGP Power Switch: OFF/STBY/ON",
+					"valueDown": 0.5
+				},
+				{
+					"name": "TGP Power Switch: OFF/STBY/ON",
+					"valueDown": 0.5
+				},
+				{
+					"name": "TGP Power Switch: ON/STBY/OFF",
+					"valueDown": -0.5
+				},
+				{
+					"name": "TGP Power Switch: ON/STBY/OFF",
+					"valueDown": -0.5
+				}
+			],
+			"commandId": 3110,
+			"description": "TGP Power Switch: OFF/STBY/ON (+3 more)",
+			"deviceId": 54,
+			"type": "raw"
+		},
+		"TGPCTRL.tpod_pwr_sw": {
+			"arg": 1413,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3413,
+			"description": "TGP Power Switch OFF/STBY/ON",
+			"deviceId": 54,
+			"elementName": "PTN_1413",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_A_P": {
+			"arg": 303,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3034,
+			"description": "A/P Key",
+			"deviceId": 56,
+			"elementName": "PTN_303",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_BRT_CTRL": {
+			"arg": 286,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "UFC LCD Brightness",
+			"deviceId": 56,
+			"elementName": "PTN_286",
+			"type": "continuous"
+		},
+		"UFCCTRL_FRONT.UFC_BRT_CTRL_CCW": {
+			"bindings": [
+				{
+					"name": "UFC Bright Control CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3039,
+			"description": "UFC Bright Control CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_BRT_CTRL_CW": {
+			"bindings": [
+				{
+					"name": "UFC Bright Control CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3040,
+			"description": "UFC Bright Control CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_CLEAR": {
+			"arg": 304,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3035,
+			"description": "Clear Key",
+			"deviceId": 56,
+			"elementName": "PTN_304",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_DATA": {
+			"arg": 306,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3037,
+			"description": "Data Key",
+			"deviceId": 56,
+			"elementName": "PTN_306",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_DOT": {
+			"arg": 298,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "Decimal Point Key",
+			"deviceId": 56,
+			"elementName": "PTN_298",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_EMIS_LMT": {
+			"arg": 287,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Emission Limit",
+			"deviceId": 56,
+			"elementName": "PTN_287",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_GREC_CM_LEFT": {
+			"arg": 288,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Left Guard Receiver - Channel/Manual Key",
+			"deviceId": 56,
+			"elementName": "PTN_288",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_GREC_CM_RIGHT": {
+			"arg": 292,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Right Guard Receiver - Channel/Manual Key",
+			"deviceId": 56,
+			"elementName": "PTN_292",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_I_P": {
+			"arg": 297,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3028,
+			"description": "I/P Key",
+			"deviceId": 56,
+			"elementName": "PTN_297",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_A1": {
+			"arg": 289,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "A/1 Key",
+			"deviceId": 56,
+			"elementName": "PTN_289",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_B3": {
+			"arg": 291,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "B/3 Key",
+			"deviceId": 56,
+			"elementName": "PTN_291",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_C9": {
+			"arg": 301,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3032,
+			"description": "C 9 Key",
+			"deviceId": 56,
+			"elementName": "PTN_301",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_E6": {
+			"arg": 296,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "E/6 Key",
+			"deviceId": 56,
+			"elementName": "PTN_296",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_M5": {
+			"arg": 295,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3026,
+			"description": "M/5 Key",
+			"deviceId": 56,
+			"elementName": "PTN_295",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_N2": {
+			"arg": 290,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "N/2 Key",
+			"deviceId": 56,
+			"elementName": "PTN_290",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_S8": {
+			"arg": 300,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3031,
+			"description": "S/8 Key",
+			"deviceId": 56,
+			"elementName": "PTN_300",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY_W4": {
+			"arg": 294,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3025,
+			"description": "W/4 Key",
+			"deviceId": 56,
+			"elementName": "PTN_294",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY__0": {
+			"arg": 305,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3036,
+			"description": "-/0 Key",
+			"deviceId": 56,
+			"elementName": "PTN_305",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_KEY__7": {
+			"arg": 299,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3030,
+			"description": ":/7 Key",
+			"deviceId": 56,
+			"elementName": "PTN_299",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_MARK": {
+			"arg": 293,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3024,
+			"description": "Mark key",
+			"deviceId": 56,
+			"elementName": "PTN_293",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_MENU": {
+			"arg": 307,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3038,
+			"description": "Menu Key",
+			"deviceId": 56,
+			"elementName": "PTN_307",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_0": {
+			"arg": 275,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "UFC Push button 10",
+			"deviceId": 56,
+			"elementName": "PTN_275",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_1": {
+			"arg": 270,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "UFC Push button 1",
+			"deviceId": 56,
+			"elementName": "PTN_270",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_2": {
+			"arg": 271,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "UFC Push button 2",
+			"deviceId": 56,
+			"elementName": "PTN_271",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_3": {
+			"arg": 272,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "UFC Push button 3",
+			"deviceId": 56,
+			"elementName": "PTN_272",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_4": {
+			"arg": 273,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "UFC Push button 4",
+			"deviceId": 56,
+			"elementName": "PTN_273",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_5": {
+			"arg": 274,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "UFC Push button 5",
+			"deviceId": 56,
+			"elementName": "PTN_274",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_6": {
+			"arg": 279,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "UFC Push button 6",
+			"deviceId": 56,
+			"elementName": "PTN_279",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_7": {
+			"arg": 278,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "UFC Push button 7",
+			"deviceId": 56,
+			"elementName": "PTN_278",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_8": {
+			"arg": 277,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "UFC Push button 8",
+			"deviceId": 56,
+			"elementName": "PTN_277",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PB_9": {
+			"arg": 276,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "UFC Push button 9",
+			"deviceId": 56,
+			"elementName": "PTN_276",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_LEFT": {
+			"arg": 280,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Left UHF Preset Channel Selector",
+			"deviceId": 56,
+			"elementName": "PTN_280",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_LEFT_CCW": {
+			"bindings": [
+				{
+					"name": "Left UHF Preset Channel Selector CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3041,
+			"description": "Left UHF Preset Channel Selector CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_LEFT_CW": {
+			"bindings": [
+				{
+					"name": "Left UHF Preset Channel Selector CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3042,
+			"description": "Left UHF Preset Channel Selector CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_RIGHT": {
+			"arg": 281,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Right UHF Preset Channel Selector",
+			"deviceId": 56,
+			"elementName": "PTN_281",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_RIGHT_CCW": {
+			"bindings": [
+				{
+					"name": "Right UHF Preset Channel Selector CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3043,
+			"description": "Right UHF Preset Channel Selector CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_RIGHT_CW": {
+			"bindings": [
+				{
+					"name": "Right UHF Preset Channel Selector CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3044,
+			"description": "Right UHF Preset Channel Selector CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_SW_LEFT": {
+			"arg": 680,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3055,
+			"description": "Left UHF Preset Channel Selector",
+			"deviceId": 56,
+			"elementName": "PTN_280",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_PRESET_SW_RIGHT": {
+			"arg": 681,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3056,
+			"description": "Right UHF Preset Channel Selector",
+			"deviceId": 56,
+			"elementName": "PTN_281",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_SHF": {
+			"arg": 302,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3033,
+			"description": "Shift Key",
+			"deviceId": 56,
+			"elementName": "PTN_302",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_FRONT.UFC_UHF_1_3_SWITCH": {
+			"bindings": [
+				{
+					"name": "Radio 1 and Radio 3 Toggle",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3053,
+			"description": "Radio 1 and Radio 3 Toggle",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_UHF_2_4_SWITCH": {
+			"bindings": [
+				{
+					"name": "Radio 2 and Radio 4 Toggle",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3054,
+			"description": "Radio 2 and Radio 4 Toggle",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R1": {
+			"arg": 282,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "UHF Radio 1 Volume",
+			"deviceId": 56,
+			"elementName": "PTN_282",
+			"type": "continuous"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R1_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 1 Volume CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3045,
+			"description": "Radio 1 Volume CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R1_CW": {
+			"bindings": [
+				{
+					"name": "Radio 1 Volume CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3046,
+			"description": "Radio 1 Volume CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R2": {
+			"arg": 283,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "UHF Radio 2 Volume",
+			"deviceId": 56,
+			"elementName": "PTN_283",
+			"type": "continuous"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R2_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 2 Volume CCW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3047,
+			"description": "Radio 2 Volume CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R2_CW": {
+			"bindings": [
+				{
+					"name": "Radio 2 Volume CW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3048,
+			"description": "Radio 2 Volume CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R3": {
+			"arg": 284,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "UHF Radio 3 Volume",
+			"deviceId": 56,
+			"elementName": "PTN_284",
+			"type": "continuous"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R3_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 3 Volume CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3049,
+			"description": "Radio 3 Volume CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R3_CW": {
+			"bindings": [
+				{
+					"name": "Radio 3 Volume CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3050,
+			"description": "Radio 3 Volume CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R4": {
+			"arg": 285,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "UHF Radio 4 Volume",
+			"deviceId": 56,
+			"elementName": "PTN_285",
+			"type": "continuous"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R4_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 4 Volume CCW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3051,
+			"description": "Radio 4 Volume CCW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_FRONT.UFC_VOL_R4_CW": {
+			"bindings": [
+				{
+					"name": "Radio 4 Volume CW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3052,
+			"description": "Radio 4 Volume CW",
+			"deviceId": 56,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_A_P": {
+			"arg": 1328,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3034,
+			"description": "A/P Key",
+			"deviceId": 57,
+			"elementName": "PTN_1328",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_BRT_CTRL": {
+			"arg": 1311,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "UFC LCD Brightness",
+			"deviceId": 57,
+			"elementName": "PTN_1311",
+			"type": "continuous"
+		},
+		"UFCCTRL_REAR.UFC_BRT_CTRL_CCW": {
+			"bindings": [
+				{
+					"name": "UFC Bright Control CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3039,
+			"description": "UFC Bright Control CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_BRT_CTRL_CW": {
+			"bindings": [
+				{
+					"name": "UFC Bright Control CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3040,
+			"description": "UFC Bright Control CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_CLEAR": {
+			"arg": 1329,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3035,
+			"description": "Clear Key",
+			"deviceId": 57,
+			"elementName": "PTN_1329",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_DATA": {
+			"arg": 1331,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3037,
+			"description": "Data Key",
+			"deviceId": 57,
+			"elementName": "PTN_1331",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_DOT": {
+			"arg": 1323,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "Decimal Point Key",
+			"deviceId": 57,
+			"elementName": "PTN_1323",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_EMIS_LMT": {
+			"arg": 1312,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Emission Limit",
+			"deviceId": 57,
+			"elementName": "PTN_1312",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_GREC_CM_LEFT": {
+			"arg": 1313,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Left Guard Receiver - Channel/Manual Key",
+			"deviceId": 57,
+			"elementName": "PTN_1313",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_GREC_CM_RIGHT": {
+			"arg": 1317,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Right Guard Receiver - Channel/Manual Key",
+			"deviceId": 57,
+			"elementName": "PTN_1317",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_I_P": {
+			"arg": 1322,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3028,
+			"description": "I/P Key",
+			"deviceId": 57,
+			"elementName": "PTN_1322",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_A1": {
+			"arg": 1314,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "A/1 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1314",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_B3": {
+			"arg": 1316,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "B/3 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1316",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_C9": {
+			"arg": 1326,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3032,
+			"description": "C 9 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1326",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_E6": {
+			"arg": 1321,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "E/6 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1321",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_M5": {
+			"arg": 1320,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3026,
+			"description": "M/5 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1320",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_N2": {
+			"arg": 1315,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "N/2 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1315",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_S8": {
+			"arg": 1325,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3031,
+			"description": "S/8 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1325",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY_W4": {
+			"arg": 1319,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3025,
+			"description": "W/4 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1319",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY__0": {
+			"arg": 1330,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3036,
+			"description": "-/0 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1330",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_KEY__7": {
+			"arg": 1324,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3030,
+			"description": ":/7 Key",
+			"deviceId": 57,
+			"elementName": "PTN_1324",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_MARK": {
+			"arg": 1318,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3024,
+			"description": "Mark key",
+			"deviceId": 57,
+			"elementName": "PTN_1318",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_MENU": {
+			"arg": 1332,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3038,
+			"description": "Menu Key",
+			"deviceId": 57,
+			"elementName": "PTN_1332",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_0": {
+			"arg": 1298,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "UFC Push button 10",
+			"deviceId": 57,
+			"elementName": "PTN_1298",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_1": {
+			"arg": 1293,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "UFC Push button 1",
+			"deviceId": 57,
+			"elementName": "PTN_1293",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_2": {
+			"arg": 1294,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "UFC Push button 2",
+			"deviceId": 57,
+			"elementName": "PTN_1294",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_3": {
+			"arg": 1295,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "UFC Push button 3",
+			"deviceId": 57,
+			"elementName": "PTN_1295",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_4": {
+			"arg": 1296,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "UFC Push button 4",
+			"deviceId": 57,
+			"elementName": "PTN_1296",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_5": {
+			"arg": 1297,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "UFC Push button 5",
+			"deviceId": 57,
+			"elementName": "PTN_1297",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_6": {
+			"arg": 1302,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "UFC Push button 6",
+			"deviceId": 57,
+			"elementName": "PTN_1302",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_7": {
+			"arg": 1301,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "UFC Push button 7",
+			"deviceId": 57,
+			"elementName": "PTN_1301",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_8": {
+			"arg": 1300,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "UFC Push button 8",
+			"deviceId": 57,
+			"elementName": "PTN_1300",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PB_9": {
+			"arg": 1299,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "UFC Push button 9",
+			"deviceId": 57,
+			"elementName": "PTN_1299",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_LEFT": {
+			"arg": 1303,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Left UHF Preset Channel Selector",
+			"deviceId": 57,
+			"elementName": "PTN_1303",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_LEFT_CCW": {
+			"bindings": [
+				{
+					"name": "Left UHF Preset Channel Selector CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3041,
+			"description": "Left UHF Preset Channel Selector CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_LEFT_CW": {
+			"bindings": [
+				{
+					"name": "Left UHF Preset Channel Selector CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3042,
+			"description": "Left UHF Preset Channel Selector CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_RIGHT": {
+			"arg": 1305,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Right UHF Preset Channel Selector",
+			"deviceId": 57,
+			"elementName": "PTN_1305",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_RIGHT_CCW": {
+			"bindings": [
+				{
+					"name": "Right UHF Preset Channel Selector CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3043,
+			"description": "Right UHF Preset Channel Selector CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_RIGHT_CW": {
+			"bindings": [
+				{
+					"name": "Right UHF Preset Channel Selector CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3044,
+			"description": "Right UHF Preset Channel Selector CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_SW_LEFT": {
+			"arg": 1304,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3055,
+			"description": "Left UHF Preset Channel Selector",
+			"deviceId": 57,
+			"elementName": "PTN_1303",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_PRESET_SW_RIGHT": {
+			"arg": 1306,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3056,
+			"description": "Right UHF Preset Channel Selector",
+			"deviceId": 57,
+			"elementName": "PTN_1305",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_SHF": {
+			"arg": 1327,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3033,
+			"description": "Shift Key",
+			"deviceId": 57,
+			"elementName": "PTN_1327",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UFCCTRL_REAR.UFC_UHF_1_3_SWITCH": {
+			"bindings": [
+				{
+					"name": "Radio 1 and Radio 3 Toggle",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3053,
+			"description": "Radio 1 and Radio 3 Toggle",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_UHF_2_4_SWITCH": {
+			"bindings": [
+				{
+					"name": "Radio 2 and Radio 4 Toggle",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3054,
+			"description": "Radio 2 and Radio 4 Toggle",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R1": {
+			"arg": 1307,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "UHF Radio 1 Volume",
+			"deviceId": 57,
+			"elementName": "PTN_1307",
+			"type": "continuous"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R1_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 1 Volume CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3045,
+			"description": "Radio 1 Volume CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R1_CW": {
+			"bindings": [
+				{
+					"name": "Radio 1 Volume CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3046,
+			"description": "Radio 1 Volume CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R2": {
+			"arg": 1308,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "UHF Radio 2 Volume",
+			"deviceId": 57,
+			"elementName": "PTN_1308",
+			"type": "continuous"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R2_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 2 Volume CCW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3047,
+			"description": "Radio 2 Volume CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R2_CW": {
+			"bindings": [
+				{
+					"name": "Radio 2 Volume CW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3048,
+			"description": "Radio 2 Volume CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R3": {
+			"arg": 1309,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "UHF Radio 3 Volume",
+			"deviceId": 57,
+			"elementName": "PTN_1309",
+			"type": "continuous"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R3_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 3 Volume CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3049,
+			"description": "Radio 3 Volume CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R3_CW": {
+			"bindings": [
+				{
+					"name": "Radio 3 Volume CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3050,
+			"description": "Radio 3 Volume CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R4": {
+			"arg": 1310,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "UHF Radio 4 Volume",
+			"deviceId": 57,
+			"elementName": "PTN_1310",
+			"type": "continuous"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R4_CCW": {
+			"bindings": [
+				{
+					"name": "Radio 4 Volume CCW",
+					"valueDown": -0.01499
+				}
+			],
+			"commandId": 3051,
+			"description": "Radio 4 Volume CCW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"UFCCTRL_REAR.UFC_VOL_R4_CW": {
+			"bindings": [
+				{
+					"name": "Radio 4 Volume CW",
+					"valueDown": 0.01499
+				}
+			],
+			"commandId": 3052,
+			"description": "Radio 4 Volume CW",
+			"deviceId": 57,
+			"type": "raw"
+		},
+		"WCAS.cmd_3401": {
+			"arg": 401,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3401,
+			"description": "Master Caution Button",
+			"deviceId": 29,
+			"elementName": "PTN_401",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WCAS.cmd_3428": {
+			"arg": 1428,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3428,
+			"description": "VW/Tone Silence switch",
+			"deviceId": 29,
+			"elementName": "PTN_1428",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WCAS.cmd_3510": {
+			"arg": 510,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3510,
+			"description": "VW/Tone Silence switch",
+			"deviceId": 29,
+			"elementName": "PTN_510",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WCAS.master_caution_btn_rc": {
+			"arg": 1176,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3176,
+			"description": "Master Caution Button",
+			"deviceId": 29,
+			"elementName": "PTN_1176",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WCAS.warn_tone_sil_btn": {
+			"arg": 325,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3325,
+			"description": "Landing Gear Warning Tone Silence Switch",
+			"deviceId": 29,
+			"elementName": "PTN_325",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"arg.mirrors_draw": {
+			"arg": 1010,
+			"description": "mirrors_draw"
+		},
+		"ind.0": {
+			"description": "ccF15E_HUD_NF (all fields)",
+			"indicationId": 0
+		},
+		"ind.0.NF_FOV": {
+			"description": "NF_FOV",
+			"fieldName": "NF_FOV",
+			"indicationId": 0
+		},
+		"ind.0.glass": {
+			"description": "glass",
+			"fieldName": "glass",
+			"indicationId": 0
+		},
+		"ind.1": {
+			"description": "ccHUDM (all fields)",
+			"indicationId": 1
+		},
+		"ind.1.glass": {
+			"description": "glass",
+			"fieldName": "glass",
+			"indicationId": 1
+		},
+		"ind.18": {
+			"description": "ccUFC_Rear (all fields)",
+			"indicationId": 18
+		},
+		"ind.18.UFC_CC_01": {
+			"description": "UFC_CC_01",
+			"fieldName": "UFC_CC_01",
+			"indicationId": 18
+		},
+		"ind.18.UFC_CC_02": {
+			"description": "UFC_CC_02",
+			"fieldName": "UFC_CC_02",
+			"indicationId": 18
+		},
+		"ind.18.UFC_CC_03": {
+			"description": "UFC_CC_03",
+			"fieldName": "UFC_CC_03",
+			"indicationId": 18
+		},
+		"ind.18.UFC_CC_04": {
+			"description": "UFC_CC_04",
+			"fieldName": "UFC_CC_04",
+			"indicationId": 18
+		},
+		"ind.18.UFC_DISPLAY": {
+			"description": "UFC_DISPLAY",
+			"fieldName": "UFC_DISPLAY",
+			"indicationId": 18
+		},
+		"ind.18.UFC_LL_INPUT_DEG": {
+			"description": "UFC_LL_INPUT_DEG",
+			"fieldName": "UFC_LL_INPUT_DEG",
+			"indicationId": 18
+		},
+		"ind.18.UFC_LL_INPUT_MIN": {
+			"description": "UFC_LL_INPUT_MIN",
+			"fieldName": "UFC_LL_INPUT_MIN",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_01": {
+			"description": "UFC_SC_01",
+			"fieldName": "UFC_SC_01",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_02": {
+			"description": "UFC_SC_02",
+			"fieldName": "UFC_SC_02",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_02A": {
+			"description": "UFC_SC_02A",
+			"fieldName": "UFC_SC_02A",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_02B": {
+			"description": "UFC_SC_02B",
+			"fieldName": "UFC_SC_02B",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_03": {
+			"description": "UFC_SC_03",
+			"fieldName": "UFC_SC_03",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_03ILS": {
+			"description": "UFC_SC_03ILS",
+			"fieldName": "UFC_SC_03ILS",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_03L1": {
+			"description": "UFC_SC_03L1",
+			"fieldName": "UFC_SC_03L1",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_03L2": {
+			"description": "UFC_SC_03L2",
+			"fieldName": "UFC_SC_03L2",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_04": {
+			"description": "UFC_SC_04",
+			"fieldName": "UFC_SC_04",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_05": {
+			"description": "UFC_SC_05",
+			"fieldName": "UFC_SC_05",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_05A": {
+			"description": "UFC_SC_05A",
+			"fieldName": "UFC_SC_05A",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_06": {
+			"description": "UFC_SC_06",
+			"fieldName": "UFC_SC_06",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_07": {
+			"description": "UFC_SC_07",
+			"fieldName": "UFC_SC_07",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_08": {
+			"description": "UFC_SC_08",
+			"fieldName": "UFC_SC_08",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_08A": {
+			"description": "UFC_SC_08A",
+			"fieldName": "UFC_SC_08A",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_09": {
+			"description": "UFC_SC_09",
+			"fieldName": "UFC_SC_09",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_09_D2A": {
+			"description": "UFC_SC_09_D2A",
+			"fieldName": "UFC_SC_09_D2A",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_09_D2B": {
+			"description": "UFC_SC_09_D2B",
+			"fieldName": "UFC_SC_09_D2B",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_10": {
+			"description": "UFC_SC_10",
+			"fieldName": "UFC_SC_10",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_10_SPB": {
+			"description": "UFC_SC_10_SPB",
+			"fieldName": "UFC_SC_10_SPB",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_11": {
+			"description": "UFC_SC_11",
+			"fieldName": "UFC_SC_11",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_11_D2A": {
+			"description": "UFC_SC_11_D2A",
+			"fieldName": "UFC_SC_11_D2A",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_11_D2B": {
+			"description": "UFC_SC_11_D2B",
+			"fieldName": "UFC_SC_11_D2B",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_11_SPA": {
+			"description": "UFC_SC_11_SPA",
+			"fieldName": "UFC_SC_11_SPA",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_11_SPB": {
+			"description": "UFC_SC_11_SPB",
+			"fieldName": "UFC_SC_11_SPB",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_12": {
+			"description": "UFC_SC_12",
+			"fieldName": "UFC_SC_12",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_R1": {
+			"description": "UFC_SC_R1",
+			"fieldName": "UFC_SC_R1",
+			"indicationId": 18
+		},
+		"ind.18.UFC_SC_R23R3": {
+			"description": "UFC_SC_R23R3",
+			"fieldName": "UFC_SC_R23R3",
+			"indicationId": 18
+		},
+		"ind.19": {
+			"description": "ccHelmetF15E (all fields)",
+			"indicationId": 19
+		},
+		"ind.19.visor_novr": {
+			"description": "visor_novr",
+			"fieldName": "visor_novr",
+			"indicationId": 19
+		},
+		"ind.19.visor_vr_left": {
+			"description": "visor_vr_left",
+			"fieldName": "visor_vr_left",
+			"indicationId": 19
+		},
+		"ind.19.visor_vr_right": {
+			"description": "visor_vr_right",
+			"fieldName": "visor_vr_right",
+			"indicationId": 19
+		},
+		"ind.20": {
+			"description": "ccControlsIndicatorF15E (all fields)",
+			"indicationId": 20
+		},
+		"ind.20.ab_scale": {
+			"description": "ab_scale",
+			"fieldName": "ab_scale",
+			"indicationId": 20
+		},
+		"ind.20.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 20
+		},
+		"ind.20.idle_scale": {
+			"description": "idle_scale",
+			"fieldName": "idle_scale",
+			"indicationId": 20
+		},
+		"ind.20.pitch_scale": {
+			"description": "pitch_scale",
+			"fieldName": "pitch_scale",
+			"indicationId": 20
+		},
+		"ind.20.roll_scale": {
+			"description": "roll_scale",
+			"fieldName": "roll_scale",
+			"indicationId": 20
+		},
+		"ind.20.rudder_scale": {
+			"description": "rudder_scale",
+			"fieldName": "rudder_scale",
+			"indicationId": 20
+		},
+		"ind.20.stick_position": {
+			"description": "stick_position",
+			"fieldName": "stick_position",
+			"indicationId": 20
+		},
+		"ind.20.throttle_scale": {
+			"description": "throttle_scale",
+			"fieldName": "throttle_scale",
+			"indicationId": 20
+		},
+		"ind.20.trimmer_stick_position": {
+			"description": "trimmer_stick_position",
+			"fieldName": "trimmer_stick_position",
+			"indicationId": 20
+		},
+		"ind.20.wheel_brake_actual_left": {
+			"description": "wheel_brake_actual_left",
+			"fieldName": "wheel_brake_actual_left",
+			"indicationId": 20
+		},
+		"ind.20.wheel_brake_actual_right": {
+			"description": "wheel_brake_actual_right",
+			"fieldName": "wheel_brake_actual_right",
+			"indicationId": 20
+		},
+		"ind.20.wheel_brake_left": {
+			"description": "wheel_brake_left",
+			"fieldName": "wheel_brake_left",
+			"indicationId": 20
+		},
+		"ind.20.wheel_brake_mask_left": {
+			"description": "wheel_brake_mask_left",
+			"fieldName": "wheel_brake_mask_left",
+			"indicationId": 20
+		},
+		"ind.20.wheel_brake_mask_right": {
+			"description": "wheel_brake_mask_right",
+			"fieldName": "wheel_brake_mask_right",
+			"indicationId": 20
+		},
+		"ind.20.wheel_brake_right": {
+			"description": "wheel_brake_right",
+			"fieldName": "wheel_brake_right",
+			"indicationId": 20
+		},
+		"ind.9": {
+			"description": "ccUFC_Front (all fields)",
+			"indicationId": 9
+		},
+		"ind.9.UFC_CC_01": {
+			"description": "UFC_CC_01",
+			"fieldName": "UFC_CC_01",
+			"indicationId": 9
+		},
+		"ind.9.UFC_CC_02": {
+			"description": "UFC_CC_02",
+			"fieldName": "UFC_CC_02",
+			"indicationId": 9
+		},
+		"ind.9.UFC_CC_03": {
+			"description": "UFC_CC_03",
+			"fieldName": "UFC_CC_03",
+			"indicationId": 9
+		},
+		"ind.9.UFC_CC_04": {
+			"description": "UFC_CC_04",
+			"fieldName": "UFC_CC_04",
+			"indicationId": 9
+		},
+		"ind.9.UFC_DISPLAY": {
+			"description": "UFC_DISPLAY",
+			"fieldName": "UFC_DISPLAY",
+			"indicationId": 9
+		},
+		"ind.9.UFC_LL_INPUT_DEG": {
+			"description": "UFC_LL_INPUT_DEG",
+			"fieldName": "UFC_LL_INPUT_DEG",
+			"indicationId": 9
+		},
+		"ind.9.UFC_LL_INPUT_MIN": {
+			"description": "UFC_LL_INPUT_MIN",
+			"fieldName": "UFC_LL_INPUT_MIN",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_01": {
+			"description": "UFC_SC_01",
+			"fieldName": "UFC_SC_01",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_02": {
+			"description": "UFC_SC_02",
+			"fieldName": "UFC_SC_02",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_02A": {
+			"description": "UFC_SC_02A",
+			"fieldName": "UFC_SC_02A",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_02B": {
+			"description": "UFC_SC_02B",
+			"fieldName": "UFC_SC_02B",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_03": {
+			"description": "UFC_SC_03",
+			"fieldName": "UFC_SC_03",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_03ILS": {
+			"description": "UFC_SC_03ILS",
+			"fieldName": "UFC_SC_03ILS",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_03L1": {
+			"description": "UFC_SC_03L1",
+			"fieldName": "UFC_SC_03L1",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_03L2": {
+			"description": "UFC_SC_03L2",
+			"fieldName": "UFC_SC_03L2",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_04": {
+			"description": "UFC_SC_04",
+			"fieldName": "UFC_SC_04",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_05": {
+			"description": "UFC_SC_05",
+			"fieldName": "UFC_SC_05",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_05A": {
+			"description": "UFC_SC_05A",
+			"fieldName": "UFC_SC_05A",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_06": {
+			"description": "UFC_SC_06",
+			"fieldName": "UFC_SC_06",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_07": {
+			"description": "UFC_SC_07",
+			"fieldName": "UFC_SC_07",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_08": {
+			"description": "UFC_SC_08",
+			"fieldName": "UFC_SC_08",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_08A": {
+			"description": "UFC_SC_08A",
+			"fieldName": "UFC_SC_08A",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_09": {
+			"description": "UFC_SC_09",
+			"fieldName": "UFC_SC_09",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_09_D2A": {
+			"description": "UFC_SC_09_D2A",
+			"fieldName": "UFC_SC_09_D2A",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_09_D2B": {
+			"description": "UFC_SC_09_D2B",
+			"fieldName": "UFC_SC_09_D2B",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_10": {
+			"description": "UFC_SC_10",
+			"fieldName": "UFC_SC_10",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_10_SPB": {
+			"description": "UFC_SC_10_SPB",
+			"fieldName": "UFC_SC_10_SPB",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_11": {
+			"description": "UFC_SC_11",
+			"fieldName": "UFC_SC_11",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_11_D2A": {
+			"description": "UFC_SC_11_D2A",
+			"fieldName": "UFC_SC_11_D2A",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_11_D2B": {
+			"description": "UFC_SC_11_D2B",
+			"fieldName": "UFC_SC_11_D2B",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_11_SPA": {
+			"description": "UFC_SC_11_SPA",
+			"fieldName": "UFC_SC_11_SPA",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_11_SPB": {
+			"description": "UFC_SC_11_SPB",
+			"fieldName": "UFC_SC_11_SPB",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_12": {
+			"description": "UFC_SC_12",
+			"fieldName": "UFC_SC_12",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_R1": {
+			"description": "UFC_SC_R1",
+			"fieldName": "UFC_SC_R1",
+			"indicationId": 9
+		},
+		"ind.9.UFC_SC_R23R3": {
+			"description": "UFC_SC_R23R3",
+			"fieldName": "UFC_SC_R23R3",
+			"indicationId": 9
+		}
+	},
+	"moduleName": "F-15ESE"
+}

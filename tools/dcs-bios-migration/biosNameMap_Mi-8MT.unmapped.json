@@ -1,0 +1,154 @@
+{
+	"AUTOPILOT_ALT_CHNL": {
+		"arg": 146,
+		"cmd": 3007,
+		"dev": 16,
+		"kind": "3PosTumb",
+		"lineno": 206,
+		"reason": "no-match"
+	},
+	"BATT_HEAT_SWITCH": {
+		"arg": 522,
+		"cmd": 3106,
+		"dev": 1,
+		"kind": "ToggleSwitch",
+		"lineno": 35,
+		"reason": "no-match"
+	},
+	"CLOCK_L_LEV_PRESS": {
+		"arg": 57,
+		"cmd": 3002,
+		"dev": 45,
+		"kind": "Tumb",
+		"lineno": 913,
+		"reason": "no-match"
+	},
+	"CLOCK_L_LEV_PULL": {
+		"arg": 57,
+		"cmd": 3001,
+		"dev": 45,
+		"kind": "Tumb",
+		"lineno": 912,
+		"reason": "no-match"
+	},
+	"JADRO_1A_RADIO": {
+		"arg": 1,
+		"cmd": 7,
+		"dev": 37,
+		"kind": "ReadWriteRadio",
+		"lineno": 941,
+		"reason": "no-match"
+	},
+	"R828_RADIO": {
+		"arg": 3,
+		"cmd": 7,
+		"dev": 39,
+		"kind": "ReadWriteRadio",
+		"lineno": 943,
+		"reason": "no-match"
+	},
+	"R863_RADIO": {
+		"arg": 3,
+		"cmd": 7,
+		"dev": 38,
+		"kind": "ReadWriteRadio",
+		"lineno": 942,
+		"reason": "no-match"
+	},
+	"RI65_AMP": {
+		"arg": 295,
+		"cmd": 3020,
+		"dev": 36,
+		"kind": "ToggleSwitch",
+		"lineno": 340,
+		"reason": "no-match"
+	},
+	"SPUU52_TEST": {
+		"arg": 129,
+		"cmd": 3003,
+		"dev": 8,
+		"kind": "3PosTumb",
+		"lineno": 463,
+		"reason": "no-match"
+	},
+	"WIPER_L_OFF": {
+		"arg": 331,
+		"cmd": 3025,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 521,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-LES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-LES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-LES-TMB-GLSCLN-START']"
+	},
+	"WIPER_L_ON": {
+		"arg": 331,
+		"cmd": 3025,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 522,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-LES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-LES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-LES-TMB-GLSCLN-START']"
+	},
+	"WIPER_L_RST": {
+		"arg": 331,
+		"cmd": 3025,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 523,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-LES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-LES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-LES-TMB-GLSCLN-START']"
+	},
+	"WIPER_L_SPD_1": {
+		"arg": 331,
+		"cmd": 3025,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 524,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-LES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-LES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-LES-TMB-GLSCLN-START']"
+	},
+	"WIPER_L_SPD_2": {
+		"arg": 331,
+		"cmd": 3025,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 525,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-LES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-LES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-LES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-LES-TMB-GLSCLN-START']"
+	},
+	"WIPER_R_OFF": {
+		"arg": 478,
+		"cmd": 3026,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 526,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-RES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-RES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-RES-TMB-GLSCLN-START']"
+	},
+	"WIPER_R_ON": {
+		"arg": 478,
+		"cmd": 3026,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 527,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-RES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-RES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-RES-TMB-GLSCLN-START']"
+	},
+	"WIPER_R_RST": {
+		"arg": 478,
+		"cmd": 3026,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 528,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-RES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-RES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-RES-TMB-GLSCLN-START']"
+	},
+	"WIPER_R_SPD_1": {
+		"arg": 478,
+		"cmd": 3026,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 529,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-RES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-RES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-RES-TMB-GLSCLN-START']"
+	},
+	"WIPER_R_SPD_2": {
+		"arg": 478,
+		"cmd": 3026,
+		"dev": 17,
+		"kind": "Tumb",
+		"lineno": 530,
+		"reason": "triple-ambiguous:['CPT_MECH.PTR-RES-TMB-GLSCLN-HISPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-LOWSPEED', 'CPT_MECH.PTR-RES-TMB-GLSCLN-OFF', 'CPT_MECH.PTR-RES-TMB-GLSCLN-RESET', 'CPT_MECH.PTR-RES-TMB-GLSCLN-START']"
+	}
+}

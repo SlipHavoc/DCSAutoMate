@@ -1,0 +1,658 @@
+dialog = {
+	["type"] = "Window",
+	["params"] = {
+		["bounds"] = {
+			[1] = {
+				["h"] = 380,
+				["w"] = 460,
+				["x"] = 0,
+				["y"] = 0,
+			},
+		},
+		["draggable"] = true,
+		["enabled"] = true,
+		["hasCursor"] = true,
+		["lockFlow"] = false,
+		["modal"] = false,
+		["offscreen"] = false,
+		["resizable"] = true,
+		["zOrder"] = 200,
+		["text"] = "DCSAutoMate",
+	},
+	["skin"] = {
+		["params"] = {
+			["name"] = "windowSkin",
+		},
+		["skins"] = {
+			["header"] = {
+				["skinData"] = {
+					["params"] = {
+						["hasCloseButton"] = false,
+						["insets"] = {
+							["bottom"] = 2,
+							["left"] = 2,
+							["right"] = 2,
+							["top"] = 2,
+						},
+					},
+					["states"] = {
+						["released"] = {
+							[1] = {
+								["bkg"] = {
+									["center_center"] = "0x1a232dff",
+								},
+								["text"] = {
+									["color"] = "0xffffffff",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["states"] = {
+			["released"] = {
+				[1] = {
+					["bkg"] = {
+						["center_center"] = "0x1a232dff",
+					},
+				},
+			},
+		},
+	},
+	["children"] = {
+		["DcsAutoMateBackground"] = {
+			["type"] = "Static",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 380,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 0,
+				},
+				["enabled"] = false,
+				["text"] = "",
+				["tooltip"] = "",
+				["visible"] = false,
+				["zindex"] = 0,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "staticSkin_ME",
+				},
+				["states"] = {
+					["released"] = {
+						[1] = {
+							["bkg"] = {
+								["center_center"] = "0x1a232dff",
+							},
+						},
+					},
+				},
+			},
+		},
+		["DcsAutoMateModuleCombo"] = {
+			["type"] = "ComboList",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 24,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 70,
+				["text"] = "Module",
+				["tooltip"] = "",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "comboListSkinNew_",
+				},
+			},
+		},
+		["DcsAutoMateScriptCombo"] = {
+			["type"] = "ComboList",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 48,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 75,
+				["text"] = "Script",
+				["tooltip"] = "",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "comboListSkinNew_",
+				},
+			},
+		},
+		["DcsAutoMateVarsGridBackground"] = {
+			["type"] = "Static",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 96,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 72,
+				},
+				["enabled"] = false,
+				["text"] = "",
+				["tooltip"] = "",
+				["visible"] = false,
+				["zindex"] = 0,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "staticSkin_ME",
+				},
+				["states"] = {
+					["released"] = {
+						[1] = {
+							["bkg"] = {
+								["center_center"] = "0x1a232dff",
+							},
+						},
+					},
+				},
+			},
+		},
+		["DcsAutoMateVarsGrid"] = {
+			["type"] = "Grid",
+			["children"] = {
+				["gridHeaderCellVar"] = {
+					["type"] = "GridHeaderCell",
+					["params"] = {
+						["bounds"] = {
+							["h"] = 20,
+							["w"] = 150,
+							["x"] = 0,
+							["y"] = 0,
+						},
+						["draggable"] = false,
+						["enabled"] = true,
+						["layout"] = {
+						},
+						["text"] = "Var",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "gridHeaderCellSkinNew",
+						},
+					},
+				},
+				["gridHeaderCellValue"] = {
+					["type"] = "GridHeaderCell",
+					["params"] = {
+						["bounds"] = {
+							["h"] = 20,
+							["w"] = 310,
+							["x"] = 150,
+							["y"] = 0,
+						},
+						["draggable"] = false,
+						["enabled"] = true,
+						["layout"] = {
+						},
+						["text"] = "Value",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "gridHeaderCellSkinNew",
+						},
+					},
+				},
+			},
+			["params"] = {
+				["bounds"] = {
+					["h"] = 96,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 48,
+				},
+				["columnMouseResizing"] = false,
+				["enabled"] = true,
+				["fixedColumns"] = 2,
+				["horzScrollBarPageStep"] = 0,
+				["horzScrollBarStep"] = 1,
+				["rows"] = 0,
+				["text"] = "",
+				["tooltip"] = "",
+				["vertScrollBarPageStep"] = 0,
+				["vertScrollBarStep"] = 1,
+				["visible"] = true,
+				["zindex"] = 1,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "gridSkin_Multiplayer_roleNew",
+				},
+			},
+		},
+		["DcsAutoMateVarsGridLabelTemplate"] = {
+			["type"] = "Static",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 150,
+					["x"] = 0,
+					["y"] = 0,
+				},
+				["enabled"] = true,
+				["text"] = "(var)",
+				["tooltip"] = "",
+				["visible"] = false,
+				["zindex"] = 0,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "staticSkin_ME",
+				},
+				["states"] = {
+					["released"] = {
+						[1] = {
+							["bkg"] = {
+								["center_center"] = "0x00000000",
+							},
+							["text"] = {
+								["vertAlign"] = {
+									["type"] = "middle",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["DcsAutoMateVarsGridComboTemplate"] = {
+			["type"] = "ComboList",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 310,
+					["x"] = 0,
+					["y"] = 0,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 0,
+				["text"] = "(value)",
+				["tooltip"] = "",
+				["visible"] = false,
+				["zindex"] = 0,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "comboListSkinNew_",
+				},
+			},
+		},
+		["DcsAutoMateVarsGridEditBoxTemplate"] = {
+			["type"] = "EditBox",
+			["params"] = {
+				["acceptDecimalPoint"] = false,
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 310,
+					["x"] = 0,
+					["y"] = 0,
+				},
+				["enabled"] = true,
+				["multiline"] = false,
+				["numeric"] = false,
+				["password"] = false,
+				["readOnly"] = false,
+				["tabOrder"] = 0,
+				["text"] = "",
+				["textWrapping"] = false,
+				["tooltip"] = "",
+				["visible"] = false,
+				["zindex"] = 0,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "editBoxNew",
+				},
+				["states"] = {
+					["released"] = {
+						[1] = {
+							["bkg"] = {
+								["center_center"] = "0xff000000",
+							},
+						},
+					},
+				},
+			},
+		},
+		["DcsAutoMateStartButton"] = {
+			["type"] = "Button",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 142,
+					["x"] = 0,
+					["y"] = 180,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 78,
+				["text"] = "Start",
+				["tooltip"] = "",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "buttonSkin_ME",
+				},
+			},
+		},
+		["DcsAutoMateSkipWaitButton"] = {
+			["type"] = "Button",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 142,
+					["x"] = 146,
+					["y"] = 180,
+				},
+				["enabled"] = false,
+				["tabOrder"] = 79,
+				["text"] = "Skip Wait",
+				["tooltip"] = "End the current wait and go on to the next step",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "buttonSkin_ME",
+				},
+			},
+		},
+		["DcsAutoMateStopButton"] = {
+			["type"] = "Button",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 142,
+					["x"] = 292,
+					["y"] = 180,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 79,
+				["text"] = "Stop",
+				["tooltip"] = "",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "buttonSkin_ME",
+				},
+			},
+		},
+		["DcsAutoMateAutoSelectButton"] = {
+			["type"] = "Button",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 0,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 79,
+				["text"] = "Auto Select",
+				["tooltip"] = "Auto Select Script from Telemetry",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "buttonSkin_ME",
+				},
+			},
+		},
+		["DcsAutoMateCopyOutputButton"] = {
+			["type"] = "Button",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 20,
+					["x"] = 440,
+					["y"] = 180,
+				},
+				["enabled"] = true,
+				["tabOrder"] = 80,
+				["text"] = "",
+				["tooltip"] = "Copy output",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "toggleButtonSkin_ME",
+				},
+				["states"] = {
+					["disabled"] = {
+						[1] = {
+							["bkg"] = {
+								["center_bottom"] = "$nil$",
+								["center_center"] = "$nil$",
+								["center_top"] = "$nil$",
+								["file"] = "$nil$",
+								["insets"] = "$nil$",
+								["left_bottom"] = "$nil$",
+								["left_center"] = "$nil$",
+								["left_top"] = "$nil$",
+								["right_bottom"] = "$nil$",
+								["right_center"] = "$nil$",
+								["right_top"] = "$nil$",
+							},
+							["picture"] = {
+								["color"] = "0xffffff80",
+								["file"] = "dxgui\\skins\\skinme\\images\\mission_editor\\btn_copy.png",
+								["horzAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+								["resizeToFill"] = false,
+								["size"] = {
+									["horz"] = 0,
+									["vert"] = 0,
+								},
+								["tileHorizontally"] = false,
+								["tileVertically"] = false,
+								["userTexSampler"] = 0,
+								["vertAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+							},
+						},
+					},
+					["hover"] = {
+						[1] = {
+							["bkg"] = {
+								["center_bottom"] = "$nil$",
+								["center_center"] = "$nil$",
+								["center_top"] = "$nil$",
+								["file"] = "$nil$",
+								["insets"] = "$nil$",
+								["left_bottom"] = "$nil$",
+								["left_center"] = "$nil$",
+								["left_top"] = "$nil$",
+								["right_bottom"] = "$nil$",
+								["right_center"] = "$nil$",
+								["right_top"] = "$nil$",
+							},
+							["picture"] = {
+								["color"] = "0xffffffff",
+								["file"] = "dxgui\\skins\\skinme\\images\\mission_editor\\btn_copy.png",
+								["horzAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+								["resizeToFill"] = false,
+								["size"] = {
+									["horz"] = 0,
+									["vert"] = 0,
+								},
+								["tileHorizontally"] = false,
+								["tileVertically"] = false,
+								["userTexSampler"] = 0,
+								["vertAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+							},
+						},
+					},
+					["pressed"] = {
+						[1] = {
+							["bkg"] = {
+								["center_bottom"] = "$nil$",
+								["center_center"] = "$nil$",
+								["center_top"] = "$nil$",
+								["file"] = "$nil$",
+								["insets"] = "$nil$",
+								["left_bottom"] = "$nil$",
+								["left_center"] = "$nil$",
+								["left_top"] = "$nil$",
+								["right_bottom"] = "$nil$",
+								["right_center"] = "$nil$",
+								["right_top"] = "$nil$",
+							},
+							["picture"] = {
+								["color"] = "0xffffffff",
+								["file"] = "dxgui\\skins\\skinme\\images\\mission_editor\\btn_copy.png",
+								["horzAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+								["resizeToFill"] = false,
+								["size"] = {
+									["horz"] = 0,
+									["vert"] = 0,
+								},
+								["tileHorizontally"] = false,
+								["tileVertically"] = false,
+								["userTexSampler"] = 0,
+								["vertAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+							},
+						},
+					},
+					["released"] = {
+						[1] = {
+							["picture"] = {
+								["color"] = "0xffffffff",
+								["file"] = "dxgui\\skins\\skinme\\images\\mission_editor\\btn_copy.png",
+								["horzAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+								["resizeToFill"] = false,
+								["size"] = {
+									["horz"] = 0,
+									["vert"] = 0,
+								},
+								["tileHorizontally"] = false,
+								["tileVertically"] = false,
+								["userTexSampler"] = 0,
+								["vertAlign"] = {
+									["offset"] = 0,
+									["type"] = "middle",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["DcsAutoMateNotConnectedLabel"] = {
+			["type"] = "Static",
+			["params"] = {
+				["bounds"] = {
+					["h"] = 20,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 180,
+				},
+				["enabled"] = true,
+				["text"] = "DCSAutoMate is not running. Please start it.",
+				["tooltip"] = "",
+				["visible"] = false,
+				["zindex"] = 10,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "staticSkin_ME",
+				},
+				["states"] = {
+					["released"] = {
+						[1] = {
+							["text"] = {
+								["color"] = "0xffffffff",
+								["horzAlign"] = {
+									["type"] = "center",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["DcsAutoMateMonitorText"] = {
+			["type"] = "EditBox",
+			["params"] = {
+				["acceptDecimalPoint"] = false,
+				["bounds"] = {
+					["h"] = 160,
+					["w"] = 460,
+					["x"] = 0,
+					["y"] = 180,
+				},
+				["enabled"] = true,
+				["multiline"] = true,
+				["numeric"] = false,
+				["password"] = false,
+				["readOnly"] = true,
+				["tabOrder"] = 81,
+				["text"] = "DCSAutoMate monitor\nWaiting for status...",
+				["textWrapping"] = true,
+				["tooltip"] = "",
+				["visible"] = true,
+				["zindex"] = 2,
+			},
+			["skin"] = {
+				["params"] = {
+					["name"] = "editBoxNew",
+				},
+				["states"] = {
+					["released"] = {
+						[1] = {
+							["bkg"] = {
+								["center_center"] = "0x00000080",
+							},
+						},
+					},
+				},
+			},
+		},
+	},
+}

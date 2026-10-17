@@ -1,6 +1,7 @@
 # Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
 def getScriptData():
 	return {
+		'moduleName': 'UH-1H',
 		'scripts': [
 			{
 				'name': 'Cold Start',
@@ -25,115 +26,75 @@ def getScriptData():
 		],
 	}
 
-# Returns 0-65535 scaled by multiple (0-1), eg for 50% call int16(0.5)
-def int16(mult = 1):
-	int16 = 65535
-	return int(mult * int16)
 
-
-def Test(config, vars):
+def Test(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	# Test code here...
+	pushSeqCmd(0, '', '', "Running Test sequence")
 
 
 	return seq
 
 
-def ColdStart(config, vars):
+def ColdStart(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
 
 	# Set intercom mode knob to INT, allows rearming.
-	pushSeqCmd(dt, 'INT_MODE', 1) # 0 = PVT, 1 = INT, 2 = 1, 3 = 2, 4 = 3, 5 = 4
+	pushSeqCmd(dt, 'INTERCOM.TRANSMIT-INTERPHONE-SWITCH-PTR', 1) # 0 = PVT, 1 = INT, 2 = 1, 3 = 2, 4 = 3, 5 = 4
 
 	# Doors ... Toggle
-	pushSeqCmd(dt, 'DOOR_L_PTR', 1)
-	pushSeqCmd(dt, 'DOOR_R_PTR', 1)
+	pushSeqCmd(dt, 'CPT_MECH.DOOR_L-PTR', 1)
+	pushSeqCmd(dt, 'CPT_MECH.DOOR_R-PTR', 1)
 
 	# AC VOLTMETER ... AC PHASE
-	pushSeqCmd(dt, 'AC_VM_SRC', 1) # 0 = AB, 1 = AC PHASE, 2 = BC
+	pushSeqCmd(dt, 'ELEC_INTERFACE.PHASE-SWITCHER-PTR', 1) # 0 = AB, 1 = AC PHASE, 2 = BC
 
 	# INVERTER ... OFF
-	pushSeqCmd(dt, 'INVERTER_SW', 1) # 0 = MAIN ON, 1 = OFF, 2 = SPARE ON
+	pushSeqCmd(dt, 'ELEC_INTERFACE.INVTR-SWITCHER-PTR', 1) # 0 = MAIN ON, 1 = OFF, 2 = SPARE ON
 
 	# MAIN GENERATOR ... ON
-	pushSeqCmd(dt, 'MAIN_GEN_COVER', 1) # Cover open (it starts open on cold spawn)
-	pushSeqCmd(dt, 'MAIN_GEN_SW', 0)  # 0 = ON, 1 = OFF, 2 = RESET
-	pushSeqCmd(dt, 'MAIN_GEN_COVER', 0) # Cover close
+	pushSeqCmd(dt, 'ELEC_INTERFACE.MAIN-GEN-SWITCHER-COVER-PTR', 1) # Cover open (it starts open on cold spawn)
+	pushSeqCmd(dt, 'ELEC_INTERFACE.MAIN-GEN-SWITCHER-PTR', 0)  # 0 = ON, 1 = OFF, 2 = RESET
+	pushSeqCmd(dt, 'ELEC_INTERFACE.MAIN-GEN-SWITCHER-COVER-PTR', 0) # Cover close
 
 	# DC VOLTMETER ... ESS BUS
-	pushSeqCmd(dt, 'DC_VM_SRC', 3) # 0 = BAT, 1 = MAIN GEN, 2 = STBY GEN, 3 = ESS BUS, 4 = NON-ESS BUS
+	pushSeqCmd(dt, 'ELEC_INTERFACE.VM-SWITCHER-PTR', 3) # 0 = BAT, 1 = MAIN GEN, 2 = STBY GEN, 3 = ESS BUS, 4 = NON-ESS BUS
 
 	# STARTER-GENERATOR ... START
-	pushSeqCmd(dt, 'STARTER_GEN_SW', 1) # 0 = STBY GEN, 1 = START
+	pushSeqCmd(dt, 'ELEC_INTERFACE.STARTER-GEN-SWITCHERr-PTR', 1) # 0 = STBY GEN, 1 = START
 
 	# BATTERY ... ON
-	pushSeqCmd(dt, 'BAT_SW', 0) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'ELEC_INTERFACE.BAT-SWITCHER-PTR', 0) # 0 = ON, 1 = OFF
 
 	# LOW RPM WARNING AUDIO ... OFF
-	pushSeqCmd(dt, 'LOW_RPM_AUDIO', 0)
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.LOW-RPM-PTR', 0)
 
 	# GOVERNOR ... AUTO
-	pushSeqCmd(dt, 'EMER_GOV_SW', 1)
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.GOV-PTR', 1)
 
 	# DE-ICE ... OFF
-	pushSeqCmd(dt, 'ENG_DEICE', 0)
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.DE-ICE-PTR', 0)
 
 	# MAIN FUEL ... ON
-	pushSeqCmd(dt, 'MAIN_FUEL_SW', 1)
+	pushSeqCmd(dt, 'FUELSYS_INTERFACE.FUEL-PTR', 1)
 
 	# HYDRAULIC CONTROL ... ON
-	pushSeqCmd(dt, 'HYD_CONT_SW', 1)
+	pushSeqCmd(dt, 'HYDRO_SYS_INTERFACE.HYD-CONT-PTR', 1)
 
 	# FORCE TRIM ... ON
-	pushSeqCmd(dt, 'FORCE_TRIM_SW', 1)
+	pushSeqCmd(dt, 'HYDRO_SYS_INTERFACE.FORCE-TRIM-PTR', 1)
 
 	# CHIP DETECTOR ... BOTH
-	pushSeqCmd(dt, 'CHIP_DET_SW', 1)
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.CHIP-DET-PTR', 1)
 
 	"""
 	Correct engine start procedure:
@@ -152,244 +113,214 @@ def ColdStart(config, vars):
 	"""
 
 	# THROTTLE ... SET TO IDLE POSITION
-	pushSeqCmd(dt, 'THROTTLE', 46810) # 0 = Max throttle, 46810 = Idle stop, ~50000 = Engine start position, 65535 = Min throttle
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.THROTTLE-1-PTR', 0.714) # 0.0 = Max throttle, 0.7143 = Idle stop, ~0.7630 = Engine start position, 1.0 = Min throttle
 	# START ENGINE (40s)
-	pushSeqCmd(dt, 'scriptKeyboard', 'home down') # Press
+	#pushSeqCmd(dt, 'scriptKeyboard', 'home down') # Press
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.Button_18', 1) # START button
+	pushSeqCmd(dt, 'scriptText', 'Engine starting, holding START button for 40 seconds.')
 	pushSeqCmd(40, '', '', "Engine started, releasing START button.")
-	pushSeqCmd(dt, 'scriptKeyboard', 'home up') # Release
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.Button_18', 0) # Release START button
+	#pushSeqCmd(dt, 'scriptKeyboard', 'home up') # Release
 
 	# INVERTER ... MAIN ON
-	pushSeqCmd(dt, 'INVERTER_SW', 0) # 0 = MAIN ON, 1 = OFF, 2 = SPARE ON
+	pushSeqCmd(dt, 'ELEC_INTERFACE.INVTR-SWITCHER-PTR', 0) # 0 = MAIN ON, 1 = OFF, 2 = SPARE ON
 
 	# STARTER-GENERATOR ... STBY GEN
-	pushSeqCmd(dt, 'STARTER_GEN_SW', 0) # 0 = STBY GEN, 1 = START
+	pushSeqCmd(dt, 'ELEC_INTERFACE.STARTER-GEN-SWITCHERr-PTR', 0) # 0 = STBY GEN, 1 = START
 
 	# DC VOLTMETER ... MAIN GEN
-	pushSeqCmd(dt, 'DC_VM_SRC', 1) # 0 = BAT, 1 = MAIN GEN, 2 = STBY GEN, 3 = ESS BUS, 4 = NON-ESS BUS
+	pushSeqCmd(dt, 'ELEC_INTERFACE.VM-SWITCHER-PTR', 1) # 0 = BAT, 1 = MAIN GEN, 2 = STBY GEN, 3 = ESS BUS, 4 = NON-ESS BUS
 
 	# THROTTLE ... SET TO FULL
-	for throttlePos in range(46810, 0, -1000):
-		pushSeqCmd(dt, 'THROTTLE', throttlePos)
-	pushSeqCmd(dt, 'THROTTLE', 0) # Make sure the throttle is set to full (0) at the end.
+	#for throttlePos in range(0.714, 0, -0.01):
+	throttlePos = 0.714
+	while throttlePos >= 0:
+		pushSeqCmd(dt, 'ENGINE_INTERFACE.THROTTLE-1-PTR', throttlePos)
+		throttlePos -= 0.02
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.THROTTLE-1-PTR', 0.0) # Make sure the throttle is set to full (0.0) at the end.
 
 	# LOW RPM WARNING AUDIO ... ON
 	# NOTE This is a magnetically held switch, and turns back on automatically as the rotor spins up.
-	#pushSeqCmd(dt, 'LOW_RPM_AUDIO', 1)
+	#pushSeqCmd(dt, 'ENGINE_INTERFACE.LOW-RPM-PTR', 1)
 
 	# MASTER CAUTION ... RESET
-	pushSeqCmd(dt, 'CLP_RESET_TEST_SW', 2)
-	pushSeqCmd(dt, 'CLP_RESET_TEST_SW', 1)
+	pushSeqCmd(dt, 'SYS_CONTROLLER.RESET-TEST-SWITCH-PTR', 2)
+	pushSeqCmd(dt, 'SYS_CONTROLLER.RESET-TEST-SWITCH-PTR', 1)
 
 	# IFF MASTER knob ... NORM
-	pushSeqCmd(dt, 'IFF_MASTER', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
+	pushSeqCmd(dt, 'IFF.MASTER-CONTROL-PTR', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
 	# IFF CODE knob ... A
 	# NOTE This control doesn't support directly setting the position, so to be idempotent, decrement all the way, then increment.
-	pushSeqCmd(dt, 'IFF_CODE', 'DEC')
-	pushSeqCmd(dt, 'IFF_CODE', 'DEC')
-	pushSeqCmd(dt, 'IFF_CODE', 'INC')
-	pushSeqCmd(dt, 'IFF_CODE', 'INC')
+	pushSeqCmd(dt, 'IFF.CODE-PTR', -1.0)
+	pushSeqCmd(dt, 'IFF.CODE-PTR', -1.0)
+	pushSeqCmd(dt, 'IFF.CODE-PTR', 1.0)
+	pushSeqCmd(dt, 'IFF.CODE-PTR', 1.0)
 	# IFF ON OUT switch ... ON
-	pushSeqCmd(dt, 'IFF_ON_OUT', 1) # 0 = OUT, 1 = ON
+	pushSeqCmd(dt, 'IFF.MODE-4-SWITCH-PTR', 1) # 0 = OUT, 1 = ON
 
 	# RADAR ALTIMETER circuit breaker switch... ON (overhead panel far rear)
-	pushSeqCmd(dt, 'RADAR_ALT_PWR', 1)
+	pushSeqCmd(dt, 'RADAR_ALTIMETER.RADAR-ALT-PTR', 1)
 	# Turn on Radar Altimeter by setting the low altitude above 0.
 	for i in range(5):
-		pushSeqCmd(dt, 'RADAR_ALT_LO', '+3200')
+		pushSeqCmd(dt, 'RADAR_ALTIMETER.PITCH-LO-ALT-PTR', 0.1)
 
 	# ARC-51BX UHF RADIO (COM1) ... T/R
-	pushSeqCmd(dt, 'UHF_FUNCTION', 1)
+	pushSeqCmd(dt, 'UHF_ARC_51.FUNCTION-SELECT-SWITCH-PTR', 1)
 
 	# ARC-134 VHF AM RADIO (COM2) ... ON
-	pushSeqCmd(dt, 'VHFCOMM_PWR', 1)
+	pushSeqCmd(dt, 'VHF_ARC_134.MHZ-SELECTOR-PTR_arg5', 1)
 
 	# ARC-131 VHF FM RADIO (COM3) ... T/R
-	pushSeqCmd(dt, 'VHFFM_MODE', 1)
+	pushSeqCmd(dt, 'VHF_ARC_131.MODE-SWITCH-PTR', 1)
 
 	# MASTER ARM ... ON
-	pushSeqCmd(dt, 'MASTER_ARM_SW', 2)
+	pushSeqCmd(dt, 'WEAPON_SYS.ARMED-SWITCH-PTR', 2)
 
 	# ROCKET PAIRS ... 1
-	pushSeqCmd(dt, 'ROCKET_PAIR', 1)
+	pushSeqCmd(dt, 'WEAPON_SYS.RKT-PAIR-PTR', 1)
 
 	# FLARE DISPENSER ... ARM
-	pushSeqCmd(dt, 'CM_ARM_SW', 1)
+	pushSeqCmd(dt, 'XM_130.CHAFF-ARM-SWITCH-PTR', 1)
 
 	# FLARE DISPENSER COUNT ... 30
 	for i in range(30):
-		pushSeqCmd(dt, 'CM_FLARECNT', 'INC')
+		pushSeqCmd(dt, 'XM_130.FLARE-PTR_arg452', 0.03)
 
-	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Syncronize HSI compass (backup compass shows current heading).  Set lights, tune radios.")
+	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Syncronize H S I compass (backup compass shows current heading).  Set lights, tune radios.")
 
 	return seq
 
 
-def HotStart(config, vars):
+def HotStart(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
 
 	# Set intercom mode knob to INT, allows rearming.
-	pushSeqCmd(dt, 'INT_MODE', 1) # 0 = PVT, 1 = INT, 2 = 1, 3 = 2, 4 = 3, 5 = 4
+	pushSeqCmd(dt, 'INTERCOM.TRANSMIT-INTERPHONE-SWITCH-PTR', 1) # 0 = PVT, 1 = INT, 2 = 1, 3 = 2, 4 = 3, 5 = 4
 
 	# AC VOLTMETER ... AC PHASE
-	pushSeqCmd(dt, 'AC_VM_SRC', 1) # 0 = AB, 1 = AC PHASE, 2 = BC
+	pushSeqCmd(dt, 'ELEC_INTERFACE.PHASE-SWITCHER-PTR', 1) # 0 = AB, 1 = AC PHASE, 2 = BC
 
 	# IFF MASTER knob ... NORM
-	pushSeqCmd(dt, 'IFF_MASTER', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
+	pushSeqCmd(dt, 'IFF.MASTER-CONTROL-PTR', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
 	# IFF CODE knob ... A
 	# NOTE This control doesn't support directly setting the position, so to be idempotent, decrement all the way, then increment.
-	pushSeqCmd(dt, 'IFF_CODE', 'DEC')
-	pushSeqCmd(dt, 'IFF_CODE', 'DEC')
-	pushSeqCmd(dt, 'IFF_CODE', 'INC')
-	pushSeqCmd(dt, 'IFF_CODE', 'INC')
+	pushSeqCmd(dt, 'IFF.CODE-PTR', -1.0)
+	pushSeqCmd(dt, 'IFF.CODE-PTR', -1.0)
+	pushSeqCmd(dt, 'IFF.CODE-PTR', 1.0)
+	pushSeqCmd(dt, 'IFF.CODE-PTR', 1.0)
 	# IFF ON OUT switch ... ON
-	pushSeqCmd(dt, 'IFF_ON_OUT', 1) # 0 = OUT, 1 = ON
+	pushSeqCmd(dt, 'IFF.MODE-4-SWITCH-PTR', 1) # 0 = OUT, 1 = ON
 
 	# ARC-51BX UHF RADIO (COM1) ... T/R
-	pushSeqCmd(dt, 'UHF_FUNCTION', 1)
+	pushSeqCmd(dt, 'UHF_ARC_51.FUNCTION-SELECT-SWITCH-PTR', 1)
 
 	# ARC-134 VHF AM RADIO (COM2) ... ON
-	pushSeqCmd(dt, 'VHFCOMM_PWR', 1)
+	pushSeqCmd(dt, 'VHF_ARC_134.MHZ-SELECTOR-PTR_arg5', 1)
 
 	# ARC-131 VHF FM RADIO (COM3) ... T/R
-	pushSeqCmd(dt, 'VHFFM_MODE', 1)
+	pushSeqCmd(dt, 'VHF_ARC_131.MODE-SWITCH-PTR', 1)
 
 	# MASTER ARM ... ON
-	pushSeqCmd(dt, 'MASTER_ARM_SW', 2)
+	pushSeqCmd(dt, 'WEAPON_SYS.ARMED-SWITCH-PTR', 2)
 
 	# ROCKET PAIRS ... 1
-	pushSeqCmd(dt, 'ROCKET_PAIR', 1)
+	pushSeqCmd(dt, 'WEAPON_SYS.RKT-PAIR-PTR', 1)
 
 	# FLARE DISPENSER ... ARM
-	pushSeqCmd(dt, 'CM_ARM_SW', 1)
+	pushSeqCmd(dt, 'XM_130.CHAFF-ARM-SWITCH-PTR', 1)
 
 	# FLARE DISPENSER COUNT ... 30
 	for i in range(30):
-		pushSeqCmd(dt, 'CM_FLARECNT', 'INC')
+		pushSeqCmd(dt, 'XM_130.FLARE-PTR_arg452', 0.03)
 
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Check HSI compass sync (backup compass shows current heading).  Set lights, tune radios.")
 
 	return seq
 
 
-def Shutdown(self, vars):
+def Shutdown(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Shutdown sequence")
 
 	# THROTTLE ... SET TO IDLE POSITION
-	pushSeqCmd(dt, 'THROTTLE', 46810) # 0 = Max throttle, 46810 = Idle stop, ~50000 = Engine start position, 65535 = Min throttle
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.THROTTLE-1-PTR', 0.714) # 0.0 = Max throttle, 0.7143 = Idle stop, ~0.7630 = Engine start position, 1.0 = Min throttle
 	pushSeqCmd(3, '', '', 'Wait for engine to spool down a bit.')
 
 	# LOW RPM WARNING AUDIO ... OFF
-	pushSeqCmd(dt, 'LOW_RPM_AUDIO', 0)
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.LOW-RPM-PTR', 0)
 
 	# IFF MASTER knob ... OFF
-	pushSeqCmd(dt, 'IFF_MASTER', 0) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
+	pushSeqCmd(dt, 'IFF.MASTER-CONTROL-PTR', 0) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NORM, 4 = EMER
 	# IFF ON OUT switch ... OUT
-	pushSeqCmd(dt, 'IFF_ON_OUT', 0) # 0 = OUT, 1 = ON
+	pushSeqCmd(dt, 'IFF.MODE-4-SWITCH-PTR', 0) # 0 = OUT, 1 = ON
 
 	# RADAR ALTIMETER circuit breaker switch... OFF (overhead panel far rear)
-	pushSeqCmd(dt, 'RADAR_ALT_PWR', 0)
+	pushSeqCmd(dt, 'RADAR_ALTIMETER.RADAR-ALT-PTR', 0)
 	for i in range(11):
-		pushSeqCmd(dt, 'RADAR_ALT_LO', '-50000')
+		pushSeqCmd(dt, 'RADAR_ALTIMETER.PITCH-LO-ALT-PTR', -0.1)
 	for i in range(11):
-		pushSeqCmd(dt, 'RADAR_ALT_HI', '-50000')
+		pushSeqCmd(dt, 'RADAR_ALTIMETER.PITCH-HI-ALT-PTR_arg448', -0.1)
 
 	# ARC-51BX UHF RADIO (COM1) ... OFF
-	pushSeqCmd(dt, 'UHF_FUNCTION', 0)
+	pushSeqCmd(dt, 'UHF_ARC_51.FUNCTION-SELECT-SWITCH-PTR', 0)
 
 	# ARC-134 VHF AM RADIO (COM2) ... OFF
-	pushSeqCmd(dt, 'VHFCOMM_PWR', 0)
+	pushSeqCmd(dt, 'VHF_ARC_134.MHZ-SELECTOR-PTR_arg5', 0)
 
 	# ARC-131 VHF FM RADIO (COM3) ... OFF
-	pushSeqCmd(dt, 'VHFFM_MODE', 0)
+	pushSeqCmd(dt, 'VHF_ARC_131.MODE-SWITCH-PTR', 0)
 
 	# MASTER ARM ... SAFE
-	pushSeqCmd(dt, 'MASTER_ARM_SW', 0)
+	pushSeqCmd(dt, 'WEAPON_SYS.ARMED-SWITCH-PTR', 0)
 
 	# ROCKET PAIRS ... 0
-	pushSeqCmd(dt, 'ROCKET_PAIR', 0)
+	pushSeqCmd(dt, 'WEAPON_SYS.RKT-PAIR-PTR', 0)
 
 	# FLARE DISPENSER ... SAFE
-	pushSeqCmd(dt, 'CM_ARM_SW', 0)
+	pushSeqCmd(dt, 'XM_130.CHAFF-ARM-SWITCH-PTR', 0)
 
 	# GOVERNOR ... AUTO
-	pushSeqCmd(dt, 'EMER_GOV_SW', 1)
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.GOV-PTR', 1)
 
 	# HYDRAULIC CONTROL ... OFF
-	pushSeqCmd(dt, 'HYD_CONT_SW', 0)
+	pushSeqCmd(dt, 'HYDRO_SYS_INTERFACE.HYD-CONT-PTR', 0)
 
 	# FORCE TRIM ... OFF
-	pushSeqCmd(dt, 'FORCE_TRIM_SW', 0)
+	pushSeqCmd(dt, 'HYDRO_SYS_INTERFACE.FORCE-TRIM-PTR', 0)
 
 	# Throttle ... Stop
-	pushSeqCmd(dt, 'THROTTLE_STOP', 1)
-	#pushSeqCmd(dt, 'THROTTLE_STOP2', 1)
-	pushSeqCmd(dt, 'THROTTLE', int16())
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.ENGINE-BTN-1-PTR', 1) # Press
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.THROTTLE-1-PTR', 1.0) # 0.0 = Max throttle, 0.7143 = Idle stop, ~0.7630 = Engine start position, 1.0 = Min throttle
+	pushSeqCmd(dt, 'ENGINE_INTERFACE.ENGINE-BTN-1-PTR', 0) # Release
 
 	# MAIN FUEL ... OFF
-	pushSeqCmd(dt, 'MAIN_FUEL_SW', 0)
+	pushSeqCmd(dt, 'FUELSYS_INTERFACE.FUEL-PTR', 0)
 
 	# INVERTER ... OFF
-	pushSeqCmd(dt, 'INVERTER_SW', 1) # 0 = MAIN ON, 1 = OFF, 2 = SPARE ON
+	pushSeqCmd(dt, 'ELEC_INTERFACE.INVTR-SWITCHER-PTR', 1) # 0 = MAIN ON, 1 = OFF, 2 = SPARE ON
 
 	# MAIN GENERATOR ... OFF
-	pushSeqCmd(dt, 'MAIN_GEN_COVER', 1) # Cover open (it starts open on cold spawn)
-	pushSeqCmd(dt, 'MAIN_GEN_SW', 1) # 0 = ON, 1 = OFF, 2 = RESET
+	pushSeqCmd(dt, 'ELEC_INTERFACE.MAIN-GEN-SWITCHER-COVER-PTR', 1) # Cover open (it starts open on cold spawn)
+	pushSeqCmd(dt, 'ELEC_INTERFACE.MAIN-GEN-SWITCHER-PTR', 1) # 0 = ON, 1 = OFF, 2 = RESET
 	# Leave cover open.
 
 	# STARTER-GENERATOR ... START
-	pushSeqCmd(dt, 'STARTER_GEN_SW', 1) # 0 = STBY GEN, 1 = START
+	pushSeqCmd(dt, 'ELEC_INTERFACE.STARTER-GEN-SWITCHERr-PTR', 1) # 0 = STBY GEN, 1 = START
 
 	# BATTERY ... OFF
-	pushSeqCmd(dt, 'BAT_SW', 1) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'ELEC_INTERFACE.BAT-SWITCHER-PTR', 1) # 0 = ON, 1 = OFF
 
 	# Doors ... Toggle
-	pushSeqCmd(dt, 'DOOR_L_PTR', 1)
-	pushSeqCmd(dt, 'DOOR_R_PTR', 1)
+	pushSeqCmd(dt, 'CPT_MECH.DOOR_L-PTR', 1)
+	pushSeqCmd(dt, 'CPT_MECH.DOOR_R-PTR', 1)
 
 	return seq

@@ -1,0 +1,1349 @@
+{
+	"module": "F-86F Sabre",
+	"timestamp": "2026-05-17T21:58:37",
+	"delay": 0.08,
+	"elapsed": 101.0,
+	"counts": {
+		"pass": 245,
+		"fail": 3,
+		"skip": 19,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "A4_GUNSIGHT.Bomb_wind_control",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Grip_Rotation",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Radar_Target_Selector_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Rocket-Gun-Bomb_selector",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Rocket_depression_angle_pointer",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.SIGHT_FILAMENT_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Sight_Electrical_Caging_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Sight_mechanical_caging_lever",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Sight_reticle_dimmer_control_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Target_speed_switch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "A4_GUNSIGHT.Wing_span_adjustment_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ACCELEROMETER.Accelerometer_button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_275PSI_5PSI_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_AirOutletSelectorLever",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_EngineAntiIceScreen",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_HeaterReostat",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_PitotHeater_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_PressRAM_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_TemperatureControl",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_WindshieldAntiIceOverheatLmpTest",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_WindshieldAntiIcingLever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_APG_30.Radar_range_sweep",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DestructSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DialStopBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode",
+			"status": "fail",
+			"details": "pos 4: expected 0.4000, got 0.3000"
+		},
+		{
+			"name": "AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode2Sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode3Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_MicrophoneBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Mode",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_PresetChannel",
+			"status": "pass",
+			"details": "19 positions OK"
+		},
+		{
+			"name": "AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_BAND_SELECT",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_BFO_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_GAIN_CONTROL",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_LIGHT_SW",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_LOOP_LR_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_MODE_SELECT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_SCALE_POS",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AN_ARN_6_RADIO_COMPASS.ARN6_TUNE_FREQUENCY",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ATTITUDE_INDICATOR.F86_CockpitDeviceCommand_Cage",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ATTITUDE_INDICATOR.F86_CockpitDeviceCommand_PitchTrim",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "BARO_ALTIMETER.Altimeter_Pressure",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK.Clock_button_1_arg227",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.Clock_button_1_arg228",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK.Clock_button_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CanopyAlternateEmergencyJettisonHandle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CanopyDeclutchHandle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CockpitCanopyControlSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandle_OnlyOutbdTanks",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_FlapsHandle",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_LatAltTrim",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_LongAltTrim",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_RudderTrim",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_TakeOffPosIndTest",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimDown",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimUp",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_BatteryStarterSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_BothInstInvertersOff_PTLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_3fInverter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANAPC3Radio",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANAPX6RadioIFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANARN6RadioCompass",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AilHorizTrimAltHorizTrim",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AltAilTrim",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AltEmergHydContHydPressInd",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BombRocketTankSalvo",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BombSel",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BusTieInControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ConsolePedLTS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_EngIgn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_EngMasterFuelShutOff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FireWarn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FreeAirOzTempAirSel",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelBoostFwd",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelBoosterAft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelLevel",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_GyrSynCompass",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_InvGenFailureOvervoltLtsTest",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearPosInd",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearWarn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGLightControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGLights",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LightFluor",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LightPostIndCode",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_RudderTrimTakeOffInd",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightACPowerUnit",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightHeater",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightPower",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SpeedBrake",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_TurnBankInd",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_WingFlapLh",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_WingFlapRh",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_EngineMasterSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_GenOff_PTLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_InverterSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_MainInstInverterOffSelectAlt_PTLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_MainRadarInverterOff_PTLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_StopStarterBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.F86_CockpitDeviceCommand_AirStart",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.F86_CockpitDeviceCommand_EmergFuel",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_AftWarning_TPLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_FireDetectionTest",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_FwdWarning_TPLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUEL_INTERFACE.F86_CockpitDeviceCommand_DensitometerCorrection",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUEL_INTERFACE.F86_CockpitDeviceCommand_OutDropTanksEmpty_TPLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUEL_INTERFACE.F86_CockpitDeviceCommand_TankJettison_Btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUEL_INTERFACE.F86_CockpitDeviceCommand_TankSelector_Sw",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "GYROMAG_COMPASS.F86_CockpitDeviceCommand_FastSlave",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GYROMAG_COMPASS.F86_CockpitDeviceCommand_Heading_Correction",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_AirBrakesHandle",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_AlternateFltContSysOper_PTLmp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_EmergUpBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_EmergencyLdgGearsReleaseHandle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_FlightControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_HornCutOut",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_HydPressIndicatorSelector",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_LandingGearHandle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_NoseWheelSteeringBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_ParkingBrakeHandle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHT_INTERFACE.F86_CockpitDeviceCommand_ConsoleAndPanelLightControl",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelAuxLightControl",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelPrimLightControl",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHT_INTERFACE.F86_CockpitDeviceCommand_StandByCompassLightSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_LandAndTaxiLights",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_PosAndFusLts",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_PosAndFusLtsDimmer",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGEN_INTERFACE.F86_CockpitDeviceCommand_EmergencyBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGEN_INTERFACE.F86_CockpitDeviceCommand_EmergencySw",
+			"status": "fail",
+			"details": "25%: expected -0.5000, got 0.0000; 75%: expected 0.5000, got 1.0000 (actual range [-1.0000, 1.0000] vs expected [-1.0, 1.0])"
+		},
+		{
+			"name": "OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenDiluterLever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenSupplyLever",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "OXYGEN_INTERFACE.F86_CockpitDeviceCommand_WarningSystemSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.ARM_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Auto_Release_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.BOMB_NORMAL_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Bomb_Rocket_Release_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Bomb_Rocket_Tank Jettison Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Bombing_Altimeter_Handler1",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Fuze_Delay_Switch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.G_LIMIT_arg225",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.G_LIMIT_arg226",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Gun_Heater_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Gun_Trigger",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Guns_Selector",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.LABS_Selector_Switch_1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.LABS_Selector_Switch_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.LABS_Selector_Switch_3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.MISSILE_GUNS_RADAR-Selector",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.MISSILE_PANEL_SAFE_LAUNCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.MISSILE_PANEL_TONE_VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.MISSILE_Switch_LH-RH-SALVO",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PIP_adjustment_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Rocket_Intervalometer",
+			"status": "pass",
+			"details": "wheel OK (17 positions, step 0.0625)"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Rockets_Jett_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Rockets_switch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Station_selector_switch",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Target_altitude_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Templates_rotation_helper",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "arg.ARN6_Band",
+			"status": "pass",
+			"details": "arg 804 = 0.6667"
+		},
+		{
+			"name": "arg.ARN6_Bearing",
+			"status": "pass",
+			"details": "arg 600 = 0.8056"
+		},
+		{
+			"name": "arg.ARN6_FreqScale",
+			"status": "pass",
+			"details": "arg 830 = 0.6250"
+		},
+		{
+			"name": "arg.ARN6_Scale",
+			"status": "pass",
+			"details": "arg 814 = 1.0000"
+		},
+		{
+			"name": "arg.ARN6_ScaleLight",
+			"status": "pass",
+			"details": "arg 219 = 0.0000"
+		},
+		{
+			"name": "arg.ARN6_TuningMeter",
+			"status": "pass",
+			"details": "arg 800 = 0.0000"
+		},
+		{
+			"name": "arg.Accelerometer",
+			"status": "pass",
+			"details": "arg 6 = 0.4006"
+		},
+		{
+			"name": "arg.AccelerometerMax",
+			"status": "pass",
+			"details": "arg 1002 = 0.4006"
+		},
+		{
+			"name": "arg.AccelerometerMin",
+			"status": "pass",
+			"details": "arg 1003 = 0.4006"
+		},
+		{
+			"name": "arg.Airspeeed",
+			"status": "pass",
+			"details": "arg 178 = 0.3243"
+		},
+		{
+			"name": "arg.AirspeeedDrum",
+			"status": "pass",
+			"details": "arg 709 = 0.4280"
+		},
+		{
+			"name": "arg.AirspeeedM1",
+			"status": "pass",
+			"details": "arg 8 = 0.5860"
+		},
+		{
+			"name": "arg.Altimeter100",
+			"status": "pass",
+			"details": "arg 524 = 0.4693"
+		},
+		{
+			"name": "arg.Altimeter1000",
+			"status": "pass",
+			"details": "arg 523 = 0.6469"
+		},
+		{
+			"name": "arg.Altimeter10000",
+			"status": "pass",
+			"details": "arg 707 = 0.0647"
+		},
+		{
+			"name": "arg.AltimeterHG",
+			"status": "pass",
+			"details": "arg 700 = 0.5032"
+		},
+		{
+			"name": "arg.AttitudeIndicatorBank",
+			"status": "pass",
+			"details": "arg 606 = -0.0000"
+		},
+		{
+			"name": "arg.AttitudeIndicatorBankNeedle",
+			"status": "pass",
+			"details": "arg 1005 = -0.0000"
+		},
+		{
+			"name": "arg.AttitudeIndicatorOffFlag",
+			"status": "pass",
+			"details": "arg 713 = 0.0000"
+		},
+		{
+			"name": "arg.AttitudeIndicatorPitch",
+			"status": "pass",
+			"details": "arg 605 = -0.0000"
+		},
+		{
+			"name": "arg.AttitudeIndicatorPitchShift",
+			"status": "pass",
+			"details": "arg 214 = 0.0000"
+		},
+		{
+			"name": "arg.AttitudeIndicatorPitchSphere",
+			"status": "pass",
+			"details": "arg 81 = -0.0000"
+		},
+		{
+			"name": "arg.AuxiliaryInstrumentLights",
+			"status": "pass",
+			"details": "arg 185 = 0.0000"
+		},
+		{
+			"name": "arg.CLOCK_currtime_hours",
+			"status": "pass",
+			"details": "arg 19 = 0.6708"
+		},
+		{
+			"name": "arg.CLOCK_currtime_minutes",
+			"status": "pass",
+			"details": "arg 18 = 0.0499"
+		},
+		{
+			"name": "arg.CLOCK_seconds_meter_time_minutes",
+			"status": "pass",
+			"details": "arg 37 = 0.0177"
+		},
+		{
+			"name": "arg.CLOCK_seconds_meter_time_seconds",
+			"status": "pass",
+			"details": "arg 1006 = 0.0631"
+		},
+		{
+			"name": "arg.CockpitAltimeter",
+			"status": "pass",
+			"details": "arg 114 = 0.1295"
+		},
+		{
+			"name": "arg.CockpitCanopy",
+			"status": "pass",
+			"details": "arg 181 = 1.0000"
+		},
+		{
+			"name": "arg.EmergencyJettisonHandleRot",
+			"status": "pass",
+			"details": "arg 221 = 0.0000"
+		},
+		{
+			"name": "arg.ExhaustTemperature",
+			"status": "pass",
+			"details": "arg 12 = 0.0159"
+		},
+		{
+			"name": "arg.FuelFlow",
+			"status": "pass",
+			"details": "arg 531 = 0.0000"
+		},
+		{
+			"name": "arg.FuelQuantity",
+			"status": "pass",
+			"details": "arg 22 = -0.9990"
+		},
+		{
+			"name": "arg.GyroCompassNeedle",
+			"status": "pass",
+			"details": "arg 711 = 0.0373"
+		},
+		{
+			"name": "arg.GyroCompassScale",
+			"status": "pass",
+			"details": "arg 712 = 0.9804"
+		},
+		{
+			"name": "arg.HydPress",
+			"status": "pass",
+			"details": "arg 109 = 0.7451"
+		},
+		{
+			"name": "arg.IlluminationLights",
+			"status": "pass",
+			"details": "arg 182 = 0.0000"
+		},
+		{
+			"name": "arg.LABS_pitch_needle",
+			"status": "pass",
+			"details": "arg 604 = -0.0000"
+		},
+		{
+			"name": "arg.LABS_roll_needle",
+			"status": "pass",
+			"details": "arg 603 = -0.0000"
+		},
+		{
+			"name": "arg.LandingGearUnsafe",
+			"status": "pass",
+			"details": "arg 222 = 0.0000"
+		},
+		{
+			"name": "arg.Left_Wheel_Brake",
+			"status": "pass",
+			"details": "arg 215 = 0.0000"
+		},
+		{
+			"name": "arg.Loadmeter",
+			"status": "pass",
+			"details": "arg 602 = 0.0025"
+		},
+		{
+			"name": "arg.MachNumber",
+			"status": "pass",
+			"details": "arg 179 = 0.0515"
+		},
+		{
+			"name": "arg.OilPressure",
+			"status": "pass",
+			"details": "arg 112 = 0.0230"
+		},
+		{
+			"name": "arg.OxygenFlowBlinker",
+			"status": "pass",
+			"details": "arg 705 = 1.0000"
+		},
+		{
+			"name": "arg.OxygenPressure",
+			"status": "pass",
+			"details": "arg 353 = 0.7777"
+		},
+		{
+			"name": "arg.PilotDraw",
+			"status": "pass",
+			"details": "arg 540 = 1.0000"
+		},
+		{
+			"name": "arg.PrimaryInstLights",
+			"status": "pass",
+			"details": "arg 180 = 0.0000"
+		},
+		{
+			"name": "arg.Right_Wheel_Brake",
+			"status": "pass",
+			"details": "arg 216 = 0.0000"
+		},
+		{
+			"name": "arg.Rudder",
+			"status": "pass",
+			"details": "arg 500 = 0.0009"
+		},
+		{
+			"name": "arg.SlipIndicator",
+			"status": "pass",
+			"details": "arg 31 = 0.0000"
+		},
+		{
+			"name": "arg.StandByCompassLight",
+			"status": "pass",
+			"details": "arg 825 = 0.0000"
+		},
+		{
+			"name": "arg.StickPitch",
+			"status": "pass",
+			"details": "arg 74 = -0.2500"
+		},
+		{
+			"name": "arg.StickRoll",
+			"status": "pass",
+			"details": "arg 71 = 0.0000"
+		},
+		{
+			"name": "arg.Tachometer",
+			"status": "pass",
+			"details": "arg 16 = 0.2296"
+		},
+		{
+			"name": "arg.Throttle",
+			"status": "pass",
+			"details": "arg 104 = 0.0000"
+		},
+		{
+			"name": "arg.TurnIndicator",
+			"status": "pass",
+			"details": "arg 25 = 0.0000"
+		},
+		{
+			"name": "arg.Variometer",
+			"status": "pass",
+			"details": "arg 24 = 0.0000"
+		},
+		{
+			"name": "arg.VoltageDC",
+			"status": "pass",
+			"details": "arg 601 = 0.1505"
+		},
+		{
+			"name": "arg.lamp_CONTROL_TakeOffPosInd",
+			"status": "pass",
+			"details": "arg 613 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ELEC_BothInstInvertersOff",
+			"status": "pass",
+			"details": "arg 611 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ELEC_GenOff",
+			"status": "pass",
+			"details": "arg 617 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ELEC_MainInstInverterOffSelectAlt",
+			"status": "pass",
+			"details": "arg 610 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ELEC_MainRadarInverterOff",
+			"status": "pass",
+			"details": "arg 612 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_FIRE_DETECTION_AftFireWarning",
+			"status": "pass",
+			"details": "arg 616 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_FIRE_DETECTION_FwdFireWarning",
+			"status": "pass",
+			"details": "arg 615 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_FUEL_OutbdTanksEmpty",
+			"status": "pass",
+			"details": "arg 625 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_HYDRO_AltFltContSysOper",
+			"status": "pass",
+			"details": "arg 614 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_HYDRO_LeftGear",
+			"status": "pass",
+			"details": "arg 39 = 0.0052"
+		},
+		{
+			"name": "arg.lamp_HYDRO_NoseGear",
+			"status": "pass",
+			"details": "arg 40 = 0.0052"
+		},
+		{
+			"name": "arg.lamp_HYDRO_RightGear",
+			"status": "pass",
+			"details": "arg 41 = 0.0052"
+		},
+		{
+			"name": "arg.lamp_WindshieldAntiIceOverheatWarning",
+			"status": "pass",
+			"details": "arg 621 = 0.0000"
+		},
+		{
+			"name": "dev0.cmd_3001",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.pitch_scale",
+			"status": "skip",
+			"details": "field \"pitch_scale\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.roll_scale",
+			"status": "skip",
+			"details": "field \"roll_scale\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.rudder_scale",
+			"status": "skip",
+			"details": "field \"rudder_scale\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.stick_position",
+			"status": "skip",
+			"details": "field \"stick_position\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.throttle_scale",
+			"status": "skip",
+			"details": "field \"throttle_scale\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.trimmer_stick_position",
+			"status": "skip",
+			"details": "field \"trimmer_stick_position\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.wheel_brake_1",
+			"status": "skip",
+			"details": "field \"wheel_brake_1\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.wheel_brake_2",
+			"status": "skip",
+			"details": "field \"wheel_brake_2\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.wheel_brake_actual_1",
+			"status": "skip",
+			"details": "field \"wheel_brake_actual_1\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.wheel_brake_actual_2",
+			"status": "skip",
+			"details": "field \"wheel_brake_actual_2\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.wheel_brake_mask_1",
+			"status": "skip",
+			"details": "field \"wheel_brake_mask_1\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.wheel_brake_mask_2",
+			"status": "skip",
+			"details": "field \"wheel_brake_mask_2\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.1",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.1.132",
+			"status": "pass",
+			"details": "field \"132\" = \"\""
+		},
+		{
+			"name": "ind.1.frame_number",
+			"status": "skip",
+			"details": "field \"frame_number\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.frame_time",
+			"status": "pass",
+			"details": "field \"frame_time\" = \"\""
+		},
+		{
+			"name": "ind.1.picture",
+			"status": "pass",
+			"details": "field \"picture\" = \"\""
+		},
+		{
+			"name": "ind.2",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.2.2_mils_pipper",
+			"status": "skip",
+			"details": "field \"2_mils_pipper\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.SymbologyBox",
+			"status": "pass",
+			"details": "field \"SymbologyBox\" = \"\""
+		},
+		{
+			"name": "ind.2.total_field_of_view",
+			"status": "skip",
+			"details": "field \"total_field_of_view\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "AIR_INTERFACE.F86_CockpitDeviceCommand_TemperatureControlSwCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DestructSwCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandleCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.F86_CockpitDeviceCommand_LongAltTrimSwCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSwCover",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "ENGINE_INTERFACE.F86_CockpitDeviceCommand_AirStart_Cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUEL_INTERFACE.F86_CockpitDeviceCommand_DensitometerCorrectionCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.F86_CockpitDeviceCommand_AlternateHydraulicOverrideSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.Rockets_switch_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

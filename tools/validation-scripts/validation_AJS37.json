@@ -1,0 +1,1104 @@
+{
+	"module": "AJS37",
+	"timestamp": "2026-06-07T21:51:58",
+	"delay": 0.08,
+	"elapsed": 102.3,
+	"counts": {
+		"pass": 154,
+		"fail": 33,
+		"skip": 22,
+		"error": 9
+	},
+	"results": [
+		{
+			"name": "COUNTERMEASURE.Button_24",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURE.Button_25",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURE.Button_26",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURE.Button_27",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURE.Button_28",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURE.cmd_3805",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "DOPPLER.PNT_213",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRICSYSTEM.Backupgen-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRICSYSTEM.Gen-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRICSYSTEM.HuvudS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.Button_1",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "ENGINEPANEL.Button_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.Button_3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.Button_4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.Button_6",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000; pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "ENGINEPANEL.Button_7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.Button_99",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3000",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3304",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3401",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3905",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3906",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3907",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3908",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3909",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3910",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3912",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3913",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3917",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3918",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3919",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3920",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3921",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3924",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINEPANEL.cmd_3925",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ERRORPANEL.Kontroll-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ERRORPANEL.MasterC-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ERRORPANEL.warnpanelcheck-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.Button_107",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.Button_91",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.Button_97",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3201",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3210",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3301",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3302",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3303",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3305",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3306",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3401",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3402",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3404",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3405",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3406",
+			"status": "fail",
+			"details": "pos 2: expected 1.0000, got 0.5000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3407",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3408",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3409",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3410",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3511",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3512",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3715",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3716",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3717",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3718",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3719",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3720",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3721",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3722",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3724",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got 0.7057; 25%: expected -0.5000, got 0.7057; 50%: expected 0.0000, got 0.7057; 75%: expected 0.5000, got 0.7057; 100%: expected 1.0000, got 0.7057"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3732",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got 0.0000; 25%: expected -0.5000, got 0.0000; 75%: expected 0.5000, got 0.0000; 100%: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3741",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3742",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3801",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3802",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3806",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDATAUNIT.cmd_3918",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FR22.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FR22.Button_110",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "FR22.Button_112",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FR22.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FR22.Button_200",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.Button_3",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FR22.Button_4",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FR22.Button_5",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FR22.Button_6",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FR22.cmd_3201",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3202",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3203",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3204",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3205",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3206",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3207",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3208",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3209",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3210",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3211",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3212",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3213",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3214",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3215",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3216",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3217",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3218",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3219",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "FR22.cmd_3230",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "FR22.cmd_3307",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "LIGHTS.Antikljus-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.Formljus-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.INDlight-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.Lanternljus-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.Ledljus-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT_254",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT_3554",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT_3555",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT_392",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT_393",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT_394",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel00-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel01-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel02-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel03-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel04-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel05-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel06-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel07-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel08-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.Datapanel09-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB3-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB4-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB5-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB6-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB7-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB8-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselB9-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselBX-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselLMAL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATION.NavselLS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATIONPANEL.DatapanelINUT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVIGATIONPANEL.Datarot-PTR",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "NAVIGATIONPANEL.PNT_215",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAVIGATIONPANEL.RENSA-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3208",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3209",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3212",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3213",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3323",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3325",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3328",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3350",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3641",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3800",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "RADAR.cmd_3801",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3914",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3922",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.cmd_3923",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADARALT.RHMtill-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "REVERSAL.Revhd-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR.App27-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RWR.PNT_399",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3300",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3302",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3303",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3304",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3305",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3306",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3307",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3308",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3309",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3318",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3319",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3320",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3402",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.cmd_3800",
+			"status": "error",
+			"details": "Could not read arg -666"
+		},
+		{
+			"name": "arg.Altimeter_10000m_Gauge",
+			"status": "pass",
+			"details": "arg 114 = 0.1583"
+		},
+		{
+			"name": "arg.Altimeter_1000m_Gauge",
+			"status": "pass",
+			"details": "arg 113 = 0.5826"
+		},
+		{
+			"name": "arg.BackupAltimeter_10000m_Gauge",
+			"status": "pass",
+			"details": "arg 125 = 0.1998"
+		},
+		{
+			"name": "arg.BackupAltimeter_1000m_Gauge",
+			"status": "pass",
+			"details": "arg 124 = 0.9977"
+		},
+		{
+			"name": "arg.IndicatedAirSpeed",
+			"status": "pass",
+			"details": "arg 100 = 0.4283"
+		},
+		{
+			"name": "arg.IndicatedAirSpeedBackup",
+			"status": "pass",
+			"details": "arg 138 = 0.5845"
+		},
+		{
+			"name": "arg.mirrors_draw",
+			"status": "pass",
+			"details": "arg 16 = 1.0000"
+		},
+		{
+			"name": "arg.pilot_draw",
+			"status": "pass",
+			"details": "arg 3333 = 1.0000"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.radarTFOV",
+			"status": "pass",
+			"details": "field \"radarTFOV\" = \"\""
+		},
+		{
+			"name": "ind.0.radarglass",
+			"status": "pass",
+			"details": "field \"radarglass\" = \"\""
+		},
+		{
+			"name": "ind.1",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.1.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.1.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.2",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.2.data1",
+			"status": "pass",
+			"details": "field \"data1\" = \"0\""
+		},
+		{
+			"name": "ind.2.data2",
+			"status": "pass",
+			"details": "field \"data2\" = \"0\""
+		},
+		{
+			"name": "ind.2.data3",
+			"status": "pass",
+			"details": "field \"data3\" = \"0\""
+		},
+		{
+			"name": "ind.2.data4",
+			"status": "pass",
+			"details": "field \"data4\" = \"0\""
+		},
+		{
+			"name": "ind.2.data5",
+			"status": "pass",
+			"details": "field \"data5\" = \"0\""
+		},
+		{
+			"name": "ind.2.data6",
+			"status": "pass",
+			"details": "field \"data6\" = \"0\""
+		},
+		{
+			"name": "ind.2.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.2.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.3",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.3.TVTFOV",
+			"status": "skip",
+			"details": "field \"TVTFOV\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.TVglass",
+			"status": "skip",
+			"details": "field \"TVglass\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.4",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.4.DebugText",
+			"status": "skip",
+			"details": "field \"DebugText\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.pitch_scale",
+			"status": "skip",
+			"details": "field \"pitch_scale\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.roll_scale",
+			"status": "skip",
+			"details": "field \"roll_scale\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.rudder_scale",
+			"status": "skip",
+			"details": "field \"rudder_scale\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.stick_position",
+			"status": "skip",
+			"details": "field \"stick_position\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.throttle_scale",
+			"status": "skip",
+			"details": "field \"throttle_scale\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.trimmer_stick_position",
+			"status": "skip",
+			"details": "field \"trimmer_stick_position\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.wheel_brake_l",
+			"status": "skip",
+			"details": "field \"wheel_brake_l\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.wheel_brake_r",
+			"status": "skip",
+			"details": "field \"wheel_brake_r\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.5",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.5.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.5.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.6",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.6.glass2",
+			"status": "pass",
+			"details": "field \"glass2\" = \"\""
+		},
+		{
+			"name": "ind.6.total_field_of_view2",
+			"status": "pass",
+			"details": "field \"total_field_of_view2\" = \"\""
+		},
+		{
+			"name": "NAVIGATIONPANEL.RENSACVR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

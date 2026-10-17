@@ -1,0 +1,3269 @@
+{
+	"module": "Ka-50",
+	"timestamp": "2026-04-30T20:12:30",
+	"delay": 0.08,
+	"elapsed": 175.2,
+	"counts": {
+		"pass": 537,
+		"fail": 6,
+		"skip": 108,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "ABRIS.ABRIS-POWER_PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ABRIS.ABRIS_BRIGHTNESS_PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ABRIS.ABRIS_SHUNT_PTR_arg518",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ABRIS.ABRIS_SHUNT_PTR_arg523",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ABRIS.PTR_BTN-ABRIS-01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ABRIS.PTR_BTN-ABRIS-02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ABRIS.PTR_BTN-ABRIS-03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ABRIS.PTR_BTN-ABRIS-04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ABRIS.PTR_BTN-ABRIS-05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ACCELEROMETER.G--PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADI.IKP-TANGAGE-PTR",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got -0.2618; 25%: expected -0.5000, got -0.2618; 75%: expected 0.5000, got 0.2618; 100%: expected 1.0000, got 0.2618 (actual range [-0.2618, 0.2618] vs expected [-1.0, 1.0])"
+		},
+		{
+			"name": "ADI.TEST-COVER-IKP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADI.TEST-IKP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARK_22.ARK-CONTROL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARK_22.IANDING LIGHTS-DIR-LIGHT-PTR01",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ARK_22.TLF-TLG-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARK_22.TLF-TLG-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARK_22.VARK-VOLUME-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARK_22.VARK-VOLUME-PTR01",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.BAR-RV-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.PPR-DIRUPR-PTR05",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "AUTOPILOT.PPR-K-PTR01",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "AUTOPILOT.PPR-N-PTR03",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "AUTOPILOT.PPR-T-PTR02",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "AUTOPILOT.PPR-V-PTR04",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "C061K.HEAT_IKV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "C061K.IKV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.CLOCK-LEFT-LEVER-PTR_arg511",
+			"status": "fail",
+			"details": "increment had no effect (stayed at 0.0000)"
+		},
+		{
+			"name": "CLOCK.CLOCK-LEFT-LEVER-PTR_arg76",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.CLOCK-RIGHT-LEVER-PTR_arg525",
+			"status": "fail",
+			"details": "0%: expected -0.1500, got 0.0000; 25%: expected -0.0750, got 0.0000; 75%: expected 0.0750, got 0.1500 (actual range [0.0000, 0.1500] vs expected [-0.15, 0.15])"
+		},
+		{
+			"name": "CLOCK.CLOCK-RIGHT-LEVER-PTR_arg77",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.AVAR-GEAR-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.AVAR-GEAR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.GEAR-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "CPT_MECH.KONTR-PVD-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.P-CONTR-VMG-HYDRO-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.P-CONTR-VMG-HYDRO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PPD-DUAS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PVD-CLOCK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.STICK_VISIBILITY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.WINDSCREEN-WIPER-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "DATALINK.COMM-PWR-TLK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DATALINK.COMM-PWR-UKV-TLK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DATALINK.DTLK-MASTER-MODES-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "DATALINK.DTLK-SELF-ID-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "DATALINK.PRC-CLEAN-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-ERASE-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-ESCAPE-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-SEND-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-TARGET-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-TARGET-2-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-TARGET-3-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-TARGET-POINT-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-WINGMAN-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-WINGMAN-2-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-WINGMAN-3-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-WINGMAN-4-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PRC-WINGMAN-ALL-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "DATALINK.PVI_VCU_PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECT_SYS_INTERFACE.CONTR-SAP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECT_SYS_INTERFACE.CONTR-SAPROTATE-PTR",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "EJECT_SYS_INTERFACE.RIGHT-COVER-EMERG-VACATION-PTR",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.2999"
+		},
+		{
+			"name": "EJECT_SYS_INTERFACE.RIGHT-EMERG-SW1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECT_SYS_INTERFACE.RIGHT-EMERG-SW2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECT_SYS_INTERFACE.RIGHT-EMERG-SW3-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CONVERTER-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ENERG-AER-RIT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ENERG-AKK1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ENERG-AKK2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ENERG-COVER-AER-RIT-PTR",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.1499"
+		},
+		{
+			"name": "ELEC_INTERFACE.ENERG-COVER-AKK1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ENERG-COVER-AKK2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GEN-LEFT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GEN-RIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RAMP-POWER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.BRAKE-ROTOR-LOW-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CONTROL-TEMP-NOTWORK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CONTROL-TEMP-WORK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.EMERGENCY-BRAKE ENGINE-LEFT-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "ENGINE_INTERFACE.EMERGENCY-BRAKE ENGINE-RIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ERD-LEFT-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ERD-LEFT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ERD-RIGHT-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ERD-RIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PAV-CRANE-COVER-VSU-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PAV-CRANE-COVER-VSU-PTR02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PAV-CRANE-VSU-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PAV-CRANE-VSU-PTR02",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.POS-ENGINE-PZU-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.POS-ROTORS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.REDUCTOR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.RT-12-6-IV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.RT-12-6-LEFT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.RT-12-6-RIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.START-ENGINE-SELECTOR-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.START-PANEL-ROLLING-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.START-PANEL-START-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.START-PANEL-STOP-START-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.START-PANEL-STOP-START-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.BALOONS-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.BALOONS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.EXTING-GROUPS-CTRL-01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.EXTING-GROUPS-CTRL-02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.EXTING-GROUPS-CTRL-03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.FIREEXT-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.FIREEXT-INDICATION-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.FIREEXT-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.CONTROL-OIL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-METER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-PUMP-BACK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-PUMP-FRONT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-PUMP-INNER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-PUMP-OUTER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-COVER-CYKLIZATION-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-COVER-ENGINE-LEFT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-COVER-ENGINE-RIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-COVER-VSU-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-CYKLIZATION-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-ENGINE-LEFT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-ENGINE-RIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.PAV-CRANE-VSU-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HELMET.PUR-LIGHTNVU-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HELMET.PVR-OBZ-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HSI.ROTARY-ZK-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "HSI.ROTARY-ZPU-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "HSI.TEST-PNP-PTR03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HSI.ZPU-ZK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HUD.PTR-HUD-TEST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HUD.PTR_HUD-BRIGHTNESS",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HUD.PTR_HUD-FILTER",
+			"status": "pass",
+			"details": "3 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "HUD.PTR_HUD-TMB-SETKA02",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.HYDRO-COVER-PTR02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.HYDRO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.COVER-SRO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.SRO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.AGR-PKP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.BRIGHT-AGR-PKP-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.BRIGHT-DEV-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.BRIGHT-LEFT-RIGHT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.DESK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.DEVICES-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.LAMP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.P-CONTR-BRIGHT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ILLUMINATION_INTERFACE.P-CONTR-ILLUM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "K041.K-041-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "K041.PNK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASERRANGER.CHOP-LDP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASERRANGER.LD-LDP-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASERRANGER.LDP-LD-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASERRANGER.PVR-IZL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASER_WARNING_SYSTEM.L-140-RESET-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASER_WARNING_SYSTEM.L140-CNOB",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LASER_WARNING_SYSTEM.L140-SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MISC_SYSTEMS_INTERFACE.ALTIMETER-BARO-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MISC_SYSTEMS_INTERFACE.HANGER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MISC_SYSTEMS_INTERFACE.PUR-OGR-INF-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.ANO-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.CONTUR-LIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.FLASHER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.FORMATION-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "NAV_INTERFACE.GYRO-MAG-MAN-HEADING-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAV_INTERFACE.ZK-LZP-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "PPK.AKS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PPK.FKP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PPK.KCVM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PPK.PPK-BBTZ-PTR",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "PPK.PPK-RNP-PTR",
+			"status": "pass",
+			"details": "9 positions OK"
+		},
+		{
+			"name": "PPK.ROPE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PPK.VnK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PShK_7.LATITUDE-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "PShK_7.N-S-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-0-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-3-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-4-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-5-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-6-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-7-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-8-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-9-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PVI.PVI-ACDC-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-AER-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-BRIGHTNESS-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "PVI.PVI-CANCEL-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-DU-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-ENTER-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-FII-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-FILAMBDA-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-FIZ-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-HB-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-KC-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-OP-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-OT-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-PPM-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-PZ-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI-SWITCH-PTR",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "PVI.PVI-TB-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PVI.PVI_I251V_PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.ROTARY-DANGEROUS-HIGHT-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.TEST-RADIO-HIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.COMM-PWR-UKV-2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.CONTR-RADIO-50-100-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.CONTR-RADIO-AP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.CONTR-RADIO-ARK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.CONTR-RADIO-CHM-AM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.CONTR-RADIO-PSH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_800.CONTROLLER-FREQ-1-PTR",
+			"status": "skip",
+			"details": "arg=-1 (pure encoder, no readable cockpit position)"
+		},
+		{
+			"name": "R_800.CONTROLLER-FREQ-2-PTR",
+			"status": "skip",
+			"details": "arg=-1 (pure encoder, no readable cockpit position)"
+		},
+		{
+			"name": "R_800.CONTROLLER-FREQ-3-PTR",
+			"status": "skip",
+			"details": "arg=-1 (pure encoder, no readable cockpit position)"
+		},
+		{
+			"name": "R_800.CONTROLLER-FREQ-4-PTR",
+			"status": "skip",
+			"details": "arg=-1 (pure encoder, no readable cockpit position)"
+		},
+		{
+			"name": "R_800.START-PANEL-CONTROL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_828.ASU-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_828.CHANNEL-PTR",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "R_828.COMM-PWR-UKV-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_828.RADIO-PSH-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_828.RADIO-VOLUME-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SHKVAL.PUR-BACKGROUND-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SHKVAL.PUR-CONTRAST-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SHKVAL.PUR-LIGHTIT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SHKVAL.PUR-SF-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SHKVAL.PUR-TR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SHKVAL.V-SCAN-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SHKVAL.WIPER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-3-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-4-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPOTLIGHT_SYSTEM.LANDING LIGHTS-BASE-RESERV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPOTLIGHT_SYSTEM.LANDING LIGHTS-DIR-LIGHT-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SPU_9.COMM-PWR-AVSK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_9.RADIO-RATE-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "STBY_ADI.RES-AG-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "STBY_ADI.RES-AGD-PTR_arg141",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "STBY_ADI.RES-AGD-PTR_arg597",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYST_CONTROLLER.BKO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYST_CONTROLLER.BRIGHTNESS-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYST_CONTROLLER.CONTROL-ALARM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYST_CONTROLLER.CSO-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "SYST_CONTROLLER.MAIN-ROTOR-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "UV_26.UV26-BOARD-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-BURST-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-CANCELPRG-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-INTERVAL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-POWER-COVER-PTR",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.1499"
+		},
+		{
+			"name": "UV_26.UV26-POWER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-PROGR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-SERIES-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-START-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-STOP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-TEST-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UV_26.UV26-TEST-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VMS.SPEECH-BIT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VMS.SPEECH-INFO-AVAR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VMS.SPEECH-INFO-OFF-PTR01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VMS.SPEECH-INFO-RETRY-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.MASTER-ARM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.MASTER-EXPLODE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.MASTER-UNLOAD-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.MT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PPK-NRAKS-PTR",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PUI800-AUTO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PUI800-AVARCHOP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PUI800-AVARSTART-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PUI800-OFBR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PUR-LIT-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-ADV-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-AS-PM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-DRILL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-MODE-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-NPC-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-PPS-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-RESET-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "WEAP_INTERFACE.PVR-VC-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "WEAP_INTERFACE.SR-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.SUO-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_INTERFACE.SUO-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ZMS_3.DCLIN-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "arg.100",
+			"status": "pass",
+			"details": "arg 100 = 0.0013"
+		},
+		{
+			"name": "arg.1000",
+			"status": "pass",
+			"details": "arg 1000 = 0.0000"
+		},
+		{
+			"name": "arg.101",
+			"status": "pass",
+			"details": "arg 101 = -0.0029"
+		},
+		{
+			"name": "arg.1015",
+			"status": "pass",
+			"details": "arg 1015 = 0.0000"
+		},
+		{
+			"name": "arg.1016",
+			"status": "pass",
+			"details": "arg 1016 = 0.0000"
+		},
+		{
+			"name": "arg.102",
+			"status": "pass",
+			"details": "arg 102 = 1.0000"
+		},
+		{
+			"name": "arg.103",
+			"status": "pass",
+			"details": "arg 103 = 0.0000"
+		},
+		{
+			"name": "arg.104",
+			"status": "pass",
+			"details": "arg 104 = 0.8691"
+		},
+		{
+			"name": "arg.106",
+			"status": "pass",
+			"details": "arg 106 = 0.0154"
+		},
+		{
+			"name": "arg.107",
+			"status": "pass",
+			"details": "arg 107 = 0.0152"
+		},
+		{
+			"name": "arg.108",
+			"status": "pass",
+			"details": "arg 108 = 0.0000"
+		},
+		{
+			"name": "arg.109",
+			"status": "pass",
+			"details": "arg 109 = 0.0000"
+		},
+		{
+			"name": "arg.11",
+			"status": "pass",
+			"details": "arg 11 = -0.9624"
+		},
+		{
+			"name": "arg.111",
+			"status": "pass",
+			"details": "arg 111 = 0.0000"
+		},
+		{
+			"name": "arg.112",
+			"status": "pass",
+			"details": "arg 112 = 0.9976"
+		},
+		{
+			"name": "arg.114",
+			"status": "pass",
+			"details": "arg 114 = 0.0000"
+		},
+		{
+			"name": "arg.115",
+			"status": "pass",
+			"details": "arg 115 = 0.8072"
+		},
+		{
+			"name": "arg.116",
+			"status": "pass",
+			"details": "arg 116 = 0.0000"
+		},
+		{
+			"name": "arg.117",
+			"status": "pass",
+			"details": "arg 117 = 0.0000"
+		},
+		{
+			"name": "arg.118",
+			"status": "pass",
+			"details": "arg 118 = 0.9978"
+		},
+		{
+			"name": "arg.119",
+			"status": "pass",
+			"details": "arg 119 = 0.0000"
+		},
+		{
+			"name": "arg.12",
+			"status": "pass",
+			"details": "arg 12 = -0.0000"
+		},
+		{
+			"name": "arg.121",
+			"status": "pass",
+			"details": "arg 121 = 0.0000"
+		},
+		{
+			"name": "arg.124",
+			"status": "pass",
+			"details": "arg 124 = 0.9978"
+		},
+		{
+			"name": "arg.125",
+			"status": "pass",
+			"details": "arg 125 = 0.0000"
+		},
+		{
+			"name": "arg.127",
+			"status": "pass",
+			"details": "arg 127 = 0.0000"
+		},
+		{
+			"name": "arg.128",
+			"status": "pass",
+			"details": "arg 128 = 0.0000"
+		},
+		{
+			"name": "arg.133",
+			"status": "pass",
+			"details": "arg 133 = 0.0156"
+		},
+		{
+			"name": "arg.134",
+			"status": "pass",
+			"details": "arg 134 = 0.0157"
+		},
+		{
+			"name": "arg.135",
+			"status": "pass",
+			"details": "arg 135 = 0.0000"
+		},
+		{
+			"name": "arg.136",
+			"status": "pass",
+			"details": "arg 136 = 0.0000"
+		},
+		{
+			"name": "arg.137",
+			"status": "pass",
+			"details": "arg 137 = 0.8607"
+		},
+		{
+			"name": "arg.138",
+			"status": "pass",
+			"details": "arg 138 = 0.9106"
+		},
+		{
+			"name": "arg.139",
+			"status": "pass",
+			"details": "arg 139 = 0.0000"
+		},
+		{
+			"name": "arg.14",
+			"status": "pass",
+			"details": "arg 14 = 0.0000"
+		},
+		{
+			"name": "arg.140",
+			"status": "pass",
+			"details": "arg 140 = 0.0000"
+		},
+		{
+			"name": "arg.142",
+			"status": "pass",
+			"details": "arg 142 = -0.0000"
+		},
+		{
+			"name": "arg.143",
+			"status": "pass",
+			"details": "arg 143 = -0.0136"
+		},
+		{
+			"name": "arg.144",
+			"status": "pass",
+			"details": "arg 144 = 0.0000"
+		},
+		{
+			"name": "arg.145",
+			"status": "pass",
+			"details": "arg 145 = 0.0000"
+		},
+		{
+			"name": "arg.155",
+			"status": "pass",
+			"details": "arg 155 = 0.0000"
+		},
+		{
+			"name": "arg.157",
+			"status": "pass",
+			"details": "arg 157 = 0.0000"
+		},
+		{
+			"name": "arg.162",
+			"status": "pass",
+			"details": "arg 162 = 0.0000"
+		},
+		{
+			"name": "arg.163",
+			"status": "pass",
+			"details": "arg 163 = 0.0000"
+		},
+		{
+			"name": "arg.164",
+			"status": "pass",
+			"details": "arg 164 = 0.0000"
+		},
+		{
+			"name": "arg.165",
+			"status": "pass",
+			"details": "arg 165 = 0.0000"
+		},
+		{
+			"name": "arg.166",
+			"status": "pass",
+			"details": "arg 166 = 0.0000"
+		},
+		{
+			"name": "arg.167",
+			"status": "pass",
+			"details": "arg 167 = 0.0000"
+		},
+		{
+			"name": "arg.168",
+			"status": "pass",
+			"details": "arg 168 = 0.0000"
+		},
+		{
+			"name": "arg.169",
+			"status": "pass",
+			"details": "arg 169 = 0.0000"
+		},
+		{
+			"name": "arg.170",
+			"status": "pass",
+			"details": "arg 170 = 0.0000"
+		},
+		{
+			"name": "arg.171",
+			"status": "pass",
+			"details": "arg 171 = 0.0000"
+		},
+		{
+			"name": "arg.172",
+			"status": "pass",
+			"details": "arg 172 = 0.0000"
+		},
+		{
+			"name": "arg.173",
+			"status": "pass",
+			"details": "arg 173 = 0.0000"
+		},
+		{
+			"name": "arg.174",
+			"status": "pass",
+			"details": "arg 174 = 0.0000"
+		},
+		{
+			"name": "arg.175",
+			"status": "pass",
+			"details": "arg 175 = 0.0000"
+		},
+		{
+			"name": "arg.176",
+			"status": "pass",
+			"details": "arg 176 = 0.0000"
+		},
+		{
+			"name": "arg.177",
+			"status": "pass",
+			"details": "arg 177 = 0.0000"
+		},
+		{
+			"name": "arg.178",
+			"status": "pass",
+			"details": "arg 178 = 0.0000"
+		},
+		{
+			"name": "arg.179",
+			"status": "pass",
+			"details": "arg 179 = 0.0000"
+		},
+		{
+			"name": "arg.180",
+			"status": "pass",
+			"details": "arg 180 = 0.0000"
+		},
+		{
+			"name": "arg.181",
+			"status": "pass",
+			"details": "arg 181 = 0.0000"
+		},
+		{
+			"name": "arg.182",
+			"status": "pass",
+			"details": "arg 182 = 0.0000"
+		},
+		{
+			"name": "arg.183",
+			"status": "pass",
+			"details": "arg 183 = 0.0000"
+		},
+		{
+			"name": "arg.184",
+			"status": "pass",
+			"details": "arg 184 = 0.0000"
+		},
+		{
+			"name": "arg.185",
+			"status": "pass",
+			"details": "arg 185 = 0.0000"
+		},
+		{
+			"name": "arg.186",
+			"status": "pass",
+			"details": "arg 186 = 0.0000"
+		},
+		{
+			"name": "arg.187",
+			"status": "pass",
+			"details": "arg 187 = 0.0000"
+		},
+		{
+			"name": "arg.188",
+			"status": "pass",
+			"details": "arg 188 = 0.0000"
+		},
+		{
+			"name": "arg.189",
+			"status": "pass",
+			"details": "arg 189 = 0.0000"
+		},
+		{
+			"name": "arg.190",
+			"status": "pass",
+			"details": "arg 190 = 0.0000"
+		},
+		{
+			"name": "arg.191",
+			"status": "pass",
+			"details": "arg 191 = 0.0000"
+		},
+		{
+			"name": "arg.200",
+			"status": "pass",
+			"details": "arg 200 = 1.0000"
+		},
+		{
+			"name": "arg.201",
+			"status": "pass",
+			"details": "arg 201 = 1.0000"
+		},
+		{
+			"name": "arg.202",
+			"status": "pass",
+			"details": "arg 202 = 0.0000"
+		},
+		{
+			"name": "arg.203",
+			"status": "pass",
+			"details": "arg 203 = 0.0000"
+		},
+		{
+			"name": "arg.204",
+			"status": "pass",
+			"details": "arg 204 = 0.0000"
+		},
+		{
+			"name": "arg.205",
+			"status": "pass",
+			"details": "arg 205 = 0.0000"
+		},
+		{
+			"name": "arg.206",
+			"status": "pass",
+			"details": "arg 206 = 0.0000"
+		},
+		{
+			"name": "arg.207",
+			"status": "pass",
+			"details": "arg 207 = 0.0000"
+		},
+		{
+			"name": "arg.208",
+			"status": "pass",
+			"details": "arg 208 = 0.0000"
+		},
+		{
+			"name": "arg.209",
+			"status": "pass",
+			"details": "arg 209 = 0.0000"
+		},
+		{
+			"name": "arg.210",
+			"status": "pass",
+			"details": "arg 210 = 0.0000"
+		},
+		{
+			"name": "arg.211",
+			"status": "pass",
+			"details": "arg 211 = 0.0000"
+		},
+		{
+			"name": "arg.212",
+			"status": "pass",
+			"details": "arg 212 = 1.0000"
+		},
+		{
+			"name": "arg.213",
+			"status": "pass",
+			"details": "arg 213 = 0.0000"
+		},
+		{
+			"name": "arg.234",
+			"status": "pass",
+			"details": "arg 234 = 0.0009"
+		},
+		{
+			"name": "arg.235",
+			"status": "pass",
+			"details": "arg 235 = 0.0009"
+		},
+		{
+			"name": "arg.237",
+			"status": "pass",
+			"details": "arg 237 = 0.0000"
+		},
+		{
+			"name": "arg.239",
+			"status": "pass",
+			"details": "arg 239 = 0.0000"
+		},
+		{
+			"name": "arg.24",
+			"status": "pass",
+			"details": "arg 24 = 0.0000"
+		},
+		{
+			"name": "arg.241",
+			"status": "pass",
+			"details": "arg 241 = 0.0000"
+		},
+		{
+			"name": "arg.243",
+			"status": "pass",
+			"details": "arg 243 = 0.0000"
+		},
+		{
+			"name": "arg.244",
+			"status": "pass",
+			"details": "arg 244 = 1.0000"
+		},
+		{
+			"name": "arg.245",
+			"status": "pass",
+			"details": "arg 245 = 0.0000"
+		},
+		{
+			"name": "arg.25",
+			"status": "pass",
+			"details": "arg 25 = 0.0000"
+		},
+		{
+			"name": "arg.252",
+			"status": "pass",
+			"details": "arg 252 = 0.0040"
+		},
+		{
+			"name": "arg.253",
+			"status": "pass",
+			"details": "arg 253 = 0.0040"
+		},
+		{
+			"name": "arg.254",
+			"status": "pass",
+			"details": "arg 254 = 0.0107"
+		},
+		{
+			"name": "arg.255",
+			"status": "pass",
+			"details": "arg 255 = 0.3556"
+		},
+		{
+			"name": "arg.256",
+			"status": "pass",
+			"details": "arg 256 = 0.3568"
+		},
+		{
+			"name": "arg.257",
+			"status": "pass",
+			"details": "arg 257 = 0.4868"
+		},
+		{
+			"name": "arg.26",
+			"status": "pass",
+			"details": "arg 26 = 0.0000"
+		},
+		{
+			"name": "arg.261",
+			"status": "pass",
+			"details": "arg 261 = 0.0000"
+		},
+		{
+			"name": "arg.266",
+			"status": "pass",
+			"details": "arg 266 = 0.0000"
+		},
+		{
+			"name": "arg.27",
+			"status": "pass",
+			"details": "arg 27 = 0.0000"
+		},
+		{
+			"name": "arg.28",
+			"status": "pass",
+			"details": "arg 28 = 0.0000"
+		},
+		{
+			"name": "arg.31",
+			"status": "pass",
+			"details": "arg 31 = 0.0000"
+		},
+		{
+			"name": "arg.32",
+			"status": "pass",
+			"details": "arg 32 = 0.0000"
+		},
+		{
+			"name": "arg.33",
+			"status": "pass",
+			"details": "arg 33 = 0.0000"
+		},
+		{
+			"name": "arg.337",
+			"status": "pass",
+			"details": "arg 337 = 0.0000"
+		},
+		{
+			"name": "arg.339",
+			"status": "pass",
+			"details": "arg 339 = 0.4000"
+		},
+		{
+			"name": "arg.34",
+			"status": "pass",
+			"details": "arg 34 = 0.0000"
+		},
+		{
+			"name": "arg.342",
+			"status": "pass",
+			"details": "arg 342 = 0.0000"
+		},
+		{
+			"name": "arg.375",
+			"status": "pass",
+			"details": "arg 375 = 0.0000"
+		},
+		{
+			"name": "arg.388",
+			"status": "pass",
+			"details": "arg 388 = 0.0000"
+		},
+		{
+			"name": "arg.389",
+			"status": "pass",
+			"details": "arg 389 = 0.0000"
+		},
+		{
+			"name": "arg.390",
+			"status": "pass",
+			"details": "arg 390 = 0.0000"
+		},
+		{
+			"name": "arg.391",
+			"status": "pass",
+			"details": "arg 391 = 0.0000"
+		},
+		{
+			"name": "arg.392",
+			"status": "pass",
+			"details": "arg 392 = 0.0000"
+		},
+		{
+			"name": "arg.393",
+			"status": "pass",
+			"details": "arg 393 = 0.0000"
+		},
+		{
+			"name": "arg.394",
+			"status": "pass",
+			"details": "arg 394 = 0.0000"
+		},
+		{
+			"name": "arg.395",
+			"status": "pass",
+			"details": "arg 395 = 0.0000"
+		},
+		{
+			"name": "arg.419",
+			"status": "pass",
+			"details": "arg 419 = 0.0000"
+		},
+		{
+			"name": "arg.424",
+			"status": "pass",
+			"details": "arg 424 = 0.0908"
+		},
+		{
+			"name": "arg.425",
+			"status": "pass",
+			"details": "arg 425 = 0.4321"
+		},
+		{
+			"name": "arg.426",
+			"status": "pass",
+			"details": "arg 426 = 0.0000"
+		},
+		{
+			"name": "arg.427",
+			"status": "pass",
+			"details": "arg 427 = 0.0000"
+		},
+		{
+			"name": "arg.461",
+			"status": "pass",
+			"details": "arg 461 = 0.0000"
+		},
+		{
+			"name": "arg.469",
+			"status": "pass",
+			"details": "arg 469 = 0.0000"
+		},
+		{
+			"name": "arg.47",
+			"status": "pass",
+			"details": "arg 47 = 0.0000"
+		},
+		{
+			"name": "arg.470",
+			"status": "pass",
+			"details": "arg 470 = 0.0000"
+		},
+		{
+			"name": "arg.471",
+			"status": "pass",
+			"details": "arg 471 = 0.8506"
+		},
+		{
+			"name": "arg.472",
+			"status": "pass",
+			"details": "arg 472 = 0.8491"
+		},
+		{
+			"name": "arg.473",
+			"status": "pass",
+			"details": "arg 473 = 0.8571"
+		},
+		{
+			"name": "arg.474",
+			"status": "pass",
+			"details": "arg 474 = 0.0000"
+		},
+		{
+			"name": "arg.475",
+			"status": "pass",
+			"details": "arg 475 = 0.3488"
+		},
+		{
+			"name": "arg.476",
+			"status": "pass",
+			"details": "arg 476 = 0.3488"
+		},
+		{
+			"name": "arg.48",
+			"status": "pass",
+			"details": "arg 48 = 0.0000"
+		},
+		{
+			"name": "arg.509",
+			"status": "pass",
+			"details": "arg 509 = 1.0000"
+		},
+		{
+			"name": "arg.51",
+			"status": "pass",
+			"details": "arg 51 = 0.5295"
+		},
+		{
+			"name": "arg.52",
+			"status": "pass",
+			"details": "arg 52 = 0.0892"
+		},
+		{
+			"name": "arg.526",
+			"status": "pass",
+			"details": "arg 526 = 0.0000"
+		},
+		{
+			"name": "arg.527",
+			"status": "pass",
+			"details": "arg 527 = 0.0000"
+		},
+		{
+			"name": "arg.528",
+			"status": "pass",
+			"details": "arg 528 = 0.0000"
+		},
+		{
+			"name": "arg.529",
+			"status": "pass",
+			"details": "arg 529 = 0.9561"
+		},
+		{
+			"name": "arg.53",
+			"status": "pass",
+			"details": "arg 53 = 0.8616"
+		},
+		{
+			"name": "arg.530",
+			"status": "pass",
+			"details": "arg 530 = 0.9209"
+		},
+		{
+			"name": "arg.531",
+			"status": "pass",
+			"details": "arg 531 = 0.0000"
+		},
+		{
+			"name": "arg.532",
+			"status": "pass",
+			"details": "arg 532 = 0.0000"
+		},
+		{
+			"name": "arg.533",
+			"status": "pass",
+			"details": "arg 533 = 0.0000"
+		},
+		{
+			"name": "arg.540",
+			"status": "pass",
+			"details": "arg 540 = 1.0000"
+		},
+		{
+			"name": "arg.541",
+			"status": "pass",
+			"details": "arg 541 = 0.0000"
+		},
+		{
+			"name": "arg.542",
+			"status": "pass",
+			"details": "arg 542 = 0.0000"
+		},
+		{
+			"name": "arg.545",
+			"status": "pass",
+			"details": "arg 545 = 1.0000"
+		},
+		{
+			"name": "arg.546",
+			"status": "pass",
+			"details": "arg 546 = 0.2440"
+		},
+		{
+			"name": "arg.551",
+			"status": "pass",
+			"details": "arg 551 = 0.0000"
+		},
+		{
+			"name": "arg.557",
+			"status": "pass",
+			"details": "arg 557 = 0.4167"
+		},
+		{
+			"name": "arg.558",
+			"status": "pass",
+			"details": "arg 558 = 0.0000"
+		},
+		{
+			"name": "arg.560",
+			"status": "pass",
+			"details": "arg 560 = 0.0000"
+		},
+		{
+			"name": "arg.561",
+			"status": "pass",
+			"details": "arg 561 = 1.0000"
+		},
+		{
+			"name": "arg.562",
+			"status": "pass",
+			"details": "arg 562 = 1.0000"
+		},
+		{
+			"name": "arg.563",
+			"status": "pass",
+			"details": "arg 563 = 1.0000"
+		},
+		{
+			"name": "arg.564",
+			"status": "pass",
+			"details": "arg 564 = 1.0000"
+		},
+		{
+			"name": "arg.565",
+			"status": "pass",
+			"details": "arg 565 = 1.0000"
+		},
+		{
+			"name": "arg.566",
+			"status": "pass",
+			"details": "arg 566 = 0.1877"
+		},
+		{
+			"name": "arg.567",
+			"status": "pass",
+			"details": "arg 567 = 0.1879"
+		},
+		{
+			"name": "arg.568",
+			"status": "pass",
+			"details": "arg 568 = 0.0000"
+		},
+		{
+			"name": "arg.571",
+			"status": "pass",
+			"details": "arg 571 = 0.0000"
+		},
+		{
+			"name": "arg.573",
+			"status": "pass",
+			"details": "arg 573 = 0.4914"
+		},
+		{
+			"name": "arg.574",
+			"status": "pass",
+			"details": "arg 574 = 0.4000"
+		},
+		{
+			"name": "arg.575",
+			"status": "pass",
+			"details": "arg 575 = 0.0000"
+		},
+		{
+			"name": "arg.576",
+			"status": "pass",
+			"details": "arg 576 = 0.0000"
+		},
+		{
+			"name": "arg.577",
+			"status": "pass",
+			"details": "arg 577 = 0.0870"
+		},
+		{
+			"name": "arg.578",
+			"status": "pass",
+			"details": "arg 578 = 0.4167"
+		},
+		{
+			"name": "arg.579",
+			"status": "pass",
+			"details": "arg 579 = 0.4167"
+		},
+		{
+			"name": "arg.580",
+			"status": "pass",
+			"details": "arg 580 = 0.0000"
+		},
+		{
+			"name": "arg.581",
+			"status": "pass",
+			"details": "arg 581 = 0.0070"
+		},
+		{
+			"name": "arg.582",
+			"status": "pass",
+			"details": "arg 582 = 0.0000"
+		},
+		{
+			"name": "arg.586",
+			"status": "pass",
+			"details": "arg 586 = 0.0000"
+		},
+		{
+			"name": "arg.587",
+			"status": "pass",
+			"details": "arg 587 = 0.2640"
+		},
+		{
+			"name": "arg.59",
+			"status": "pass",
+			"details": "arg 59 = 1.0000"
+		},
+		{
+			"name": "arg.592",
+			"status": "pass",
+			"details": "arg 592 = 0.4928"
+		},
+		{
+			"name": "arg.594",
+			"status": "pass",
+			"details": "arg 594 = 0.3513"
+		},
+		{
+			"name": "arg.596",
+			"status": "pass",
+			"details": "arg 596 = 0.7057"
+		},
+		{
+			"name": "arg.599",
+			"status": "pass",
+			"details": "arg 599 = -0.9801"
+		},
+		{
+			"name": "arg.6",
+			"status": "pass",
+			"details": "arg 6 = 0.0191"
+		},
+		{
+			"name": "arg.60",
+			"status": "pass",
+			"details": "arg 60 = 0.0000"
+		},
+		{
+			"name": "arg.61",
+			"status": "pass",
+			"details": "arg 61 = 1.0000"
+		},
+		{
+			"name": "arg.613",
+			"status": "pass",
+			"details": "arg 613 = -0.9801"
+		},
+		{
+			"name": "arg.614",
+			"status": "pass",
+			"details": "arg 614 = 0.0000"
+		},
+		{
+			"name": "arg.615",
+			"status": "pass",
+			"details": "arg 615 = -1.0000"
+		},
+		{
+			"name": "arg.62",
+			"status": "pass",
+			"details": "arg 62 = 0.0000"
+		},
+		{
+			"name": "arg.63",
+			"status": "pass",
+			"details": "arg 63 = 1.0000"
+		},
+		{
+			"name": "arg.64",
+			"status": "pass",
+			"details": "arg 64 = 0.0000"
+		},
+		{
+			"name": "arg.68",
+			"status": "pass",
+			"details": "arg 68 = 0.0905"
+		},
+		{
+			"name": "arg.69",
+			"status": "pass",
+			"details": "arg 69 = 0.0865"
+		},
+		{
+			"name": "arg.70",
+			"status": "pass",
+			"details": "arg 70 = 0.5767"
+		},
+		{
+			"name": "arg.71",
+			"status": "pass",
+			"details": "arg 71 = -0.1371"
+		},
+		{
+			"name": "arg.72",
+			"status": "pass",
+			"details": "arg 72 = 0.0000"
+		},
+		{
+			"name": "arg.73",
+			"status": "pass",
+			"details": "arg 73 = 0.0000"
+		},
+		{
+			"name": "arg.74",
+			"status": "pass",
+			"details": "arg 74 = 0.3912"
+		},
+		{
+			"name": "arg.75",
+			"status": "pass",
+			"details": "arg 75 = 0.0000"
+		},
+		{
+			"name": "arg.78",
+			"status": "pass",
+			"details": "arg 78 = 0.0000"
+		},
+		{
+			"name": "arg.79",
+			"status": "pass",
+			"details": "arg 79 = 0.0000"
+		},
+		{
+			"name": "arg.798",
+			"status": "pass",
+			"details": "arg 798 = 0.0000"
+		},
+		{
+			"name": "arg.799",
+			"status": "pass",
+			"details": "arg 799 = 0.0000"
+		},
+		{
+			"name": "arg.80",
+			"status": "pass",
+			"details": "arg 80 = 0.0000"
+		},
+		{
+			"name": "arg.800",
+			"status": "pass",
+			"details": "arg 800 = 0.0000"
+		},
+		{
+			"name": "arg.801",
+			"status": "pass",
+			"details": "arg 801 = 0.0000"
+		},
+		{
+			"name": "arg.802",
+			"status": "pass",
+			"details": "arg 802 = 0.0000"
+		},
+		{
+			"name": "arg.803",
+			"status": "pass",
+			"details": "arg 803 = 0.0000"
+		},
+		{
+			"name": "arg.81",
+			"status": "pass",
+			"details": "arg 81 = 0.0000"
+		},
+		{
+			"name": "arg.82",
+			"status": "pass",
+			"details": "arg 82 = 0.0000"
+		},
+		{
+			"name": "arg.83",
+			"status": "pass",
+			"details": "arg 83 = 0.0000"
+		},
+		{
+			"name": "arg.84",
+			"status": "pass",
+			"details": "arg 84 = 1.0000"
+		},
+		{
+			"name": "arg.85",
+			"status": "pass",
+			"details": "arg 85 = 0.0000"
+		},
+		{
+			"name": "arg.86",
+			"status": "pass",
+			"details": "arg 86 = 0.0000"
+		},
+		{
+			"name": "arg.87",
+			"status": "pass",
+			"details": "arg 87 = 0.0491"
+		},
+		{
+			"name": "arg.88",
+			"status": "pass",
+			"details": "arg 88 = 0.8250"
+		},
+		{
+			"name": "arg.89",
+			"status": "pass",
+			"details": "arg 89 = 0.0000"
+		},
+		{
+			"name": "arg.92",
+			"status": "pass",
+			"details": "arg 92 = 1.0000"
+		},
+		{
+			"name": "arg.93",
+			"status": "pass",
+			"details": "arg 93 = 0.6086"
+		},
+		{
+			"name": "arg.94",
+			"status": "pass",
+			"details": "arg 94 = 0.5136"
+		},
+		{
+			"name": "arg.95",
+			"status": "pass",
+			"details": "arg 95 = 0.0000"
+		},
+		{
+			"name": "arg.97",
+			"status": "pass",
+			"details": "arg 97 = 0.5000"
+		},
+		{
+			"name": "arg.98",
+			"status": "pass",
+			"details": "arg 98 = 0.5000"
+		},
+		{
+			"name": "arg.99",
+			"status": "pass",
+			"details": "arg 99 = 0.5000"
+		},
+		{
+			"name": "dev0.COMM-PWR-SA-TLF-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "dev0.FEEDING-OZH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ind.1.IAS_deviation_index",
+			"status": "skip",
+			"details": "field \"IAS_deviation_index\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.IAS_deviation_scale",
+			"status": "skip",
+			"details": "field \"IAS_deviation_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.IAS_index",
+			"status": "pass",
+			"details": "field \"IAS_index\" = \"\""
+		},
+		{
+			"name": "ind.1.IAS_max_index",
+			"status": "pass",
+			"details": "field \"IAS_max_index\" = \"\""
+		},
+		{
+			"name": "ind.1.IAS_scale",
+			"status": "pass",
+			"details": "field \"IAS_scale\" = \"\""
+		},
+		{
+			"name": "ind.1.W_vector",
+			"status": "skip",
+			"details": "field \"W_vector\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.alt_deviation_scale",
+			"status": "skip",
+			"details": "field \"alt_deviation_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.alt_deviation_scale_index",
+			"status": "skip",
+			"details": "field \"alt_deviation_scale_index\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.azimuth_deviation_scale",
+			"status": "skip",
+			"details": "field \"azimuth_deviation_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.azimuth_deviation_scale_180",
+			"status": "skip",
+			"details": "field \"azimuth_deviation_scale_180\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.azimuth_deviation_scale_30",
+			"status": "skip",
+			"details": "field \"azimuth_deviation_scale_30\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.bank_scale",
+			"status": "pass",
+			"details": "field \"bank_scale\" = \"\""
+		},
+		{
+			"name": "ind.1.bird_base",
+			"status": "pass",
+			"details": "field \"bird_base\" = \"\""
+		},
+		{
+			"name": "ind.1.bird_mark",
+			"status": "pass",
+			"details": "field \"bird_mark\" = \"\""
+		},
+		{
+			"name": "ind.1.bird_mark_dummy",
+			"status": "pass",
+			"details": "field \"bird_mark_dummy\" = \"\""
+		},
+		{
+			"name": "ind.1.bomb_fall_line",
+			"status": "skip",
+			"details": "field \"bomb_fall_line\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.bombs_distance_sector",
+			"status": "skip",
+			"details": "field \"bombs_distance_sector\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.bombs_max_range_tick",
+			"status": "skip",
+			"details": "field \"bombs_max_range_tick\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.bombs_min_range_tick",
+			"status": "skip",
+			"details": "field \"bombs_min_range_tick\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.bombs_piper",
+			"status": "skip",
+			"details": "field \"bombs_piper\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.break_symbol",
+			"status": "skip",
+			"details": "field \"break_symbol\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_distance_sector_dummy",
+			"status": "skip",
+			"details": "field \"cannon_distance_sector_dummy\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_distance_sector_piper",
+			"status": "skip",
+			"details": "field \"cannon_distance_sector_piper\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_limits_left",
+			"status": "skip",
+			"details": "field \"cannon_limits_left\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_limits_right",
+			"status": "skip",
+			"details": "field \"cannon_limits_right\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_limits_up",
+			"status": "skip",
+			"details": "field \"cannon_limits_up\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_max_range_tick",
+			"status": "skip",
+			"details": "field \"cannon_max_range_tick\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_max_range_tick_dumm",
+			"status": "skip",
+			"details": "field \"cannon_max_range_tick_dumm\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_min_range_tick",
+			"status": "skip",
+			"details": "field \"cannon_min_range_tick\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_min_range_tick_dumm",
+			"status": "skip",
+			"details": "field \"cannon_min_range_tick_dumm\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.cannon_piper",
+			"status": "skip",
+			"details": "field \"cannon_piper\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.dir_alt_hor_line",
+			"status": "pass",
+			"details": "field \"dir_alt_hor_line\" = \"\""
+		},
+		{
+			"name": "ind.1.dir_alt_vert_line",
+			"status": "skip",
+			"details": "field \"dir_alt_vert_line\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.dir_alt_vert_line_down",
+			"status": "pass",
+			"details": "field \"dir_alt_vert_line_down\" = \"\""
+		},
+		{
+			"name": "ind.1.dummy_TDC",
+			"status": "skip",
+			"details": "field \"dummy_TDC\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.exceed_HUD_zone",
+			"status": "skip",
+			"details": "field \"exceed_HUD_zone\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.filter",
+			"status": "skip",
+			"details": "field \"filter\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.grid",
+			"status": "skip",
+			"details": "field \"grid\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.hardware_glass_base",
+			"status": "pass",
+			"details": "field \"hardware_glass_base\" = \"\""
+		},
+		{
+			"name": "ind.1.heading_deviation_diamond",
+			"status": "pass",
+			"details": "field \"heading_deviation_diamond\" = \"\""
+		},
+		{
+			"name": "ind.1.heading_index",
+			"status": "pass",
+			"details": "field \"heading_index\" = \"\""
+		},
+		{
+			"name": "ind.1.heading_tape1",
+			"status": "pass",
+			"details": "field \"heading_tape1\" = \"\""
+		},
+		{
+			"name": "ind.1.heading_tape2",
+			"status": "pass",
+			"details": "field \"heading_tape2\" = \"\""
+		},
+		{
+			"name": "ind.1.heading_tape_base",
+			"status": "pass",
+			"details": "field \"heading_tape_base\" = \"\""
+		},
+		{
+			"name": "ind.1.heading_tape_border",
+			"status": "pass",
+			"details": "field \"heading_tape_border\" = \"\""
+		},
+		{
+			"name": "ind.1.missile_ASE_circle",
+			"status": "skip",
+			"details": "field \"missile_ASE_circle\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.ny_index",
+			"status": "pass",
+			"details": "field \"ny_index\" = \"\""
+		},
+		{
+			"name": "ind.1.ny_max_index",
+			"status": "pass",
+			"details": "field \"ny_max_index\" = \"\""
+		},
+		{
+			"name": "ind.1.ny_scale",
+			"status": "pass",
+			"details": "field \"ny_scale\" = \"\""
+		},
+		{
+			"name": "ind.1.pitch_bank_scale1",
+			"status": "pass",
+			"details": "field \"pitch_bank_scale1\" = \"\""
+		},
+		{
+			"name": "ind.1.pitch_bank_scale2",
+			"status": "pass",
+			"details": "field \"pitch_bank_scale2\" = \"\""
+		},
+		{
+			"name": "ind.1.pitch_bank_scale_border1",
+			"status": "pass",
+			"details": "field \"pitch_bank_scale_border1\" = \"\""
+		},
+		{
+			"name": "ind.1.pitch_bank_scale_border2",
+			"status": "pass",
+			"details": "field \"pitch_bank_scale_border2\" = \"\""
+		},
+		{
+			"name": "ind.1.point_hovering_deviation_rect",
+			"status": "skip",
+			"details": "field \"point_hovering_deviation_rect\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.ralt_scale",
+			"status": "skip",
+			"details": "field \"ralt_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.ralt_scale_index",
+			"status": "skip",
+			"details": "field \"ralt_scale_index\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.ring_hovering_deviation",
+			"status": "skip",
+			"details": "field \"ring_hovering_deviation\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.rockets_distance_sector",
+			"status": "skip",
+			"details": "field \"rockets_distance_sector\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.rockets_max_range_tick",
+			"status": "skip",
+			"details": "field \"rockets_max_range_tick\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.rockets_min_range_tick",
+			"status": "skip",
+			"details": "field \"rockets_min_range_tick\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.rockets_piper",
+			"status": "skip",
+			"details": "field \"rockets_piper\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.shkval_TDC",
+			"status": "skip",
+			"details": "field \"shkval_TDC\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.shkval_distance_sector",
+			"status": "skip",
+			"details": "field \"shkval_distance_sector\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.shkval_limits_left",
+			"status": "skip",
+			"details": "field \"shkval_limits_left\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.shkval_limits_up",
+			"status": "skip",
+			"details": "field \"shkval_limits_up\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.shkval_piper",
+			"status": "skip",
+			"details": "field \"shkval_piper\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.1.track_deviation_diamond",
+			"status": "skip",
+			"details": "field \"track_deviation_diamond\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.track_deviation_index",
+			"status": "skip",
+			"details": "field \"track_deviation_index\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.track_deviation_scale",
+			"status": "skip",
+			"details": "field \"track_deviation_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_BALT",
+			"status": "skip",
+			"details": "field \"txt_BALT\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_IMU_malfunction",
+			"status": "skip",
+			"details": "field \"txt_IMU_malfunction\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_INS_status",
+			"status": "skip",
+			"details": "field \"txt_INS_status\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_LR_PAUSE_symbol",
+			"status": "skip",
+			"details": "field \"txt_LR_PAUSE_symbol\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_LR_countdown",
+			"status": "skip",
+			"details": "field \"txt_LR_countdown\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_NavFix",
+			"status": "skip",
+			"details": "field \"txt_NavFix\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_RALT",
+			"status": "pass",
+			"details": "field \"txt_RALT\" = \"067\""
+		},
+		{
+			"name": "ind.1.txt_RALT_R_symbol",
+			"status": "pass",
+			"details": "field \"txt_RALT_R_symbol\" = \"Р\""
+		},
+		{
+			"name": "ind.1.txt_RU_TA_symbol",
+			"status": "skip",
+			"details": "field \"txt_RU_TA_symbol\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_TA_symbol",
+			"status": "skip",
+			"details": "field \"txt_TA_symbol\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_TgtEntry",
+			"status": "skip",
+			"details": "field \"txt_TgtEntry\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_V_H",
+			"status": "skip",
+			"details": "field \"txt_V_H\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_Vy",
+			"status": "pass",
+			"details": "field \"txt_Vy\" = \"+00\""
+		},
+		{
+			"name": "ind.1.txt_W",
+			"status": "skip",
+			"details": "field \"txt_W\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_launch_permission",
+			"status": "skip",
+			"details": "field \"txt_launch_permission\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_range",
+			"status": "skip",
+			"details": "field \"txt_range\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_test",
+			"status": "skip",
+			"details": "field \"txt_test\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_training_mode",
+			"status": "skip",
+			"details": "field \"txt_training_mode\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.underline",
+			"status": "skip",
+			"details": "field \"underline\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.vy_scale",
+			"status": "pass",
+			"details": "field \"vy_scale\" = \"\""
+		},
+		{
+			"name": "ind.1.vy_scale_index",
+			"status": "pass",
+			"details": "field \"vy_scale_index\" = \"\""
+		},
+		{
+			"name": "ind.2.SHKVAL_border",
+			"status": "skip",
+			"details": "field \"SHKVAL_border\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.camera_lim_H",
+			"status": "skip",
+			"details": "field \"camera_lim_H\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.camera_lim_V",
+			"status": "skip",
+			"details": "field \"camera_lim_V\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.camera_lim_index_H",
+			"status": "skip",
+			"details": "field \"camera_lim_index_H\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.camera_lim_index_V",
+			"status": "skip",
+			"details": "field \"camera_lim_index_V\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.gun_lim_H",
+			"status": "skip",
+			"details": "field \"gun_lim_H\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.gun_lim_V",
+			"status": "skip",
+			"details": "field \"gun_lim_V\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.narrow_cam_border",
+			"status": "skip",
+			"details": "field \"narrow_cam_border\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.pitch_bank_line",
+			"status": "pass",
+			"details": "field \"pitch_bank_line\" = \"\""
+		},
+		{
+			"name": "ind.2.plane_symbol",
+			"status": "pass",
+			"details": "field \"plane_symbol\" = \"\""
+		},
+		{
+			"name": "ind.2.ralt_scale",
+			"status": "skip",
+			"details": "field \"ralt_scale\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.ralt_scale_index",
+			"status": "skip",
+			"details": "field \"ralt_scale_index\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.txt_IAS",
+			"status": "pass",
+			"details": "field \"txt_IAS\" = \"+191\""
+		},
+		{
+			"name": "ind.2.txt_P_symbol",
+			"status": "skip",
+			"details": "field \"txt_P_symbol\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.txt_TA_symbol",
+			"status": "skip",
+			"details": "field \"txt_TA_symbol\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.txt_TG_symbol",
+			"status": "skip",
+			"details": "field \"txt_TG_symbol\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.txt_V_H",
+			"status": "skip",
+			"details": "field \"txt_V_H\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.txt_range",
+			"status": "skip",
+			"details": "field \"txt_range\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.txt_range_C",
+			"status": "skip",
+			"details": "field \"txt_range_C\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.4.frame",
+			"status": "pass",
+			"details": "field \"frame\" = \"\""
+		},
+		{
+			"name": "ind.5.txt_NIT",
+			"status": "skip",
+			"details": "field \"txt_NIT\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_NIT_apostrophe1",
+			"status": "skip",
+			"details": "field \"txt_NIT_apostrophe1\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_NIT_apostrophe2",
+			"status": "skip",
+			"details": "field \"txt_NIT_apostrophe2\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_NIT_sign",
+			"status": "skip",
+			"details": "field \"txt_NIT_sign\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_OIT_NOT",
+			"status": "skip",
+			"details": "field \"txt_OIT_NOT\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_OIT_PPM",
+			"status": "skip",
+			"details": "field \"txt_OIT_PPM\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_VIT",
+			"status": "skip",
+			"details": "field \"txt_VIT\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_VIT_apostrophe1",
+			"status": "skip",
+			"details": "field \"txt_VIT_apostrophe1\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_VIT_apostrophe2",
+			"status": "skip",
+			"details": "field \"txt_VIT_apostrophe2\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.txt_VIT_sign",
+			"status": "skip",
+			"details": "field \"txt_VIT_sign\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.6.txt_cannon_count",
+			"status": "skip",
+			"details": "field \"txt_cannon_count\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.txt_weap_count",
+			"status": "skip",
+			"details": "field \"txt_weap_count\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.txt_weap_type_AT",
+			"status": "skip",
+			"details": "field \"txt_weap_type_AT\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.txt_weap_type_Gun_Pod",
+			"status": "skip",
+			"details": "field \"txt_weap_type_Gun_Pod\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.txt_weap_type_Iron_Bomb",
+			"status": "skip",
+			"details": "field \"txt_weap_type_Iron_Bomb\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.txt_weap_type_RT",
+			"status": "skip",
+			"details": "field \"txt_weap_type_RT\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.7.txt_digits",
+			"status": "skip",
+			"details": "field \"txt_digits\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.8.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.pitch_scale",
+			"status": "skip",
+			"details": "field \"pitch_scale\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.roll_scale",
+			"status": "skip",
+			"details": "field \"roll_scale\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.stick_position",
+			"status": "skip",
+			"details": "field \"stick_position\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_autopilot",
+			"status": "skip",
+			"details": "field \"txt_autopilot\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_autopilot_hover",
+			"status": "skip",
+			"details": "field \"txt_autopilot_hover\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_brakes",
+			"status": "skip",
+			"details": "field \"txt_brakes\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.wheel_brake",
+			"status": "skip",
+			"details": "field \"wheel_brake\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.wheel_brake_mask",
+			"status": "skip",
+			"details": "field \"wheel_brake_mask\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.9.ARK_table_main_dummy",
+			"status": "pass",
+			"details": "field \"ARK_table_main_dummy\" = \"\""
+		}
+	]
+}

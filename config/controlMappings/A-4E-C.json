@@ -1,0 +1,3817 @@
+{
+	"controls": {
+		"AFCS.PNT_135": {
+			"arg": 135,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3095,
+			"description": "APC Power Switch",
+			"deviceId": 27,
+			"elementName": "PNT_135",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_136": {
+			"arg": 136,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3096,
+			"description": "APC Temperature Switch",
+			"deviceId": 27,
+			"elementName": "PNT_136",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_160": {
+			"arg": 160,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3088,
+			"description": "AFCS Standby Switch",
+			"deviceId": 27,
+			"elementName": "PNT_160",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_161": {
+			"arg": 161,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3089,
+			"description": "AFCS Engage Switch",
+			"deviceId": 27,
+			"elementName": "PNT_161",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_162": {
+			"arg": 162,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3090,
+			"description": "AFCS Heading Select Switch",
+			"deviceId": 27,
+			"elementName": "PNT_162",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_163": {
+			"arg": 163,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3091,
+			"description": "AFCS Altitude Switch",
+			"deviceId": 27,
+			"elementName": "PNT_163",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_164": {
+			"arg": 164,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3092,
+			"description": "AFCS Heading Select Pull-to-Set Knob",
+			"deviceId": 27,
+			"elementName": "PNT_164",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AFCS.PNT_165": {
+			"arg": 165,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3093,
+			"description": "AFCS Stability Augmentation Switch (Yaw Damper)",
+			"deviceId": 27,
+			"elementName": "PNT_165",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_166": {
+			"arg": 166,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3094,
+			"description": "AFCS Aileron Trim Switch (unimplemented)",
+			"deviceId": 27,
+			"elementName": "PNT_166",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_258": {
+			"arg": 258,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3170,
+			"description": "AFCS 1-N-2 Guard Switch",
+			"deviceId": 27,
+			"elementName": "PNT_258",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AFCS.PNT_259": {
+			"arg": 259,
+			"description": "AFCS 1-N-2 Switch",
+			"elementName": "PNT_259",
+			"positionMap": [
+				{
+					"commandId": 3171,
+					"deviceId": 27,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3171,
+					"deviceId": 27,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"AIRBRAKES.PNT_128": {
+			"arg": 128,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3035,
+			"description": "Emergency Speedbrake Knob",
+			"deviceId": 13,
+			"elementName": "PNT_128",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AIRBRAKES.PNT_85": {
+			"arg": 85,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3024,
+			"description": "Speedbrake Switch",
+			"deviceId": 13,
+			"elementName": "PNT_85",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_106": {
+			"arg": 106,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3082,
+			"description": "Instrument Lights Control",
+			"deviceId": 2,
+			"elementName": "PNT_106",
+			"type": "continuous"
+		},
+		"AVIONICS.PNT_107": {
+			"arg": 107,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3083,
+			"description": "Console Lights Control",
+			"deviceId": 2,
+			"elementName": "PNT_107",
+			"type": "continuous"
+		},
+		"AVIONICS.PNT_108": {
+			"arg": 108,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3084,
+			"description": "Instrument Lights Brightness",
+			"deviceId": 2,
+			"elementName": "PNT_108",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_110": {
+			"arg": 110,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3081,
+			"description": "White Floodlights Control",
+			"deviceId": 2,
+			"elementName": "PNT_110",
+			"type": "continuous"
+		},
+		"AVIONICS.PNT_125": {
+			"arg": 125,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3138,
+			"description": "Oxygen Switch",
+			"deviceId": 2,
+			"elementName": "PNT_125",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_133": {
+			"arg": 133,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3158,
+			"description": "JATO Arming Switch",
+			"deviceId": 2,
+			"elementName": "PNT_133",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_134": {
+			"arg": 134,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3159,
+			"description": "JATO Jettison Switch",
+			"deviceId": 2,
+			"elementName": "PNT_134",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_139": {
+			"arg": 139,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3111,
+			"description": "Accelerometer Reset",
+			"deviceId": 2,
+			"elementName": "PNT_139",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_24": {
+			"arg": 24,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3148,
+			"description": "Shoulder Harness Control Handle",
+			"deviceId": 2,
+			"elementName": "PNT_24",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_25": {
+			"arg": 25,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3149,
+			"description": "Alternate Ejection Handle",
+			"deviceId": 2,
+			"elementName": "PNT_25",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_257": {
+			"arg": 257,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3173,
+			"description": "Rain Removal Switch (unimplemented)",
+			"deviceId": 2,
+			"elementName": "PNT_257",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_662_arg662": {
+			"arg": 662,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3043,
+			"description": "Standby Attitude Horizon",
+			"deviceId": 2,
+			"elementName": "PNT_662",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AVIONICS.PNT_662_arg663": {
+			"arg": 663,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3042,
+			"description": "Standby Attitude Horizon",
+			"deviceId": 2,
+			"elementName": "PNT_662",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_720": {
+			"arg": 720,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Internal-External Fuel Switch",
+			"deviceId": 2,
+			"elementName": "PNT_720",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_723": {
+			"arg": 723,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3039,
+			"description": "Master Test Switch",
+			"deviceId": 2,
+			"elementName": "PNT_723",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.PNT_827": {
+			"arg": 827,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Altimeter Pressure",
+			"deviceId": 2,
+			"elementName": "PNT_827",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AVIONICS.PNT_853": {
+			"arg": 853,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3165,
+			"description": "AoA Indexer Dimming Wheel",
+			"deviceId": 2,
+			"elementName": "PNT_853",
+			"type": "continuous"
+		},
+		"AVIONICS.PNT_884_arg884": {
+			"arg": 884,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3041,
+			"description": "IAS Index",
+			"deviceId": 2,
+			"elementName": "PNT_884",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AVIONICS.PNT_884_arg885": {
+			"arg": 885,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3040,
+			"description": "IAS Index",
+			"deviceId": 2,
+			"elementName": "PNT_884",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AVIONICS.intlight_console_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Console Lights Control - Absolute"
+				}
+			],
+			"commandId": 3129,
+			"description": "Console Lights Control - Absolute",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_console_CHANGE": {
+			"bindings": [
+				{
+					"name": "Console Lights Control - Rotary Decrement",
+					"valueDown": -0.1
+				},
+				{
+					"name": "Console Lights Control - Rotary Increment",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3132,
+			"description": "Console Lights Control - Rotary Decrement (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_console_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Console Lights Control - Slew"
+				}
+			],
+			"commandId": 3181,
+			"description": "Console Lights Control - Slew",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_console_startdown": {
+			"bindings": [
+				{
+					"name": "Console Lights Control - Continuous Decrease"
+				}
+			],
+			"commandId": 10309,
+			"description": "Console Lights Control - Continuous Decrease",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_console_startup": {
+			"bindings": [
+				{
+					"name": "Console Lights Control - Continuous Increase"
+				}
+			],
+			"commandId": 10308,
+			"description": "Console Lights Control - Continuous Increase",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_console_stop": {
+			"bindings": [
+				{
+					"name": "Console Lights Control - Continuous Increase"
+				},
+				{
+					"name": "Console Lights Control - Continuous Decrease"
+				}
+			],
+			"commandId": 10310,
+			"description": "Console Lights Control - Continuous Increase (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_instruments_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Instrument Lights Control - Absolute"
+				}
+			],
+			"commandId": 3128,
+			"description": "Instrument Lights Control - Absolute",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_instruments_CHANGE": {
+			"bindings": [
+				{
+					"name": "Instrument Lights Control - Rotary Decrement",
+					"valueDown": -0.1
+				},
+				{
+					"name": "Instrument Lights Control - Rotary Increment",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3131,
+			"description": "Instrument Lights Control - Rotary Decrement (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_instruments_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Instrument Lights Control - Slew"
+				}
+			],
+			"commandId": 3180,
+			"description": "Instrument Lights Control - Slew",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_instruments_startdown": {
+			"bindings": [
+				{
+					"name": "Instrument Lights Control - Continuous Decrease"
+				}
+			],
+			"commandId": 10306,
+			"description": "Instrument Lights Control - Continuous Decrease",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_instruments_startup": {
+			"bindings": [
+				{
+					"name": "Instrument Lights Control - Continuous Increase"
+				}
+			],
+			"commandId": 10305,
+			"description": "Instrument Lights Control - Continuous Increase",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_instruments_stop": {
+			"bindings": [
+				{
+					"name": "Instrument Lights Control - Continuous Increase"
+				},
+				{
+					"name": "Instrument Lights Control - Continuous Decrease"
+				}
+			],
+			"commandId": 10307,
+			"description": "Instrument Lights Control - Continuous Increase (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_whiteflood_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "White Floodlights Control - Absolute"
+				}
+			],
+			"commandId": 3127,
+			"description": "White Floodlights Control - Absolute",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_whiteflood_CHANGE": {
+			"bindings": [
+				{
+					"name": "White Floodlights Control - Rotary Decrement",
+					"valueDown": -0.1
+				},
+				{
+					"name": "White Floodlights Control - Rotary Increment",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3130,
+			"description": "White Floodlights Control - Rotary Decrement (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_whiteflood_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "White Floodlights Control - Slew"
+				}
+			],
+			"commandId": 3182,
+			"description": "White Floodlights Control - Slew",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_whiteflood_startdown": {
+			"bindings": [
+				{
+					"name": "White Floodlights Control - Continuous Decrease"
+				}
+			],
+			"commandId": 10303,
+			"description": "White Floodlights Control - Continuous Decrease",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_whiteflood_startup": {
+			"bindings": [
+				{
+					"name": "White Floodlights Control - Continuous Increase"
+				}
+			],
+			"commandId": 10302,
+			"description": "White Floodlights Control - Continuous Increase",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"AVIONICS.intlight_whiteflood_stop": {
+			"bindings": [
+				{
+					"name": "White Floodlights Control - Continuous Increase"
+				},
+				{
+					"name": "White Floodlights Control - Continuous Decrease"
+				}
+			],
+			"commandId": 10304,
+			"description": "White Floodlights Control - Continuous Increase (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"CANOPY.Canopy": {
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 71,
+			"description": "Canopy Lever",
+			"deviceId": 17,
+			"elementName": "PNT_129",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CANOPY.ToggleStick": {
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 10138,
+			"description": "Control Stick - HIDE/SHOW",
+			"deviceId": 17,
+			"elementName": "PNT_2",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CLOCK.PNT_146": {
+			"arg": 146,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3105,
+			"description": "Elapsed-Time Clock",
+			"deviceId": 8,
+			"elementName": "PNT_146",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COUNTERMEASURES.PNT_522": {
+			"arg": 522,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3106,
+			"description": "Dispenser Select",
+			"deviceId": 32,
+			"elementName": "PNT_522",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COUNTERMEASURES.PNT_523": {
+			"arg": 523,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3107,
+			"description": "Chaff AUTO Pushbutton (ALE-29A Salvo)",
+			"deviceId": 32,
+			"elementName": "PNT_523",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COUNTERMEASURES.PNT_524": {
+			"arg": 524,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3108,
+			"description": "Dispenser 1 Counter",
+			"deviceId": 32,
+			"elementName": "PNT_524",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"COUNTERMEASURES.PNT_525": {
+			"arg": 525,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3109,
+			"description": "Dispenser 2 Counter",
+			"deviceId": 32,
+			"elementName": "PNT_525",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"COUNTERMEASURES.PNT_530": {
+			"arg": 530,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3110,
+			"description": "Chaff Power Switch",
+			"deviceId": 32,
+			"elementName": "PNT_530",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELECTRIC_SYSTEM.PNT_1243": {
+			"arg": 1243,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Emergency Generator Release Handle",
+			"deviceId": 3,
+			"elementName": "PNT_1243",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELECTRIC_SYSTEM.PNT_1251": {
+			"arg": 224,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3133,
+			"description": "Cabin Pressure Switch",
+			"deviceId": 3,
+			"elementName": "PNT_1251",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELECTRIC_SYSTEM.PNT_225": {
+			"arg": 225,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3134,
+			"description": "Windshield Defrost Switch",
+			"deviceId": 3,
+			"elementName": "PNT_225",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELECTRIC_SYSTEM.PNT_226": {
+			"arg": 226,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3135,
+			"description": "Cabin Temperature Knob",
+			"deviceId": 3,
+			"elementName": "PNT_226",
+			"type": "continuous"
+		},
+		"ELECTRIC_SYSTEM.PNT_252": {
+			"arg": 252,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "Emergency Generator Switch",
+			"deviceId": 3,
+			"elementName": "PNT_252",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELECTRIC_SYSTEM.PNT_709": {
+			"arg": 709,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Master Armament Switch",
+			"deviceId": 3,
+			"elementName": "PNT_709",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_100": {
+			"arg": 100,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Engine Starter Switch",
+			"deviceId": 20,
+			"elementName": "PNT_100",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_101": {
+			"arg": 101,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3144,
+			"description": "Drop Tank Pressurization Switch",
+			"deviceId": 20,
+			"elementName": "PNT_101",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_103": {
+			"arg": 103,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3143,
+			"description": "Fuel Dump Switch",
+			"deviceId": 20,
+			"elementName": "PNT_103",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_104": {
+			"arg": 104,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3145,
+			"description": "Fuel Control Switch",
+			"deviceId": 20,
+			"elementName": "PNT_104",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_130": {
+			"arg": 130,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3146,
+			"description": "Manual Fuel Shutoff Control Lever",
+			"deviceId": 20,
+			"elementName": "PNT_130",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_131": {
+			"arg": 131,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3147,
+			"description": "Manual Fuel Shutoff Control Catch",
+			"deviceId": 20,
+			"elementName": "PNT_131",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_256": {
+			"arg": 256,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3177,
+			"description": "Fuel Transfer Switch",
+			"deviceId": 20,
+			"elementName": "PNT_256",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.PNT_80": {
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3087,
+			"description": "Throttle Position Lock",
+			"deviceId": 20,
+			"elementName": "PNT_80",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE.throttle_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Throttle - Slew"
+				}
+			],
+			"commandId": 3207,
+			"description": "Throttle - Slew",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"ENGINE.throttle_click_ITER": {
+			"bindings": [
+				{
+					"name": "Throttle Position Lock - Step Down (OFF/IGN/IDLE)",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Throttle Position Lock - Step Up (OFF/IGN/IDLE)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3157,
+			"description": "Throttle Position Lock - Step Down (OFF/IGN/IDLE) (+1 more)",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightAnticollision": {
+			"commandId": 10096,
+			"description": "ExtLightAnticollision",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightAnticollisionToggle": {
+			"commandId": 10104,
+			"description": "ExtLightAnticollisionToggle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightFlashSteady": {
+			"commandId": 10100,
+			"description": "ExtLightFlashSteady",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightFlashSteadyToggle": {
+			"commandId": 10108,
+			"description": "ExtLightFlashSteadyToggle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightFuselage": {
+			"commandId": 10099,
+			"description": "ExtLightFuselage",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightFuselageCycle": {
+			"commandId": 10107,
+			"description": "ExtLightFuselageCycle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightMaster": {
+			"commandId": 10093,
+			"description": "ExtLightMaster",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightMasterToggle": {
+			"commandId": 10101,
+			"description": "ExtLightMasterToggle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightNav": {
+			"commandId": 10097,
+			"description": "ExtLightNav",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightNavCycle": {
+			"commandId": 10105,
+			"description": "ExtLightNavCycle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightProbe": {
+			"commandId": 10094,
+			"description": "ExtLightProbe",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightProbeCycle": {
+			"commandId": 10102,
+			"description": "ExtLightProbeCycle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightTail": {
+			"commandId": 10098,
+			"description": "ExtLightTail",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightTailCycle": {
+			"commandId": 10106,
+			"description": "ExtLightTailCycle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightTaxi": {
+			"commandId": 10095,
+			"description": "ExtLightTaxi",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.ExtLightTaxiToggle": {
+			"commandId": 10103,
+			"description": "ExtLightTaxiToggle",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"EXT_LIGHTS.PNT_217": {
+			"arg": 217,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "Probe Light Switch",
+			"deviceId": 25,
+			"elementName": "PNT_217",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_218": {
+			"arg": 218,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "Taxi Light Switch",
+			"deviceId": 25,
+			"elementName": "PNT_218",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_219": {
+			"arg": 219,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "Anti-Collision Light Switch",
+			"deviceId": 25,
+			"elementName": "PNT_219",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_220": {
+			"arg": 220,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "Fuselage Light Switch",
+			"deviceId": 25,
+			"elementName": "PNT_220",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_221": {
+			"arg": 221,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "Lighting Flash/Steady Switch",
+			"deviceId": 25,
+			"elementName": "PNT_221",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_222": {
+			"arg": 222,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "Navigation Lights Switch",
+			"deviceId": 25,
+			"elementName": "PNT_222",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_223": {
+			"arg": 223,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "Tail Light Switch",
+			"deviceId": 25,
+			"elementName": "PNT_223",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_LIGHTS.PNT_83": {
+			"arg": 83,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "Master Exterior Lights Switch",
+			"deviceId": 25,
+			"elementName": "PNT_83",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLAPS.PNT_132": {
+			"arg": 132,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "Flap Handle",
+			"deviceId": 14,
+			"elementName": "PNT_132",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GEAR.PNT_10": {
+			"arg": 10,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "Arresting Hook Handle",
+			"deviceId": 15,
+			"elementName": "PNT_10",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GEAR.PNT_1240": {
+			"arg": 1240,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3036,
+			"description": "Emergency Landing Gear Release Handle",
+			"deviceId": 15,
+			"elementName": "PNT_1240",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GEAR.PNT_8": {
+			"arg": 8,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "Landing Gear Handle",
+			"deviceId": 15,
+			"elementName": "PNT_8",
+			"indicatorArgLim": [
+				0,
+				1
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GUNSIGHT.PNT_891": {
+			"arg": 891,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "Gunsight Day-Night Switch",
+			"deviceId": 22,
+			"elementName": "PNT_891",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GUNSIGHT.PNT_892": {
+			"arg": 892,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3028,
+			"description": "Gunsight Elevation Control",
+			"deviceId": 22,
+			"elementName": "PNT_892",
+			"type": "continuous"
+		},
+		"GUNSIGHT.PNT_895": {
+			"arg": 895,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3030,
+			"description": "Gunsight Light Control",
+			"deviceId": 22,
+			"elementName": "PNT_895",
+			"type": "continuous"
+		},
+		"GUNSIGHT.gunsight_brightness_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gunsight Light Control - Absolute"
+				}
+			],
+			"commandId": 3183,
+			"description": "Gunsight Light Control - Absolute",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"GUNSIGHT.gunsight_elevation_axis": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gunsight Elevation Control - Slew"
+				}
+			],
+			"commandId": 3160,
+			"description": "Gunsight Elevation Control - Slew",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"GUNSIGHT.gunsight_elevation_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gunsight Elevation Control - Absolute"
+				}
+			],
+			"commandId": 3161,
+			"description": "Gunsight Elevation Control - Absolute",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"HYDRAULIC_SYSTEM.PNT_1242": {
+			"arg": 1242,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3136,
+			"description": "Manual Flight Control Handle",
+			"deviceId": 7,
+			"elementName": "PNT_1242",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MCL.PNT_250": {
+			"arg": 250,
+			"argLim": [
+				0.0,
+				0.95
+			],
+			"commandId": 3168,
+			"description": "MCL Channel Selector Switch",
+			"deviceId": 37,
+			"elementName": "PNT_250",
+			"positions": 20,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"MCL.PNT_253": {
+			"arg": 253,
+			"description": "AN/ARA-63 MCL Power Switch",
+			"elementName": "PNT_253",
+			"positionMap": [
+				{
+					"commandId": 3169,
+					"deviceId": 37,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3169,
+					"deviceId": 37,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"NAV.NavDopplerCCW": {
+			"commandId": 10062,
+			"description": "NavDopplerCCW",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.NavDopplerCW": {
+			"commandId": 10061,
+			"description": "NavDopplerCW",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.NavNDBNext": {
+			"commandId": 10049,
+			"description": "NavNDBNext",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.NavNDBPrev": {
+			"commandId": 10050,
+			"description": "NavNDBPrev",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.NavReset": {
+			"commandId": 10048,
+			"description": "NavReset",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.NavSelectCCW": {
+			"commandId": 10064,
+			"description": "NavSelectCCW",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.NavSelectCW": {
+			"commandId": 10063,
+			"description": "NavSelectCW",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.PNT_170": {
+			"arg": 170,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3045,
+			"description": "AN/APN-153 Doppler Navigation Radar Mode Switch",
+			"deviceId": 23,
+			"elementName": "PNT_170",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"NAV.PNT_176": {
+			"arg": 176,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3047,
+			"description": "AN/ASN-41 Function Selector Switch",
+			"deviceId": 23,
+			"elementName": "PNT_176",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"NAV.PNT_177_arg177": {
+			"arg": 177,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3051,
+			"description": "Present Latitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_177",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_177_arg236": {
+			"arg": 236,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3150,
+			"description": "Present Latitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_177",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_183_arg183": {
+			"arg": 183,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3052,
+			"description": "Present Longitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_183",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_183_arg237": {
+			"arg": 237,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3151,
+			"description": "Present Longitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_183",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_190_arg190": {
+			"arg": 190,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3053,
+			"description": "Destination Latitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_190",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_190_arg238": {
+			"arg": 238,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3152,
+			"description": "Destination Latitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_190",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_196_arg196": {
+			"arg": 196,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3054,
+			"description": "Destination Longitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_196",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_196_arg239": {
+			"arg": 239,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3153,
+			"description": "Destination Longitude Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_196",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_203_arg203": {
+			"arg": 203,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3048,
+			"description": "Magnetic Variation Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_203",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_203_arg240": {
+			"arg": 240,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3154,
+			"description": "Magnetic Variation Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_203",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_209_arg209": {
+			"arg": 209,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3049,
+			"description": "Wind Speed Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_209",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_209_arg241": {
+			"arg": 241,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3155,
+			"description": "Wind Speed Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_209",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_213_arg213": {
+			"arg": 213,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3050,
+			"description": "Wind Direction Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_213",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"NAV.PNT_213_arg242": {
+			"arg": 242,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3156,
+			"description": "Wind Direction Push-to-Set Knob",
+			"deviceId": 23,
+			"elementName": "PNT_213",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_247": {
+			"arg": 247,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3046,
+			"description": "AN/APN-153 Memory Light Test",
+			"deviceId": 23,
+			"elementName": "PNT_247",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_248": {
+			"arg": 248,
+			"description": "Destination Latitude Slew Knob",
+			"elementName": "PNT_248",
+			"positionMap": [
+				{
+					"commandId": 3166,
+					"deviceId": 23,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3166,
+					"deviceId": 23,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"NAV.PNT_249": {
+			"arg": 249,
+			"description": "Destination Longitude Slew Knob",
+			"elementName": "PNT_249",
+			"positionMap": [
+				{
+					"commandId": 3167,
+					"deviceId": 23,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3167,
+					"deviceId": 23,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"NAV.PNT_254": {
+			"arg": 254,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3172,
+			"description": "TACAN Antenna Control Switch (unimplemented)",
+			"deviceId": 23,
+			"elementName": "PNT_254",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_255": {
+			"arg": 255,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3174,
+			"description": "Navigation Dead Reckoning/Doppler Switch (unimplemented)",
+			"deviceId": 23,
+			"elementName": "PNT_255",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.PNT_724": {
+			"arg": 724,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3044,
+			"description": "BDHI Switch",
+			"deviceId": 23,
+			"elementName": "PNT_724",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV.tacan_mode": {
+			"bindings": [
+				{
+					"name": "AN/ARN-52 TACAN Mode - A/A",
+					"valueDown": 0.3
+				},
+				{
+					"name": "AN/ARN-52 TACAN Mode - OFF",
+					"valueDown": 0.0
+				},
+				{
+					"name": "AN/ARN-52 TACAN Mode - REC",
+					"valueDown": 0.1
+				},
+				{
+					"name": "AN/ARN-52 TACAN Mode - T/R",
+					"valueDown": 0.2
+				}
+			],
+			"commandId": 3069,
+			"description": "AN/ARN-52 TACAN Mode - A/A (+3 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.tacan_volume_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "TACAN Volume - Absolute"
+				}
+			],
+			"commandId": 3188,
+			"description": "TACAN Volume - Absolute",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"NAV.tacan_volume_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "TACAN Volume - Slew"
+				}
+			],
+			"commandId": 3189,
+			"description": "TACAN Volume - Slew",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"RADAR.PNT_120": {
+			"arg": 120,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3063,
+			"description": "AN/APG-53A Radar Mode Switch",
+			"deviceId": 10,
+			"elementName": "PNT_120",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"RADAR.PNT_121": {
+			"arg": 121,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "Radar AoA Compensation Switch",
+			"deviceId": 10,
+			"elementName": "PNT_121",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR.PNT_122": {
+			"arg": 122,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "Radar Antenna Tilt Switch",
+			"deviceId": 10,
+			"elementName": "PNT_122",
+			"type": "continuous"
+		},
+		"RADAR.PNT_123": {
+			"arg": 123,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "Radar Obstacle Tone Volume",
+			"deviceId": 10,
+			"elementName": "PNT_123",
+			"type": "continuous"
+		},
+		"RADAR.PNT_400": {
+			"arg": 400,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3057,
+			"description": "Radar Indicator Storage",
+			"deviceId": 10,
+			"elementName": "PNT_400",
+			"type": "continuous"
+		},
+		"RADAR.PNT_401": {
+			"arg": 401,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3058,
+			"description": "Radar Indicator Brilliance",
+			"deviceId": 10,
+			"elementName": "PNT_401",
+			"type": "continuous"
+		},
+		"RADAR.PNT_402": {
+			"arg": 402,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3059,
+			"description": "Radar Indicator Detail",
+			"deviceId": 10,
+			"elementName": "PNT_402",
+			"type": "continuous"
+		},
+		"RADAR.PNT_403": {
+			"arg": 403,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3060,
+			"description": "Radar Indicator Gain",
+			"deviceId": 10,
+			"elementName": "PNT_403",
+			"type": "continuous"
+		},
+		"RADAR.PNT_404": {
+			"arg": 404,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "Radar Indicator Reticle",
+			"deviceId": 10,
+			"elementName": "PNT_404",
+			"type": "continuous"
+		},
+		"RADAR.PNT_405": {
+			"arg": 405,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "Radar Indicator Filter Plate",
+			"deviceId": 10,
+			"elementName": "PNT_405",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR.PNT_721": {
+			"arg": 721,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3055,
+			"description": "Radar Terrain Clearance Switch",
+			"deviceId": 10,
+			"elementName": "PNT_721",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR.PNT_722": {
+			"arg": 722,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3056,
+			"description": "Radar Range Switch",
+			"deviceId": 10,
+			"elementName": "PNT_722",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR.radar_angle_axis": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/APG-53A Radar Antenna Tilt - Slew"
+				}
+			],
+			"commandId": 3066,
+			"description": "AN/APG-53A Radar Antenna Tilt - Slew",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_angle_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/APG-53A Radar Antenna Tilt - Absolute"
+				}
+			],
+			"commandId": 3067,
+			"description": "AN/APG-53A Radar Antenna Tilt - Absolute",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_brilliance_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Brilliance Knob - Absolute"
+				}
+			],
+			"commandId": 3196,
+			"description": "Radar Indicator Brilliance Knob - Absolute",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_brilliance_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Brilliance Knob - Slew"
+				}
+			],
+			"commandId": 3197,
+			"description": "Radar Indicator Brilliance Knob - Slew",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_detail_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Detail Knob - Absolute"
+				}
+			],
+			"commandId": 3198,
+			"description": "Radar Indicator Detail Knob - Absolute",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_detail_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Detail Knob - Slew"
+				}
+			],
+			"commandId": 3199,
+			"description": "Radar Indicator Detail Knob - Slew",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_gain_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Gain Knob - Absolute"
+				}
+			],
+			"commandId": 3200,
+			"description": "Radar Indicator Gain Knob - Absolute",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_gain_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Gain Knob - Slew"
+				}
+			],
+			"commandId": 3201,
+			"description": "Radar Indicator Gain Knob - Slew",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_reticle_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Reticle Knob - Absolute"
+				}
+			],
+			"commandId": 3202,
+			"description": "Radar Indicator Reticle Knob - Absolute",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_reticle_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Reticle Knob - Slew"
+				}
+			],
+			"commandId": 3203,
+			"description": "Radar Indicator Reticle Knob - Slew",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_storage_axis_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Storage Knob - Absolute"
+				}
+			],
+			"commandId": 3194,
+			"description": "Radar Indicator Storage Knob - Absolute",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADAR.radar_storage_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Indicator Storage Knob - Slew"
+				}
+			],
+			"commandId": 3195,
+			"description": "Radar Indicator Storage Knob - Slew",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"RADARWARN.PNT_602_arg602": {
+			"arg": 602,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3037,
+			"description": "AN/APN-141 Radar Altimeter",
+			"deviceId": 19,
+			"elementName": "PNT_602",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"RADARWARN.PNT_602_arg603": {
+			"arg": 603,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3038,
+			"description": "AN/APN-141 Radar Altimeter",
+			"deviceId": 19,
+			"elementName": "PNT_602",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADARWARN.radar_altitude_warning_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Radar Altitude Warning - Slew"
+				}
+			],
+			"commandId": 3213,
+			"description": "Radar Altitude Warning - Slew",
+			"deviceId": 19,
+			"type": "raw"
+		},
+		"RADIO.PNT_361": {
+			"arg": 361,
+			"argLim": [
+				0.0,
+				0.95
+			],
+			"commandId": 3101,
+			"description": "Radio Preset Channel Selector",
+			"deviceId": 28,
+			"elementName": "PNT_361",
+			"positions": 20,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"RADIO.PNT_365": {
+			"arg": 365,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3099,
+			"description": "Radio Volume",
+			"deviceId": 28,
+			"elementName": "PNT_365",
+			"type": "continuous"
+		},
+		"RADIO.PNT_366": {
+			"arg": 366,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3098,
+			"description": "Radio Frequency Mode",
+			"deviceId": 28,
+			"elementName": "PNT_366",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADIO.PNT_367": {
+			"arg": 367,
+			"argLim": [
+				0.0,
+				0.85
+			],
+			"commandId": 3102,
+			"description": "Radio Frequency 10 MHz",
+			"deviceId": 28,
+			"elementName": "PNT_367",
+			"positions": 18,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"RADIO.PNT_368": {
+			"arg": 368,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3103,
+			"description": "Radio Frequency 1 MHz",
+			"deviceId": 28,
+			"elementName": "PNT_368",
+			"positions": 10,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"RADIO.PNT_369": {
+			"arg": 369,
+			"argLim": [
+				0.0,
+				0.95
+			],
+			"commandId": 3104,
+			"description": "Radio Frequency 50 kHz",
+			"deviceId": 28,
+			"elementName": "PNT_369",
+			"positions": 20,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"RADIO.PNT_370": {
+			"arg": 370,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3100,
+			"description": "Radio Squelch Disable",
+			"deviceId": 28,
+			"elementName": "PNT_370",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADIO.PNT_372": {
+			"arg": 372,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3097,
+			"description": "AN/ARC-51A UHF Radio Mode Switch",
+			"deviceId": 28,
+			"elementName": "PNT_372",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"RWR.PNT_501": {
+			"arg": 501,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3115,
+			"description": "APR-27 Switch",
+			"deviceId": 31,
+			"elementName": "PNT_501",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RWR.PNT_502": {
+			"arg": 502,
+			"argLim": [
+				0.0,
+				0.99
+			],
+			"commandId": 3120,
+			"description": "AN/APR-25 Function Selector Switch",
+			"deviceId": 31,
+			"elementName": "PNT_502",
+			"positions": 4,
+			"step": 0.33,
+			"type": "discrete"
+		},
+		"RWR.PNT_503": {
+			"arg": 503,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3114,
+			"description": "Audio ALQ Switch",
+			"deviceId": 31,
+			"elementName": "PNT_503",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RWR.PNT_504": {
+			"arg": 504,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3113,
+			"description": "APR-25 Switch",
+			"deviceId": 31,
+			"elementName": "PNT_504",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RWR.PNT_505": {
+			"arg": 505,
+			"argLim": [
+				-0.9,
+				0.9
+			],
+			"commandId": 3119,
+			"description": "Missile Alert Volume",
+			"deviceId": 31,
+			"elementName": "PNT_505",
+			"type": "continuous"
+		},
+		"RWR.PNT_506": {
+			"arg": 506,
+			"argLim": [
+				-0.9,
+				0.9
+			],
+			"commandId": 3118,
+			"description": "PRF Volume",
+			"deviceId": 31,
+			"elementName": "PNT_506",
+			"type": "continuous"
+		},
+		"RWR.PNT_507": {
+			"arg": 507,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3116,
+			"description": "APR-27 Test",
+			"deviceId": 31,
+			"elementName": "PNT_507",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RWR.PNT_510": {
+			"arg": 510,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3117,
+			"description": "APR-27 Light",
+			"deviceId": 31,
+			"elementName": "PNT_510",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RWR.ecm_msl_alert_axis_inner_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/APR-25 PRF Volume - Absolute"
+				}
+			],
+			"commandId": 3190,
+			"description": "AN/APR-25 PRF Volume - Absolute",
+			"deviceId": 31,
+			"type": "raw"
+		},
+		"RWR.ecm_msl_alert_axis_inner_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/APR-25 PRF Volume - Slew"
+				}
+			],
+			"commandId": 3191,
+			"description": "AN/APR-25 PRF Volume - Slew",
+			"deviceId": 31,
+			"type": "raw"
+		},
+		"RWR.ecm_msl_alert_axis_outer_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/APR-25 Missile Alert Volume - Absolute"
+				}
+			],
+			"commandId": 3192,
+			"description": "AN/APR-25 Missile Alert Volume - Absolute",
+			"deviceId": 31,
+			"type": "raw"
+		},
+		"RWR.ecm_msl_alert_axis_outer_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/APR-25 Missile Alert Volume - Slew"
+				}
+			],
+			"commandId": 3193,
+			"description": "AN/APR-25 Missile Alert Volume - Slew",
+			"deviceId": 31,
+			"type": "raw"
+		},
+		"SEAT.PNT_251": {
+			"arg": 251,
+			"description": "Seat Adjustment Switch",
+			"elementName": "PNT_251",
+			"positionMap": [
+				{
+					"commandId": 3175,
+					"deviceId": 45,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3175,
+					"deviceId": 45,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"SEAT.zoom_axis_in": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Zoom View In (Dual Axis)"
+				}
+			],
+			"commandId": 3208,
+			"description": "Zoom View In (Dual Axis)",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"SEAT.zoom_axis_out": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Zoom View Out (Dual Axis)"
+				}
+			],
+			"commandId": 3209,
+			"description": "Zoom View Out (Dual Axis)",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"SEAT.zoom_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Zoom View - Slew"
+				}
+			],
+			"commandId": 3210,
+			"description": "Zoom View - Slew",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"SEAT.zoom_axis_slew_in": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Zoom View In - Slew (Dual-Axis)"
+				}
+			],
+			"commandId": 3211,
+			"description": "Zoom View In - Slew (Dual-Axis)",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"SEAT.zoom_axis_slew_out": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Zoom View Out - Slew (Dual-Axis)"
+				}
+			],
+			"commandId": 3212,
+			"description": "Zoom View Out - Slew (Dual-Axis)",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"SPOILERS.PNT_84": {
+			"arg": 84,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Spoiler Arm Switch",
+			"deviceId": 16,
+			"elementName": "PNT_84",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"TACAN.PNT_900": {
+			"arg": 900,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3069,
+			"description": "AN/ARN-52 TACAN Mode Switch",
+			"deviceId": 48,
+			"elementName": "PNT_900",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"TACAN.PNT_901": {
+			"arg": 901,
+			"argLim": [
+				0.0,
+				0.6
+			],
+			"commandId": 3070,
+			"description": "TACAN Channel 10s",
+			"deviceId": 48,
+			"elementName": "PNT_901",
+			"positions": 13,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"TACAN.PNT_902": {
+			"arg": 902,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3071,
+			"description": "TACAN Channel 1s",
+			"deviceId": 48,
+			"elementName": "PNT_902",
+			"positions": 10,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"TACAN.PNT_903": {
+			"arg": 903,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "TACAN Volume",
+			"deviceId": 48,
+			"elementName": "PNT_903",
+			"type": "continuous"
+		},
+		"TRIM.PNT_82": {
+			"arg": 82,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3085,
+			"description": "Rudder Trim Switch",
+			"deviceId": 26,
+			"elementName": "PNT_82",
+			"type": "continuous"
+		},
+		"TRIM.rudder_axis_left": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Rudder - Left (Dual-Axis)"
+				}
+			],
+			"commandId": 3205,
+			"description": "Rudder - Left (Dual-Axis)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"TRIM.rudder_axis_right": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Rudder - Right (Dual-Axis)"
+				}
+			],
+			"commandId": 3206,
+			"description": "Rudder - Right (Dual-Axis)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.AWRS_drop_interval_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AWRS Drop Interval Knob - Absolute"
+				}
+			],
+			"commandId": 3126,
+			"description": "AWRS Drop Interval Knob - Absolute",
+			"deviceId": 6,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.PNT_1241": {
+			"arg": 1241,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "Emergency Stores Release Handle",
+			"deviceId": 6,
+			"elementName": "PNT_1241",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_390": {
+			"arg": 390,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Gunpod Switch",
+			"deviceId": 6,
+			"elementName": "PNT_390",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_391": {
+			"arg": 391,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Gunpod Station LH Switch",
+			"deviceId": 6,
+			"elementName": "PNT_391",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_392": {
+			"arg": 392,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Gunpod Station CTR Switch",
+			"deviceId": 6,
+			"elementName": "PNT_392",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_393": {
+			"arg": 393,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Gunpod Station RH Switch",
+			"deviceId": 6,
+			"elementName": "PNT_393",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_700": {
+			"arg": 700,
+			"argLim": [
+				0.0,
+				0.6
+			],
+			"commandId": 3025,
+			"description": "Emergency Release Selector",
+			"deviceId": 6,
+			"elementName": "PNT_700",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_701": {
+			"arg": 701,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Guns Charging Switch",
+			"deviceId": 6,
+			"elementName": "PNT_701",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_702": {
+			"arg": 702,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3026,
+			"description": "Bomb Arm Switch",
+			"deviceId": 6,
+			"elementName": "PNT_702",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_703": {
+			"arg": 703,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Station 1 Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_703",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_704": {
+			"arg": 704,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Station 2 Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_704",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_705": {
+			"arg": 705,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Station 3 Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_705",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_706": {
+			"arg": 706,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Station 4 Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_706",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_707": {
+			"arg": 707,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Station 5 Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_707",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_708": {
+			"arg": 708,
+			"argLim": [
+				0.0,
+				0.6
+			],
+			"commandId": 3008,
+			"description": "Weapon Function Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_708",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_725": {
+			"arg": 725,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3137,
+			"description": "Shrike Selector Knob",
+			"deviceId": 6,
+			"elementName": "PNT_725",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_726": {
+			"arg": 726,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3125,
+			"description": "Shrike/Sidewinder Volume Knob",
+			"deviceId": 6,
+			"elementName": "PNT_726",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.PNT_740": {
+			"arg": 740,
+			"argLim": [
+				0.0,
+				0.55
+			],
+			"commandId": 3031,
+			"description": "AWRS Quantity Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_740",
+			"positions": 12,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_742": {
+			"arg": 742,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3032,
+			"description": "AWRS Drop Interval Knob",
+			"deviceId": 6,
+			"elementName": "PNT_742",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.PNT_743": {
+			"arg": 743,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3033,
+			"description": "AWRS Multiplier Switch",
+			"deviceId": 6,
+			"elementName": "PNT_743",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PNT_744": {
+			"arg": 744,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3034,
+			"description": "AWRS Mode Selector Switch",
+			"deviceId": 6,
+			"elementName": "PNT_744",
+			"positions": 6,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.awrs_drop_interval_axis_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AWRS Drop Interval Knob - Slew"
+				}
+			],
+			"commandId": 3185,
+			"description": "AWRS Drop Interval Knob - Slew",
+			"deviceId": 6,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.shrike_sidewinder_volume_abs": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Shrike/Sidewinder Volume Knob - Absolute"
+				}
+			],
+			"commandId": 3186,
+			"description": "Shrike/Sidewinder Volume Knob - Absolute",
+			"deviceId": 6,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.shrike_sidewinder_volume_slew": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Shrike/Sidewinder Volume Knob - Slew"
+				}
+			],
+			"commandId": 3187,
+			"description": "Shrike/Sidewinder Volume Knob - Slew",
+			"deviceId": 6,
+			"type": "raw"
+		},
+		"arg.ADIHeading": {
+			"arg": 385,
+			"description": "ADIHeading"
+		},
+		"arg.ADIOFF": {
+			"arg": 387,
+			"description": "ADIOFF"
+		},
+		"arg.ADIPitch": {
+			"arg": 383,
+			"description": "ADIPitch"
+		},
+		"arg.ADIRoll": {
+			"arg": 384,
+			"description": "ADIRoll"
+		},
+		"arg.ADISlip": {
+			"arg": 388,
+			"description": "ADISlip"
+		},
+		"arg.ADITurn": {
+			"arg": 389,
+			"description": "ADITurn"
+		},
+		"arg.AFCS_HDG_100s": {
+			"arg": 167,
+			"description": "AFCS_HDG_100s"
+		},
+		"arg.AFCS_HDG_10s": {
+			"arg": 168,
+			"description": "AFCS_HDG_10s"
+		},
+		"arg.AFCS_HDG_1s": {
+			"arg": 169,
+			"description": "AFCS_HDG_1s"
+		},
+		"arg.AFCS_TEST_PITCH": {
+			"arg": 262,
+			"description": "AFCS_TEST_PITCH"
+		},
+		"arg.AFCS_TEST_ROLL": {
+			"arg": 260,
+			"description": "AFCS_TEST_ROLL"
+		},
+		"arg.AFCS_TEST_YAW": {
+			"arg": 261,
+			"description": "AFCS_TEST_YAW"
+		},
+		"arg.AOA_BRIGHTNESS": {
+			"arg": 857,
+			"description": "AOA_BRIGHTNESS"
+		},
+		"arg.APCLight": {
+			"arg": 147,
+			"description": "APCLight"
+		},
+		"arg.APG53A_BottomRange": {
+			"arg": 407,
+			"description": "APG53A_BottomRange"
+		},
+		"arg.APG53A_Glow": {
+			"arg": 115,
+			"description": "APG53A_Glow"
+		},
+		"arg.APG53A_LeftRange": {
+			"arg": 406,
+			"description": "APG53A_LeftRange"
+		},
+		"arg.ARC51_Freq_Preset": {
+			"arg": 371,
+			"description": "ARC51_Freq_Preset"
+		},
+		"arg.ARC51_Freq_XXxxx": {
+			"arg": 362,
+			"description": "ARC51_Freq_XXxxx"
+		},
+		"arg.ARC51_Freq_xxXxx": {
+			"arg": 363,
+			"description": "ARC51_Freq_xxXxx"
+		},
+		"arg.ARC51_Freq_xxxXX": {
+			"arg": 364,
+			"description": "ARC51_Freq_xxxXX"
+		},
+		"arg.AWRSPower": {
+			"arg": 741,
+			"description": "AWRSPower"
+		},
+		"arg.Accel_cur": {
+			"arg": 360,
+			"description": "Accel_cur"
+		},
+		"arg.Accel_max": {
+			"arg": 137,
+			"description": "Accel_max"
+		},
+		"arg.Accel_min": {
+			"arg": 138,
+			"description": "Accel_min"
+		},
+		"arg.Advisory_Dive": {
+			"arg": 868,
+			"description": "Advisory_Dive"
+		},
+		"arg.Advisory_InRange": {
+			"arg": 866,
+			"description": "Advisory_InRange"
+		},
+		"arg.Advisory_SetRange": {
+			"arg": 867,
+			"description": "Advisory_SetRange"
+		},
+		"arg.AltAdjNNxx": {
+			"arg": 824,
+			"description": "AltAdjNNxx"
+		},
+		"arg.AltAdjxxNx": {
+			"arg": 825,
+			"description": "AltAdjxxNx"
+		},
+		"arg.AltAdjxxxN": {
+			"arg": 826,
+			"description": "AltAdjxxxN"
+		},
+		"arg.Altimeter": {
+			"arg": 820,
+			"description": "Altimeter"
+		},
+		"arg.Altimeter100s": {
+			"arg": 823,
+			"description": "Altimeter100s"
+		},
+		"arg.Altimeter10K": {
+			"arg": 821,
+			"description": "Altimeter10K"
+		},
+		"arg.Altimeter1K": {
+			"arg": 822,
+			"description": "Altimeter1K"
+		},
+		"arg.AngleOfAttack": {
+			"arg": 840,
+			"description": "AngleOfAttack"
+		},
+		"arg.AoA_Green": {
+			"arg": 850,
+			"description": "AoA_Green"
+		},
+		"arg.AoA_Red": {
+			"arg": 852,
+			"description": "AoA_Red"
+		},
+		"arg.AoA_Yellow": {
+			"arg": 851,
+			"description": "AoA_Yellow"
+		},
+		"arg.AttGyroStbyOFF": {
+			"arg": 664,
+			"description": "AttGyroStbyOFF"
+		},
+		"arg.AttGyroStbyPitch": {
+			"arg": 660,
+			"description": "AttGyroStbyPitch"
+		},
+		"arg.AttGyroStbyRoll": {
+			"arg": 661,
+			"description": "AttGyroStbyRoll"
+		},
+		"arg.BDHI_DME_Flag": {
+			"arg": 786,
+			"description": "BDHI_DME_Flag"
+		},
+		"arg.BDHI_DME_Xxx": {
+			"arg": 785,
+			"description": "BDHI_DME_Xxx"
+		},
+		"arg.BDHI_DME_xXx": {
+			"arg": 784,
+			"description": "BDHI_DME_xXx"
+		},
+		"arg.BDHI_DME_xxX": {
+			"arg": 783,
+			"description": "BDHI_DME_xxX"
+		},
+		"arg.BDHI_Heading": {
+			"arg": 780,
+			"description": "BDHI_Heading"
+		},
+		"arg.BDHI_ILS_GS": {
+			"arg": 381,
+			"description": "BDHI_ILS_GS"
+		},
+		"arg.BDHI_ILS_LOC": {
+			"arg": 382,
+			"description": "BDHI_ILS_LOC"
+		},
+		"arg.BDHI_Needle1": {
+			"arg": 781,
+			"description": "BDHI_Needle1"
+		},
+		"arg.BDHI_Needle2": {
+			"arg": 782,
+			"description": "BDHI_Needle2"
+		},
+		"arg.BackupCompass": {
+			"arg": 148,
+			"description": "BackupCompass"
+		},
+		"arg.CM_bank1_Xx": {
+			"arg": 526,
+			"description": "CM_bank1_Xx"
+		},
+		"arg.CM_bank1_xX": {
+			"arg": 527,
+			"description": "CM_bank1_xX"
+		},
+		"arg.CM_bank2_Xx": {
+			"arg": 528,
+			"description": "CM_bank2_Xx"
+		},
+		"arg.CM_bank2_xX": {
+			"arg": 529,
+			"description": "CM_bank2_xX"
+		},
+		"arg.CabinAlt": {
+			"arg": 710,
+			"description": "CabinAlt"
+		},
+		"arg.Canopy": {
+			"arg": 26,
+			"description": "Canopy"
+		},
+		"arg.CanopyLever": {
+			"arg": 129,
+			"description": "CanopyLever"
+		},
+		"arg.ConsoleLights": {
+			"arg": 119,
+			"description": "ConsoleLights"
+		},
+		"arg.CurrTime_hours": {
+			"arg": 440,
+			"description": "CurrTime_hours"
+		},
+		"arg.CurrTime_mins": {
+			"arg": 441,
+			"description": "CurrTime_mins"
+		},
+		"arg.CurrTime_secs": {
+			"arg": 442,
+			"description": "CurrTime_secs"
+		},
+		"arg.Doppler_Drift": {
+			"arg": 172,
+			"description": "Doppler_Drift"
+		},
+		"arg.Doppler_MemoryLight": {
+			"arg": 171,
+			"description": "Doppler_MemoryLight"
+		},
+		"arg.Doppler_Speed_Xnn": {
+			"arg": 173,
+			"description": "Doppler_Speed_Xnn"
+		},
+		"arg.Doppler_Speed_nXn": {
+			"arg": 174,
+			"description": "Doppler_Speed_nXn"
+		},
+		"arg.Doppler_Speed_nnX": {
+			"arg": 175,
+			"description": "Doppler_Speed_nnX"
+		},
+		"arg.ECM_GO": {
+			"arg": 515,
+			"description": "ECM_GO"
+		},
+		"arg.ECM_NO_GO": {
+			"arg": 516,
+			"description": "ECM_NO_GO"
+		},
+		"arg.ECM_REC": {
+			"arg": 500,
+			"description": "ECM_REC"
+		},
+		"arg.ECM_RPT": {
+			"arg": 518,
+			"description": "ECM_RPT"
+		},
+		"arg.ECM_SAM": {
+			"arg": 517,
+			"description": "ECM_SAM"
+		},
+		"arg.ECM_STBY": {
+			"arg": 519,
+			"description": "ECM_STBY"
+		},
+		"arg.ECM_TEST": {
+			"arg": 514,
+			"description": "ECM_TEST"
+		},
+		"arg.ECM_Visibilty": {
+			"arg": 531,
+			"description": "ECM_Visibilty"
+		},
+		"arg.EGT": {
+			"arg": 540,
+			"description": "EGT"
+		},
+		"arg.Engine_Fuel_Flow": {
+			"arg": 560,
+			"description": "Engine_Fuel_Flow"
+		},
+		"arg.Engine_RPM": {
+			"arg": 520,
+			"description": "Engine_RPM"
+		},
+		"arg.Engine_RPMsub": {
+			"arg": 521,
+			"description": "Engine_RPMsub"
+		},
+		"arg.FlapsIndicator": {
+			"arg": 23,
+			"description": "FlapsIndicator"
+		},
+		"arg.FloodRed": {
+			"arg": 114,
+			"description": "FloodRed"
+		},
+		"arg.FloodWhite": {
+			"arg": 111,
+			"description": "FloodWhite"
+		},
+		"arg.FuelGauge": {
+			"arg": 580,
+			"description": "FuelGauge"
+		},
+		"arg.GearLeft": {
+			"arg": 21,
+			"description": "GearLeft"
+		},
+		"arg.GearLight": {
+			"arg": 27,
+			"description": "GearLight"
+		},
+		"arg.GearNose": {
+			"arg": 20,
+			"description": "GearNose"
+		},
+		"arg.GearRight": {
+			"arg": 22,
+			"description": "GearRight"
+		},
+		"arg.Glareshield_BRIGHTNESS": {
+			"arg": 858,
+			"description": "Glareshield_BRIGHTNESS"
+		},
+		"arg.Glareshield_FIRE": {
+			"arg": 159,
+			"description": "Glareshield_FIRE"
+		},
+		"arg.Glareshield_IFF": {
+			"arg": 158,
+			"description": "Glareshield_IFF"
+		},
+		"arg.Glareshield_LABS": {
+			"arg": 155,
+			"description": "Glareshield_LABS"
+		},
+		"arg.Glareshield_LAWS": {
+			"arg": 156,
+			"description": "Glareshield_LAWS"
+		},
+		"arg.Glareshield_OBST": {
+			"arg": 157,
+			"description": "Glareshield_OBST"
+		},
+		"arg.Glareshield_WHEELS": {
+			"arg": 154,
+			"description": "Glareshield_WHEELS"
+		},
+		"arg.GunsightReflector": {
+			"arg": 894,
+			"description": "GunsightReflector"
+		},
+		"arg.HideStick": {
+			"arg": 153,
+			"description": "HideStick"
+		},
+		"arg.IASGauge": {
+			"arg": 880,
+			"description": "IASGauge"
+		},
+		"arg.IASIndex": {
+			"arg": 882,
+			"description": "IASIndex"
+		},
+		"arg.INDICATOR_BRIGHTNESS": {
+			"arg": 856,
+			"description": "INDICATOR_BRIGHTNESS"
+		},
+		"arg.InstLightsPrimary": {
+			"arg": 117,
+			"description": "InstLightsPrimary"
+		},
+		"arg.LAWS_OFF": {
+			"arg": 604,
+			"description": "LAWS_OFF"
+		},
+		"arg.LAWS_indexer": {
+			"arg": 601,
+			"description": "LAWS_indexer"
+		},
+		"arg.LAWS_light_gauge": {
+			"arg": 605,
+			"description": "LAWS_light_gauge"
+		},
+		"arg.Ladder_Brightness": {
+			"arg": 859,
+			"description": "Ladder_Brightness"
+		},
+		"arg.Ladder_ControlHydraulicCaution": {
+			"arg": 861,
+			"description": "Ladder_ControlHydraulicCaution"
+		},
+		"arg.Ladder_FuelBoostCaution": {
+			"arg": 860,
+			"description": "Ladder_FuelBoostCaution"
+		},
+		"arg.Ladder_FuelTransCaution": {
+			"arg": 863,
+			"description": "Ladder_FuelTransCaution"
+		},
+		"arg.Ladder_SpdBrkCaution": {
+			"arg": 864,
+			"description": "Ladder_SpdBrkCaution"
+		},
+		"arg.Ladder_SpoilerCaution": {
+			"arg": 865,
+			"description": "Ladder_SpoilerCaution"
+		},
+		"arg.Ladder_UtilityHydraulicCaution": {
+			"arg": 862,
+			"description": "Ladder_UtilityHydraulicCaution"
+		},
+		"arg.LeftBrakePedal": {
+			"arg": 5,
+			"description": "LeftBrakePedal"
+		},
+		"arg.LiquidOxygen": {
+			"arg": 760,
+			"description": "LiquidOxygen"
+		},
+		"arg.MachDisc": {
+			"arg": 881,
+			"description": "MachDisc"
+		},
+		"arg.MachIndex": {
+			"arg": 883,
+			"description": "MachIndex"
+		},
+		"arg.ManualFuelControl_Warn": {
+			"arg": 105,
+			"description": "ManualFuelControl_Warn"
+		},
+		"arg.Nav_CurPos_Lat_Xnnnn": {
+			"arg": 178,
+			"description": "Nav_CurPos_Lat_Xnnnn"
+		},
+		"arg.Nav_CurPos_Lat_nXnnn": {
+			"arg": 179,
+			"description": "Nav_CurPos_Lat_nXnnn"
+		},
+		"arg.Nav_CurPos_Lat_nnXnn": {
+			"arg": 180,
+			"description": "Nav_CurPos_Lat_nnXnn"
+		},
+		"arg.Nav_CurPos_Lat_nnnXn": {
+			"arg": 181,
+			"description": "Nav_CurPos_Lat_nnnXn"
+		},
+		"arg.Nav_CurPos_Lat_nnnnX": {
+			"arg": 182,
+			"description": "Nav_CurPos_Lat_nnnnX"
+		},
+		"arg.Nav_CurPos_Lon_Xnnnnn": {
+			"arg": 184,
+			"description": "Nav_CurPos_Lon_Xnnnnn"
+		},
+		"arg.Nav_CurPos_Lon_nXnnnn": {
+			"arg": 185,
+			"description": "Nav_CurPos_Lon_nXnnnn"
+		},
+		"arg.Nav_CurPos_Lon_nnXnnn": {
+			"arg": 186,
+			"description": "Nav_CurPos_Lon_nnXnnn"
+		},
+		"arg.Nav_CurPos_Lon_nnnXnn": {
+			"arg": 187,
+			"description": "Nav_CurPos_Lon_nnnXnn"
+		},
+		"arg.Nav_CurPos_Lon_nnnnXn": {
+			"arg": 188,
+			"description": "Nav_CurPos_Lon_nnnnXn"
+		},
+		"arg.Nav_CurPos_Lon_nnnnnX": {
+			"arg": 189,
+			"description": "Nav_CurPos_Lon_nnnnnX"
+		},
+		"arg.Nav_Dest_Lat_Xnnnn": {
+			"arg": 191,
+			"description": "Nav_Dest_Lat_Xnnnn"
+		},
+		"arg.Nav_Dest_Lat_nXnnn": {
+			"arg": 192,
+			"description": "Nav_Dest_Lat_nXnnn"
+		},
+		"arg.Nav_Dest_Lat_nnXnn": {
+			"arg": 193,
+			"description": "Nav_Dest_Lat_nnXnn"
+		},
+		"arg.Nav_Dest_Lat_nnnXn": {
+			"arg": 194,
+			"description": "Nav_Dest_Lat_nnnXn"
+		},
+		"arg.Nav_Dest_Lat_nnnnX": {
+			"arg": 195,
+			"description": "Nav_Dest_Lat_nnnnX"
+		},
+		"arg.Nav_Dest_Lon_Xnnnnn": {
+			"arg": 197,
+			"description": "Nav_Dest_Lon_Xnnnnn"
+		},
+		"arg.Nav_Dest_Lon_nXnnnn": {
+			"arg": 198,
+			"description": "Nav_Dest_Lon_nXnnnn"
+		},
+		"arg.Nav_Dest_Lon_nnXnnn": {
+			"arg": 199,
+			"description": "Nav_Dest_Lon_nnXnnn"
+		},
+		"arg.Nav_Dest_Lon_nnnXnn": {
+			"arg": 200,
+			"description": "Nav_Dest_Lon_nnnXnn"
+		},
+		"arg.Nav_Dest_Lon_nnnnXn": {
+			"arg": 201,
+			"description": "Nav_Dest_Lon_nnnnXn"
+		},
+		"arg.Nav_Dest_Lon_nnnnnX": {
+			"arg": 202,
+			"description": "Nav_Dest_Lon_nnnnnX"
+		},
+		"arg.Nav_Magvar_Xxxxx": {
+			"arg": 204,
+			"description": "Nav_Magvar_Xxxxx"
+		},
+		"arg.Nav_Magvar_xXxxx": {
+			"arg": 205,
+			"description": "Nav_Magvar_xXxxx"
+		},
+		"arg.Nav_Magvar_xxXxx": {
+			"arg": 206,
+			"description": "Nav_Magvar_xxXxx"
+		},
+		"arg.Nav_Magvar_xxxXx": {
+			"arg": 207,
+			"description": "Nav_Magvar_xxxXx"
+		},
+		"arg.Nav_Magvar_xxxxX": {
+			"arg": 208,
+			"description": "Nav_Magvar_xxxxX"
+		},
+		"arg.Nav_WindDir_Xxx": {
+			"arg": 214,
+			"description": "Nav_WindDir_Xxx"
+		},
+		"arg.Nav_WindDir_xXx": {
+			"arg": 215,
+			"description": "Nav_WindDir_xXx"
+		},
+		"arg.Nav_WindDir_xxX": {
+			"arg": 216,
+			"description": "Nav_WindDir_xxX"
+		},
+		"arg.Nav_WindSpeed_Xxx": {
+			"arg": 210,
+			"description": "Nav_WindSpeed_Xxx"
+		},
+		"arg.Nav_WindSpeed_xXx": {
+			"arg": 211,
+			"description": "Nav_WindSpeed_xXx"
+		},
+		"arg.Nav_WindSpeed_xxX": {
+			"arg": 212,
+			"description": "Nav_WindSpeed_xxX"
+		},
+		"arg.OilPressure": {
+			"arg": 152,
+			"description": "OilPressure"
+		},
+		"arg.Oil_light_gauge": {
+			"arg": 150,
+			"description": "Oil_light_gauge"
+		},
+		"arg.Oxygen_flag_gauge": {
+			"arg": 762,
+			"description": "Oxygen_flag_gauge"
+		},
+		"arg.Oxygen_light_gauge": {
+			"arg": 761,
+			"description": "Oxygen_light_gauge"
+		},
+		"arg.PitchTrim": {
+			"arg": 870,
+			"description": "PitchTrim"
+		},
+		"arg.PitchTrimKnob": {
+			"arg": 28,
+			"description": "PitchTrimKnob"
+		},
+		"arg.PressureRatio": {
+			"arg": 151,
+			"description": "PressureRatio"
+		},
+		"arg.RadarAltimeter": {
+			"arg": 600,
+			"description": "RadarAltimeter"
+		},
+		"arg.RightBrakePedal": {
+			"arg": 6,
+			"description": "RightBrakePedal"
+		},
+		"arg.RollTrim": {
+			"arg": 871,
+			"description": "RollTrim"
+		},
+		"arg.RollTrimKnob": {
+			"arg": 29,
+			"description": "RollTrimKnob"
+		},
+		"arg.RudderPedals": {
+			"arg": 4,
+			"description": "RudderPedals"
+		},
+		"arg.StandbyAttHorizon": {
+			"arg": 665,
+			"description": "StandbyAttHorizon"
+		},
+		"arg.StickBank": {
+			"arg": 3,
+			"description": "StickBank"
+		},
+		"arg.StickPitch": {
+			"arg": 2,
+			"description": "StickPitch"
+		},
+		"arg.Stopwatch_mins": {
+			"arg": 144,
+			"description": "Stopwatch_mins"
+		},
+		"arg.Stopwatch_secs": {
+			"arg": 145,
+			"description": "Stopwatch_secs"
+		},
+		"arg.Throttle": {
+			"arg": 80,
+			"description": "Throttle"
+		},
+		"arg.VerticalVelocity": {
+			"arg": 800,
+			"description": "VerticalVelocity"
+		},
+		"arg.mirrors_draw": {
+			"arg": 16,
+			"description": "mirrors_draw"
+		},
+		"dev0.cmd_1625": {
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 1625,
+			"description": "Left Mirror - ON/OFF",
+			"deviceId": 0,
+			"elementName": "PNT_MIRROR_LEFT",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"devNone.COMPASS_free_slaved_switch": {
+			"arg": 512,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3141,
+			"description": "Compass Mode (unimplemented)",
+			"deviceId": null,
+			"elementName": "PNT_512",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"devNone.COMPASS_latitude": {
+			"arg": 509,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3142,
+			"description": "Compass Latitude Knob (unimplemented)",
+			"deviceId": null,
+			"elementName": "PNT_509",
+			"type": "continuous"
+		},
+		"devNone.COMPASS_push_to_sync": {
+			"arg": 513,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3140,
+			"description": "Compass Push-to-Sync (unimplemented)",
+			"deviceId": null,
+			"elementName": "PNT_513",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"devNone.COMPASS_set_heading": {
+			"arg": 511,
+			"description": "Compass Heading Set Knob (unimplemented)",
+			"elementName": "PNT_511",
+			"positionMap": [
+				{
+					"commandId": 3139,
+					"deviceId": null,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3139,
+					"deviceId": null,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"ind.0": {
+			"description": "ccIndicator (all fields)",
+			"indicationId": 0
+		},
+		"ind.0.glass": {
+			"description": "glass",
+			"fieldName": "glass",
+			"indicationId": 0
+		},
+		"ind.0.total_field_of_view": {
+			"description": "total_field_of_view",
+			"fieldName": "total_field_of_view",
+			"indicationId": 0
+		},
+		"ind.1": {
+			"description": "ccIndicator (all fields)",
+			"indicationId": 1
+		},
+		"ind.1.debug_screen": {
+			"description": "debug_screen",
+			"fieldName": "debug_screen",
+			"indicationId": 1
+		},
+		"ind.2": {
+			"description": "ccIndicator (all fields)",
+			"indicationId": 2
+		},
+		"ind.2.total_field_of_view": {
+			"description": "total_field_of_view",
+			"fieldName": "total_field_of_view",
+			"indicationId": 2
+		},
+		"ind.3": {
+			"description": "ccControlsIndicatorBase (all fields)",
+			"indicationId": 3
+		},
+		"ind.3.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 3
+		},
+		"ind.3.pitch_scale": {
+			"description": "pitch_scale",
+			"fieldName": "pitch_scale",
+			"indicationId": 3
+		},
+		"ind.3.roll_scale": {
+			"description": "roll_scale",
+			"fieldName": "roll_scale",
+			"indicationId": 3
+		},
+		"ind.3.stick_position": {
+			"description": "stick_position",
+			"fieldName": "stick_position",
+			"indicationId": 3
+		},
+		"ind.4": {
+			"description": "ccIndicator (all fields)",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[10]": {
+			"description": "txt_chn[10]",
+			"fieldName": "txt_chn[10]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[11]": {
+			"description": "txt_chn[11]",
+			"fieldName": "txt_chn[11]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[12]": {
+			"description": "txt_chn[12]",
+			"fieldName": "txt_chn[12]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[13]": {
+			"description": "txt_chn[13]",
+			"fieldName": "txt_chn[13]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[14]": {
+			"description": "txt_chn[14]",
+			"fieldName": "txt_chn[14]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[15]": {
+			"description": "txt_chn[15]",
+			"fieldName": "txt_chn[15]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[16]": {
+			"description": "txt_chn[16]",
+			"fieldName": "txt_chn[16]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[17]": {
+			"description": "txt_chn[17]",
+			"fieldName": "txt_chn[17]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[18]": {
+			"description": "txt_chn[18]",
+			"fieldName": "txt_chn[18]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[19]": {
+			"description": "txt_chn[19]",
+			"fieldName": "txt_chn[19]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[1]": {
+			"description": "txt_chn[1]",
+			"fieldName": "txt_chn[1]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[20]": {
+			"description": "txt_chn[20]",
+			"fieldName": "txt_chn[20]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[2]": {
+			"description": "txt_chn[2]",
+			"fieldName": "txt_chn[2]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[3]": {
+			"description": "txt_chn[3]",
+			"fieldName": "txt_chn[3]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[4]": {
+			"description": "txt_chn[4]",
+			"fieldName": "txt_chn[4]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[5]": {
+			"description": "txt_chn[5]",
+			"fieldName": "txt_chn[5]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[6]": {
+			"description": "txt_chn[6]",
+			"fieldName": "txt_chn[6]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[7]": {
+			"description": "txt_chn[7]",
+			"fieldName": "txt_chn[7]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[8]": {
+			"description": "txt_chn[8]",
+			"fieldName": "txt_chn[8]",
+			"indicationId": 4
+		},
+		"ind.4.txt_chn[9]": {
+			"description": "txt_chn[9]",
+			"fieldName": "txt_chn[9]",
+			"indicationId": 4
+		}
+	},
+	"moduleName": "A-4E-C"
+}

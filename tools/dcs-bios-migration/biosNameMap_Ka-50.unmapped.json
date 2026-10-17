@@ -1,0 +1,82 @@
+{
+	"ADF_CHANNEL": {
+		"arg": 357,
+		"cmd": 3001,
+		"dev": 46,
+		"kind": "Tumb",
+		"lineno": 650,
+		"reason": "no-match"
+	},
+	"DOOR_HDL": {
+		"arg": 1020,
+		"cmd": 3018,
+		"dev": 34,
+		"kind": "ToggleSwitch",
+		"lineno": 850,
+		"reason": "no-match"
+	},
+	"FIREEXT_EXT_MODE": {
+		"arg": 248,
+		"cmd": 3005,
+		"dev": 40,
+		"kind": "MultipositionSwitch",
+		"lineno": 707,
+		"reason": "no-match"
+	},
+	"NAV_GYRO_MAG_MAN_HDG": {
+		"arg": 229,
+		"cmd": 3001,
+		"dev": 28,
+		"kind": "MultipositionSwitch",
+		"lineno": 748,
+		"reason": "no-match"
+	},
+	"PVI_MODES": {
+		"arg": 324,
+		"cmd": 3026,
+		"dev": 20,
+		"kind": "Tumb",
+		"lineno": 619,
+		"reason": "no-match"
+	},
+	"R800L1_RADIO": {
+		"arg": 3,
+		"cmd": 7,
+		"dev": 48,
+		"kind": "ReadWriteRadio",
+		"lineno": 852,
+		"reason": "no-match"
+	},
+	"R828_RADIO": {
+		"arg": 3,
+		"cmd": 7,
+		"dev": 49,
+		"kind": "ReadWriteRadio",
+		"lineno": 853,
+		"reason": "no-match"
+	},
+	"SC_ODS_MODE": {
+		"arg": 49,
+		"cmd": 3001,
+		"dev": 64,
+		"kind": "ToggleSwitch",
+		"lineno": 164,
+		"reason": "no-match"
+	},
+	"UV26_DISPENSERS_SELECTOR": {
+		"arg": 36,
+		"cmd": 3001,
+		"dev": 22,
+		"kind": "MultipositionSwitch",
+		"lineno": 146,
+		"reason": "no-match"
+	},
+	"WEAPONS_MODE": {
+		"arg": 431,
+		"cmd": 3014,
+		"dev": 12,
+		"kind": "Tumb",
+		"lineno": 478,
+		"reason": "no-match"
+	}
+}

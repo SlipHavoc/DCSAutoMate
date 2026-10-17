@@ -2,26 +2,33 @@ import os
 import datetime
 import inspect
 import argparse # Command line parameters.
-import json
-import math
-import socket
 import sys
+import subprocess
 import threading
-import tkinter as tk
-from tkinter import ttk, messagebox, font as tkfont, filedialog
-import importlib
-import os
+import socket
+from PySide6 import QtWidgets, QtCore, QtGui
 import traceback
-import win32com.client # Used for text-to-speech.
-import time
+from pprint import pprint
 
-# pydirectinput is used for sending keyboard commands to DCS, and pygetwindow is used to find the DCS window.
-import pydirectinput
-import pygetwindow as gw
+from network.UdpWireLogger import UdpWireLogger
 
-# Import the classes from the new files
-from DCSBIOSExportManager import DCSBIOSExportManager
-from DCSAutoMateExportManager import DCSAutoMateExportManager
+class UiRemoteControlBridge(QtCore.QObject):
+	messageReceived = QtCore.Signal(str)
+
+
+# Import the classes from the renamed files
+from network.DCSDirectManager import DCSDirectManager
+from network.DCSAutoMateExportManager import DCSAutoMateExportManager
+from engine.DCSSeqExecute import DCSSeqExecute
+from engine.autoSelectRules import AutoSelectContext, applyModuleAutoSelect, autoSelectReport, classifyPosition, isEngineRunning, timeOfDay
+from utils.SettingsManager import SettingsManager, describeResolvedPath, readHookSettings, HOOK_SETTINGS_DEFAULTS
+from engine.ScriptManager import ScriptManager
+from utils.TTSManager import TTSManager
+from engine.SequenceHelper import SequenceHelper
+from utils.DcsScriptsInstaller import DcsScriptsInstaller
+from utils.controlReference import controlReferencePaths, updateControlReference
+from utils.dcsVersion import dcsInstallDir, dcsUpdateNotice, readCheckedDcsVersion, readInstalledDcsVersion
+from utils.version import APP_VERSION
 
 
 ###############################################################################
@@ -29,402 +36,519 @@ from DCSAutoMateExportManager import DCSAutoMateExportManager
 ###############################################################################
 
 class DCSAutoMateApp:
-	SETTINGS_FILE = 'DCSAutoMateSettings.json'
-	CONFIG_FILE = 'DCSAutoMateConfig.json'
+	def __init__(self, parent=None):
+		self.uiRemoteControlStopFlag = threading.Event()
+		self.uiRemoteControlThread = None
 
-	def __init__(self, root):
-		log('Starting DCSAutoMate...')
-		self.config = self.getConfig()
+		# Initialize Managers early
+		self.settingsManager = SettingsManager()
+		self.config = self.settingsManager.config
 
-		self.root = root
-		self.root.title('DCS AutoMate')
-		self.root.geometry('1280x960')
-		self.root.protocol("WM_DELETE_WINDOW", self.onClose)
+		self.uiRemoteControlPort = self.config.get('uiRemoteControlPort', 7786)
+		self.uiRemoteControlHost = '127.0.0.1'
+		self.uiRemoteControlReplyPort = self.config.get('uiRemoteControlReplyPort', 7779)
+		self.uiRemoteControlBridge = UiRemoteControlBridge()
+		self.uiRemoteControlBridge.messageReceived.connect(self._handleUiRemoteControlMessage)
 
-		# Create the menu bar
-		menuBar = tk.Menu(self.root)
-		self.root.config(menu=menuBar)
-		configMenu = tk.Menu(menuBar, tearoff=0)
-		menuBar.add_cascade(label='Config', menu=configMenu)
-		configMenu.add_command(label='Edit Config', command=self.openConfigWindow)
+		self.updatingFromRemote = False # Initialize flag
+		self.scriptRunning = False # Flag to track if a script is currently executing
+		self.scriptPaused = False # Flag to track if script is paused
+		self.resumeEvent = threading.Event()
+		self.resumeEvent.set() # Default to running
+		self.scriptWaiting = False # True while the script is in a wait that Skip Wait can end
+		self.skipWaitEvent = threading.Event()
+		self.logInitialized = False
+		self.initializing = True  # Flag to prevent saving settings during initialization
+		self.log('Starting DCSAutoMate...')
 
-		# Create a frame to hold the DBE status label and the real-time DCS data.
-		statusFrame = tk.Frame(root)
-		statusFrame.grid(row=0, column=1, sticky='ne')
+		# Initialize other Managers
+		self.scriptManager = ScriptManager()
+		self.udpWireLogger = UdpWireLogger(self.config)
+		self.SeqHelperFunctions = SequenceHelper(self.config, self.settingsManager, self.log)
+
+		self.ttsManager = TTSManager(self.config)
+
+		# Create main window
+		self.mainWindow = QtWidgets.QMainWindow(parent)
+		self.settingsManager.parentWindow = self.mainWindow # Set parent window for error messages
+		self.mainWindow.setWindowTitle(f'DCS AutoMate {APP_VERSION}')
+		# Set window size for compact layout with fixed panels
+		self.mainWindow.resize(1050, 700)  # Slightly wider to accommodate fixed panels
+		self.mainWindow.setMinimumSize(950, 600)  # Minimum to fit both panels + output
+		self.mainWindow.closeEvent = self.onClose
+
+		# Create central widget and main layout with minimal spacing
+		centralWidget = QtWidgets.QWidget()
+		self.mainWindow.setCentralWidget(centralWidget)
+		mainLayout = QtWidgets.QGridLayout(centralWidget)
+		mainLayout.setSpacing(5)  # Minimal spacing between elements
+		mainLayout.setContentsMargins(5, 5, 5, 5)  # Minimal margins
+
+		# Create the menu bar with traditional structure
+		menuBar = self.mainWindow.menuBar()
+
+		# File menu
+		fileMenu = menuBar.addMenu('File')
+		fileMenu.addAction('Exit', self.mainWindow.close)
+
+		# Tools menu
+		toolsMenu = menuBar.addMenu('Tools')
+		toolsMenu.addAction('Settings...', self.openConfigWindow)
+		toolsMenu.addAction('Install/Update DCS Scripts...', self.installDcsScripts)
+		toolsMenu.addAction('Open Program Folder', self.openProgramFolder)
+		toolsMenu.addSeparator()
+
+		# Help menu
+		helpMenu = menuBar.addMenu('Help')
+		helpMenu.addAction('Control Reference', self.openControlReference)
+		self.refreshControlReference()
+
+		# UDP wire logging is now scoped to our own sockets and controlled via config:
+		# - udpUiWireLogEnabled for UI remote control UDP
+
+		# Create a frame to hold the DBE status label and the real-time DCS data - pinned to right
+		statusFrame = QtWidgets.QFrame()
+		statusLayout = QtWidgets.QVBoxLayout(statusFrame)
+		statusLayout.setSpacing(3)  # Minimal spacing
+		statusLayout.setContentsMargins(3, 3, 3, 3)  # Minimal margins
+		statusFrame.setFixedWidth(280)  # Fixed width for right panel
+		mainLayout.addWidget(statusFrame, 0, 1, QtCore.Qt.AlignmentFlag.AlignTop | QtCore.Qt.AlignmentFlag.AlignRight)
 
 		# Add a status label for the Cockpit State Manager
-		self.DBEStatusLabel = tk.Label(statusFrame, text='')
-		self.DBEStatusLabel.pack(side='top', pady=5)
+		self.DBEStatusLabel = QtWidgets.QLabel('')
+		statusLayout.addWidget(self.DBEStatusLabel)
 
-		# Add a LabelFrame for real-time DCS data
-		self.realtimeDataFrame = tk.LabelFrame(statusFrame, text="Realtime DCS Data", padx=10, pady=10)
-		self.realtimeDataFrame.pack(side='top', anchor='ne', padx=10, pady=10, fill='both', expand=False)
+		# Add a GroupBox for real-time DCS data with compact styling
+		self.realtimeDataFrame = QtWidgets.QGroupBox("Realtime DCS Data")
+		realtimeLayout = QtWidgets.QVBoxLayout(self.realtimeDataFrame)
+		realtimeLayout.setSpacing(2)
+		realtimeLayout.setContentsMargins(5, 5, 5, 5)
+		statusLayout.addWidget(self.realtimeDataFrame)
+
 		# Create a label for displaying real-time data
-		self.realtimeDataLabel = tk.Label(self.realtimeDataFrame, text="", justify='left', anchor='w')
-		self.realtimeDataLabel.pack(anchor='w')
+		self.realtimeDataLabel = QtWidgets.QLabel("")
+		self.realtimeDataLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft | QtCore.Qt.AlignmentFlag.AlignTop)
+		realtimeLayout.addWidget(self.realtimeDataLabel)
 
-		# Create a frame to hold the main controls
-		mainFrame = tk.Frame(root)
-		mainFrame.grid(row=0, column=0, sticky='ne')
+		# Create a frame to hold the main controls with compact layout - pinned to left
+		mainFrame = QtWidgets.QFrame()
+		mainFrameLayout = QtWidgets.QVBoxLayout(mainFrame)
+		mainFrameLayout.setSpacing(3)  # Tight spacing between controls
+		mainFrameLayout.setContentsMargins(3, 3, 3, 3)
+		# Remove fixed width - let it auto-adjust to dropdown content
+		mainLayout.addWidget(mainFrame, 0, 0, QtCore.Qt.AlignmentFlag.AlignTop | QtCore.Qt.AlignmentFlag.AlignLeft)
+
+		# Auto Select button
+		self.autoSelectButton = QtWidgets.QPushButton('Auto Select Script from Telemetry')
+		self.autoSelectButton.clicked.connect(self.autoSelectScript)
+		mainFrameLayout.addWidget(self.autoSelectButton)
 
 		# Select script file control
-		tk.Label(mainFrame, text='Select script file:').pack(pady=5)
-		self.moduleDropdown = ttk.Combobox(mainFrame, state='readonly')
-		self.moduleDropdown.bind('<<ComboboxSelected>>', self.onModuleChange)
-		self.moduleDropdown.pack(pady=10)
+		mainFrameLayout.addWidget(QtWidgets.QLabel('Select script file:'))
+		self.moduleDropdown = QtWidgets.QComboBox()
+		# Don't set fixed width yet - will be calculated after population
+		self.moduleDropdown.currentIndexChanged.connect(self.onModuleChange)
+		mainFrameLayout.addWidget(self.moduleDropdown)
 
 		# Select script control
-		tk.Label(mainFrame, text='Select script:').pack(pady=5)
-		self.scriptDropdown = ttk.Combobox(mainFrame, state='readonly')
-		self.scriptDropdown.bind('<<ComboboxSelected>>', self.onScriptChange)
-		self.scriptDropdown.pack(pady=10)
+		mainFrameLayout.addWidget(QtWidgets.QLabel('Select script:'))
+		self.scriptDropdown = QtWidgets.QComboBox()
+		# Don't set fixed width yet - will be calculated after population
+		self.scriptDropdown.currentIndexChanged.connect(self.onScriptChange)
+		mainFrameLayout.addWidget(self.scriptDropdown)
 
-		# Add a container for the script variables, these will be radio buttons.
-		self.varContainer = tk.Frame(mainFrame)
-		self.varContainer.pack(pady=10)
+		# Add a container for the script variables with minimal spacing
+		self.varContainer = QtWidgets.QFrame()
+		self.varContainerLayout = QtWidgets.QVBoxLayout(self.varContainer)
+		self.varContainerLayout.setSpacing(2)  # Tight spacing between radio groups
+		self.varContainerLayout.setContentsMargins(0, 5, 0, 5)  # Small top/bottom margins only
+		# Set minimum size to accommodate 6 radio button groups
+		self.varContainer.setMinimumHeight(150)
+		mainFrameLayout.addWidget(self.varContainer)
 		self.varControls = {}
+		self.varControlTypes = {}
+		self.varFrames = {}
+		self.varLabels = {}
+		self.varValueFrames = {}
 
-		# Create a frame to hold the Start and Stop buttons side by side.
-		buttonFrame = tk.Frame(mainFrame)
-		buttonFrame.pack(pady=5)
-		self.startButton = tk.Button(buttonFrame, text='Start', command=self.runScript, state='disabled')
-		self.startButton.pack(side='left', padx=5)
-		self.stopButton = tk.Button(buttonFrame, text='Stop', command=self.stopScript, state='disabled')
-		self.stopButton.pack(side='left', padx=5)
+		# Create a frame to hold the Start, Skip Wait and Stop buttons side by side.
+		buttonFrame = QtWidgets.QFrame()
+		buttonLayout = QtWidgets.QHBoxLayout(buttonFrame)
+		buttonLayout.setSpacing(5)
+		buttonLayout.setContentsMargins(0, 5, 0, 0)
+		mainFrameLayout.addWidget(buttonFrame)
+
+		self.startButton = QtWidgets.QPushButton('Start')
+		self.startButton.clicked.connect(self.onStartPauseClick)
+		self.startButton.setEnabled(False)
+		buttonLayout.addWidget(self.startButton)
+
+		self.skipWaitButton = QtWidgets.QPushButton('Skip Wait')
+		self.skipWaitButton.setToolTip('End the current wait (cockpit state, loop, or timer) and go on to the next step')
+		self.skipWaitButton.clicked.connect(self.skipWait)
+		self.skipWaitButton.setEnabled(False)
+		buttonLayout.addWidget(self.skipWaitButton)
+
+		self.stopButton = QtWidgets.QPushButton('Stop')
+		self.stopButton.clicked.connect(self.stopScript)
+		self.stopButton.setEnabled(False)
+		buttonLayout.addWidget(self.stopButton)
 
 		# Create a frame to hold the output text box
-		outputFrame = tk.Frame(root)
-		outputFrame.grid(row=1, column=0, columnspan=2, sticky='nsew')
+		outputFrame = QtWidgets.QFrame()
+		outputLayout = QtWidgets.QVBoxLayout(outputFrame)
+		outputLayout.setSpacing(2)
+		outputLayout.setContentsMargins(0, 5, 0, 0)
+		mainLayout.addWidget(outputFrame, 1, 0, 1, 2)
 
-		scrollbarY = tk.Scrollbar(outputFrame, orient='vertical')
-		scrollbarX = tk.Scrollbar(outputFrame, orient='horizontal')
-		self.outputBox = tk.Text(outputFrame, wrap='none', yscrollcommand=scrollbarY.set, xscrollcommand=scrollbarX.set)
-		scrollbarY.config(command=self.outputBox.yview)
-		scrollbarX.config(command=self.outputBox.xview)
+		# Configure output box for wide text and many lines
+		self.outputBox = QtWidgets.QTextEdit()
+		self.outputBox.setReadOnly(True)
+		self.outputBox.setFont(QtGui.QFont('Consolas', 9))  # Slightly smaller font for more content
+		self.outputBox.setLineWrapMode(QtWidgets.QTextEdit.LineWrapMode.NoWrap)  # No wrapping for long lines
+		# Set minimum size to show ~24 lines and wide enough for long output
+		self.outputBox.setMinimumSize(850, 300)
+		outputLayout.addWidget(self.outputBox)
 
-		scrollbarY.pack(side='right', fill='y')
-		scrollbarX.pack(side='bottom', fill='x')
-		self.outputBox.configure(font=('Consolas', 10), wrap='word', tabs=('1c', '6c'))
-		self.outputBox.pack(fill='both', expand=True)
+		# Configure grid layout weights - output gets most space
+		mainLayout.setRowStretch(0, 0)  # Controls take minimum space
+		mainLayout.setRowStretch(1, 1)  # Output expands to fill available space
+		mainLayout.setColumnStretch(0, 0)  # Left panel takes minimum space (fixed width)
+		mainLayout.setColumnStretch(1, 0)  # Right panel takes minimum space (fixed width)
 
-		# Configure grid weights
-		self.root.grid_rowconfigure(0, weight=1)
-		self.root.grid_rowconfigure(1, weight=1)
-		self.root.grid_columnconfigure(0, weight=1)
-		self.root.grid_columnconfigure(1, weight=1)
+		# Add horizontal spacing between the fixed-width panels and center area
+		mainLayout.setHorizontalSpacing(10)
 
 		self.stopFlag = threading.Event()
 
+		# Check for Saved Games folder ambiguity or missing path FIRST, before checking scripts.
+		# This ensures users with multiple Saved Games folders (DCS/DCS.openbeta) or no detected folder
+		# must resolve the path before we check if scripts are installed.
+		self._checkSavedGamesAmbiguity()
+
+		if not DcsScriptsInstaller.check_installed(self.config):
+			box = QtWidgets.QMessageBox(self.mainWindow)
+			box.setIcon(QtWidgets.QMessageBox.Icon.Question)
+			box.setWindowTitle('Missing Scripts')
+			box.setText('The DCSAutoMate scripts do not appear to be installed in your DCS Saved Games folder.\n\nDo you want to install them now?')
+			yesButton = box.addButton('Yes', QtWidgets.QMessageBox.ButtonRole.AcceptRole)
+			noLink = box.addButton('No', QtWidgets.QMessageBox.ButtonRole.RejectRole)
+			box.setDefaultButton(noLink)
+			box.exec()
+			if box.clickedButton() == yesButton:
+				self.installDcsScripts()
+
 		self.onProgramStart()
-
 		self.updateUIState()
+		self.startUiRemoteControlListener()
 
-	def onProgramStart(self):
-		# Start the DCS BIOS Export Manager, which begins a thread to monitor the DCS BIOS output data.
-		self.dbe = DCSBIOSExportManager(self.config)
-		self.dbe.start()
+	def startUiRemoteControlListener(self):
+		if self.uiRemoteControlThread and self.uiRemoteControlThread.is_alive():
+			return
 
-		# Start the DCSAutoMateExport manager, which begins a thread to receive data from the DCSAutoMateExport.lua script.
-		self.DAMExport = DCSAutoMateExportManager(self.config)
-		self.DAMExport.start()
+		self.uiRemoteControlStopFlag.clear()
+		self.uiRemoteControlSocket = None  # Will be set by thread
+		self.uiRemoteControlThread = threading.Thread(target=self._uiRemoteControlThreadMain, daemon=True)
+		self.uiRemoteControlThread.start()
+		if not bool(self.config.get('udpUiWireLogEnabled', False)):
+			self.log(f'UI remote control: Listening on UDP {self.uiRemoteControlHost}:{self.uiRemoteControlPort}')
 
-		# Get the current settings from the file.
-		self.settings = self.getSettings()
-		#print(self.settings)
+	def stopUiRemoteControlListener(self):
+		self.uiRemoteControlStopFlag.set()
 
-		# Get the list of modules (file names) from the script *.py files.
-		self.modules = self.getModules()
-		self.updateModulesDropdown(self.modules)
-
-		lastUsedModule = self.getLastUsedModule()
-
-		# Set the last used module, if any.
-		if lastUsedModule and lastUsedModule in self.modules:
-			self.moduleDropdown.set(lastUsedModule)
-		else:
-			self.moduleDropdown.current(0)
-		self.moduleName = self.moduleDropdown.get()
-
-		self.onModuleChange(None)
-
-		self.updateDataMonitoring()
-
-	# Called when the program is closed.  Stops the cockpit state manager and closes the program.
-	def onClose(self):
-		#print("Stopping DBE...")
-		self.dbe.stop()  # Stop the DCSBIOSExportManager
-		self.DAMExport.stop()  # Stop the DCSAutoMateExportManager
-		#print("Destroying main window...")
-		self.root.destroy()  # Destroy the main window
-		#print("Main window destroyed.")
-
-	def updateDataMonitoring(self):
-		self.DBEStatusLabel.config(text=self.dbe.outputString)
-		self.realtimeDataLabel.config(text=self.DAMExport.outputString)
-
-		self.root.update_idletasks()
-
-		# Schedule next UI update
-		self.root.after(100, self.updateDataMonitoring)
-
-	# Called when the module dropdown is changed.  Updates the script dropdown with the scripts from the selected module.
-	def onModuleChange(self, event):
-		# Get the new moduleName from the dropdown and set it in self.
-		self.moduleName = self.moduleDropdown.get()
-		# Load the script metadata for this module from the script file.
-		self.scriptData = self.getScriptData(self.moduleName)
-
-		# Update the script dropdown with the data.
-		self.updateScriptDropdown(self.scriptData)
-
-		# Set the last used script, if any.
-		lastUsedScriptName = self.getLastUsedScriptName(self.moduleName)
-		if lastUsedScriptName:
-			self.scriptDropdown.set(lastUsedScriptName)
-		else:
-			self.scriptDropdown.current(0)
-
-		self.onScriptChange(None)
-
-	def onScriptChange(self, event):
-		# Get the new scriptName from the dropdown and set it in self.
-		self.scriptName = self.scriptDropdown.get()
-
-		# Create the radio buttons and set them to some values based on the last used settings.
-		self.scriptVars = self.getScriptVars(self.scriptData, self.scriptName)
-		lastUsedVars = self.getLastUsedVars(self.moduleName, self.scriptName)
-		if lastUsedVars:
-			setScriptVars = lastUsedVars
-		else:
-			setScriptVars = {}
-		self.updateScriptVarsRadioButtons(self.scriptVars, setScriptVars)
-
-		self.onVarsRadioButtonChange(None)
-
-	def updateScriptVarsRadioButtons(self, scriptVars, setScriptVars):
-		for widget in self.varContainer.winfo_children():
-			widget.destroy()
-		for varName, options in scriptVars.items():
-			frame = tk.Frame(self.varContainer)
-			frame.pack(pady=5)
-			tk.Label(frame, text=f'{varName}:').pack(side='left')
-			var = tk.StringVar(value=setScriptVars.get(varName, options[0]))
-			for option in options:
-				rb = ttk.Radiobutton(frame, text=option, variable=var, value=option)
-				rb.pack(side='left')
-			self.varControls[varName] = var
-			# Add a trace to save settings when an option changes
-			var.trace_add("write", lambda *args: self.onVarsRadioButtonChange(None))
-		self.updateUIState()
-
-	def onVarsRadioButtonChange(self, event):
-		# Save the current settings.
-		self.saveSettings()
-
-	def getAircraftName(self):
-		control = 'MetadataStart/_ACFT_NAME'
-		aircraftName = self.dbe.getControlState(control)
-		if aircraftName:
-			return aircraftName[0][2].strip()
-		else:
-			return 'N/A'
-
-	def getMissionTime(self):
-		return self.dbe.detectTimeOfDay()
-
-	def saveSettings(self):
-		try:
-			self.settings['lastUsedModule'] = self.moduleName
-			self.settings['lastUsedScripts'][self.moduleName] = self.scriptName
-			vars = self.getSelectedVars()
-
-			foundItem = False
-			for item in self.settings['lastUsedVars']:
-				if item['module'] == self.moduleName and item['script'] == self.scriptName:
-					item['vars'] = vars
-					foundItem = True
-					break
-			if not foundItem:
-				self.settings['lastUsedVars'].append(
-					{
-						'module': self.moduleName,
-						'script': self.scriptName,
-						'vars': vars,
-					}
-				)
-
-			# If there was an error reading the settings file last time we tried to, don't try to save settings.
-			if not self.settingsError:
-				with open(self.SETTINGS_FILE, 'w') as file:
-					json.dump(self.settings, file, indent=4)
-		except Exception as e:
-			messagebox.showerror("Error", f"Error saving settings: {e}")
-
-	def getSettings(self):
-		self.settingsError = False
-		settings = {
-			'lastUsedModule': '',
-			'lastUsedScripts': {},
-			'lastUsedVars': []
-		}
-		try:
-			if os.path.exists(self.SETTINGS_FILE):
-				with open(self.SETTINGS_FILE, 'r') as f:
-					settings = json.load(f)
-		except Exception as e:
-			# Set a flag to indicate that there was an error loading the settings file.
-			self.settingsError = True
-			# Show an error message in a popup window
-			messagebox.showerror("Error", f"Error loading settings from {self.SETTINGS_FILE}: {e}.\nPlease check the file for syntax errors, or delete it to create a new one.")
-
-		return settings
-
-	def updateSettings(self, moduleName, scriptName, vars, setLastUsed=False):
-		for item in self.settings['lastUsedVars']:
-			if item.get('module') == moduleName and item.get('script') == scriptName:
-				#item.set(vars)
+		# Close socket to unblock any pending recv
+		if hasattr(self, 'uiRemoteControlSocket') and self.uiRemoteControlSocket:
+			try:
+				self.uiRemoteControlSocket.close()
+			except Exception:
 				pass
-		if setLastUsed:
-			if self.settings['lastUsed'].get(moduleName):
-				self.settings['lastUsed'][moduleName] = scriptName
-			else:
-				self.settings['lastUsed'].append({moduleName: scriptName})
 
-		self.saveSettings()
+		# Wait for thread with reasonable timeout
+		if self.uiRemoteControlThread:
+			self.uiRemoteControlThread.join(timeout=1.0)
 
-	# Returns the last used module data from the settings file, or an empty string if not found.
-	def getLastUsedModule(self):
-		if self.settings['lastUsedModule']:
-			return self.settings['lastUsedModule']
-		else:
-			return ''
-
-	# Returns the name of the last used script, or empty string if not found.
-	def getLastUsedScriptName(self, moduleName):
-		for key in self.settings['lastUsedScripts']:
-			if key == moduleName:
-				return self.settings['lastUsedScripts'][key]
-		return ''
-
-	# Returns the dict of the selected vars {varName: varValue} for the last used script, or an empty dict if not found.
-	def getLastUsedVars(self, moduleName, scriptName):
-		for item in self.settings['lastUsedVars']:
-			if item.get('module') == moduleName and item.get('script') == scriptName:
-				return item['vars']
-		return {}
-
-	def openConfigWindow(self):
-		configWindow = tk.Toplevel(self.root)
-		configWindow.title('Edit Config')
-		configWindow.sizeX = 700
-		configWindow.sizeY = 550  # Adjusted height to accommodate new control
-		configWindow.geometry(f'{configWindow.sizeX}x{configWindow.sizeY}')  # Adjusted width and height
-
-		# Make the config window a child of the main window
-		configWindow.transient(self.root)
-
-		# Center the config window on the main window
-		self.root.update_idletasks()  # Update "requested size" from geometry manager
-		x = self.root.winfo_x() + (self.root.winfo_width() // 2) - (configWindow.winfo_reqwidth() // 2)
-		y = self.root.winfo_y() + (self.root.winfo_height() // 2) - (configWindow.winfo_reqheight() // 2)
-		configWindow.geometry(f"+{x}+{y}")
-
-		debugVar = tk.BooleanVar(value=self.config.get('debug', False))
-		disableSpeechVar = tk.BooleanVar(value=self.config.get('disableSpeech', False))
-		dcsWindowUseTitleVar = tk.BooleanVar(value=self.config.get('dcsWindowUseTitle', False))
-		dcsWindowTitleOverrideVar = tk.StringVar(value=self.config.get('dcsWindowTitleOverride', ''))
-		dcsSavedGamesOverrideVar = tk.StringVar(value=self.config.get('dcsSavedGamesOverride', ''))
-		dcsExePathOverrideVar = tk.StringVar(value=self.config.get('dcsExePathOverride', ''))
-
-		padding = {'padx': 10, 'pady': 5}
-
-		tk.Checkbutton(configWindow, text='Debug - Disables sending data to DCS', variable=debugVar).pack(anchor='w', **padding)
-
-		tk.Checkbutton(configWindow, text='Disable Text-to-Speech output', variable=disableSpeechVar).pack(anchor='w', **padding)
-
-		tk.Checkbutton(configWindow, text='Find DCS window by window title (otherwise use exe path)', variable=dcsWindowUseTitleVar).pack(anchor='w', **padding)
-
-		tk.Label(configWindow, text="DCS executable path:\n(Leave blank to get the location from the registry)", anchor='w', justify='left').pack(anchor='w', **padding)
-		dcsExePathOverrideEntry = tk.Entry(configWindow, textvariable=dcsExePathOverrideVar)
-		dcsExePathOverrideEntry.pack(fill='x', **padding)
-		tk.Button(configWindow, text='Browse', command=lambda: dcsExePathOverrideVar.set(filedialog.askopenfilename(filetypes=[("Executable files", "*.exe")]))).pack(anchor='e', **padding)
-
-		tk.Label(configWindow, text='DCS window title to send commands to:\n(Leave blank to use default "Digital Combat Simulator"', anchor='w', justify='left').pack(anchor='w', **padding)
-		dcsWindowTitleOverrideEntry = tk.Entry(configWindow, textvariable=dcsWindowTitleOverrideVar)
-		dcsWindowTitleOverrideEntry.pack(fill='x', **padding)
-
-		tk.Label(configWindow, text="DCS Saved Games folder path:\n(if blank, defaults to '%USERPROFILE%\\Saved Games\\DCS' or 'DCS.openbeta')", anchor='w', justify='left').pack(anchor='w', **padding)
-		dcsSavedGamesOverrideEntry = tk.Entry(configWindow, textvariable=dcsSavedGamesOverrideVar)
-		dcsSavedGamesOverrideEntry.pack(fill='x', **padding)
-		tk.Button(configWindow, text='Browse', command=lambda: dcsSavedGamesOverrideVar.set(filedialog.askdirectory())).pack(anchor='e', **padding)
-
-		buttonFrame = tk.Frame(configWindow)
-		buttonFrame.pack(pady=10)
-		tk.Button(buttonFrame, text='Save', command=lambda: self.saveConfig(
-			debugVar,
-			disableSpeechVar,
-			dcsWindowUseTitleVar,
-			dcsExePathOverrideVar,
-			dcsWindowTitleOverrideVar,
-			dcsSavedGamesOverrideVar,
-			configWindow
-		)).pack(side='left', padx=5, pady=5, ipadx=10, ipady=5)
-		tk.Button(buttonFrame, text='Cancel', command=configWindow.destroy).pack(side='left', padx=5, pady=5, ipadx=10, ipady=5)
-
-		# Make the window modal
-		configWindow.grab_set()
-		self.root.wait_window(configWindow)
-
-	def saveConfig(self, debugVar, disableSpeechVar, dcsWindowUseTitleVar, dcsExePathOverrideVar, dcsWindowTitleOverrideVar, dcsSavedGamesOverrideVar, configWindow):
-		self.config['debug'] = debugVar.get()
-		self.config['disableSpeech'] = disableSpeechVar.get()
-		self.config['dcsWindowUseTitle'] = dcsWindowUseTitleVar.get()
-		self.config['dcsExePathOverride'] = dcsExePathOverrideVar.get()
-		self.config['dcsWindowTitleOverride'] = dcsWindowTitleOverrideVar.get()
-		self.config['dcsSavedGamesOverride'] = dcsSavedGamesOverrideVar.get()
-
-		with open('DCSAutoMateConfig.json', 'w') as file:
-			file.write(json.dumps(self.config, indent=4))
-		configWindow.destroy()
-
-	def updateUIState(self):
-		moduleSelected = bool(self.moduleDropdown.get())
-		scriptSelected = bool(self.scriptDropdown.get())
-		self.startButton.config(state='normal' if moduleSelected and scriptSelected else 'disabled')
-		self.stopButton.config(state='disabled')
-
-	def getDefaultConfig(self):
-		return {
-			'debug': False,
-			'disableSpeech': False,
-			'dcsWindowUseTitle': False,
-			'dcsExePathOverride': '',
-			'dcsWindowTitleOverride': '',
-			'dcsSavedGamesOverride': '',
-		}
-
-	def loadConfigFile(self):
-		config = self.getDefaultConfig()
+	def _sendUiMessageToDcs(self, message):
 		try:
-			# If the config file doesn't exist, create it with the default config.
-			if not os.path.isfile(self.CONFIG_FILE):
-				with open('DCSAutoMateConfig.json', 'w') as file:
-					file.write(json.dumps(config, indent=4))
+			sendSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+			payload = str(message or '').encode('utf-8')
+			addr = (self.uiRemoteControlHost, self.uiRemoteControlReplyPort)
+			self.udpWireLogger.logUiTx(addr, payload)
+			sendSocket.sendto(payload, addr)
+			sendSocket.close()
 		except Exception as e:
-				messagebox.showerror("Error", f"Error writing default config to {self.CONFIG_FILE}: {e}.")
+			self.log(f'UI remote control: Failed sending reply to DCS: {e}')
+
+	def _encodePipeList(self, items):
+		if not items:
+			return ''
+		cleanItems = []
+		for item in items:
+			text = str(item)
+			text = text.replace('|', '/')
+			text = text.replace(';', ',')
+			text = text.replace('\n', ' ')
+			text = text.replace('\r', ' ')
+			cleanItems.append(text)
+		return '|'.join(cleanItems)
+
+	def _uiSendLog(self, text):
+		text = str(text or '')
+		text = text.replace(';', ',').replace('\n', ' ').replace('\r', ' ')
+		self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=log;text={text};')
+
+	def _uiSendClear(self):
+		self._sendUiMessageToDcs('DCSAUTOMATE_UI;event=clear;')
+
+	def _uiSendScriptState(self):
+		isRunning = getattr(self, 'scriptRunning', False)
+		running = 'true' if isRunning else 'false'
+		paused = 'true' if getattr(self, 'scriptPaused', False) else 'false'
+		waiting = 'true' if isRunning and self.scriptWaiting else 'false'
+		self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=scriptState;running={running};paused={paused};waiting={waiting};')
+
+	def _uiGetVarLabelsForOverlay(self, varNames, scriptVars, moduleName, scriptName):
+		labels = []
+		unsetVars = set(getattr(self, 'uiTelemetryUnsetVars', set()) or set())
+		unsetVarsModule = getattr(self, 'uiTelemetryUnsetVarsModule', '')
+		unsetVarsScript = getattr(self, 'uiTelemetryUnsetVarsScript', '')
+		shouldMarkUnset = bool(unsetVars) and unsetVarsModule == moduleName and unsetVarsScript == scriptName
+		for varName in varNames:
+			varDefinition = scriptVars.get(varName) if isinstance(scriptVars, dict) else None
+			label = varName
+			if isinstance(varDefinition, dict):
+				label = varDefinition.get('label', varName)
+			if shouldMarkUnset and varName in unsetVars:
+				label = f'{label} [set manually]'
+			labels.append(label)
+		return labels
+
+	def _handleUiRemoteControlMessage(self, msg):
+		msg = str(msg or '')
+		if not msg.startswith('DCSAUTOMATE_UI;'):
+			return
+
+		fields = {}
+		for part in msg.split(';'):
+			if '=' in part:
+				key, value = part.split('=', 1)
+				fields[key] = value
+
+		cmd = fields.get('cmd', '')
+		if cmd == 'getModules':
+			modules = self.modules if hasattr(self, 'modules') else self.scriptManager.getModules()
+			selected = self.moduleDropdown.currentText() if hasattr(self, 'moduleDropdown') else ''
+			items = self._encodePipeList(modules)
+			selected = str(selected).replace(';', ',').replace('|', '/')
+			self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=modulesList;items={items};selected={selected};')
+
+			# Sync running state
+			self._uiSendScriptState()
+
+		elif cmd == 'getScripts':
+			moduleName = fields.get('module', '')
+			if not moduleName:
+				return
+			scriptData = self.scriptManager.getScriptData(moduleName)
+			scripts = [s.get('name', '') for s in scriptData.get('scripts', [])]
+			selectedScript = self.scriptDropdown.currentText() if hasattr(self, 'scriptDropdown') else ''
+			# Precompute to avoid complex expressions inside f-string (works on Python 3.9+)
+			itemsEncoded = self._encodePipeList(scripts)
+			selected = str(selectedScript).replace(';', ',').replace('|', '/')
+			self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=scriptsList;module={moduleName};items={itemsEncoded};selected={selected};')
+
+		elif cmd == 'getVars':
+			moduleName = fields.get('module', '')
+			scriptName = fields.get('script', '')
+			if not moduleName or not scriptName:
+				return
+			scriptData = self.scriptManager.getScriptData(moduleName)
+			scriptVars = self.scriptManager.getScriptVars(scriptData, scriptName)
+			varNames = list(scriptVars.keys())
+			varLabels = self._uiGetVarLabelsForOverlay(varNames, scriptVars, moduleName, scriptName)
+			varTypes = [scriptVars[v].get('type', 'dropdown') for v in varNames]
+			self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=varsList;module={moduleName};script={scriptName};items={self._encodePipeList(varNames)};labels={self._encodePipeList(varLabels)};types={self._encodePipeList(varTypes)};')
+
+		elif cmd == 'getVarOptions':
+			moduleName = fields.get('module', '')
+			scriptName = fields.get('script', '')
+			varName = fields.get('var', '')
+			if not moduleName or not scriptName or not varName:
+				return
+
+			# Get current values from UI to resolve dependencies
+			currentValues = {}
+			if hasattr(self, 'varControls'):
+				for vName in self.varControls:
+					val = self.getVarValue(vName)
+					if val is not None:
+						currentValues[vName] = val
+
+			# Override with any values passed in the request (e.g. from ingame selection)
+			for key, val in fields.items():
+				if key not in ('cmd', 'module', 'script', 'var'):
+					currentValues[key] = val
+
+			self._uiSendVarOptions(moduleName, scriptName, varName, currentValues)
+
+		elif cmd == 'varSelection':
+			# Handle varSelection from DCS (user clicked overlay)
+			moduleName = fields.get('module', '')
+			scriptName = fields.get('script', '')
+			varName = fields.get('var', '')
+			value = fields.get('selectedValue', '') # This is the value, not label
+
+			if hasattr(self, 'moduleDropdown') and moduleName == self.moduleDropdown.currentText() and \
+			   hasattr(self, 'scriptDropdown') and scriptName == self.scriptDropdown.currentText():
+				if hasattr(self, 'varControls') and varName in self.varControls:
+					self.updatingFromRemote = True
+					try:
+						self.setVarValueByName(varName, value)
+						# Update dependents
+						if hasattr(self, 'varDependents') and varName in self.varDependents:
+							currentValues = {var: self.getVarValue(var) for var in self.varControls}
+							for depVar in self.varDependents[varName]:
+								self._uiSendVarOptions(self.moduleDropdown.currentText(), self.scriptDropdown.currentText(), depVar, currentValues)
+					finally:
+						self.updatingFromRemote = False
+
+		elif cmd == 'valueChanged':
+			type = fields.get('type', '')
+			name = fields.get('name', '') # module name, script name, or var name
+			value = fields.get('value', '')
+
+			self.updatingFromRemote = True
+			try:
+				if type == 'module':
+					if hasattr(self, 'moduleDropdown'):
+						self.moduleDropdown.setCurrentText(value)
+				elif type == 'script':
+					if hasattr(self, 'scriptDropdown'):
+						self.scriptDropdown.setCurrentText(value)
+				elif type == 'var':
+					if hasattr(self, 'varControls') and name in self.varControls:
+						self.setVarValueByName(name, value)
+						# Update dependents
+						if hasattr(self, 'varDependents') and name in self.varDependents:
+							currentValues = {var: self.getVarValue(var) for var in self.varControls}
+							for depVar in self.varDependents[name]:
+								self._uiSendVarOptions(self.moduleDropdown.currentText(), self.scriptDropdown.currentText(), depVar, currentValues)
+			finally:
+				self.updatingFromRemote = False
+
+		elif cmd == 'autoSelectTelemetry':
+			if hasattr(self, 'autoSelectButton') and self.autoSelectButton.isEnabled():
+				self.log('UI remote control: Auto-selecting telemetry...')
+				self.autoSelectScript()
+			else:
+				self._uiSendLog('Auto Select is disabled.')
+
+		elif cmd == 'start':
+			if self.startButton.isEnabled():
+				self._uiSendLog('Starting script...')
+				self.runScript()
+			else:
+				self._uiSendLog('Start is disabled (select module/script first).')
+		elif cmd == 'pause':
+			if self.scriptRunning and not self.scriptPaused:
+				self._uiSendLog('Pausing script...')
+				self.pauseScript()
+		elif cmd == 'resume':
+			if self.scriptRunning and self.scriptPaused:
+				self._uiSendLog('Resuming script...')
+				self.resumeScript()
+		elif cmd == 'skipWait':
+			self.skipWait()
+		elif cmd == 'stop':
+			if self.stopButton.isEnabled():
+				self._uiSendLog('Stopping script...')
+				self.stopScript()
+			else:
+				self._uiSendLog('Stop is disabled (no script running).')
+
+	def _uiSendVarOptions(self, moduleName, scriptName, varName, currentValues):
+		scriptData = self.scriptManager.getScriptData(moduleName)
+		scriptVars = self.scriptManager.getScriptVars(scriptData, scriptName)
+		varDefinition = scriptVars.get(varName)
+
+		options = {}
+		if isinstance(varDefinition, dict) and 'function' in varDefinition:
+			functionName = varDefinition['function']
+			params = varDefinition.get('params', [])
+			resolvedParams = []
+			for param in params:
+				resolvedParams.append(currentValues.get(param, ''))
+			try:
+				dynamicOptions = getattr(self.SeqHelperFunctions, functionName)(*resolvedParams)
+				options = {opt: opt for opt in dynamicOptions}
+			except Exception as e:
+				self.log(f'Error getting var options for {varName}: {e}')
+				options = {}
+		elif isinstance(varDefinition, dict) and 'options' in varDefinition:
+			options = varDefinition.get('options', {})
+		else:
+			options = varDefinition if isinstance(varDefinition, dict) else {}
+
+		optionPairs = []
+		if isinstance(options, dict):
+			for optionValue, optionLabel in options.items():
+				optionPairs.append((optionValue, optionLabel))
+		elif isinstance(options, (list, tuple)):
+			for option in options:
+				if isinstance(option, dict):
+					optionLabel = option.get('label', option.get('value'))
+					optionPairs.append((option.get('value'), optionLabel))
+				else:
+					optionPairs.append((option, option))
+
+		values = [str(value) for value, _ in optionPairs]
+		labels = [str(label) for _, label in optionPairs]
+
+		# Determine selected value
+		selectedValue = ''
+		if varName in currentValues:
+			selectedValue = str(currentValues[varName])
+
+		items = self._encodePipeList(labels)
+		vals = self._encodePipeList(values)
+		selectedValue = selectedValue.replace(';', ',').replace('|', '/')
+
+		self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=varOptions;module={moduleName};script={scriptName};var={varName};items={items};values={vals};selected={selectedValue};')
+
+	def _uiRemoteControlThreadMain(self):
+		recvSocket = None
+		try:
+			recvSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+			recvSocket.bind((self.uiRemoteControlHost, self.uiRemoteControlPort))
+			recvSocket.settimeout(0.5)
+			self.uiRemoteControlSocket = recvSocket  # Store for clean shutdown
+		except Exception as e:
+			self.log(f'UI remote control: Failed to bind UDP {self.uiRemoteControlHost}:{self.uiRemoteControlPort}: {e}')
+			return
+
+		while not self.uiRemoteControlStopFlag.is_set():
+			try:
+				data, addr = recvSocket.recvfrom(8192)
+				self.udpWireLogger.logUiRx(addr, data)
+				msg = data.decode('utf-8', errors='replace')
+				self.uiRemoteControlBridge.messageReceived.emit(msg)
+			except socket.timeout:
+				continue
+			except OSError:
+				# Socket was closed (expected during shutdown)
+				if self.uiRemoteControlStopFlag.is_set():
+					break
+			except Exception as e:
+				self.log(f'UI remote control: Receive error: {e}')
+				break
 
 		try:
-			with open(self.CONFIG_FILE) as file:
-				config = json.load(file)
-		except:
-			messagebox.showerror("Error", f"Error loading config from {self.CONFIG_FILE}: {e}.\nPlease check the file for syntax errors, or delete it to create a new one.")
+			if recvSocket:
+				recvSocket.close()
+		except Exception:
+			pass
+		self.uiRemoteControlSocket = None
 
-		return config
-
-	def getConfig(self):
-		# First, get the config from the .json file.  If the file doesn't exist, this will create it with the defaults.  Anything set up here may be overridden later by command-line parameters.
-		config = self.loadConfigFile()
-
+	def applyCommandLineArgs(self):
 		# Initialize parser for command line arguments.
 		parser = argparse.ArgumentParser(
 			prog = 'DCSAutoMate',
@@ -453,626 +577,1277 @@ class DCSAutoMateApp:
 		parser.add_argument(
 			'--dcsSavedGamesOverride',
 			action = 'store',
-			help = "If passed, specifies the full path to the DCS Saved Games folder.  Defaults to trying first %USERPROFILE%\\Saved Games\\DCS and then %USERPROFILE%\\Saved Games\\DCS.openbeta."
+			help = "If passed, specifies the full path to the DCS Saved Games folder.  Defaults to trying first %%USERPROFILE%%\\Saved Games\\DCS and then %%USERPROFILE%%\\Saved Games\\DCS.openbeta."
+		)
+		parser.add_argument(
+			'--dcsExePathOverride',
+			action = 'store',
+			help = "If passed, specifies the full path to the DCS executable.  Defaults to auto-detection via registry."
 		)
 
 		args = parser.parse_args()
-		#print(args.debug)
+
 		if args.debug:
-			config['debug'] = args.debug
+			self.config['debug'] = args.debug
 		if args.disableSpeech:
-			config['disableSpeech'] = args.disableSpeech
+			self.config['disableSpeech'] = args.disableSpeech
 		if args.dcsWindowUseTitle:
-			config['dcsWindowUseTitle'] = args.dcsWindowUseTitle
+			self.config['dcsWindowUseTitle'] = args.dcsWindowUseTitle
 		if args.dcsWindowTitleOverride:
-			config['dcsWindowTitleOverride'] = args.dcsWindowTitleOverride
+			self.config['dcsWindowTitleOverride'] = args.dcsWindowTitleOverride
 		if args.dcsSavedGamesOverride:
-			config['dcsSavedGamesOverride'] = args.dcsSavedGamesOverride
+			self.config['dcsSavedGamesOverride'] = args.dcsSavedGamesOverride
+			# Re-detect path if override provided via CLI
+			self.config['dcsSavedGamesPath'] = self.settingsManager.detectSavedGamesPath(args.dcsSavedGamesOverride)
 
-		return config
+		if args.dcsExePathOverride:
+			self.config['dcsExePathOverride'] = args.dcsExePathOverride
+			# Re-detect path if override provided via CLI
+			self.config['dcsExePath'] = self.settingsManager.detectDCSInstallPath(args.dcsExePathOverride)
 
-	def getModules(self):
-		scriptPath = './DCSAutoMateScripts'
-		modules = [f[:-3] for f in os.listdir(scriptPath) if f.endswith('.py')]
-		return modules
+	def onProgramStart(self):
+		# Apply command line arguments to config
+		self.applyCommandLineArgs()
 
-	def updateModulesDropdown(self, modules):
-		self.moduleDropdown['values'] = modules
-		if modules:
-			self.moduleDropdown.current(0)
-		self.updateUIState()
+		# Start the DCS Direct Manager, which connects via TCP to communicate with DCS.
+		self.dbe = DCSDirectManager(self.config)
+		self.dbe.start()
 
-	# Loads the script metadata array from the script file by calling the getScriptData() function in the file.
-	# Complete script metadata array is stored in self.scriptData.
-	def getScriptData(self, moduleName):
+		# Start the DCSAutoMateExport manager, which begins a thread to receive data from the DCSAutoMateExport.lua script.
+		self.DAMExport = DCSAutoMateExportManager(self.config)
+		self.DAMExport.start()
+
+		# Get the list of modules (file names) from the script *.py files.
+		self.modules = self.scriptManager.getModules()
+		self.updateModulesDropdown(self.modules)
+
+		lastUsedModule = self.settingsManager.getLastUsedModule()
+
+		# Set the last used module, if any.
+		if lastUsedModule and lastUsedModule in self.modules:
+			# Try to find the index and set by index instead of text
+			try:
+				index = self.modules.index(lastUsedModule)
+				self.moduleDropdown.setCurrentIndex(index)
+			except ValueError:
+				self.moduleDropdown.setCurrentText(lastUsedModule)
+		else:
+			self.moduleDropdown.setCurrentIndex(0)
+		self.moduleName = self.moduleDropdown.currentText()
+
+		self.onModuleChange()
+
+		self.updateDataMonitoring()
+
+		# The update check is a source-tree tool, so only remind when running from source.
+		if not getattr(sys, 'frozen', False):
+			notice = dcsUpdateNotice(readInstalledDcsVersion(dcsInstallDir(self.config.get('dcsExePath'))), readCheckedDcsVersion())
+			if notice:
+				self.updateOutput(notice + '\n')
+
+		# Initialization complete - now allow settings to be saved
+		self.initializing = False
+
+	def _checkSavedGamesAmbiguity(self):
 		try:
-			module = [importlib.import_module(f'DCSAutoMateScripts.{moduleName}')]
-			importlib.reload(module[0])
-			scriptData = module[0].getScriptData()
+			# Check if no Saved Games folder was detected at all
+			savedGamesPath = self.config.get('dcsSavedGamesPath', '')
+			if not savedGamesPath:
+				text = (
+					'No DCS Saved Games folder was detected.\n\n'
+					'DCSAutoMate looks for:\n'
+					'  • %USERPROFILE%\\Saved Games\\DCS\n'
+					'  • %USERPROFILE%\\Saved Games\\DCS.openbeta\n\n'
+					'Please open Tools -> Settings and set the "DCS Saved Games folder path" to your DCS Saved Games folder.'
+				)
+				msg = QtWidgets.QMessageBox(self.mainWindow)
+				msg.setWindowTitle('DCS Saved Games Folder Not Found')
+				msg.setIcon(QtWidgets.QMessageBox.Icon.Warning)
+				msg.setText(text)
+				openBtn = msg.addButton('Open Settings', QtWidgets.QMessageBox.AcceptRole)
+				msg.addButton('Ignore', QtWidgets.QMessageBox.RejectRole)
+				msg.exec()
+				if msg.clickedButton() == openBtn:
+					self.openConfigWindow()
+				return
+
+			# Check if multiple Saved Games folders were detected (ambiguous)
+			if self.config.get('dcsSavedGamesAmbiguous'):
+				options = self.config.get('dcsSavedGamesOptions', []) or []
+				text = 'Multiple DCS Saved Games folders were detected:\n\n'
+				for p in options:
+					text += f'{p}\n'
+				text += '\nPlease open Tools -> Settings and set the "DCS Saved Games folder path" to the correct folder.'
+				msg = QtWidgets.QMessageBox(self.mainWindow)
+				msg.setWindowTitle('Select DCS Saved Games Folder')
+				msg.setText(text)
+				openBtn = msg.addButton('Open Settings', QtWidgets.QMessageBox.AcceptRole)
+				msg.addButton('Ignore', QtWidgets.QMessageBox.RejectRole)
+				msg.exec()
+				if msg.clickedButton() == openBtn:
+					self.openConfigWindow()
 
 		except Exception as e:
-			messagebox.showerror('Error', f'Error loading module: {e}')
-		return scriptData
+			self.log(f'Error showing saved games ambiguity prompt: {e}')
 
-	def updateScriptDropdown(self, scriptData):
-		self.scriptDropdown['values'] = [s['name'] for s in scriptData['scripts']]
-		if scriptData['scripts']:
-			self.scriptDropdown.current(0)
+	# Called when the program is closed.  Stops the cockpit state manager and closes the program.
+	def onClose(self, event):
+		self.stopUiRemoteControlListener()
+		self.dbe.stop()  # Stop the DCSDirectManager
+		self.DAMExport.stop()  # Stop the DCSAutoMateExportManager
+		event.accept()  # Accept the close event
+
+	def updateDataMonitoring(self):
+		self.DBEStatusLabel.setText(self.dbe.outputString)
+		self.realtimeDataLabel.setText(self.DAMExport.outputString)
+
+		# Schedule next UI update
+		QtCore.QTimer.singleShot(100, self.updateDataMonitoring)
+
+	def adjustDropdownWidths(self):
+		"""Calculate optimal width for dropdowns based on actual content."""
+		fontMetrics = QtGui.QFontMetrics(QtWidgets.QApplication.font())
+		maxWidth = 0
+
+		# Check all items in both dropdowns to find the longest text
+		for combo in [self.moduleDropdown, self.scriptDropdown]:
+			for i in range(combo.count()):
+				text = combo.itemText(i)
+				width = fontMetrics.horizontalAdvance(text)
+				maxWidth = max(maxWidth, width)
+
+		# Add padding for dropdown arrow and margins
+		optimalWidth = maxWidth + 50
+
+		# Set both dropdowns to the same optimal width
+		self.moduleDropdown.setFixedWidth(optimalWidth)
+		self.scriptDropdown.setFixedWidth(optimalWidth)
+
+	# Called when the module dropdown is changed.  Updates the script dropdown with the scripts from the selected module.
+	def onModuleChange(self):
+		# Get the new moduleName from the dropdown and set it in self.
+		self.moduleName = self.moduleDropdown.currentText()
+
+		# Load the script metadata for this module from the script file.
+		self.scriptData = self.scriptManager.getScriptData(self.moduleName)
+
+		# Block signals to prevent intermediate saves during population
+		self.scriptDropdown.blockSignals(True)
+
+		# Update the script dropdown with the data.
+		self.updateScriptDropdown(self.scriptData)
+
+		# Set the last used script, if any.
+		lastUsedScriptName = self.settingsManager.getLastUsedScriptName(self.moduleName)
+		scriptNames = [s['name'] for s in self.scriptData['scripts']]
+
+		if lastUsedScriptName:
+			if lastUsedScriptName in scriptNames:
+				try:
+					index = scriptNames.index(lastUsedScriptName)
+					self.scriptDropdown.setCurrentIndex(index)
+				except ValueError:
+					self.scriptDropdown.setCurrentText(lastUsedScriptName)
+			else:
+				self.scriptDropdown.setCurrentIndex(0)
+		else:
+			self.scriptDropdown.setCurrentIndex(0)
+
+		self.scriptDropdown.blockSignals(False)
+
+		self.onScriptChange()
+
+		if not getattr(self, 'updatingFromRemote', False):
+			self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=valueChanged;type=module;value={self.moduleName};')
+
+	def onScriptChange(self):
+		# Get the new scriptName from the dropdown and set it in self.
+		self.scriptName = self.scriptDropdown.currentText()
+
+		# Create the dropdowns and set them to some values based on the last used settings.
+		self.scriptVars = self.scriptManager.getScriptVars(self.scriptData, self.scriptName)
+		lastUsedVars = self.settingsManager.getLastUsedVars(self.moduleName, self.scriptName)
+		if lastUsedVars:
+			setScriptVars = lastUsedVars
+		else:
+			setScriptVars = {}
+		self.updateScriptVarsDropdowns(self.scriptVars, setScriptVars)
+
+		# Save the new state (script change or initial load)
+		if not self.initializing:
+			self.saveSettings()
+
+		if not getattr(self, 'updatingFromRemote', False):
+			self._sendUiMessageToDcs(f'DCSAUTOMATE_UI;event=valueChanged;type=script;value={self.scriptName};')
+
+	def updateScriptVarsDropdowns(self, scriptVars, setScriptVars):
+		# Clear existing controls
+		while self.varContainerLayout.count():
+			child = self.varContainerLayout.takeAt(0)
+			if child.widget():
+				child.widget().deleteLater()
+
+		self.varControls.clear()
+		self.varControlTypes.clear()
+		self.varFrames.clear()
+		self.varLabels.clear()
+		self.varValueFrames.clear()
+		self.varDependents = {}
+		self.currentVarValues = {}
+
+		# First pass: build dependents
+		for varName, varDefinition in scriptVars.items():
+			if isinstance(varDefinition, dict) and 'params' in varDefinition:
+				for param in varDefinition['params']:
+					if param in scriptVars:
+						if param not in self.varDependents:
+							self.varDependents[param] = []
+						self.varDependents[param].append(varName)
+
+		for varName, varDefinition in scriptVars.items():
+			varLabelText = varName
+			functionName = None
+			params = []
+			options = {}
+			if isinstance(varDefinition, dict):
+				varLabelText = varDefinition.get('label', varName)
+				if 'function' in varDefinition:
+					functionName = varDefinition['function']
+				if 'params' in varDefinition:
+					params = varDefinition['params']
+				if 'options' in varDefinition:
+					options = varDefinition['options']
+			else:
+				options = varDefinition if isinstance(varDefinition, dict) else {}
+
+			# Get options
+			if functionName:
+				resolvedParams = []
+				for param in params:
+					if param in self.currentVarValues:
+						resolvedParams.append(self.currentVarValues[param])
+					else:
+						resolvedParams.append(param)
+				try:
+					dynamicOptions = getattr(self.SeqHelperFunctions, functionName)(*resolvedParams)
+					options = {opt: opt for opt in dynamicOptions}
+				except Exception as e:
+					print(f"Error calling {functionName}: {e}")
+					options = {}
+
+			optionPairs = []
+			if isinstance(options, dict):
+				for optionValue, optionLabel in options.items():
+					optionPairs.append((optionValue, optionLabel))
+			elif isinstance(options, (list, tuple)):
+				for option in options:
+					if isinstance(option, dict):
+						optionValue = option.get('value')
+						optionLabel = option.get('label', optionValue)
+						optionPairs.append((optionValue, optionLabel))
+					else:
+						optionPairs.append((option, option))
+			else:
+				optionPairs = []
+
+			frame = QtWidgets.QFrame()
+			frameLayout = QtWidgets.QHBoxLayout(frame)
+			frameLayout.setSpacing(8)
+			frameLayout.setContentsMargins(0, 2, 0, 2)
+
+			# Create label with fixed width for alignment
+			label = QtWidgets.QLabel(f'{varLabelText}:')
+			label.setMinimumWidth(120)
+			frameLayout.addWidget(label)
+
+			# Create a sub-frame for the control
+			valueFrame = QtWidgets.QFrame()
+			valueLayout = QtWidgets.QHBoxLayout(valueFrame)
+			valueLayout.setContentsMargins(2, 0, 2, 0)
+			valueLayout.setSpacing(5)
+			frameLayout.addWidget(valueFrame)
+
+			storedValue = setScriptVars.get(varName)
+			if storedValue is None:
+				storedValue = setScriptVars.get(varLabelText)
+
+			varType = varDefinition.get('type', 'dropdown')
+			if varType == 'text':
+				lineEdit = QtWidgets.QLineEdit()
+				lineEdit.setMinimumWidth(200)
+
+				if storedValue is not None:
+					lineEdit.setText(str(storedValue))
+				else:
+					defaultVal = varDefinition.get('default', '')
+					lineEdit.setText(str(defaultVal))
+
+				lineEdit.textChanged.connect(lambda text, vName=varName: self.onVarsValueChanged(vName))
+				self.varControls[varName] = lineEdit
+				valueLayout.addWidget(lineEdit)
+				self.varControlTypes[varName] = 'text'
+			else:
+				combo = QtWidgets.QComboBox()
+				combo.setMinimumWidth(200)
+				for optionValue, optionLabel in optionPairs:
+					combo.addItem(str(optionLabel), optionValue)
+
+				if storedValue is not None:
+					for i in range(combo.count()):
+						if combo.itemData(i) == storedValue:
+							combo.setCurrentIndex(i)
+							break
+				else:
+					if combo.count() > 0:
+						combo.setCurrentIndex(0)
+
+				combo.currentIndexChanged.connect(lambda index, vName=varName: self.onVarsValueChanged(vName))
+				self.varControls[varName] = combo
+				valueLayout.addWidget(combo)
+				self.varControlTypes[varName] = 'dropdown'
+
+			self.varFrames[varName] = frame
+			self.varLabels[varName] = label
+			self.varValueFrames[varName] = valueFrame
+			self.varContainerLayout.addWidget(frame)
+
+			# Set current value
+			self.currentVarValues[varName] = self.getVarValue(varName)
+
+		# Add stretch at the end
+		self.varContainerLayout.addStretch()
 		self.updateUIState()
 
-	# Loads the vars dict for this script from the script metadata array.
-	def getScriptVars(self, scriptData, scriptName):
-		for script in scriptData['scripts']:
-			if script['name'] == scriptName:
-				return script['vars']
-		return {}
+	def onVarsValueChanged(self, varName=None):
+		# Reset style for any frame that has a selection (clears "unset" error highlight)
+		if hasattr(self, 'varFrames'):
+			for varKey, frame in self.varFrames.items():
+				if self.getVarValue(varKey) is not None:
+					frame.setStyleSheet("")
+
+		# Update current values and dependents
+		if varName:
+			self.currentVarValues[varName] = self.getVarValue(varName)
+			if varName in getattr(self, 'varDependents', {}):
+				for depVar in self.varDependents[varName]:
+					self.updateVarOptions(depVar)
+
+		# Only save settings if we're not in initialization phase
+		if not self.initializing:
+			self.saveSettings()
+
+			try:
+				if varName and hasattr(self, 'varControls') and varName in self.varControls:
+					control = self.varControls[varName]
+					if isinstance(control, QtWidgets.QComboBox):
+						index = control.currentIndex()
+						if index >= 0:
+							selectedLabel = str(control.itemText(index) or '')
+							selectedValue = control.itemData(index)
+						else:
+							selectedLabel = ''
+							selectedValue = None
+					elif isinstance(control, QtWidgets.QLineEdit):
+						selectedLabel = control.text()
+						selectedValue = control.text()
+					else:
+						selectedLabel = ''
+						selectedValue = None
+
+					if selectedValue is not None and not getattr(self, 'updatingFromRemote', False):
+						selectedLabel = selectedLabel.replace(';', ',').replace('|', '/')
+						selectedValue = str(selectedValue).replace(';', ',').replace('|', '/')
+						self._sendUiMessageToDcs(
+							f'DCSAUTOMATE_UI;event=varSelection;module={self.moduleDropdown.currentText()};script={self.scriptDropdown.currentText()};var={varName};selected={selectedLabel};selectedLabel={selectedLabel};selectedValue={selectedValue};'
+						)
+			except Exception:
+				pass
+
+	def setVarValueByName(self, varName, value):
+		if varName not in self.varControls:
+			return
+		control = self.varControls[varName]
+		if isinstance(control, QtWidgets.QComboBox):
+			for i in range(control.count()):
+				if control.itemData(i) == value:
+					control.setCurrentIndex(i)
+					break
+		elif isinstance(control, QtWidgets.QLineEdit):
+			control.setText(str(value))
+
+	def highlightWidget(self, widgetName, index=None):
+		"""Highlights a specific UI widget based on name and optional index."""
+		# Reset all highlights first
+		self.moduleDropdown.setStyleSheet("")
+		self.scriptDropdown.setStyleSheet("")
+		self.startButton.setStyleSheet("")
+		self.autoSelectButton.setStyleSheet("")
+		for label in self.varLabels.values():
+			label.setStyleSheet("")
+		for frame in self.varValueFrames.values():
+			frame.setStyleSheet("")
+
+		style = "border: 2px solid red; border-radius: 4px;"
+
+		if widgetName == "module":
+			self.moduleDropdown.setStyleSheet(style)
+		elif widgetName == "script":
+			self.scriptDropdown.setStyleSheet(style)
+		elif widgetName == "start":
+			self.startButton.setStyleSheet(style)
+		elif widgetName == "auto_select":
+			self.autoSelectButton.setStyleSheet(style)
+		elif widgetName == "var":
+			# Highlight specific variable label
+			if index is not None and 0 <= index < len(self.varControls):
+				varName = list(self.varControls.keys())[index]
+				if varName in self.varLabels:
+					self.varLabels[varName].setStyleSheet(style)
+		elif widgetName == "var_value":
+			# Highlight specific variable values
+			if index is not None and 0 <= index < len(self.varControls):
+				varName = list(self.varControls.keys())[index]
+				if varName in self.varValueFrames:
+					self.varValueFrames[varName].setStyleSheet(style)
+
+	def setVarValue(self, varIndex, valueIndex):
+		"""Sets a variable value based on indices."""
+		if 0 <= varIndex < len(self.varControls):
+			varName = list(self.varControls.keys())[varIndex]
+			control = self.varControls[varName]
+			if isinstance(control, QtWidgets.QComboBox):
+				if 0 <= valueIndex < control.count():
+					control.setCurrentIndex(valueIndex)
+			# For QLineEdit, valueIndex doesn't make sense, so we ignore it or treat it differently if needed.
+
+	def getVarValue(self, varName):
+		if varName not in self.varControls:
+			return None
+		control = self.varControls[varName]
+		if isinstance(control, QtWidgets.QComboBox):
+			index = control.currentIndex()
+			if index >= 0:
+				return control.itemData(index)
+		elif isinstance(control, QtWidgets.QLineEdit):
+			return control.text()
+		return None
+
+	def updateVarOptions(self, varName):
+		if varName not in self.varControls or varName not in self.scriptVars:
+			return
+		varDefinition = self.scriptVars[varName]
+		if not isinstance(varDefinition, dict) or 'function' not in varDefinition:
+			return
+		functionName = varDefinition['function']
+		params = varDefinition.get('params', [])
+		resolvedParams = []
+		for param in params:
+			if param in self.currentVarValues:
+				resolvedParams.append(self.currentVarValues[param])
+			else:
+				resolvedParams.append(param)
+		try:
+			dynamicOptions = getattr(self.SeqHelperFunctions, functionName)(*resolvedParams)
+			options = {opt: opt for opt in dynamicOptions}
+		except Exception as e:
+			print(f"Error calling {functionName}: {e}")
+			options = {}
+
+		# Update the control
+		control = self.varControls[varName]
+		currentValue = self.currentVarValues.get(varName)
+
+		control.blockSignals(True)
+		control.clear()
+
+		optionPairs = []
+		if isinstance(options, dict):
+			for optionValue, optionLabel in options.items():
+				optionPairs.append((optionValue, optionLabel))
+		elif isinstance(options, (list, tuple)):
+			for option in options:
+				if isinstance(option, dict):
+					optionValue = option.get('value')
+					optionLabel = option.get('label', optionValue)
+					optionPairs.append((optionValue, optionLabel))
+				else:
+					optionPairs.append((option, option))
+
+		for optionValue, optionLabel in optionPairs:
+			control.addItem(str(optionLabel), optionValue)
+
+		# Restore selection if possible
+		if currentValue is not None:
+			index = control.findData(currentValue)
+			if index >= 0:
+				control.setCurrentIndex(index)
+			else:
+				if control.count() > 0:
+					control.setCurrentIndex(0)
+		else:
+			if control.count() > 0:
+				control.setCurrentIndex(0)
+
+		control.blockSignals(False)
+
+		# Update current value
+		self.currentVarValues[varName] = self.getVarValue(varName)
+
+	def autoSelectScript(self):
+		self.uiTelemetryUnsetVars = set()
+		self.uiTelemetryUnsetVarsModule = ''
+		self.uiTelemetryUnsetVarsScript = ''
+
+		data = self.DAMExport.dataStorage
+		if not data:
+			QtWidgets.QMessageBox.warning(self.mainWindow, "No Data", "No telemetry data received from DCS yet.\nPlease ensure DCS is running and the mission is loaded.")
+			return False
+
+		try:
+			# 1. Identify Module
+			dcsModuleName = data.get('LoGetSelfData', {}).get('Name')
+			if not dcsModuleName:
+				QtWidgets.QMessageBox.warning(self.mainWindow, "Unknown Module", "Could not determine the active DCS module from telemetry.")
+				return False
+
+			foundModuleFile = None
+
+			# Helper to check if module matches
+			def isModuleMatch(scriptData, dcsName):
+				modName = scriptData.get('moduleName')
+				if isinstance(modName, list):
+					return dcsName in modName
+				return modName == dcsName
+
+			# Check current module first
+			if self.moduleName:
+				try:
+					scriptData = self.scriptManager.getScriptData(self.moduleName)
+					if isModuleMatch(scriptData, dcsModuleName):
+						foundModuleFile = self.moduleName
+				except:
+					pass
+
+			# If not current, search all modules
+			if not foundModuleFile:
+				for moduleFile in self.modules:
+					try:
+						scriptData = self.scriptManager.getScriptData(moduleFile)
+						if isModuleMatch(scriptData, dcsModuleName):
+							foundModuleFile = moduleFile
+							break
+					except:
+						continue
+
+			if foundModuleFile:
+				self.moduleDropdown.setCurrentText(foundModuleFile)
+			else:
+				QtWidgets.QMessageBox.warning(self.mainWindow, "Module Not Found", f"No script file found for DCS module: {dcsModuleName}")
+				return False
+
+			# 2. Determine Script (Cold/Hot/Air)
+			altAGL = data.get('LoGetAltitudeAboveGroundLevel', 0)
+			altMSL = data.get('LoGetAltitudeAboveSeaLevel', 0)
+			airspeedTAS = data.get('LoGetTrueAirSpeed', 0)
+
+			engineRunning = isEngineRunning(data.get('LoGetEngineInfo', {}))
+
+			position = classifyPosition(altAGL, altMSL, airspeedTAS)
+			isAir = position == 'air'
+			isCarrier = position == 'carrier'
+
+			targetScriptName = "Cold Start"
+			if isAir:
+				targetScriptName = "Air Start"
+			elif engineRunning:
+				targetScriptName = "Hot Start"
+
+			# The aircraft script can refine the choice from live cockpit state with an optional autoSelect(context).
+			context = AutoSelectContext(targetScriptName, data, lambda controls: self.readControlsForAutoSelect(dcsModuleName, controls))
+			hookResult = applyModuleAutoSelect(self.scriptManager.getModule(foundModuleFile), context)
+			hookVars = hookResult.get('vars', {})
+			if hookResult.get('script'):
+				targetScriptName = hookResult['script']
+
+			# Select the script — first try exact name match, then fall back to autoSelectHook.
+			index = self.scriptDropdown.findText(targetScriptName)
+			if index < 0:
+				hookMatch = next((s for s in scriptData.get('scripts', []) if s.get('autoSelectHook') == targetScriptName), None)
+				if hookMatch:
+					index = self.scriptDropdown.findText(hookMatch['name'])
+			if index >= 0:
+				self.scriptDropdown.setCurrentIndex(index)
+
+			# 3. Set Variables
+			# Calculate desired values
+			clockSeconds = None
+			if 'LoGetMissionStartTime' in data and 'LoGetModelTime' in data:
+				clockSeconds = data['LoGetMissionStartTime'] + data['LoGetModelTime']
+			timeOfDayValue = timeOfDay(clockSeconds) if clockSeconds is not None else None
+			timeOfDayLabel = timeOfDayValue.capitalize() if timeOfDayValue else None
+
+			locationVar = "Ground"
+			if isCarrier:
+				locationVar = "Carrier"
+			elif isAir:
+				locationVar = "Air"
+			locationVarValue = locationVar.lower()
+
+			setVars = []
+			unsetVars = []
+
+			# Iterate over the generated controls
+			for varName, control in self.varControls.items():
+				# Reset style first
+				if varName in self.varFrames:
+					self.varFrames[varName].setStyleSheet("")
+
+				desiredValue = None
+				desiredLabel = None
+				if varName in ('Time', 'time'):
+					desiredValue = timeOfDayValue
+					desiredLabel = timeOfDayLabel
+				elif varName in ('Location', 'location'):
+					desiredValue = locationVarValue
+					desiredLabel = locationVar
+				elif varName == 'Engines':
+					desiredValue = "Hot" if engineRunning else "Cold"
+				elif varName == 'Aircraft':
+					desiredValue = dcsModuleName
+				if varName in hookVars:
+					desiredValue = hookVars[varName]
+					desiredLabel = None
+
+				success = False
+				if desiredValue or desiredLabel:
+					varType = self.varControlTypes.get(varName, 'radio')
+					if varType == 'dropdown':
+						for i in range(control.count()):
+							itemData = control.itemData(i)
+							itemText = control.itemText(i)
+							if itemData == desiredValue or itemText == desiredLabel or itemText == desiredValue:
+								control.setCurrentIndex(i)
+								setVars.append(f"{varName}: {desiredLabel or desiredValue}")
+								success = True
+								break
+					elif varType == 'text':
+						control.setText(str(desiredValue or desiredLabel))
+						setVars.append(f"{varName}: {desiredLabel or desiredValue}")
+						success = True
+					else:
+						for btn in control.buttons():
+							btnValue = btn.property('varValue')
+							if btnValue is not None and btnValue == desiredValue:
+								btn.setChecked(True)
+								setVars.append(f"{varName}: {desiredLabel or desiredValue}")
+								success = True
+								break
+							if btn.text() == desiredLabel or btn.text() == desiredValue:
+								btn.setChecked(True)
+								setVars.append(f"{varName}: {desiredLabel or desiredValue}")
+								success = True
+								break
+
+				if not success:
+					unsetVars.append(varName)
+					# Highlight the frame for this variable
+					if varName in self.varFrames:
+						self.varFrames[varName].setStyleSheet("QFrame { border: 1px solid red; border-radius: 4px; }")
+
+			self.uiTelemetryUnsetVars = set(unsetVars)
+			self.uiTelemetryUnsetVarsModule = self.moduleDropdown.currentText()
+			self.uiTelemetryUnsetVarsScript = self.scriptDropdown.currentText()
+
+			report = autoSelectReport(dcsModuleName, foundModuleFile, altAGL, altMSL, airspeedTAS, data.get('LoGetEngineInfo', {}), clockSeconds, self.scriptDropdown.currentText(), context.reads, hookResult, setVars, unsetVars)
+			self.updateOutput('\n'.join(report) + '\n', flush=True)
+			for line in report:
+				self._uiSendLog(line)
+
+			return True
+
+		except Exception as e:
+			QtWidgets.QMessageBox.critical(self.mainWindow, "Auto Select Error", f"An error occurred: {e}\n{traceback.format_exc()}")
+			return False
+
+	def readControlsForAutoSelect(self, moduleName, controls):
+		"""Batched live read for an aircraft script's autoSelect(): {control: value} for the controls DCS answered."""
+		results = self.dbe.pollControlStates([f'{moduleName}/{control}' for control in controls])
+		return {result[0].split('/', 1)[1]: result[2] for result in results}
+
+	def getAircraftName(self):
+		control = 'MetadataStart/_ACFT_NAME'
+		aircraftName = self.dbe.getControlState(control)
+		if aircraftName:
+			return aircraftName[0][2].strip()
+		else:
+			return 'N/A'
+
+	def getMissionTime(self):
+		# Not yet implemented for DCSDirectManager.
+		return 'N/A'
+
+	def saveSettings(self):
+		# Don't save if we don't have a valid module or script selected
+		if not self.moduleName or not self.scriptName:
+			return
+
+		self.settingsManager.updateLastUsed(self.moduleName, self.scriptName, self.getSelectedVars())
+
+	def openConfigWindow(self):
+		configWindow = QtWidgets.QDialog(self.mainWindow)
+		configWindow.setWindowTitle('Settings')
+		configWindow.resize(700, 550)
+
+		layout = QtWidgets.QVBoxLayout(configWindow)
+
+		def hintLabel(text):
+			label = QtWidgets.QLabel(text)
+			label.setStyleSheet('color: gray; font-style: italic;')
+			return label
+
+		def fieldWithHint(fieldWidgets, hintText):
+			# Keeps the gray hint tight under its field, which a separate form row wouldn't
+			container = QtWidgets.QWidget()
+			containerLayout = QtWidgets.QVBoxLayout(container)
+			containerLayout.setContentsMargins(0, 0, 0, 0)
+			containerLayout.setSpacing(0)
+			row = QtWidgets.QHBoxLayout()
+			for widget in fieldWidgets:
+				row.addWidget(widget)
+			containerLayout.addLayout(row)
+			containerLayout.addWidget(hintLabel(hintText))
+			return container
+
+		def sliderWithValue(slider):
+			container = QtWidgets.QWidget()
+			containerLayout = QtWidgets.QHBoxLayout(container)
+			containerLayout.setContentsMargins(0, 0, 0, 0)
+			valueLabel = QtWidgets.QLabel(str(slider.value()))
+			valueLabel.setMinimumWidth(QtGui.QFontMetrics(valueLabel.font()).horizontalAdvance('-100'))
+			slider.valueChanged.connect(lambda v: valueLabel.setText(str(v)))
+			containerLayout.addWidget(slider)
+			containerLayout.addWidget(valueLabel)
+			return container
+
+		debugVar = QtWidgets.QCheckBox('Debug - Disables sending data to DCS')
+		debugVar.setChecked(self.config.get('debug', False))
+		layout.addWidget(debugVar)
+
+		disableSpeechVar = QtWidgets.QCheckBox('Disable Text-to-Speech output')
+		disableSpeechVar.setChecked(self.config.get('disableSpeech', False))
+		layout.addWidget(disableSpeechVar)
+
+		form = QtWidgets.QFormLayout()
+		layout.addLayout(form)
+
+		inGameOverlayHotkeyVar = QtWidgets.QLineEdit(self.config.get('inGameOverlayHotkey', 'Ctrl+Shift+Z'))
+		inGameOverlayHotkeyVar.setPlaceholderText('Ctrl+Shift+Z')
+		form.addRow('In-game overlay hotkey:', fieldWithHint([inGameOverlayHotkeyVar], 'Ctrl/Alt/Shift only; no LCtrl/RCtrl, etc.'))
+
+		dcsExePathOverrideVar = QtWidgets.QLineEdit(self.config.get('dcsExePathOverride', ''))
+		dcsExePathOverrideVar.setPlaceholderText('Default is to get the location from the registry')
+		browseExeButton = QtWidgets.QPushButton('Browse')
+		browseExeButton.clicked.connect(lambda: self.browseForFile(dcsExePathOverrideVar, "Executable files (*.exe)"))
+		dcsExeHint = describeResolvedPath(self.config.get('dcsExePathOverride', ''), self.config.get('dcsExePath', ''))
+		form.addRow('DCS executable path:', fieldWithHint([dcsExePathOverrideVar, browseExeButton], dcsExeHint))
+
+		dcsWindowUseTitleVar = QtWidgets.QCheckBox('Find DCS window by window title (otherwise use exe path)')
+		dcsWindowUseTitleVar.setChecked(self.config.get('dcsWindowUseTitle', False))
+		form.addRow('', dcsWindowUseTitleVar)
+
+		dcsWindowTitleOverrideVar = QtWidgets.QLineEdit(self.config.get('dcsWindowTitleOverride', ''))
+		dcsWindowTitleOverrideVar.setPlaceholderText('Default is "Digital Combat Simulator"')
+		form.addRow('DCS window title:', dcsWindowTitleOverrideVar)
+
+		def _onUseTitleToggled(checked):
+			dcsExePathOverrideVar.setEnabled(not checked)
+			browseExeButton.setEnabled(not checked)
+			dcsWindowTitleOverrideVar.setEnabled(checked)
+
+		dcsWindowUseTitleVar.toggled.connect(_onUseTitleToggled)
+		_onUseTitleToggled(dcsWindowUseTitleVar.isChecked())
+
+		dcsSavedGamesOverrideVar = QtWidgets.QLineEdit(self.config.get('dcsSavedGamesOverride', ''))
+		dcsSavedGamesOverrideVar.setPlaceholderText("Default is '%USERPROFILE%\\Saved Games\\DCS' or 'DCS.openbeta'")
+		browseSavedGamesButton = QtWidgets.QPushButton('Browse')
+		browseSavedGamesButton.clicked.connect(lambda: self.browseForDirectory(dcsSavedGamesOverrideVar))
+		dcsSavedGamesHint = describeResolvedPath(
+			self.config.get('dcsSavedGamesOverride', ''),
+			self.config.get('dcsSavedGamesPath', ''),
+			self.config.get('dcsSavedGamesAmbiguous', False),
+		)
+		form.addRow('DCS Saved Games folder path:', fieldWithHint([dcsSavedGamesOverrideVar, browseSavedGamesButton], dcsSavedGamesHint))
+
+		# Get available TTS voices
+		voiceNames = []
+		try:
+			import win32com.client
+			speaker = win32com.client.Dispatch("SAPI.SpVoice")
+			voices = speaker.GetVoices()
+			voiceNames = [voice.GetAttribute("Name") for voice in voices]
+		except Exception as e:
+			print(f"Error enumerating TTS voices: {e}")
+			voiceNames = ["MS David", "MS Hazel", "MS Zira"]  # Fallback defaults
+
+		ttsGroup = QtWidgets.QGroupBox('Text-to-Speech')
+		ttsForm = QtWidgets.QFormLayout(ttsGroup)
+		layout.addWidget(ttsGroup)
+
+		ttsVoiceCombo = QtWidgets.QComboBox()
+		ttsVoiceCombo.addItems(voiceNames)
+		ttsVoiceCombo.setCurrentIndex(min(self.config.get('ttsVoiceId', 1), len(voiceNames) - 1))
+		ttsForm.addRow('Voice:', ttsVoiceCombo)
+
+		ttsRateSlider = QtWidgets.QSlider(QtCore.Qt.Orientation.Horizontal)
+		ttsRateSlider.setRange(-10, 10)
+		ttsRateSlider.setValue(self.config.get('ttsRate', 3))
+		ttsForm.addRow('Rate:', sliderWithValue(ttsRateSlider))
+
+		ttsVolumeSlider = QtWidgets.QSlider(QtCore.Qt.Orientation.Horizontal)
+		ttsVolumeSlider.setRange(0, 100)
+		ttsVolumeSlider.setValue(self.config.get('ttsVolume', 75))
+		ttsForm.addRow('Volume:', sliderWithValue(ttsVolumeSlider))
+
+		previewButton = QtWidgets.QPushButton('Preview Voice')
+		previewButton.clicked.connect(lambda: self.previewTTS(ttsVoiceCombo.currentIndex(), ttsRateSlider.value(), ttsVolumeSlider.value()))
+		previewRow = QtWidgets.QWidget()
+		previewRowLayout = QtWidgets.QHBoxLayout(previewRow)
+		previewRowLayout.setContentsMargins(0, 0, 0, 0)
+		previewRowLayout.addWidget(previewButton)
+		previewRowLayout.addStretch()
+		ttsForm.addRow('', previewRow)
+
+		portsGroup = QtWidgets.QGroupBox('Network Communication Ports')
+		portsForm = QtWidgets.QFormLayout(portsGroup)
+		portsForm.setFieldGrowthPolicy(QtWidgets.QFormLayout.FieldGrowthPolicy.FieldsStayAtSizeHint)
+		layout.addWidget(portsGroup)
+
+		def portSpinBox(configKey, defaultPort):
+			spinBox = QtWidgets.QSpinBox()
+			spinBox.setRange(1, 65535)
+			spinBox.setValue(int(self.config.get(configKey, defaultPort)))
+			return spinBox
+
+		uiRemoteControlPortVar = portSpinBox('uiRemoteControlPort', 7786)
+		portsForm.addRow('UI Remote Control Port:', uiRemoteControlPortVar)
+		uiRemoteControlReplyPortVar = portSpinBox('uiRemoteControlReplyPort', 7779)
+		portsForm.addRow('UI Remote Control Reply Port:', uiRemoteControlReplyPortVar)
+		dcsAutoMateUdpPortVar = portSpinBox('dcsAutoMateUdpPort', 6121)
+		portsForm.addRow('DCS AutoMate UDP Port:', dcsAutoMateUdpPortVar)
+		dcsDirectPortVar = portSpinBox('dcsDirectPort', 7780)
+		portsForm.addRow('DCS Direct TCP Port:', dcsDirectPortVar)
+
+		loggingGroup = QtWidgets.QGroupBox('Logging')
+		loggingLayout = QtWidgets.QVBoxLayout(loggingGroup)
+		layout.addWidget(loggingGroup)
+
+		udpUiWireLogEnabledVar = QtWidgets.QCheckBox('Log in-game overlay network traffic in DCSAutoMate (DCSAutoMateLog.txt)')
+		udpUiWireLogEnabledVar.setChecked(self.config.get('udpUiWireLogEnabled', False))
+		loggingLayout.addWidget(udpUiWireLogEnabledVar)
+
+		hookLogFileVar = QtWidgets.QCheckBox('Write DCS hook log file (Saved Games\\DCS\\Logs\\DCSAutoMateHook.log)')
+		hookDebugLogVar = QtWidgets.QCheckBox('Include debug messages')
+		hookUiWireLogVar = QtWidgets.QCheckBox('Log in-game overlay network traffic in DCS')
+
+		hookSettingsPath = ''
+		dcsSavedGamesPath = self.config.get('dcsSavedGamesPath', '')
+		if dcsSavedGamesPath:
+			hookSettingsPath = os.path.join(dcsSavedGamesPath, 'Scripts', 'DCSAutoMate', 'DCSAutoMateHookSettings.lua')
+		try:
+			hookSettings = readHookSettings(hookSettingsPath)
+		except (OSError, UnicodeDecodeError) as e:
+			hookSettings = dict(HOOK_SETTINGS_DEFAULTS)
+			QtWidgets.QMessageBox.warning(
+				self.mainWindow,
+				'DCS Hook Settings Not Read',
+				f'Could not read {hookSettingsPath}:\n{e}\n\nThe DCS hook logging options show default values.',
+			)
+		hookLogFileVar.setChecked(hookSettings['isHookLogFileEnabled'])
+		hookDebugLogVar.setChecked(hookSettings['isDebugLoggingEnabled'])
+		hookUiWireLogVar.setChecked(hookSettings['isUiWireLoggingEnabled'])
+
+		loggingLayout.addWidget(hookLogFileVar)
+		# The hook writes debug and wire messages to its log file, so they need it enabled
+		hookLogOptions = QtWidgets.QWidget()
+		hookLogOptionsLayout = QtWidgets.QVBoxLayout(hookLogOptions)
+		hookLogOptionsLayout.setContentsMargins(20, 0, 0, 0)
+		hookLogOptionsLayout.addWidget(hookDebugLogVar)
+		hookLogOptionsLayout.addWidget(hookUiWireLogVar)
+		loggingLayout.addWidget(hookLogOptions)
+		hookLogFileVar.toggled.connect(hookLogOptions.setEnabled)
+		hookLogOptions.setEnabled(hookLogFileVar.isChecked())
+
+		# Buttons
+		buttonFrame = QtWidgets.QFrame()
+		buttonLayout = QtWidgets.QHBoxLayout(buttonFrame)
+		layout.addWidget(buttonFrame)
+
+		saveButton = QtWidgets.QPushButton('Save')
+		saveButton.clicked.connect(lambda: self.saveConfig(
+			debugVar,
+			disableSpeechVar,
+			ttsVoiceCombo,
+			ttsRateSlider,
+			ttsVolumeSlider,
+			udpUiWireLogEnabledVar,
+			uiRemoteControlPortVar,
+			uiRemoteControlReplyPortVar,
+			dcsAutoMateUdpPortVar,
+			dcsDirectPortVar,
+			inGameOverlayHotkeyVar,
+			dcsWindowUseTitleVar,
+			dcsExePathOverrideVar,
+			dcsWindowTitleOverrideVar,
+			dcsSavedGamesOverrideVar,
+			hookLogFileVar,
+			hookDebugLogVar,
+			hookUiWireLogVar,
+			configWindow
+		))
+		buttonLayout.addWidget(saveButton)
+
+		cancelButton = QtWidgets.QPushButton('Cancel')
+		cancelButton.clicked.connect(configWindow.reject)
+		buttonLayout.addWidget(cancelButton)
+
+		configWindow.exec()
+
+	def browseForFile(self, lineEdit, fileFilter):
+		fileName, _ = QtWidgets.QFileDialog.getOpenFileName(self.mainWindow, filter=fileFilter)
+		if fileName:
+			lineEdit.setText(QtCore.QDir.toNativeSeparators(fileName))
+
+	def browseForDirectory(self, lineEdit):
+		dirName = QtWidgets.QFileDialog.getExistingDirectory(self.mainWindow)
+		if dirName:
+			lineEdit.setText(QtCore.QDir.toNativeSeparators(dirName))
+
+	def openProgramFolder(self):
+		"""Open the program folder in Windows Explorer."""
+		try:
+			# Get the directory where the program is running
+			if getattr(sys, 'frozen', False):
+				# Running as exe
+				programDir = os.path.dirname(sys.executable)
+			else:
+				# Running as script
+				programDir = os.path.dirname(os.path.abspath(__file__))
+
+			# Open folder in Windows Explorer (don't check exit code as Explorer can return non-zero even on success)
+			subprocess.run(['explorer', programDir])
+		except Exception as e:
+			QtWidgets.QMessageBox.warning(self.mainWindow, "Error", f"Could not open program folder: {e}")
+
+	def refreshControlReference(self):
+		"""Rebuild the control reference page's data if a control mapping changed; returns False if it couldn't be built."""
+		try:
+			if updateControlReference():
+				self.log('Rebuilt the control reference data from the control mappings.')
+			return True
+		except Exception as e:
+			self.log(f'Could not build the control reference data: {e}')
+			return False
+
+	def openControlReference(self):
+		if not self.refreshControlReference():
+			QtWidgets.QMessageBox.warning(self.mainWindow, 'Error', 'Could not build the control reference data, see the log for details.')
+			return
+		QtGui.QDesktopServices.openUrl(QtCore.QUrl.fromLocalFile(controlReferencePaths()[2]))
+
+	def installDcsScripts(self):
+		hotkey = self.normalizeInGameOverlayHotkey(self.settingsManager.config.get('inGameOverlayHotkey', 'Ctrl+Shift+Z'))
+		DcsScriptsInstaller.installFromUi(self.mainWindow, self.settingsManager.config, hotkey)
+
+	def normalizeInGameOverlayHotkey(self, hotkeyText):
+		text = str(hotkeyText or '').strip()
+		if text == '':
+			return 'Ctrl+Shift+Z'
+		parts = [p.strip() for p in text.split('+') if p.strip() != '']
+		normalizedParts = []
+		for part in parts:
+			key = str(part)
+			keyLower = key.lower()
+			if keyLower in ('lctrl', 'rctrl', 'ctrl', 'control'):
+				key = 'Ctrl'
+			elif keyLower in ('lshift', 'rshift', 'shift'):
+				key = 'Shift'
+			elif keyLower in ('lalt', 'ralt', 'alt'):
+				key = 'Alt'
+			elif len(key) == 1 and key.isalpha():
+				key = key.upper()
+			normalizedParts.append(key)
+
+		uniqueParts = []
+		seen = set()
+		for part in normalizedParts:
+			partLower = part.lower()
+			if partLower in seen:
+				continue
+			seen.add(partLower)
+			uniqueParts.append(part)
+		return '+'.join(uniqueParts) if uniqueParts else 'Ctrl+Shift+Z'
+
+	def writeHookSettingsFile(self, hookLogFile, hookDebugLog, hookUiWireLog):
+		dcsSavedGamesPath = str(self.settingsManager.config.get('dcsSavedGamesPath') or '')
+		if dcsSavedGamesPath == '' or not os.path.isdir(dcsSavedGamesPath):
+			return
+		settingsDir = os.path.join(dcsSavedGamesPath, 'Scripts', 'DCSAutoMate')
+		try:
+			os.makedirs(settingsDir, exist_ok=True)
+			settingsPath = os.path.join(settingsDir, 'DCSAutoMateHookSettings.lua')
+			hotkey = self.normalizeInGameOverlayHotkey(self.settingsManager.config.get('inGameOverlayHotkey', 'Ctrl+Shift+Z'))
+			content = f"""return {{
+	hotkeys = {{
+		'{hotkey}',
+	}},
+	isHookLogFileEnabled = {str(hookLogFile).lower()},
+	isDebugLoggingEnabled = {str(hookDebugLog).lower()},
+	isUiWireLoggingEnabled = {str(hookUiWireLog).lower()},
+	uiRemoteControlPort = {self.config.get('uiRemoteControlPort', 7786)},
+	uiRemoteControlReplyPort = {self.config.get('uiRemoteControlReplyPort', 7779)},
+}}
+"""
+			with open(settingsPath, 'w', encoding='utf-8') as f:
+				f.write(content)
+			exportSettingsPath = os.path.join(settingsDir, 'DCSAutoMateExportSettings.lua')
+			exportContent = f"""return {{
+	udpPort = {self.config.get('dcsAutoMateUdpPort', 6121)},
+	tcpPort = {self.config.get('dcsDirectPort', 7780)},
+}}
+"""
+			with open(exportSettingsPath, 'w', encoding='utf-8') as f:
+				f.write(exportContent)
+		except OSError as e:
+			QtWidgets.QMessageBox.warning(
+				self.mainWindow,
+				'DCS Settings Not Saved',
+				f'Could not write the DCS-side settings files in {settingsDir}:\n{e}\n\nThe DCS hook logging options and port settings were not updated in DCS.',
+			)
+
+	def saveConfig(self, debugVar, disableSpeechVar, ttsVoiceCombo, ttsRateSlider, ttsVolumeSlider, udpUiWireLogEnabledVar, uiRemoteControlPortVar, uiRemoteControlReplyPortVar, dcsAutoMateUdpPortVar, dcsDirectPortVar, inGameOverlayHotkeyVar, dcsWindowUseTitleVar, dcsExePathOverrideVar, dcsWindowTitleOverrideVar, dcsSavedGamesOverrideVar, hookLogFileVar, hookDebugLogVar, hookUiWireLogVar, configWindow):
+		newConfig = {
+			'debug': debugVar.isChecked(),
+			'disableSpeech': disableSpeechVar.isChecked(),
+			'ttsVoiceId': ttsVoiceCombo.currentIndex(),
+			'ttsRate': ttsRateSlider.value(),
+			'ttsVolume': ttsVolumeSlider.value(),
+			'udpUiWireLogEnabled': udpUiWireLogEnabledVar.isChecked(),
+			'enableNetworkLogging': udpUiWireLogEnabledVar.isChecked(),
+			'uiRemoteControlPort': uiRemoteControlPortVar.value(),
+			'uiRemoteControlReplyPort': uiRemoteControlReplyPortVar.value(),
+			'dcsAutoMateUdpPort': dcsAutoMateUdpPortVar.value(),
+			'dcsDirectPort': dcsDirectPortVar.value(),
+			'inGameOverlayHotkey': self.normalizeInGameOverlayHotkey(inGameOverlayHotkeyVar.text()),
+			'dcsWindowUseTitle': dcsWindowUseTitleVar.isChecked(),
+			'dcsExePathOverride': dcsExePathOverrideVar.text(),
+			'dcsWindowTitleOverride': dcsWindowTitleOverrideVar.text(),
+			'dcsSavedGamesOverride': dcsSavedGamesOverrideVar.text()
+		}
+
+		self.settingsManager.saveConfig(newConfig)
+		self.config = self.settingsManager.config
+		self.ttsManager.updateSettings(self.config)  # Update TTS with new settings
+		self.writeHookSettingsFile(hookLogFileVar.isChecked(), hookDebugLogVar.isChecked(), hookUiWireLogVar.isChecked())
+		configWindow.accept()
+
+	def previewTTS(self, voiceId, rate, volume):
+		try:
+			import win32com.client
+			speaker = win32com.client.Dispatch("SAPI.SpVoice")
+			voices = speaker.GetVoices()
+			if voiceId < voices.Count:
+				speaker.Voice = voices.Item(voiceId)
+			speaker.Rate = rate
+			speaker.Volume = volume
+			speaker.Speak("This is a preview of the selected voice settings.", 0)  # Synchronous for preview
+		except Exception as e:
+			QtWidgets.QMessageBox.warning(self.mainWindow, "TTS Preview Error", f"Error previewing TTS: {e}")
+
+	def updateUIState(self):
+		isRunning = getattr(self, 'scriptRunning', False)
+		isPaused = getattr(self, 'scriptPaused', False)
+		moduleSelected = bool(self.moduleDropdown.currentText())
+		scriptSelected = bool(self.scriptDropdown.currentText())
+
+		self.moduleDropdown.setEnabled(not isRunning)
+		self.scriptDropdown.setEnabled(not isRunning)
+		self.autoSelectButton.setEnabled(not isRunning)
+
+		if hasattr(self, 'varControls'):
+			for control in self.varControls.values():
+				control.setEnabled(not isRunning)
+
+		if isRunning:
+			self.startButton.setEnabled(True)
+			self.startButton.setText('Resume' if isPaused else 'Pause')
+			self.stopButton.setEnabled(True)
+		else:
+			self.startButton.setEnabled(moduleSelected and scriptSelected)
+			self.startButton.setText('Start')
+			self.stopButton.setEnabled(False)
+		self.skipWaitButton.setEnabled(isRunning and self.scriptWaiting)
+
+		# Send state to DCS Overlay
+		self._uiSendScriptState()
+
+	def updateModulesDropdown(self, modules):
+		self.moduleDropdown.clear()
+		self.moduleDropdown.addItems(modules)
+		if modules:
+			self.moduleDropdown.setCurrentIndex(0)
+		self.adjustDropdownWidths()  # Adjust width after populating
+		self.updateUIState()
+
+	def updateScriptDropdown(self, scriptData):
+		self.scriptDropdown.clear()
+		scriptNames = [s['name'] for s in scriptData['scripts']]
+		self.scriptDropdown.addItems(scriptNames)
+		if scriptData['scripts']:
+			self.scriptDropdown.setCurrentIndex(0)
+		self.adjustDropdownWidths()  # Adjust width after populating
+		self.updateUIState()
 
 	def getSelectedVars(self):
 		if self.varControls:
-			return {var: varControl.get() for var, varControl in self.varControls.items()}
+			result = {}
+			for var in self.varControls:
+				selectedValue = self.getVarValue(var)
+				if selectedValue is not None:
+					result[var] = selectedValue
+			return result
 		else:
 			return {}
 
 	def updateOutput(self, text, flush=False):
 		if text != '':
-			self.outputBox.insert(tk.END, text.encode('utf-8'))
-			self.outputBox.see(tk.END)  # Automatically scroll to the bottom
+			# Move cursor to end and insert text without automatic newline
+			cursor = self.outputBox.textCursor()
+			cursor.movePosition(QtGui.QTextCursor.MoveOperation.End)
+			cursor.insertText(text)
+			self.outputBox.setTextCursor(cursor)
+			# Ensure the text box scrolls to show the new content
+			self.outputBox.ensureCursorVisible()
 
 		if flush:
-			self.outputBox.see(tk.END)  # Automatically scroll to the bottom
-			self.root.update_idletasks() # Forces the output textbox to update.
+			QtWidgets.QApplication.processEvents() # Forces the output textbox to update.
+
+	def onStartPauseClick(self):
+		if not self.scriptRunning:
+			self.runScript()
+		elif not self.scriptPaused:
+			self.pauseScript()
+		else:
+			self.resumeScript()
+
+	def pauseScript(self):
+		if not self.scriptRunning or self.scriptPaused:
+			return
+		self.scriptPaused = True
+		self.resumeEvent.clear()
+		self.updateOutput('\n--- Script execution paused. ---\n', flush=True)
+		self.updateUIState()
+
+	def resumeScript(self):
+		if not self.scriptRunning or not self.scriptPaused:
+			return
+		self.scriptPaused = False
+		self.resumeEvent.set()
+		self.updateOutput('\n--- Script execution resumed. ---\n', flush=True)
+		self.updateUIState()
+
+	def skipWait(self):
+		if self.scriptRunning and self.scriptWaiting:
+			self.skipWaitEvent.set()
+
+	def onWaitStateChanged(self, waiting):
+		self.scriptWaiting = waiting
+		self.updateUIState()
 
 	def runScript(self):
 		self.saveSettings()
-		moduleName = self.moduleDropdown.get()
-		scriptName = self.scriptDropdown.get()
-		vars = {var: varControl.get() for var, varControl in self.varControls.items()}
+		self._uiSendClear()  # Clear the ingame overlay monitor text box
+		moduleName = self.moduleDropdown.currentText()
+		scriptName = self.scriptDropdown.currentText()
+		vars = self.getSelectedVars()
 		try:
-			module = [importlib.import_module(f'DCSAutoMateScripts.{moduleName}')]
-			importlib.reload(module[0])
-			scriptData = module[0].getScriptData()
+			self.SeqHelperFunctions.setActiveModuleName(moduleName)
+			self.SeqHelperFunctions.setActiveScriptName(scriptName)
+			scriptFunction, module = self.scriptManager.loadScriptFunction(moduleName, scriptName)
 
-			# Find the selected script and its corresponding function
-			selectedScript = next(script for script in scriptData['scripts'] if script['name'] == scriptName)
-			functionName = selectedScript['function']
-			scriptFunction = getattr(module[0], functionName) # This is the function in the script file that will be called to generate the sequence.  e.g. ColdStart(), HotStart(), Test(), etc.
+			if not scriptFunction:
+				raise Exception(f"Could not load script function for {scriptName}")
 
-			seq = scriptFunction(self.config, vars)
-			self.outputBox.delete(1.0, tk.END)
+			# Runs the script function to get the sequence of commands, or a live script's generator.
+			seq = scriptFunction(self.config, vars, self.SeqHelperFunctions)
+			self.outputBox.clear()
 			self.stopFlag.clear()
-			self.startButton.config(state='disabled')
-			self.stopButton.config(state='normal')
 
-			try:
-				scriptInfo = module[0].getInfo()
-				if scriptInfo:
-					self.updateOutput(f'Script info: {scriptInfo}\n\n')
-			except:
-				pass
-
-			seqExe = seqExecute(self.root, self.config, self.dbe, self.updateOutput, self.stopFlag)
-			seqExe.execute(seq)
+			self.scriptRunning = True
+			self.scriptPaused = False
+			self.resumeEvent.set()
 			self.updateUIState()
+			QtWidgets.QApplication.processEvents()
+
+			scriptInfo = self.scriptManager.getScriptInfo(module)
+			if scriptInfo:
+				self.updateOutput(f'Script info: {scriptInfo}\n\n')
+				self._uiSendLog(f'Script info: {scriptInfo}')
+
+			seqExe = DCSSeqExecute(self.mainWindow, self.config, self.dbe, self.scriptData, vars, self.updateOutput, self.stopFlag, self.log, self.ttsManager, self._uiSendLog, self.resumeEvent, self.pauseScript, self.skipWaitEvent, self.onWaitStateChanged)
+			seqExe.execute(seq, self.SeqHelperFunctions)
 		except Exception as e:
-			self.outputBox.insert(tk.END, 'Error occurred:\n')
-			self.outputBox.insert(tk.END, traceback.format_exc())
+			self.updateOutput('Error occurred:\n')
+			self.updateOutput(traceback.format_exc())
+			# The player may only be watching the in-game overlay, so tell them there too.
+			self._uiSendLog(f'Script error: {type(e).__name__}: {e}')
+			self._uiSendLog('See the desktop window for details.')
+			self.ttsManager.speak('Script error.  Please check the desktop window.')
+		finally:
+			self.scriptRunning = False
+			self.scriptPaused = False
+			self.scriptWaiting = False
+			self.skipWaitEvent.clear()
+			self.resumeEvent.set() # Ensure any waiting threads are released
 			self.updateUIState()
 
 	def stopScript(self):
 		self.stopFlag.set()
-		self.updateOutput('\n--- Script execution stopped by user. ---\n', flush=True)
+		self.resumeEvent.set() # Ensure we don't hang if paused
 		self.updateUIState()
 
+	def log(self, *args):
+		logFilePath = 'DCSAutoMateLog.txt'
+		if not self.logInitialized:
+			# Initialize log file
+			with open(logFilePath, 'w') as logFile:
+				logFile.write('')  # Create an empty log file
+			self.logInitialized = True
+
+		# Get caller information
+		frame = inspect.currentframe().f_back
+		fileName = os.path.basename(frame.f_code.co_filename)
+		lineNumber = frame.f_lineno
+
+		# Create timestamp
+		timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+		# Format log message
+		message = ' '.join(map(str, args))
+
+		# Write to log file
+		with open(logFilePath, 'a') as logFile:
+			logFile.write(f'{timestamp} - {fileName}:{lineNumber} - {message}\n')
 
 ###############################################################################
 ###############################################################################
 ###############################################################################
-
-######
-# Seq must be a List of Dictionaries.  Each Dictionary must have {time, cmd, ...}, other keys are needed based on the command, see code.
-######
-class seqExecute:
-	def __init__(self, root, config, dbe, updateOutput, stopFlag):
-		self.root = root # The UI root object.  Needed to force updates during long loops to prevent Windows from thinking the app is frozen.
-		self.config = config
-		self.dbe = dbe
-		self.updateOutput = updateOutput # Callback function to send output to.
-		self.stopFlag = stopFlag
-
-		self.inputSocket = self.getDcsInputSocket()
-
-	def getDcsInputSocket(self):
-		# Create UDP socket to send DCS BIOS commands.
-		inputSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
-		return inputSocket
-
-	def getDcsWindow(self):
-		dcsWindow = None
-		# If we're in debug mode, just return None since we won't be sending any commands to DCS.
-		if self.config['debug']:
-			return dcsWindow
-
-		# If the selected method to find the DCS window is by title, try to find it.
-		if self.config['dcsWindowUseTitle']:
-			if self.config['dcsWindowTitleOverride']:
-				dcsWindowTitle = self.config['dcsWindowTitleOverride']
-			else:
-				dcsWindowTitle = 'Digital Combat Simulator'
-			self.updateOutput(f'Trying to find DCS window by title: "{dcsWindowTitle}"...\n', flush=True)
-			matches = gw.getWindowsWithTitle(dcsWindowTitle)
-			log(f'Found {len(matches)} windows with title "{dcsWindowTitle}"')
-			if matches:
-				dcsWindow = matches[0]
-				self.updateOutput('Found DCS window by title\n', flush=True)
-
-			if not dcsWindow:
-				self.updateOutput('Could not find DCS window.  Please ensure DCS is running, and/or set correct title in config window.\n', flush=True)
-
-			return dcsWindow
-
-		# Else try to find the DCS window by exe path.
-		else:
-			dcsExePath = None
-			if self.config['dcsExePathOverride']:
-				log(f'Using DCS exe path override: {self.config["dcsExePathOverride"]}')
-				dcsExePath = self.config['dcsExePathOverride']
-				self.updateOutput(f'Trying to find DCS window by exe path: {dcsExePath}...\n', flush=True)
-			else:
-				log('Using default DCS exe path')
-				self.updateOutput(f'Trying to find DCS window by exe path: *\\bin\\DCS.exe or *\\bin-mt\\DCS.exe...\n', flush=True)
-
-			try:
-				import ctypes
-				from ctypes import wintypes
-
-				import psutil
-				import win32api
-				import win32con
-				import win32security
-
-				def isProcessAdmin(processId):
-					try:
-						hProcess = win32api.OpenProcess(win32con.PROCESS_QUERY_INFORMATION, False, processId)
-						hToken = win32security.OpenProcessToken(hProcess, win32con.TOKEN_QUERY)
-						elevation = win32security.GetTokenInformation(hToken, win32security.TokenElevation)
-						# elevation is an int; 1 means elevated, 0 means not elevated
-						if elevation == 1:
-							return 'elevated'
-						else:
-							return 'nonelevated'
-					except Exception as e:
-						log('Error checking token elevation:', e)
-						return 'unknown' # If we can't determine the elevation, return unknown.  We'll assume it's elevated though.
-
-				def getProcessIdFromHwnd(hWnd):
-					processID = wintypes.DWORD()
-					ctypes.windll.user32.GetWindowThreadProcessId(hWnd, ctypes.byref(processID))
-					return processID.value
-
-				def getProcessPath(processId):
-					hProcess = ctypes.windll.kernel32.OpenProcess(0x1000, False, processId)
-					if hProcess:
-						try:
-							buf = ctypes.create_unicode_buffer(512)
-							size = wintypes.DWORD(512)
-							if ctypes.windll.psapi.GetModuleFileNameExW(hProcess, None, buf, size):
-								return buf.value
-						finally:
-							ctypes.windll.kernel32.CloseHandle(hProcess)
-					return None
-
-				# Check each window's process path to see if it matches the DCS exe path.
-				windows = gw.getAllWindows()
-				for window in windows:
-					if window._hWnd:
-						pid = getProcessIdFromHwnd(window._hWnd)
-						procPath = getProcessPath(pid)
-						#log(f'Window: {window.title}, PID: {pid}, Path: {procPath}')
-						if dcsExePath and procPath and procPath.lower() == dcsExePath.lower():
-							dcsWindow = window
-							self.updateOutput(f'Found DCS window by exe path: {dcsExePath}\n', flush=True)
-							break
-						elif procPath and procPath.lower().endswith(r'\bin\dcs.exe'):
-							dcsWindow = window
-							self.updateOutput(f'Found DCS window by exe path: *\\bin\\DCS.exe\n', flush=True)
-							break
-						elif procPath and procPath.lower().endswith(r'\bin-mt\dcs.exe'):
-							dcsWindow = window
-							self.updateOutput(f'Found DCS window by exe path: *\\bin-mt\\DCS.exe\n', flush=True)
-							break
-
-				# If we found the window, check to see if DCS is running as admin, and if DCSAutoMate is not, show a warning.
-				if dcsWindow:
-					log(f'Found DCS window with Process Path: {procPath}')
-					dcsIsAdmin = isProcessAdmin(pid)
-					log(f'DCS UAC elevation: {dcsIsAdmin}')
-					dcsAutoMateIsAdmin = 'elevated' if ctypes.windll.shell32.IsUserAnAdmin() else 'nonelevated'
-					log(f'DCSAutoMate UAC elevation: {dcsAutoMateIsAdmin}')
-					# If DCS is running as admin (or unknown) and DCSAutoMate is not, show a warning.  If DCS is admin but DCSAutoMate is not, DCSAutoMate may not be able to send keystrokes to the DCS window with DirectInput.
-					if dcsAutoMateIsAdmin == 'nonelevated' and dcsIsAdmin in ['elevated', 'unknown']:
-						self.updateOutput('Warning: DCSAutoMate is not running as Administrator, but DCS is (or can\'t detect).  If keyboard input is not sent to DCS, try running DCSAutoMate as Administrator.', flush=True)
-
-				# If we didn't find the window, show an error.
-				else:
-					self.updateOutput('Could not find DCS window. Please ensure DCS is running.\n', flush=True)
-					return dcsWindow
-
-			except Exception as e:
-				self.updateOutput(f'Error finding DCS window: {e}\n', flush=True)
-
-			return dcsWindow
-
-	def getSecToMin(self, numSeconds):
-		mins = int(math.floor(numSeconds / 60))
-		secs = int(numSeconds - (mins * 60))
-		return f'{mins}m{secs:02}s'
-
-	# speakerId: 0 = MS David, 1 = MS Hazel, 2 = MS Zira
-	# This code adapted from: https://stackoverflow.com/questions/31167967/python-3-4-text-to-speech-with-sapi
-	# For more docs, see: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms723609(v=vs.85)
-	def getTtsSpeaker(self, speakerId = 1):
-		speaker = win32com.client.Dispatch("SAPI.SpVoice")
-		voices = speaker.GetVoices()
-		#for voice in voices:
-			#self.updateOutput(voice.GetAttribute("Name"))
-		#self.updateOutput(voices.Item(speakerId).GetAttribute("Name")) # speaker name
-		speaker.Voice
-		speaker.SetVoice(voices.Item(speakerId)) # set voice (see Windows Text-to-Speech settings)
-		speaker.Rate
-		speaker.SetRate(3) # -10 is slowest, 10 is fastest, 0 is default.
-		speaker.Volume
-		speaker.SetVolume(75) # 0-100, 0 is quietest, 100 is default.
-		return speaker
-
-	# If asyncFlag is false, program execution will stop while speaking.
-	def speak(self, speaker, string, asyncFlag = True):
-		if not self.config['disableSpeech']:
-			SVSFlag = 1 if asyncFlag is True else 0 # Makes the speaking asyncronous so it doesn't hold up the script.  See https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms720892(v=vs.85)
-			speaker.speak(string, SVSFlag)
-
-	def execute(self, seq):
-		if self.config['debug']:
-			self.updateOutput('RUNNING IN DEBUG MODE, nothing will be sent to the game\n', flush=True)
-
-		self.dcsWindow = self.getDcsWindow()
-		if not self.config['debug'] and not self.dcsWindow:
-			return
-
-		self.updateOutput(f"Beginning script execution.\n", flush=True)
-
-		speaker = self.getTtsSpeaker()
-
-		# Look through the script to find how many keyboard commands will be executed.
-		numScriptKeyboardCommands = sum(1 for row in seq if row['cmd'] == 'scriptKeyboard') # https://stackoverflow.com/a/16455812
-		if numScriptKeyboardCommands:
-			self.updateOutput(f'Found {numScriptKeyboardCommands} keyboard commands in script.  Stay in cockpit until last keyboard command is executed.\n', flush=True)
-			self.speak(speaker, 'Stay in cockpit until last keyboard command is executed.', asyncFlag=False) # We want to make sure this message is read before any other speech in the script gets played.
-
-		rowNum = 0
-		self.executedScriptKeyboardCommands = 0
-		startTime = time.time() # Start the timer immediately before starting the execution loop.
-		cmdStartTime = time.time() # Start the timer for this command.
-		timers = {} # A dictionary to track the currently running timers.
-		while not self.stopFlag.is_set():
-			# When our counter gets past the last row, break out of the loop.
-			if rowNum >= len(seq):
-				break
-
-			currentTime = time.time()
-			elapsedTime = currentTime - startTime
-			cmdElapsedTime = currentTime - cmdStartTime
-
-			# Get the current command.
-			command = seq[rowNum]
-			# If the time since we started is greater than the command we're executing, run that command and go on to the next one.
-			if cmdElapsedTime > command['time']:
-				cmd = command['cmd']
-				msg = command.get('msg', '')
-				displayTime = round(elapsedTime, 1)
-				displayCmdTime = round(command['time'], 1)
-				self.updateOutput(f'Time: {displayTime}, Cmd: {displayCmdTime}\t\t', flush=True)
-
-				if cmd == 'scriptKeyboard':
-					self.handleScriptKeyboard(command)
-				elif cmd == 'scriptSpeech':
-					arg = command['arg']
-					msg = command['msg']
-					self.updateOutput(f'Speaking:\t"{arg}"', flush=True)
-					self.speak(speaker, arg)
-				elif cmd == 'scriptCockpitState':
-					self.handleScriptCockpitState(command)
-				elif cmd == 'scriptTimerStart' or cmd == 'scriptTimerEnd':
-					self.handleScriptTimer(command, timers)
-				elif cmd != '':
-					arg = command['arg']
-					msg = command['msg']
-					self.updateOutput(f'DCS-BIOS command:\t{cmd} {arg}', flush=True)
-					if not self.config['debug']:
-						self.inputSocket.sendto(bytes(str(cmd) + ' ' + str(arg) + '\n', "utf-8"), ('127.0.0.1', 7778))
-
-				if msg != '':
-					if cmd:
-						self.updateOutput(f' - {msg}', flush=True)
-					else:
-						self.updateOutput(f'Message:\t{msg}', flush=True)
-
-				# After all the command-related text is printed, if we've executed the last keyboard command, print and say that.
-				if numScriptKeyboardCommands and self.executedScriptKeyboardCommands == numScriptKeyboardCommands:
-					self.updateOutput('\nLast keyboard command executed, you may safely leave the cockpit.', flush=True)
-					self.speak(speaker, 'Last keyboard command executed, you may safely leave the cockpit.')
-					self.executedScriptKeyboardCommands = -1 # Set this to -1 to prevent this conditional from firing again.
-
-				self.updateOutput('\n', flush=True)
-
-				# Go on to the next command.
-				rowNum += 1
-				cmdStartTime = time.time() # Reset the timer for the next command.
-
-			self.root.update()
-			#time.sleep(0.01) # Sleep for a short time to save CPU cycles, there's no need to run this loop continuously as fast as possible.
-
-		self.updateOutput('Script complete\n', flush=True)
-		self.speak(speaker, 'Script complete', asyncFlag=False)
-
-	def handleScriptKeyboard(self, command):
-		#print('in handleScriptKeyboard', command)
-		keyString = command['arg']
-		keySplit = keyString.lower().split(' ') # Split the key string into key and action.
-		key = keySplit[0]
-		action = keySplit[1] if len(keySplit) > 1 else 'press' # If no action, default to 'press'.
-
-		# Map of alternate key names for pydirectinput, so users can use familiar key names from DCS controls.
-		keyMap = {
-			'altleft': [
-				'lalt',
-				'leftalt',
-			],
-			'altright': [
-				'ralt',
-				'rightalt',
-			],
-			'ctrlleft': [
-				'lctrl',
-				'leftctrl',
-			],
-			'ctrlright': [
-				'rctrl',
-				'rightctrl',
-			],
-			'shiftleft': [
-				'lshift',
-				'leftshift',
-			],
-			'shiftright': [
-				'rshift',
-				'rightshift',
-			],
-			'winleft': [
-				'lwin',
-				'leftwin',
-			],
-			'winright': [
-				'rwin',
-				'rightwin',
-			],
-			'pagedown': [
-				'pgdn',
-			],
-			'pageup': [
-				'pgup',
-			],
-			'add': {
-				'numadd',
-				'num+',
-			},
-			'subtract': {
-				'numsubtract',
-				'num-',
-			},
-			'multiply': {
-				'nummultiply',
-				'num*',
-			},
-			'divide': {
-				'numdivide',
-				'num/',
-			},
-			'decimal': {
-				'numdecimal',
-				'num.',
-			},
-		}
-
-		# Check if the key is in any of the keyMap lists.
-		if len(key) > 1 and key not in keyMap:
-			for mapKey, aliases in keyMap.items():
-				if key in aliases:
-					key = mapKey
-					break
-
-		#print('in handleScriptKeyboard', key, action)
-		self.updateOutput(f'Keyboard command:\t{keyString}', flush=True)
-
-		# Add the numpad keys to the pydirectinput.KEYBOARD_MAPPING dictionary.  These are supported by pyautogui, but pyautogui.press() doesn't work in DCS.  They are commented out in pydirectinput, but seem to work fine if we add them back in.
-		pydirectinput.KEYBOARD_MAPPING['num0'] = 0x52
-		pydirectinput.KEYBOARD_MAPPING['num1'] = 0x4F
-		pydirectinput.KEYBOARD_MAPPING['num2'] = 0x50
-		pydirectinput.KEYBOARD_MAPPING['num3'] = 0x51
-		pydirectinput.KEYBOARD_MAPPING['num4'] = 0x4B
-		pydirectinput.KEYBOARD_MAPPING['num5'] = 0x4C
-		pydirectinput.KEYBOARD_MAPPING['num6'] = 0x4D
-		pydirectinput.KEYBOARD_MAPPING['num7'] = 0x47
-		pydirectinput.KEYBOARD_MAPPING['num8'] = 0x48
-		pydirectinput.KEYBOARD_MAPPING['num9'] = 0x49
-		pydirectinput.KEYBOARD_MAPPING['numenter'] = 0x9C + 1024
-
-		if not self.config['debug']:
-			try:
-				# If the DCS window isn't active, activate it (focus and bring to top).
-				if not self.dcsWindow.isActive:
-					self.dcsWindow.activate() # .focus() doesn't work, but .activate() does.  Then you need to wait a short time.
-					time.sleep(0.06) # See pywinauto timings.py after_setfocus_wait, default is 0.06 seconds, and that seems to work here.
-
-				#log(f'Sending key: {key}, action: {action}')
-				if action == 'keydown' or action == 'down':
-					sentKey = pydirectinput.keyDown(key)
-				elif action == 'keyup' or action == 'up':
-					sentKey = pydirectinput.keyUp(key)
-				elif action == 'press':
-					sentKey = pydirectinput.press(key)
-				#log(f'sentKey: {sentKey}')
-
-				if not sentKey:
-					self.updateOutput(f"\nUnknown error sending key command to DCS.\nYou'll probably need to restart the script.\n", flush=True)
-					self.stopFlag.set()
-			except Exception as e:
-				self.updateOutput(f"\nError sending key command to DCS: {e}\nYou'll probably need to restart the script.\n", flush=True)
-				self.stopFlag.set()
-
-		self.executedScriptKeyboardCommands += 1
-
-	def handleScriptCockpitState(self, command):
-		"""
-		This will start looping, watching the current control state.  When the control state meets the command condition and value, start a timer.  If the control state ever fails to meet the condition, reset the timer.  When the control value has been in the command condition for the duration, exit the loop.
-		"""
-		# Ensure required parameters are provided
-		if 'control' not in command or 'value' not in command:
-			raise ValueError('Missing required parameters for scriptCockpitState: control and value must be provided')
-
-		control = command['control']
-		condition = command.get('condition', '=') # Default to '='
-		value = command['value']
-		duration = command.get('duration', 0) # Default to 0 seconds (immediate)
-
-		# Throw an exception if the control doesn't exist in the DCS BIOS control list.
-		if not self.dbe.controlExists(control):
-			raise ValueError(f'Control "{control}" does not exist in the DCS BIOS control list.  Make sure to use the full control name, including the module name.')
-
-		# Throw an exception if anything but int or str are passed (such as float).  DCS BIOS outputs are only int or str.
-		if not isinstance(value, int) and not isinstance(value, str):
-			raise TypeError('Only int or str are supported for scriptCockpitState values')
-
-		valueType = 'str' if isinstance(value, str) else 'int' # NOTE Don't call this variable 'type' or it will override the built-in type function, and calls to type(value) will give unexpected error messages.  Ask me how I know.
-
-		displayDuration = f' for {duration} sec' if duration else ''
-		self.updateOutput(f'Wait for cockpit state:\t{control} {condition} {value}{displayDuration}... ', flush=True)
-		controlState = None
-		#self.updateOutput('\n')
-		#self.updateOutput(f'scriptCockpitState, control: {control}, condition: {condition}, value: {value}, duration: {duration}')
-
-		stateStartTime = None
-		while not self.stopFlag.is_set():
-			stateCurrentTime = time.time()
-
-			conditionMet = False
-			if not self.config['debug']:
-				controlState = self.dbe.getControlState(control)[0][2]
-				# Cast the controlState to the correct type based on the value type.
-				controlState = int(controlState) if valueType == 'int' else str(controlState)
-				#self.updateOutput(f'current controlState: {controlState}\n')
-
-				# If valueType is int, compare them with math operators.
-				if valueType == 'int':
-					if condition == '=':
-						conditionMet = controlState == value
-					elif condition == '<':
-						conditionMet = controlState < value
-					elif condition == '<=':
-						conditionMet = controlState <= value
-					elif condition == '>':
-						conditionMet = controlState > value
-					elif condition == '>=':
-						conditionMet = controlState >= value
-					else:
-						raise ValueError(f'Invalid condition for scriptCockpitState: {condition} not supported for int values')
-				# If valueType is str, compare them with string operators.
-				elif valueType == 'str':
-					if condition == '=':
-						conditionMet = controlState == value
-					elif condition == 'startsWith':
-						conditionMet = controlState.startswith(value)
-					elif condition == 'endsWith':
-						conditionMet = controlState.endswith(value)
-					elif condition == 'contains':
-						conditionMet = value in controlState
-					else:
-						raise ValueError(f'Invalid condition for scriptCockpitState: {condition} not supported for str values')
-
-			if conditionMet or self.config['debug']:
-				# If we don't have a timer already running, start one.
-				if not stateStartTime:
-					stateStartTime = time.time()
-				# Check the elapsed time from when we started the timer.
-				stateElapsedTime = stateCurrentTime - stateStartTime
-				# If the elapsed time is greater than the duration, then the condition has been met for the required amount of time.  Break out of the loop.
-				#self.updateOutput('stateElapsedTime', stateElapsedTime)
-				if stateElapsedTime >= duration:
-					break
-			else:
-				# Not meeting condition, so delete the timer.
-				stateStartTime = None
-
-			self.root.update()
-			#time.sleep(0.01) # Sleep for a short time to save CPU cycles.
-
-		self.updateOutput(f'Condition met', flush=True)
-
-	def handleScriptTimer(self, command, timers):
-		cmd = command['cmd'] # 'scriptTimerStart' or 'scriptTimerEnd'
-		name = command['name']
-		duration = command.get('duration', None) # 'end' action will not have a duration.
-
-		if cmd == 'scriptTimerStart':
-			self.updateOutput(f'Start timer:\t{name}, {duration} sec', flush=True)
-			timers[name] = {
-				'startTime': time.time(),
-				'duration': duration,
-			}
-		elif cmd == 'scriptTimerEnd':
-			remainingTime = self.getSecToMin(round(timers[name]['duration'] - (time.time() - timers[name]['startTime'])))
-			self.updateOutput(f'Waiting for timer:\t{name}, {remainingTime} remaining... ', flush=True)
-			while not self.stopFlag.is_set():
-				currentTime = time.time()
-				elapsedTime = currentTime - timers[name]['startTime']
-				if elapsedTime >= timers[name]['duration']:
-					self.updateOutput(f'Timer done', flush=True)
-					break
-
-				self.root.update()
-				#time.sleep(0.01) # Sleep for a short time to save CPU cycles.
-
-
-###############################################################################
-###############################################################################
-###############################################################################
-
-# Initialize log file
-logFilePath = 'DCSAutoMateLog.txt'
-with open(logFilePath, 'w') as logFile:
-	logFile.write('')  # Create an empty log file
-
-def log(*args):
-	# Get caller information
-	frame = inspect.currentframe().f_back
-	fileName = os.path.basename(frame.f_code.co_filename)
-	lineNumber = frame.f_lineno
-
-	# Create timestamp
-	timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-	# Format log message
-	message = ' '.join(map(str, args))
-
-	# Write to log file
-	with open(logFilePath, 'a') as log_file:
-		log_file.write(f'{timestamp} - {fileName}:{lineNumber} - {message}\n')
-
 
 if __name__ == '__main__':
 	# When running this program as an exe, we need to have its own path appended to the sys.path in order for it to find script files in the DCSAutoMateScripts subfolder.
 	applicationPath = os.path.dirname(sys.executable)
 	sys.path.append(applicationPath)
 
-	root = tk.Tk()
-	app = DCSAutoMateApp(root)
-	root.mainloop()
+	app = QtWidgets.QApplication(sys.argv)
+	dcsApp = DCSAutoMateApp()
+	dcsApp.mainWindow.show()
+	sys.exit(app.exec())

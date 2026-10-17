@@ -1,0 +1,6396 @@
+{
+	"controls": {
+		"AAU32.Button_2": {
+			"bindings": [
+				{
+					"name": "Altimeter Copilot, Pressure Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "Altimeter Copilot, Pressure Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "Altimeter Copilot, Pressure Decrease (+1 more)",
+			"deviceId": 19,
+			"type": "raw"
+		},
+		"AAU32.SET-PRESSURE-KNOB-PTR": {
+			"arg": 172,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Pressure Adjustment Knob",
+			"deviceId": 19,
+			"elementName": "SET-PRESSURE-KNOB-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AAU7.Button_2": {
+			"bindings": [
+				{
+					"name": "Altimeter Pilot, Pressure Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "Altimeter Pilot, Pressure Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "Altimeter Pilot, Pressure Decrease (+1 more)",
+			"deviceId": 18,
+			"type": "raw"
+		},
+		"AAU7.PILOT-ALT-SET-KNOB-PTR": {
+			"arg": 181,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Pressure Adjustment Knob",
+			"deviceId": 18,
+			"elementName": "PILOT-ALT-SET-KNOB-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"ADF_ARN_83.BFO-SWITCH-PTR": {
+			"arg": 41,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "BFO Switch (N/F), BFO/OFF",
+			"deviceId": 27,
+			"elementName": "BFO-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.Button_10": {
+			"bindings": [
+				{
+					"name": "ADF Mode Select (rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3010,
+			"description": "ADF Mode Select (rotary)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ADF_ARN_83.Button_11": {
+			"bindings": [
+				{
+					"name": "ADF Band Select (rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "ADF Band Select (rotary)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ADF_ARN_83.Button_12": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "ADF Gain Knob"
+				}
+			],
+			"commandId": 3012,
+			"description": "ADF Gain Knob",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ADF_ARN_83.Button_7": {
+			"bindings": [
+				{
+					"name": "ADF Frequency Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "ADF Frequency Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "ADF Frequency Decrease (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ADF_ARN_83.Button_8": {
+			"bindings": [
+				{
+					"name": "ADF Gain Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "ADF Gain Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "ADF Gain Decrease (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ADF_ARN_83.Button_9": {
+			"bindings": [
+				{
+					"name": "ADF BFO Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "ADF BFO Switch",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ADF_ARN_83.GAIN-CONTROL-PTR_arg43": {
+			"arg": 43,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3001,
+			"description": "Gain control / Mode. Right mouse click to cycle mode. Rotate mouse wheel to adjust gain",
+			"deviceId": 27,
+			"elementName": "GAIN-CONTROL-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.GAIN-CONTROL-PTR_arg44": {
+			"arg": 44,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Gain control / Mode. Right mouse click to cycle mode. Rotate mouse wheel to adjust gain",
+			"deviceId": 27,
+			"elementName": "GAIN-CONTROL-PTR",
+			"type": "continuous"
+		},
+		"ADF_ARN_83.LOOP-L-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.0,
+				0.0
+			],
+			"commandId": 3005,
+			"description": "Loop Left Hight Speed",
+			"deviceId": 27,
+			"elementName": "LOOP-L-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.LOOP-L-R-SWITCH-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.2,
+				0.1
+			],
+			"commandId": 3005,
+			"description": "ADF Loop Antenna Speed Switch, L/R",
+			"deviceId": 27,
+			"elementName": "LOOP-L-R-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.LOOP-L1-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.2,
+				0.1
+			],
+			"commandId": 3005,
+			"description": "Loop Left Low Speed",
+			"deviceId": 27,
+			"elementName": "LOOP-L1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.LOOP-O-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.2,
+				0.2
+			],
+			"commandId": 3005,
+			"description": "Loop Off",
+			"deviceId": 27,
+			"elementName": "LOOP-O-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.LOOP-R-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.4,
+				0.4
+			],
+			"commandId": 3005,
+			"description": "Loop Right Hight Speed",
+			"deviceId": 27,
+			"elementName": "LOOP-R-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.LOOP-R1-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.2,
+				0.3
+			],
+			"commandId": 3005,
+			"description": "Loop Right Low Speed",
+			"deviceId": 27,
+			"elementName": "LOOP-R1-PTR",
+			"positions": 2,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.TUNE-CONTROL-PTR_arg38": {
+			"arg": 38,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Tune control / Band selection. Right mouse click to select a band. Rotate mouse wheel to adjust tune",
+			"deviceId": 27,
+			"elementName": "TUNE-CONTROL-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADF_ARN_83.TUNE-CONTROL-PTR_arg39": {
+			"arg": 39,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Tune control / Band selection. Right mouse click to select a band. Rotate mouse wheel to adjust tune",
+			"deviceId": 27,
+			"elementName": "TUNE-CONTROL-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"ADI_OPERATOR.Button_3": {
+			"bindings": [
+				{
+					"name": "Copilot Gyro, Pitch Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Copilot Gyro, Pitch Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3003,
+			"description": "Copilot Gyro, Pitch Decrease (+1 more)",
+			"deviceId": 6,
+			"type": "raw"
+		},
+		"ADI_OPERATOR.CAGING-KNOB-ROTATION-PTR": {
+			"arg": 140,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Cage Copilot's Attitude Indicator - Pull to cage",
+			"deviceId": 6,
+			"elementName": "CAGING-KNOB-ROTATION-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADI_OPERATOR.PITCH-ADJUSTMENT-PTR": {
+			"arg": 146,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Attitude Indicator Pitch Trim Knob",
+			"deviceId": 6,
+			"elementName": "PITCH-ADJUSTMENT-PTR",
+			"type": "continuous"
+		},
+		"ADI_PILOT.Button_3": {
+			"bindings": [
+				{
+					"name": "Attitude Indicator pilot, Pitch Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Attitude Indicator pilot, Pitch Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3003,
+			"description": "Attitude Indicator pilot, Pitch Decrease (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"ADI_PILOT.Button_4": {
+			"bindings": [
+				{
+					"name": "Attitude Indicator pilot, Roll Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Attitude Indicator pilot, Roll Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3004,
+			"description": "Attitude Indicator pilot, Roll Decrease (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"ADI_PILOT.PILOT-ATT-PITCH-ADJ-KNOB-PTR": {
+			"arg": 144,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Attitude Indicator Roll Trim Knob",
+			"deviceId": 5,
+			"elementName": "PILOT-ATT-PITCH-ADJ-KNOB-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"ADI_PILOT.PILOT-ATT-ROLL-ADJ-KNOB-PTR": {
+			"arg": 145,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Attitude Indicator Pitch Trim Knob",
+			"deviceId": 5,
+			"elementName": "PILOT-ATT-ROLL-ADJ-KNOB-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"ARN_82.Button_5": {
+			"bindings": [
+				{
+					"name": "VOR/ILS Freq. MHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VOR/ILS Freq. MHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "VOR/ILS Freq. MHz Decrease (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"ARN_82.Button_6": {
+			"bindings": [
+				{
+					"name": "VOR/ILS Freq. kHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VOR/ILS Freq. kHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "VOR/ILS Freq. kHz Decrease (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"ARN_82.Button_7": {
+			"bindings": [
+				{
+					"name": "VOR/ILS Volume Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "VOR/ILS Volume Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "VOR/ILS Volume Decrease (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"ARN_82.Button_8": {
+			"bindings": [
+				{
+					"name": "VOR/ILS Mode Select (totary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "VOR/ILS Mode Select (totary)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"ARN_82.FRACTIONAL-MHZ-SELECTOR-KNOB-KNOB-PTR_arg53": {
+			"arg": 53,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Frequency kHz / Volume. Rotate mouse wheel to change frequency value. Left or Right click to adjust volume",
+			"deviceId": 25,
+			"elementName": "FRACTIONAL-MHZ-SELECTOR-KNOB-KNOB-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"ARN_82.FRACTIONAL-MHZ-SELECTOR-KNOB-KNOB-PTR_arg54": {
+			"arg": 54,
+			"argLim": [
+				0.0,
+				0.65
+			],
+			"commandId": 3004,
+			"description": "Frequency kHz / Volume. Rotate mouse wheel to change frequency value. Left or Right click to adjust volume",
+			"deviceId": 25,
+			"elementName": "FRACTIONAL-MHZ-SELECTOR-KNOB-KNOB-PTR",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ARN_82.WHOLE-MHZ-SELECTOR-KNOB-PTR_arg51": {
+			"arg": 51,
+			"argLim": [
+				0.8,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Frequency MHz / Power. Right mouse click to cycle power. Rotate mouse wheel to change frequency value",
+			"deviceId": 25,
+			"elementName": "WHOLE-MHZ-SELECTOR-KNOB-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ARN_82.WHOLE-MHZ-SELECTOR-KNOB-PTR_arg52": {
+			"arg": 52,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Frequency MHz / Power. Right mouse click to cycle power. Rotate mouse wheel to change frequency value",
+			"deviceId": 25,
+			"elementName": "WHOLE-MHZ-SELECTOR-KNOB-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"CLOCK.Button_3": {
+			"bindings": [
+				{
+					"name": "Clock Winding/Adjust",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Clock Winding/Adjust",
+			"deviceId": 30,
+			"type": "raw"
+		},
+		"CLOCK.Button_4": {
+			"bindings": [
+				{
+					"name": "Clock Winding/Adjust Decrease",
+					"valuePressed": -0.2
+				},
+				{
+					"name": "Clock Winding/Adjust Increase",
+					"valuePressed": 0.2
+				}
+			],
+			"commandId": 3004,
+			"description": "Clock Winding/Adjust Decrease (+1 more)",
+			"deviceId": 30,
+			"type": "raw"
+		},
+		"CLOCK.WINDING/ADJUSTMENT-KNOB-PULL/PUSH-PTR_arg130": {
+			"arg": 130,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Winding/Adjustment Clock",
+			"deviceId": 30,
+			"elementName": "WINDING/ADJUSTMENT-KNOB-PULL/PUSH-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"CLOCK.WINDING/ADJUSTMENT-KNOB-PULL/PUSH-PTR_arg131": {
+			"arg": 131,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Winding/Adjustment Clock",
+			"deviceId": 30,
+			"elementName": "WINDING/ADJUSTMENT-KNOB-PULL/PUSH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_SYSTEM.Button_3": {
+			"bindings": [
+				{
+					"name": "Trimmer reset",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Trimmer reset",
+			"deviceId": 41,
+			"type": "raw"
+		},
+		"CONTROL_SYSTEM.Button_4": {
+			"bindings": [
+				{
+					"name": "Pilot Trimmer",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Pilot Trimmer",
+			"deviceId": 41,
+			"type": "raw"
+		},
+		"CONTROL_SYSTEM.FORCE-TRIM-1-PTR": {
+			"arg": 189,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Force Trim Button",
+			"deviceId": 41,
+			"elementName": "FORCE-TRIM-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_SYSTEM.FORCE-TRIM-2-PTR": {
+			"arg": 193,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Force Trim Button",
+			"deviceId": 41,
+			"elementName": "FORCE-TRIM-2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COURSE_IND.Button_2": {
+			"bindings": [
+				{
+					"name": "Course Indicator OBS Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Course Indicator OBS Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3002,
+			"description": "Course Indicator OBS Decrease (+1 more)",
+			"deviceId": 29,
+			"type": "raw"
+		},
+		"COURSE_IND.CDI-OBS-PTR": {
+			"arg": 155,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Course Select Knob",
+			"deviceId": 29,
+			"elementName": "CDI-OBS-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"CPT_MECH.Button_3": {
+			"bindings": [
+				{
+					"name": "Wiper Mode Selector Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Wiper Mode Selector Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Wiper Mode Selector Down (+1 more)",
+			"deviceId": 12,
+			"type": "raw"
+		},
+		"CPT_MECH.DOOR_L-PTR": {
+			"arg": 419,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Open Left Door",
+			"deviceId": 12,
+			"elementName": "DOOR_L-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.DOOR_R-PTR": {
+			"arg": 421,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Open Right Door",
+			"deviceId": 12,
+			"elementName": "DOOR_R-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.WIPER PILOT-BOTH-COPILOT-PTR": {
+			"arg": 227,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Wiper Selector Switch, PILOT/BOTH/COPILOT",
+			"deviceId": 12,
+			"elementName": "WIPER PILOT-BOTH-COPILOT-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.WIPERS-PTR": {
+			"arg": 229,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Wipers Speed Switch, PARK/OFF/LOW/MED/HIGH",
+			"deviceId": 12,
+			"elementName": "WIPERS-PTR",
+			"incValue": 1.0,
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"CREWE.Button_1": {
+			"bindings": [
+				{
+					"name": "Show crew indicator",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3001,
+			"description": "Show crew indicator",
+			"deviceId": 55,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.AIR-VALVE-PTR": {
+			"arg": 325,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3058,
+			"description": "CB Cabin heater (Air valve)(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "AIR-VALVE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ANTI-COLL-CB-PTR": {
+			"arg": 313,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3048,
+			"description": "CB Anticollision light(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "ANTI-COLL-CB-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ANTI-ICE-PTR": {
+			"arg": 329,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3061,
+			"description": "CB Engine anti-ice(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "ANTI-ICE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ARC-102-PTR": {
+			"arg": 349,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "CB ARC-102 HF Static INVTR(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "ARC-102-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.BAT-SWITCHER-PTR": {
+			"arg": 219,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Battery Switch, ON/OFF",
+			"deviceId": 1,
+			"elementName": "BAT-SWITCHER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.Button_10": {
+			"bindings": [
+				{
+					"name": "Main Generator Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3010,
+			"description": "Main Generator Switch",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_11": {
+			"bindings": [
+				{
+					"name": "Starter-Generator STARTER/STBY GEN",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "Starter-Generator STARTER/STBY GEN",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_12": {
+			"bindings": [
+				{
+					"name": "Non-Ess Bus NORMAL ON/MANUAL ON",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Non-Ess Bus NORMAL ON/MANUAL ON",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_13": {
+			"bindings": [
+				{
+					"name": "Voltmeter AC switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "Voltmeter AC switch",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_14": {
+			"bindings": [
+				{
+					"name": "Voltmeter DC switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "Voltmeter DC switch",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_15": {
+			"bindings": [
+				{
+					"name": "Inverter switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3015,
+			"description": "Inverter switch",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_17": {
+			"bindings": [
+				{
+					"name": "Pitot Heater Switch",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3017,
+			"description": "Pitot Heater Switch",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_18": {
+			"bindings": [
+				{
+					"name": "CB ARC-102 HF Static INVTR",
+					"valueDown": 0.32
+				},
+				{
+					"name": "CB Anticollision light ",
+					"valueDown": 0.14
+				},
+				{
+					"name": "CB Cabin heater (Air valve)",
+					"valueDown": 0.2
+				},
+				{
+					"name": "CB Cabin heater (Outlet valve)",
+					"valueDown": 0.19
+				},
+				{
+					"name": "CB Cargo hook release",
+					"valueDown": 0.47
+				},
+				{
+					"name": "CB Caution lights",
+					"valueDown": 0.43
+				},
+				{
+					"name": "CB Cockpit lights",
+					"valueDown": 0.42
+				},
+				{
+					"name": "CB Console lights",
+					"valueDown": 0.44
+				},
+				{
+					"name": "CB Dome lights",
+					"valueDown": 0.41
+				},
+				{
+					"name": "CB EXT Stores jettison",
+					"valueDown": 0.48
+				},
+				{
+					"name": "CB Engine anti-ice",
+					"valueDown": 0.22
+				},
+				{
+					"name": "CB FM 2 Radio",
+					"valueDown": 0.37
+				},
+				{
+					"name": "CB FM Radio",
+					"valueDown": 0.35
+				},
+				{
+					"name": "CB FORCE Trim",
+					"valueDown": 0.28
+				},
+				{
+					"name": "CB Fire detector",
+					"valueDown": 0.23
+				},
+				{
+					"name": "CB Fuel TRANS",
+					"valueDown": 0.57
+				},
+				{
+					"name": "CB Fuel valves",
+					"valueDown": 0.58
+				},
+				{
+					"name": "CB Fuselage lights",
+					"valueDown": 0.39
+				},
+				{
+					"name": "CB Generator & Bus Reset",
+					"valueDown": 0.52
+				},
+				{
+					"name": "CB Governor Control",
+					"valueDown": 0.54
+				},
+				{
+					"name": "CB HF ANT COUPLR",
+					"valueDown": 0.33
+				},
+				{
+					"name": "CB HF ARC-102",
+					"valueDown": 0.34
+				},
+				{
+					"name": "CB HYD Control",
+					"valueDown": 0.27
+				},
+				{
+					"name": "CB Heated blanket 1",
+					"valueDown": 0.15
+				},
+				{
+					"name": "CB Heated blanket 2",
+					"valueDown": 0.16
+				},
+				{
+					"name": "CB IDLE Stop release",
+					"valueDown": 0.55
+				},
+				{
+					"name": "CB IFF APX 1",
+					"valueDown": 0.0
+				},
+				{
+					"name": "CB IFF APX 2",
+					"valueDown": 0.01
+				},
+				{
+					"name": "CB INST Panel lights",
+					"valueDown": 0.45
+				},
+				{
+					"name": "CB INST SEC lights",
+					"valueDown": 0.46
+				},
+				{
+					"name": "CB Ignition system",
+					"valueDown": 0.6
+				},
+				{
+					"name": "CB Intercom CPLT",
+					"valueDown": 0.06
+				},
+				{
+					"name": "CB Intercom PLT",
+					"valueDown": 0.07
+				},
+				{
+					"name": "CB Inverter CTRL",
+					"valueDown": 0.5
+				},
+				{
+					"name": "CB KY-28 voice security",
+					"valueDown": 0.1
+				},
+				{
+					"name": "CB LF Nav. (ARN-83)",
+					"valueDown": 0.05
+				},
+				{
+					"name": "CB LH fuel boost pump",
+					"valueDown": 0.24
+				},
+				{
+					"name": "CB Landing & Search light control",
+					"valueDown": 0.13
+				},
+				{
+					"name": "CB Landing light power",
+					"valueDown": 0.12
+				},
+				{
+					"name": "CB Main inverter PWR",
+					"valueDown": 0.51
+				},
+				{
+					"name": "CB Marker beacon",
+					"valueDown": 0.03
+				},
+				{
+					"name": "CB Navigation lights",
+					"valueDown": 0.4
+				},
+				{
+					"name": "CB Pitot tube",
+					"valueDown": 0.18
+				},
+				{
+					"name": "CB Prox. warn.",
+					"valueDown": 0.02
+				},
+				{
+					"name": "CB RH fuel boost pump",
+					"valueDown": 0.56
+				},
+				{
+					"name": "CB RPM Warning system",
+					"valueDown": 0.21
+				},
+				{
+					"name": "CB Rescue hoist CTL",
+					"valueDown": 0.3
+				},
+				{
+					"name": "CB Rescue hoist PWR",
+					"valueDown": 0.29
+				},
+				{
+					"name": "CB Rescue hoist cable cutter",
+					"valueDown": 0.31
+				},
+				{
+					"name": "CB STBY Generator Field",
+					"valueDown": 0.53
+				},
+				{
+					"name": "CB Search light power",
+					"valueDown": 0.11
+				},
+				{
+					"name": "CB Spare inverter PWR",
+					"valueDown": 0.49
+				},
+				{
+					"name": "CB Starter Relay",
+					"valueDown": 0.59
+				},
+				{
+					"name": "CB TEMP indicator",
+					"valueDown": 0.26
+				},
+				{
+					"name": "CB Turn & Slip indicator",
+					"valueDown": 0.25
+				},
+				{
+					"name": "CB UHF Radio",
+					"valueDown": 0.36
+				},
+				{
+					"name": "CB VHF AM Radio",
+					"valueDown": 0.38
+				},
+				{
+					"name": "CB VHF Nav. (ARN-82)",
+					"valueDown": 0.04
+				},
+				{
+					"name": "CB Voltmeter Non Ess Bus",
+					"valueDown": 0.17
+				},
+				{
+					"name": "CB Wind wiper CPLT",
+					"valueDown": 0.09
+				},
+				{
+					"name": "CB Wind wiper PLT",
+					"valueDown": 0.08
+				}
+			],
+			"commandId": 3018,
+			"description": "CB ARC-102 HF Static INVTR (+60 more)",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_20": {
+			"bindings": [
+				{
+					"name": "Main Generator Cover",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3020,
+			"description": "Main Generator Cover",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.Button_9": {
+			"bindings": [
+				{
+					"name": "Battery Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "Battery Switch",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.CARGO-HOOK-PTR": {
+			"arg": 379,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3069,
+			"description": "CB Cargo hook release(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "CARGO-HOOK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.CAUTION-LIGHTS-PTR": {
+			"arg": 371,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3053,
+			"description": "CB Caution lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "CAUTION-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.COCKPIT-LIGHTS-PTR": {
+			"arg": 369,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3052,
+			"description": "CB Cockpit lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "COCKPIT-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.CONSOLE-LIGHTS-PTR": {
+			"arg": 373,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3054,
+			"description": "CB Console lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "CONSOLE-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.DOME-LIGHTS-PTR": {
+			"arg": 367,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3051,
+			"description": "CB Dome lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "DOME-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.EXT-STORES-PTR": {
+			"arg": 381,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3070,
+			"description": "CB EXT Stores jettison(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "EXT-STORES-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.FIRE-PTR": {
+			"arg": 331,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3062,
+			"description": "CB Fire detector(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FIRE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.FM-ARC-54-PTR": {
+			"arg": 355,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3032,
+			"description": "CB FM Radio, ON/OFF",
+			"deviceId": 1,
+			"elementName": "FM-ARC-54-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.FM2-ARC-114-PTR": {
+			"arg": 359,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3034,
+			"description": "CB FM 2 Radio(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FM2-ARC-114-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.FORCE-TRIM-CB-PTR": {
+			"arg": 341,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3068,
+			"description": "CB FORCE Trim(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FORCE-TRIM-CB-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.FUS-LIGHTS-PTR": {
+			"arg": 363,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3049,
+			"description": "CB Fuselage lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FUS-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.HF-ANT-PTR": {
+			"arg": 351,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3030,
+			"description": "CB HF ANT COUPLR(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "HF-ANT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.HF-ARC-102-PTR": {
+			"arg": 353,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3031,
+			"description": "CB HF ARC-102(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "HF-ARC-102-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.HYD-CONT-CB-PTR": {
+			"arg": 339,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3066,
+			"description": "CB HYD Control(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "HYD-CONT-CB-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.IFF-API-PTR": {
+			"arg": 285,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "CB IFF APX 1 (N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "IFF-API-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.IFF-APX-PTR": {
+			"arg": 287,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "CB IFF APX 2 (N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "IFF-APX-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.INST-PANEL-LIGHTS-PTR": {
+			"arg": 375,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3055,
+			"description": "CB INST Panel lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "INST-PANEL-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.INST-SEC-LIGHTS-PTR": {
+			"arg": 377,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3056,
+			"description": "CB INST SEC lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "INST-SEC-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.INTER-COM-CPLT-PTR": {
+			"arg": 297,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "CB Intercom CPLT(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "INTER-COM-CPLT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.INTER-COM-PLT-PTR": {
+			"arg": 299,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3028,
+			"description": "CB Intercom PLT, ON/OFF",
+			"deviceId": 1,
+			"elementName": "INTER-COM-PLT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.INVTR-SWITCHER-PTR": {
+			"arg": 215,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Inverter Switch, MAIN/OFF/SPARE",
+			"deviceId": 1,
+			"elementName": "INVTR-SWITCHER-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.K-Y20-PTR": {
+			"arg": 305,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3043,
+			"description": "CB KY-28 voice security(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "K-Y20-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.LDG-LIGHT-PTR": {
+			"arg": 309,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3046,
+			"description": "CB Landing light power(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "LDG-LIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.LDG-SEARCH-PTR": {
+			"arg": 311,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3047,
+			"description": "CB Landing & Search light control(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "LDG-SEARCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.LF-NAV-PTR": {
+			"arg": 295,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3026,
+			"description": "CB LF Nav. (ARN-83), ON/OFF",
+			"deviceId": 1,
+			"elementName": "LF-NAV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.LH-FUEL-PTR": {
+			"arg": 333,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3063,
+			"description": "CB LH fuel boost pump(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "LH-FUEL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.MAIN-GEN-SWITCHER-COVER-PTR": {
+			"arg": 217,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Main generator switch cover, OPEN/CLOSE",
+			"deviceId": 1,
+			"elementName": "MAIN-GEN-SWITCHER-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.MAIN-GEN-SWITCHER-PTR": {
+			"arg": 216,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Main generator Switch (Left button - ON/OFF. Right button RESET)",
+			"deviceId": 1,
+			"elementName": "MAIN-GEN-SWITCHER-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.MARKER-BEACON-PTR": {
+			"arg": 291,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3024,
+			"description": "CB Marker beacon, ON/OFF",
+			"deviceId": 1,
+			"elementName": "MARKER-BEACON-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.MTR-PTR": {
+			"arg": 238,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "Pitot Heater Switch, ON/OFF",
+			"deviceId": 1,
+			"elementName": "MTR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.NAV-LIGHTS-PTR": {
+			"arg": 365,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3050,
+			"description": "CB Navigation lights(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "NAV-LIGHTS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.NON-ESS-BUS-SWITCHERr-PTR": {
+			"arg": 221,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Non-Essential Bus Switch, NORMAL/MANUAL",
+			"deviceId": 1,
+			"elementName": "NON-ESS-BUS-SWITCHERr-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.OUTLET-VALVE-PTR": {
+			"arg": 323,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3057,
+			"description": "CB Cabin heater (Outlet valve)(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "OUTLET-VALVE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.PHASE-SWITCHER-PTR": {
+			"arg": 214,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3007,
+			"description": "AC Voltmeter Selector",
+			"deviceId": 1,
+			"elementName": "PHASE-SWITCHER-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.PITOT-TUBE-PTR": {
+			"arg": 321,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3037,
+			"description": "CB Pitot tube(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PITOT-TUBE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.PROX-WARN-PTR": {
+			"arg": 289,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "CB Prox. warn.(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PROX-WARN-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.RESCUE-CABLE-PTR": {
+			"arg": 347,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3040,
+			"description": "CB Rescue hoist cable cutter N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "RESCUE-CABLE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.RESCUE-CONT-PTR": {
+			"arg": 345,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3039,
+			"description": "CB Rescue hoist CTL(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "RESCUE-CONT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.RESCUE-POWER-PTR": {
+			"arg": 343,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3059,
+			"description": "CB Rescue hoist PWR(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "RESCUE-POWER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.RPM-WARN-PTR": {
+			"arg": 327,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3060,
+			"description": "CB RPM Warning system(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "RPM-WARN-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.SEARCH-LIGHT-PTR": {
+			"arg": 307,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3045,
+			"description": "CB Search light power(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "SEARCH-LIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.STARTER-GEN-SWITCHERr-PTR": {
+			"arg": 220,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Starter/Stdby GEN Switch",
+			"deviceId": 1,
+			"elementName": "STARTER-GEN-SWITCHERr-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.STARTER-RELAY-PTR": {
+			"arg": 403,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3044,
+			"description": "CB Starter Relay(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "STARTER-RELAY-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.TEMP-IND-PTR": {
+			"arg": 337,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3065,
+			"description": "CB TEMP indicator(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "TEMP-IND-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.TURN-SLIP-PTR": {
+			"arg": 335,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3064,
+			"description": "CB Turn & Slip indicator, ON/OFF",
+			"deviceId": 1,
+			"elementName": "TURN-SLIP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.UHF-ARC-51-PTR": {
+			"arg": 357,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3033,
+			"description": "CB UHF Radio, ON/OFF",
+			"deviceId": 1,
+			"elementName": "UHF-ARC-51-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.VHF-NAV-PTR": {
+			"arg": 293,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3025,
+			"description": "CB VHF Nav. (ARN-82), ON/OFF",
+			"deviceId": 1,
+			"elementName": "VHF-NAV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.VM-SWITCHER-PTR": {
+			"arg": 218,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3004,
+			"description": "DC Voltmeter Selector",
+			"deviceId": 1,
+			"elementName": "VM-SWITCHER-PTR",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.VXFXCVR-COMM-PTR": {
+			"arg": 361,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3035,
+			"description": "CB VHF AM Radio, ON/OFF",
+			"deviceId": 1,
+			"elementName": "VXFXCVR-COMM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.WIND-SHIELD-CB-PTR": {
+			"arg": 301,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3041,
+			"description": "CB Wind wiper CPLT, ON/OFF",
+			"deviceId": 1,
+			"elementName": "WIND-SHIELD-CB-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.WIND-SHIELD2-CB-PTR": {
+			"arg": 303,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3042,
+			"description": "CB Wind wiper PLT, ON/OFF",
+			"deviceId": 1,
+			"elementName": "WIND-SHIELD2-CB-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3071": {
+			"arg": 383,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3071,
+			"description": "CB Spare inverter PWR(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "SPARE-INVTR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3072": {
+			"arg": 385,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3072,
+			"description": "CB Inverter CTRL (N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "INVTR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3073": {
+			"arg": 387,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3073,
+			"description": "CB Main inverter PWR(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "MAIN-INVTR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3074": {
+			"arg": 389,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3074,
+			"description": "CB Generator & Bus Reset(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "GEN-BUS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3075": {
+			"arg": 391,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3075,
+			"description": "CB STBY Generator Field(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "STBY-GEN-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3076": {
+			"arg": 393,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3076,
+			"description": "CB Governor Control(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "GOV-CONT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3077": {
+			"arg": 395,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3077,
+			"description": "CB IDLE Stop release, ON/OFF",
+			"deviceId": 1,
+			"elementName": "IDLE-STOP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3078": {
+			"arg": 397,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3078,
+			"description": "CB RH fuel boost pump(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "RH-FUEL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3079": {
+			"arg": 399,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3079,
+			"description": "CB Fuel TRANS(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FUEL-TRANS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3080": {
+			"arg": 401,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3080,
+			"description": "CB Fuel valves(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FUEL-VALVES-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3081": {
+			"arg": 315,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3081,
+			"description": "CB Heated blanket 1(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "HEATED-BLANKET-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3082": {
+			"arg": 317,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3082,
+			"description": "CB Heated blanket 2(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "HEATED-BLANKET2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3083": {
+			"arg": 319,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3083,
+			"description": "CB Voltmeter Non Ess Bus(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "VOLT-METER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3085": {
+			"arg": 405,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3085,
+			"description": "CB Ignition system(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "IGNITER-SOL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3086": {
+			"arg": 423,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3086,
+			"description": "CB Pilot ATTD1(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PILOT-ATTD1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3087": {
+			"arg": 424,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3087,
+			"description": "CB Pilot ATTD2(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PILOT-ATTD2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3088": {
+			"arg": 425,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3088,
+			"description": "CB Copilot ATTD1(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "COPILOT-ATTD1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3089": {
+			"arg": 426,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3089,
+			"description": "CB Copilot ATTD2(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "COPILOT-ATTD2--PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3090": {
+			"arg": 427,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3090,
+			"description": "CB Gyro Cmps(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "GYRO-CMPS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3091": {
+			"arg": 428,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3091,
+			"description": "CB Fuel Quantity(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FUEL-QTY-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3092": {
+			"arg": 429,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3092,
+			"description": "CB 28V Trans(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "TRANS-28V-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3093": {
+			"arg": 430,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3093,
+			"description": "CB Fail Relay(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "FAIL-RELAY-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3094": {
+			"arg": 431,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3094,
+			"description": "CB Pressure Fuel(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PRESS-FUEL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3095": {
+			"arg": 432,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3095,
+			"description": "CB Pressure Torque(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PRESS-TORQ-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3096": {
+			"arg": 433,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3096,
+			"description": "CB Pressure XMSN(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PRESS-XMSN-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3097": {
+			"arg": 434,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3097,
+			"description": "CB Pressure Eng(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "PRESS-ENG-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.cmd_3098": {
+			"arg": 435,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3098,
+			"description": "CB Course Ind(N/F), ON/OFF",
+			"deviceId": 1,
+			"elementName": "COURSE-IND-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.Button_16": {
+			"bindings": [
+				{
+					"name": "Governor Auto/Emer",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3016,
+			"description": "Governor Auto/Emer",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_17": {
+			"bindings": [
+				{
+					"name": "De-Ice Switch",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3017,
+			"description": "De-Ice Switch",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_18": {
+			"bindings": [
+				{
+					"name": "Start-up engine",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3018,
+			"description": "Start-up engine",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_19": {
+			"bindings": [
+				{
+					"name": "Decrease Turbine RPM",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Increase Turbine RPM",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3019,
+			"description": "Decrease Turbine RPM (+1 more)",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_22": {
+			"bindings": [
+				{
+					"name": "Low RPM Warning Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3022,
+			"description": "Low RPM Warning Switch",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_25": {
+			"bindings": [
+				{
+					"name": "Throttle Down",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "Throttle Up",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3025,
+			"description": "Throttle Down (+1 more)",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_26": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Throttle"
+				}
+			],
+			"commandId": 3026,
+			"description": "Throttle",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_28": {
+			"bindings": [
+				{
+					"name": "Throttle Stop Switch",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3028,
+			"description": "Throttle Stop Switch",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_32": {
+			"bindings": [
+				{
+					"name": "Throttle Cutoff Position",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3032,
+			"description": "Throttle Cutoff Position",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_33": {
+			"bindings": [
+				{
+					"name": "Throttle Start Position",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3033,
+			"description": "Throttle Start Position",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_34": {
+			"bindings": [
+				{
+					"name": "Throttle Idle Position",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3034,
+			"description": "Throttle Idle Position",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.CHIP-DET-PTR": {
+			"arg": 86,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Chip Detector Switch, LMB - Tail Rotor / RMB - XMSN",
+			"deviceId": 3,
+			"elementName": "CHIP-DET-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.DE-ICE-PTR": {
+			"arg": 84,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "De-Ice Switch, ON/OFF",
+			"deviceId": 3,
+			"elementName": "DE-ICE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.ENGINE-BTN-1-PTR": {
+			"arg": 206,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "Throttle Stop Switch, ON/OFF",
+			"deviceId": 3,
+			"elementName": "ENGINE-BTN-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.FIRE-DETECTOR-PTR": {
+			"arg": 278,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Fire Detector Test Button - Push to test",
+			"deviceId": 3,
+			"elementName": "FIRE-DETECTOR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.GOV-PTR": {
+			"arg": 85,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "Governor Switch, EMER/AUTO",
+			"deviceId": 3,
+			"elementName": "GOV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.GOV-RPM-1-PTR": {
+			"arg": 203,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "Governor RPM Switch, Decrease/Increase",
+			"deviceId": 3,
+			"elementName": "GOV-RPM-1-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.GOV-RPM-2-PTR": {
+			"arg": 210,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "Governor RPM Switch Copilot, Decrease/Increase",
+			"deviceId": 3,
+			"elementName": "GOV-RPM-2-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.LOW-RPM-PTR": {
+			"arg": 80,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "Low RPM Warning Switch, AUDIO/OFF",
+			"deviceId": 3,
+			"elementName": "LOW-RPM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.THROTTLE-1-PTR": {
+			"arg": 250,
+			"argLim": [
+				-1.0,
+				0.4
+			],
+			"commandId": 3024,
+			"description": "Throttle",
+			"deviceId": 3,
+			"elementName": "THROTTLE-1-PTR",
+			"type": "continuous"
+		},
+		"ENGINE_INTERFACE.THROTTLE-2-PTR": {
+			"arg": 250,
+			"argLim": [
+				-1.0,
+				0.4
+			],
+			"commandId": 3030,
+			"description": "Throttle Copilot",
+			"deviceId": 3,
+			"elementName": "THROTTLE-2-PTR",
+			"type": "continuous"
+		},
+		"EXTERNAL_CARGO_VIEW.Button_1": {
+			"bindings": [
+				{
+					"name": "Cargo View",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3001,
+			"description": "Cargo View",
+			"deviceId": 51,
+			"type": "raw"
+		},
+		"EXT_CARGO_EQUIPMENT.Button_4": {
+			"bindings": [
+				{
+					"name": "External Cargo Safety",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3004,
+			"description": "External Cargo Safety",
+			"deviceId": 52,
+			"type": "raw"
+		},
+		"EXT_CARGO_EQUIPMENT.Button_5": {
+			"bindings": [
+				{
+					"name": "External Cargo Unhook",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3005,
+			"description": "External Cargo Unhook",
+			"deviceId": 52,
+			"type": "raw"
+		},
+		"EXT_CARGO_EQUIPMENT.CARGO-REL-PTR": {
+			"arg": 228,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Cargo Safety",
+			"deviceId": 52,
+			"elementName": "CARGO-REL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_CARGO_EQUIPMENT.CARGO-RELEASE-1-PTR": {
+			"arg": 195,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Cargo Release Pilot",
+			"deviceId": 52,
+			"elementName": "CARGO-RELEASE-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EXT_CARGO_EQUIPMENT.CARGO-RELEASE-2-PTR": {
+			"arg": 198,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Cargo Release CoPilot",
+			"deviceId": 52,
+			"elementName": "CARGO-RELEASE-2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FLEX_SIGHT.Button_2": {
+			"bindings": [
+				{
+					"name": "Flexible Sight Intensity Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Flexible Sight Intensity Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3002,
+			"description": "Flexible Sight Intensity Decrease (+1 more)",
+			"deviceId": 32,
+			"type": "raw"
+		},
+		"FLEX_SIGHT.Button_5": {
+			"bindings": [
+				{
+					"name": "Toggle Flexible Sight",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Toggle Flexible Sight",
+			"deviceId": 32,
+			"type": "raw"
+		},
+		"FLEX_SIGHT.SIGHT-BRIGHT-SWITCHER-PTR": {
+			"arg": 281,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Sighting Station Intensity Knob",
+			"deviceId": 32,
+			"elementName": "SIGHT-BRIGHT-SWITCHER-PTR",
+			"type": "continuous"
+		},
+		"FLEX_SIGHT.SIGHT-TUMB-PTR": {
+			"arg": 408,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Sighting Station Lamp Switch, BACKUP/OFF/MAIN",
+			"deviceId": 32,
+			"elementName": "SIGHT-TUMB-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.Button_3": {
+			"bindings": [
+				{
+					"name": "Main Fuel Switch",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Main Fuel Switch",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"FUELSYS_INTERFACE.FUEL-GAUGE-PTR": {
+			"arg": 240,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Test Fuel Gauge Button - Push to Test",
+			"deviceId": 2,
+			"elementName": "FUEL-GAUGE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.FUEL-PTR": {
+			"arg": 81,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Main Fuel Switch, ON/OFF",
+			"deviceId": 2,
+			"elementName": "FUEL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GMCS.ADF-VOR-PTR": {
+			"arg": 164,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "ADF/VOR Control Switch",
+			"deviceId": 10,
+			"elementName": "ADF-VOR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GMCS.Button_6": {
+			"bindings": [
+				{
+					"name": "GMC Operating Mode Slave/Gyro",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "GMC Operating Mode Slave/Gyro",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"GMCS.Button_7": {
+			"bindings": [
+				{
+					"name": "GMC Manual Heading Decrease",
+					"valuePressed": 1.0
+				},
+				{
+					"name": "GMC Manual Heading Increase",
+					"valuePressed": -1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "GMC Manual Heading Decrease (+1 more)",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"GMCS.Button_8": {
+			"bindings": [
+				{
+					"name": "GMC Pointer #1 ADF/VOR",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "GMC Pointer #1 ADF/VOR",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"GMCS.Button_9": {
+			"bindings": [
+				{
+					"name": "GMC Synchronizing +",
+					"valuePressed": 1.0
+				},
+				{
+					"name": "GMC Synchronizing o",
+					"valuePressed": -1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "GMC Synchronizing + (+1 more)",
+			"deviceId": 10,
+			"type": "raw"
+		},
+		"GMCS.DG-SLAVE-PTR": {
+			"arg": 241,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Gyro Mode Switch, DG/Slave",
+			"deviceId": 10,
+			"elementName": "DG-SLAVE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GMCS.HDG-SET-PTR": {
+			"arg": 163,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Heading Set Knob",
+			"deviceId": 10,
+			"elementName": "HDG-SET-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"GMCS.HDG-SYNC-PTR": {
+			"arg": 161,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Compass Synchronizing Knob",
+			"deviceId": 10,
+			"elementName": "HDG-SYNC-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"HEAD_WRAPPER.Button_5": {
+			"bindings": [
+				{
+					"name": "Uncoupled Aiming On/Off",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Uncoupled Aiming On/Off",
+			"deviceId": 46,
+			"type": "raw"
+		},
+		"HEATING_SYSTEM.BLEND-AIR-PTR": {
+			"arg": 236,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3001,
+			"description": "Bleed Air Switch, OFF/1/2/3/4",
+			"deviceId": 47,
+			"elementName": "BLEND-AIR-PTR",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"HYDRO_SYS_INTERFACE.Button_5": {
+			"bindings": [
+				{
+					"name": "Hydraulic Control Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Hydraulic Control Switch",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HYDRO_SYS_INTERFACE.Button_6": {
+			"bindings": [
+				{
+					"name": "Force Trim Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "Force Trim Switch",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"HYDRO_SYS_INTERFACE.FORCE-TRIM-PTR": {
+			"arg": 89,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Force Trim Switch, ON/OFF",
+			"deviceId": 4,
+			"elementName": "FORCE-TRIM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_SYS_INTERFACE.HYD-CONT-PTR": {
+			"arg": 90,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Hydraulic Control Switch, ON/OFF",
+			"deviceId": 4,
+			"elementName": "HYD-CONT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.CODE-PTR": {
+			"arg": 58,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Code Knob",
+			"deviceId": 17,
+			"elementName": "CODE-PTR",
+			"incValue": 1.0,
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"IFF.IDENT-MIC SWITCH-PTR": {
+			"arg": 66,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "Ident/Mic Switch",
+			"deviceId": 17,
+			"elementName": "IDENT-MIC SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.MASTER-CONTROL-PTR": {
+			"arg": 59,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3008,
+			"description": "Master Knob, OFF/STBY/LOW/NORM/EMER",
+			"deviceId": 17,
+			"elementName": "MASTER-CONTROL-PTR",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"IFF.MODE-1-WHEEL-1-WINDOW-PTR": {
+			"arg": 68,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "MODE1-WHEEL1",
+			"deviceId": 17,
+			"elementName": "MODE-1-WHEEL-1-WINDOW-PTR",
+			"positions": 4,
+			"step": 0.333333,
+			"type": "discrete"
+		},
+		"IFF.MODE-1-WHEEL-2-WINDOW-PTR": {
+			"arg": 69,
+			"argLim": [
+				0.0,
+				0.777778
+			],
+			"commandId": 3002,
+			"description": "MODE1-WHEEL2",
+			"deviceId": 17,
+			"elementName": "MODE-1-WHEEL-2-WINDOW-PTR",
+			"positions": 8,
+			"step": 0.111111,
+			"type": "discrete"
+		},
+		"IFF.MODE-3A-WHEEL-1-WINDOW-PTR": {
+			"arg": 70,
+			"argLim": [
+				0.0,
+				0.777778
+			],
+			"commandId": 3003,
+			"description": "MODE3A-WHEEL1",
+			"deviceId": 17,
+			"elementName": "MODE-3A-WHEEL-1-WINDOW-PTR",
+			"positions": 8,
+			"step": 0.111111,
+			"type": "discrete"
+		},
+		"IFF.MODE-3A-WHEEL-2-WINDOW-PTR": {
+			"arg": 71,
+			"argLim": [
+				0.0,
+				0.777778
+			],
+			"commandId": 3004,
+			"description": "MODE3A-WHEEL2",
+			"deviceId": 17,
+			"elementName": "MODE-3A-WHEEL-2-WINDOW-PTR",
+			"positions": 8,
+			"step": 0.111111,
+			"type": "discrete"
+		},
+		"IFF.MODE-3A-WHEEL-3-WINDOW-PTR": {
+			"arg": 72,
+			"argLim": [
+				0.0,
+				0.777778
+			],
+			"commandId": 3005,
+			"description": "MODE3A-WHEEL3",
+			"deviceId": 17,
+			"elementName": "MODE-3A-WHEEL-3-WINDOW-PTR",
+			"positions": 8,
+			"step": 0.111111,
+			"type": "discrete"
+		},
+		"IFF.MODE-3A-WHEEL-4-WINDOW-PTR": {
+			"arg": 73,
+			"argLim": [
+				0.0,
+				0.777778
+			],
+			"commandId": 3006,
+			"description": "MODE3A-WHEEL4",
+			"deviceId": 17,
+			"elementName": "MODE-3A-WHEEL-4-WINDOW-PTR",
+			"positions": 8,
+			"step": 0.111111,
+			"type": "discrete"
+		},
+		"IFF.MODE-4-SWITCH-PTR": {
+			"arg": 67,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "IFF On/Out Switch",
+			"deviceId": 17,
+			"elementName": "MODE-4-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.OUT-(AUDIO-LIGHT)-PTR": {
+			"arg": 60,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Audio/light Switch",
+			"deviceId": 17,
+			"elementName": "OUT-(AUDIO-LIGHT)-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.RAD-TEST-MON-SWITCH-PTR": {
+			"arg": 65,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "RAD Switch, TEST/MON",
+			"deviceId": 17,
+			"elementName": "RAD-TEST-MON-SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.REPLY-LIGHT-PTR_arg74": {
+			"arg": 74,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Reply Button",
+			"deviceId": 17,
+			"elementName": "REPLY-LIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.REPLY-LIGHT-PTR_arg78": {
+			"arg": 78,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "Reply Button",
+			"deviceId": 17,
+			"elementName": "REPLY-LIGHT-PTR",
+			"type": "continuous"
+		},
+		"IFF.TEST-LIGHT-PTR_arg75": {
+			"arg": 75,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Test Button",
+			"deviceId": 17,
+			"elementName": "TEST-LIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.TEST-LIGHT-PTR_arg79": {
+			"arg": 79,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "Test Button",
+			"deviceId": 17,
+			"elementName": "TEST-LIGHT-PTR",
+			"type": "continuous"
+		},
+		"IFF.TEST-M-1-PTR": {
+			"arg": 61,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Test M-1 Switch",
+			"deviceId": 17,
+			"elementName": "TEST-M-1-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.TEST-M-2-PTR": {
+			"arg": 62,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Test M-2 Switch",
+			"deviceId": 17,
+			"elementName": "TEST-M-2-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.TEST-M-3A-PTR": {
+			"arg": 63,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Test M-3A Switch",
+			"deviceId": 17,
+			"elementName": "TEST-M-3A-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.TEST-M-3C-PTR": {
+			"arg": 64,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Test M-C Switch",
+			"deviceId": 17,
+			"elementName": "TEST-M-3C-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.Button_10": {
+			"bindings": [
+				{
+					"name": "Co-pilot's radio trigger ICS (call radio menu)",
+					"valueDown": 0.5,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Co-pilot's radio trigger RADIO (call radio menu)",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3010,
+			"description": "Co-pilot's radio trigger ICS (call radio menu) (+1 more)",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"INTERCOM.Button_11": {
+			"bindings": [
+				{
+					"name": "Intercom Volume Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "Intercom Volume Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "Intercom Volume Decrease (+1 more)",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"INTERCOM.Button_12": {
+			"bindings": [
+				{
+					"name": "Intercom Mode Selector (rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Intercom Mode Selector (rotary)",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"INTERCOM.Button_13": {
+			"bindings": [
+				{
+					"name": "Intercom Receiver #1",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Intercom Receiver #2",
+					"valueDown": 0.1
+				},
+				{
+					"name": "Intercom Receiver #3",
+					"valueDown": 0.2
+				},
+				{
+					"name": "Intercom Receiver #4",
+					"valueDown": 0.3
+				},
+				{
+					"name": "Intercom Receiver INT",
+					"valueDown": 0.4
+				},
+				{
+					"name": "Intercom Receiver NAV",
+					"valueDown": 0.5
+				}
+			],
+			"commandId": 3013,
+			"description": "Intercom Receiver #1 (+5 more)",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"INTERCOM.Button_14": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "C1611 Intercom Volume Knob"
+				}
+			],
+			"commandId": 3014,
+			"description": "C1611 Intercom Volume Knob",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"INTERCOM.RADIO/ICS-1-PTR": {
+			"arg": 194,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Radio/ICS Switch",
+			"deviceId": 21,
+			"elementName": "RADIO/ICS-1-PTR",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"INTERCOM.RECEIVER-1-PTR": {
+			"arg": 23,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "VHF FM Radio Receiver Switch, ON/OFF",
+			"deviceId": 21,
+			"elementName": "RECEIVER-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.RECEIVER-2-PTR": {
+			"arg": 24,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "UHF Radio Receiver Switch, ON/OFF",
+			"deviceId": 21,
+			"elementName": "RECEIVER-2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.RECEIVER-3-PTR": {
+			"arg": 25,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "VHF AM Radio Receiver Switch, ON/OFF",
+			"deviceId": 21,
+			"elementName": "RECEIVER-3-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.RECEIVER-4-PTR": {
+			"arg": 26,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Receiver 4 N/F Switch, ON/OFF",
+			"deviceId": 21,
+			"elementName": "RECEIVER-4-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.RECEIVER-INT-PTR": {
+			"arg": 27,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "INT Receiver Switch, ON/OFF",
+			"deviceId": 21,
+			"elementName": "RECEIVER-INT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.RECEIVER-NAV-PTR": {
+			"arg": 28,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Receiver NAV Switch, ON/OFF",
+			"deviceId": 21,
+			"elementName": "RECEIVER-NAV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"INTERCOM.SDP-VOLUME-CONTROL-PTR": {
+			"arg": 29,
+			"argLim": [
+				0.3,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Intercom Volume Knob",
+			"deviceId": 21,
+			"elementName": "SDP-VOLUME-CONTROL-PTR",
+			"type": "continuous"
+		},
+		"INTERCOM.TRANSMIT-INTERPHONE-SWITCH-PTR": {
+			"arg": 30,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3008,
+			"description": "Intercom Mode (PVT - hot line; INT - interphone; 1 - VHF FM transmitter; 2 - UHF transmitter; 3 - VHF AM transmitter; 4 - Not used)",
+			"deviceId": 21,
+			"elementName": "TRANSMIT-INTERPHONE-SWITCH-PTR",
+			"positions": 6,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"KNEEBOARD.Button_1": {
+			"bindings": [
+				{
+					"name": "Kneeboard Next Page",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3001,
+			"description": "Kneeboard Next Page",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"KNEEBOARD.Button_2": {
+			"bindings": [
+				{
+					"name": "Kneeboard Previous Page",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "Kneeboard Previous Page",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"KNEEBOARD.Button_3": {
+			"bindings": [
+				{
+					"name": "Kneeboard current position mark point",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Kneeboard current position mark point",
+			"deviceId": 45,
+			"type": "raw"
+		},
+		"MARKER_BEACON.Button_3": {
+			"bindings": [
+				{
+					"name": "Marker Beacon Volume Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "Marker Beacon Volume Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Marker Beacon Volume Decrease (+1 more)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"MARKER_BEACON.Button_4": {
+			"bindings": [
+				{
+					"name": "Marker Beacon Sensitivity High/Low",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Marker Beacon Sensitivity High/Low",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"MARKER_BEACON.Button_5": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Marker Beacon Volume Knob"
+				}
+			],
+			"commandId": 3005,
+			"description": "Marker Beacon Volume Knob",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"MARKER_BEACON.SENSING-SWITCH-PTR": {
+			"arg": 55,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Marker Beacon Sensing Switch, HIGH/LOW",
+			"deviceId": 26,
+			"elementName": "SENSING-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MARKER_BEACON.VOLUME-OFF-INCR-CONTROL-PTR": {
+			"arg": 57,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Marker Beacon Knob, ON/OFF/Volume",
+			"deviceId": 26,
+			"elementName": "VOLUME-OFF-INCR-CONTROL-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.ANTI-COLL-PTR": {
+			"arg": 225,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Anti-Collision Lights Switch, ON/OFF",
+			"deviceId": 7,
+			"elementName": "ANTI-COLL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.Button_12": {
+			"bindings": [
+				{
+					"name": "Landing Light Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Landing Light Switch",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_13": {
+			"bindings": [
+				{
+					"name": "Nav Lights Dim/Bright",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "Nav Lights Dim/Bright",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_14": {
+			"bindings": [
+				{
+					"name": "Anti Collision Light Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "Anti Collision Light Switch",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_22": {
+			"bindings": [
+				{
+					"name": "Overhead Console Light Decrease",
+					"valuePressed": -0.4
+				},
+				{
+					"name": "Overhead Console Light Increase",
+					"valuePressed": 0.4
+				}
+			],
+			"commandId": 3022,
+			"description": "Overhead Console Light Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_23": {
+			"bindings": [
+				{
+					"name": "Pedestal Light Decrease",
+					"valuePressed": -0.4
+				},
+				{
+					"name": "Pedestal Light Increase",
+					"valuePressed": 0.4
+				}
+			],
+			"commandId": 3023,
+			"description": "Pedestal Light Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_24": {
+			"bindings": [
+				{
+					"name": "Secondary Instrument Light Decrease",
+					"valuePressed": -0.4
+				},
+				{
+					"name": "Secondary Instrument Light Increase",
+					"valuePressed": 0.4
+				}
+			],
+			"commandId": 3024,
+			"description": "Secondary Instrument Light Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_25": {
+			"bindings": [
+				{
+					"name": "Engine Instrument Light Decrease",
+					"valuePressed": -0.4
+				},
+				{
+					"name": "Engine Instrument Light Increase",
+					"valuePressed": 0.4
+				}
+			],
+			"commandId": 3025,
+			"description": "Engine Instrument Light Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_26": {
+			"bindings": [
+				{
+					"name": "Copilot Instrument Light Decrease",
+					"valuePressed": -0.4
+				},
+				{
+					"name": "Copilot Instrument Light Increase",
+					"valuePressed": 0.4
+				}
+			],
+			"commandId": 3026,
+			"description": "Copilot Instrument Light Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_27": {
+			"bindings": [
+				{
+					"name": "Pilot Instrument Light Decrease",
+					"valuePressed": -0.4
+				},
+				{
+					"name": "Pilot Instrument Light Increase",
+					"valuePressed": 0.4
+				}
+			],
+			"commandId": 3027,
+			"description": "Pilot Instrument Light Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_28": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Overhead Console Light Knob"
+				}
+			],
+			"commandId": 3028,
+			"description": "Overhead Console Light Knob",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_29": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Pedestal Light Knob"
+				}
+			],
+			"commandId": 3029,
+			"description": "Pedestal Light Knob",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_30": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Secondary Instrument Light Knob"
+				}
+			],
+			"commandId": 3030,
+			"description": "Secondary Instrument Light Knob",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_31": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Engine Instrument Light Knob"
+				}
+			],
+			"commandId": 3031,
+			"description": "Engine Instrument Light Knob",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_32": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Copilot Instrument Light Knob"
+				}
+			],
+			"commandId": 3032,
+			"description": "Copilot Instrument Light Knob",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_33": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Pilot Instrument Light Knob"
+				}
+			],
+			"commandId": 3033,
+			"description": "Pilot Instrument Light Knob",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_37": {
+			"bindings": [
+				{
+					"name": "Search light Off",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Search light On",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Search light Stow",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3037,
+			"description": "Search light Off (+2 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.Button_38": {
+			"bindings": [
+				{
+					"name": "Landing light Extend",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Landing light Retract",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Landing light Stop",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3038,
+			"description": "Landing light Extend (+2 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"NAVLIGHT_SYSTEM.CONSOLE-PTR": {
+			"arg": 230,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "Overhead Console Panel Lights Brightness Rheostat",
+			"deviceId": 7,
+			"elementName": "CONSOLE-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.COPILOT-PTR": {
+			"arg": 234,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Copilot Instrument Lights Brightness Rheostat",
+			"deviceId": 7,
+			"elementName": "COPILOT-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.DIM-BRIGHT-PTR": {
+			"arg": 224,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Position Lights Switch, DIM/BRIGHT",
+			"deviceId": 7,
+			"elementName": "DIM-BRIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.ENGINE-PTR": {
+			"arg": 233,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Engine Instrument Lights Brightness Rheostat",
+			"deviceId": 7,
+			"elementName": "ENGINE-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.FWD-PTR": {
+			"arg": 226,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "Dome Light Switch, WHITE/OFF/GREEN",
+			"deviceId": 7,
+			"elementName": "FWD-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.LDG-LT-1-PTR": {
+			"arg": 202,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Landing Light Switch, ON/OFF",
+			"deviceId": 7,
+			"elementName": "LDG-LT-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.LDG-LT-2-1-PTR": {
+			"arg": 205,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Landing Light Control Switch, EXT/OFF/RETR",
+			"deviceId": 7,
+			"elementName": "LDG-LT-2-1-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.NVG-POSITION-LTS-PTR": {
+			"arg": 222,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3001,
+			"description": "Navigation Lights Switch, OFF/1/2/3/4/BRT",
+			"deviceId": 7,
+			"elementName": "NVG-POSITION-LTS-PTR",
+			"positions": 6,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.PED-PTR": {
+			"arg": 231,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "Pedestal Lights Brightness Rheostat",
+			"deviceId": 7,
+			"elementName": "PED-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.PILOT-PTR": {
+			"arg": 235,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "Pilot Instrument Lights Brightness Rheostat",
+			"deviceId": 7,
+			"elementName": "PILOT-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.SEC-PTR": {
+			"arg": 232,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Secondary Instrument Lights Brightness Rheostat",
+			"deviceId": 7,
+			"elementName": "SEC-PTR",
+			"type": "continuous"
+		},
+		"NAVLIGHT_SYSTEM.SL-ON-OFF-STOW-1-PTR": {
+			"arg": 201,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Search Light Switch, ON/OFF/STOW",
+			"deviceId": 7,
+			"elementName": "SL-ON-OFF-STOW-1-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.STEADY-OFF-FLASH-PTR": {
+			"arg": 223,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Position Lights Switch, STEADY/OFF/FLASH",
+			"deviceId": 7,
+			"elementName": "STEADY-OFF-FLASH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PILOT_SIGHT.Button_2": {
+			"bindings": [
+				{
+					"name": "Pilot Sight Intensity Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Pilot Sight Intensity Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3002,
+			"description": "Pilot Sight Intensity Decrease (+1 more)",
+			"deviceId": 49,
+			"type": "raw"
+		},
+		"PILOT_SIGHT.Button_4": {
+			"bindings": [
+				{
+					"name": "Pilot Sight Elevation Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Pilot Sight Elevation Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3004,
+			"description": "Pilot Sight Elevation Decrease (+1 more)",
+			"deviceId": 49,
+			"type": "raw"
+		},
+		"PILOT_SIGHT.Button_7": {
+			"bindings": [
+				{
+					"name": "Pilot Sight Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "Pilot Sight Switch",
+			"deviceId": 49,
+			"type": "raw"
+		},
+		"PILOT_SIGHT.PILOT-SIGHT-BRIGHT-PTR": {
+			"arg": 440,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Pilot Sighting Station Intensity Knob",
+			"deviceId": 49,
+			"elementName": "PILOT-SIGHT-BRIGHT-PTR",
+			"type": "continuous"
+		},
+		"PILOT_SIGHT.PILOT-SIGHT-POS-PTR": {
+			"arg": 438,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Pilot Sight, Armed/Safe",
+			"deviceId": 49,
+			"elementName": "PILOT-SIGHT-POS-PTR",
+			"indicatorArgLim": [
+				0.0,
+				1.0
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PILOT_SIGHT.PILOT-SIGHT-SCALE-PTR": {
+			"arg": 441,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Sight Elevation Knob",
+			"deviceId": 49,
+			"elementName": "PILOT-SIGHT-SCALE-PTR",
+			"type": "continuous"
+		},
+		"PILOT_SIGHT.PILOT-SIGHT-SWITCH-PTR": {
+			"arg": 439,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Pilot Sight Switch, ON/OFF",
+			"deviceId": 49,
+			"elementName": "PILOT-SIGHT-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR_ALTIMETER.Button_4": {
+			"bindings": [
+				{
+					"name": "Radar Altimeter, Test",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Radar Altimeter, Test",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"RADAR_ALTIMETER.Button_5": {
+			"bindings": [
+				{
+					"name": "Radar Altimeter, Low Altitude Decrease",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Radar Altimeter, Low Altitude Increase",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3005,
+			"description": "Radar Altimeter, Low Altitude Decrease (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"RADAR_ALTIMETER.Button_6": {
+			"bindings": [
+				{
+					"name": "Radar Altimeter, Hight Altitude Decrease",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Radar Altimeter, Hight Altitude Increase",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3006,
+			"description": "Radar Altimeter, Hight Altitude Decrease (+1 more)",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"RADAR_ALTIMETER.Button_8": {
+			"bindings": [
+				{
+					"name": "Radar Altimeter Power Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "Radar Altimeter Power Switch",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"RADAR_ALTIMETER.PITCH-HI-ALT-PTR_arg446": {
+			"arg": 446,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Test / Hight Set. Left mouse click to Test. Rotate mouse wheel to set Hight",
+			"deviceId": 13,
+			"elementName": "PITCH-HI-ALT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR_ALTIMETER.PITCH-HI-ALT-PTR_arg448": {
+			"arg": 448,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Test / Hight Set. Left mouse click to Test. Rotate mouse wheel to set Hight",
+			"deviceId": 13,
+			"elementName": "PITCH-HI-ALT-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"RADAR_ALTIMETER.PITCH-LO-ALT-PTR": {
+			"arg": 445,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Low Altitude Setting Knob",
+			"deviceId": 13,
+			"elementName": "PITCH-LO-ALT-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"RADAR_ALTIMETER.RADAR-ALT-PTR": {
+			"arg": 449,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Radar Altimeter Power Switch, ON/OFF",
+			"deviceId": 13,
+			"elementName": "RADAR-ALT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SYS_CONTROLLER.BRIGHT-DIM-SWITCH-PTR": {
+			"arg": 112,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Bright/Dim switch",
+			"deviceId": 15,
+			"elementName": "BRIGHT-DIM-SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SYS_CONTROLLER.Button_3": {
+			"bindings": [
+				{
+					"name": "Caution Panel Test/Reset Switch Reset",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Caution Panel Test/Reset Switch Test",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Caution Panel Test/Reset Switch Reset (+1 more)",
+			"deviceId": 15,
+			"type": "raw"
+		},
+		"SYS_CONTROLLER.Button_4": {
+			"bindings": [
+				{
+					"name": "Caution Panel Dim Switch Bright",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Caution Panel Dim Switch Dim",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Caution Panel Dim Switch Bright (+1 more)",
+			"deviceId": 15,
+			"type": "raw"
+		},
+		"SYS_CONTROLLER.RESET-TEST-SWITCH-PTR": {
+			"arg": 111,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Reset/Test switch",
+			"deviceId": 15,
+			"elementName": "RESET-TEST-SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UHF_ARC_51.0.05-MHZ-CONTROL-PTR": {
+			"arg": 20,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "50 kHz Selector",
+			"deviceId": 22,
+			"elementName": "0.05-MHZ-CONTROL-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UHF_ARC_51.1-MHZ-CONTROL-PTR": {
+			"arg": 19,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "1 MHz Selector",
+			"deviceId": 22,
+			"elementName": "1-MHZ-CONTROL-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UHF_ARC_51.10-MHZ-CONTROL-PTR": {
+			"arg": 18,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "10 MHz Selector",
+			"deviceId": 22,
+			"elementName": "10-MHZ-CONTROL-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"UHF_ARC_51.Button_10": {
+			"bindings": [
+				{
+					"name": "UHF Radio Squelch Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3010,
+			"description": "UHF Radio Squelch Switch",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_11": {
+			"bindings": [
+				{
+					"name": "UHF Preset Channel Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "UHF Preset Channel Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "UHF Preset Channel Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_12": {
+			"bindings": [
+				{
+					"name": "UHF Radio 10MHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "UHF Radio 10MHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "UHF Radio 10MHz Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_13": {
+			"bindings": [
+				{
+					"name": "UHF Radio 1MHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "UHF Radio 1MHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "UHF Radio 1MHz Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_14": {
+			"bindings": [
+				{
+					"name": "UHF Radio 50kHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "UHF Radio 50kHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "UHF Radio 50kHz Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_15": {
+			"bindings": [
+				{
+					"name": "UHF Radio Freq. Mode Select(rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3015,
+			"description": "UHF Radio Freq. Mode Select(rotary)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_16": {
+			"bindings": [
+				{
+					"name": "UHF Radio Mode Select(rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3016,
+			"description": "UHF Radio Mode Select(rotary)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_17": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "UHF Radio Volume Knob"
+				}
+			],
+			"commandId": 3017,
+			"description": "UHF Radio Volume Knob",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.Button_9": {
+			"bindings": [
+				{
+					"name": "UHF Radio Volume Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "UHF Radio Volume Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "UHF Radio Volume Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UHF_ARC_51.FUNCTION-SELECT-SWITCH-PTR": {
+			"arg": 17,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3006,
+			"description": "Function Dial",
+			"deviceId": 22,
+			"elementName": "FUNCTION-SELECT-SWITCH-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"UHF_ARC_51.MODE-SELECT-SWITCH-PTR": {
+			"arg": 15,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3005,
+			"description": "Frequency Mode Dial",
+			"deviceId": 22,
+			"elementName": "MODE-SELECT-SWITCH-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"UHF_ARC_51.PRESET-CHANNEL-PTR": {
+			"arg": 16,
+			"argLim": [
+				0.0,
+				0.95
+			],
+			"commandId": 3001,
+			"description": "Preset Channel Selector",
+			"deviceId": 22,
+			"elementName": "PRESET-CHANNEL-PTR",
+			"positions": 20,
+			"step": 0.05,
+			"type": "discrete"
+		},
+		"UHF_ARC_51.SQ-DISABLE-SWITCH-PTR": {
+			"arg": 22,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Squelch Disable Switch, ON/OFF",
+			"deviceId": 22,
+			"elementName": "SQ-DISABLE-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UHF_ARC_51.UHF-VOLUME-CONTROL-PTR": {
+			"arg": 21,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Volume Knob",
+			"deviceId": 22,
+			"elementName": "UHF-VOLUME-CONTROL-PTR",
+			"type": "continuous"
+		},
+		"VHF_ARC_131.Button_10": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio 1MHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VHF FM Radio 1MHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3010,
+			"description": "VHF FM Radio 1MHz Decrease (+1 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_11": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio 100kHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VHF FM Radio 100kHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "VHF FM Radio 100kHz Decrease (+1 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_12": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio 50kHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VHF FM Radio 50kHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "VHF FM Radio 50kHz Decrease (+1 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_13": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio Squelch Select (rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "VHF FM Radio Squelch Select (rotary)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_14": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio Mode Select (rotary)",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "VHF FM Radio Mode Select (rotary)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_15": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "VHF FM Radio Volume Knob"
+				}
+			],
+			"commandId": 3015,
+			"description": "VHF FM Radio Volume Knob",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_8": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio Volume Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "VHF FM Radio Volume Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "VHF FM Radio Volume Decrease (+1 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.Button_9": {
+			"bindings": [
+				{
+					"name": "VHF FM Radio 10MHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VHF FM Radio 10MHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "VHF FM Radio 10MHz Decrease (+1 more)",
+			"deviceId": 23,
+			"type": "raw"
+		},
+		"VHF_ARC_131.FREQUENCY-SELECTOR-1-PTR": {
+			"arg": 31,
+			"argLim": [
+				0.3,
+				0.7
+			],
+			"commandId": 3001,
+			"description": "Frequency Tens MHz Selector",
+			"deviceId": 23,
+			"elementName": "FREQUENCY-SELECTOR-1-PTR",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_131.FREQUENCY-SELECTOR-2-PTR": {
+			"arg": 32,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3002,
+			"description": "Frequency Ones MHz Selector",
+			"deviceId": 23,
+			"elementName": "FREQUENCY-SELECTOR-2-PTR",
+			"positions": 10,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_131.FREQUENCY-SELECTOR-3-PTR": {
+			"arg": 33,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3003,
+			"description": "Frequency Decimals MHz Selector",
+			"deviceId": 23,
+			"elementName": "FREQUENCY-SELECTOR-3-PTR",
+			"positions": 10,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_131.FREQUENCY-SELECTOR-4-PTR": {
+			"arg": 34,
+			"argLim": [
+				0.0,
+				0.1
+			],
+			"commandId": 3004,
+			"description": "Frequency Hundredths MHz Selector",
+			"deviceId": 23,
+			"elementName": "FREQUENCY-SELECTOR-4-PTR",
+			"positions": 2,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_131.MODE-SWITCH-PTR": {
+			"arg": 35,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3007,
+			"description": "Mode Switch, OFF/TR/RETRAN(N/F)/HOME(N/F)",
+			"deviceId": 23,
+			"elementName": "MODE-SWITCH-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_131.SQUELCH-SWITCH-PTR": {
+			"arg": 36,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3005,
+			"description": "Squelch Mode Switch, DIS/CARR/TONE",
+			"deviceId": 23,
+			"elementName": "SQUELCH-SWITCH-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_131.VOLUME-CONTROL-PTR": {
+			"arg": 37,
+			"argLim": [
+				0.3,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Volume Knob",
+			"deviceId": 23,
+			"elementName": "VOLUME-CONTROL-PTR",
+			"type": "continuous"
+		},
+		"VHF_ARC_134.Button_6": {
+			"bindings": [
+				{
+					"name": "VHF AM Radio Power Switch",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "VHF AM Radio Power Switch",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"VHF_ARC_134.Button_7": {
+			"bindings": [
+				{
+					"name": "VHF AM Radio Volume Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "VHF AM Radio Volume Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "VHF AM Radio Volume Decrease (+1 more)",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"VHF_ARC_134.Button_8": {
+			"bindings": [
+				{
+					"name": "VHF AM Radio Freq. MHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VHF AM Radio Freq. MHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "VHF AM Radio Freq. MHz Decrease (+1 more)",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"VHF_ARC_134.Button_9": {
+			"bindings": [
+				{
+					"name": "VHF AM Radio Freq. kHz Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "VHF AM Radio Freq. kHz Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "VHF AM Radio Freq. kHz Decrease (+1 more)",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"VHF_ARC_134.COMMUNICATION-TEST-SWITCH-PTR": {
+			"arg": 6,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Comm Test Button - Push to test",
+			"deviceId": 20,
+			"elementName": "COMMUNICATION-TEST-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"VHF_ARC_134.KHZ-SELECTOR-PTR_arg8": {
+			"arg": 8,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Frequency kHz / Volume. Rotate mouse wheel to change frequency value. Left or Right click to adjust volume",
+			"deviceId": 20,
+			"elementName": "KHZ-SELECTOR-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"VHF_ARC_134.KHZ-SELECTOR-PTR_arg9": {
+			"arg": 9,
+			"argLim": [
+				0.0,
+				0.65
+			],
+			"commandId": 3003,
+			"description": "Frequency kHz / Volume. Rotate mouse wheel to change frequency value. Left or Right click to adjust volume",
+			"deviceId": 20,
+			"elementName": "KHZ-SELECTOR-PTR",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"VHF_ARC_134.MHZ-SELECTOR-PTR_arg5": {
+			"arg": 5,
+			"argLim": [
+				0.85,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Frequency MHz / Power. Right mouse click to cycle power. Rotate mouse wheel to change frequency value",
+			"deviceId": 20,
+			"elementName": "MHZ-SELECTOR-PTR",
+			"positions": 2,
+			"step": 0.15,
+			"type": "discrete"
+		},
+		"VHF_ARC_134.MHZ-SELECTOR-PTR_arg7": {
+			"arg": 7,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Frequency MHz / Power. Right mouse click to cycle power. Rotate mouse wheel to change frequency value",
+			"deviceId": 20,
+			"elementName": "MHZ-SELECTOR-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"WEAPON_SYS.762-SWITCH-PTR": {
+			"arg": 256,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Armament Selector Switch, 7.62/2.75/40",
+			"deviceId": 9,
+			"elementName": "762-SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYS.ARMED-SWITCH-PTR": {
+			"arg": 252,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Armament Switch, ARMED/SAFE/OFF",
+			"deviceId": 9,
+			"elementName": "ARMED-SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYS.Button_20": {
+			"bindings": [
+				{
+					"name": "Armament Off/Safe/Armed Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Armament Off/Safe/Armed Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3020,
+			"description": "Armament Off/Safe/Armed Down (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_21": {
+			"bindings": [
+				{
+					"name": "Armament Selector Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Armament Selector Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3021,
+			"description": "Armament Selector Down (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_22": {
+			"bindings": [
+				{
+					"name": "Rocket Pair Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Rocket Pair Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3022,
+			"description": "Rocket Pair Decrease (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_23": {
+			"bindings": [
+				{
+					"name": "Jettison Switch",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3023,
+			"description": "Jettison Switch",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_24": {
+			"bindings": [
+				{
+					"name": "Gun Selector Switch Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Gun Selector Switch Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3024,
+			"description": "Gun Selector Switch Down (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_25": {
+			"bindings": [
+				{
+					"name": "Jettison Switch Cover",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3025,
+			"description": "Jettison Switch Cover",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_26": {
+			"bindings": [
+				{
+					"name": "AutoPilot",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3026,
+			"description": "AutoPilot",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_27": {
+			"bindings": [
+				{
+					"name": "Toggle Weapon Hints",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3027,
+			"description": "Toggle Weapon Hints",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_28": {
+			"bindings": [
+				{
+					"name": "AutoPilot ATTITUDE HOLD",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3028,
+			"description": "AutoPilot ATTITUDE HOLD",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_29": {
+			"bindings": [
+				{
+					"name": "AutoPilot LEVEL FLIGHT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3029,
+			"description": "AutoPilot LEVEL FLIGHT",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_30": {
+			"bindings": [
+				{
+					"name": "AutoPilot ORBIT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3030,
+			"description": "AutoPilot ORBIT",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_35": {
+			"bindings": [
+				{
+					"name": "Open/Close Right Gunner Door",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3035,
+			"description": "Open/Close Right Gunner Door",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_36": {
+			"bindings": [
+				{
+					"name": "Open/Close Left Gunner Door",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3036,
+			"description": "Open/Close Left Gunner Door",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_37": {
+			"bindings": [
+				{
+					"name": "AI Panel Show/Hide",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3037,
+			"description": "AI Panel Show/Hide",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_38": {
+			"bindings": [
+				{
+					"name": "AI Left Burst Switch",
+					"valueDown": 0.1
+				},
+				{
+					"name": "AI Left ROE Iterate",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3038,
+			"description": "AI Left Burst Switch (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_39": {
+			"bindings": [
+				{
+					"name": "AI Operator Burst Switch",
+					"valueDown": 0.1
+				},
+				{
+					"name": "AI Operator ROE Iterate",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3039,
+			"description": "AI Operator Burst Switch (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_40": {
+			"bindings": [
+				{
+					"name": "AI Right Burst Switch",
+					"valueDown": 0.1
+				},
+				{
+					"name": "AI Right ROE Iterate",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3040,
+			"description": "AI Right Burst Switch (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_41": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gun Up/Down (Mouse)"
+				}
+			],
+			"commandId": 3041,
+			"description": "Gun Up/Down (Mouse)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_42": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gun Left/Right (Mouse)"
+				}
+			],
+			"commandId": 3042,
+			"description": "Gun Left/Right (Mouse)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_43": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gun Up/Down"
+				},
+				{
+					"axis": true,
+					"name": "Gun Up/Down (Joystick)"
+				}
+			],
+			"commandId": 3043,
+			"description": "Gun Up/Down (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_44": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gun Left/Right"
+				},
+				{
+					"axis": true,
+					"name": "Gun Left/Right (Joystick)"
+				}
+			],
+			"commandId": 3044,
+			"description": "Gun Left/Right (+1 more)",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.Button_45": {
+			"bindings": [
+				{
+					"name": "Absolute/Relative Axis Aiming",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3045,
+			"description": "Absolute/Relative Axis Aiming",
+			"deviceId": 9,
+			"type": "raw"
+		},
+		"WEAPON_SYS.JETT-COVER-PTR": {
+			"arg": 259,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Jettison Switch Cover, OPEN/CLOSE",
+			"deviceId": 9,
+			"elementName": "JETT-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYS.JETT-SWITCH-PTR": {
+			"arg": 260,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "Jettison Switch",
+			"deviceId": 9,
+			"elementName": "JETT-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYS.LRGUN-SWITCH-PTR": {
+			"arg": 253,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Gun Selector Switch, LEFT/ALL/RIGHT",
+			"deviceId": 9,
+			"elementName": "LRGUN-SWITCH-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYS.RKT-PAIR-PTR": {
+			"arg": 257,
+			"argLim": [
+				0.0,
+				0.7
+			],
+			"commandId": 3011,
+			"description": "Rocket Pair Selector Switch",
+			"deviceId": 9,
+			"elementName": "RKT-PAIR-PTR",
+			"positions": 8,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYS.RKT-RESET-PTR": {
+			"arg": 258,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Rocket Reset Button - Push to reset",
+			"deviceId": 9,
+			"elementName": "RKT-RESET-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.Button_11": {
+			"bindings": [
+				{
+					"name": "Ripple Fire Cover",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3011,
+			"description": "Ripple Fire Cover",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"XM_130.Button_12": {
+			"bindings": [
+				{
+					"name": "Ripple Fire Switch",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Ripple Fire Switch",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"XM_130.Button_13": {
+			"bindings": [
+				{
+					"name": "SAFE/ARMED Switcher",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3013,
+			"description": "SAFE/ARMED Switcher",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"XM_130.Button_14": {
+			"bindings": [
+				{
+					"name": "Chaff Mode Switch",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3014,
+			"description": "Chaff Mode Switch",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"XM_130.CHAFF-ARM-SWITCH-PTR": {
+			"arg": 456,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "ARM Switch, SAFE/ARM",
+			"deviceId": 50,
+			"elementName": "CHAFF-ARM-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.CHAFF-ARM-TEST-PTR": {
+			"arg": 457,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Armed Lamp Test Button - Push to test",
+			"deviceId": 50,
+			"elementName": "CHAFF-ARM-TEST-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.CHAFF-PTR_arg454": {
+			"arg": 454,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Chaff counter Reset. Rotate mouse wheel to set Number",
+			"deviceId": 50,
+			"elementName": "CHAFF-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"XM_130.CHAFF-PTR_arg455": {
+			"arg": 455,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Chaff counter Reset. Rotate mouse wheel to set Number",
+			"deviceId": 50,
+			"elementName": "CHAFF-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.FLARE-DISP-PTR": {
+			"arg": 464,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Flare Dispense Button - Push to dispense",
+			"deviceId": 50,
+			"elementName": "FLARE-DISP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.FLARE-PTR_arg452": {
+			"arg": 452,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Flare counter Reset. Rotate mouse wheel to set Number",
+			"deviceId": 50,
+			"elementName": "FLARE-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"XM_130.FLARE-PTR_arg453": {
+			"arg": 453,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Flare counter Reset. Rotate mouse wheel to set Number",
+			"deviceId": 50,
+			"elementName": "FLARE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.PGRM-SWITCH-PTR": {
+			"arg": 459,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Chaff Mode Switch, MAN/PGRM",
+			"deviceId": 50,
+			"elementName": "PGRM-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.RIPPLE-FIRE-COVER-PTR": {
+			"arg": 450,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Ripple Fire Cover, OPEN/CLOSE",
+			"deviceId": 50,
+			"elementName": "RIPPLE-FIRE-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"XM_130.RIPPLE-FIRE-PTR": {
+			"arg": 451,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Ripple Fire Switch, ON/OFF",
+			"deviceId": 50,
+			"elementName": "RIPPLE-FIRE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"arg.AAU_32_Drum_Counter": {
+			"arg": 176,
+			"description": "AAU_32_Drum_Counter"
+		},
+		"arg.ACVoltmeter": {
+			"arg": 150,
+			"description": "ACVoltmeter"
+		},
+		"arg.ADF_ARN83_Frequency": {
+			"arg": 45,
+			"description": "ADF_ARN83_Frequency"
+		},
+		"arg.AIRSPEED_Nose": {
+			"arg": 117,
+			"description": "AIRSPEED_Nose"
+		},
+		"arg.AIRSPEED_Roof": {
+			"arg": 118,
+			"description": "AIRSPEED_Roof"
+		},
+		"arg.ARN83_SignalLevel": {
+			"arg": 40,
+			"description": "ARN83_SignalLevel"
+		},
+		"arg.Alt1AAU_10000_footCount": {
+			"arg": 169,
+			"description": "Alt1AAU_10000_footCount"
+		},
+		"arg.Alt1AAU_1000_footCount": {
+			"arg": 170,
+			"description": "Alt1AAU_1000_footCount"
+		},
+		"arg.Alt1AAU_100_footCount": {
+			"arg": 171,
+			"description": "Alt1AAU_100_footCount"
+		},
+		"arg.Alt_10000_AAU_7A": {
+			"arg": 178,
+			"description": "Alt_10000_AAU_7A"
+		},
+		"arg.Alt_1000_AAU_7A": {
+			"arg": 179,
+			"description": "Alt_1000_AAU_7A"
+		},
+		"arg.Alt_100_AAU_7A": {
+			"arg": 180,
+			"description": "Alt_100_AAU_7A"
+		},
+		"arg.Attitude_Off_flag": {
+			"arg": 148,
+			"description": "Attitude_Off_flag"
+		},
+		"arg.Attitude_Off_flag_left": {
+			"arg": 141,
+			"description": "Attitude_Off_flag_left"
+		},
+		"arg.Attitude_Pitch": {
+			"arg": 143,
+			"description": "Attitude_Pitch"
+		},
+		"arg.Attitude_PitchShift": {
+			"arg": 138,
+			"description": "Attitude_PitchShift"
+		},
+		"arg.Attitude_Pitch_left": {
+			"arg": 136,
+			"description": "Attitude_Pitch_left"
+		},
+		"arg.Attitude_Roll": {
+			"arg": 142,
+			"description": "Attitude_Roll"
+		},
+		"arg.Attitude_Roll_left": {
+			"arg": 135,
+			"description": "Attitude_Roll_left"
+		},
+		"arg.CHAFF_Digit_1": {
+			"arg": 462,
+			"description": "CHAFF_Digit_1"
+		},
+		"arg.CHAFF_Digit_2": {
+			"arg": 463,
+			"description": "CHAFF_Digit_2"
+		},
+		"arg.CLOCK_hours": {
+			"arg": 127,
+			"description": "CLOCK_hours"
+		},
+		"arg.CLOCK_minutes": {
+			"arg": 128,
+			"description": "CLOCK_minutes"
+		},
+		"arg.CLOCK_seconds": {
+			"arg": 129,
+			"description": "CLOCK_seconds"
+		},
+		"arg.CoPilotLight": {
+			"arg": 475,
+			"description": "CoPilotLight"
+		},
+		"arg.CodeOff_flag": {
+			"arg": 177,
+			"description": "CodeOff_flag"
+		},
+		"arg.ConsoleLight": {
+			"arg": 279,
+			"description": "ConsoleLight"
+		},
+		"arg.DCVoltmeter": {
+			"arg": 149,
+			"description": "DCVoltmeter"
+		},
+		"arg.DeadCoPilot": {
+			"arg": 249,
+			"description": "DeadCoPilot"
+		},
+		"arg.DeadPilot": {
+			"arg": 248,
+			"description": "DeadPilot"
+		},
+		"arg.DomeLight": {
+			"arg": 410,
+			"description": "DomeLight"
+		},
+		"arg.DomeLightGreen": {
+			"arg": 411,
+			"description": "DomeLightGreen"
+		},
+		"arg.DownBlisters": {
+			"arg": 412,
+			"description": "DownBlisters"
+		},
+		"arg.EngOilPress": {
+			"arg": 113,
+			"description": "EngOilPress"
+		},
+		"arg.EngOilTemp": {
+			"arg": 114,
+			"description": "EngOilTemp"
+		},
+		"arg.EngineLight": {
+			"arg": 477,
+			"description": "EngineLight"
+		},
+		"arg.EngineTach": {
+			"arg": 122,
+			"description": "EngineTach"
+		},
+		"arg.ExhaustTemp": {
+			"arg": 121,
+			"description": "ExhaustTemp"
+		},
+		"arg.FLARE_Digit_1": {
+			"arg": 460,
+			"description": "FLARE_Digit_1"
+		},
+		"arg.FLARE_Digit_2": {
+			"arg": 461,
+			"description": "FLARE_Digit_2"
+		},
+		"arg.FlexSightAzimuth": {
+			"arg": 261,
+			"description": "FlexSightAzimuth"
+		},
+		"arg.FlexSightElevation": {
+			"arg": 262,
+			"description": "FlexSightElevation"
+		},
+		"arg.FlexSightHeight": {
+			"arg": 263,
+			"description": "FlexSightHeight"
+		},
+		"arg.FromMarker": {
+			"arg": 154,
+			"description": "FromMarker"
+		},
+		"arg.FuelPress": {
+			"arg": 126,
+			"description": "FuelPress"
+		},
+		"arg.FuelQuantity": {
+			"arg": 239,
+			"description": "FuelQuantity"
+		},
+		"arg.GMC_Annunciator": {
+			"arg": 166,
+			"description": "GMC_Annunciator"
+		},
+		"arg.GMC_CoursePointer1": {
+			"arg": 159,
+			"description": "GMC_CoursePointer1"
+		},
+		"arg.GMC_CoursePointer2": {
+			"arg": 160,
+			"description": "GMC_CoursePointer2"
+		},
+		"arg.GMC_Heading": {
+			"arg": 165,
+			"description": "GMC_Heading"
+		},
+		"arg.GMC_HeadingMarker": {
+			"arg": 162,
+			"description": "GMC_HeadingMarker"
+		},
+		"arg.GMC_PowerFail": {
+			"arg": 167,
+			"description": "GMC_PowerFail"
+		},
+		"arg.GasProducerTach": {
+			"arg": 119,
+			"description": "GasProducerTach"
+		},
+		"arg.GasProducerTach_U": {
+			"arg": 120,
+			"description": "GasProducerTach_U"
+		},
+		"arg.HorisontalBar": {
+			"arg": 152,
+			"description": "HorisontalBar"
+		},
+		"arg.HorisontalOFF": {
+			"arg": 158,
+			"description": "HorisontalOFF"
+		},
+		"arg.LeftDoor": {
+			"arg": 420,
+			"description": "LeftDoor"
+		},
+		"arg.LeftWindShield": {
+			"arg": 414,
+			"description": "LeftWindShield"
+		},
+		"arg.LeftWindow": {
+			"arg": 416,
+			"description": "LeftWindow"
+		},
+		"arg.LoadmeterMainGen": {
+			"arg": 436,
+			"description": "LoadmeterMainGen"
+		},
+		"arg.LoadmeterSTBYGen": {
+			"arg": 125,
+			"description": "LoadmeterSTBYGen"
+		},
+		"arg.Marker_Beacon_Lamp": {
+			"arg": 56,
+			"description": "Marker_Beacon_Lamp"
+		},
+		"arg.NAV_ARN82_Freq1": {
+			"arg": 46,
+			"description": "NAV_ARN82_Freq1"
+		},
+		"arg.NAV_ARN82_Freq2": {
+			"arg": 47,
+			"description": "NAV_ARN82_Freq2"
+		},
+		"arg.NAV_ARN82_Freq3": {
+			"arg": 48,
+			"description": "NAV_ARN82_Freq3"
+		},
+		"arg.NAV_ARN82_Freq4": {
+			"arg": 49,
+			"description": "NAV_ARN82_Freq4"
+		},
+		"arg.NAV_ARN82_Freq5": {
+			"arg": 50,
+			"description": "NAV_ARN82_Freq5"
+		},
+		"arg.Operator_Model": {
+			"arg": 245,
+			"description": "Operator_Model"
+		},
+		"arg.Panel_Rot_X": {
+			"arg": 282,
+			"description": "Panel_Rot_X"
+		},
+		"arg.Panel_Shake_Y": {
+			"arg": 265,
+			"description": "Panel_Shake_Y"
+		},
+		"arg.Panel_Shake_Z": {
+			"arg": 264,
+			"description": "Panel_Shake_Z"
+		},
+		"arg.PedLight": {
+			"arg": 476,
+			"description": "PedLight"
+		},
+		"arg.PilotLight": {
+			"arg": 478,
+			"description": "PilotLight"
+		},
+		"arg.PilotSightGlass": {
+			"arg": 442,
+			"description": "PilotSightGlass"
+		},
+		"arg.Pilot_Model": {
+			"arg": 242,
+			"description": "Pilot_Model"
+		},
+		"arg.Pointer": {
+			"arg": 168,
+			"description": "Pointer"
+		},
+		"arg.Press_AAU_7A": {
+			"arg": 182,
+			"description": "Press_AAU_7A"
+		},
+		"arg.RALT_Digit_1": {
+			"arg": 468,
+			"description": "RALT_Digit_1"
+		},
+		"arg.RALT_Digit_2": {
+			"arg": 469,
+			"description": "RALT_Digit_2"
+		},
+		"arg.RALT_Digit_3": {
+			"arg": 470,
+			"description": "RALT_Digit_3"
+		},
+		"arg.RALT_Digit_4": {
+			"arg": 471,
+			"description": "RALT_Digit_4"
+		},
+		"arg.RALT_HI_Index": {
+			"arg": 466,
+			"description": "RALT_HI_Index"
+		},
+		"arg.RALT_HI_Lamp": {
+			"arg": 465,
+			"description": "RALT_HI_Lamp"
+		},
+		"arg.RALT_LO_Index": {
+			"arg": 444,
+			"description": "RALT_LO_Index"
+		},
+		"arg.RALT_LO_Lamp": {
+			"arg": 447,
+			"description": "RALT_LO_Lamp"
+		},
+		"arg.RALT_Needle": {
+			"arg": 443,
+			"description": "RALT_Needle"
+		},
+		"arg.RALT_Off_Flag": {
+			"arg": 467,
+			"description": "RALT_Off_Flag"
+		},
+		"arg.RMI_CoursePointer1": {
+			"arg": 266,
+			"description": "RMI_CoursePointer1"
+		},
+		"arg.RMI_CoursePointer2": {
+			"arg": 267,
+			"description": "RMI_CoursePointer2"
+		},
+		"arg.RMI_Heading": {
+			"arg": 269,
+			"description": "RMI_Heading"
+		},
+		"arg.RamTemp": {
+			"arg": 437,
+			"description": "RamTemp"
+		},
+		"arg.RightDoor": {
+			"arg": 422,
+			"description": "RightDoor"
+		},
+		"arg.RightWindShield": {
+			"arg": 413,
+			"description": "RightWindShield"
+		},
+		"arg.RightWindow": {
+			"arg": 415,
+			"description": "RightWindow"
+		},
+		"arg.RotCourseCard": {
+			"arg": 156,
+			"description": "RotCourseCard"
+		},
+		"arg.RotorTach": {
+			"arg": 123,
+			"description": "RotorTach"
+		},
+		"arg.SIGHTS_FOR_CIVIL": {
+			"arg": 473,
+			"description": "SIGHTS_FOR_CIVIL"
+		},
+		"arg.SecLight": {
+			"arg": 474,
+			"description": "SecLight"
+		},
+		"arg.SideSlip": {
+			"arg": 133,
+			"description": "SideSlip"
+		},
+		"arg.ToMarker": {
+			"arg": 153,
+			"description": "ToMarker"
+		},
+		"arg.TorquePress": {
+			"arg": 124,
+			"description": "TorquePress"
+		},
+		"arg.TransmOilPress": {
+			"arg": 115,
+			"description": "TransmOilPress"
+		},
+		"arg.TransmOilTemp": {
+			"arg": 116,
+			"description": "TransmOilTemp"
+		},
+		"arg.TurnPtr": {
+			"arg": 132,
+			"description": "TurnPtr"
+		},
+		"arg.UHF_ARC51_Freq1": {
+			"arg": 10,
+			"description": "UHF_ARC51_Freq1"
+		},
+		"arg.UHF_ARC51_Freq2": {
+			"arg": 11,
+			"description": "UHF_ARC51_Freq2"
+		},
+		"arg.UHF_ARC51_Freq3": {
+			"arg": 12,
+			"description": "UHF_ARC51_Freq3"
+		},
+		"arg.UHF_ARC51_Freq4": {
+			"arg": 13,
+			"description": "UHF_ARC51_Freq4"
+		},
+		"arg.UHF_ARC51_Freq5": {
+			"arg": 14,
+			"description": "UHF_ARC51_Freq5"
+		},
+		"arg.UpLeftBlister": {
+			"arg": 418,
+			"description": "UpLeftBlister"
+		},
+		"arg.UpRightBlister": {
+			"arg": 417,
+			"description": "UpRightBlister"
+		},
+		"arg.VHF_ARC134_Freq1": {
+			"arg": 1,
+			"description": "VHF_ARC134_Freq1"
+		},
+		"arg.VHF_ARC134_Freq2": {
+			"arg": 2,
+			"description": "VHF_ARC134_Freq2"
+		},
+		"arg.VHF_ARC134_Freq3": {
+			"arg": 3,
+			"description": "VHF_ARC134_Freq3"
+		},
+		"arg.VHF_ARC134_Freq4": {
+			"arg": 4,
+			"description": "VHF_ARC134_Freq4"
+		},
+		"arg.VertVelocCopilot": {
+			"arg": 251,
+			"description": "VertVelocCopilot"
+		},
+		"arg.VertVelocPilot": {
+			"arg": 134,
+			"description": "VertVelocPilot"
+		},
+		"arg.VerticalBar": {
+			"arg": 151,
+			"description": "VerticalBar"
+		},
+		"arg.VerticalOFF": {
+			"arg": 157,
+			"description": "VerticalOFF"
+		},
+		"arg.VoltageAC": {
+			"arg": 150,
+			"description": "VoltageAC"
+		},
+		"arg.VoltageDC": {
+			"arg": 149,
+			"description": "VoltageDC"
+		},
+		"arg.Wiper_Operator": {
+			"arg": 283,
+			"description": "Wiper_Operator"
+		},
+		"arg.Wiper_Pilot": {
+			"arg": 284,
+			"description": "Wiper_Pilot"
+		},
+		"arg.XM130_ARMED": {
+			"arg": 458,
+			"description": "XM130_ARMED"
+		},
+		"arg.collective_position": {
+			"arg": 200,
+			"description": "collective_position"
+		},
+		"arg.collective_position_operator": {
+			"arg": 207,
+			"description": "collective_position_operator"
+		},
+		"arg.gauge_arg_117": {
+			"arg": 117,
+			"description": "gauge_arg_117"
+		},
+		"arg.gauge_arg_118": {
+			"arg": 118,
+			"description": "gauge_arg_118"
+		},
+		"arg.gauge_arg_174": {
+			"arg": 174,
+			"description": "gauge_arg_174"
+		},
+		"arg.gauge_arg_175": {
+			"arg": 175,
+			"description": "gauge_arg_175"
+		},
+		"arg.lamp_20_MINUTE": {
+			"arg": 98,
+			"description": "lamp_20_MINUTE"
+		},
+		"arg.lamp_ARMED": {
+			"arg": 254,
+			"description": "lamp_ARMED"
+		},
+		"arg.lamp_AUX_FUEL_LOW": {
+			"arg": 101,
+			"description": "lamp_AUX_FUEL_LOW"
+		},
+		"arg.lamp_CHIP_DETECTOR": {
+			"arg": 109,
+			"description": "lamp_CHIP_DETECTOR"
+		},
+		"arg.lamp_DC_GENERATOR": {
+			"arg": 107,
+			"description": "lamp_DC_GENERATOR"
+		},
+		"arg.lamp_ENGINE_CHIP_DET": {
+			"arg": 94,
+			"description": "lamp_ENGINE_CHIP_DET"
+		},
+		"arg.lamp_ENGINE_ICE_JET": {
+			"arg": 93,
+			"description": "lamp_ENGINE_ICE_JET"
+		},
+		"arg.lamp_ENGINE_ICING": {
+			"arg": 92,
+			"description": "lamp_ENGINE_ICING"
+		},
+		"arg.lamp_ENGINE_INLET_AIR": {
+			"arg": 105,
+			"description": "lamp_ENGINE_INLET_AIR"
+		},
+		"arg.lamp_ENGINE_OIL_PRESS": {
+			"arg": 91,
+			"description": "lamp_ENGINE_OIL_PRESS"
+		},
+		"arg.lamp_ENG_FUEL_PUMP": {
+			"arg": 97,
+			"description": "lamp_ENG_FUEL_PUMP"
+		},
+		"arg.lamp_EXTERNAL_POWER": {
+			"arg": 108,
+			"description": "lamp_EXTERNAL_POWER"
+		},
+		"arg.lamp_FIRE": {
+			"arg": 275,
+			"description": "lamp_FIRE"
+		},
+		"arg.lamp_FUEL_FILTER": {
+			"arg": 99,
+			"description": "lamp_FUEL_FILTER"
+		},
+		"arg.lamp_GOV_EMERG": {
+			"arg": 100,
+			"description": "lamp_GOV_EMERG"
+		},
+		"arg.lamp_HYD_PRESSURE": {
+			"arg": 104,
+			"description": "lamp_HYD_PRESSURE"
+		},
+		"arg.lamp_IFF": {
+			"arg": 110,
+			"description": "lamp_IFF"
+		},
+		"arg.lamp_IFF_REPLY": {
+			"arg": 76,
+			"description": "lamp_IFF_REPLY"
+		},
+		"arg.lamp_IFF_TEST": {
+			"arg": 77,
+			"description": "lamp_IFF_TEST"
+		},
+		"arg.lamp_INST_INVERTER": {
+			"arg": 106,
+			"description": "lamp_INST_INVERTER"
+		},
+		"arg.lamp_LEFT_FUEL_BOOST": {
+			"arg": 95,
+			"description": "lamp_LEFT_FUEL_BOOST"
+		},
+		"arg.lamp_LOW_RPM": {
+			"arg": 276,
+			"description": "lamp_LOW_RPM"
+		},
+		"arg.lamp_MASTER": {
+			"arg": 277,
+			"description": "lamp_MASTER"
+		},
+		"arg.lamp_RIGHT_FUEL_BOOST": {
+			"arg": 96,
+			"description": "lamp_RIGHT_FUEL_BOOST"
+		},
+		"arg.lamp_SAFE": {
+			"arg": 255,
+			"description": "lamp_SAFE"
+		},
+		"arg.lamp_XMSN_OIL_HOT": {
+			"arg": 103,
+			"description": "lamp_XMSN_OIL_HOT"
+		},
+		"arg.lamp_XMSN_OIL_PRESS": {
+			"arg": 102,
+			"description": "lamp_XMSN_OIL_PRESS"
+		},
+		"arg.rudder": {
+			"arg": 184,
+			"description": "rudder"
+		},
+		"arg.rudder_add": {
+			"arg": 185,
+			"description": "rudder_add"
+		},
+		"arg.stick_pitch": {
+			"arg": 186,
+			"description": "stick_pitch"
+		},
+		"arg.stick_pitch_sec": {
+			"arg": 190,
+			"description": "stick_pitch_sec"
+		},
+		"arg.stick_roll": {
+			"arg": 187,
+			"description": "stick_roll"
+		},
+		"arg.stick_roll_sec": {
+			"arg": 191,
+			"description": "stick_roll_sec"
+		},
+		"dev0.cmd_3255": {
+			"bindings": [
+				{
+					"name": "Flashlight Color - Toggle Green/White",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3255,
+			"description": "Flashlight Color - Toggle Green/White",
+			"deviceId": 0,
+			"type": "raw"
+		},
+		"dev0.cmd_3256": {
+			"bindings": [
+				{
+					"name": "Flashlight",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3256,
+			"description": "Flashlight",
+			"deviceId": 0,
+			"type": "raw"
+		},
+		"ind.0": {
+			"description": "ccControlsIndicator (all fields)",
+			"indicationId": 0
+		},
+		"ind.0.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 0
+		},
+		"ind.0.pitch_scale": {
+			"description": "pitch_scale",
+			"fieldName": "pitch_scale",
+			"indicationId": 0
+		},
+		"ind.0.roll_scale": {
+			"description": "roll_scale",
+			"fieldName": "roll_scale",
+			"indicationId": 0
+		},
+		"ind.0.stick_position": {
+			"description": "stick_position",
+			"fieldName": "stick_position",
+			"indicationId": 0
+		},
+		"ind.0.stick_position_AP": {
+			"description": "stick_position_AP",
+			"fieldName": "stick_position_AP",
+			"indicationId": 0
+		},
+		"ind.1": {
+			"description": "ccCargoIndicatorBase (all fields)",
+			"indicationId": 1
+		},
+		"ind.1.NarrowCircle  ": {
+			"description": "NarrowCircle  ",
+			"fieldName": "NarrowCircle  ",
+			"indicationId": 1
+		},
+		"ind.1.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 1
+		},
+		"ind.1.circle": {
+			"description": "circle",
+			"fieldName": "circle",
+			"indicationId": 1
+		},
+		"ind.1.crosshair": {
+			"description": "crosshair",
+			"fieldName": "crosshair",
+			"indicationId": 1
+		},
+		"ind.1.heightBordersCargo": {
+			"description": "heightBordersCargo",
+			"fieldName": "heightBordersCargo",
+			"indicationId": 1
+		},
+		"ind.1.heightBordersZone": {
+			"description": "heightBordersZone",
+			"fieldName": "heightBordersZone",
+			"indicationId": 1
+		},
+		"ind.1.heightnarrow": {
+			"description": "heightnarrow",
+			"fieldName": "heightnarrow",
+			"indicationId": 1
+		},
+		"ind.1.zone": {
+			"description": "zone",
+			"fieldName": "zone",
+			"indicationId": 1
+		},
+		"ind.2": {
+			"description": "ccPilotSight (all fields)",
+			"indicationId": 2
+		},
+		"ind.2.SymbologyBox1": {
+			"description": "SymbologyBox1",
+			"fieldName": "SymbologyBox1",
+			"indicationId": 2
+		},
+		"ind.2.pilot_sight": {
+			"description": "pilot_sight",
+			"fieldName": "pilot_sight",
+			"indicationId": 2
+		},
+		"ind.2.total_field_of_view1": {
+			"description": "total_field_of_view1",
+			"fieldName": "total_field_of_view1",
+			"indicationId": 2
+		},
+		"ind.3": {
+			"description": "ccFlexibleGunSight (all fields)",
+			"indicationId": 3
+		},
+		"ind.3.SymbologyBox": {
+			"description": "SymbologyBox",
+			"fieldName": "SymbologyBox",
+			"indicationId": 3
+		},
+		"ind.3.fixed_sight": {
+			"description": "fixed_sight",
+			"fieldName": "fixed_sight",
+			"indicationId": 3
+		},
+		"ind.3.total_field_of_view": {
+			"description": "total_field_of_view",
+			"fieldName": "total_field_of_view",
+			"indicationId": 3
+		},
+		"ind.5": {
+			"description": "ccLifeBar_UH1H (all fields)",
+			"indicationId": 5
+		},
+		"ind.5.lifebar": {
+			"description": "lifebar",
+			"fieldName": "lifebar",
+			"indicationId": 5
+		},
+		"ind.5.lifebarbox_down": {
+			"description": "lifebarbox_down",
+			"fieldName": "lifebarbox_down",
+			"indicationId": 5
+		},
+		"ind.5.lifebarbox_lh": {
+			"description": "lifebarbox_lh",
+			"fieldName": "lifebarbox_lh",
+			"indicationId": 5
+		},
+		"ind.5.lifebarbox_rh": {
+			"description": "lifebarbox_rh",
+			"fieldName": "lifebarbox_rh",
+			"indicationId": 5
+		},
+		"ind.5.lifebarbox_up": {
+			"description": "lifebarbox_up",
+			"fieldName": "lifebarbox_up",
+			"indicationId": 5
+		},
+		"ind.7": {
+			"description": "ccGunnersCPanel (all fields)",
+			"indicationId": 7
+		},
+		"ind.7.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 7
+		},
+		"ind.7.mem_base0": {
+			"description": "mem_base0",
+			"fieldName": "mem_base0",
+			"indicationId": 7
+		},
+		"ind.7.mem_base1": {
+			"description": "mem_base1",
+			"fieldName": "mem_base1",
+			"indicationId": 7
+		},
+		"ind.7.mem_base2": {
+			"description": "mem_base2",
+			"fieldName": "mem_base2",
+			"indicationId": 7
+		},
+		"ind.7.mem_base3": {
+			"description": "mem_base3",
+			"fieldName": "mem_base3",
+			"indicationId": 7
+		},
+		"ind.7.txt_Hints": {
+			"description": "txt_Hints",
+			"fieldName": "txt_Hints",
+			"indicationId": 7
+		},
+		"ind.7.txt_Status": {
+			"description": "txt_Status",
+			"fieldName": "txt_Status",
+			"indicationId": 7
+		},
+		"ind.7.txt_ammo0": {
+			"description": "txt_ammo0",
+			"fieldName": "txt_ammo0",
+			"indicationId": 7
+		},
+		"ind.7.txt_ammo1": {
+			"description": "txt_ammo1",
+			"fieldName": "txt_ammo1",
+			"indicationId": 7
+		},
+		"ind.7.txt_ammo2": {
+			"description": "txt_ammo2",
+			"fieldName": "txt_ammo2",
+			"indicationId": 7
+		},
+		"ind.7.txt_ammo3": {
+			"description": "txt_ammo3",
+			"fieldName": "txt_ammo3",
+			"indicationId": 7
+		},
+		"ind.7.txt_burst0": {
+			"description": "txt_burst0",
+			"fieldName": "txt_burst0",
+			"indicationId": 7
+		},
+		"ind.7.txt_burst1": {
+			"description": "txt_burst1",
+			"fieldName": "txt_burst1",
+			"indicationId": 7
+		},
+		"ind.7.txt_burst2": {
+			"description": "txt_burst2",
+			"fieldName": "txt_burst2",
+			"indicationId": 7
+		},
+		"ind.7.txt_burst3": {
+			"description": "txt_burst3",
+			"fieldName": "txt_burst3",
+			"indicationId": 7
+		},
+		"ind.7.txt_mem0": {
+			"description": "txt_mem0",
+			"fieldName": "txt_mem0",
+			"indicationId": 7
+		},
+		"ind.7.txt_mem1": {
+			"description": "txt_mem1",
+			"fieldName": "txt_mem1",
+			"indicationId": 7
+		},
+		"ind.7.txt_mem2": {
+			"description": "txt_mem2",
+			"fieldName": "txt_mem2",
+			"indicationId": 7
+		},
+		"ind.7.txt_mem3": {
+			"description": "txt_mem3",
+			"fieldName": "txt_mem3",
+			"indicationId": 7
+		},
+		"ind.7.txt_status0": {
+			"description": "txt_status0",
+			"fieldName": "txt_status0",
+			"indicationId": 7
+		},
+		"ind.7.txt_status1": {
+			"description": "txt_status1",
+			"fieldName": "txt_status1",
+			"indicationId": 7
+		},
+		"ind.7.txt_status2": {
+			"description": "txt_status2",
+			"fieldName": "txt_status2",
+			"indicationId": 7
+		},
+		"ind.7.txt_status3": {
+			"description": "txt_status3",
+			"fieldName": "txt_status3",
+			"indicationId": 7
+		},
+		"ind.8": {
+			"description": "ccUHF_ARC51_UH1H (all fields)",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel1": {
+			"description": "SheetTable_Channel1",
+			"fieldName": "SheetTable_Channel1",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel10": {
+			"description": "SheetTable_Channel10",
+			"fieldName": "SheetTable_Channel10",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel11": {
+			"description": "SheetTable_Channel11",
+			"fieldName": "SheetTable_Channel11",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel12": {
+			"description": "SheetTable_Channel12",
+			"fieldName": "SheetTable_Channel12",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel13": {
+			"description": "SheetTable_Channel13",
+			"fieldName": "SheetTable_Channel13",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel14": {
+			"description": "SheetTable_Channel14",
+			"fieldName": "SheetTable_Channel14",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel15": {
+			"description": "SheetTable_Channel15",
+			"fieldName": "SheetTable_Channel15",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel16": {
+			"description": "SheetTable_Channel16",
+			"fieldName": "SheetTable_Channel16",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel17": {
+			"description": "SheetTable_Channel17",
+			"fieldName": "SheetTable_Channel17",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel18": {
+			"description": "SheetTable_Channel18",
+			"fieldName": "SheetTable_Channel18",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel19": {
+			"description": "SheetTable_Channel19",
+			"fieldName": "SheetTable_Channel19",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel2": {
+			"description": "SheetTable_Channel2",
+			"fieldName": "SheetTable_Channel2",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel20": {
+			"description": "SheetTable_Channel20",
+			"fieldName": "SheetTable_Channel20",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel3": {
+			"description": "SheetTable_Channel3",
+			"fieldName": "SheetTable_Channel3",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel4": {
+			"description": "SheetTable_Channel4",
+			"fieldName": "SheetTable_Channel4",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel5": {
+			"description": "SheetTable_Channel5",
+			"fieldName": "SheetTable_Channel5",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel6": {
+			"description": "SheetTable_Channel6",
+			"fieldName": "SheetTable_Channel6",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel7": {
+			"description": "SheetTable_Channel7",
+			"fieldName": "SheetTable_Channel7",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel8": {
+			"description": "SheetTable_Channel8",
+			"fieldName": "SheetTable_Channel8",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_Channel9": {
+			"description": "SheetTable_Channel9",
+			"fieldName": "SheetTable_Channel9",
+			"indicationId": 8
+		},
+		"ind.8.SheetTable_MainDummy": {
+			"description": "SheetTable_MainDummy",
+			"fieldName": "SheetTable_MainDummy",
+			"indicationId": 8
+		},
+		"ind.8.sheet_bar_mask": {
+			"description": "sheet_bar_mask",
+			"fieldName": "sheet_bar_mask",
+			"indicationId": 8
+		}
+	},
+	"moduleName": "UH-1H"
+}

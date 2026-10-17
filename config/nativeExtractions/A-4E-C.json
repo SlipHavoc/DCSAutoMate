@@ -1,0 +1,12170 @@
+{
+	"commandTables": {
+		"Keys": {
+			"AFCSAltitudeToggle": 10126,
+			"AFCSEngageToggle": 10125,
+			"AFCSHeadingDec": 10129,
+			"AFCSHeadingInc": 10128,
+			"AFCSHeadingToggle": 10127,
+			"AFCSHotasAlt": 10133,
+			"AFCSHotasAltHdg": 10132,
+			"AFCSHotasEngage": 10134,
+			"AFCSHotasMode": 10130,
+			"AFCSHotasPath": 10131,
+			"AFCSOverride": 10123,
+			"AFCSStabAugToggle": 10175,
+			"AFCSStandbyToggle": 10124,
+			"APCEngageStbyOff": 10121,
+			"APCHotStdCold": 10122,
+			"AWRSModeSelCCW": 10173,
+			"AWRSModeSelCW": 10174,
+			"AWRSMultiplierToggle": 10170,
+			"AWRSQtySelDecrease": 10172,
+			"AWRSQtySelIncrease": 10171,
+			"AWRS_Drop_Interval_Dec": 10245,
+			"AWRS_Drop_Interval_Inc": 10244,
+			"AWRS_Drop_Interval_StartDown": 10300,
+			"AWRS_Drop_Interval_StartUp": 10299,
+			"AWRS_Drop_Interval_Stop": 10301,
+			"AccelReset": 10148,
+			"AltPressureDec": 10039,
+			"AltPressureInc": 10038,
+			"AltPressureStartDown": 10226,
+			"AltPressureStartUp": 10225,
+			"AltPressureStop": 10227,
+			"ArmsEmerSelCCW": 10247,
+			"ArmsEmerSelCW": 10246,
+			"ArmsFuncSelectorCCW": 10027,
+			"ArmsFuncSelectorCW": 10028,
+			"BatteryPower": 1073,
+			"BdhiModeNavComputer": 10065,
+			"BdhiModeNavPac": 10067,
+			"BdhiModeTacan": 10066,
+			"BombArmSwitch": 10311,
+			"BrakesOff": 10008,
+			"BrakesOffLeft": 10004,
+			"BrakesOffRight": 10006,
+			"BrakesOn": 10007,
+			"BrakesOnLeft": 10003,
+			"BrakesOnRight": 10005,
+			"Canopy": 71,
+			"ChangeCBU2AQuantity": 10158,
+			"ChangeCBU2BAQuantity": 10159,
+			"ChangeCmsBurstInterval": 10167,
+			"ChangeCmsBursts": 10166,
+			"ChangeCmsSalvos": 10168,
+			"ChangeSalvoInterval": 10169,
+			"CmAutoButton": 10142,
+			"CmBank1AdjDown": 10144,
+			"CmBank1AdjUp": 10143,
+			"CmBank2AdjDown": 10146,
+			"CmBank2AdjUp": 10145,
+			"CmBankSelect": 10141,
+			"CmBankSelectRotate": 10140,
+			"CmBankSelectToggle": 10313,
+			"CmPowerToggle": 10147,
+			"EngineStarterDown": 10033,
+			"Engine_Start": 10034,
+			"Engine_Stop": 10035,
+			"ExtLightAnticollision": 10096,
+			"ExtLightAnticollisionToggle": 10104,
+			"ExtLightFlashSteady": 10100,
+			"ExtLightFlashSteadyToggle": 10108,
+			"ExtLightFuselage": 10099,
+			"ExtLightFuselageCycle": 10107,
+			"ExtLightMaster": 10093,
+			"ExtLightMasterToggle": 10101,
+			"ExtLightNav": 10097,
+			"ExtLightNavCycle": 10105,
+			"ExtLightProbe": 10094,
+			"ExtLightProbeCycle": 10102,
+			"ExtLightTail": 10098,
+			"ExtLightTailCycle": 10106,
+			"ExtLightTaxi": 10095,
+			"ExtLightTaxiToggle": 10103,
+			"FuelControl": 10248,
+			"FuelGaugeExt": 10036,
+			"FuelGaugeInt": 10037,
+			"Fuel_Transfer_Bypass_Toggle": 10243,
+			"GunpodCenter": 10030,
+			"GunpodCharge": 10032,
+			"GunpodLeft": 10029,
+			"GunpodRight": 10031,
+			"GunsReadyToggle": 10021,
+			"GunsightBrightnessDec": 10215,
+			"GunsightBrightnessInc": 10214,
+			"GunsightBrightnessStartDown": 10217,
+			"GunsightBrightnessStartUp": 10216,
+			"GunsightBrightnessStop": 10218,
+			"GunsightDayNightToggle": 10219,
+			"GunsightElevationDec": 10210,
+			"GunsightElevationInc": 10209,
+			"GunsightElevationStartDown": 10212,
+			"GunsightElevationStartUp": 10211,
+			"GunsightElevationStop": 10213,
+			"IntLightBrightness": 10112,
+			"IntLightConsole": 10111,
+			"IntLightInstruments": 10110,
+			"IntLightWhiteFlood": 10109,
+			"JATOFiringButton": 10139,
+			"JettisonFC3": 10047,
+			"JettisonWeapons": 10045,
+			"JettisonWeaponsUp": 10046,
+			"MCL_Chan_Dec": 10242,
+			"MCL_Chan_Inc": 10241,
+			"MCL_Power_Toggle": 10240,
+			"MasterArmToggle": 10020,
+			"MissileVolumeDec": 10221,
+			"MissileVolumeInc": 10220,
+			"MissileVolumeStartDown": 10223,
+			"MissileVolumeStartUp": 10222,
+			"MissileVolumeStop": 10224,
+			"NavDestLatDec": 10058,
+			"NavDestLatInc": 10057,
+			"NavDestLonDec": 10060,
+			"NavDestLonInc": 10059,
+			"NavDopplerCCW": 10062,
+			"NavDopplerCW": 10061,
+			"NavILSNext": 10051,
+			"NavILSPrev": 10052,
+			"NavNDBNext": 10049,
+			"NavNDBPrev": 10050,
+			"NavPPosLatDec": 10054,
+			"NavPPosLatInc": 10053,
+			"NavPPosLonDec": 10056,
+			"NavPPosLonInc": 10055,
+			"NavReset": 10048,
+			"NavSelectCCW": 10064,
+			"NavSelectCW": 10063,
+			"OxygenToggle": 10176,
+			"PickleOff": 10019,
+			"PickleOn": 10018,
+			"PlaneAirBrake": 73,
+			"PlaneAirBrakeOff": 148,
+			"PlaneAirBrakeOn": 147,
+			"PlaneChgTargetNext": 102,
+			"PlaneChgTargetPrev": 1315,
+			"PlaneChgWeapon": 101,
+			"PlaneFireOff": 10017,
+			"PlaneFireOn": 10016,
+			"PlaneFlaps": 72,
+			"PlaneFlapsDownHotas": 10012,
+			"PlaneFlapsOff": 146,
+			"PlaneFlapsOn": 145,
+			"PlaneFlapsStop": 10010,
+			"PlaneFlapsUpHotas": 10011,
+			"PlaneGear": 68,
+			"PlaneGearDown": 431,
+			"PlaneGearUp": 430,
+			"PlaneHeadlightOnOff": 328,
+			"PlaneHook": 10042,
+			"PlaneHookDown": 10044,
+			"PlaneHookUp": 10043,
+			"PlaneLightsOnOff": 175,
+			"PlaneModeBVR": 106,
+			"PlaneModeBore": 108,
+			"PlaneModeGround": 111,
+			"PlaneModeNAV": 105,
+			"PlaneModeVS": 107,
+			"PlanePickleOff": 351,
+			"PlanePickleOn": 350,
+			"PowerGeneratorLeft": 711,
+			"PowerGeneratorRight": 712,
+			"PowerOnOff": 315,
+			"RadarAltToggle": 10177,
+			"RadarAltWarningDown": 10040,
+			"RadarAltWarningStartDown": 10179,
+			"RadarAltWarningStartUp": 10178,
+			"RadarAltWarningStop": 10180,
+			"RadarAltWarningUp": 10041,
+			"RadarAntennaAngle": 10079,
+			"RadarAoAComp": 10080,
+			"RadarHoldDec": 10151,
+			"RadarHoldInc": 10150,
+			"RadarHoldToggle": 10149,
+			"RadarMode": 10073,
+			"RadarModeA2G": 10072,
+			"RadarModeCCW": 10075,
+			"RadarModeCW": 10074,
+			"RadarModeOFF": 10068,
+			"RadarModeSTBY": 10069,
+			"RadarModeSearch": 10070,
+			"RadarModeTC": 10071,
+			"RadarRangeLongShort": 10077,
+			"RadarTCPlanProfile": 10076,
+			"RadarTiltDec": 10233,
+			"RadarTiltInc": 10232,
+			"RadarTiltStartDown": 10235,
+			"RadarTiltStartUp": 10234,
+			"RadarTiltStop": 10236,
+			"RadarVolume": 10078,
+			"RadarVolumeStartDown": 10238,
+			"RadarVolumeStartUp": 10237,
+			"RadarVolumeStop": 10239,
+			"Radar_Bril_Cont_Down": 10259,
+			"Radar_Bril_Cont_Stop": 10260,
+			"Radar_Bril_Cont_Up": 10258,
+			"Radar_Bril_Step_Dec": 10257,
+			"Radar_Bril_Step_Inc": 10256,
+			"Radar_Det_Cont_Down": 10274,
+			"Radar_Det_Cont_Stop": 10275,
+			"Radar_Det_Cont_Up": 10273,
+			"Radar_Det_Step_Dec": 10272,
+			"Radar_Det_Step_Inc": 10271,
+			"Radar_Gain_Cont_Down": 10269,
+			"Radar_Gain_Cont_Stop": 10270,
+			"Radar_Gain_Cont_Up": 10268,
+			"Radar_Gain_Step_Dec": 10267,
+			"Radar_Gain_Step_Inc": 10266,
+			"Radar_Ret_Cont_Down": 10279,
+			"Radar_Ret_Cont_Stop": 10280,
+			"Radar_Ret_Cont_Up": 10278,
+			"Radar_Ret_Step_Dec": 10277,
+			"Radar_Ret_Step_Inc": 10276,
+			"Radar_Stor_Cont_Down": 10264,
+			"Radar_Stor_Cont_Stop": 10265,
+			"Radar_Stor_Cont_Up": 10263,
+			"Radar_Stor_Step_Dec": 10262,
+			"Radar_Stor_Step_Inc": 10261,
+			"ShowControls": 851,
+			"SpeedHoldDec": 10154,
+			"SpeedHoldInc": 10153,
+			"SpeedHoldToggle": 10152,
+			"SpoilersArmOff": 10015,
+			"SpoilersArmOn": 10014,
+			"SpoilersArmToggle": 10013,
+			"Station1": 10022,
+			"Station2": 10023,
+			"Station3": 10024,
+			"Station4": 10025,
+			"Station5": 10026,
+			"TacanChMajorDec": 10088,
+			"TacanChMajorInc": 10087,
+			"TacanChMinorDec": 10090,
+			"TacanChMinorInc": 10089,
+			"TacanModeAA": 10084,
+			"TacanModeDec": 10086,
+			"TacanModeInc": 10085,
+			"TacanModeOFF": 10081,
+			"TacanModeREC": 10082,
+			"TacanModeTR": 10083,
+			"TacanVolumeDec": 10092,
+			"TacanVolumeInc": 10091,
+			"TacanVolumeStartDown": 10195,
+			"TacanVolumeStartUp": 10194,
+			"TacanVolumeStop": 10196,
+			"ToggleSlatsLock": 10009,
+			"ToggleStick": 10138,
+			"TrimCancel": 10120,
+			"TrimDown": 10114,
+			"TrimLeft": 10115,
+			"TrimLeftRudder": 10117,
+			"TrimRight": 10116,
+			"TrimRightRudder": 10118,
+			"TrimStop": 10119,
+			"TrimUp": 10113,
+			"Tune1": 10135,
+			"Tune2": 10136,
+			"Tune3": 10137,
+			"UHF10MHzDec": 10184,
+			"UHF10MHzInc": 10183,
+			"UHF1MHzDec": 10186,
+			"UHF1MHzInc": 10185,
+			"UHF50kHzDec": 10188,
+			"UHF50kHzInc": 10187,
+			"UHFFreqModeDec": 10229,
+			"UHFFreqModeInc": 10228,
+			"UHFModeDec": 10182,
+			"UHFModeInc": 10181,
+			"UHFPresetChannelDec": 10231,
+			"UHFPresetChannelInc": 10230,
+			"UHFVolumeDec": 10190,
+			"UHFVolumeInc": 10189,
+			"UHFVolumeStartDown": 10192,
+			"UHFVolumeStartUp": 10191,
+			"UHFVolumeStop": 10193,
+			"afcs_hdg_set_start_down": 10289,
+			"afcs_hdg_set_start_up": 10288,
+			"afcs_hdg_set_stop": 10290,
+			"bullpup_down": 10251,
+			"bullpup_left": 10252,
+			"bullpup_pitch_stop": 10255,
+			"bullpup_right": 10253,
+			"bullpup_up": 10250,
+			"bullpup_yaw_stop": 10254,
+			"canopy_close": 10293,
+			"canopy_open": 10292,
+			"cat_power_toggle": 10249,
+			"catapult_abort": 10157,
+			"catapult_ready": 10155,
+			"catapult_shoot": 10156,
+			"drop_tank_press_cycle": 10282,
+			"ecm_InnerKnobDec": 10200,
+			"ecm_InnerKnobInc": 10199,
+			"ecm_InnerKnobStartDown": 10202,
+			"ecm_InnerKnobStartUp": 10201,
+			"ecm_InnerKnobStop": 10203,
+			"ecm_OuterKnobDec": 10205,
+			"ecm_OuterKnobInc": 10204,
+			"ecm_OuterKnobStartDown": 10207,
+			"ecm_OuterKnobStartUp": 10206,
+			"ecm_OuterKnobStop": 10208,
+			"ecm_apr25_audio": 10161,
+			"ecm_apr25_off": 10160,
+			"ecm_apr27_off": 10162,
+			"ecm_select_ccw": 10198,
+			"ecm_select_cw": 10197,
+			"ecm_selector_knob": 10165,
+			"ecm_systest_lower": 10164,
+			"ecm_systest_upper": 10163,
+			"fuel_dump_cycle": 10283,
+			"intlight_console_startdown": 10309,
+			"intlight_console_startup": 10308,
+			"intlight_console_stop": 10310,
+			"intlight_instruments_startdown": 10306,
+			"intlight_instruments_startup": 10305,
+			"intlight_instruments_stop": 10307,
+			"intlight_whiteflood_startdown": 10303,
+			"intlight_whiteflood_startup": 10302,
+			"intlight_whiteflood_stop": 10304,
+			"modifier_left_down": 10284,
+			"modifier_left_up": 10285,
+			"modifier_right_down": 10286,
+			"modifier_right_up": 10287,
+			"nvg_toggle": 10291,
+			"nws_disengage": 10001,
+			"nws_engage": 10000,
+			"radio_ptt": 10002,
+			"radio_ptt_voip": 10281,
+			"shrike_seeker_change_1": 10314,
+			"shrike_seeker_change_2": 10315,
+			"shrike_seeker_change_4": 10316,
+			"shrike_seeker_change_5": 10317,
+			"throttle_acc": 10312,
+			"throttle_dec": 10298,
+			"throttle_inc": 10297,
+			"throttle_position_ign": 10295,
+			"throttle_position_off": 10294,
+			"throttle_position_run": 10296
+		},
+		"device_commands": {
+			"AOA_dimming_wheel_AXIS": 3165,
+			"AWRS_drop_interval": 3032,
+			"AWRS_drop_interval_AXIS": 3126,
+			"AWRS_multiplier": 3033,
+			"AWRS_quantity": 3031,
+			"AWRS_stepripple": 3034,
+			"AltPressureKnob": 3019,
+			"Button_Test": 3000,
+			"COMPASS_free_slaved_switch": 3141,
+			"COMPASS_latitude": 3142,
+			"COMPASS_push_to_sync": 3140,
+			"COMPASS_set_heading": 3139,
+			"CPT_secondary_ejection_handle": 3149,
+			"CPT_shoulder_harness": 3148,
+			"ENGINE_drop_tanks_sw": 3144,
+			"ENGINE_fuel_control_sw": 3145,
+			"ENGINE_manual_fuel_shutoff": 3146,
+			"ENGINE_manual_fuel_shutoff_catch": 3147,
+			"ENGINE_wing_fuel_sw": 3143,
+			"FuelGaugeExtButton": 3018,
+			"Gear": 3020,
+			"GunsightBrightness": 3030,
+			"GunsightDayNight": 3029,
+			"GunsightKnob": 3028,
+			"Hook": 3021,
+			"JATO_arm": 3158,
+			"JATO_jettison": 3159,
+			"accel_reset": 3111,
+			"afcs_ail_trim": 3094,
+			"afcs_alt": 3091,
+			"afcs_engage": 3089,
+			"afcs_hdg_sel": 3090,
+			"afcs_hdg_set": 3092,
+			"afcs_stab_aug": 3093,
+			"afcs_standby": 3088,
+			"afcs_test": 3171,
+			"afcs_test_guard": 3170,
+			"apc_engagestbyoff": 3095,
+			"apc_hotstdcold": 3096,
+			"arc51_freq_XXooo": 3102,
+			"arc51_freq_ooXoo": 3103,
+			"arc51_freq_oooXX": 3104,
+			"arc51_freq_preset": 3101,
+			"arc51_mode": 3097,
+			"arc51_squelch": 3100,
+			"arc51_volume": 3099,
+			"arc51_xmitmode": 3098,
+			"arm_bomb": 3026,
+			"arm_emer_sel": 3025,
+			"arm_func_selector": 3008,
+			"arm_gun": 3001,
+			"arm_master": 3002,
+			"arm_station1": 3003,
+			"arm_station2": 3004,
+			"arm_station3": 3005,
+			"arm_station4": 3006,
+			"arm_station5": 3007,
+			"asn41_magvar": 3048,
+			"asn41_magvar_push": 3154,
+			"asn41_winddir": 3050,
+			"asn41_winddir_push": 3156,
+			"asn41_windspeed": 3049,
+			"asn41_windspeed_push": 3155,
+			"awrs_drop_interval_axis_slew": 3185,
+			"bdhi_mode": 3044,
+			"cabin_pressure": 3133,
+			"cabin_temp": 3135,
+			"clock_stopwatch": 3105,
+			"cm_adj1": 3108,
+			"cm_adj2": 3109,
+			"cm_auto": 3107,
+			"cm_bank": 3106,
+			"cm_pwr": 3110,
+			"combined_wheel_brake_axis": 3204,
+			"dest_lat": 3053,
+			"dest_lat_push": 3152,
+			"dest_lat_slew": 3166,
+			"dest_lon": 3054,
+			"dest_lon_push": 3153,
+			"dest_lon_slew": 3167,
+			"doppler_memory_test": 3046,
+			"doppler_select": 3045,
+			"ecm_apr25_audio": 3114,
+			"ecm_apr25_off": 3113,
+			"ecm_apr27_off": 3115,
+			"ecm_msl_alert_axis_inner": 3118,
+			"ecm_msl_alert_axis_inner_abs": 3190,
+			"ecm_msl_alert_axis_inner_slew": 3191,
+			"ecm_msl_alert_axis_outer": 3119,
+			"ecm_msl_alert_axis_outer_abs": 3192,
+			"ecm_msl_alert_axis_outer_slew": 3193,
+			"ecm_selector_knob": 3120,
+			"ecm_systest_lower": 3117,
+			"ecm_systest_upper": 3116,
+			"emer_bomb_release": 3027,
+			"emer_gear_release": 3036,
+			"emer_gen_bypass": 3022,
+			"emer_gen_deploy": 3023,
+			"extlight_anticoll": 3076,
+			"extlight_flashsteady": 3078,
+			"extlight_fuselage": 3077,
+			"extlight_master": 3073,
+			"extlight_nav": 3079,
+			"extlight_probe": 3074,
+			"extlight_tail": 3080,
+			"extlight_taxi": 3075,
+			"flaps": 3015,
+			"fuel_transfer_bypass": 3177,
+			"gunpod_c": 3010,
+			"gunpod_chargeclear": 3012,
+			"gunpod_l": 3009,
+			"gunpod_r": 3011,
+			"gunsight_brightness_axis_abs": 3183,
+			"gunsight_brightness_axis_slew": 3184,
+			"gunsight_elevation_axis": 3160,
+			"gunsight_elevation_axis_abs": 3161,
+			"ias_index_button": 3040,
+			"ias_index_knob": 3041,
+			"intlight_brightness": 3084,
+			"intlight_console": 3083,
+			"intlight_console_AXIS": 3129,
+			"intlight_console_CHANGE": 3132,
+			"intlight_console_axis_slew": 3181,
+			"intlight_instruments": 3082,
+			"intlight_instruments_AXIS": 3128,
+			"intlight_instruments_CHANGE": 3131,
+			"intlight_instruments_axis_slew": 3180,
+			"intlight_whiteflood": 3081,
+			"intlight_whiteflood_AXIS": 3127,
+			"intlight_whiteflood_CHANGE": 3130,
+			"intlight_whiteflood_axis_slew": 3182,
+			"left_wheelbrake_AXIS": 3163,
+			"man_flt_control_override": 3136,
+			"master_test": 3039,
+			"mcl_channel_selector": 3168,
+			"mcl_power_switch": 3169,
+			"mouse_x": 3178,
+			"mouse_y": 3179,
+			"nav_dead_recon": 3174,
+			"nav_select": 3047,
+			"oxygen_switch": 3138,
+			"pilot_salute": 3162,
+			"pitch_axis_mod": 3121,
+			"ppos_lat": 3051,
+			"ppos_lat_push": 3150,
+			"ppos_lon": 3052,
+			"ppos_lon_push": 3151,
+			"push_starter_switch": 3013,
+			"radar_alt_indexer": 3037,
+			"radar_alt_switch": 3038,
+			"radar_altitude_warning_axis_slew": 3213,
+			"radar_angle": 3065,
+			"radar_angle_axis": 3066,
+			"radar_angle_axis_abs": 3067,
+			"radar_aoacomp": 3064,
+			"radar_brilliance": 3058,
+			"radar_brilliance_axis_abs": 3196,
+			"radar_brilliance_axis_slew": 3197,
+			"radar_detail": 3059,
+			"radar_detail_axis_abs": 3198,
+			"radar_detail_axis_slew": 3199,
+			"radar_filter": 3061,
+			"radar_gain": 3060,
+			"radar_gain_axis_abs": 3200,
+			"radar_gain_axis_slew": 3201,
+			"radar_mode": 3063,
+			"radar_planprofile": 3055,
+			"radar_range": 3056,
+			"radar_reticle": 3062,
+			"radar_reticle_axis_abs": 3202,
+			"radar_reticle_axis_slew": 3203,
+			"radar_storage": 3057,
+			"radar_storage_axis_abs": 3194,
+			"radar_storage_axis_slew": 3195,
+			"radar_volume": 3068,
+			"rain_removal": 3173,
+			"right_wheelbrake_AXIS": 3164,
+			"roll_axis_mod": 3122,
+			"rudder_axis_left": 3205,
+			"rudder_axis_mod": 3123,
+			"rudder_axis_right": 3206,
+			"rudder_trim": 3085,
+			"seat_adjustment": 3175,
+			"shrike_selector": 3137,
+			"shrike_sidewinder_volume": 3125,
+			"shrike_sidewinder_volume_abs": 3186,
+			"shrike_sidewinder_volume_slew": 3187,
+			"speedbrake": 3024,
+			"speedbrake_emer": 3035,
+			"spoiler_arm": 3017,
+			"spoiler_cover": 3016,
+			"stby_att_index_button": 3042,
+			"stby_att_index_knob": 3043,
+			"tacan_antenna": 3172,
+			"tacan_ch_major": 3070,
+			"tacan_ch_minor": 3071,
+			"tacan_mode": 3069,
+			"tacan_volume": 3072,
+			"tacan_volume_axis_abs": 3188,
+			"tacan_volume_axis_slew": 3189,
+			"throttle": 3014,
+			"throttle_axis": 3086,
+			"throttle_axis_mod": 3112,
+			"throttle_axis_slew": 3207,
+			"throttle_click": 3087,
+			"throttle_click_ITER": 3157,
+			"wheelbrake_AXIS": 3124,
+			"windshield_defrost": 3134,
+			"zoom_axis_in": 3208,
+			"zoom_axis_out": 3209,
+			"zoom_axis_slew": 3210,
+			"zoom_axis_slew_in": 3211,
+			"zoom_axis_slew_out": 3212
+		}
+	},
+	"deviceTableMap": {
+		"2": "device_commands",
+		"3": "device_commands",
+		"6": "device_commands",
+		"7": "device_commands",
+		"8": "device_commands",
+		"10": "device_commands",
+		"13": "device_commands",
+		"14": "device_commands",
+		"15": "device_commands",
+		"16": "device_commands",
+		"19": "device_commands",
+		"20": "device_commands",
+		"22": "device_commands",
+		"23": "device_commands",
+		"25": "device_commands",
+		"26": "device_commands",
+		"27": "device_commands",
+		"28": "device_commands",
+		"31": "device_commands",
+		"32": "device_commands",
+		"37": "device_commands",
+		"45": "device_commands",
+		"48": "device_commands"
+	},
+	"devices": {
+		"ADI": 9,
+		"ADI_AJB3A": 38,
+		"AFCS": 27,
+		"AIRBRAKES": 13,
+		"AVIONICS": 2,
+		"BYPASS_FAN": 21,
+		"CANOPY": 17,
+		"CLOCK": 8,
+		"COUNTERMEASURES": 32,
+		"EFM_DATA_BUS": 36,
+		"ELECTRIC_SYSTEM": 3,
+		"ENGINE": 20,
+		"EXTANIM": 11,
+		"EXT_LIGHTS": 25,
+		"FLAPS": 14,
+		"GEAR": 15,
+		"GUNSIGHT": 22,
+		"HUD": 30,
+		"HUFFER": 18,
+		"HYDRAULIC_SYSTEM": 7,
+		"ILS": 1,
+		"INTERCOM": 4,
+		"INTERCOM_GUARD": 47,
+		"MCL": 37,
+		"NAV": 23,
+		"NAV_TERRAIN": 24,
+		"NVG": 35,
+		"NVG_CONTROLS": 39,
+		"OXYGEN": 29,
+		"RADAR": 10,
+		"RADARWARN": 19,
+		"RADIO": 28,
+		"RWR": 31,
+		"SEAT": 45,
+		"SHRIKE": 33,
+		"SLATS": 12,
+		"SOUNDSYSTEM": 34,
+		"SPOILERS": 16,
+		"TACAN": 48,
+		"TEMP1": 40,
+		"TEMP2": 41,
+		"TEMP3": 42,
+		"TEMP4": 43,
+		"TEMP5": 44,
+		"TRIM": 26,
+		"UHF_RADIO": 5,
+		"UHF_RADIO_GUARD": 46,
+		"WEAPON_SYSTEM": 6
+	},
+	"elements": {
+		"PNT_10": {
+			"action": [
+				3021,
+				3021
+			],
+			"arg": [
+				10,
+				10
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 15,
+			"helper": "default_2_position_tumb",
+			"hint": "Arresting Hook Handle"
+		},
+		"PNT_100": {
+			"action": [
+				3013,
+				3013
+			],
+			"arg": [
+				100,
+				100
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 20,
+			"helper": "default_2_position_tumb",
+			"hint": "Engine Starter Switch"
+		},
+		"PNT_101": {
+			"action": [
+				3144,
+				3144
+			],
+			"arg": [
+				101,
+				101
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 20,
+			"helper": "default_3_position_tumb",
+			"hint": "Drop Tank Pressurization Switch"
+		},
+		"PNT_103": {
+			"action": [
+				3143,
+				3143
+			],
+			"arg": [
+				103,
+				103
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 20,
+			"helper": "default_3_position_tumb",
+			"hint": "Fuel Dump Switch"
+		},
+		"PNT_104": {
+			"action": [
+				3145,
+				3145
+			],
+			"arg": [
+				104,
+				104
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 20,
+			"helper": "default_2_position_tumb",
+			"hint": "Fuel Control Switch"
+		},
+		"PNT_106": {
+			"action": [
+				3082
+			],
+			"arg": [
+				106
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 2,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Instrument Lights Control",
+			"relative": [
+				false
+			]
+		},
+		"PNT_107": {
+			"action": [
+				3083
+			],
+			"arg": [
+				107
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 2,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Console Lights Control",
+			"relative": [
+				false
+			]
+		},
+		"PNT_108": {
+			"action": [
+				3084,
+				3084
+			],
+			"arg": [
+				108,
+				108
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 2,
+			"helper": "multiposition_switch_limited_inverted",
+			"hint": "Instrument Lights Brightness"
+		},
+		"PNT_110": {
+			"action": [
+				3081
+			],
+			"arg": [
+				110
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 2,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "White Floodlights Control",
+			"relative": [
+				false
+			]
+		},
+		"PNT_120": {
+			"action": [
+				3063,
+				3063
+			],
+			"arg": [
+				120,
+				120
+			],
+			"argLim": [
+				[
+					0.0,
+					0.4
+				],
+				[
+					0.0,
+					0.4
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 10,
+			"helper": "multiposition_switch_limited",
+			"hint": "AN/APG-53A Radar Mode Switch"
+		},
+		"PNT_121": {
+			"action": [
+				3064,
+				3064
+			],
+			"arg": [
+				121,
+				121
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 10,
+			"helper": "default_2_position_tumb",
+			"hint": "Radar AoA Compensation Switch"
+		},
+		"PNT_122": {
+			"action": [
+				3065
+			],
+			"arg": [
+				122
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.4
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.1
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Antenna Tilt Switch",
+			"relative": [
+				false
+			]
+		},
+		"PNT_123": {
+			"action": [
+				3068
+			],
+			"arg": [
+				123
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Obstacle Tone Volume",
+			"relative": [
+				false
+			]
+		},
+		"PNT_1240": {
+			"action": [
+				3036,
+				3036
+			],
+			"arg": [
+				1240,
+				1240
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 15,
+			"helper": "default_2_position_tumb",
+			"hint": "Emergency Landing Gear Release Handle"
+		},
+		"PNT_1241": {
+			"action": [
+				3027,
+				3027
+			],
+			"arg": [
+				1241,
+				1241
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Emergency Stores Release Handle"
+		},
+		"PNT_1242": {
+			"action": [
+				3136,
+				3136
+			],
+			"arg": [
+				1242,
+				1242
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 7,
+			"helper": "default_2_position_tumb",
+			"hint": "Manual Flight Control Handle"
+		},
+		"PNT_1243": {
+			"action": [
+				3023,
+				3023
+			],
+			"arg": [
+				1243,
+				1243
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 3,
+			"helper": "default_2_position_tumb",
+			"hint": "Emergency Generator Release Handle"
+		},
+		"PNT_125": {
+			"action": [
+				3138,
+				3138
+			],
+			"arg": [
+				125,
+				125
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 2,
+			"helper": "default_2_position_tumb",
+			"hint": "Oxygen Switch"
+		},
+		"PNT_1251": {
+			"action": [
+				3133,
+				3133
+			],
+			"arg": [
+				224,
+				224
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 3,
+			"helper": "default_2_position_tumb",
+			"hint": "Cabin Pressure Switch"
+		},
+		"PNT_128": {
+			"action": [
+				3035,
+				3035
+			],
+			"arg": [
+				128,
+				128
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 13,
+			"helper": "default_3_position_tumb",
+			"hint": "Emergency Speedbrake Knob"
+		},
+		"PNT_129": {
+			"action": [
+				71,
+				71
+			],
+			"arg": [
+				0,
+				0
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 17,
+			"helper": "default_2_position_tumb",
+			"hint": "Canopy Lever"
+		},
+		"PNT_130": {
+			"action": [
+				3146,
+				3146
+			],
+			"arg": [
+				130,
+				130
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 20,
+			"helper": "default_2_position_tumb",
+			"hint": "Manual Fuel Shutoff Control Lever"
+		},
+		"PNT_131": {
+			"action": [
+				3147,
+				3147
+			],
+			"arg": [
+				131,
+				131
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 20,
+			"helper": "default_2_position_tumb",
+			"hint": "Manual Fuel Shutoff Control Catch"
+		},
+		"PNT_132": {
+			"action": [
+				3015,
+				3015
+			],
+			"arg": [
+				132,
+				132
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 14,
+			"helper": "multiposition_switch_limited",
+			"hint": "Flap Handle"
+		},
+		"PNT_133": {
+			"action": [
+				3158,
+				3158
+			],
+			"arg": [
+				133,
+				133
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 2,
+			"helper": "default_2_position_tumb",
+			"hint": "JATO Arming Switch"
+		},
+		"PNT_134": {
+			"action": [
+				3159,
+				3159
+			],
+			"arg": [
+				134,
+				134
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 2,
+			"helper": "default_2_position_tumb",
+			"hint": "JATO Jettison Switch"
+		},
+		"PNT_135": {
+			"action": [
+				3095,
+				3095
+			],
+			"arg": [
+				135,
+				135
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 27,
+			"helper": "multiposition_switch_limited",
+			"hint": "APC Power Switch"
+		},
+		"PNT_136": {
+			"action": [
+				3096,
+				3096
+			],
+			"arg": [
+				136,
+				136
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 27,
+			"helper": "multiposition_switch_limited",
+			"hint": "APC Temperature Switch"
+		},
+		"PNT_139": {
+			"action": [
+				3111
+			],
+			"arg": [
+				139
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 2,
+			"helper": "default_button",
+			"hint": "Accelerometer Reset",
+			"stopAction": [
+				3111
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_146": {
+			"action": [
+				3105
+			],
+			"arg": [
+				146
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 8,
+			"helper": "default_button",
+			"hint": "Elapsed-Time Clock",
+			"stopAction": [
+				3105
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_160": {
+			"action": [
+				3088,
+				3088
+			],
+			"arg": [
+				160,
+				160
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS Standby Switch"
+		},
+		"PNT_161": {
+			"action": [
+				3089,
+				3089
+			],
+			"arg": [
+				161,
+				161
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS Engage Switch"
+		},
+		"PNT_162": {
+			"action": [
+				3090,
+				3090
+			],
+			"arg": [
+				162,
+				162
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS Heading Select Switch"
+		},
+		"PNT_163": {
+			"action": [
+				3091,
+				3091
+			],
+			"arg": [
+				163,
+				163
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS Altitude Switch"
+		},
+		"PNT_164": {
+			"action": [
+				3092
+			],
+			"arg": [
+				164
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 27,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "AFCS Heading Select Pull-to-Set Knob",
+			"relative": [
+				true
+			]
+		},
+		"PNT_165": {
+			"action": [
+				3093,
+				3093
+			],
+			"arg": [
+				165,
+				165
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS Stability Augmentation Switch (Yaw Damper)"
+		},
+		"PNT_166": {
+			"action": [
+				3094,
+				3094
+			],
+			"arg": [
+				166,
+				166
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS Aileron Trim Switch (unimplemented)"
+		},
+		"PNT_170": {
+			"action": [
+				3045,
+				3045
+			],
+			"arg": [
+				170,
+				170
+			],
+			"argLim": [
+				[
+					0.0,
+					0.4
+				],
+				[
+					0.0,
+					0.4
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 23,
+			"helper": "multiposition_switch_limited",
+			"hint": "AN/APN-153 Doppler Navigation Radar Mode Switch"
+		},
+		"PNT_176": {
+			"action": [
+				3047,
+				3047
+			],
+			"arg": [
+				176,
+				176
+			],
+			"argLim": [
+				[
+					0.0,
+					0.4
+				],
+				[
+					0.0,
+					0.4
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 23,
+			"helper": "multiposition_switch_limited",
+			"hint": "AN/ASN-41 Function Selector Switch"
+		},
+		"PNT_177": {
+			"action": [
+				3150,
+				3051
+			],
+			"arg": [
+				236,
+				177
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Present Latitude Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3150,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_183": {
+			"action": [
+				3151,
+				3052
+			],
+			"arg": [
+				237,
+				183
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Present Longitude Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3151,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_190": {
+			"action": [
+				3152,
+				3053
+			],
+			"arg": [
+				238,
+				190
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Destination Latitude Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3152,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_196": {
+			"action": [
+				3153,
+				3054
+			],
+			"arg": [
+				239,
+				196
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Destination Longitude Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3153,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_2": {
+			"action": [
+				10138,
+				10138
+			],
+			"arg": [],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 17,
+			"helper": "default_2_position_tumb",
+			"hint": "Control Stick - HIDE/SHOW"
+		},
+		"PNT_203": {
+			"action": [
+				3154,
+				3048
+			],
+			"arg": [
+				240,
+				203
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Magnetic Variation Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3154,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_209": {
+			"action": [
+				3155,
+				3049
+			],
+			"arg": [
+				241,
+				209
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Wind Speed Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3155,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_213": {
+			"action": [
+				3156,
+				3050
+			],
+			"arg": [
+				242,
+				213
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 23,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Wind Direction Push-to-Set Knob",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3156,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_217": {
+			"action": [
+				3074,
+				3074
+			],
+			"arg": [
+				217,
+				217
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 25,
+			"helper": "multiposition_switch_limited",
+			"hint": "Probe Light Switch"
+		},
+		"PNT_218": {
+			"action": [
+				3075,
+				3075
+			],
+			"arg": [
+				218,
+				218
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 25,
+			"helper": "default_2_position_tumb",
+			"hint": "Taxi Light Switch"
+		},
+		"PNT_219": {
+			"action": [
+				3076,
+				3076
+			],
+			"arg": [
+				219,
+				219
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 25,
+			"helper": "default_2_position_tumb",
+			"hint": "Anti-Collision Light Switch"
+		},
+		"PNT_220": {
+			"action": [
+				3077,
+				3077
+			],
+			"arg": [
+				220,
+				220
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 25,
+			"helper": "multiposition_switch_limited",
+			"hint": "Fuselage Light Switch"
+		},
+		"PNT_221": {
+			"action": [
+				3078,
+				3078
+			],
+			"arg": [
+				221,
+				221
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 25,
+			"helper": "default_2_position_tumb",
+			"hint": "Lighting Flash/Steady Switch"
+		},
+		"PNT_222": {
+			"action": [
+				3079,
+				3079
+			],
+			"arg": [
+				222,
+				222
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 25,
+			"helper": "multiposition_switch_limited",
+			"hint": "Navigation Lights Switch"
+		},
+		"PNT_223": {
+			"action": [
+				3080,
+				3080
+			],
+			"arg": [
+				223,
+				223
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 25,
+			"helper": "multiposition_switch_limited",
+			"hint": "Tail Light Switch"
+		},
+		"PNT_225": {
+			"action": [
+				3134,
+				3134
+			],
+			"arg": [
+				225,
+				225
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 3,
+			"helper": "default_3_position_tumb",
+			"hint": "Windshield Defrost Switch"
+		},
+		"PNT_226": {
+			"action": [
+				3135
+			],
+			"arg": [
+				226
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 3,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Cabin Temperature Knob",
+			"relative": [
+				false
+			]
+		},
+		"PNT_24": {
+			"action": [
+				3148,
+				3148
+			],
+			"arg": [
+				24,
+				24
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 2,
+			"helper": "default_2_position_tumb",
+			"hint": "Shoulder Harness Control Handle"
+		},
+		"PNT_247": {
+			"action": [
+				3046
+			],
+			"arg": [
+				247
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 23,
+			"helper": "default_button",
+			"hint": "AN/APN-153 Memory Light Test",
+			"stopAction": [
+				3046
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_248": {
+			"action": [
+				3166,
+				3166
+			],
+			"arg": [
+				248,
+				248
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"BTN"
+			],
+			"device": 23,
+			"helper": "springloaded_3_pos_tumb",
+			"hint": "Destination Latitude Slew Knob",
+			"stopAction": [
+				3166,
+				3166
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_249": {
+			"action": [
+				3167,
+				3167
+			],
+			"arg": [
+				249,
+				249
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"BTN"
+			],
+			"device": 23,
+			"helper": "springloaded_3_pos_tumb",
+			"hint": "Destination Longitude Slew Knob",
+			"stopAction": [
+				3167,
+				3167
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_25": {
+			"action": [
+				3149,
+				3149
+			],
+			"arg": [
+				25,
+				25
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 2,
+			"helper": "default_2_position_tumb",
+			"hint": "Alternate Ejection Handle"
+		},
+		"PNT_250": {
+			"action": [
+				3168,
+				3168
+			],
+			"arg": [
+				250,
+				250
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9500000000000001
+				],
+				[
+					0.0,
+					0.9500000000000001
+				]
+			],
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 37,
+			"helper": "multiposition_switch_limited",
+			"hint": "MCL Channel Selector Switch"
+		},
+		"PNT_251": {
+			"action": [
+				3175,
+				3175
+			],
+			"arg": [
+				251,
+				251
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"BTN",
+				"BTN"
+			],
+			"device": 45,
+			"helper": "springloaded_3_pos_tumb",
+			"hint": "Seat Adjustment Switch",
+			"stopAction": [
+				3175,
+				3175
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_252": {
+			"action": [
+				3022,
+				3022
+			],
+			"arg": [
+				252,
+				252
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 3,
+			"helper": "default_2_position_tumb",
+			"hint": "Emergency Generator Switch"
+		},
+		"PNT_253": {
+			"action": [
+				3169,
+				3169
+			],
+			"arg": [
+				253,
+				253
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 37,
+			"helper": "springloaded_forward_only_3_pos_tumb",
+			"hint": "AN/ARA-63 MCL Power Switch",
+			"stopAction": [
+				0,
+				3169
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_254": {
+			"action": [
+				3172,
+				3172
+			],
+			"arg": [
+				254,
+				254
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 23,
+			"helper": "inverted_3_position_tumb",
+			"hint": "TACAN Antenna Control Switch (unimplemented)"
+		},
+		"PNT_255": {
+			"action": [
+				3174,
+				3174
+			],
+			"arg": [
+				255,
+				255
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 23,
+			"helper": "default_2_position_tumb",
+			"hint": "Navigation Dead Reckoning/Doppler Switch (unimplemented)"
+		},
+		"PNT_256": {
+			"action": [
+				3177,
+				3177
+			],
+			"arg": [
+				256,
+				256
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 20,
+			"helper": "default_2_position_tumb",
+			"hint": "Fuel Transfer Switch"
+		},
+		"PNT_257": {
+			"action": [
+				3173,
+				3173
+			],
+			"arg": [
+				257,
+				257
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 2,
+			"helper": "default_2_position_tumb",
+			"hint": "Rain Removal Switch (unimplemented)"
+		},
+		"PNT_258": {
+			"action": [
+				3170,
+				3170
+			],
+			"arg": [
+				258,
+				258
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 27,
+			"helper": "default_2_position_tumb",
+			"hint": "AFCS 1-N-2 Guard Switch"
+		},
+		"PNT_259": {
+			"action": [
+				3171,
+				3171
+			],
+			"arg": [
+				259,
+				259
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"BTN"
+			],
+			"device": 27,
+			"helper": "springloaded_3_pos_tumb",
+			"hint": "AFCS 1-N-2 Switch",
+			"stopAction": [
+				3171,
+				3171
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_361": {
+			"action": [
+				3101,
+				3101
+			],
+			"arg": [
+				361,
+				361
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9500000000000001
+				],
+				[
+					0.0,
+					0.9500000000000001
+				]
+			],
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 28,
+			"helper": "multiposition_switch_limited",
+			"hint": "Radio Preset Channel Selector"
+		},
+		"PNT_365": {
+			"action": [
+				3099
+			],
+			"arg": [
+				365
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.5
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 28,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radio Volume",
+			"relative": [
+				false
+			]
+		},
+		"PNT_366": {
+			"action": [
+				3098,
+				3098
+			],
+			"arg": [
+				366,
+				366
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 28,
+			"helper": "multiposition_switch_limited",
+			"hint": "Radio Frequency Mode"
+		},
+		"PNT_367": {
+			"action": [
+				3102,
+				3102
+			],
+			"arg": [
+				367,
+				367
+			],
+			"argLim": [
+				[
+					0.0,
+					0.8500000000000001
+				],
+				[
+					0.0,
+					0.8500000000000001
+				]
+			],
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 28,
+			"helper": "multiposition_switch_limited",
+			"hint": "Radio Frequency 10 MHz"
+		},
+		"PNT_368": {
+			"action": [
+				3103,
+				3103
+			],
+			"arg": [
+				368,
+				368
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9
+				],
+				[
+					0.0,
+					0.9
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 28,
+			"helper": "multiposition_switch_limited",
+			"hint": "Radio Frequency 1 MHz"
+		},
+		"PNT_369": {
+			"action": [
+				3104,
+				3104
+			],
+			"arg": [
+				369,
+				369
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9500000000000001
+				],
+				[
+					0.0,
+					0.9500000000000001
+				]
+			],
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 28,
+			"helper": "multiposition_switch_limited",
+			"hint": "Radio Frequency 50 kHz"
+		},
+		"PNT_370": {
+			"action": [
+				3100,
+				3100
+			],
+			"arg": [
+				370,
+				370
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 28,
+			"helper": "default_2_position_tumb",
+			"hint": "Radio Squelch Disable"
+		},
+		"PNT_372": {
+			"action": [
+				3097,
+				3097
+			],
+			"arg": [
+				372,
+				372
+			],
+			"argLim": [
+				[
+					0.0,
+					0.30000000000000004
+				],
+				[
+					0.0,
+					0.30000000000000004
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 28,
+			"helper": "multiposition_switch_limited",
+			"hint": "AN/ARC-51A UHF Radio Mode Switch"
+		},
+		"PNT_390": {
+			"action": [
+				3012,
+				3012
+			],
+			"arg": [
+				390,
+				390
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "multiposition_switch_limited",
+			"hint": "Gunpod Switch"
+		},
+		"PNT_391": {
+			"action": [
+				3009,
+				3009
+			],
+			"arg": [
+				391,
+				391
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Gunpod Station LH Switch"
+		},
+		"PNT_392": {
+			"action": [
+				3010,
+				3010
+			],
+			"arg": [
+				392,
+				392
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Gunpod Station CTR Switch"
+		},
+		"PNT_393": {
+			"action": [
+				3011,
+				3011
+			],
+			"arg": [
+				393,
+				393
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Gunpod Station RH Switch"
+		},
+		"PNT_400": {
+			"action": [
+				3057
+			],
+			"arg": [
+				400
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Indicator Storage",
+			"relative": [
+				false
+			]
+		},
+		"PNT_401": {
+			"action": [
+				3058
+			],
+			"arg": [
+				401
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Indicator Brilliance",
+			"relative": [
+				false
+			]
+		},
+		"PNT_402": {
+			"action": [
+				3059
+			],
+			"arg": [
+				402
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Indicator Detail",
+			"relative": [
+				false
+			]
+		},
+		"PNT_403": {
+			"action": [
+				3060
+			],
+			"arg": [
+				403
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.05
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Indicator Gain",
+			"relative": [
+				false
+			]
+		},
+		"PNT_404": {
+			"action": [
+				3062
+			],
+			"arg": [
+				404
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 10,
+			"gain": [
+				0.1
+			],
+			"helper": "default_axis_limited",
+			"hint": "Radar Indicator Reticle",
+			"relative": [
+				false
+			]
+		},
+		"PNT_405": {
+			"action": [
+				3061,
+				3061
+			],
+			"arg": [
+				405,
+				405
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 10,
+			"helper": "default_2_position_tumb",
+			"hint": "Radar Indicator Filter Plate"
+		},
+		"PNT_501": {
+			"action": [
+				3115,
+				3115
+			],
+			"arg": [
+				501,
+				501
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 31,
+			"helper": "default_2_position_tumb",
+			"hint": "APR-27 Switch"
+		},
+		"PNT_502": {
+			"action": [
+				3120,
+				3120
+			],
+			"arg": [
+				502,
+				502
+			],
+			"argLim": [
+				[
+					0.0,
+					0.99
+				],
+				[
+					0.0,
+					0.99
+				]
+			],
+			"argValue": [
+				-0.33,
+				0.33
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 31,
+			"helper": "multiposition_switch_limited",
+			"hint": "AN/APR-25 Function Selector Switch"
+		},
+		"PNT_503": {
+			"action": [
+				3114,
+				3114
+			],
+			"arg": [
+				503,
+				503
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 31,
+			"helper": "default_2_position_tumb",
+			"hint": "Audio ALQ Switch"
+		},
+		"PNT_504": {
+			"action": [
+				3113,
+				3113
+			],
+			"arg": [
+				504,
+				504
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 31,
+			"helper": "default_2_position_tumb",
+			"hint": "APR-25 Switch"
+		},
+		"PNT_505": {
+			"action": [
+				3119
+			],
+			"arg": [
+				505
+			],
+			"argLim": [
+				[
+					-0.9,
+					0.9
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 31,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Missile Alert Volume",
+			"relative": [
+				false
+			]
+		},
+		"PNT_506": {
+			"action": [
+				3118
+			],
+			"arg": [
+				506
+			],
+			"argLim": [
+				[
+					-0.9,
+					0.9
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 31,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "PRF Volume",
+			"relative": [
+				false
+			]
+		},
+		"PNT_507": {
+			"action": [
+				3116
+			],
+			"arg": [
+				507
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 31,
+			"helper": "default_button",
+			"hint": "APR-27 Test",
+			"stopAction": [
+				3116
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_509": {
+			"action": [
+				3142
+			],
+			"arg": [
+				509
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": null,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Compass Latitude Knob (unimplemented)",
+			"relative": [
+				false
+			]
+		},
+		"PNT_510": {
+			"action": [
+				3117
+			],
+			"arg": [
+				510
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 31,
+			"helper": "default_button",
+			"hint": "APR-27 Light",
+			"stopAction": [
+				3117
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_511": {
+			"action": [
+				3139,
+				3139
+			],
+			"arg": [
+				511,
+				511
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"BTN",
+				"BTN"
+			],
+			"device": null,
+			"helper": "springloaded_3_pos_tumb",
+			"hint": "Compass Heading Set Knob (unimplemented)",
+			"stopAction": [
+				3139,
+				3139
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_512": {
+			"action": [
+				3141,
+				3141
+			],
+			"arg": [
+				512,
+				512
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": null,
+			"helper": "default_2_position_tumb",
+			"hint": "Compass Mode (unimplemented)"
+		},
+		"PNT_513": {
+			"action": [
+				3140
+			],
+			"arg": [
+				513
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": null,
+			"helper": "default_button",
+			"hint": "Compass Push-to-Sync (unimplemented)",
+			"stopAction": [
+				3140
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_522": {
+			"action": [
+				3106,
+				3106
+			],
+			"arg": [
+				522,
+				522
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 32,
+			"helper": "multiposition_switch_limited",
+			"hint": "Dispenser Select"
+		},
+		"PNT_523": {
+			"action": [
+				3107
+			],
+			"arg": [
+				523
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 32,
+			"helper": "default_button",
+			"hint": "Chaff AUTO Pushbutton (ALE-29A Salvo)",
+			"stopAction": [
+				3107
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_524": {
+			"action": [
+				3108
+			],
+			"arg": [
+				524
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"device": 32,
+			"gain": [
+				1.0
+			],
+			"helper": "default_axis",
+			"hint": "Dispenser 1 Counter",
+			"relative": [
+				true
+			]
+		},
+		"PNT_525": {
+			"action": [
+				3109
+			],
+			"arg": [
+				525
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"device": 32,
+			"gain": [
+				1.0
+			],
+			"helper": "default_axis",
+			"hint": "Dispenser 2 Counter",
+			"relative": [
+				true
+			]
+		},
+		"PNT_530": {
+			"action": [
+				3110,
+				3110
+			],
+			"arg": [
+				530,
+				530
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 32,
+			"helper": "default_2_position_tumb",
+			"hint": "Chaff Power Switch"
+		},
+		"PNT_602": {
+			"action": [
+				3038,
+				3037
+			],
+			"arg": [
+				603,
+				602
+			],
+			"argLim": [
+				[
+					-1.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				0.5
+			],
+			"controlClass": [
+				"TUMB",
+				"LEV"
+			],
+			"device": 19,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "AN/APN-141 Radar Altimeter",
+			"relative": [
+				false,
+				true
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_662": {
+			"action": [
+				3042,
+				3043
+			],
+			"arg": [
+				663,
+				662
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				0.5
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 2,
+			"gain": [
+				1.0,
+				0.1
+			],
+			"helper": "default_button_axis",
+			"hint": "Standby Attitude Horizon",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3042,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_700": {
+			"action": [
+				3025,
+				3025
+			],
+			"arg": [
+				700,
+				700
+			],
+			"argLim": [
+				[
+					0.0,
+					0.6000000000000001
+				],
+				[
+					0.0,
+					0.6000000000000001
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "multiposition_switch_limited",
+			"hint": "Emergency Release Selector"
+		},
+		"PNT_701": {
+			"action": [
+				3001,
+				3001
+			],
+			"arg": [
+				701,
+				701
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Guns Charging Switch"
+		},
+		"PNT_702": {
+			"action": [
+				3026,
+				3026
+			],
+			"arg": [
+				702,
+				702
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "default_3_position_tumb",
+			"hint": "Bomb Arm Switch"
+		},
+		"PNT_703": {
+			"action": [
+				3003,
+				3003
+			],
+			"arg": [
+				703,
+				703
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Station 1 Selector Switch"
+		},
+		"PNT_704": {
+			"action": [
+				3004,
+				3004
+			],
+			"arg": [
+				704,
+				704
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Station 2 Selector Switch"
+		},
+		"PNT_705": {
+			"action": [
+				3005,
+				3005
+			],
+			"arg": [
+				705,
+				705
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Station 3 Selector Switch"
+		},
+		"PNT_706": {
+			"action": [
+				3006,
+				3006
+			],
+			"arg": [
+				706,
+				706
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Station 4 Selector Switch"
+		},
+		"PNT_707": {
+			"action": [
+				3007,
+				3007
+			],
+			"arg": [
+				707,
+				707
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "Station 5 Selector Switch"
+		},
+		"PNT_708": {
+			"action": [
+				3008,
+				3008
+			],
+			"arg": [
+				708,
+				708
+			],
+			"argLim": [
+				[
+					0.0,
+					0.6000000000000001
+				],
+				[
+					0.0,
+					0.6000000000000001
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "multiposition_switch_limited",
+			"hint": "Weapon Function Selector Switch"
+		},
+		"PNT_709": {
+			"action": [
+				3002,
+				3002
+			],
+			"arg": [
+				709,
+				709
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 3,
+			"helper": "default_2_position_tumb",
+			"hint": "Master Armament Switch"
+		},
+		"PNT_720": {
+			"action": [
+				3018
+			],
+			"arg": [
+				720
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 2,
+			"helper": "default_button",
+			"hint": "Internal-External Fuel Switch",
+			"stopAction": [
+				3018
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_721": {
+			"action": [
+				3055,
+				3055
+			],
+			"arg": [
+				721,
+				721
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 10,
+			"helper": "default_2_position_tumb",
+			"hint": "Radar Terrain Clearance Switch"
+		},
+		"PNT_722": {
+			"action": [
+				3056,
+				3056
+			],
+			"arg": [
+				722,
+				722
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 10,
+			"helper": "default_2_position_tumb",
+			"hint": "Radar Range Switch"
+		},
+		"PNT_723": {
+			"action": [
+				3039
+			],
+			"arg": [
+				723
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"BTN"
+			],
+			"device": 2,
+			"helper": "default_button",
+			"hint": "Master Test Switch",
+			"stopAction": [
+				3039
+			],
+			"useReleaseMessage": [
+				true
+			]
+		},
+		"PNT_724": {
+			"action": [
+				3044,
+				3044
+			],
+			"arg": [
+				724,
+				724
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 23,
+			"helper": "multiposition_switch_limited",
+			"hint": "BDHI Switch"
+		},
+		"PNT_725": {
+			"action": [
+				3137,
+				3137
+			],
+			"arg": [
+				725,
+				725
+			],
+			"argLim": [
+				[
+					0.0,
+					0.4
+				],
+				[
+					0.0,
+					0.4
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "multiposition_switch_limited",
+			"hint": "Shrike Selector Knob"
+		},
+		"PNT_726": {
+			"action": [
+				3125
+			],
+			"arg": [
+				726
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 6,
+			"gain": [
+				0.1
+			],
+			"helper": "default_axis_limited",
+			"hint": "Shrike/Sidewinder Volume Knob",
+			"relative": [
+				false
+			]
+		},
+		"PNT_740": {
+			"action": [
+				3031,
+				3031
+			],
+			"arg": [
+				740,
+				740
+			],
+			"argLim": [
+				[
+					0.0,
+					0.55
+				],
+				[
+					0.0,
+					0.55
+				]
+			],
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "multiposition_switch_limited",
+			"hint": "AWRS Quantity Selector Switch"
+		},
+		"PNT_742": {
+			"action": [
+				3032
+			],
+			"arg": [
+				742
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 6,
+			"gain": [
+				0.05
+			],
+			"helper": "default_axis_limited",
+			"hint": "AWRS Drop Interval Knob",
+			"relative": [
+				false
+			]
+		},
+		"PNT_743": {
+			"action": [
+				3033,
+				3033
+			],
+			"arg": [
+				743,
+				743
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 6,
+			"helper": "default_2_position_tumb",
+			"hint": "AWRS Multiplier Switch"
+		},
+		"PNT_744": {
+			"action": [
+				3034,
+				3034
+			],
+			"arg": [
+				744,
+				744
+			],
+			"argLim": [
+				[
+					0.0,
+					0.5
+				],
+				[
+					0.0,
+					0.5
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 6,
+			"helper": "multiposition_switch_limited",
+			"hint": "AWRS Mode Selector Switch"
+		},
+		"PNT_8": {
+			"action": [
+				3020,
+				3020
+			],
+			"arg": [
+				8,
+				8
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 15,
+			"helper": "default_2_position_tumb",
+			"hint": "Landing Gear Handle"
+		},
+		"PNT_80": {
+			"action": [
+				3087,
+				3087
+			],
+			"arg": [
+				0,
+				0
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 20,
+			"helper": "default_3_position_tumb",
+			"hint": "Throttle Position Lock"
+		},
+		"PNT_82": {
+			"action": [
+				3085
+			],
+			"arg": [
+				82
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 26,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "Rudder Trim Switch",
+			"relative": [
+				false
+			]
+		},
+		"PNT_827": {
+			"action": [
+				3019
+			],
+			"arg": [
+				827
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"device": 2,
+			"gain": [
+				0.05
+			],
+			"helper": "default_axis",
+			"hint": "Altimeter Pressure",
+			"relative": [
+				true
+			]
+		},
+		"PNT_83": {
+			"action": [
+				3073,
+				3073
+			],
+			"arg": [
+				83,
+				83
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				],
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				-1.0,
+				1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 25,
+			"helper": "multiposition_switch_limited",
+			"hint": "Master Exterior Lights Switch"
+		},
+		"PNT_84": {
+			"action": [
+				3017,
+				3017
+			],
+			"arg": [
+				84,
+				84
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 16,
+			"helper": "default_2_position_tumb",
+			"hint": "Spoiler Arm Switch"
+		},
+		"PNT_85": {
+			"action": [
+				3024,
+				3024
+			],
+			"arg": [
+				85,
+				85
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 13,
+			"helper": "default_2_position_tumb",
+			"hint": "Speedbrake Switch"
+		},
+		"PNT_853": {
+			"action": [
+				3165
+			],
+			"arg": [
+				853
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 2,
+			"gain": [
+				0.2
+			],
+			"helper": "default_axis_limited",
+			"hint": "AoA Indexer Dimming Wheel",
+			"relative": [
+				false
+			]
+		},
+		"PNT_884": {
+			"action": [
+				3040,
+				3041
+			],
+			"arg": [
+				885,
+				884
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				0.5
+			],
+			"controlClass": [
+				"BTN",
+				"LEV"
+			],
+			"device": 2,
+			"gain": [
+				1.0,
+				0.2
+			],
+			"helper": "default_button_axis",
+			"hint": "IAS Index",
+			"relative": [
+				false,
+				true
+			],
+			"stopAction": [
+				3040,
+				0
+			],
+			"useReleaseMessage": [
+				true,
+				false
+			]
+		},
+		"PNT_891": {
+			"action": [
+				3029,
+				3029
+			],
+			"arg": [
+				891,
+				891
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 22,
+			"helper": "default_2_position_tumb",
+			"hint": "Gunsight Day-Night Switch"
+		},
+		"PNT_892": {
+			"action": [
+				3028
+			],
+			"arg": [
+				892
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0
+			],
+			"controlClass": [
+				"MOVABLE_LEV"
+			],
+			"device": 22,
+			"gain": [
+				0.05
+			],
+			"helper": "default_movable_axis",
+			"hint": "Gunsight Elevation Control",
+			"relative": [
+				false
+			]
+		},
+		"PNT_895": {
+			"action": [
+				3030
+			],
+			"arg": [
+				895
+			],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"device": 22,
+			"gain": [
+				0.05
+			],
+			"helper": "default_axis",
+			"hint": "Gunsight Light Control",
+			"relative": [
+				false
+			]
+		},
+		"PNT_900": {
+			"action": [
+				3069,
+				3069
+			],
+			"arg": [
+				900,
+				900
+			],
+			"argLim": [
+				[
+					0.0,
+					0.30000000000000004
+				],
+				[
+					0.0,
+					0.30000000000000004
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 48,
+			"helper": "multiposition_switch_limited",
+			"hint": "AN/ARN-52 TACAN Mode Switch"
+		},
+		"PNT_901": {
+			"action": [
+				3070,
+				3070
+			],
+			"arg": [
+				901,
+				901
+			],
+			"argLim": [
+				[
+					0.0,
+					0.6000000000000001
+				],
+				[
+					0.0,
+					0.6000000000000001
+				]
+			],
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 48,
+			"helper": "multiposition_switch_limited",
+			"hint": "TACAN Channel 10s"
+		},
+		"PNT_902": {
+			"action": [
+				3071,
+				3071
+			],
+			"arg": [
+				902,
+				902
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9
+				],
+				[
+					0.0,
+					0.9
+				]
+			],
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"cycle": false,
+			"device": 48,
+			"helper": "multiposition_switch_limited",
+			"hint": "TACAN Channel 1s"
+		},
+		"PNT_903": {
+			"action": [
+				3072
+			],
+			"arg": [
+				903
+			],
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"argValue": [
+				0.0
+			],
+			"controlClass": [
+				"LEV"
+			],
+			"cycle": false,
+			"device": 48,
+			"gain": [
+				0.3
+			],
+			"helper": "default_axis_limited",
+			"hint": "TACAN Volume",
+			"relative": [
+				false
+			]
+		},
+		"PNT_MIRROR_LEFT": {
+			"action": [
+				1625,
+				1625
+			],
+			"arg": [],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 0,
+			"helper": "default_2_position_tumb",
+			"hint": "Left Mirror - ON/OFF"
+		},
+		"PNT_MIRROR_RIGHT": {
+			"action": [
+				1625,
+				1625
+			],
+			"arg": [],
+			"argLim": [
+				[
+					0.0,
+					1.0
+				],
+				[
+					0.0,
+					1.0
+				]
+			],
+			"argValue": [
+				1.0,
+				-1.0
+			],
+			"controlClass": [
+				"TUMB",
+				"TUMB"
+			],
+			"device": 0,
+			"helper": "default_2_position_tumb",
+			"hint": "Right Mirror - ON/OFF"
+		}
+	},
+	"equipmentProperties": [],
+	"gaugesAndLamps": [
+		{
+			"arg": 16,
+			"controller": "mirrors_draw",
+			"input": [
+				0,
+				1
+			],
+			"name": "mirrors_draw",
+			"output": [
+				1,
+				0
+			]
+		},
+		{
+			"arg": 26,
+			"controller": "base_gauge_CanopyPos",
+			"input": [
+				0,
+				1
+			],
+			"name": "Canopy",
+			"output": [
+				0,
+				0.9
+			]
+		},
+		{
+			"arg": 129,
+			"controller": "base_gauge_CanopyPos",
+			"input": [
+				0,
+				0.1,
+				0.9
+			],
+			"name": "CanopyLever",
+			"output": [
+				1,
+				0.4,
+				0.0
+			]
+		},
+		{
+			"arg": 2,
+			"input": [
+				-1,
+				1
+			],
+			"name": "StickPitch",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 3,
+			"input": [
+				-1,
+				1
+			],
+			"name": "StickBank",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 4,
+			"input": [
+				-1,
+				1
+			],
+			"name": "RudderPedals",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 5,
+			"input": [
+				-1,
+				1
+			],
+			"name": "LeftBrakePedal",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 6,
+			"input": [
+				-1,
+				1
+			],
+			"name": "RightBrakePedal",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 80,
+			"input": [
+				-1,
+				1
+			],
+			"name": "Throttle",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 8,
+			"controller": "gear_handle_animation",
+			"input": [
+				0,
+				1
+			],
+			"name": "Landinggearhandle",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 870,
+			"input": [
+				-3,
+				13
+			],
+			"name": "PitchTrim",
+			"output": [
+				-0.25,
+				1
+			]
+		},
+		{
+			"arg": 871,
+			"input": [
+				-1,
+				1
+			],
+			"name": "RollTrim",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 28,
+			"input": [
+				-1,
+				1
+			],
+			"name": "PitchTrimKnob",
+			"output": [
+				1,
+				-1
+			]
+		},
+		{
+			"arg": 29,
+			"input": [
+				-1,
+				1
+			],
+			"name": "RollTrimKnob",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 520,
+			"input": [
+				0.0,
+				103.0
+			],
+			"name": "Engine_RPM",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 521,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Engine_RPMsub",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 526,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "CM_bank1_Xx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 527,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "CM_bank1_xX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 528,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "CM_bank2_Xx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 529,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "CM_bank2_xX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 540,
+			"input": [
+				0,
+				1000
+			],
+			"name": "EGT",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 560,
+			"input": [
+				0,
+				0.03779933333333333,
+				0.12599777777777776,
+				0.6299888888888889,
+				1.8899666666666668
+			],
+			"name": "Engine_Fuel_Flow",
+			"output": [
+				0.0,
+				0.01,
+				0.15,
+				0.75,
+				1.0
+			]
+		},
+		{
+			"arg": 152,
+			"input": [
+				0.0,
+				100.0
+			],
+			"name": "OilPressure",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 151,
+			"input": [
+				1.2,
+				3.4
+			],
+			"name": "PressureRatio",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 105,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ManualFuelControl_Warn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 23,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "FlapsIndicator",
+			"output": [
+				0.0,
+				0.95
+			]
+		},
+		{
+			"arg": 20,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "GearNose",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 21,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "GearLeft",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 22,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "GearRight",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 27,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "GearLight",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 153,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "HideStick",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 580,
+			"input": [
+				0.0,
+				6600.0
+			],
+			"name": "FuelGauge",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 665,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "StandbyAttHorizon",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 880,
+			"input": [
+				0.0,
+				360.0
+			],
+			"name": "IASGauge",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 881,
+			"input": [
+				0.0,
+				360.0
+			],
+			"name": "MachDisc",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 882,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "IASIndex",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 883,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "MachIndex",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 600,
+			"input": [
+				0.0,
+				100,
+				150,
+				200,
+				400,
+				600,
+				1000,
+				2000,
+				5000,
+				6000
+			],
+			"name": "RadarAltimeter",
+			"output": [
+				0.0,
+				0.25,
+				0.3,
+				0.35,
+				0.45,
+				0.55,
+				0.65,
+				0.8,
+				0.95,
+				1.0
+			]
+		},
+		{
+			"arg": 601,
+			"input": [
+				0.0,
+				100,
+				150,
+				200,
+				400,
+				600,
+				1000,
+				2000,
+				5000
+			],
+			"name": "LAWS_indexer",
+			"output": [
+				0.0,
+				0.25,
+				0.3,
+				0.35,
+				0.45,
+				0.55,
+				0.65,
+				0.8,
+				1.0
+			]
+		},
+		{
+			"arg": 604,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "LAWS_OFF",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 605,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "LAWS_light_gauge",
+			"output": [
+				0.0,
+				0.6
+			]
+		},
+		{
+			"arg": 150,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Oil_light_gauge",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 856,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "INDICATOR_BRIGHTNESS",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 857,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AOA_BRIGHTNESS",
+			"output": [
+				0.001,
+				0.6
+			]
+		},
+		{
+			"arg": 858,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_BRIGHTNESS",
+			"output": [
+				0.0,
+				0.1
+			]
+		},
+		{
+			"arg": 154,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_WHEELS",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 155,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_LABS",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 156,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_LAWS",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 157,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_OBST",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 158,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_IFF",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 159,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Glareshield_FIRE",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 780,
+			"input": [
+				0.0,
+				360.0
+			],
+			"name": "BDHI_Heading",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 781,
+			"input": [
+				0.0,
+				360.0
+			],
+			"name": "BDHI_Needle1",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 782,
+			"input": [
+				0.0,
+				360.0
+			],
+			"name": "BDHI_Needle2",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 786,
+			"input": [
+				0,
+				1.0
+			],
+			"name": "BDHI_DME_Flag",
+			"output": [
+				0,
+				1.0
+			]
+		},
+		{
+			"arg": 785,
+			"input": [
+				0,
+				1.0
+			],
+			"name": "BDHI_DME_Xxx",
+			"output": [
+				0,
+				1.0
+			]
+		},
+		{
+			"arg": 784,
+			"input": [
+				0,
+				1.0
+			],
+			"name": "BDHI_DME_xXx",
+			"output": [
+				0,
+				1.0
+			]
+		},
+		{
+			"arg": 783,
+			"input": [
+				0,
+				1.0
+			],
+			"name": "BDHI_DME_xxX",
+			"output": [
+				0,
+				1.0
+			]
+		},
+		{
+			"arg": 381,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "BDHI_ILS_GS",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 382,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "BDHI_ILS_LOC",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 820,
+			"input": [
+				0.0,
+				1000.0
+			],
+			"name": "Altimeter",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 821,
+			"input": [
+				0.0,
+				9900,
+				10000,
+				19900,
+				20000,
+				29900,
+				30000,
+				39900,
+				40000,
+				49900,
+				50000,
+				59900,
+				60000,
+				69900,
+				70000,
+				79900,
+				80000,
+				89900,
+				90000,
+				99900,
+				100000.0
+			],
+			"name": "Altimeter10K",
+			"output": [
+				0.0,
+				0.09,
+				0.1,
+				0.19,
+				0.2,
+				0.29,
+				0.3,
+				0.39,
+				0.4,
+				0.49,
+				0.5,
+				0.59,
+				0.6,
+				0.69,
+				0.7,
+				0.79,
+				0.8,
+				0.89,
+				0.9,
+				0.99,
+				1.0
+			]
+		},
+		{
+			"arg": 822,
+			"input": [
+				0.0,
+				10000.0
+			],
+			"name": "Altimeter1K",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 823,
+			"input": [
+				0.0,
+				1000.0
+			],
+			"name": "Altimeter100s",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 824,
+			"input": [
+				29,
+				30
+			],
+			"name": "AltAdjNNxx",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 825,
+			"input": [
+				0,
+				10
+			],
+			"name": "AltAdjxxNx",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 826,
+			"input": [
+				0,
+				10
+			],
+			"name": "AltAdjxxxN",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 710,
+			"input": [
+				0,
+				50000
+			],
+			"name": "CabinAlt",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 760,
+			"input": [
+				0,
+				10
+			],
+			"name": "LiquidOxygen",
+			"output": [
+				0,
+				1
+			]
+		},
+		{
+			"arg": 761,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Oxygen_light_gauge",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 762,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Oxygen_flag_gauge",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 360,
+			"input": [
+				-5,
+				0,
+				5,
+				10
+			],
+			"name": "Accel_cur",
+			"output": [
+				-1.0,
+				0.0,
+				0.5,
+				1.0
+			]
+		},
+		{
+			"arg": 137,
+			"input": [
+				-5,
+				0,
+				5,
+				10
+			],
+			"name": "Accel_max",
+			"output": [
+				-1.0,
+				0.0,
+				0.5,
+				1.0
+			]
+		},
+		{
+			"arg": 138,
+			"input": [
+				-5,
+				0,
+				5,
+				10
+			],
+			"name": "Accel_min",
+			"output": [
+				-1.0,
+				0.0,
+				0.5,
+				1.0
+			]
+		},
+		{
+			"arg": 800,
+			"input": [
+				-30.480000000000004,
+				-20.32,
+				-10.16,
+				-5.08,
+				-2.54,
+				0,
+				2.54,
+				5.08,
+				10.16,
+				20.32,
+				30.480000000000004
+			],
+			"name": "VerticalVelocity",
+			"output": [
+				-1.0,
+				-0.8,
+				-0.6,
+				-0.4,
+				-0.2,
+				0.0,
+				0.2,
+				0.4,
+				0.6,
+				0.8,
+				1.0
+			]
+		},
+		{
+			"arg": 383,
+			"input": [
+				-180,
+				180
+			],
+			"name": "ADIPitch",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 384,
+			"input": [
+				-180,
+				180
+			],
+			"name": "ADIRoll",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 385,
+			"input": [
+				0,
+				360
+			],
+			"name": "ADIHeading",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 387,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ADIOFF",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 388,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "ADISlip",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 389,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "ADITurn",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 148,
+			"input": [
+				0,
+				360
+			],
+			"name": "BackupCompass",
+			"output": [
+				-1,
+				1
+			]
+		},
+		{
+			"arg": 660,
+			"input": [
+				-180,
+				180
+			],
+			"name": "AttGyroStbyPitch",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 661,
+			"input": [
+				-180,
+				180
+			],
+			"name": "AttGyroStbyRoll",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 664,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AttGyroStbyOFF",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 741,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AWRSPower",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 894,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "GunsightReflector",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 859,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_Brightness",
+			"output": [
+				0.0,
+				0.5
+			]
+		},
+		{
+			"arg": 860,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_FuelBoostCaution",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 861,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_ControlHydraulicCaution",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 862,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_UtilityHydraulicCaution",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 863,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_FuelTransCaution",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 864,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_SpdBrkCaution",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 865,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Ladder_SpoilerCaution",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 866,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Advisory_InRange",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 867,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Advisory_SetRange",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 868,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Advisory_Dive",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 147,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "APCLight",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 840,
+			"input": [
+				0,
+				30.0
+			],
+			"name": "AngleOfAttack",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 850,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AoA_Green",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 851,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AoA_Yellow",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 852,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AoA_Red",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 406,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "APG53A_LeftRange",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 407,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "APG53A_BottomRange",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 167,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AFCS_HDG_100s",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 168,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AFCS_HDG_10s",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 169,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "AFCS_HDG_1s",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 115,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "APG53A_Glow",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 171,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Doppler_MemoryLight",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 172,
+			"input": [
+				-40.0,
+				40.0
+			],
+			"name": "Doppler_Drift",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 173,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Doppler_Speed_Xnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 174,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Doppler_Speed_nXn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 175,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Doppler_Speed_nnX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 178,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lat_Xnnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 179,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lat_nXnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 180,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lat_nnXnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 181,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lat_nnnXn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 182,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lat_nnnnX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 184,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lon_Xnnnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 185,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lon_nXnnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 186,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lon_nnXnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 187,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lon_nnnXnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 188,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lon_nnnnXn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 189,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_CurPos_Lon_nnnnnX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 191,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lat_Xnnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 192,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lat_nXnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 193,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lat_nnXnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 194,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lat_nnnXn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 195,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lat_nnnnX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 197,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lon_Xnnnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 198,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lon_nXnnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 199,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lon_nnXnnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 200,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lon_nnnXnn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 201,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lon_nnnnXn",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 202,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Dest_Lon_nnnnnX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 210,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_WindSpeed_Xxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 211,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_WindSpeed_xXx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 212,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_WindSpeed_xxX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 214,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_WindDir_Xxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 215,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_WindDir_xXx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 216,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_WindDir_xxX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 204,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Magvar_Xxxxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 205,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Magvar_xXxxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 206,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Magvar_xxXxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 207,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Magvar_xxxXx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 208,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "Nav_Magvar_xxxxX",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 362,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ARC51_Freq_XXxxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 363,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ARC51_Freq_xxXxx",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 364,
+			"input": [
+				0.0,
+				0.95
+			],
+			"name": "ARC51_Freq_xxxXX",
+			"output": [
+				0.0,
+				0.95
+			]
+		},
+		{
+			"arg": 371,
+			"input": [
+				0.0,
+				0.95
+			],
+			"name": "ARC51_Freq_Preset",
+			"output": [
+				0.0,
+				0.95
+			]
+		},
+		{
+			"arg": 111,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "FloodWhite",
+			"output": [
+				0.0,
+				0.75
+			]
+		},
+		{
+			"arg": 114,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "FloodRed",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 117,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "InstLightsPrimary",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 119,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ConsoleLights",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 440,
+			"input": [
+				0.0,
+				12.0
+			],
+			"name": "CurrTime_hours",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 441,
+			"input": [
+				0.0,
+				60.0
+			],
+			"name": "CurrTime_mins",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 442,
+			"input": [
+				0.0,
+				60.0
+			],
+			"name": "CurrTime_secs",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 144,
+			"input": [
+				0.0,
+				60.0
+			],
+			"name": "Stopwatch_mins",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 145,
+			"input": [
+				0.0,
+				60.0
+			],
+			"name": "Stopwatch_secs",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 514,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_TEST",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 515,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_GO",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 516,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_NO_GO",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 517,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_SAM",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 518,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_RPT",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 519,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_STBY",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 500,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_REC",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 531,
+			"input": [
+				0.0,
+				1.0
+			],
+			"name": "ECM_Visibilty",
+			"output": [
+				0.0,
+				1.0
+			]
+		},
+		{
+			"arg": 260,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "AFCS_TEST_ROLL",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 261,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "AFCS_TEST_YAW",
+			"output": [
+				-1.0,
+				1.0
+			]
+		},
+		{
+			"arg": 262,
+			"input": [
+				-1.0,
+				1.0
+			],
+			"name": "AFCS_TEST_PITCH",
+			"output": [
+				-1.0,
+				1.0
+			]
+		}
+	],
+	"indicators": [
+		{
+			"bake": false,
+			"conditional": null,
+			"cppClass": "ccIndicator",
+			"deviceId": null,
+			"deviceName": null,
+			"fields": [
+				"glass",
+				"total_field_of_view"
+			],
+			"index": 0,
+			"initFile": "HUD/Indicator/init.lua"
+		},
+		{
+			"bake": false,
+			"conditional": null,
+			"cppClass": "ccIndicator",
+			"deviceId": null,
+			"deviceName": null,
+			"fields": [
+				"debug_screen"
+			],
+			"index": 1,
+			"initFile": "HUD/Indicator/init_debug.lua"
+		},
+		{
+			"bake": false,
+			"conditional": null,
+			"cppClass": "ccIndicator",
+			"deviceId": null,
+			"deviceName": null,
+			"fields": [
+				"total_field_of_view"
+			],
+			"index": 2,
+			"initFile": "RADAR/Indicator/init.lua"
+		},
+		{
+			"bake": false,
+			"conditional": null,
+			"cppClass": "ccControlsIndicatorBase",
+			"deviceId": null,
+			"deviceName": null,
+			"fields": [
+				"base",
+				"pitch_scale",
+				"roll_scale",
+				"stick_position"
+			],
+			"index": 3,
+			"initFile": "ControlsIndicator/ControlsIndicator.lua"
+		},
+		{
+			"bake": false,
+			"conditional": null,
+			"cppClass": "ccIndicator",
+			"deviceId": null,
+			"deviceName": null,
+			"fields": [
+				"txt_chn[1]",
+				"txt_chn[2]",
+				"txt_chn[3]",
+				"txt_chn[4]",
+				"txt_chn[5]",
+				"txt_chn[6]",
+				"txt_chn[7]",
+				"txt_chn[8]",
+				"txt_chn[9]",
+				"txt_chn[10]",
+				"txt_chn[11]",
+				"txt_chn[12]",
+				"txt_chn[13]",
+				"txt_chn[14]",
+				"txt_chn[15]",
+				"txt_chn[16]",
+				"txt_chn[17]",
+				"txt_chn[18]",
+				"txt_chn[19]",
+				"txt_chn[20]"
+			],
+			"index": 4,
+			"initFile": "AN_ARC51/indicator/frequency_labels_init.lua"
+		}
+	],
+	"keybindings": [
+		{
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel"
+			],
+			"deviceId": 2,
+			"down": 3039,
+			"kind": "key",
+			"name": "Master Test Switch - ON else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3039,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3084,
+			"kind": "key",
+			"name": "Instrument Lights Brightness Switch - BRIGHT",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3084,
+			"kind": "key",
+			"name": "Instrument Lights Brightness Switch - BRIGHT else DIM",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3084,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3084,
+			"kind": "key",
+			"name": "Instrument Lights Brightness Switch - DIM",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3084,
+			"kind": "key",
+			"name": "Instrument Lights Brightness Switch - MEDIUM",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3084,
+			"kind": "key",
+			"name": "Instrument Lights Brightness Switch - MEDIUM else DIM",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3084,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3127,
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"kind": "axis",
+			"name": "White Floodlights Control - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3128,
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"kind": "axis",
+			"name": "Instrument Lights Control - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3129,
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"kind": "axis",
+			"name": "Console Lights Control - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3130,
+			"kind": "key",
+			"name": "White Floodlights Control - Rotary Decrement",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3130,
+			"kind": "key",
+			"name": "White Floodlights Control - Rotary Increment",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3131,
+			"kind": "key",
+			"name": "Instrument Lights Control - Rotary Decrement",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3131,
+			"kind": "key",
+			"name": "Instrument Lights Control - Rotary Increment",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3132,
+			"kind": "key",
+			"name": "Console Lights Control - Rotary Decrement",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 3132,
+			"kind": "key",
+			"name": "Console Lights Control - Rotary Increment",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Console Left",
+				"Systems"
+			],
+			"deviceId": 2,
+			"down": 3138,
+			"kind": "key",
+			"name": "Oxygen Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Systems"
+			],
+			"deviceId": 2,
+			"down": 3138,
+			"kind": "key",
+			"name": "Oxygen Switch - ON",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Systems"
+			],
+			"deviceId": 2,
+			"down": 3138,
+			"kind": "key",
+			"name": "Oxygen Switch - ON else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3138,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3180,
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"kind": "axis",
+			"name": "Instrument Lights Control - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3181,
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"kind": "axis",
+			"name": "Console Lights Control - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3182,
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"kind": "axis",
+			"name": "White Floodlights Control - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 10302,
+			"kind": "key",
+			"name": "White Floodlights Control - Continuous Increase",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 10304
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 10303,
+			"kind": "key",
+			"name": "White Floodlights Control - Continuous Decrease",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 10304
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 10305,
+			"kind": "key",
+			"name": "Instrument Lights Control - Continuous Increase",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 10307
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 10306,
+			"kind": "key",
+			"name": "Instrument Lights Control - Continuous Decrease",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 10307
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 10308,
+			"kind": "key",
+			"name": "Console Lights Control - Continuous Increase",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 10310
+		},
+		{
+			"category": [
+				"Console Right",
+				"Interior Lights Panel"
+			],
+			"deviceId": 2,
+			"down": 10309,
+			"kind": "key",
+			"name": "Console Lights Control - Continuous Decrease",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 10310
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 3,
+			"down": 3002,
+			"kind": "key",
+			"name": "Master Armament Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 3,
+			"down": 3002,
+			"kind": "key",
+			"name": "Master Armament Switch - ON",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 3,
+			"down": 3002,
+			"kind": "key",
+			"name": "Master Armament Switch - ON else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3002,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Emergency"
+			],
+			"deviceId": 3,
+			"down": 3023,
+			"kind": "key",
+			"name": "Emergency Generator Release Handle",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3001,
+			"kind": "key",
+			"name": "Guns Charging Switch - READY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3001,
+			"kind": "key",
+			"name": "Guns Charging Switch - READY else SAFE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3001,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3001,
+			"kind": "key",
+			"name": "Guns Charging Switch - SAFE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3003,
+			"kind": "key",
+			"name": "Station 1 Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3003,
+			"kind": "key",
+			"name": "Station 1 Selector - READY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3003,
+			"kind": "key",
+			"name": "Station 1 Selector - READY else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3003,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3004,
+			"kind": "key",
+			"name": "Station 2 Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3004,
+			"kind": "key",
+			"name": "Station 2 Selector - READY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3004,
+			"kind": "key",
+			"name": "Station 2 Selector - READY else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3004,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3005,
+			"kind": "key",
+			"name": "Station 3 Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3005,
+			"kind": "key",
+			"name": "Station 3 Selector - READY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3005,
+			"kind": "key",
+			"name": "Station 3 Selector - READY else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3005,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3006,
+			"kind": "key",
+			"name": "Station 4 Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3006,
+			"kind": "key",
+			"name": "Station 4 Selector - READY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3006,
+			"kind": "key",
+			"name": "Station 4 Selector - READY else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3006,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3007,
+			"kind": "key",
+			"name": "Station 5 Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3007,
+			"kind": "key",
+			"name": "Station 5 Selector - READY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3007,
+			"kind": "key",
+			"name": "Station 5 Selector - READY else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3007,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - BOMBS & GM ARM",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.5
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - CMPTR",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.6
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - GM UNARM",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - LABS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - ROCKETS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3008,
+			"kind": "key",
+			"name": "Weapon Function Selector - SPRAY TANK",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3009,
+			"kind": "key",
+			"name": "Gunpod Station LH Switch - READY else SAFE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3009,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3010,
+			"kind": "key",
+			"name": "Gunpod Station CTR Switch - READY else SAFE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3010,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3011,
+			"kind": "key",
+			"name": "Gunpod Station RH Switch - READY else SAFE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3011,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3012,
+			"kind": "key",
+			"name": "Gunpod Switch - CHARGE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3012,
+			"kind": "key",
+			"name": "Gunpod Switch - CHARGE else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3012,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3012,
+			"kind": "key",
+			"name": "Gunpod Switch - CLEAR",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3012,
+			"kind": "key",
+			"name": "Gunpod Switch - CLEAR else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3012,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Gunpods Control Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3012,
+			"kind": "key",
+			"name": "Gunpod Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - 1",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - 2",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - 3",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - 4",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - 5",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.5
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - AL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.6
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3025,
+			"kind": "key",
+			"name": "Emergency Release Selector - WNG",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3026,
+			"kind": "key",
+			"name": "Bomb Arm Switch - NOSE & TAIL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3026,
+			"kind": "key",
+			"name": "Bomb Arm Switch - NOSE & TAIL else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3026,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3026,
+			"kind": "key",
+			"name": "Bomb Arm Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3026,
+			"kind": "key",
+			"name": "Bomb Arm Switch - TAIL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Armament Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3026,
+			"kind": "key",
+			"name": "Bomb Arm Switch - TAIL else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3026,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Emergency"
+			],
+			"deviceId": 6,
+			"down": 3027,
+			"kind": "key",
+			"name": "Emergency Stores Release Handle",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3027,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 01/OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 02",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.05
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 03",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 04",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.15
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 05",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 06",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.25
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 09",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 12",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.35
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 15",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 20",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.45
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 30",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.5
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3031,
+			"kind": "key",
+			"name": "AWRS Quantity Selector Switch - 40",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.55
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 020 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 030 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.05
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 040 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 050 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.15
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 060 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 070 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.25
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 080 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 090 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.35
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 100 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 110 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.45
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 120 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.5
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 130 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.55
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 140 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.6
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 150 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.65
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 160 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.7
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 170 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.75
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 180 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.8
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 190 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.85
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3032,
+			"kind": "key",
+			"name": "AWRS Drop Interval Knob - 200 ms",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.9
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3033,
+			"kind": "key",
+			"name": "AWRS Multiplier Switch - 10X",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3033,
+			"kind": "key",
+			"name": "AWRS Multiplier Switch - 10X else 1X",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3033,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3033,
+			"kind": "key",
+			"name": "AWRS Multiplier Switch - 1X",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3034,
+			"kind": "key",
+			"name": "AWRS Mode Selector Switch - RIPPLE-PAIRS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3034,
+			"kind": "key",
+			"name": "AWRS Mode Selector Switch - RIPPLE-SALVO",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.5
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3034,
+			"kind": "key",
+			"name": "AWRS Mode Selector Switch - RIPPLE-SINGLE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3034,
+			"kind": "key",
+			"name": "AWRS Mode Selector Switch - STEP-PAIRS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3034,
+			"kind": "key",
+			"name": "AWRS Mode Selector Switch - STEP-SALVO",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"down": 3034,
+			"kind": "key",
+			"name": "AWRS Mode Selector Switch - STEP-SINGLE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"action": 3126,
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"kind": "axis",
+			"name": "AWRS Drop Interval Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3185,
+			"category": [
+				"Instrument Panel",
+				"AWE-1 Aircraft Weapons Release System",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"kind": "axis",
+			"name": "AWRS Drop Interval Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3186,
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"kind": "axis",
+			"name": "Shrike/Sidewinder Volume Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3187,
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"Weapons"
+			],
+			"deviceId": 6,
+			"kind": "axis",
+			"name": "Shrike/Sidewinder Volume Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Emergency"
+			],
+			"deviceId": 7,
+			"down": 3136,
+			"kind": "key",
+			"name": "Manual Flight Control Handle",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3136,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Systems"
+			],
+			"deviceId": 8,
+			"down": 3105,
+			"kind": "key",
+			"name": "Elapsed-Time Clock - START/STOP/RESET",
+			"sources": [
+				"joystick",
+				"mouse"
+			],
+			"up": 3105,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Systems"
+			],
+			"deviceId": 8,
+			"down": 3105,
+			"kind": "key",
+			"name": "Stopwatch - START/STOP/RESET",
+			"sources": [
+				"keyboard"
+			],
+			"up": 3105,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3066,
+			"category": [
+				"Console Left",
+				"Radar Control Panel",
+				"AN/APG-53A Radar"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "AN/APG-53A Radar Antenna Tilt - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3067,
+			"category": [
+				"Console Left",
+				"Radar Control Panel",
+				"AN/APG-53A Radar"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "AN/APG-53A Radar Antenna Tilt - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3194,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Storage Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3195,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Storage Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3196,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Brilliance Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3197,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Brilliance Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3198,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Detail Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3199,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Detail Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3200,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Gain Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3201,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Gain Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3202,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Reticle Knob - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3203,
+			"category": [
+				"Instrument Panel",
+				"AN/APG-53A Radar Indicator"
+			],
+			"deviceId": 10,
+			"kind": "axis",
+			"name": "Radar Indicator Reticle Knob - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Console Left",
+				"Emergency"
+			],
+			"deviceId": 13,
+			"down": 3035,
+			"kind": "key",
+			"name": "Emergency Speedbrake Knob",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3035,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Emergency"
+			],
+			"deviceId": 15,
+			"down": 3036,
+			"kind": "key",
+			"name": "Emergency Landing Gear Release Handle",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3036,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3213,
+			"category": [
+				"Instrument Panel",
+				"Systems",
+				"AN/APN-141 Radar Altimeter"
+			],
+			"deviceId": 19,
+			"kind": "axis",
+			"name": "Radar Altitude Warning - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3143,
+			"kind": "key",
+			"name": "Fuel Dump Switch - DUMP",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3143,
+			"kind": "key",
+			"name": "Fuel Dump Switch - DUMP else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3143,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3143,
+			"kind": "key",
+			"name": "Fuel Dump Switch - EMER TRANS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3143,
+			"kind": "key",
+			"name": "Fuel Dump Switch - EMER TRANS else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3143,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3143,
+			"kind": "key",
+			"name": "Fuel Dump Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3144,
+			"kind": "key",
+			"name": "Drop Tank Pressurization Switch - FLIGHT REFUEL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3144,
+			"kind": "key",
+			"name": "Drop Tank Pressurization Switch - FLIGHT REFUEL else PRESS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3144,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3144,
+			"kind": "key",
+			"name": "Drop Tank Pressurization Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3144,
+			"kind": "key",
+			"name": "Drop Tank Pressurization Switch - OFF else PRESS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3144,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3144,
+			"kind": "key",
+			"name": "Drop Tank Pressurization Switch - PRESS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Emergency"
+			],
+			"deviceId": 20,
+			"down": 3145,
+			"kind": "key",
+			"name": "Fuel Control Switch - MANUAL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Emergency"
+			],
+			"deviceId": 20,
+			"down": 3145,
+			"kind": "key",
+			"name": "Fuel Control Switch - MANUAL else PRIMARY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3145,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"Engine Control Panel",
+				"Emergency"
+			],
+			"deviceId": 20,
+			"down": 3145,
+			"kind": "key",
+			"name": "Fuel Control Switch - PRIMARY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Throttle Panel",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3157,
+			"kind": "key",
+			"name": "Throttle Position Lock - Step Down (OFF/IGN/IDLE)",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Throttle Panel",
+				"Engine Control Panel"
+			],
+			"deviceId": 20,
+			"down": 3157,
+			"kind": "key",
+			"name": "Throttle Position Lock - Step Up (OFF/IGN/IDLE)",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3177,
+			"kind": "key",
+			"name": "Fuel Transfer Switch - BYPASS",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3177,
+			"kind": "key",
+			"name": "Fuel Transfer Switch - BYPASS else NORMAL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3177,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"Refueling"
+			],
+			"deviceId": 20,
+			"down": 3177,
+			"kind": "key",
+			"name": "Fuel Transfer Switch - NORMAL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"action": 3207,
+			"category": [
+				"Flight Control",
+				"Accessibility"
+			],
+			"deviceId": 20,
+			"kind": "axis",
+			"name": "Throttle - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Gunsight Panel"
+			],
+			"deviceId": 22,
+			"down": 3029,
+			"kind": "key",
+			"name": "Gunsight Day-Night Switch - DAY else NIGHT",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3029,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3160,
+			"category": [
+				"Instrument Panel",
+				"Gunsight Panel"
+			],
+			"deviceId": 22,
+			"kind": "axis",
+			"name": "Gunsight Elevation Control - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3161,
+			"category": [
+				"Instrument Panel",
+				"Gunsight Panel"
+			],
+			"deviceId": 22,
+			"kind": "axis",
+			"name": "Gunsight Elevation Control - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3183,
+			"category": [
+				"Instrument Panel",
+				"Gunsight Panel"
+			],
+			"deviceId": 22,
+			"kind": "axis",
+			"name": "Gunsight Light Control - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Destination Latitude Push-to-Set Knob - CCW",
+			"pressed": 3053,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Destination Latitude Push-to-Set Knob - CW",
+			"pressed": 3053,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Destination Longitude Push-to-Set Knob - CCW",
+			"pressed": 3054,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Destination Longitude Push-to-Set Knob - CW",
+			"pressed": 3054,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Magnetic Variation Push-to-Set Knob - CCW",
+			"pressed": 3048,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Magnetic Variation Push-to-Set Knob - CW",
+			"pressed": 3048,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Present Latitude Push-to-Set Knob - CCW",
+			"pressed": 3051,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Present Latitude Push-to-Set Knob - CW",
+			"pressed": 3051,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Present Longitude Push-to-Set Knob - CCW",
+			"pressed": 3052,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Present Longitude Push-to-Set Knob - CW",
+			"pressed": 3052,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Wind Direction Push-to-Set Knob - CCW",
+			"pressed": 3050,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Wind Direction Push-to-Set Knob - CW",
+			"pressed": 3050,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Wind Speed Push-to-Set Knob - CCW",
+			"pressed": 3049,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": -0.015
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"kind": "key",
+			"name": "Wind Speed Push-to-Set Knob - CW",
+			"pressed": 3049,
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valuePressed": 0.015
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"AN/ASN-41 Navigation Computer",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3044,
+			"kind": "key",
+			"name": "BDHI Switch - NAV CMPTR",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"AN/ASN-41 Navigation Computer",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3044,
+			"kind": "key",
+			"name": "BDHI Switch - NAV CMPTR else TACAN",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3044,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"AN/ASN-41 Navigation Computer",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3044,
+			"kind": "key",
+			"name": "BDHI Switch - NAV PAC",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"AN/ASN-41 Navigation Computer",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3044,
+			"kind": "key",
+			"name": "BDHI Switch - NAV PAC else TACAN",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3044,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Instrument Panel",
+				"Miscellaneous Switches Panel",
+				"AN/ASN-41 Navigation Computer",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3044,
+			"kind": "key",
+			"name": "BDHI Switch - TACAN",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/APN-153 Doppler Navigation Radar"
+			],
+			"deviceId": 23,
+			"down": 3045,
+			"kind": "key",
+			"name": "AN/APN-153 Doppler Navigation Radar Mode - LAND",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/APN-153 Doppler Navigation Radar"
+			],
+			"deviceId": 23,
+			"down": 3045,
+			"kind": "key",
+			"name": "AN/APN-153 Doppler Navigation Radar Mode - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/APN-153 Doppler Navigation Radar"
+			],
+			"deviceId": 23,
+			"down": 3045,
+			"kind": "key",
+			"name": "AN/APN-153 Doppler Navigation Radar Mode - SEA",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/APN-153 Doppler Navigation Radar"
+			],
+			"deviceId": 23,
+			"down": 3045,
+			"kind": "key",
+			"name": "AN/APN-153 Doppler Navigation Radar Mode - STBY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/APN-153 Doppler Navigation Radar"
+			],
+			"deviceId": 23,
+			"down": 3045,
+			"kind": "key",
+			"name": "AN/APN-153 Doppler Navigation Radar Mode - TEST",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3047,
+			"kind": "key",
+			"name": "AN/ASN-41 Function Selector - D1",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3047,
+			"kind": "key",
+			"name": "AN/ASN-41 Function Selector - D2",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.4
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3047,
+			"kind": "key",
+			"name": "AN/ASN-41 Function Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3047,
+			"kind": "key",
+			"name": "AN/ASN-41 Function Selector - STBY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3047,
+			"kind": "key",
+			"name": "AN/ASN-41 Function Selector - TEST",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3069,
+			"kind": "key",
+			"name": "AN/ARN-52 TACAN Mode - A/A",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3069,
+			"kind": "key",
+			"name": "AN/ARN-52 TACAN Mode - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3069,
+			"kind": "key",
+			"name": "AN/ARN-52 TACAN Mode - REC",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"down": 3069,
+			"kind": "key",
+			"name": "AN/ARN-52 TACAN Mode - T/R",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3150,
+			"kind": "key",
+			"name": "Present Latitude Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3150,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3151,
+			"kind": "key",
+			"name": "Present Longitude Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3151,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3152,
+			"kind": "key",
+			"name": "Destination Latitude Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3152,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3153,
+			"kind": "key",
+			"name": "Destination Longitude Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3153,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3154,
+			"kind": "key",
+			"name": "Magnetic Variation Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3154,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3155,
+			"kind": "key",
+			"name": "Wind Speed Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3155,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3156,
+			"kind": "key",
+			"name": "Wind Direction Push-to-Set Knob - PUSH",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3156,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3166,
+			"kind": "key",
+			"name": "Destination Latitude Slew Knob - CCW",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3166,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3166,
+			"kind": "key",
+			"name": "Destination Latitude Slew Knob - CW",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3166,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3167,
+			"kind": "key",
+			"name": "Destination Longitude Slew Knob - CCW",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3167,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ASN-41 Navigation Computer"
+			],
+			"deviceId": 23,
+			"down": 3167,
+			"kind": "key",
+			"name": "Destination Longitude Slew Knob - CW",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3167,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3188,
+			"category": [
+				"Console Right",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"kind": "axis",
+			"name": "TACAN Volume - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3189,
+			"category": [
+				"Console Right",
+				"AN/ARN-52 TACAN"
+			],
+			"deviceId": 23,
+			"kind": "axis",
+			"name": "TACAN Volume - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3205,
+			"category": [
+				"Flight Control",
+				"Accessibility"
+			],
+			"deviceId": 26,
+			"kind": "axis",
+			"name": "Rudder - Left (Dual-Axis)",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3206,
+			"category": [
+				"Flight Control",
+				"Accessibility"
+			],
+			"deviceId": 26,
+			"kind": "axis",
+			"name": "Rudder - Right (Dual-Axis)",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3088,
+			"kind": "key",
+			"name": "AFCS Standby Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3088,
+			"kind": "key",
+			"name": "AFCS Standby Switch - STANDBY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3088,
+			"kind": "key",
+			"name": "AFCS Standby Switch - STANDBY else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3088,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3089,
+			"kind": "key",
+			"name": "AFCS Engage Switch - ENGAGE",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3089,
+			"kind": "key",
+			"name": "AFCS Engage Switch - ENGAGE else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3089,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3089,
+			"kind": "key",
+			"name": "AFCS Engage Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3090,
+			"kind": "key",
+			"name": "AFCS Heading Select Switch - HDG SEL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3090,
+			"kind": "key",
+			"name": "AFCS Heading Select Switch - HDG SEL else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3090,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3090,
+			"kind": "key",
+			"name": "AFCS Heading Select Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3091,
+			"kind": "key",
+			"name": "AFCS Altitude Switch - ALT",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3091,
+			"kind": "key",
+			"name": "AFCS Altitude Switch - ALT else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3091,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3091,
+			"kind": "key",
+			"name": "AFCS Altitude Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3092,
+			"kind": "key",
+			"name": "AFCS Heading Select Pull-to-Set Knob - Rotary Decrement",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3092,
+			"kind": "key",
+			"name": "AFCS Heading Select Pull-to-Set Knob - Rotary Increment",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3093,
+			"kind": "key",
+			"name": "AFCS Stability Augmentation Switch (Yaw Damper) - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3093,
+			"kind": "key",
+			"name": "AFCS Stability Augmentation Switch (Yaw Damper) - STAB AUG",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"Console Left",
+				"AFCS Control Panel"
+			],
+			"deviceId": 27,
+			"down": 3093,
+			"kind": "key",
+			"name": "AFCS Stability Augmentation Switch (Yaw Damper) - STAB AUG else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3093,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3097,
+			"kind": "key",
+			"name": "AN/ARC-51A UHF Radio Mode - ADF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.3
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3097,
+			"kind": "key",
+			"name": "AN/ARC-51A UHF Radio Mode - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3097,
+			"kind": "key",
+			"name": "AN/ARC-51A UHF Radio Mode - T/R",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.1
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3097,
+			"kind": "key",
+			"name": "AN/ARC-51A UHF Radio Mode - T/R + G",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.2
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3098,
+			"kind": "key",
+			"name": "Radio Frequency Mode - GD XMIT",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3098,
+			"kind": "key",
+			"name": "Radio Frequency Mode - MANUAL",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/ARC-51A UHF Radio"
+			],
+			"deviceId": 28,
+			"down": 3098,
+			"kind": "key",
+			"name": "Radio Frequency Mode - PRESET CHAN",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3113,
+			"kind": "key",
+			"name": "APR-25 Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3113,
+			"kind": "key",
+			"name": "APR-25 Switch - ON",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3113,
+			"kind": "key",
+			"name": "APR-25 Switch - ON else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3113,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3114,
+			"kind": "key",
+			"name": "Audio ALQ Switch - APR-25",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3114,
+			"kind": "key",
+			"name": "Audio ALQ Switch - APR-27",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3114,
+			"kind": "key",
+			"name": "Audio ALQ Switch - APR-27 else APR-25",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3114,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3115,
+			"kind": "key",
+			"name": "APR-27 Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3115,
+			"kind": "key",
+			"name": "APR-27 Switch - ON",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3115,
+			"kind": "key",
+			"name": "APR-27 Switch - ON else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3115,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3116,
+			"kind": "key",
+			"name": "APR-27 Test",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3116,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3117,
+			"kind": "key",
+			"name": "APR-27 Light",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3117,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3120,
+			"kind": "key",
+			"name": "AN/APR-25 Function Selector - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3120,
+			"kind": "key",
+			"name": "AN/APR-25 Function Selector - REC",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.66
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3120,
+			"kind": "key",
+			"name": "AN/APR-25 Function Selector - RPT",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.99
+		},
+		{
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"down": 3120,
+			"kind": "key",
+			"name": "AN/APR-25 Function Selector - STBY",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.33
+		},
+		{
+			"action": 3190,
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"kind": "axis",
+			"name": "AN/APR-25 PRF Volume - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3191,
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"kind": "axis",
+			"name": "AN/APR-25 PRF Volume - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3192,
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"kind": "axis",
+			"name": "AN/APR-25 Missile Alert Volume - Absolute",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3193,
+			"category": [
+				"AN/APR-25 RHWS (ECM)"
+			],
+			"deviceId": 31,
+			"kind": "axis",
+			"name": "AN/APR-25 Missile Alert Volume - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"category": [
+				"AN/ALE-29A Chaff Dispensing System"
+			],
+			"deviceId": 32,
+			"down": 3107,
+			"kind": "key",
+			"name": "Chaff AUTO Pushbutton (ALE-29A Salvo)",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3107,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"AN/ALE-29A Chaff Dispensing System"
+			],
+			"deviceId": 32,
+			"down": 3110,
+			"kind": "key",
+			"name": "Chaff Power Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"AN/ALE-29A Chaff Dispensing System"
+			],
+			"deviceId": 32,
+			"down": 3110,
+			"kind": "key",
+			"name": "Chaff Power Switch - PWR",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 1.0
+		},
+		{
+			"category": [
+				"AN/ALE-29A Chaff Dispensing System"
+			],
+			"deviceId": 32,
+			"down": 3110,
+			"kind": "key",
+			"name": "Chaff Power Switch - PWR else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3110,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARA-63 MCL (ICLS)"
+			],
+			"deviceId": 37,
+			"down": 3169,
+			"kind": "key",
+			"name": "MCL Power Switch - BIT else ON",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3169,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARA-63 MCL (ICLS)"
+			],
+			"deviceId": 37,
+			"down": 3169,
+			"kind": "key",
+			"name": "MCL Power Switch - OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": -1.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"AN/ARA-63 MCL (ICLS)"
+			],
+			"deviceId": 37,
+			"down": 3169,
+			"kind": "key",
+			"name": "MCL Power Switch - ON",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"valueDown": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"View Cockpit"
+			],
+			"deviceId": 45,
+			"down": 3175,
+			"kind": "key",
+			"name": "Seat Adjustment Switch - DOWN else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3175,
+			"valueDown": -1.0,
+			"valueUp": 0.0
+		},
+		{
+			"category": [
+				"Console Right",
+				"View Cockpit"
+			],
+			"deviceId": 45,
+			"down": 3175,
+			"kind": "key",
+			"name": "Seat Adjustment Switch - UP else OFF",
+			"sources": [
+				"joystick",
+				"keyboard",
+				"mouse"
+			],
+			"up": 3175,
+			"valueDown": 1.0,
+			"valueUp": 0.0
+		},
+		{
+			"action": 3208,
+			"category": [
+				"View",
+				"View Cockpit",
+				"Accessibility"
+			],
+			"deviceId": 45,
+			"kind": "axis",
+			"name": "Zoom View In (Dual Axis)",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3209,
+			"category": [
+				"View",
+				"View Cockpit",
+				"Accessibility"
+			],
+			"deviceId": 45,
+			"kind": "axis",
+			"name": "Zoom View Out (Dual Axis)",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3210,
+			"category": [
+				"View",
+				"View Cockpit",
+				"Accessibility"
+			],
+			"deviceId": 45,
+			"kind": "axis",
+			"name": "Zoom View - Slew",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3211,
+			"category": [
+				"View",
+				"View Cockpit",
+				"Accessibility"
+			],
+			"deviceId": 45,
+			"kind": "axis",
+			"name": "Zoom View In - Slew (Dual-Axis)",
+			"sources": [
+				"joystick"
+			]
+		},
+		{
+			"action": 3212,
+			"category": [
+				"View",
+				"View Cockpit",
+				"Accessibility"
+			],
+			"deviceId": 45,
+			"kind": "axis",
+			"name": "Zoom View Out - Slew (Dual-Axis)",
+			"sources": [
+				"joystick"
+			]
+		}
+	],
+	"listenedCommands": [
+		{
+			"commandId": 3105,
+			"deviceId": 8
+		},
+		{
+			"commandId": 102,
+			"deviceId": 23
+		},
+		{
+			"commandId": 1315,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3044,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3045,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3046,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3047,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3048,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3049,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3050,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3051,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3052,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3053,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3054,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10048,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10049,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10050,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10061,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10062,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10063,
+			"deviceId": 23
+		},
+		{
+			"commandId": 10064,
+			"deviceId": 23
+		},
+		{
+			"commandId": 3073,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3074,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3075,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3076,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3077,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3078,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3079,
+			"deviceId": 25
+		},
+		{
+			"commandId": 3080,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10093,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10094,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10095,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10096,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10097,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10098,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10099,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10100,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10101,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10102,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10103,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10104,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10105,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10106,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10107,
+			"deviceId": 25
+		},
+		{
+			"commandId": 10108,
+			"deviceId": 25
+		}
+	],
+	"module": "A-4E-C",
+	"scriptsDir": "%USERPROFILE%\\Saved Games\\DCS\\Mods\\aircraft\\A-4E-C\\Cockpit\\Scripts",
+	"stats": {
+		"totalCommandTables": 2,
+		"totalDevices": 48,
+		"totalElements": 147,
+		"totalGaugesAndLamps": 170,
+		"totalIndicationFields": 28,
+		"totalIndicators": 5,
+		"totalKeybindings": 267,
+		"totalListenedCommands": 45
+	}
+}

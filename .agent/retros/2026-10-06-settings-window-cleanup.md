@@ -1,0 +1,16 @@
+# Settings window cleanup
+
+**Goal:** Show Windows-style backslashes in the config window's path fields, and rename "Edit Config" to "Settings" (menu became Tools > Settings...).
+
+**What worked:**
+- Root cause of mixed slashes: Qt file dialogs return `/`-separated paths, which were stored verbatim in the override keys and echoed back in the "Detected:" labels. Fixed in two places: Browse buttons apply `QtCore.QDir.toNativeSeparators`, and `SettingsManager` runs `os.path.normpath` over the path override keys on load and save (so existing configs with `/` are cleaned up too). `normpath` leaves `%USERPROFILE%` unexpanded, which is what we want.
+- Second round (form layout, port spin boxes, Logging group, status lines, hook settings warnings): the decision logic was pulled into pure functions in `utils/SettingsManager.py` (`describeResolvedPath`, `readHookSettings`) and tested there. The dialog itself was checked by rendering it offscreen with a `SimpleNamespace` stand-in for the app: `DCSAutoMateApp.openConfigWindow(stub)` with `QDialog.exec` patched to `show()` + `grab().save(png)` + click Save. That gave real screenshots and the values passed to `saveConfig`, without starting the full app (network listeners, TTS, etc.).
+- Found while explaining the two wire-logging options: the hook's RX wire logging could never match its prefixes (hard-coded `string.sub` lengths of 13 and 23 for 15- and 26-character prefixes). Fixed afterwards by moving the check into a marker-delimited pure function `wireRxLabel()` that uses `#prefix`, tested through lupa against the real Hook source (same pattern as `monitorLayout`). For a valid red phase, the function was first extracted with the bug still in it, so the test failed on the bug rather than on missing markers.
+
+**What didn't:**
+- Running `python -m pytest -q 2>&1 | Select-Object ...` in Windows PowerShell 5 reported exit code 1 even though every test passed. `test_ttsManager.py` triggers a SAPI COM first-chance exception that faulthandler dumps to stderr; PowerShell wraps that stderr as a NativeCommandError. Running through `cmd /c "python -m pytest -q > log 2>&1"` showed pytest's real exit code was 0.
+
+**Instruction update candidates:**
+- Add to the DCSAutoMate-specific instructions: "Lua tests in `tests/test_luaProtocol.py` paste copies of Hook functions, so they keep passing when the Hook changes.  For new Hook logic, wrap a pure function in `-- name: begin` / `-- name: end` markers and cut it from the real file in the test, as `tests/test_monitorLayout.py` does.  Never compare against a literal prefix with a hard-coded length in Lua; use `string.sub(text, 1, #prefix) == prefix`."
+- Add to AGENTS.md test section: "In Windows PowerShell, `2>&1` turns the faulthandler 'Windows fatal exception: code 0xe0000002' dump from the TTS tests into an error record and a false non-zero exit. Check the pytest summary line, or run via `cmd /c` to get the real exit code."
+- Add to the DCSAutoMate-specific instructions: "To check a dialog built in `DCSAutoMateApp`, render it offscreen: call the method with a `types.SimpleNamespace` stub holding `config`, `mainWindow` and any callbacks, patch `QDialog.exec` to `show()` and `grab().save()`, then view the PNG.  Don't construct the whole app."

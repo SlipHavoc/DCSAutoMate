@@ -1,0 +1,178 @@
+[
+  {
+    "name": "ELEC_INTERFACE.ENERG_COVER_AKK2_PTR",
+    "deviceId": 2,
+    "commandId": 3004,
+    "arg": 544,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "UV_26.UV26_POWER_COVER_PTR",
+    "deviceId": 22,
+    "commandId": 3012,
+    "arg": 497,
+    "label": "TOGGLE",
+    "note": "s0=0.15 s1=1.00 s2=0.15"
+  },
+  {
+    "name": "IFF.COVER_SRO_PTR",
+    "deviceId": 42,
+    "commandId": 3002,
+    "arg": 219,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "FUELSYS_INTERFACE.PAV_CRANE_COVER_CYKLIZATION_PTR",
+    "deviceId": 3,
+    "commandId": 3013,
+    "arg": 283,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "EJECT_SYS_INTERFACE.RIGHT_COVER_EMERG_VACATION_PTR",
+    "deviceId": 6,
+    "commandId": 3004,
+    "arg": 217,
+    "label": "TOGGLE",
+    "note": "s0=0.30 s1=1.00 s2=0.30"
+  },
+  {
+    "name": "ELEC_INTERFACE.ENERG_COVER_AER_RIT_PTR",
+    "deviceId": 2,
+    "commandId": 3002,
+    "arg": 263,
+    "label": "TOGGLE",
+    "note": "s0=0.15 s1=1.00 s2=0.15"
+  },
+  {
+    "name": "FIRE_EXTING_INTERFACE.BALOONS_COVER_PTR",
+    "deviceId": 40,
+    "commandId": 3010,
+    "arg": 247,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "FIRE_EXTING_INTERFACE.FIREEXT_COVER_PTR",
+    "deviceId": 40,
+    "commandId": 3007,
+    "arg": 249,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "ENGINE_INTERFACE.PAV_CRANE_COVER_VSU_PTR01",
+    "deviceId": 4,
+    "commandId": 3016,
+    "arg": 569,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "FUELSYS_INTERFACE.PAV_CRANE_COVER_ENGINE_LEFT_PTR",
+    "deviceId": 3,
+    "commandId": 3007,
+    "arg": 277,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "ENGINE_INTERFACE.ERD_RIGHT_COVER_PTR",
+    "deviceId": 4,
+    "commandId": 3004,
+    "arg": 293,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "ELEC_INTERFACE.ENERG_COVER_AKK1_PTR",
+    "deviceId": 2,
+    "commandId": 3006,
+    "arg": 265,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "ENGINE_INTERFACE.ERD_LEFT_COVER_PTR",
+    "deviceId": 4,
+    "commandId": 3002,
+    "arg": 291,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "LASERRANGER.LD_LDP_COVER_PTR",
+    "deviceId": 11,
+    "commandId": 3002,
+    "arg": 57,
+    "label": "ABSOLUTE",
+    "note": "s0=0.00 s1=1.00 s2=1.00"
+  },
+  {
+    "name": "CPT_MECH.AVAR_GEAR_COVER_PTR",
+    "deviceId": 34,
+    "commandId": 3005,
+    "arg": 67,
+    "label": "ABSOLUTE",
+    "note": "s0=0.00 s1=1.00 s2=1.00"
+  },
+  {
+    "name": "HYDRO_SYS_INTERFACE.HYDRO_COVER_PTR02",
+    "deviceId": 5,
+    "commandId": 3002,
+    "arg": 221,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "ENGINE_INTERFACE.PAV_CRANE_COVER_VSU_PTR02",
+    "deviceId": 4,
+    "commandId": 3018,
+    "arg": 570,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "UV_26.UV26_TEST_COVER_PTR",
+    "deviceId": 22,
+    "commandId": 3013,
+    "arg": 499,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "WEAP_INTERFACE.SUO_COVER_PTR",
+    "deviceId": 12,
+    "commandId": 3019,
+    "arg": 548,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "FUELSYS_INTERFACE.PAV_CRANE_COVER_ENGINE_RIGHT_PTR",
+    "deviceId": 3,
+    "commandId": 3009,
+    "arg": 279,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "FUELSYS_INTERFACE.PAV_CRANE_COVER_VSU_PTR",
+    "deviceId": 3,
+    "commandId": 3011,
+    "arg": 281,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  },
+  {
+    "name": "CPT_MECH.P_CONTR_VMG_HYDRO_COVER_PTR",
+    "deviceId": 34,
+    "commandId": 3003,
+    "arg": 453,
+    "label": "TOGGLE",
+    "note": "s0=0.00 s1=1.00 s2=0.00"
+  }
+]

@@ -1,0 +1,2354 @@
+{
+	"module": "UH-1H",
+	"timestamp": "2026-05-12T22:34:58",
+	"delay": 0.08,
+	"elapsed": 127.2,
+	"counts": {
+		"pass": 390,
+		"fail": 6,
+		"skip": 72,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "AAU32.SET-PRESSURE-KNOB-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AAU7.PILOT-ALT-SET-KNOB-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ADF_ARN_83.BFO-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.GAIN-CONTROL-PTR_arg43",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.GAIN-CONTROL-PTR_arg44",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.LOOP-L-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.LOOP-L-R-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.LOOP-L1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.LOOP-O-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.LOOP-R-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.LOOP-R1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.TUNE-CONTROL-PTR_arg38",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ADF_ARN_83.TUNE-CONTROL-PTR_arg39",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ADI_OPERATOR.CAGING-KNOB-ROTATION-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADI_OPERATOR.PITCH-ADJUSTMENT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ADI_PILOT.PILOT-ATT-PITCH-ADJ-KNOB-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ADI_PILOT.PILOT-ATT-ROLL-ADJ-KNOB-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ARN_82.FRACTIONAL-MHZ-SELECTOR-KNOB-KNOB-PTR_arg53",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ARN_82.FRACTIONAL-MHZ-SELECTOR-KNOB-KNOB-PTR_arg54",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "ARN_82.WHOLE-MHZ-SELECTOR-KNOB-PTR_arg51",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ARN_82.WHOLE-MHZ-SELECTOR-KNOB-PTR_arg52",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK.WINDING/ADJUSTMENT-KNOB-PULL/PUSH-PTR_arg130",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK.WINDING/ADJUSTMENT-KNOB-PULL/PUSH-PTR_arg131",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_SYSTEM.FORCE-TRIM-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROL_SYSTEM.FORCE-TRIM-2-PTR",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "COURSE_IND.CDI-OBS-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CPT_MECH.DOOR_L-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.DOOR_R-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.WIPER PILOT-BOTH-COPILOT-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CPT_MECH.WIPERS-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.AIR-VALVE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ANTI-COLL-CB-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ANTI-ICE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ARC-102-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.BAT-SWITCHER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CARGO-HOOK-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CAUTION-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.COCKPIT-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CONSOLE-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.DOME-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.EXT-STORES-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.FIRE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.FM-ARC-54-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.FM2-ARC-114-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.FORCE-TRIM-CB-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.FUS-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.HF-ANT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.HF-ARC-102-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.HYD-CONT-CB-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.IFF-API-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.IFF-APX-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.INST-PANEL-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.INST-SEC-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.INTER-COM-CPLT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.INTER-COM-PLT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.INVTR-SWITCHER-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.K-Y20-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.LDG-LIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.LDG-SEARCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.LF-NAV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.LH-FUEL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.MAIN-GEN-SWITCHER-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.MARKER-BEACON-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.MTR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.NAV-LIGHTS-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.NON-ESS-BUS-SWITCHERr-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.OUTLET-VALVE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.PHASE-SWITCHER-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.PITOT-TUBE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.PROX-WARN-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RESCUE-CABLE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RESCUE-CONT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RESCUE-POWER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RPM-WARN-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.SEARCH-LIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.STARTER-GEN-SWITCHERr-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.STARTER-RELAY-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.TEMP-IND-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.TURN-SLIP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.UHF-ARC-51-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VHF-NAV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VM-SWITCHER-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.WIND-SHIELD-CB-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.WIND-SHIELD2-CB-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3071",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3072",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3073",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3074",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3075",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3076",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3077",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3078",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3079",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3080",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3081",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3082",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3083",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3085",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3086",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3087",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3088",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3089",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3090",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3091",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3092",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3093",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3094",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3095",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3096",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3097",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.cmd_3098",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CHIP-DET-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.DE-ICE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ENGINE-BTN-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.FIRE-DETECTOR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.GOV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.GOV-RPM-1-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.GOV-RPM-2-PTR",
+			"status": "fail",
+			"details": "pos 0: expected -1.0000, got 0.0000; pos 2: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "ENGINE_INTERFACE.LOW-RPM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.THROTTLE-1-PTR",
+			"status": "fail",
+			"details": "75%: expected 0.0500, got 0.0000; 100%: expected 0.4000, got 0.0000 (actual range [-1.0000, 0.0000] vs expected [-1.0, 0.4])"
+		},
+		{
+			"name": "ENGINE_INTERFACE.THROTTLE-2-PTR",
+			"status": "fail",
+			"details": "25%: expected -0.6500, got -1.0000; 50%: expected -0.3000, got -1.0000; 75%: expected 0.0500, got -1.0000; 100%: expected 0.4000, got -1.0000"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CARGO-REL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CARGO-RELEASE-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CARGO-RELEASE-2-PTR",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "FLEX_SIGHT.SIGHT-BRIGHT-SWITCHER-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLEX_SIGHT.SIGHT-TUMB-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-GAUGE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FUEL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GMCS.ADF-VOR-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GMCS.DG-SLAVE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GMCS.HDG-SET-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "GMCS.HDG-SYNC-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "HEATING_SYSTEM.BLEND-AIR-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.FORCE-TRIM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.HYD-CONT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CODE-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "IFF.IDENT-MIC SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.MASTER-CONTROL-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF.MODE-1-WHEEL-1-WINDOW-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "IFF.MODE-1-WHEEL-2-WINDOW-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.MODE-3A-WHEEL-1-WINDOW-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.MODE-3A-WHEEL-2-WINDOW-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.MODE-3A-WHEEL-3-WINDOW-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.MODE-3A-WHEEL-4-WINDOW-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.MODE-4-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.OUT-(AUDIO-LIGHT)-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.RAD-TEST-MON-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.REPLY-LIGHT-PTR_arg74",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.REPLY-LIGHT-PTR_arg78",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF.TEST-LIGHT-PTR_arg75",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.TEST-LIGHT-PTR_arg79",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF.TEST-M-1-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.TEST-M-2-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.TEST-M-3A-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.TEST-M-3C-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INTERCOM.RADIO/ICS-1-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INTERCOM.RECEIVER-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.RECEIVER-2-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.RECEIVER-3-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.RECEIVER-4-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.RECEIVER-INT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.RECEIVER-NAV-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.SDP-VOLUME-CONTROL-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.TRANSMIT-INTERPHONE-SWITCH-PTR",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "MARKER_BEACON.SENSING-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MARKER_BEACON.VOLUME-OFF-INCR-CONTROL-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.ANTI-COLL-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.CONSOLE-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.COPILOT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.DIM-BRIGHT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.ENGINE-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.FWD-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.LDG-LT-1-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.LDG-LT-2-1-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.NVG-POSITION-LTS-PTR",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.PED-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.PILOT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.SEC-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.SL-ON-OFF-STOW-1-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAVLIGHT_SYSTEM.STEADY-OFF-FLASH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "PILOT_SIGHT.PILOT-SIGHT-BRIGHT-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "PILOT_SIGHT.PILOT-SIGHT-POS-PTR",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "PILOT_SIGHT.PILOT-SIGHT-SCALE-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "PILOT_SIGHT.PILOT-SIGHT-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.PITCH-HI-ALT-PTR_arg446",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.PITCH-HI-ALT-PTR_arg448",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.PITCH-LO-ALT-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.RADAR-ALT-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYS_CONTROLLER.BRIGHT-DIM-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYS_CONTROLLER.RESET-TEST-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "UHF_ARC_51.0.05-MHZ-CONTROL-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UHF_ARC_51.1-MHZ-CONTROL-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UHF_ARC_51.10-MHZ-CONTROL-PTR",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UHF_ARC_51.FUNCTION-SELECT-SWITCH-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "UHF_ARC_51.MODE-SELECT-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "UHF_ARC_51.PRESET-CHANNEL-PTR",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "UHF_ARC_51.SQ-DISABLE-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UHF_ARC_51.UHF-VOLUME-CONTROL-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.FREQUENCY-SELECTOR-1-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.FREQUENCY-SELECTOR-2-PTR",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.FREQUENCY-SELECTOR-3-PTR",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.FREQUENCY-SELECTOR-4-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.MODE-SWITCH-PTR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.SQUELCH-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VHF_ARC_131.VOLUME-CONTROL-PTR",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VHF_ARC_134.COMMUNICATION-TEST-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VHF_ARC_134.KHZ-SELECTOR-PTR_arg8",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "VHF_ARC_134.KHZ-SELECTOR-PTR_arg9",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "VHF_ARC_134.MHZ-SELECTOR-PTR_arg5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VHF_ARC_134.MHZ-SELECTOR-PTR_arg7",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAPON_SYS.762-SWITCH-PTR",
+			"status": "fail",
+			"details": "pos 2: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "WEAPON_SYS.ARMED-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYS.JETT-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYS.LRGUN-SWITCH-PTR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYS.RKT-PAIR-PTR",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "WEAPON_SYS.RKT-RESET-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.CHAFF-ARM-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.CHAFF-ARM-TEST-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.CHAFF-PTR_arg454",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "XM_130.CHAFF-PTR_arg455",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.FLARE-DISP-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.FLARE-PTR_arg452",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "XM_130.FLARE-PTR_arg453",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.PGRM-SWITCH-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.RIPPLE-FIRE-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.AAU_32_Drum_Counter",
+			"status": "pass",
+			"details": "arg 176 = 0.2134"
+		},
+		{
+			"name": "arg.ACVoltmeter",
+			"status": "pass",
+			"details": "arg 150 = 0.7661"
+		},
+		{
+			"name": "arg.ADF_ARN83_Frequency",
+			"status": "pass",
+			"details": "arg 45 = 0.0000"
+		},
+		{
+			"name": "arg.AIRSPEED_Nose",
+			"status": "pass",
+			"details": "arg 117 = 0.7209"
+		},
+		{
+			"name": "arg.AIRSPEED_Roof",
+			"status": "pass",
+			"details": "arg 118 = 0.7208"
+		},
+		{
+			"name": "arg.ARN83_SignalLevel",
+			"status": "pass",
+			"details": "arg 40 = 0.0000"
+		},
+		{
+			"name": "arg.Alt1AAU_10000_footCount",
+			"status": "pass",
+			"details": "arg 169 = 0.0000"
+		},
+		{
+			"name": "arg.Alt1AAU_1000_footCount",
+			"status": "pass",
+			"details": "arg 170 = 0.1000"
+		},
+		{
+			"name": "arg.Alt1AAU_100_footCount",
+			"status": "pass",
+			"details": "arg 171 = 0.6109"
+		},
+		{
+			"name": "arg.Alt_10000_AAU_7A",
+			"status": "pass",
+			"details": "arg 178 = 0.0161"
+		},
+		{
+			"name": "arg.Alt_1000_AAU_7A",
+			"status": "pass",
+			"details": "arg 179 = 0.1614"
+		},
+		{
+			"name": "arg.Alt_100_AAU_7A",
+			"status": "pass",
+			"details": "arg 180 = 0.6137"
+		},
+		{
+			"name": "arg.Attitude_Off_flag",
+			"status": "pass",
+			"details": "arg 148 = 0.0000"
+		},
+		{
+			"name": "arg.Attitude_Off_flag_left",
+			"status": "pass",
+			"details": "arg 141 = 1.0000"
+		},
+		{
+			"name": "arg.Attitude_Pitch",
+			"status": "pass",
+			"details": "arg 143 = 0.0958"
+		},
+		{
+			"name": "arg.Attitude_PitchShift",
+			"status": "pass",
+			"details": "arg 138 = 0.0000"
+		},
+		{
+			"name": "arg.Attitude_Pitch_left",
+			"status": "pass",
+			"details": "arg 136 = -0.0000"
+		},
+		{
+			"name": "arg.Attitude_Roll",
+			"status": "pass",
+			"details": "arg 142 = -0.0257"
+		},
+		{
+			"name": "arg.Attitude_Roll_left",
+			"status": "pass",
+			"details": "arg 135 = 0.0000"
+		},
+		{
+			"name": "arg.CHAFF_Digit_1",
+			"status": "pass",
+			"details": "arg 462 = 0.0000"
+		},
+		{
+			"name": "arg.CHAFF_Digit_2",
+			"status": "pass",
+			"details": "arg 463 = 0.0000"
+		},
+		{
+			"name": "arg.CLOCK_hours",
+			"status": "pass",
+			"details": "arg 127 = 0.8226"
+		},
+		{
+			"name": "arg.CLOCK_minutes",
+			"status": "pass",
+			"details": "arg 128 = 0.8711"
+		},
+		{
+			"name": "arg.CLOCK_seconds",
+			"status": "pass",
+			"details": "arg 129 = 0.1800"
+		},
+		{
+			"name": "arg.CoPilotLight",
+			"status": "pass",
+			"details": "arg 475 = 0.0000"
+		},
+		{
+			"name": "arg.CodeOff_flag",
+			"status": "pass",
+			"details": "arg 177 = 0.0000"
+		},
+		{
+			"name": "arg.ConsoleLight",
+			"status": "pass",
+			"details": "arg 279 = 0.0000"
+		},
+		{
+			"name": "arg.DCVoltmeter",
+			"status": "pass",
+			"details": "arg 149 = 0.5114"
+		},
+		{
+			"name": "arg.DeadCoPilot",
+			"status": "pass",
+			"details": "arg 249 = 0.0000"
+		},
+		{
+			"name": "arg.DeadPilot",
+			"status": "pass",
+			"details": "arg 248 = 0.0000"
+		},
+		{
+			"name": "arg.DomeLight",
+			"status": "pass",
+			"details": "arg 410 = 0.0000"
+		},
+		{
+			"name": "arg.DomeLightGreen",
+			"status": "pass",
+			"details": "arg 411 = 0.0000"
+		},
+		{
+			"name": "arg.DownBlisters",
+			"status": "pass",
+			"details": "arg 412 = 0.0000"
+		},
+		{
+			"name": "arg.EngOilPress",
+			"status": "pass",
+			"details": "arg 113 = 0.0418"
+		},
+		{
+			"name": "arg.EngOilTemp",
+			"status": "pass",
+			"details": "arg 114 = 0.4618"
+		},
+		{
+			"name": "arg.EngineLight",
+			"status": "pass",
+			"details": "arg 477 = 0.0000"
+		},
+		{
+			"name": "arg.EngineTach",
+			"status": "pass",
+			"details": "arg 122 = 0.0043"
+		},
+		{
+			"name": "arg.ExhaustTemp",
+			"status": "pass",
+			"details": "arg 121 = 0.0172"
+		},
+		{
+			"name": "arg.FLARE_Digit_1",
+			"status": "pass",
+			"details": "arg 460 = 0.0000"
+		},
+		{
+			"name": "arg.FLARE_Digit_2",
+			"status": "pass",
+			"details": "arg 461 = 0.0000"
+		},
+		{
+			"name": "arg.FlexSightAzimuth",
+			"status": "pass",
+			"details": "arg 261 = 0.0000"
+		},
+		{
+			"name": "arg.FlexSightElevation",
+			"status": "pass",
+			"details": "arg 262 = 0.0000"
+		},
+		{
+			"name": "arg.FlexSightHeight",
+			"status": "pass",
+			"details": "arg 263 = 0.0000"
+		},
+		{
+			"name": "arg.FromMarker",
+			"status": "pass",
+			"details": "arg 154 = 0.0000"
+		},
+		{
+			"name": "arg.FuelPress",
+			"status": "pass",
+			"details": "arg 126 = 0.0143"
+		},
+		{
+			"name": "arg.FuelQuantity",
+			"status": "pass",
+			"details": "arg 239 = 0.0002"
+		},
+		{
+			"name": "arg.GMC_Annunciator",
+			"status": "pass",
+			"details": "arg 166 = 0.5000"
+		},
+		{
+			"name": "arg.GMC_CoursePointer1",
+			"status": "pass",
+			"details": "arg 159 = 0.2195"
+		},
+		{
+			"name": "arg.GMC_CoursePointer2",
+			"status": "pass",
+			"details": "arg 160 = 0.7805"
+		},
+		{
+			"name": "arg.GMC_Heading",
+			"status": "pass",
+			"details": "arg 165 = 0.9753"
+		},
+		{
+			"name": "arg.GMC_HeadingMarker",
+			"status": "pass",
+			"details": "arg 162 = 0.9752"
+		},
+		{
+			"name": "arg.GMC_PowerFail",
+			"status": "pass",
+			"details": "arg 167 = 0.0000"
+		},
+		{
+			"name": "arg.GasProducerTach",
+			"status": "pass",
+			"details": "arg 119 = 0.0032"
+		},
+		{
+			"name": "arg.GasProducerTach_U",
+			"status": "pass",
+			"details": "arg 120 = 0.0354"
+		},
+		{
+			"name": "arg.HorisontalBar",
+			"status": "pass",
+			"details": "arg 152 = 0.0000"
+		},
+		{
+			"name": "arg.HorisontalOFF",
+			"status": "pass",
+			"details": "arg 158 = 1.0000"
+		},
+		{
+			"name": "arg.LeftDoor",
+			"status": "pass",
+			"details": "arg 420 = 0.0000"
+		},
+		{
+			"name": "arg.LeftWindShield",
+			"status": "pass",
+			"details": "arg 414 = 0.0000"
+		},
+		{
+			"name": "arg.LeftWindow",
+			"status": "pass",
+			"details": "arg 416 = 0.0000"
+		},
+		{
+			"name": "arg.LoadmeterMainGen",
+			"status": "pass",
+			"details": "arg 436 = 0.1807"
+		},
+		{
+			"name": "arg.LoadmeterSTBYGen",
+			"status": "pass",
+			"details": "arg 125 = 0.0900"
+		},
+		{
+			"name": "arg.Marker_Beacon_Lamp",
+			"status": "pass",
+			"details": "arg 56 = 0.0000"
+		},
+		{
+			"name": "arg.NAV_ARN82_Freq1",
+			"status": "pass",
+			"details": "arg 46 = 0.1000"
+		},
+		{
+			"name": "arg.NAV_ARN82_Freq2",
+			"status": "pass",
+			"details": "arg 47 = 0.0000"
+		},
+		{
+			"name": "arg.NAV_ARN82_Freq3",
+			"status": "pass",
+			"details": "arg 48 = 0.7000"
+		},
+		{
+			"name": "arg.NAV_ARN82_Freq4",
+			"status": "pass",
+			"details": "arg 49 = 0.0000"
+		},
+		{
+			"name": "arg.NAV_ARN82_Freq5",
+			"status": "pass",
+			"details": "arg 50 = 0.0000"
+		},
+		{
+			"name": "arg.Operator_Model",
+			"status": "pass",
+			"details": "arg 245 = 0.0000"
+		},
+		{
+			"name": "arg.Panel_Rot_X",
+			"status": "pass",
+			"details": "arg 282 = -0.0485"
+		},
+		{
+			"name": "arg.Panel_Shake_Y",
+			"status": "pass",
+			"details": "arg 265 = 0.1748"
+		},
+		{
+			"name": "arg.Panel_Shake_Z",
+			"status": "pass",
+			"details": "arg 264 = -0.0944"
+		},
+		{
+			"name": "arg.PedLight",
+			"status": "pass",
+			"details": "arg 476 = 0.0000"
+		},
+		{
+			"name": "arg.PilotLight",
+			"status": "pass",
+			"details": "arg 478 = 0.0000"
+		},
+		{
+			"name": "arg.PilotSightGlass",
+			"status": "pass",
+			"details": "arg 442 = 0.5000"
+		},
+		{
+			"name": "arg.Pilot_Model",
+			"status": "pass",
+			"details": "arg 242 = 1.0000"
+		},
+		{
+			"name": "arg.Pointer",
+			"status": "pass",
+			"details": "arg 168 = 0.6109"
+		},
+		{
+			"name": "arg.Press_AAU_7A",
+			"status": "pass",
+			"details": "arg 182 = 0.6276"
+		},
+		{
+			"name": "arg.RALT_Digit_1",
+			"status": "pass",
+			"details": "arg 468 = 1.0000"
+		},
+		{
+			"name": "arg.RALT_Digit_2",
+			"status": "pass",
+			"details": "arg 469 = 0.2000"
+		},
+		{
+			"name": "arg.RALT_Digit_3",
+			"status": "pass",
+			"details": "arg 470 = 0.2000"
+		},
+		{
+			"name": "arg.RALT_Digit_4",
+			"status": "pass",
+			"details": "arg 471 = 0.2000"
+		},
+		{
+			"name": "arg.RALT_HI_Index",
+			"status": "pass",
+			"details": "arg 466 = 0.5470"
+		},
+		{
+			"name": "arg.RALT_HI_Lamp",
+			"status": "pass",
+			"details": "arg 465 = 0.0000"
+		},
+		{
+			"name": "arg.RALT_LO_Index",
+			"status": "pass",
+			"details": "arg 444 = 0.2192"
+		},
+		{
+			"name": "arg.RALT_LO_Lamp",
+			"status": "pass",
+			"details": "arg 447 = 0.0000"
+		},
+		{
+			"name": "arg.RALT_Needle",
+			"status": "pass",
+			"details": "arg 443 = 0.4916"
+		},
+		{
+			"name": "arg.RALT_Off_Flag",
+			"status": "pass",
+			"details": "arg 467 = 0.0000"
+		},
+		{
+			"name": "arg.RMI_CoursePointer1",
+			"status": "pass",
+			"details": "arg 266 = 0.2195"
+		},
+		{
+			"name": "arg.RMI_CoursePointer2",
+			"status": "pass",
+			"details": "arg 267 = 0.7805"
+		},
+		{
+			"name": "arg.RMI_Heading",
+			"status": "pass",
+			"details": "arg 269 = 0.9753"
+		},
+		{
+			"name": "arg.RamTemp",
+			"status": "pass",
+			"details": "arg 437 = 0.7098"
+		},
+		{
+			"name": "arg.RightDoor",
+			"status": "pass",
+			"details": "arg 422 = 0.0000"
+		},
+		{
+			"name": "arg.RightWindShield",
+			"status": "pass",
+			"details": "arg 413 = 0.0000"
+		},
+		{
+			"name": "arg.RightWindow",
+			"status": "pass",
+			"details": "arg 415 = 0.0000"
+		},
+		{
+			"name": "arg.RotCourseCard",
+			"status": "pass",
+			"details": "arg 156 = 1.0000"
+		},
+		{
+			"name": "arg.RotorTach",
+			"status": "pass",
+			"details": "arg 123 = 0.3287"
+		},
+		{
+			"name": "arg.SIGHTS_FOR_CIVIL",
+			"status": "pass",
+			"details": "arg 473 = 0.0000"
+		},
+		{
+			"name": "arg.SecLight",
+			"status": "pass",
+			"details": "arg 474 = 0.0000"
+		},
+		{
+			"name": "arg.SideSlip",
+			"status": "pass",
+			"details": "arg 133 = 1.0000"
+		},
+		{
+			"name": "arg.ToMarker",
+			"status": "pass",
+			"details": "arg 153 = 0.0000"
+		},
+		{
+			"name": "arg.TorquePress",
+			"status": "pass",
+			"details": "arg 124 = 0.0249"
+		},
+		{
+			"name": "arg.TransmOilPress",
+			"status": "pass",
+			"details": "arg 115 = 0.1868"
+		},
+		{
+			"name": "arg.TransmOilTemp",
+			"status": "pass",
+			"details": "arg 116 = 0.5950"
+		},
+		{
+			"name": "arg.TurnPtr",
+			"status": "pass",
+			"details": "arg 132 = 0.0000"
+		},
+		{
+			"name": "arg.UHF_ARC51_Freq1",
+			"status": "pass",
+			"details": "arg 10 = 0.0000"
+		},
+		{
+			"name": "arg.UHF_ARC51_Freq2",
+			"status": "pass",
+			"details": "arg 11 = 0.5000"
+		},
+		{
+			"name": "arg.UHF_ARC51_Freq3",
+			"status": "pass",
+			"details": "arg 12 = 0.1000"
+		},
+		{
+			"name": "arg.UHF_ARC51_Freq4",
+			"status": "pass",
+			"details": "arg 13 = 0.0000"
+		},
+		{
+			"name": "arg.UHF_ARC51_Freq5",
+			"status": "pass",
+			"details": "arg 14 = 0.0000"
+		},
+		{
+			"name": "arg.UpLeftBlister",
+			"status": "pass",
+			"details": "arg 418 = 0.0000"
+		},
+		{
+			"name": "arg.UpRightBlister",
+			"status": "pass",
+			"details": "arg 417 = 0.0000"
+		},
+		{
+			"name": "arg.VHF_ARC134_Freq1",
+			"status": "pass",
+			"details": "arg 1 = 0.1000"
+		},
+		{
+			"name": "arg.VHF_ARC134_Freq2",
+			"status": "pass",
+			"details": "arg 2 = 0.6000"
+		},
+		{
+			"name": "arg.VHF_ARC134_Freq3",
+			"status": "pass",
+			"details": "arg 3 = 0.0000"
+		},
+		{
+			"name": "arg.VHF_ARC134_Freq4",
+			"status": "pass",
+			"details": "arg 4 = 0.0000"
+		},
+		{
+			"name": "arg.VertVelocCopilot",
+			"status": "pass",
+			"details": "arg 251 = 0.0018"
+		},
+		{
+			"name": "arg.VertVelocPilot",
+			"status": "pass",
+			"details": "arg 134 = 0.0020"
+		},
+		{
+			"name": "arg.VerticalBar",
+			"status": "pass",
+			"details": "arg 151 = 0.0000"
+		},
+		{
+			"name": "arg.VerticalOFF",
+			"status": "pass",
+			"details": "arg 157 = 1.0000"
+		},
+		{
+			"name": "arg.VoltageAC",
+			"status": "pass",
+			"details": "arg 150 = 0.7661"
+		},
+		{
+			"name": "arg.VoltageDC",
+			"status": "pass",
+			"details": "arg 149 = 0.5047"
+		},
+		{
+			"name": "arg.Wiper_Operator",
+			"status": "pass",
+			"details": "arg 283 = 0.1400"
+		},
+		{
+			"name": "arg.Wiper_Pilot",
+			"status": "pass",
+			"details": "arg 284 = 0.1400"
+		},
+		{
+			"name": "arg.XM130_ARMED",
+			"status": "pass",
+			"details": "arg 458 = 0.6842"
+		},
+		{
+			"name": "arg.collective_position",
+			"status": "pass",
+			"details": "arg 200 = 0.0000"
+		},
+		{
+			"name": "arg.collective_position_operator",
+			"status": "pass",
+			"details": "arg 207 = 0.0000"
+		},
+		{
+			"name": "arg.gauge_arg_117",
+			"status": "pass",
+			"details": "arg 117 = 0.7209"
+		},
+		{
+			"name": "arg.gauge_arg_118",
+			"status": "pass",
+			"details": "arg 118 = 0.7208"
+		},
+		{
+			"name": "arg.gauge_arg_174",
+			"status": "pass",
+			"details": "arg 174 = 0.1000"
+		},
+		{
+			"name": "arg.gauge_arg_175",
+			"status": "pass",
+			"details": "arg 175 = 0.9000"
+		},
+		{
+			"name": "arg.lamp_20_MINUTE",
+			"status": "pass",
+			"details": "arg 98 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_ARMED",
+			"status": "pass",
+			"details": "arg 254 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_AUX_FUEL_LOW",
+			"status": "pass",
+			"details": "arg 101 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_CHIP_DETECTOR",
+			"status": "pass",
+			"details": "arg 109 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_DC_GENERATOR",
+			"status": "pass",
+			"details": "arg 107 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_ENGINE_CHIP_DET",
+			"status": "pass",
+			"details": "arg 94 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ENGINE_ICE_JET",
+			"status": "pass",
+			"details": "arg 93 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ENGINE_ICING",
+			"status": "pass",
+			"details": "arg 92 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ENGINE_INLET_AIR",
+			"status": "pass",
+			"details": "arg 105 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ENGINE_OIL_PRESS",
+			"status": "pass",
+			"details": "arg 91 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_ENG_FUEL_PUMP",
+			"status": "pass",
+			"details": "arg 97 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_EXTERNAL_POWER",
+			"status": "pass",
+			"details": "arg 108 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_FIRE",
+			"status": "pass",
+			"details": "arg 275 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_FUEL_FILTER",
+			"status": "pass",
+			"details": "arg 99 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_GOV_EMERG",
+			"status": "pass",
+			"details": "arg 100 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_HYD_PRESSURE",
+			"status": "pass",
+			"details": "arg 104 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_IFF",
+			"status": "pass",
+			"details": "arg 110 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_IFF_REPLY",
+			"status": "pass",
+			"details": "arg 76 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_IFF_TEST",
+			"status": "pass",
+			"details": "arg 77 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_INST_INVERTER",
+			"status": "pass",
+			"details": "arg 106 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_LEFT_FUEL_BOOST",
+			"status": "pass",
+			"details": "arg 95 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_LOW_RPM",
+			"status": "pass",
+			"details": "arg 276 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_MASTER",
+			"status": "pass",
+			"details": "arg 277 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_RIGHT_FUEL_BOOST",
+			"status": "pass",
+			"details": "arg 96 = 1.0000"
+		},
+		{
+			"name": "arg.lamp_SAFE",
+			"status": "pass",
+			"details": "arg 255 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_XMSN_OIL_HOT",
+			"status": "pass",
+			"details": "arg 103 = 0.0000"
+		},
+		{
+			"name": "arg.lamp_XMSN_OIL_PRESS",
+			"status": "pass",
+			"details": "arg 102 = 1.0000"
+		},
+		{
+			"name": "arg.rudder",
+			"status": "pass",
+			"details": "arg 184 = 0.0000"
+		},
+		{
+			"name": "arg.rudder_add",
+			"status": "pass",
+			"details": "arg 185 = 0.0000"
+		},
+		{
+			"name": "arg.stick_pitch",
+			"status": "pass",
+			"details": "arg 186 = 0.0000"
+		},
+		{
+			"name": "arg.stick_pitch_sec",
+			"status": "pass",
+			"details": "arg 190 = 0.0000"
+		},
+		{
+			"name": "arg.stick_roll",
+			"status": "pass",
+			"details": "arg 187 = 0.0000"
+		},
+		{
+			"name": "arg.stick_roll_sec",
+			"status": "pass",
+			"details": "arg 191 = 0.0000"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.0.pitch_scale",
+			"status": "pass",
+			"details": "field \"pitch_scale\" = \"\""
+		},
+		{
+			"name": "ind.0.roll_scale",
+			"status": "pass",
+			"details": "field \"roll_scale\" = \"\""
+		},
+		{
+			"name": "ind.0.stick_position",
+			"status": "skip",
+			"details": "field \"stick_position\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.0.stick_position_AP",
+			"status": "pass",
+			"details": "field \"stick_position_AP\" = \"\""
+		},
+		{
+			"name": "ind.1",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.1.NarrowCircle  ",
+			"status": "skip",
+			"details": "field \"NarrowCircle  \" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.circle",
+			"status": "skip",
+			"details": "field \"circle\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.crosshair",
+			"status": "skip",
+			"details": "field \"crosshair\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.heightBordersCargo",
+			"status": "skip",
+			"details": "field \"heightBordersCargo\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.heightBordersZone",
+			"status": "skip",
+			"details": "field \"heightBordersZone\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.heightnarrow",
+			"status": "skip",
+			"details": "field \"heightnarrow\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.zone",
+			"status": "skip",
+			"details": "field \"zone\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.2",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.2.SymbologyBox1",
+			"status": "skip",
+			"details": "field \"SymbologyBox1\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.pilot_sight",
+			"status": "skip",
+			"details": "field \"pilot_sight\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.total_field_of_view1",
+			"status": "skip",
+			"details": "field \"total_field_of_view1\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.3",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.3.SymbologyBox",
+			"status": "skip",
+			"details": "field \"SymbologyBox\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.fixed_sight",
+			"status": "skip",
+			"details": "field \"fixed_sight\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.total_field_of_view",
+			"status": "skip",
+			"details": "field \"total_field_of_view\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.5",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.5.lifebar",
+			"status": "skip",
+			"details": "field \"lifebar\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.lifebarbox_down",
+			"status": "skip",
+			"details": "field \"lifebarbox_down\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.lifebarbox_lh",
+			"status": "skip",
+			"details": "field \"lifebarbox_lh\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.lifebarbox_rh",
+			"status": "skip",
+			"details": "field \"lifebarbox_rh\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.5.lifebarbox_up",
+			"status": "skip",
+			"details": "field \"lifebarbox_up\" declared in extraction but not currently emitted by indication 5"
+		},
+		{
+			"name": "ind.7",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.7.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mem_base0",
+			"status": "skip",
+			"details": "field \"mem_base0\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mem_base1",
+			"status": "skip",
+			"details": "field \"mem_base1\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mem_base2",
+			"status": "skip",
+			"details": "field \"mem_base2\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mem_base3",
+			"status": "skip",
+			"details": "field \"mem_base3\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_Hints",
+			"status": "skip",
+			"details": "field \"txt_Hints\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_Status",
+			"status": "skip",
+			"details": "field \"txt_Status\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_ammo0",
+			"status": "skip",
+			"details": "field \"txt_ammo0\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_ammo1",
+			"status": "skip",
+			"details": "field \"txt_ammo1\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_ammo2",
+			"status": "skip",
+			"details": "field \"txt_ammo2\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_ammo3",
+			"status": "skip",
+			"details": "field \"txt_ammo3\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_burst0",
+			"status": "skip",
+			"details": "field \"txt_burst0\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_burst1",
+			"status": "skip",
+			"details": "field \"txt_burst1\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_burst2",
+			"status": "skip",
+			"details": "field \"txt_burst2\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_burst3",
+			"status": "skip",
+			"details": "field \"txt_burst3\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_mem0",
+			"status": "skip",
+			"details": "field \"txt_mem0\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_mem1",
+			"status": "skip",
+			"details": "field \"txt_mem1\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_mem2",
+			"status": "skip",
+			"details": "field \"txt_mem2\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_mem3",
+			"status": "skip",
+			"details": "field \"txt_mem3\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_status0",
+			"status": "skip",
+			"details": "field \"txt_status0\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_status1",
+			"status": "skip",
+			"details": "field \"txt_status1\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_status2",
+			"status": "skip",
+			"details": "field \"txt_status2\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.txt_status3",
+			"status": "skip",
+			"details": "field \"txt_status3\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.8",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel1",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel1\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel10",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel10\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel11",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel11\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel12",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel12\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel13",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel13\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel14",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel14\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel15",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel15\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel16",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel16\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel17",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel17\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel18",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel18\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel19",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel19\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel2",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel2\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel20",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel20\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel3",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel3\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel4",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel4\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel5",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel5\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel6",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel6\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel7",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel7\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel8",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel8\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_Channel9",
+			"status": "skip",
+			"details": "field \"SheetTable_Channel9\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.SheetTable_MainDummy",
+			"status": "skip",
+			"details": "field \"SheetTable_MainDummy\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.sheet_bar_mask",
+			"status": "skip",
+			"details": "field \"sheet_bar_mask\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ELEC_INTERFACE.MAIN-GEN-SWITCHER-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VXFXCVR-COMM-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYS.JETT-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "XM_130.RIPPLE-FIRE-COVER-PTR",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

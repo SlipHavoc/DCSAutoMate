@@ -1,0 +1,2764 @@
+{
+	"module": "F-15ESE",
+	"timestamp": "2026-05-11T16:24:10",
+	"delay": 0.08,
+	"elapsed": 275.5,
+	"counts": {
+		"pass": 484,
+		"fail": 59,
+		"skip": 7,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "ACC.MM_AA_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ACC.MM_AG_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ACC.MM_INST_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ACC.MM_NAV_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFSS.cmd_3539",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFSS.cmd_3540",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "AFSS.fuel_AIR_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AFSS.fuel_cft_emergtrf_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AFSS.fuel_dump_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFSS.fuel_ext_trfr_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFSS.fueltrnfr_cft_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AFSS.fueltrnfr_ctr_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AFSS.fueltrnfr_wing_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AN_APG70.nctr_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AN_APG70.rdr_power_sw",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "CARA.rdr_alt_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CNPYSYST.cmd_3001",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.3000"
+		},
+		{
+			"name": "CNPYSYST.cmd_3431",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CNPYSYST.cnpy_lever",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "CNPYSYST.eject_select_valve",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CNPYSYST.em_cnpy_jett_lever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CNPYSYST.rear_cnpy_lever",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "CNPYSYST.rear_em_cnpy_jett_lever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CNPYSYST.seat_adj_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CNPYSYST.seat_arm_handle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CNPYSYST.seat_arm_handle_rc",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.amad_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.fire_ext_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "DEEC.left_eng_ctrl_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.left_eng_finger_lift",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.left_eng_fire_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.left_eng_master_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.left_inlet_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_eng_ctrl_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_eng_finger_lift",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_eng_fire_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_eng_master_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_inlet_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.vmax_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS.airco_auto_man_off_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.airco_cold_hot_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ECS.airco_eng_knob",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ECS.airco_max_norm_min_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.anti_fog_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.cmd_3427",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS.cmd_3571",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.cmd_3572",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS.cmd_3573",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.eng_heat_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.oxy_100_norm_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS.oxy_emer_norm_test_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.oxy_pbg_on_off_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS.oxy_test_btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS.pitot_heat_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS.windshield_anti_ice_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.cmd_3386",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "EPSS.cmd_3430",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.generator_emerg_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EPSS.generator_left_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.generator_right_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.gnd_pwr_1_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EPSS.gnd_pwr_2_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.gnd_pwr_3_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.gnd_pwr_4_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EPSS.ground_power_sw",
+			"status": "fail",
+			"details": "pos 2: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "EPSS.mpdp_A1U_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EPSS.pacs_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EPSS.starter_gen_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_CMD.cmd_disp_sel_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EWS_CMD.cmd_jett_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_CMD.cmd_mode_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EWS_JMR.ics_mode_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EWS_JMR.ics_power_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_JMR.ics_set1_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_JMR.ics_set2_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_JMR.ics_set3_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_JMR.pods_mode_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXTLT.anticoll_lt_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXTLT.formation_lt_knob",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "EXTLT.ldg_taxi_light_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTLT.pos_lt_knob",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "EXTLT.vert_tail_lt_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FLCTRL.bit_button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLCTRL.cmd_3342",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLCTRL.cmd_3403",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FLCTRL.cmd_3452",
+			"status": "fail",
+			"details": "pos 1: expected 0.2500, got 0.5000; pos 2: expected 0.5000, got 0.0000"
+		},
+		{
+			"name": "FLCTRL.cmd_3453",
+			"status": "fail",
+			"details": "pos 1: expected 0.2500, got 0.5000; pos 2: expected 0.5000, got 0.0000"
+		},
+		{
+			"name": "FLCTRL.cmd_3457",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLCTRL.cmd_3459",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLCTRL.cmd_3460",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FLCTRL.pitch_ratio_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLCTRL.pitch_sw",
+			"status": "fail",
+			"details": "pos 1: expected 0.2500, got 0.5000; pos 2: expected 0.5000, got 0.0000"
+		},
+		{
+			"name": "FLCTRL.roll_ratio_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLCTRL.rud_adj_lever_rear",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.alt_adj_knob",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FLINST.art_hor_adj",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got -0.9500; 100%: expected 1.0000, got 0.9500 (actual range [-0.9500, 0.9500] vs expected [-1.0, 1.0])"
+		},
+		{
+			"name": "FLINST.art_hor_uncage",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.clk_adj_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLINST.cmd_3385",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FLINST.cmd_3401",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.cmd_3403",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "FLINST.cmd_3430",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.cmd_3452",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.cmd_3453",
+			"status": "fail",
+			"details": "pos 0: expected -1.0000, got 0.0000; pos 2: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "FLINST.cmd_3511",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.cmd_3512",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.ewws_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.fuelqty_totalizer",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "FLINST.nuc_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FLINST.rc_art_hor_adj",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got -0.9500; 100%: expected 1.0000, got 0.9500 (actual range [-0.9500, 0.9500] vs expected [-1.0, 1.0])"
+		},
+		{
+			"name": "FLINST.rc_clk_adj_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLINST.rc_crypto_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FLINST.rc_tmr_stop_btn",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLINST.rc_tone_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.tmr_stop_btn",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "FLINST.tone_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HUDCTRL.HUD_BIT_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HUDCTRL.HUD_BRT_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HUDCTRL.HUD_MODE_Switch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "HUDCTRL.HUD_REJ_Switch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "HUDCTRL.HUD_VIDEO_BRT_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HUDCTRL.HUD_VIDEO_CONT_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.cmd_3427",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ICS.cmd_3509",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ICS.ics_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.rc_ics_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.rc_wpn_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.wpn_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF_TRN.cmd_3508",
+			"status": "skip",
+			"details": "Missing arg"
+		},
+		{
+			"name": "IFF_TRN.cypher_txt_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_TRN.iff_ant_sel_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF_TRN.master_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF_TRN.mode_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF_TRN.rec_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ILS.ils_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ILS.rc_ils_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INS.ins_knob",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "INTLT.chart_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.chart_lt_lamp",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.compass_lt_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTLT.console_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.daynite_mode_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTLT.flood_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.inst_pnl_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.lights_test_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTLT.rc_chart_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.rc_chart_lt_lamp",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.rc_compass_lt_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTLT.rc_console_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.rc_daynite_mode_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTLT.rc_flood_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.rc_inst_pnl_lt_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.rc_lights_test_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTLT.rc_ufc_bcklt_br_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.rc_wac_bklt_knob",
+			"status": "fail",
+			"details": "pos 1: arg unchanged at 0.0000; pos 2: arg unchanged at 0.0000"
+		},
+		{
+			"name": "INTLT.ufc_bcklt_br_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTLT.wac_bklt_knob",
+			"status": "fail",
+			"details": "pos 1: arg unchanged at 0.0000; pos 2: arg unchanged at 0.0000"
+		},
+		{
+			"name": "LGS.Gear_lever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.anti_skid_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LGS.arr_hook_lever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.arr_hook_lever_rear",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.cmd_3342",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.cmd_3431",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.em_bk_steer_lever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.em_bk_steer_lever_rear",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LGS.em_gear_lever",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 1.0000"
+		},
+		{
+			"name": "LGS.park_brake_sw",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_FCENTER.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RLEFT.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPCD_RRIGHT.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FLEFT.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_FRIGHT.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RLEFT.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_01",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_02",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_03",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_05",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_06",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_07",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_08",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_09",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_11",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_12",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_13",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_14",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_15",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_17",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_18",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_19",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Button_20",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Switch_BRT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Switch_Cont",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MPD_RRIGHT.Switch_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAVPOD.nav_flir_gain_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVPOD.nav_flir_gain_level",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAVPOD.nav_flir_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "PACS.EMER_JETT_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PACS.JETT_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PACS.JETT_Selector_Knob",
+			"status": "fail",
+			"details": "pos 0: expected -1.0000, got -0.9000; pos 1: expected -0.7000, got -0.6000; pos 2: expected -0.4000, got -0.3000; pos 3: expected -0.1000, got 0.0000; pos 4: expected 0.2000, got 0.3000; pos 5: expected 0.5000, got 0.6000; pos 6: expected 0.8000, got 0.9000"
+		},
+		{
+			"name": "PACS.Master_Arm_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PACS.laser_code_2",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "PACS.laser_code_3",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "PACS.laser_code_4",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "RDRCTRL_AA.cc_reset_btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RDRCTRL_AA.jtids_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN.rc_tacan_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN.tacan_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEWS.caution_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEWS.cmd_3601",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEWS.cmd_3602",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEWS.ewss_power_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEWS.ewss_tone_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEWS.launch_vol",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEWS.rwr_ics_mode_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEWS.rwr_power_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TFR.cmd_3456",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TFR.flyup_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TFR.tf_rdr_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TGPCTRL.tpod_flir_gain_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TGPCTRL.tpod_flir_level_knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TGPCTRL.tpod_laser_sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TGPCTRL.tpod_pwr_sw",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_A_P",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_BRT_CTRL",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_CLEAR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_DATA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_DOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_EMIS_LMT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_GREC_CM_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_GREC_CM_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_I_P",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_A1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_C9",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_E6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_M5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_N2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_S8",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY_W4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY__0",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_KEY__7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_MARK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_MENU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_0",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_8",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PB_9",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PRESET_LEFT",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PRESET_RIGHT",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PRESET_SW_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_PRESET_SW_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_SHF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_VOL_R1",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_VOL_R2",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_VOL_R3",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_FRONT.UFC_VOL_R4",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_A_P",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_BRT_CTRL",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_CLEAR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_DATA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_DOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_EMIS_LMT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_GREC_CM_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_GREC_CM_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_I_P",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_A1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_C9",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_E6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_M5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_N2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_S8",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY_W4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY__0",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_KEY__7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_MARK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_MENU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_0",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_8",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PB_9",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PRESET_LEFT",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PRESET_RIGHT",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PRESET_SW_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_PRESET_SW_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_SHF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_VOL_R1",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_VOL_R2",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_VOL_R3",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "UFCCTRL_REAR.UFC_VOL_R4",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WCAS.cmd_3401",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WCAS.cmd_3428",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WCAS.cmd_3510",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WCAS.master_caution_btn_rc",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WCAS.warn_tone_sil_btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.mirrors_draw",
+			"status": "pass",
+			"details": "arg 1010 = 0.0000"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.NF_FOV",
+			"status": "pass",
+			"details": "field \"NF_FOV\" = \"\""
+		},
+		{
+			"name": "ind.0.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.1",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.1.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.18",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.18.UFC_CC_01",
+			"status": "pass",
+			"details": "field \"UFC_CC_01\" = \"\""
+		},
+		{
+			"name": "ind.18.UFC_CC_02",
+			"status": "pass",
+			"details": "field \"UFC_CC_02\" = \"\""
+		},
+		{
+			"name": "ind.18.UFC_CC_03",
+			"status": "pass",
+			"details": "field \"UFC_CC_03\" = \"\""
+		},
+		{
+			"name": "ind.18.UFC_CC_04",
+			"status": "pass",
+			"details": "field \"UFC_CC_04\" = \"\""
+		},
+		{
+			"name": "ind.18.UFC_DISPLAY",
+			"status": "pass",
+			"details": "field \"UFC_DISPLAY\" = \"\""
+		},
+		{
+			"name": "ind.18.UFC_LL_INPUT_DEG",
+			"status": "fail",
+			"details": "field \"UFC_LL_INPUT_DEG\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_LL_INPUT_MIN",
+			"status": "fail",
+			"details": "field \"UFC_LL_INPUT_MIN\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_01",
+			"status": "pass",
+			"details": "field \"UFC_SC_01\" = \"N-F BRST\""
+		},
+		{
+			"name": "ind.18.UFC_SC_02",
+			"status": "pass",
+			"details": "field \"UFC_SC_02\" = \"YAW 0.0\""
+		},
+		{
+			"name": "ind.18.UFC_SC_02A",
+			"status": "fail",
+			"details": "field \"UFC_SC_02A\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_02B",
+			"status": "fail",
+			"details": "field \"UFC_SC_02B\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_03",
+			"status": "pass",
+			"details": "field \"UFC_SC_03\" = \"PITCH 0.0\""
+		},
+		{
+			"name": "ind.18.UFC_SC_03ILS",
+			"status": "fail",
+			"details": "field \"UFC_SC_03ILS\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_03L1",
+			"status": "fail",
+			"details": "field \"UFC_SC_03L1\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_03L2",
+			"status": "fail",
+			"details": "field \"UFC_SC_03L2\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_04",
+			"status": "pass",
+			"details": "field \"UFC_SC_04\" = \"ROLL 0.0\""
+		},
+		{
+			"name": "ind.18.UFC_SC_05",
+			"status": "pass",
+			"details": "field \"UFC_SC_05\" = \"*U243000\""
+		},
+		{
+			"name": "ind.18.UFC_SC_05A",
+			"status": "pass",
+			"details": "field \"UFC_SC_05A\" = \".\""
+		},
+		{
+			"name": "ind.18.UFC_SC_06",
+			"status": "pass",
+			"details": "field \"UFC_SC_06\" = \"G\""
+		},
+		{
+			"name": "ind.18.UFC_SC_07",
+			"status": "pass",
+			"details": "field \"UFC_SC_07\" = \"GV\""
+		},
+		{
+			"name": "ind.18.UFC_SC_08",
+			"status": "pass",
+			"details": "field \"UFC_SC_08\" = \"U133000*\""
+		},
+		{
+			"name": "ind.18.UFC_SC_08A",
+			"status": "pass",
+			"details": "field \"UFC_SC_08A\" = \".\""
+		},
+		{
+			"name": "ind.18.UFC_SC_09",
+			"status": "pass",
+			"details": "field \"UFC_SC_09\" = \"ELEC\""
+		},
+		{
+			"name": "ind.18.UFC_SC_09_D2A",
+			"status": "fail",
+			"details": "field \"UFC_SC_09_D2A\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_09_D2B",
+			"status": "fail",
+			"details": "field \"UFC_SC_09_D2B\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_10",
+			"status": "pass",
+			"details": "field \"UFC_SC_10\" = \"\""
+		},
+		{
+			"name": "ind.18.UFC_SC_10_SPB",
+			"status": "fail",
+			"details": "field \"UFC_SC_10_SPB\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_11",
+			"status": "pass",
+			"details": "field \"UFC_SC_11\" = \"BRST*\""
+		},
+		{
+			"name": "ind.18.UFC_SC_11_D2A",
+			"status": "fail",
+			"details": "field \"UFC_SC_11_D2A\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_11_D2B",
+			"status": "fail",
+			"details": "field \"UFC_SC_11_D2B\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_11_SPA",
+			"status": "fail",
+			"details": "field \"UFC_SC_11_SPA\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_11_SPB",
+			"status": "fail",
+			"details": "field \"UFC_SC_11_SPB\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_12",
+			"status": "pass",
+			"details": "field \"UFC_SC_12\" = \"NORM\""
+		},
+		{
+			"name": "ind.18.UFC_SC_R1",
+			"status": "fail",
+			"details": "field \"UFC_SC_R1\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.18.UFC_SC_R23R3",
+			"status": "fail",
+			"details": "field \"UFC_SC_R23R3\" not found in indication 18 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_03', 'UFC_SC_04'], ... (19 total))"
+		},
+		{
+			"name": "ind.19",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.19.visor_novr",
+			"status": "fail",
+			"details": "field \"visor_novr\" not found in indication 19 (fields: [])"
+		},
+		{
+			"name": "ind.19.visor_vr_left",
+			"status": "fail",
+			"details": "field \"visor_vr_left\" not found in indication 19 (fields: [])"
+		},
+		{
+			"name": "ind.19.visor_vr_right",
+			"status": "fail",
+			"details": "field \"visor_vr_right\" not found in indication 19 (fields: [])"
+		},
+		{
+			"name": "ind.20",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.20.ab_scale",
+			"status": "fail",
+			"details": "field \"ab_scale\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.base",
+			"status": "fail",
+			"details": "field \"base\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.idle_scale",
+			"status": "fail",
+			"details": "field \"idle_scale\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.pitch_scale",
+			"status": "fail",
+			"details": "field \"pitch_scale\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.roll_scale",
+			"status": "fail",
+			"details": "field \"roll_scale\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.rudder_scale",
+			"status": "fail",
+			"details": "field \"rudder_scale\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.stick_position",
+			"status": "fail",
+			"details": "field \"stick_position\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.throttle_scale",
+			"status": "fail",
+			"details": "field \"throttle_scale\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.trimmer_stick_position",
+			"status": "fail",
+			"details": "field \"trimmer_stick_position\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.wheel_brake_actual_left",
+			"status": "fail",
+			"details": "field \"wheel_brake_actual_left\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.wheel_brake_actual_right",
+			"status": "fail",
+			"details": "field \"wheel_brake_actual_right\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.wheel_brake_left",
+			"status": "fail",
+			"details": "field \"wheel_brake_left\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.wheel_brake_mask_left",
+			"status": "fail",
+			"details": "field \"wheel_brake_mask_left\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.wheel_brake_mask_right",
+			"status": "fail",
+			"details": "field \"wheel_brake_mask_right\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.20.wheel_brake_right",
+			"status": "fail",
+			"details": "field \"wheel_brake_right\" not found in indication 20 (fields: [])"
+		},
+		{
+			"name": "ind.9",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.9.UFC_CC_01",
+			"status": "pass",
+			"details": "field \"UFC_CC_01\" = \"\""
+		},
+		{
+			"name": "ind.9.UFC_CC_02",
+			"status": "pass",
+			"details": "field \"UFC_CC_02\" = \"\""
+		},
+		{
+			"name": "ind.9.UFC_CC_03",
+			"status": "pass",
+			"details": "field \"UFC_CC_03\" = \"\""
+		},
+		{
+			"name": "ind.9.UFC_CC_04",
+			"status": "pass",
+			"details": "field \"UFC_CC_04\" = \"\""
+		},
+		{
+			"name": "ind.9.UFC_DISPLAY",
+			"status": "pass",
+			"details": "field \"UFC_DISPLAY\" = \"\""
+		},
+		{
+			"name": "ind.9.UFC_LL_INPUT_DEG",
+			"status": "fail",
+			"details": "field \"UFC_LL_INPUT_DEG\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_LL_INPUT_MIN",
+			"status": "fail",
+			"details": "field \"UFC_LL_INPUT_MIN\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_01",
+			"status": "pass",
+			"details": "field \"UFC_SC_01\" = \"MARK 2\""
+		},
+		{
+			"name": "ind.9.UFC_SC_02",
+			"status": "pass",
+			"details": "field \"UFC_SC_02\" = \"N4330823\""
+		},
+		{
+			"name": "ind.9.UFC_SC_02A",
+			"status": "pass",
+			"details": "field \"UFC_SC_02A\" = \"°\""
+		},
+		{
+			"name": "ind.9.UFC_SC_02B",
+			"status": "pass",
+			"details": "field \"UFC_SC_02B\" = \".\""
+		},
+		{
+			"name": "ind.9.UFC_SC_03",
+			"status": "pass",
+			"details": "field \"UFC_SC_03\" = \"E 4338288\""
+		},
+		{
+			"name": "ind.9.UFC_SC_03ILS",
+			"status": "fail",
+			"details": "field \"UFC_SC_03ILS\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_03L1",
+			"status": "pass",
+			"details": "field \"UFC_SC_03L1\" = \"°\""
+		},
+		{
+			"name": "ind.9.UFC_SC_03L2",
+			"status": "pass",
+			"details": "field \"UFC_SC_03L2\" = \".\""
+		},
+		{
+			"name": "ind.9.UFC_SC_04",
+			"status": "pass",
+			"details": "field \"UFC_SC_04\" = \"UTM\""
+		},
+		{
+			"name": "ind.9.UFC_SC_05",
+			"status": "pass",
+			"details": "field \"UFC_SC_05\" = \"*U243000\""
+		},
+		{
+			"name": "ind.9.UFC_SC_05A",
+			"status": "pass",
+			"details": "field \"UFC_SC_05A\" = \".\""
+		},
+		{
+			"name": "ind.9.UFC_SC_06",
+			"status": "pass",
+			"details": "field \"UFC_SC_06\" = \"G\""
+		},
+		{
+			"name": "ind.9.UFC_SC_07",
+			"status": "pass",
+			"details": "field \"UFC_SC_07\" = \"GV\""
+		},
+		{
+			"name": "ind.9.UFC_SC_08",
+			"status": "pass",
+			"details": "field \"UFC_SC_08\" = \"U133000*\""
+		},
+		{
+			"name": "ind.9.UFC_SC_08A",
+			"status": "pass",
+			"details": "field \"UFC_SC_08A\" = \".\""
+		},
+		{
+			"name": "ind.9.UFC_SC_09",
+			"status": "pass",
+			"details": "field \"UFC_SC_09\" = \"ELEV 1411'\""
+		},
+		{
+			"name": "ind.9.UFC_SC_09_D2A",
+			"status": "fail",
+			"details": "field \"UFC_SC_09_D2A\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_09_D2B",
+			"status": "fail",
+			"details": "field \"UFC_SC_09_D2B\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_10",
+			"status": "pass",
+			"details": "field \"UFC_SC_10\" = \"XMIT  C2\""
+		},
+		{
+			"name": "ind.9.UFC_SC_10_SPB",
+			"status": "fail",
+			"details": "field \"UFC_SC_10_SPB\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_11",
+			"status": "pass",
+			"details": "field \"UFC_SC_11\" = \"XMIT F/F\""
+		},
+		{
+			"name": "ind.9.UFC_SC_11_D2A",
+			"status": "fail",
+			"details": "field \"UFC_SC_11_D2A\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_11_D2B",
+			"status": "fail",
+			"details": "field \"UFC_SC_11_D2B\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_11_SPA",
+			"status": "pass",
+			"details": "field \"UFC_SC_11_SPA\" = \":\""
+		},
+		{
+			"name": "ind.9.UFC_SC_11_SPB",
+			"status": "pass",
+			"details": "field \"UFC_SC_11_SPB\" = \":\""
+		},
+		{
+			"name": "ind.9.UFC_SC_12",
+			"status": "pass",
+			"details": "field \"UFC_SC_12\" = \"TIME 041023\""
+		},
+		{
+			"name": "ind.9.UFC_SC_R1",
+			"status": "fail",
+			"details": "field \"UFC_SC_R1\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "ind.9.UFC_SC_R23R3",
+			"status": "fail",
+			"details": "field \"UFC_SC_R23R3\" not found in indication 9 (fields: ['UFC_DISPLAY', 'UFC_SC_01', 'UFC_SC_02', 'UFC_SC_02A', 'UFC_SC_02B'], ... (25 total))"
+		},
+		{
+			"name": "DEEC.amad_sw_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.left_eng_fire_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.left_eng_master_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_eng_fire_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.right_eng_master_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DEEC.vmax_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EWS_CMD.cmd_jett_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.ewws_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLINST.nuc_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TFR.flyup_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

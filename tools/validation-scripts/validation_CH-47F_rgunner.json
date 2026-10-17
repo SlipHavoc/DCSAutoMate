@@ -1,0 +1,1779 @@
+{
+	"module": "CH-47Fbl1",
+	"timestamp": "2026-05-10T16:35:52",
+	"delay": 0.08,
+	"elapsed": 25.4,
+	"counts": {
+		"pass": 91,
+		"fail": 0,
+		"skip": 262,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "APN_209.RALT_HI_SET_KNOB_arg1194",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "APN_209.RALT_HI_SET_KNOB_arg1195",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "APN_209.RALT_LO_SET_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_CALL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_HOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_ICS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N1_arg1113",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N1_arg1114",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N2_arg1115",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N2_arg1116",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N3_arg1117",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N3_arg1118",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N4_arg1119",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_N4_arg1120",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R1_arg1099",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R1_arg1100",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R2_arg1101",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R2_arg1102",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R3_arg1103",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R3_arg1104",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R4_arg1105",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R4_arg1106",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R5_arg1107",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R5_arg1108",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R6_arg1109",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R6_arg1110",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R7_arg1111",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_R7_arg1112",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_TX",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_VOL",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "COMM_PANEL_RH_GUNNER.ICS5_VOX",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.Collective",
+			"status": "pass",
+			"details": "arg 747 = 0.4029"
+		},
+		{
+			"name": "arg.ControlStickPitch",
+			"status": "pass",
+			"details": "arg 744 = 0.2383"
+		},
+		{
+			"name": "arg.ControlStickPitchSensor",
+			"status": "pass",
+			"details": "arg 1460 = 0.3930"
+		},
+		{
+			"name": "arg.ControlStickRoll",
+			"status": "pass",
+			"details": "arg 745 = 0.0000"
+		},
+		{
+			"name": "arg.CopilotCollective",
+			"status": "pass",
+			"details": "arg 1512 = 0.0000"
+		},
+		{
+			"name": "arg.CopilotLeaveControls",
+			"status": "pass",
+			"details": "arg 1499 = 0.5000"
+		},
+		{
+			"name": "arg.CopilotPedals",
+			"status": "pass",
+			"details": "arg 1513 = 0.0000"
+		},
+		{
+			"name": "arg.CopilotStickPitch",
+			"status": "pass",
+			"details": "arg 1510 = 0.0000"
+		},
+		{
+			"name": "arg.CopilotStickRoll",
+			"status": "pass",
+			"details": "arg 1511 = 0.0000"
+		},
+		{
+			"name": "arg.CopilotWheelBrakeLeft",
+			"status": "pass",
+			"details": "arg 1515 = 0.0000"
+		},
+		{
+			"name": "arg.CopilotWheelBrakeRight",
+			"status": "pass",
+			"details": "arg 1514 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_BodyShift_X",
+			"status": "pass",
+			"details": "arg 1480 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_BodyShift_Y",
+			"status": "pass",
+			"details": "arg 1482 = -0.2000"
+		},
+		{
+			"name": "arg.Copilot_BodyShift_Z",
+			"status": "pass",
+			"details": "arg 1481 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_HeadTilt",
+			"status": "pass",
+			"details": "arg 1483 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_HeadTurnAz",
+			"status": "pass",
+			"details": "arg 1492 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_HeadTurnEl",
+			"status": "pass",
+			"details": "arg 1493 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_HelmetNVG_Mounted",
+			"status": "pass",
+			"details": "arg 1519 = 1.0000"
+		},
+		{
+			"name": "arg.Copilot_HelmetNVG_UpDown",
+			"status": "pass",
+			"details": "arg 1516 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_HelmetVisor_UpDown",
+			"status": "pass",
+			"details": "arg 1518 = 0.0000"
+		},
+		{
+			"name": "arg.Copilot_WoundedDeath",
+			"status": "pass",
+			"details": "arg 1495 = 0.0000"
+		},
+		{
+			"name": "arg.FATemp",
+			"status": "pass",
+			"details": "arg 1211 = 0.7097"
+		},
+		{
+			"name": "arg.Operator_ShowBody",
+			"status": "pass",
+			"details": "arg 1469 = 0.0000"
+		},
+		{
+			"name": "arg.PilotCollective",
+			"status": "pass",
+			"details": "arg 1502 = 0.4029"
+		},
+		{
+			"name": "arg.PilotLeaveControls",
+			"status": "pass",
+			"details": "arg 1498 = 0.0000"
+		},
+		{
+			"name": "arg.PilotPedals",
+			"status": "pass",
+			"details": "arg 1503 = 0.0000"
+		},
+		{
+			"name": "arg.PilotStickPitch",
+			"status": "pass",
+			"details": "arg 1500 = -0.2383"
+		},
+		{
+			"name": "arg.PilotStickRoll",
+			"status": "pass",
+			"details": "arg 1501 = 0.0000"
+		},
+		{
+			"name": "arg.PilotWheelBrakeLeft",
+			"status": "pass",
+			"details": "arg 1505 = 0.0000"
+		},
+		{
+			"name": "arg.PilotWheelBrakeRight",
+			"status": "pass",
+			"details": "arg 1504 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_BodyShift_X",
+			"status": "pass",
+			"details": "arg 1470 = -1.0000"
+		},
+		{
+			"name": "arg.Pilot_BodyShift_Y",
+			"status": "pass",
+			"details": "arg 1472 = -0.2000"
+		},
+		{
+			"name": "arg.Pilot_BodyShift_Z",
+			"status": "pass",
+			"details": "arg 1471 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_HeadTilt",
+			"status": "pass",
+			"details": "arg 1473 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_HeadTurnAz",
+			"status": "pass",
+			"details": "arg 1490 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_HeadTurnEl",
+			"status": "pass",
+			"details": "arg 1491 = -0.2222"
+		},
+		{
+			"name": "arg.Pilot_HelmetNVG_Mounted",
+			"status": "pass",
+			"details": "arg 1509 = 1.0000"
+		},
+		{
+			"name": "arg.Pilot_HelmetNVG_UpDown",
+			"status": "pass",
+			"details": "arg 1506 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_HelmetVisor_UpDown",
+			"status": "pass",
+			"details": "arg 1508 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_ShowBody",
+			"status": "pass",
+			"details": "arg 1468 = 0.0000"
+		},
+		{
+			"name": "arg.Pilot_WoundedDeath",
+			"status": "pass",
+			"details": "arg 1494 = 0.0000"
+		},
+		{
+			"name": "arg.RALT_Digit_1",
+			"status": "pass",
+			"details": "arg 1200 = 1.0000"
+		},
+		{
+			"name": "arg.RALT_Digit_2",
+			"status": "pass",
+			"details": "arg 1201 = 0.2000"
+		},
+		{
+			"name": "arg.RALT_Digit_3",
+			"status": "pass",
+			"details": "arg 1202 = 0.1000"
+		},
+		{
+			"name": "arg.RALT_Digit_4",
+			"status": "pass",
+			"details": "arg 1203 = 0.9000"
+		},
+		{
+			"name": "arg.RALT_HI_Index",
+			"status": "pass",
+			"details": "arg 1197 = 0.5470"
+		},
+		{
+			"name": "arg.RALT_HI_Lamp",
+			"status": "pass",
+			"details": "arg 1192 = 0.0000"
+		},
+		{
+			"name": "arg.RALT_LO_Index",
+			"status": "pass",
+			"details": "arg 1196 = 0.2192"
+		},
+		{
+			"name": "arg.RALT_LO_Lamp",
+			"status": "pass",
+			"details": "arg 1199 = 0.0000"
+		},
+		{
+			"name": "arg.RALT_Needle",
+			"status": "pass",
+			"details": "arg 1191 = 0.4909"
+		},
+		{
+			"name": "arg.RALT_Off_Flag",
+			"status": "pass",
+			"details": "arg 1198 = 0.0000"
+		},
+		{
+			"name": "arg.RudderPedals",
+			"status": "pass",
+			"details": "arg 746 = 0.0000"
+		},
+		{
+			"name": "arg.mirrors_draw",
+			"status": "pass",
+			"details": "arg 1621 = 0.0000"
+		},
+		{
+			"name": "ind.21",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.21.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.21.circle",
+			"status": "skip",
+			"details": "field \"circle\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.21.crosshair",
+			"status": "skip",
+			"details": "field \"crosshair\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.21.heightBordersCargo",
+			"status": "skip",
+			"details": "field \"heightBordersCargo\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.21.heightBordersZone",
+			"status": "skip",
+			"details": "field \"heightBordersZone\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.21.heightnarrow",
+			"status": "skip",
+			"details": "field \"heightnarrow\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.21.zone",
+			"status": "skip",
+			"details": "field \"zone\" declared in extraction but not currently emitted by indication 21"
+		},
+		{
+			"name": "ind.26",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.26.CMWS_bit",
+			"status": "skip",
+			"details": "field \"CMWS_bit\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_0",
+			"status": "skip",
+			"details": "field \"Gun_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_1",
+			"status": "skip",
+			"details": "field \"Gun_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_2",
+			"status": "skip",
+			"details": "field \"Gun_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_3",
+			"status": "skip",
+			"details": "field \"Gun_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_4",
+			"status": "skip",
+			"details": "field \"Gun_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_5",
+			"status": "skip",
+			"details": "field \"Gun_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_PH_6",
+			"status": "skip",
+			"details": "field \"Gun_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b0",
+			"status": "skip",
+			"details": "field \"Gun_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b1",
+			"status": "skip",
+			"details": "field \"Gun_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b2",
+			"status": "skip",
+			"details": "field \"Gun_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b3",
+			"status": "skip",
+			"details": "field \"Gun_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b4",
+			"status": "skip",
+			"details": "field \"Gun_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b5",
+			"status": "skip",
+			"details": "field \"Gun_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_b6",
+			"status": "skip",
+			"details": "field \"Gun_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_dn",
+			"status": "skip",
+			"details": "field \"Gun_dn\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g0",
+			"status": "skip",
+			"details": "field \"Gun_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g1",
+			"status": "skip",
+			"details": "field \"Gun_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g2",
+			"status": "skip",
+			"details": "field \"Gun_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g3",
+			"status": "skip",
+			"details": "field \"Gun_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g4",
+			"status": "skip",
+			"details": "field \"Gun_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g5",
+			"status": "skip",
+			"details": "field \"Gun_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_g6",
+			"status": "skip",
+			"details": "field \"Gun_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n0",
+			"status": "skip",
+			"details": "field \"Gun_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n1",
+			"status": "skip",
+			"details": "field \"Gun_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n2",
+			"status": "skip",
+			"details": "field \"Gun_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n3",
+			"status": "skip",
+			"details": "field \"Gun_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n4",
+			"status": "skip",
+			"details": "field \"Gun_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n5",
+			"status": "skip",
+			"details": "field \"Gun_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_n6",
+			"status": "skip",
+			"details": "field \"Gun_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Gun_up",
+			"status": "skip",
+			"details": "field \"Gun_up\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_0",
+			"status": "skip",
+			"details": "field \"Laser_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_1",
+			"status": "skip",
+			"details": "field \"Laser_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_2",
+			"status": "skip",
+			"details": "field \"Laser_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_3",
+			"status": "skip",
+			"details": "field \"Laser_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_4",
+			"status": "skip",
+			"details": "field \"Laser_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_5",
+			"status": "skip",
+			"details": "field \"Laser_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_PH_6",
+			"status": "skip",
+			"details": "field \"Laser_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b0",
+			"status": "skip",
+			"details": "field \"Laser_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b1",
+			"status": "skip",
+			"details": "field \"Laser_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b2",
+			"status": "skip",
+			"details": "field \"Laser_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b3",
+			"status": "skip",
+			"details": "field \"Laser_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b4",
+			"status": "skip",
+			"details": "field \"Laser_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b5",
+			"status": "skip",
+			"details": "field \"Laser_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_b6",
+			"status": "skip",
+			"details": "field \"Laser_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g0",
+			"status": "skip",
+			"details": "field \"Laser_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g1",
+			"status": "skip",
+			"details": "field \"Laser_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g2",
+			"status": "skip",
+			"details": "field \"Laser_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g3",
+			"status": "skip",
+			"details": "field \"Laser_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g4",
+			"status": "skip",
+			"details": "field \"Laser_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g5",
+			"status": "skip",
+			"details": "field \"Laser_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_g6",
+			"status": "skip",
+			"details": "field \"Laser_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n0",
+			"status": "skip",
+			"details": "field \"Laser_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n1",
+			"status": "skip",
+			"details": "field \"Laser_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n2",
+			"status": "skip",
+			"details": "field \"Laser_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n3",
+			"status": "skip",
+			"details": "field \"Laser_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n4",
+			"status": "skip",
+			"details": "field \"Laser_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n5",
+			"status": "skip",
+			"details": "field \"Laser_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Laser_n6",
+			"status": "skip",
+			"details": "field \"Laser_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS0",
+			"status": "skip",
+			"details": "field \"MWS0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS1",
+			"status": "skip",
+			"details": "field \"MWS1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS2",
+			"status": "skip",
+			"details": "field \"MWS2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS3",
+			"status": "skip",
+			"details": "field \"MWS3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS4",
+			"status": "skip",
+			"details": "field \"MWS4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS5",
+			"status": "skip",
+			"details": "field \"MWS5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS6",
+			"status": "skip",
+			"details": "field \"MWS6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS_0",
+			"status": "skip",
+			"details": "field \"MWS_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS_1",
+			"status": "skip",
+			"details": "field \"MWS_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS_2",
+			"status": "skip",
+			"details": "field \"MWS_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS_3",
+			"status": "skip",
+			"details": "field \"MWS_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS_4",
+			"status": "skip",
+			"details": "field \"MWS_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.MWS_center",
+			"status": "skip",
+			"details": "field \"MWS_center\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_0",
+			"status": "skip",
+			"details": "field \"Missile_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_1",
+			"status": "skip",
+			"details": "field \"Missile_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_2",
+			"status": "skip",
+			"details": "field \"Missile_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_3",
+			"status": "skip",
+			"details": "field \"Missile_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_4",
+			"status": "skip",
+			"details": "field \"Missile_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_5",
+			"status": "skip",
+			"details": "field \"Missile_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_PH_6",
+			"status": "skip",
+			"details": "field \"Missile_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b0",
+			"status": "skip",
+			"details": "field \"Missile_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b1",
+			"status": "skip",
+			"details": "field \"Missile_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b2",
+			"status": "skip",
+			"details": "field \"Missile_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b3",
+			"status": "skip",
+			"details": "field \"Missile_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b4",
+			"status": "skip",
+			"details": "field \"Missile_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b5",
+			"status": "skip",
+			"details": "field \"Missile_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_b6",
+			"status": "skip",
+			"details": "field \"Missile_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g0",
+			"status": "skip",
+			"details": "field \"Missile_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g1",
+			"status": "skip",
+			"details": "field \"Missile_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g2",
+			"status": "skip",
+			"details": "field \"Missile_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g3",
+			"status": "skip",
+			"details": "field \"Missile_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g4",
+			"status": "skip",
+			"details": "field \"Missile_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g5",
+			"status": "skip",
+			"details": "field \"Missile_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_g6",
+			"status": "skip",
+			"details": "field \"Missile_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n0",
+			"status": "skip",
+			"details": "field \"Missile_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n1",
+			"status": "skip",
+			"details": "field \"Missile_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n2",
+			"status": "skip",
+			"details": "field \"Missile_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n3",
+			"status": "skip",
+			"details": "field \"Missile_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n4",
+			"status": "skip",
+			"details": "field \"Missile_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n5",
+			"status": "skip",
+			"details": "field \"Missile_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Missile_n6",
+			"status": "skip",
+			"details": "field \"Missile_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_0",
+			"status": "skip",
+			"details": "field \"SAM_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_1",
+			"status": "skip",
+			"details": "field \"SAM_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_2",
+			"status": "skip",
+			"details": "field \"SAM_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_3",
+			"status": "skip",
+			"details": "field \"SAM_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_4",
+			"status": "skip",
+			"details": "field \"SAM_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_5",
+			"status": "skip",
+			"details": "field \"SAM_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_PH_6",
+			"status": "skip",
+			"details": "field \"SAM_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b0",
+			"status": "skip",
+			"details": "field \"SAM_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b1",
+			"status": "skip",
+			"details": "field \"SAM_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b2",
+			"status": "skip",
+			"details": "field \"SAM_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b3",
+			"status": "skip",
+			"details": "field \"SAM_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b4",
+			"status": "skip",
+			"details": "field \"SAM_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b5",
+			"status": "skip",
+			"details": "field \"SAM_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_b6",
+			"status": "skip",
+			"details": "field \"SAM_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g0",
+			"status": "skip",
+			"details": "field \"SAM_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g1",
+			"status": "skip",
+			"details": "field \"SAM_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g2",
+			"status": "skip",
+			"details": "field \"SAM_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g3",
+			"status": "skip",
+			"details": "field \"SAM_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g4",
+			"status": "skip",
+			"details": "field \"SAM_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g5",
+			"status": "skip",
+			"details": "field \"SAM_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_g6",
+			"status": "skip",
+			"details": "field \"SAM_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n0",
+			"status": "skip",
+			"details": "field \"SAM_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n1",
+			"status": "skip",
+			"details": "field \"SAM_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n2",
+			"status": "skip",
+			"details": "field \"SAM_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n3",
+			"status": "skip",
+			"details": "field \"SAM_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n4",
+			"status": "skip",
+			"details": "field \"SAM_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n5",
+			"status": "skip",
+			"details": "field \"SAM_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.SAM_n6",
+			"status": "skip",
+			"details": "field \"SAM_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_0",
+			"status": "skip",
+			"details": "field \"Square_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_1",
+			"status": "skip",
+			"details": "field \"Square_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_2",
+			"status": "skip",
+			"details": "field \"Square_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_3",
+			"status": "skip",
+			"details": "field \"Square_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_4",
+			"status": "skip",
+			"details": "field \"Square_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_0",
+			"status": "skip",
+			"details": "field \"Square_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_1",
+			"status": "skip",
+			"details": "field \"Square_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_2",
+			"status": "skip",
+			"details": "field \"Square_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_3",
+			"status": "skip",
+			"details": "field \"Square_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_4",
+			"status": "skip",
+			"details": "field \"Square_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_5",
+			"status": "skip",
+			"details": "field \"Square_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_PH_6",
+			"status": "skip",
+			"details": "field \"Square_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b0",
+			"status": "skip",
+			"details": "field \"Square_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b1",
+			"status": "skip",
+			"details": "field \"Square_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b2",
+			"status": "skip",
+			"details": "field \"Square_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b3",
+			"status": "skip",
+			"details": "field \"Square_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b4",
+			"status": "skip",
+			"details": "field \"Square_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b5",
+			"status": "skip",
+			"details": "field \"Square_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_b6",
+			"status": "skip",
+			"details": "field \"Square_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_center",
+			"status": "skip",
+			"details": "field \"Square_center\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g0",
+			"status": "skip",
+			"details": "field \"Square_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g1",
+			"status": "skip",
+			"details": "field \"Square_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g2",
+			"status": "skip",
+			"details": "field \"Square_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g3",
+			"status": "skip",
+			"details": "field \"Square_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g4",
+			"status": "skip",
+			"details": "field \"Square_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g5",
+			"status": "skip",
+			"details": "field \"Square_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_g6",
+			"status": "skip",
+			"details": "field \"Square_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n0",
+			"status": "skip",
+			"details": "field \"Square_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n1",
+			"status": "skip",
+			"details": "field \"Square_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n2",
+			"status": "skip",
+			"details": "field \"Square_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n3",
+			"status": "skip",
+			"details": "field \"Square_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n4",
+			"status": "skip",
+			"details": "field \"Square_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n5",
+			"status": "skip",
+			"details": "field \"Square_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Square_n6",
+			"status": "skip",
+			"details": "field \"Square_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe0",
+			"status": "skip",
+			"details": "field \"Strobe0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe1",
+			"status": "skip",
+			"details": "field \"Strobe1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe2",
+			"status": "skip",
+			"details": "field \"Strobe2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe3",
+			"status": "skip",
+			"details": "field \"Strobe3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe4",
+			"status": "skip",
+			"details": "field \"Strobe4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe5",
+			"status": "skip",
+			"details": "field \"Strobe5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Strobe6",
+			"status": "skip",
+			"details": "field \"Strobe6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_0",
+			"status": "skip",
+			"details": "field \"U_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_1",
+			"status": "skip",
+			"details": "field \"U_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_2",
+			"status": "skip",
+			"details": "field \"U_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_3",
+			"status": "skip",
+			"details": "field \"U_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_4",
+			"status": "skip",
+			"details": "field \"U_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_5",
+			"status": "skip",
+			"details": "field \"U_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_PH_6",
+			"status": "skip",
+			"details": "field \"U_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b0",
+			"status": "skip",
+			"details": "field \"U_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b1",
+			"status": "skip",
+			"details": "field \"U_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b2",
+			"status": "skip",
+			"details": "field \"U_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b3",
+			"status": "skip",
+			"details": "field \"U_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b4",
+			"status": "skip",
+			"details": "field \"U_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b5",
+			"status": "skip",
+			"details": "field \"U_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_b6",
+			"status": "skip",
+			"details": "field \"U_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g0",
+			"status": "skip",
+			"details": "field \"U_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g1",
+			"status": "skip",
+			"details": "field \"U_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g2",
+			"status": "skip",
+			"details": "field \"U_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g3",
+			"status": "skip",
+			"details": "field \"U_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g4",
+			"status": "skip",
+			"details": "field \"U_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g5",
+			"status": "skip",
+			"details": "field \"U_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_g6",
+			"status": "skip",
+			"details": "field \"U_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n0",
+			"status": "skip",
+			"details": "field \"U_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n1",
+			"status": "skip",
+			"details": "field \"U_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n2",
+			"status": "skip",
+			"details": "field \"U_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n3",
+			"status": "skip",
+			"details": "field \"U_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n4",
+			"status": "skip",
+			"details": "field \"U_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n5",
+			"status": "skip",
+			"details": "field \"U_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.U_n6",
+			"status": "skip",
+			"details": "field \"U_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_0",
+			"status": "skip",
+			"details": "field \"Wing_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_1",
+			"status": "skip",
+			"details": "field \"Wing_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_2",
+			"status": "skip",
+			"details": "field \"Wing_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_3",
+			"status": "skip",
+			"details": "field \"Wing_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_4",
+			"status": "skip",
+			"details": "field \"Wing_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_5",
+			"status": "skip",
+			"details": "field \"Wing_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_PH_6",
+			"status": "skip",
+			"details": "field \"Wing_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b0",
+			"status": "skip",
+			"details": "field \"Wing_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b1",
+			"status": "skip",
+			"details": "field \"Wing_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b2",
+			"status": "skip",
+			"details": "field \"Wing_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b3",
+			"status": "skip",
+			"details": "field \"Wing_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b4",
+			"status": "skip",
+			"details": "field \"Wing_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b5",
+			"status": "skip",
+			"details": "field \"Wing_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_b6",
+			"status": "skip",
+			"details": "field \"Wing_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g0",
+			"status": "skip",
+			"details": "field \"Wing_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g1",
+			"status": "skip",
+			"details": "field \"Wing_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g2",
+			"status": "skip",
+			"details": "field \"Wing_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g3",
+			"status": "skip",
+			"details": "field \"Wing_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g4",
+			"status": "skip",
+			"details": "field \"Wing_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g5",
+			"status": "skip",
+			"details": "field \"Wing_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_g6",
+			"status": "skip",
+			"details": "field \"Wing_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n0",
+			"status": "skip",
+			"details": "field \"Wing_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n1",
+			"status": "skip",
+			"details": "field \"Wing_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n2",
+			"status": "skip",
+			"details": "field \"Wing_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n3",
+			"status": "skip",
+			"details": "field \"Wing_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n4",
+			"status": "skip",
+			"details": "field \"Wing_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n5",
+			"status": "skip",
+			"details": "field \"Wing_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Wing_n6",
+			"status": "skip",
+			"details": "field \"Wing_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_0",
+			"status": "skip",
+			"details": "field \"Zsu_PH_0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_1",
+			"status": "skip",
+			"details": "field \"Zsu_PH_1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_2",
+			"status": "skip",
+			"details": "field \"Zsu_PH_2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_3",
+			"status": "skip",
+			"details": "field \"Zsu_PH_3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_4",
+			"status": "skip",
+			"details": "field \"Zsu_PH_4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_5",
+			"status": "skip",
+			"details": "field \"Zsu_PH_5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_PH_6",
+			"status": "skip",
+			"details": "field \"Zsu_PH_6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b0",
+			"status": "skip",
+			"details": "field \"Zsu_b0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b1",
+			"status": "skip",
+			"details": "field \"Zsu_b1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b2",
+			"status": "skip",
+			"details": "field \"Zsu_b2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b3",
+			"status": "skip",
+			"details": "field \"Zsu_b3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b4",
+			"status": "skip",
+			"details": "field \"Zsu_b4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b5",
+			"status": "skip",
+			"details": "field \"Zsu_b5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_b6",
+			"status": "skip",
+			"details": "field \"Zsu_b6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g0",
+			"status": "skip",
+			"details": "field \"Zsu_g0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g1",
+			"status": "skip",
+			"details": "field \"Zsu_g1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g2",
+			"status": "skip",
+			"details": "field \"Zsu_g2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g3",
+			"status": "skip",
+			"details": "field \"Zsu_g3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g4",
+			"status": "skip",
+			"details": "field \"Zsu_g4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g5",
+			"status": "skip",
+			"details": "field \"Zsu_g5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_g6",
+			"status": "skip",
+			"details": "field \"Zsu_g6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n0",
+			"status": "skip",
+			"details": "field \"Zsu_n0\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n1",
+			"status": "skip",
+			"details": "field \"Zsu_n1\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n2",
+			"status": "skip",
+			"details": "field \"Zsu_n2\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n3",
+			"status": "skip",
+			"details": "field \"Zsu_n3\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n4",
+			"status": "skip",
+			"details": "field \"Zsu_n4\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n5",
+			"status": "skip",
+			"details": "field \"Zsu_n5\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.Zsu_n6",
+			"status": "skip",
+			"details": "field \"Zsu_n6\" declared in extraction but not currently emitted by indication 26"
+		},
+		{
+			"name": "ind.26.threat_PH_0",
+			"status": "pass",
+			"details": "field \"threat_PH_0\" = \"\""
+		},
+		{
+			"name": "ind.26.threat_PH_1",
+			"status": "pass",
+			"details": "field \"threat_PH_1\" = \"\""
+		},
+		{
+			"name": "ind.26.threat_PH_2",
+			"status": "pass",
+			"details": "field \"threat_PH_2\" = \"\""
+		},
+		{
+			"name": "ind.26.threat_PH_3",
+			"status": "pass",
+			"details": "field \"threat_PH_3\" = \"\""
+		},
+		{
+			"name": "ind.26.threat_PH_4",
+			"status": "pass",
+			"details": "field \"threat_PH_4\" = \"\""
+		},
+		{
+			"name": "ind.26.threat_PH_5",
+			"status": "pass",
+			"details": "field \"threat_PH_5\" = \"\""
+		},
+		{
+			"name": "ind.26.threat_PH_6",
+			"status": "pass",
+			"details": "field \"threat_PH_6\" = \"\""
+		}
+	]
+}

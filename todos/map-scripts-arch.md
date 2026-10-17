@@ -1,0 +1,17 @@
+TODO list for the map-scripts-arch branch
+
+~~A-10C Air Start stale light-panel names.~~  Done: now uses the Cold Start names.
+
+~~F-16C LoadRoute/LoadScratchpad `'ICP_BTN_' + btn` names.~~  Done: digits map to `UFC.DIG*`, degrees are typed unsigned after the hemisphere key, minutes are rounded to 0.001 min with the fraction padded on the right.  AH-64D (`PLT_KU_*`, `PLT_MPD_R_*`) and FA-18C (`kbdSw*`, `leftMdiPb*`) waypoint scripts had the same stale run-time names and were renamed too.  `tests/test_scriptControls.py` now checks every script's controls against its mapping, including the waypoint scripts with fixed waypoints in all four hemispheres.
+
+Hemisphere sign lost within 1 degree of the equator / prime meridian: `SequenceHelper.decimalDegreesToDdm` / `decimalDegreesToDms` (and the scratchpad parser) store the sign on the degrees, so W 000 48' becomes deg 0 and every waypoint script's `deg >= 0` check types E instead of W.  Affects Normandy and The Channel (longitudes around 0) in the F-15E, F-16C and FA-18C waypoint scripts (AH-64D enters MGRS, so it's unaffected).  Fix: add an explicit hemisphere field (e.g. `'hem': 'W'`) to the DDM/DMS dicts and use it in the scripts.
+
+FA-18C and F-15E DDM digit entry: `'-'` is aliased to the `0` key, so a western or southern degree like -115 is typed as `0115` (FA-18C lat has no padding, so -51 becomes `051`).  Minutes use `fracMin[0:n].zfill(n)`, which pads on the wrong side (46.08 min is typed as 46.008) and truncates float noise (49.386 becomes 49.385).  The F-16C fix (`ddmDigits` in F-16C.py) is the pattern to copy; add F-15E/FA-18C expectations to `tests/test_scriptControls.py` the same way.
+
+F-16C negative altitudes (Dead Sea area on the Syria map): `enterUfcSequence(altFeet)` now raises `No ICP button for '-'` instead of sending a non-existent control.  Needs the DED's actual way of entering a negative elevation.
+
+C-130J Auto Select: detect a "preflight complete" spawn and choose the matching script, and wait on APU RPM (`ind.33`, APU NG) instead of a fixed timer (telemetry has no APU RPM, so this one would keep the player in the cockpit).  Chosen design: an optional module-level `autoSelect(context)` function that runs after the existing Auto Select logic and returns only what it wants to change (script and/or vars); modules without one behave as today.  The context gives telemetry, batched live `arg.` reads, and (later) the mission's aircraft options via the Hook, e.g. FA-18C `HelmetMountedDevice` (arg 909 PLT_HelmetMountedKit: 0 = JHMCS, 0.5 = none, 1 = NVG).  The hook, the C-130J preflight detection, the FA-18C and F-16C HMD detection (arg 909 sets `hmd`), and the AH-64D Longbow detection (the loadout sets `radar`; the start scripts check the loadout again at the end) are done (branch `auto-select`).  The C-130J APU RPM wait is skipped by choice, because an `ind.` read would keep the player in the cockpit.  Still open: detecting other modules' states, mission aircraft options via the Hook.
+
+~~AH-64D FCR power-on button presses: `pushFcrSteps` in `DCSAutoMateScripts/AH-64D.py` still speaks a reminder (power on FCR, FCR page, UTIL, MMA pinned, FCR BIT override) instead of pressing the buttons.~~  Done.
+
+~~DCSControlPanel Snapshot Tool: add a way to copy or save the before/after values and the diff as JSON.~~  Done: Copy Changes (clipboard) and Save... (changes plus both full snapshots), with raw and script-convention values.

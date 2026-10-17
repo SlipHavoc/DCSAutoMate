@@ -1,0 +1,6805 @@
+{
+	"controls": {
+		"ABRIS.ABRIS-POWER_PTR": {
+			"arg": 130,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "ABRIS Power",
+			"deviceId": 9,
+			"elementName": "ABRIS-POWER_PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ABRIS.ABRIS_BRIGHTNESS_PTR": {
+			"arg": 517,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "ABRIS Brightness",
+			"deviceId": 9,
+			"elementName": "ABRIS_BRIGHTNESS_PTR",
+			"type": "continuous"
+		},
+		"ABRIS.ABRIS_SHUNT_PTR_arg518": {
+			"arg": 518,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "ABRIS Cursor сontrol (rot/push)",
+			"deviceId": 9,
+			"elementName": "ABRIS_SHUNT_PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"ABRIS.ABRIS_SHUNT_PTR_arg523": {
+			"arg": 523,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "ABRIS Cursor сontrol (rot/push)",
+			"deviceId": 9,
+			"elementName": "ABRIS_SHUNT_PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ABRIS.PTR_BTN-ABRIS-01": {
+			"arg": 512,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "ABRIS Pushbutton 1",
+			"deviceId": 9,
+			"elementName": "PTR_BTN-ABRIS-01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ABRIS.PTR_BTN-ABRIS-02": {
+			"arg": 513,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "ABRIS Pushbutton 2",
+			"deviceId": 9,
+			"elementName": "PTR_BTN-ABRIS-02",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ABRIS.PTR_BTN-ABRIS-03": {
+			"arg": 514,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "ABRIS Pushbutton 3",
+			"deviceId": 9,
+			"elementName": "PTR_BTN-ABRIS-03",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ABRIS.PTR_BTN-ABRIS-04": {
+			"arg": 515,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "ABRIS Pushbutton 4",
+			"deviceId": 9,
+			"elementName": "PTR_BTN-ABRIS-04",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ABRIS.PTR_BTN-ABRIS-05": {
+			"arg": 516,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "ABRIS Pushbutton 5",
+			"deviceId": 9,
+			"elementName": "PTR_BTN-ABRIS-05",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ACCELEROMETER.G--PTR": {
+			"arg": 572,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Accelerometer reset",
+			"deviceId": 61,
+			"elementName": "G--PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADI.IKP-TANGAGE-PTR": {
+			"arg": 105,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "ADI Zero pitch trim",
+			"deviceId": 31,
+			"elementName": "IKP-TANGAGE-PTR",
+			"type": "continuous"
+		},
+		"ADI.TEST-COVER-IKP-PTR": {
+			"arg": 550,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "ADI Test",
+			"deviceId": 31,
+			"elementName": "TEST-COVER-IKP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ADI.TEST-IKP-PTR": {
+			"arg": 110,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "ADI Test",
+			"deviceId": 31,
+			"elementName": "TEST-IKP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ARK_22.ARK-CONTROL-PTR": {
+			"arg": 355,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "ADF Test",
+			"deviceId": 46,
+			"elementName": "ARK-CONTROL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ARK_22.Button_8": {
+			"bindings": [
+				{
+					"name": "ADF Beacon select : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "ADF Beacon select : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "ADF Beacon select : NEXT (+1 more)",
+			"deviceId": 46,
+			"type": "raw"
+		},
+		"ARK_22.IANDING LIGHTS-DIR-LIGHT-PTR01": {
+			"arg": 381,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "ADF Inner-Auto-Outer NDB switch",
+			"deviceId": 46,
+			"elementName": "IANDING LIGHTS-DIR-LIGHT-PTR01",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ARK_22.TLF-TLG-PTR": {
+			"arg": 354,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "TLF-TLG modes",
+			"deviceId": 46,
+			"elementName": "TLF-TLG-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ARK_22.TLF-TLG-PTR01": {
+			"arg": 356,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "COMPASS-ANTENNA modes",
+			"deviceId": 46,
+			"elementName": "TLF-TLG-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ARK_22.VARK-VOLUME-PTR": {
+			"arg": 353,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "ADF Volume",
+			"deviceId": 46,
+			"elementName": "VARK-VOLUME-PTR",
+			"type": "continuous"
+		},
+		"ARK_22.VARK-VOLUME-PTR01": {
+			"arg": 357,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3002,
+			"description": "ADF channel switch",
+			"deviceId": 46,
+			"elementName": "VARK-VOLUME-PTR01",
+			"positions": 10,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"AUTOPILOT.BAR-RV-PTR": {
+			"arg": 335,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Autopilot BARO/RALT altitude hold mode",
+			"deviceId": 33,
+			"elementName": "BAR-RV-PTR",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"AUTOPILOT.PPR-DIRUPR-PTR05": {
+			"arg": 334,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Autopilot Director control",
+			"deviceId": 33,
+			"elementName": "PPR-DIRUPR-PTR05",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AUTOPILOT.PPR-K-PTR01": {
+			"arg": 330,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Autopilot Bank hold",
+			"deviceId": 33,
+			"elementName": "PPR-K-PTR01",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AUTOPILOT.PPR-N-PTR03": {
+			"arg": 332,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Autopilot Heading hold",
+			"deviceId": 33,
+			"elementName": "PPR-N-PTR03",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AUTOPILOT.PPR-T-PTR02": {
+			"arg": 331,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Autopilot Pitch hold",
+			"deviceId": 33,
+			"elementName": "PPR-T-PTR02",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AUTOPILOT.PPR-V-PTR04": {
+			"arg": 333,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Autopilot Altitude hold",
+			"deviceId": 33,
+			"elementName": "PPR-V-PTR04",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"C061K.HEAT_IKV-PTR": {
+			"arg": 488,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "INU Heater switch",
+			"deviceId": 15,
+			"elementName": "HEAT_IKV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"C061K.IKV-PTR": {
+			"arg": 487,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "INU Power switch",
+			"deviceId": 15,
+			"elementName": "IKV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CLOCK.CLOCK-LEFT-LEVER-PTR_arg511": {
+			"arg": 511,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Mech clock left lever",
+			"deviceId": 29,
+			"elementName": "CLOCK-LEFT-LEVER-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"CLOCK.CLOCK-LEFT-LEVER-PTR_arg76": {
+			"arg": 76,
+			"description": "Mech clock left lever",
+			"elementName": "CLOCK-LEFT-LEVER-PTR",
+			"positionMap": [
+				{
+					"commandId": 3002,
+					"deviceId": 29,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3001,
+					"deviceId": 29,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"CLOCK.CLOCK-RIGHT-LEVER-PTR_arg525": {
+			"arg": 525,
+			"argLim": [
+				-0.15,
+				0.15
+			],
+			"commandId": 3005,
+			"description": "Mech clock right lever",
+			"deviceId": 29,
+			"elementName": "CLOCK-RIGHT-LEVER-PTR",
+			"type": "continuous"
+		},
+		"CLOCK.CLOCK-RIGHT-LEVER-PTR_arg77": {
+			"arg": 77,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Mech clock right lever",
+			"deviceId": 29,
+			"elementName": "CLOCK-RIGHT-LEVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.AVAR-GEAR-COVER-PTR": {
+			"arg": 67,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Main/Common hydraulics for emergency gear",
+			"deviceId": 34,
+			"elementName": "AVAR-GEAR-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.AVAR-GEAR-PTR": {
+			"arg": 66,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Main/Common hydraulics for emergency gear",
+			"deviceId": 34,
+			"elementName": "AVAR-GEAR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.Button_12": {
+			"bindings": [
+				{
+					"name": "Gear up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Gear up",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"CPT_MECH.Button_13": {
+			"bindings": [
+				{
+					"name": "Gear down",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "Gear down",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"CPT_MECH.Button_14": {
+			"bindings": [
+				{
+					"name": "Emergency Gear 2-pos Switch : ON<>OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "Emergency Gear 2-pos Switch : ON<>OFF",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"CPT_MECH.Button_15": {
+			"bindings": [
+				{
+					"name": "Emergency Gear 2-pos Switch : ON<>OFF",
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3015,
+			"description": "Emergency Gear 2-pos Switch : ON<>OFF",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"CPT_MECH.Button_17": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Gear lever axis"
+				}
+			],
+			"commandId": 3017,
+			"description": "Gear lever axis",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"CPT_MECH.GEAR-PTR": {
+			"arg": 65,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Gear lever",
+			"deviceId": 34,
+			"elementName": "GEAR-PTR",
+			"indicatorArgLim": [
+				0.0,
+				1.0
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.KONTR-PVD-PTR": {
+			"arg": 156,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Pitot heat system test",
+			"deviceId": 34,
+			"elementName": "KONTR-PVD-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.P-CONTR-VMG-HYDRO-COVER-PTR": {
+			"arg": 453,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Power plant, hydraulics, EKRAN self-test systems switch",
+			"deviceId": 34,
+			"elementName": "P-CONTR-VMG-HYDRO-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.P-CONTR-VMG-HYDRO-PTR": {
+			"arg": 452,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Power plant, hydraulics, EKRAN self-test systems switch",
+			"deviceId": 34,
+			"elementName": "P-CONTR-VMG-HYDRO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.PPD-DUAS-PTR": {
+			"arg": 539,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Pitot static port and AoA sensors heat switch",
+			"deviceId": 34,
+			"elementName": "PPD-DUAS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.PVD-CLOCK-PTR": {
+			"arg": 151,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Pitot ram air and clock heat switch",
+			"deviceId": 34,
+			"elementName": "PVD-CLOCK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.STICK_VISIBILITY": {
+			"arg": 1005,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Hide Stick toggle",
+			"deviceId": 34,
+			"elementName": "STICK_VISIBILITY",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CPT_MECH.WINDSCREEN-WIPER-PTR": {
+			"arg": 147,
+			"description": "Windshield wiper switch",
+			"elementName": "WINDSCREEN-WIPER-PTR",
+			"positionMap": [
+				{
+					"commandId": 3006,
+					"deviceId": 34,
+					"value": 0.0
+				},
+				{
+					"commandId": 3006,
+					"deviceId": 34,
+					"value": 0.1
+				},
+				{
+					"commandId": 3006,
+					"deviceId": 34,
+					"value": 0.2
+				},
+				{
+					"commandId": 3006,
+					"deviceId": 34,
+					"value": 0.3
+				},
+				{
+					"commandId": 3006,
+					"deviceId": 34,
+					"value": 0.4
+				}
+			],
+			"positions": 5,
+			"type": "discrete"
+		},
+		"DATALINK.Button_19": {
+			"bindings": [
+				{
+					"name": "Datalink mode : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Datalink mode : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3019,
+			"description": "Datalink mode : NEXT (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"DATALINK.Button_20": {
+			"bindings": [
+				{
+					"name": "Self ID : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Self ID : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3020,
+			"description": "Self ID : NEXT (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"DATALINK.COMM-PWR-TLK-PTR": {
+			"arg": 287,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Radio equipment datalink TLK power switch",
+			"deviceId": 25,
+			"elementName": "COMM-PWR-TLK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DATALINK.COMM-PWR-UKV-TLK-PTR": {
+			"arg": 288,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Radio equipment datalink UHF TLK power switch",
+			"deviceId": 25,
+			"elementName": "COMM-PWR-UKV-TLK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"DATALINK.DTLK-MASTER-MODES-PTR": {
+			"arg": 329,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3015,
+			"description": "Datalink Master mode",
+			"deviceId": 25,
+			"elementName": "DTLK-MASTER-MODES-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"DATALINK.DTLK-SELF-ID-PTR": {
+			"arg": 328,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3014,
+			"description": "Datalink self ID",
+			"deviceId": 25,
+			"elementName": "DTLK-SELF-ID-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-CLEAN-PTR": {
+			"arg": 15,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3004,
+			"description": "N/A",
+			"deviceId": 25,
+			"elementName": "PRC-CLEAN-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-ERASE-PTR": {
+			"arg": 161,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3003,
+			"description": "DLNK Erase",
+			"deviceId": 25,
+			"elementName": "PRC-ERASE-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-ESCAPE-PTR": {
+			"arg": 150,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3002,
+			"description": "DLNK Ingress to target",
+			"deviceId": 25,
+			"elementName": "PRC-ESCAPE-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-SEND-PTR": {
+			"arg": 159,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3001,
+			"description": "DLNK Send/Memory",
+			"deviceId": 25,
+			"elementName": "PRC-SEND-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-TARGET-1-PTR": {
+			"arg": 21,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3010,
+			"description": "DLNK Target #1/Vehicle",
+			"deviceId": 25,
+			"elementName": "PRC-TARGET-1-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-TARGET-2-PTR": {
+			"arg": 22,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3011,
+			"description": "DLNK Target #2/SAM",
+			"deviceId": 25,
+			"elementName": "PRC-TARGET-2-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-TARGET-3-PTR": {
+			"arg": 23,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3012,
+			"description": "DLNK Target #3/Other Type",
+			"deviceId": 25,
+			"elementName": "PRC-TARGET-3-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-TARGET-POINT-PTR": {
+			"arg": 50,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3013,
+			"description": "DLNK Ingress point",
+			"deviceId": 25,
+			"elementName": "PRC-TARGET-POINT-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-WINGMAN-1-PTR": {
+			"arg": 17,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3006,
+			"description": "DLNK to Wingman 1",
+			"deviceId": 25,
+			"elementName": "PRC-WINGMAN-1-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-WINGMAN-2-PTR": {
+			"arg": 18,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3007,
+			"description": "DLNK to Wingman 2",
+			"deviceId": 25,
+			"elementName": "PRC-WINGMAN-2-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-WINGMAN-3-PTR": {
+			"arg": 19,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3008,
+			"description": "DLNK to Wingman 3",
+			"deviceId": 25,
+			"elementName": "PRC-WINGMAN-3-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-WINGMAN-4-PTR": {
+			"arg": 20,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3009,
+			"description": "DLNK to Wingman 4",
+			"deviceId": 25,
+			"elementName": "PRC-WINGMAN-4-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PRC-WINGMAN-ALL-PTR": {
+			"arg": 16,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3005,
+			"description": "DLNK to ALL",
+			"deviceId": 25,
+			"elementName": "PRC-WINGMAN-ALL-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"DATALINK.PVI_VCU_PTR": {
+			"arg": 326,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "NAV Datalink power",
+			"deviceId": 25,
+			"elementName": "PVI_VCU_PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EJECT_SYS_INTERFACE.CONTR-SAP-PTR": {
+			"arg": 460,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Ejecting system circuit test",
+			"deviceId": 6,
+			"elementName": "CONTR-SAP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EJECT_SYS_INTERFACE.CONTR-SAPROTATE-PTR": {
+			"arg": 462,
+			"argLim": [
+				0.0,
+				0.6
+			],
+			"commandId": 3005,
+			"description": "Ejecting system circuit selector",
+			"deviceId": 6,
+			"elementName": "CONTR-SAPROTATE-PTR",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"EJECT_SYS_INTERFACE.RIGHT-COVER-EMERG-VACATION-PTR": {
+			"arg": 217,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Ejecting system power",
+			"deviceId": 6,
+			"elementName": "RIGHT-COVER-EMERG-VACATION-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EJECT_SYS_INTERFACE.RIGHT-EMERG-SW1-PTR": {
+			"arg": 214,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Ejecting system power 1",
+			"deviceId": 6,
+			"elementName": "RIGHT-EMERG-SW1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EJECT_SYS_INTERFACE.RIGHT-EMERG-SW2-PTR": {
+			"arg": 215,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Ejecting system power 2",
+			"deviceId": 6,
+			"elementName": "RIGHT-EMERG-SW2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"EJECT_SYS_INTERFACE.RIGHT-EMERG-SW3-PTR": {
+			"arg": 216,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Ejecting system power 3",
+			"deviceId": 6,
+			"elementName": "RIGHT-EMERG-SW3-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.CONVERTER-PTR": {
+			"arg": 270,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3010,
+			"description": "DC/AC inverter",
+			"deviceId": 2,
+			"elementName": "CONVERTER-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ENERG-AER-RIT-PTR": {
+			"arg": 262,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "DC ground power",
+			"deviceId": 2,
+			"elementName": "ENERG-AER-RIT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ENERG-AKK1-PTR": {
+			"arg": 264,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Battery 1",
+			"deviceId": 2,
+			"elementName": "ENERG-AKK1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ENERG-AKK2-PTR": {
+			"arg": 543,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Battery 2",
+			"deviceId": 2,
+			"elementName": "ENERG-AKK2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ENERG-COVER-AER-RIT-PTR": {
+			"arg": 263,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "DC ground power",
+			"deviceId": 2,
+			"elementName": "ENERG-COVER-AER-RIT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ENERG-COVER-AKK1-PTR": {
+			"arg": 265,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Battery 1",
+			"deviceId": 2,
+			"elementName": "ENERG-COVER-AKK1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.ENERG-COVER-AKK2-PTR": {
+			"arg": 544,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Battery 2",
+			"deviceId": 2,
+			"elementName": "ENERG-COVER-AKK2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.GEN-LEFT-PTR": {
+			"arg": 268,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "AC left generator",
+			"deviceId": 2,
+			"elementName": "GEN-LEFT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.GEN-RIGHT-PTR": {
+			"arg": 269,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "AC right generator",
+			"deviceId": 2,
+			"elementName": "GEN-RIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.RAMP-POWER-PTR": {
+			"arg": 267,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "AC ground power",
+			"deviceId": 2,
+			"elementName": "RAMP-POWER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.BRAKE-ROTOR-LOW-PTR01": {
+			"arg": 556,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Rotor brake",
+			"deviceId": 4,
+			"elementName": "BRAKE-ROTOR-LOW-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.Button_26": {
+			"bindings": [
+				{
+					"name": "Engine Startup/Crank/False Start selector : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Engine Startup/Crank/False Start selector : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3026,
+			"description": "Engine Startup/Crank/False Start selector : NEXT (+1 more)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_27": {
+			"bindings": [
+				{
+					"name": "Engines de-icing / dust-protection systems switch : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Engines de-icing / dust-protection systems switch : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3027,
+			"description": "Engines de-icing / dust-protection systems switch : NEXT (+1 more)",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_28": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Cut-off valve left engine axis"
+				}
+			],
+			"commandId": 3028,
+			"description": "Cut-off valve left engine axis",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_29": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Cut-off valve right engine axis"
+				}
+			],
+			"commandId": 3029,
+			"description": "Cut-off valve right engine axis",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.Button_30": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Rotor brake axis"
+				}
+			],
+			"commandId": 3030,
+			"description": "Rotor brake axis",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.CONTROL-TEMP-NOTWORK-PTR": {
+			"arg": 132,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Stopped engines exhaust gas temperature indicator test button",
+			"deviceId": 4,
+			"elementName": "CONTROL-TEMP-NOTWORK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.CONTROL-TEMP-WORK-PTR": {
+			"arg": 131,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "Running engines exhaust gas temperature indicator test button",
+			"deviceId": 4,
+			"elementName": "CONTROL-TEMP-WORK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.EMERGENCY-BRAKE ENGINE-LEFT-PTR": {
+			"arg": 554,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Left engine cut-off valve",
+			"deviceId": 4,
+			"elementName": "EMERGENCY-BRAKE ENGINE-LEFT-PTR",
+			"indicatorArgLim": [
+				0.0,
+				1.0
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.EMERGENCY-BRAKE ENGINE-RIGHT-PTR": {
+			"arg": 555,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Right engine cut-off valve",
+			"deviceId": 4,
+			"elementName": "EMERGENCY-BRAKE ENGINE-RIGHT-PTR",
+			"indicatorArgLim": [
+				0.0,
+				1.0
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.ERD-LEFT-COVER-PTR": {
+			"arg": 291,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "EEG Left engine Electronic Engine Governor",
+			"deviceId": 4,
+			"elementName": "ERD-LEFT-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.ERD-LEFT-PTR": {
+			"arg": 290,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "EEG Left engine Electronic Engine Governor",
+			"deviceId": 4,
+			"elementName": "ERD-LEFT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.ERD-RIGHT-COVER-PTR": {
+			"arg": 293,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "EEG Right engine Electronic Engine Governor",
+			"deviceId": 4,
+			"elementName": "ERD-RIGHT-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.ERD-RIGHT-PTR": {
+			"arg": 292,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "EEG Right engine Electronic Engine Governor",
+			"deviceId": 4,
+			"elementName": "ERD-RIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.PAV-CRANE-COVER-VSU-PTR01": {
+			"arg": 569,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "EEG gas generator test – Operate switch",
+			"deviceId": 4,
+			"elementName": "PAV-CRANE-COVER-VSU-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.PAV-CRANE-COVER-VSU-PTR02": {
+			"arg": 570,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "EEG power turbine channel 1 test – Operate – EEG power turbine channel 2 test, three-switch contactor",
+			"deviceId": 4,
+			"elementName": "PAV-CRANE-COVER-VSU-PTR02",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.PAV-CRANE-VSU-PTR01": {
+			"arg": 294,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "EEG gas generator test – Operate switch",
+			"deviceId": 4,
+			"elementName": "PAV-CRANE-VSU-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.PAV-CRANE-VSU-PTR02": {
+			"arg": 295,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3017,
+			"description": "EEG power turbine channel 1 test – Operate – EEG power turbine channel 2 test, three-switch contactor",
+			"deviceId": 4,
+			"elementName": "PAV-CRANE-VSU-PTR02",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.POS-ENGINE-PZU-PTR": {
+			"arg": 154,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "Engines de-icing / dust-protection systems switch",
+			"deviceId": 4,
+			"elementName": "POS-ENGINE-PZU-PTR",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.POS-ROTORS-PTR": {
+			"arg": 153,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Rotor de-icing system switch",
+			"deviceId": 4,
+			"elementName": "POS-ROTORS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.REDUCTOR-PTR": {
+			"arg": 258,
+			"description": "Reducing gear box oil pressure indication selector",
+			"elementName": "REDUCTOR-PTR",
+			"positionMap": [
+				{
+					"commandId": 3024,
+					"deviceId": 4,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3025,
+					"deviceId": 4,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.RT-12-6-IV-PTR": {
+			"arg": 459,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "Engines vibrations monitoring system control button",
+			"deviceId": 4,
+			"elementName": "RT-12-6-IV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.RT-12-6-LEFT-PTR": {
+			"arg": 457,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Left EGT control threshold governor button",
+			"deviceId": 4,
+			"elementName": "RT-12-6-LEFT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.RT-12-6-RIGHT-PTR": {
+			"arg": 458,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "Right EGT control threshold governor button",
+			"deviceId": 4,
+			"elementName": "RT-12-6-RIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.START-ENGINE-SELECTOR-PTR": {
+			"arg": 416,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3008,
+			"description": "Engine selector",
+			"deviceId": 4,
+			"elementName": "START-ENGINE-SELECTOR-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.START-PANEL-ROLLING-PTR": {
+			"arg": 415,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3012,
+			"description": "Engine Startup/Crank/False Start selector",
+			"deviceId": 4,
+			"elementName": "START-PANEL-ROLLING-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.START-PANEL-START-PTR": {
+			"arg": 412,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Start-up selected engine button",
+			"deviceId": 4,
+			"elementName": "START-PANEL-START-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.START-PANEL-STOP-START-PTR": {
+			"arg": 413,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Interrupt start-up button",
+			"deviceId": 4,
+			"elementName": "START-PANEL-STOP-START-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.START-PANEL-STOP-START-PTR01": {
+			"arg": 414,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Stop APU button",
+			"deviceId": 4,
+			"elementName": "START-PANEL-STOP-START-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.BALOONS-COVER-PTR": {
+			"arg": 247,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Fire extinguisher First (Auto) / Second (Manual) selector",
+			"deviceId": 40,
+			"elementName": "BALOONS-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.BALOONS-PTR": {
+			"arg": 246,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Fire extinguisher First (Auto) / Second (Manual) selector",
+			"deviceId": 40,
+			"elementName": "BALOONS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.EXTING-GROUPS-CTRL-01": {
+			"arg": 251,
+			"argLim": [
+				0.0,
+				0.1
+			],
+			"commandId": 3011,
+			"description": "1st fire warning sensors group BIT",
+			"deviceId": 40,
+			"elementName": "EXTING-GROUPS-CTRL-01",
+			"positions": 2,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.EXTING-GROUPS-CTRL-02": {
+			"arg": 251,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3012,
+			"description": "2nd fire warning sensors group BIT",
+			"deviceId": 40,
+			"elementName": "EXTING-GROUPS-CTRL-02",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.EXTING-GROUPS-CTRL-03": {
+			"arg": 251,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3013,
+			"description": "3rd fire warning sensors group BIT",
+			"deviceId": 40,
+			"elementName": "EXTING-GROUPS-CTRL-03",
+			"positions": 2,
+			"step": 0.3,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.FIREEXT-COVER-PTR": {
+			"arg": 249,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Fire extinguisher Work – Off – Test switch",
+			"deviceId": 40,
+			"elementName": "FIREEXT-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.FIREEXT-INDICATION-PTR": {
+			"arg": 250,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Fire signaling",
+			"deviceId": 40,
+			"elementName": "FIREEXT-INDICATION-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.FIREEXT-PTR": {
+			"arg": 248,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3006,
+			"description": "Fire extinguisher Work – Off – Test switch",
+			"deviceId": 40,
+			"elementName": "FIREEXT-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR01": {
+			"arg": 236,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Left engine extinguisher",
+			"deviceId": 40,
+			"elementName": "PUI800-AVARCHOP-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR02": {
+			"arg": 238,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "APU extinguisher",
+			"deviceId": 40,
+			"elementName": "PUI800-AVARCHOP-PTR02",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR03": {
+			"arg": 240,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Right engine extinguisher",
+			"deviceId": 40,
+			"elementName": "PUI800-AVARCHOP-PTR03",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_EXTING_INTERFACE.PUI800-AVARCHOP-PTR04": {
+			"arg": 242,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Ventilator extinguisher",
+			"deviceId": 40,
+			"elementName": "PUI800-AVARCHOP-PTR04",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.CONTROL-OIL-PTR": {
+			"arg": 616,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "Fuel quantity indicator self test button",
+			"deviceId": 3,
+			"elementName": "CONTROL-OIL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.FUEL-METER-PTR": {
+			"arg": 275,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Fuelmeter power",
+			"deviceId": 3,
+			"elementName": "FUEL-METER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.FUEL-PUMP-BACK-PTR": {
+			"arg": 272,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Rear fuel tank pumps",
+			"deviceId": 3,
+			"elementName": "FUEL-PUMP-BACK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.FUEL-PUMP-FRONT-PTR": {
+			"arg": 271,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Forward fuel tank pumps",
+			"deviceId": 3,
+			"elementName": "FUEL-PUMP-FRONT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.FUEL-PUMP-INNER-PTR": {
+			"arg": 273,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Inner external fuel tanks pumps",
+			"deviceId": 3,
+			"elementName": "FUEL-PUMP-INNER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.FUEL-PUMP-OUTER-PTR": {
+			"arg": 274,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Outer external fuel tanks pumps",
+			"deviceId": 3,
+			"elementName": "FUEL-PUMP-OUTER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-COVER-CYKLIZATION-PTR": {
+			"arg": 283,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Fuel crossfeed valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-COVER-CYKLIZATION-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-COVER-ENGINE-LEFT-PTR": {
+			"arg": 277,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Left engine fuel shutoff valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-COVER-ENGINE-LEFT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-COVER-ENGINE-RIGHT-PTR": {
+			"arg": 279,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Right engine fuel shutoff valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-COVER-ENGINE-RIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-COVER-VSU-PTR": {
+			"arg": 281,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "APU fuel shutoff valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-COVER-VSU-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-CYKLIZATION-PTR": {
+			"arg": 282,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Fuel crossfeed valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-CYKLIZATION-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-ENGINE-LEFT-PTR": {
+			"arg": 276,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Left engine fuel shutoff valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-ENGINE-LEFT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-ENGINE-RIGHT-PTR": {
+			"arg": 278,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Right engine fuel shutoff valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-ENGINE-RIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUELSYS_INTERFACE.PAV-CRANE-VSU-PTR": {
+			"arg": 280,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "APU fuel shutoff valve",
+			"deviceId": 3,
+			"elementName": "PAV-CRANE-VSU-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HELMET.PUR-LIGHTNVU-PTR": {
+			"arg": 405,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Helmet device brightness",
+			"deviceId": 23,
+			"elementName": "PUR-LIGHTNVU-PTR",
+			"type": "continuous"
+		},
+		"HELMET.PVR-OBZ-PTR": {
+			"arg": 434,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Helmet-mounted sight system power switch",
+			"deviceId": 23,
+			"elementName": "PVR-OBZ-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HSI.ROTARY-ZK-PTR": {
+			"arg": 129,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "HSI DH - Desired Heading (HEADING) rotary",
+			"deviceId": 30,
+			"elementName": "ROTARY-ZK-PTR",
+			"indicatorArgLim": [
+				0.0,
+				6.283185307179586
+			],
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"HSI.ROTARY-ZPU-PTR": {
+			"arg": 126,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "HSI DTA - Desired Track Angle (COURSE) rotary",
+			"deviceId": 30,
+			"elementName": "ROTARY-ZPU-PTR",
+			"indicatorArgLim": [
+				0.0,
+				6.283185307179586
+			],
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"HSI.TEST-PNP-PTR03": {
+			"arg": 113,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "HSI test",
+			"deviceId": 30,
+			"elementName": "TEST-PNP-PTR03",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HSI.ZPU-ZK-PTR": {
+			"arg": 54,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "HSI \"DTA-DH Manual / Auto\" switch",
+			"deviceId": 30,
+			"elementName": "ZPU-ZK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HUD.Button_5": {
+			"bindings": [
+				{
+					"name": "HUD Modes Reticle/Night/Day - next",
+					"valueDown": 1.0
+				},
+				{
+					"name": "HUD Modes Reticle/Night/Day - prev.",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "HUD Modes Reticle/Night/Day - next (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"HUD.PTR-HUD-TEST": {
+			"arg": 7,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "HUD Test",
+			"deviceId": 7,
+			"elementName": "PTR-HUD-TEST",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HUD.PTR_HUD-BRIGHTNESS": {
+			"arg": 8,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "HUD Brightness",
+			"deviceId": 7,
+			"elementName": "PTR_HUD-BRIGHTNESS",
+			"type": "continuous"
+		},
+		"HUD.PTR_HUD-FILTER": {
+			"arg": 510,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "HUD Filter",
+			"deviceId": 7,
+			"elementName": "PTR_HUD-FILTER",
+			"indicatorArgLim": [
+				0,
+				1
+			],
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HUD.PTR_HUD-TMB-SETKA02": {
+			"arg": 9,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "HUD Modes Reticle/Night/Day",
+			"deviceId": 7,
+			"elementName": "PTR_HUD-TMB-SETKA02",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_SYS_INTERFACE.HYDRO-COVER-PTR02": {
+			"arg": 221,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Main hydraulics",
+			"deviceId": 5,
+			"elementName": "HYDRO-COVER-PTR02",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_SYS_INTERFACE.HYDRO-PTR": {
+			"arg": 220,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Main hydraulics",
+			"deviceId": 5,
+			"elementName": "HYDRO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.COVER-SRO-PTR": {
+			"arg": 219,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "IFF power",
+			"deviceId": 42,
+			"elementName": "COVER-SRO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"IFF.SRO-PTR": {
+			"arg": 218,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "IFF power",
+			"deviceId": 42,
+			"elementName": "SRO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ILLUMINATION_INTERFACE.AGR-PKP-PTR": {
+			"arg": 298,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Lighting ADI and SAI switch",
+			"deviceId": 51,
+			"elementName": "AGR-PKP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ILLUMINATION_INTERFACE.BRIGHT-AGR-PKP-PTR": {
+			"arg": 508,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Lighting HSI and ADI brightness knob",
+			"deviceId": 51,
+			"elementName": "BRIGHT-AGR-PKP-PTR",
+			"type": "continuous"
+		},
+		"ILLUMINATION_INTERFACE.BRIGHT-DEV-PTR": {
+			"arg": 507,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Lighting night vision cockpit brightness knob",
+			"deviceId": 51,
+			"elementName": "BRIGHT-DEV-PTR",
+			"type": "continuous"
+		},
+		"ILLUMINATION_INTERFACE.BRIGHT-LEFT-RIGHT-PTR": {
+			"arg": 593,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Lighting cockpit panel brightness knob",
+			"deviceId": 51,
+			"elementName": "BRIGHT-LEFT-RIGHT-PTR",
+			"type": "continuous"
+		},
+		"ILLUMINATION_INTERFACE.Button_10": {
+			"bindings": [
+				{
+					"name": "Flashlight BRT Control - Decrease",
+					"valueDown": -0.1
+				},
+				{
+					"name": "Flashlight BRT Control - Increase",
+					"valueDown": 0.1
+				}
+			],
+			"commandId": 3010,
+			"description": "Flashlight BRT Control - Decrease (+1 more)",
+			"deviceId": 51,
+			"type": "raw"
+		},
+		"ILLUMINATION_INTERFACE.Button_11": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Flashlight BRT Control"
+				}
+			],
+			"commandId": 3011,
+			"description": "Flashlight BRT Control",
+			"deviceId": 51,
+			"type": "raw"
+		},
+		"ILLUMINATION_INTERFACE.DESK-PTR": {
+			"arg": 300,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Lighting cockpit panel switch",
+			"deviceId": 51,
+			"elementName": "DESK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ILLUMINATION_INTERFACE.DEVICES-PTR": {
+			"arg": 299,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Lighting night vision cockpit switch",
+			"deviceId": 51,
+			"elementName": "DEVICES-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ILLUMINATION_INTERFACE.LAMP-PTR": {
+			"arg": 1001,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Lighting cockpit interior lamp switch",
+			"deviceId": 51,
+			"elementName": "LAMP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ILLUMINATION_INTERFACE.P-CONTR-BRIGHT-PTR": {
+			"arg": 451,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Lighting auxiliary panel brightness knob",
+			"deviceId": 51,
+			"elementName": "P-CONTR-BRIGHT-PTR",
+			"type": "continuous"
+		},
+		"ILLUMINATION_INTERFACE.P-CONTR-ILLUM-PTR": {
+			"arg": 450,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Lighting auxiliary panel switch",
+			"deviceId": 51,
+			"elementName": "P-CONTR-ILLUM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"K041.K-041-PTR": {
+			"arg": 433,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "K-041 Targeting-navigation system power switch",
+			"deviceId": 59,
+			"elementName": "K-041-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"K041.PNK-PTR": {
+			"arg": 222,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Navigation system power",
+			"deviceId": 59,
+			"elementName": "PNK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASERRANGER.Button_5": {
+			"bindings": [
+				{
+					"name": "Laser Mode 2-pos Switch : ILLUM<>RNG",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Laser mode ILLUM",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Laser Mode 2-pos Switch : ILLUM<>RNG (+1 more)",
+			"deviceId": 11,
+			"type": "raw"
+		},
+		"LASERRANGER.Button_6": {
+			"bindings": [
+				{
+					"name": "Laser Mode 2-pos Switch : ILLUM<>RNG",
+					"valueUp": 1.0
+				},
+				{
+					"name": "Laser mode RNG",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "Laser Mode 2-pos Switch : ILLUM<>RNG (+1 more)",
+			"deviceId": 11,
+			"type": "raw"
+		},
+		"LASERRANGER.CHOP-LDP-PTR": {
+			"arg": 55,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Laser designator reset",
+			"deviceId": 11,
+			"elementName": "CHOP-LDP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASERRANGER.LD-LDP-COVER-PTR": {
+			"arg": 57,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Laser rangefinder / designator - mode switch",
+			"deviceId": 11,
+			"elementName": "LD-LDP-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASERRANGER.LDP-LD-PTR": {
+			"arg": 56,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Laser rangefinder / designator - mode switch",
+			"deviceId": 11,
+			"elementName": "LDP-LD-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASERRANGER.PVR-IZL-PTR": {
+			"arg": 435,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Laser standby ON/OFF switch",
+			"deviceId": 11,
+			"elementName": "PVR-IZL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASER_WARNING_SYSTEM.L-140-RESET-PTR": {
+			"arg": 35,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "LWS Reset button",
+			"deviceId": 36,
+			"elementName": "L-140-RESET-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASER_WARNING_SYSTEM.L140-CNOB": {
+			"arg": 584,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "LWS self-test button",
+			"deviceId": 36,
+			"elementName": "L140-CNOB",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LASER_WARNING_SYSTEM.L140-SWITCH": {
+			"arg": 583,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "LWS Power switch",
+			"deviceId": 36,
+			"elementName": "L140-SWITCH",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MISC_SYSTEMS_INTERFACE.ALTIMETER-BARO-PTR": {
+			"arg": 90,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Baro pressure QFE knob",
+			"deviceId": 41,
+			"elementName": "ALTIMETER-BARO-PTR",
+			"type": "continuous"
+		},
+		"MISC_SYSTEMS_INTERFACE.HANGER-PTR": {
+			"arg": 259,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Sling load Auto/Manual",
+			"deviceId": 41,
+			"elementName": "HANGER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"MISC_SYSTEMS_INTERFACE.PUR-OGR-INF-PTR": {
+			"arg": 409,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "HUD/TV declutter switch",
+			"deviceId": 41,
+			"elementName": "PUR-OGR-INF-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.ANO-PTR": {
+			"arg": 146,
+			"description": "Navigation Lights 10% / 30% / 100% / Off",
+			"elementName": "ANO-PTR",
+			"positionMap": [
+				{
+					"commandId": 3004,
+					"deviceId": 45,
+					"value": 0.0
+				},
+				{
+					"commandId": 3004,
+					"deviceId": 45,
+					"value": 0.1
+				},
+				{
+					"commandId": 3004,
+					"deviceId": 45,
+					"value": 0.2
+				},
+				{
+					"commandId": 3004,
+					"deviceId": 45,
+					"value": 0.3
+				},
+				{
+					"commandId": 3004,
+					"deviceId": 45,
+					"value": 0.4
+				}
+			],
+			"positions": 5,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.CONTUR-LIGHT-PTR": {
+			"arg": 296,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Tip Lights",
+			"deviceId": 45,
+			"elementName": "CONTUR-LIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.FLASHER-PTR": {
+			"arg": 228,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Anticollision Light",
+			"deviceId": 45,
+			"elementName": "FLASHER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAVLIGHT_SYSTEM.FORMATION-PTR": {
+			"arg": 297,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3002,
+			"description": "Formation Lights",
+			"deviceId": 45,
+			"elementName": "FORMATION-PTR",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"NAV_INTERFACE.Button_4": {
+			"bindings": [
+				{
+					"name": "Route/Descent 3-pos Switch : ROUTE<>CENTER",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Route/Descent 3-pos Switch : ROUTE<>CENTER",
+			"deviceId": 28,
+			"type": "raw"
+		},
+		"NAV_INTERFACE.Button_5": {
+			"bindings": [
+				{
+					"name": "Gyro/Mag/Manual heading : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Gyro/Mag/Manual heading : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Gyro/Mag/Manual heading : NEXT (+1 more)",
+			"deviceId": 28,
+			"type": "raw"
+		},
+		"NAV_INTERFACE.GYRO-MAG-MAN-HEADING-PTR": {
+			"arg": 229,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3002,
+			"description": "Gyro/Mag/Manual heading",
+			"deviceId": 28,
+			"elementName": "GYRO-MAG-MAN-HEADING-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"NAV_INTERFACE.ZK-LZP-PTR": {
+			"arg": 336,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Autopilot Desired heading - Desired track",
+			"deviceId": 28,
+			"elementName": "ZK-LZP-PTR",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"PPK.AKS-PTR": {
+			"arg": 489,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Self test system push-button",
+			"deviceId": 32,
+			"elementName": "AKS-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PPK.FKP-PTR": {
+			"arg": 492,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Video Tape Recorder switch",
+			"deviceId": 32,
+			"elementName": "FKP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PPK.KCVM-PTR": {
+			"arg": 486,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Control computers BIT switch",
+			"deviceId": 32,
+			"elementName": "KCVM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PPK.PPK-BBTZ-PTR": {
+			"arg": 483,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "ATGM Temperature selector",
+			"deviceId": 32,
+			"elementName": "PPK-BBTZ-PTR",
+			"positions": 11,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"PPK.PPK-RNP-PTR": {
+			"arg": 485,
+			"argLim": [
+				0.0,
+				0.8
+			],
+			"commandId": 3003,
+			"description": "Systems BIT selector",
+			"deviceId": 32,
+			"elementName": "PPK-RNP-PTR",
+			"positions": 9,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"PPK.ROPE-PTR": {
+			"arg": 491,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Stabilisation and indication of hanger cable switch",
+			"deviceId": 32,
+			"elementName": "ROPE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PPK.VnK-PTR": {
+			"arg": 490,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Emergency INU alignment switch",
+			"deviceId": 32,
+			"elementName": "VnK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PShK_7.LATITUDE-PTR": {
+			"arg": 340,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Latitude selection rotaty",
+			"deviceId": 57,
+			"elementName": "LATITUDE-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"PShK_7.N-S-PTR": {
+			"arg": 341,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "North/South latitude selection",
+			"deviceId": 57,
+			"elementName": "N-S-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"PVI.PVI-0-PTR": {
+			"arg": 312,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3001,
+			"description": "NAV '0' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-0-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-1-PTR": {
+			"arg": 303,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3002,
+			"description": "NAV '1' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-1-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-2-PTR": {
+			"arg": 304,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3003,
+			"description": "NAV '2' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-2-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-3-PTR": {
+			"arg": 305,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3004,
+			"description": "NAV '3' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-3-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-4-PTR": {
+			"arg": 306,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3005,
+			"description": "NAV '4' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-4-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-5-PTR": {
+			"arg": 307,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3006,
+			"description": "NAV '5' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-5-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-6-PTR": {
+			"arg": 308,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3007,
+			"description": "NAV '6' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-6-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-7-PTR": {
+			"arg": 309,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3008,
+			"description": "NAV '7' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-7-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-8-PTR": {
+			"arg": 310,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3009,
+			"description": "NAV '8' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-8-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-9-PTR": {
+			"arg": 311,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3010,
+			"description": "NAV '9' Btn",
+			"deviceId": 20,
+			"elementName": "PVI-9-PTR",
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-ACDC-PTR": {
+			"arg": 323,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3025,
+			"description": "NAV Bearing/Range to target",
+			"deviceId": 20,
+			"elementName": "PVI-ACDC-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-AER-PTR": {
+			"arg": 317,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3015,
+			"description": "NAV Airfields",
+			"deviceId": 20,
+			"elementName": "PVI-AER-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-BRIGHTNESS-PTR": {
+			"arg": 327,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "NAV Brightness",
+			"deviceId": 20,
+			"elementName": "PVI-BRIGHTNESS-PTR",
+			"type": "continuous"
+		},
+		"PVI.PVI-CANCEL-PTR": {
+			"arg": 314,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3019,
+			"description": "NAV Cancel",
+			"deviceId": 20,
+			"elementName": "PVI-CANCEL-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-DU-PTR": {
+			"arg": 321,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3023,
+			"description": "NAV Wind Heading/Speed",
+			"deviceId": 20,
+			"elementName": "PVI-DU-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-ENTER-PTR": {
+			"arg": 313,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3018,
+			"description": "NAV Enter",
+			"deviceId": 20,
+			"elementName": "PVI-ENTER-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-FII-PTR": {
+			"arg": 322,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3024,
+			"description": "NAV True Heading/Time/Range to final WPT",
+			"deviceId": 20,
+			"elementName": "PVI-FII-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-FILAMBDA-PTR": {
+			"arg": 319,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3021,
+			"description": "NAV Self coordinates",
+			"deviceId": 20,
+			"elementName": "PVI-FILAMBDA-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-FIZ-PTR": {
+			"arg": 320,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3022,
+			"description": "NAV Course:Course Deviation/Time/Range to WPT",
+			"deviceId": 20,
+			"elementName": "PVI-FIZ-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-HB-PTR": {
+			"arg": 521,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3016,
+			"description": "NAV Normal INU Alignment",
+			"deviceId": 20,
+			"elementName": "PVI-HB-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-KC-PTR": {
+			"arg": 522,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3020,
+			"description": "NAV Initial Nav Pos",
+			"deviceId": 20,
+			"elementName": "PVI-KC-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-OP-PTR": {
+			"arg": 316,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3013,
+			"description": "NAV Fixpoints",
+			"deviceId": 20,
+			"elementName": "PVI-OP-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-OT-PTR": {
+			"arg": 318,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3017,
+			"description": "NAV Targets",
+			"deviceId": 20,
+			"elementName": "PVI-OT-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-PPM-PTR": {
+			"arg": 315,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3011,
+			"description": "NAV Waypoints",
+			"deviceId": 20,
+			"elementName": "PVI-PPM-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-PZ-PTR": {
+			"arg": 519,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3012,
+			"description": "NAV Inflight INU Realignment",
+			"deviceId": 20,
+			"elementName": "PVI-PZ-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI-SWITCH-PTR": {
+			"arg": 324,
+			"argLim": [
+				0.0,
+				0.6
+			],
+			"commandId": 3027,
+			"description": "NAV Master modes",
+			"deviceId": 20,
+			"elementName": "PVI-SWITCH-PTR",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"PVI.PVI-TB-PTR": {
+			"arg": 520,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3014,
+			"description": "NAV Precise INU Alignment",
+			"deviceId": 20,
+			"elementName": "PVI-TB-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"PVI.PVI_I251V_PTR": {
+			"arg": 325,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3028,
+			"description": "NAV INU fixtaking method",
+			"deviceId": 20,
+			"elementName": "PVI_I251V_PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"RADAR_ALTIMETER.ROTARY-DANGEROUS-HIGHT-PTR": {
+			"arg": 91,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Dangerous RALT set rotary",
+			"deviceId": 38,
+			"elementName": "ROTARY-DANGEROUS-HIGHT-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"RADAR_ALTIMETER.TEST-RADIO-HIGHT-PTR": {
+			"arg": 96,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Radar altimeter test",
+			"deviceId": 38,
+			"elementName": "TEST-RADIO-HIGHT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.COMM-PWR-UKV-2-PTR": {
+			"arg": 286,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "VHF-2 (R-800) power switch",
+			"deviceId": 48,
+			"elementName": "COMM-PWR-UKV-2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTR-RADIO-50-100-PTR01": {
+			"arg": 420,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "R-800 (VHF-2) Data transfer rate switch",
+			"deviceId": 48,
+			"elementName": "CONTR-RADIO-50-100-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTR-RADIO-AP-PTR": {
+			"arg": 421,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "R-800 (VHF-2) Emergency receiver",
+			"deviceId": 48,
+			"elementName": "CONTR-RADIO-AP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTR-RADIO-ARK-PTR": {
+			"arg": 422,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "R-800 (VHF-2) ADF switch",
+			"deviceId": 48,
+			"elementName": "CONTR-RADIO-ARK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTR-RADIO-CHM-AM-PTR": {
+			"arg": 417,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "R-800 (VHF-2) AM-FM toggle switch",
+			"deviceId": 48,
+			"elementName": "CONTR-RADIO-CHM-AM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTR-RADIO-PSH-PTR": {
+			"arg": 423,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "R-800 (VHF-2) Squelch",
+			"deviceId": 48,
+			"elementName": "CONTR-RADIO-PSH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTROLLER-FREQ-1-PTR": {
+			"arg": -1,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "R-800 (VHF-2) 1st rotary",
+			"deviceId": 48,
+			"elementName": "CONTROLLER-FREQ-1-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTROLLER-FREQ-2-PTR": {
+			"arg": -1,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "R-800 (VHF-2) 2nd rotary",
+			"deviceId": 48,
+			"elementName": "CONTROLLER-FREQ-2-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTROLLER-FREQ-3-PTR": {
+			"arg": -1,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "R-800 (VHF-2) 3rd rotary",
+			"deviceId": 48,
+			"elementName": "CONTROLLER-FREQ-3-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.CONTROLLER-FREQ-4-PTR": {
+			"arg": -1,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "R-800 (VHF-2) 4th rotary",
+			"deviceId": 48,
+			"elementName": "CONTROLLER-FREQ-4-PTR",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_800.START-PANEL-CONTROL-PTR": {
+			"arg": 418,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "R-800 (VHF-2) BIT button",
+			"deviceId": 48,
+			"elementName": "START-PANEL-CONTROL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_828.ASU-PTR": {
+			"arg": 373,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "R-828 (VHF-1) Tuner button",
+			"deviceId": 49,
+			"elementName": "ASU-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_828.CHANNEL-PTR": {
+			"arg": 371,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3001,
+			"description": "R-828 (VHF-1) Radio channel selector",
+			"deviceId": 49,
+			"elementName": "CHANNEL-PTR",
+			"positions": 10,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"R_828.COMM-PWR-UKV-1-PTR": {
+			"arg": 285,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "VHF-1 (R828) power switch",
+			"deviceId": 49,
+			"elementName": "COMM-PWR-UKV-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_828.RADIO-PSH-SWITCH-PTR": {
+			"arg": 374,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "R-828 (VHF-1) Squelch",
+			"deviceId": 49,
+			"elementName": "RADIO-PSH-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"R_828.RADIO-VOLUME-PTR": {
+			"arg": 372,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "R-828 (VHF-1) Radio Volume",
+			"deviceId": 49,
+			"elementName": "RADIO-VOLUME-PTR",
+			"type": "continuous"
+		},
+		"SHKVAL.PUR-BACKGROUND-PTR": {
+			"arg": 404,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "IT-23 Black-White indication switch",
+			"deviceId": 8,
+			"elementName": "PUR-BACKGROUND-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SHKVAL.PUR-CONTRAST-PTR": {
+			"arg": 407,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "IT-23 display contrast",
+			"deviceId": 8,
+			"elementName": "PUR-CONTRAST-PTR",
+			"type": "continuous"
+		},
+		"SHKVAL.PUR-LIGHTIT-PTR": {
+			"arg": 406,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "IT-23 display brightness",
+			"deviceId": 8,
+			"elementName": "PUR-LIGHTIT-PTR",
+			"type": "continuous"
+		},
+		"SHKVAL.PUR-SF-PTR": {
+			"arg": 411,
+			"argLim": [
+				0.0,
+				0.7
+			],
+			"commandId": 3005,
+			"description": "SHKVAL Optics adjustment",
+			"deviceId": 8,
+			"elementName": "PUR-SF-PTR",
+			"positions": 8,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"SHKVAL.PUR-TR-PTR": {
+			"arg": 410,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "N/A",
+			"deviceId": 8,
+			"elementName": "PUR-TR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SHKVAL.V-SCAN-PTR": {
+			"arg": 301,
+			"argLim": [
+				0.0,
+				0.7
+			],
+			"commandId": 3006,
+			"description": "Shkval scan rate",
+			"deviceId": 8,
+			"elementName": "V-SCAN-PTR",
+			"positions": 8,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"SHKVAL.WIPER-PTR": {
+			"arg": 224,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "SHKVAL windscreen wiper",
+			"deviceId": 8,
+			"elementName": "WIPER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-1-PTR": {
+			"arg": 376,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Signal flare red",
+			"deviceId": 52,
+			"elementName": "SIGNAL-FLARE-1-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-2-PTR": {
+			"arg": 377,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Signal flare green",
+			"deviceId": 52,
+			"elementName": "SIGNAL-FLARE-2-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-3-PTR": {
+			"arg": 378,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Signal flare white",
+			"deviceId": 52,
+			"elementName": "SIGNAL-FLARE-3-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-4-PTR": {
+			"arg": 379,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Signal flare yellow",
+			"deviceId": 52,
+			"elementName": "SIGNAL-FLARE-4-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SIGNAL_FLARE_DISPENSER.SIGNAL-FLARE-SWITCH-PTR": {
+			"arg": 380,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Signal flare system power",
+			"deviceId": 52,
+			"elementName": "SIGNAL-FLARE-SWITCH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SPOTLIGHT_SYSTEM.Button_3": {
+			"bindings": [
+				{
+					"name": "Light landing search On/Retraction/Off : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Light landing search On/Retraction/Off : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Light landing search On/Retraction/Off : NEXT (+1 more)",
+			"deviceId": 44,
+			"type": "raw"
+		},
+		"SPOTLIGHT_SYSTEM.LANDING LIGHTS-BASE-RESERV-PTR": {
+			"arg": 383,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Lights landing-search change. Main/Reserved",
+			"deviceId": 44,
+			"elementName": "LANDING LIGHTS-BASE-RESERV-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SPOTLIGHT_SYSTEM.LANDING LIGHTS-DIR-LIGHT-PTR": {
+			"arg": 382,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Light landing-search. On/Retraction/Off",
+			"deviceId": 44,
+			"elementName": "LANDING LIGHTS-DIR-LIGHT-PTR",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"SPU_9.Button_5": {
+			"bindings": [
+				{
+					"name": "SPU-9 Radio communicator selector : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "SPU-9 Radio communicator selector : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "SPU-9 Radio communicator selector : NEXT (+1 more)",
+			"deviceId": 50,
+			"type": "raw"
+		},
+		"SPU_9.COMM-PWR-AVSK-PTR": {
+			"arg": 284,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Intercom",
+			"deviceId": 50,
+			"elementName": "COMM-PWR-AVSK-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SPU_9.RADIO-RATE-PTR": {
+			"arg": 428,
+			"argLim": [
+				0.0,
+				0.33
+			],
+			"commandId": 3002,
+			"description": "SPU-9 Radio communicator selector",
+			"deviceId": 50,
+			"elementName": "RADIO-RATE-PTR",
+			"positions": 4,
+			"step": 0.11,
+			"type": "discrete"
+		},
+		"STBY_ADI.RES-AG-PTR": {
+			"arg": 230,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Standby Attitude Indicator power switch",
+			"deviceId": 55,
+			"elementName": "RES-AG-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"STBY_ADI.RES-AGD-PTR_arg141": {
+			"arg": 141,
+			"description": "Standby Attitude Indicator Cage/control test handle",
+			"elementName": "RES-AGD-PTR",
+			"positionMap": [
+				{
+					"commandId": 3002,
+					"deviceId": 55,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3001,
+					"deviceId": 55,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"STBY_ADI.RES-AGD-PTR_arg597": {
+			"arg": 597,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Standby Attitude Indicator Cage/control test handle",
+			"deviceId": 55,
+			"elementName": "RES-AGD-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"SYST_CONTROLLER.BKO-PTR": {
+			"arg": 49,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "MWS operation mode (not functional)",
+			"deviceId": 14,
+			"elementName": "BKO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SYST_CONTROLLER.BRIGHTNESS-PTR": {
+			"arg": 149,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Warning Lights Brightness",
+			"deviceId": 14,
+			"elementName": "BRIGHTNESS-PTR",
+			"type": "continuous"
+		},
+		"SYST_CONTROLLER.CONTROL-ALARM-PTR": {
+			"arg": 45,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Lamps test",
+			"deviceId": 14,
+			"elementName": "CONTROL-ALARM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"SYST_CONTROLLER.CSO-PTR": {
+			"arg": 44,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3001,
+			"description": "Master caution push-light",
+			"deviceId": 14,
+			"elementName": "CSO-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"SYST_CONTROLLER.MAIN-ROTOR-PTR": {
+			"arg": 46,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3003,
+			"description": "Low rotor RPM caution push-light",
+			"deviceId": 14,
+			"elementName": "MAIN-ROTOR-PTR",
+			"indicatorArgLim": [
+				0.0,
+				1.0
+			],
+			"positions": 2,
+			"step": 0.2,
+			"type": "discrete"
+		},
+		"UV_26.Button_14": {
+			"bindings": [
+				{
+					"name": "UV-26 Change dispensing board : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "UV-26 Change dispensing board : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "UV-26 Change dispensing board : NEXT (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UV_26.Button_15": {
+			"bindings": [
+				{
+					"name": "UV-26 Change dispensing board : LEFT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3015,
+			"description": "UV-26 Change dispensing board : LEFT",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UV_26.Button_16": {
+			"bindings": [
+				{
+					"name": "UV-26 Change dispensing board : BOTH",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3016,
+			"description": "UV-26 Change dispensing board : BOTH",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UV_26.Button_17": {
+			"bindings": [
+				{
+					"name": "UV-26 Change dispensing board : RIGHT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3017,
+			"description": "UV-26 Change dispensing board : RIGHT",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"UV_26.UV26-BOARD-PTR": {
+			"arg": 36,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3002,
+			"description": "CMD Select Left/Both/Right board flares dispensers",
+			"deviceId": 22,
+			"elementName": "UV26-BOARD-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"UV_26.UV26-BURST-PTR": {
+			"arg": 39,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "CMD Num in sequence",
+			"deviceId": 22,
+			"elementName": "UV26-BURST-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-CANCELPRG-PTR": {
+			"arg": 42,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "CMD Reset to default program",
+			"deviceId": 22,
+			"elementName": "UV26-CANCELPRG-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-INTERVAL-PTR": {
+			"arg": 41,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "CMD Dispense interval",
+			"deviceId": 22,
+			"elementName": "UV26-INTERVAL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-POWER-COVER-PTR": {
+			"arg": 497,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "CMD Power",
+			"deviceId": 22,
+			"elementName": "UV26-POWER-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-POWER-PTR": {
+			"arg": 496,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "CMD Power",
+			"deviceId": 22,
+			"elementName": "UV26-POWER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-PROGR-PTR": {
+			"arg": 37,
+			"argLim": [
+				0.0,
+				0.1
+			],
+			"commandId": 3003,
+			"description": "CMD Amount flares counter/Programming",
+			"deviceId": 22,
+			"elementName": "UV26-PROGR-PTR",
+			"positions": 2,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"UV_26.UV26-SERIES-PTR": {
+			"arg": 38,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "CMD Num of sequences",
+			"deviceId": 22,
+			"elementName": "UV26-SERIES-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-START-PTR": {
+			"arg": 43,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "CMD Start dispense",
+			"deviceId": 22,
+			"elementName": "UV26-START-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-STOP-PTR": {
+			"arg": 40,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "CMD Stop dispense",
+			"deviceId": 22,
+			"elementName": "UV26-STOP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-TEST-COVER-PTR": {
+			"arg": 499,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "CMD BIT",
+			"deviceId": 22,
+			"elementName": "UV26-TEST-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"UV_26.UV26-TEST-PTR": {
+			"arg": 498,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "CMD BIT",
+			"deviceId": 22,
+			"elementName": "UV26-TEST-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"VMS.SPEECH-BIT-PTR": {
+			"arg": 442,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Voice message system check",
+			"deviceId": 13,
+			"elementName": "SPEECH-BIT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"VMS.SPEECH-INFO-AVAR-PTR": {
+			"arg": 386,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Voice message system emergency on",
+			"deviceId": 13,
+			"elementName": "SPEECH-INFO-AVAR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"VMS.SPEECH-INFO-OFF-PTR01": {
+			"arg": 384,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Voice message system messages off",
+			"deviceId": 13,
+			"elementName": "SPEECH-INFO-OFF-PTR01",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"VMS.SPEECH-INFO-RETRY-PTR": {
+			"arg": 385,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Voice message system messages repeat",
+			"deviceId": 13,
+			"elementName": "SPEECH-INFO-RETRY-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.Button_24": {
+			"bindings": [
+				{
+					"name": "Burst Length Switch : NEXT",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Burst Length Switch : PREV",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3024,
+			"description": "Burst Length Switch : NEXT (+1 more)",
+			"deviceId": 12,
+			"type": "raw"
+		},
+		"WEAP_INTERFACE.Button_25": {
+			"bindings": [
+				{
+					"name": "Gun Select : ON",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3025,
+			"description": "Gun Select : ON",
+			"deviceId": 12,
+			"type": "raw"
+		},
+		"WEAP_INTERFACE.Button_26": {
+			"bindings": [
+				{
+					"name": "Gun Select : OFF",
+					"valueDown": 0.25
+				}
+			],
+			"commandId": 3026,
+			"description": "Gun Select : OFF",
+			"deviceId": 12,
+			"type": "raw"
+		},
+		"WEAP_INTERFACE.MASTER-ARM-PTR": {
+			"arg": 387,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Master Arm",
+			"deviceId": 12,
+			"elementName": "MASTER-ARM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.MASTER-EXPLODE-PTR": {
+			"arg": 396,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "Jettison arm mode - arm fuse/disarm fuse",
+			"deviceId": 12,
+			"elementName": "MASTER-EXPLODE-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.MASTER-UNLOAD-PTR": {
+			"arg": 397,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "Expedite emergency ATGM launch",
+			"deviceId": 12,
+			"elementName": "MASTER-UNLOAD-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.MT-PTR": {
+			"arg": 398,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "Cannon rate of fire setting",
+			"deviceId": 12,
+			"elementName": "MT-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PPK-NRAKS-PTR": {
+			"arg": 484,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Unguided rocket and gun pods ballistics data settings selector",
+			"deviceId": 12,
+			"elementName": "PPK-NRAKS-PTR",
+			"positions": 11,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PUI800-AUTO-PTR": {
+			"arg": 403,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Manual/Auto weapon system control switch",
+			"deviceId": 12,
+			"elementName": "PUI800-AUTO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PUI800-AVARCHOP-PTR": {
+			"arg": 402,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "External stores jettison",
+			"deviceId": 12,
+			"elementName": "PUI800-AVARCHOP-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PUI800-AVARSTART-PTR": {
+			"arg": 401,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Not implemented",
+			"deviceId": 12,
+			"elementName": "PUI800-AVARSTART-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PUI800-OFBR-PTR": {
+			"arg": 399,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Cannon round selector switch HE/AP",
+			"deviceId": 12,
+			"elementName": "PUI800-OFBR-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PUR-LIT-PTR": {
+			"arg": 408,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3007,
+			"description": "Laser code selector",
+			"deviceId": 12,
+			"elementName": "PUR-LIT-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-ADV-PTR": {
+			"arg": 437,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Automatic turn on target mode",
+			"deviceId": 12,
+			"elementName": "PVR-ADV-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-AS-PM-PTR": {
+			"arg": 436,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Automatic Tracking / gun sight",
+			"deviceId": 12,
+			"elementName": "PVR-AS-PM-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-DRILL-PTR": {
+			"arg": 432,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Training mode",
+			"deviceId": 12,
+			"elementName": "PVR-DRILL-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-MODE-PTR": {
+			"arg": 431,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3015,
+			"description": "Weapon system mode selector",
+			"deviceId": 12,
+			"elementName": "PVR-MODE-PTR",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-NPC-PTR": {
+			"arg": 440,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Ground moving target",
+			"deviceId": 12,
+			"elementName": "PVR-NPC-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-PPS-PTR": {
+			"arg": 439,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Forward hemisphere (head-on) air target aspect",
+			"deviceId": 12,
+			"elementName": "PVR-PPS-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-RESET-PTR": {
+			"arg": 441,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "Targeting mode reset",
+			"deviceId": 12,
+			"elementName": "PVR-RESET-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.PVR-VC-PTR": {
+			"arg": 438,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Airborne Target",
+			"deviceId": 12,
+			"elementName": "PVR-VC-PTR",
+			"indicatorArgLim": [
+				0.0,
+				0.3
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.SR-PTR": {
+			"arg": 400,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3004,
+			"description": "Weapon mode switch - Burst Length",
+			"deviceId": 12,
+			"elementName": "SR-PTR",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.SUO-COVER-PTR": {
+			"arg": 548,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Weapons сontrol system",
+			"deviceId": 12,
+			"elementName": "SUO-COVER-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAP_INTERFACE.SUO-PTR": {
+			"arg": 547,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Weapons сontrol system",
+			"deviceId": 12,
+			"elementName": "SUO-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ZMS_3.DCLIN-PTR": {
+			"arg": 338,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Magnetic variation selection rotaty",
+			"deviceId": 58,
+			"elementName": "DCLIN-PTR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"arg.ADI_Pitch": {
+			"arg": 101,
+			"description": "ADI_Pitch"
+		},
+		"arg.ADI_Roll": {
+			"arg": 100,
+			"description": "ADI_Roll"
+		},
+		"arg.ADI_airspeed_deviation": {
+			"arg": 111,
+			"description": "ADI_airspeed_deviation"
+		},
+		"arg.ADI_attitude_warning_flag": {
+			"arg": 109,
+			"description": "ADI_attitude_warning_flag"
+		},
+		"arg.ADI_bank_steering": {
+			"arg": 107,
+			"description": "ADI_bank_steering"
+		},
+		"arg.ADI_height_deviation": {
+			"arg": 526,
+			"description": "ADI_height_deviation"
+		},
+		"arg.ADI_illumination": {
+			"arg": 798,
+			"description": "ADI_illumination"
+		},
+		"arg.ADI_illumination2": {
+			"arg": 801,
+			"description": "ADI_illumination2"
+		},
+		"arg.ADI_pitch_steering": {
+			"arg": 106,
+			"description": "ADI_pitch_steering"
+		},
+		"arg.ADI_sideslip": {
+			"arg": 108,
+			"description": "ADI_sideslip"
+		},
+		"arg.ADI_steering_warning_flag": {
+			"arg": 102,
+			"description": "ADI_steering_warning_flag"
+		},
+		"arg.ADI_track_deviation": {
+			"arg": 103,
+			"description": "ADI_track_deviation"
+		},
+		"arg.ADP_4_acceleration": {
+			"arg": 97,
+			"description": "ADP_4_acceleration"
+		},
+		"arg.ADP_4_max_achieved_acc": {
+			"arg": 98,
+			"description": "ADP_4_max_achieved_acc"
+		},
+		"arg.ADP_4_min_achieved_acc": {
+			"arg": 99,
+			"description": "ADP_4_min_achieved_acc"
+		},
+		"arg.AGR_81_LateralDeviationBar": {
+			"arg": 613,
+			"description": "AGR_81_LateralDeviationBar"
+		},
+		"arg.AGR_81_LongitudinalDeviationBar": {
+			"arg": 599,
+			"description": "AGR_81_LongitudinalDeviationBar"
+		},
+		"arg.AGR_81_Pitch": {
+			"arg": 143,
+			"description": "AGR_81_Pitch"
+		},
+		"arg.AGR_81_Roll": {
+			"arg": 142,
+			"description": "AGR_81_Roll"
+		},
+		"arg.AGR_81_failure_flag": {
+			"arg": 145,
+			"description": "AGR_81_failure_flag"
+		},
+		"arg.AGR_81_sideslip": {
+			"arg": 144,
+			"description": "AGR_81_sideslip"
+		},
+		"arg.AHR_illumination": {
+			"arg": 802,
+			"description": "AHR_illumination"
+		},
+		"arg.APUTemperature": {
+			"arg": 6,
+			"description": "APUTemperature"
+		},
+		"arg.A_036_DangerRALT_index": {
+			"arg": 93,
+			"description": "A_036_DangerRALT_index"
+		},
+		"arg.A_036_DangerRALT_lamp": {
+			"arg": 92,
+			"description": "A_036_DangerRALT_lamp"
+		},
+		"arg.A_036_RALT": {
+			"arg": 94,
+			"description": "A_036_RALT"
+		},
+		"arg.A_036_warning_flag": {
+			"arg": 95,
+			"description": "A_036_warning_flag"
+		},
+		"arg.CLOCK_currtime_hours": {
+			"arg": 68,
+			"description": "CLOCK_currtime_hours"
+		},
+		"arg.CLOCK_currtime_minutes": {
+			"arg": 69,
+			"description": "CLOCK_currtime_minutes"
+		},
+		"arg.CLOCK_currtime_seconds": {
+			"arg": 70,
+			"description": "CLOCK_currtime_seconds"
+		},
+		"arg.CLOCK_flight_hours": {
+			"arg": 72,
+			"description": "CLOCK_flight_hours"
+		},
+		"arg.CLOCK_flight_minutes": {
+			"arg": 531,
+			"description": "CLOCK_flight_minutes"
+		},
+		"arg.CLOCK_flight_time_meter_status": {
+			"arg": 75,
+			"description": "CLOCK_flight_time_meter_status"
+		},
+		"arg.CLOCK_seconds_meter_time_minutes": {
+			"arg": 73,
+			"description": "CLOCK_seconds_meter_time_minutes"
+		},
+		"arg.CLOCK_seconds_meter_time_seconds": {
+			"arg": 532,
+			"description": "CLOCK_seconds_meter_time_seconds"
+		},
+		"arg.Control_Panel_illumination": {
+			"arg": 800,
+			"description": "Control_Panel_illumination"
+		},
+		"arg.EjectSystemTestLamp": {
+			"arg": 461,
+			"description": "EjectSystemTestLamp"
+		},
+		"arg.EnginesMode": {
+			"arg": 592,
+			"description": "EnginesMode"
+		},
+		"arg.ForwardTankAmount": {
+			"arg": 137,
+			"description": "ForwardTankAmount"
+		},
+		"arg.HSI_bearing_needle": {
+			"arg": 115,
+			"description": "HSI_bearing_needle"
+		},
+		"arg.HSI_commanded_course_needle": {
+			"arg": 118,
+			"description": "HSI_commanded_course_needle"
+		},
+		"arg.HSI_commanded_heading_needle": {
+			"arg": 124,
+			"description": "HSI_commanded_heading_needle"
+		},
+		"arg.HSI_course_counter_hundreds_tenth": {
+			"arg": 529,
+			"description": "HSI_course_counter_hundreds_tenth"
+		},
+		"arg.HSI_course_counter_units": {
+			"arg": 530,
+			"description": "HSI_course_counter_units"
+		},
+		"arg.HSI_course_unavailable_flag": {
+			"arg": 121,
+			"description": "HSI_course_unavailable_flag"
+		},
+		"arg.HSI_course_warning_flag": {
+			"arg": 114,
+			"description": "HSI_course_warning_flag"
+		},
+		"arg.HSI_glideslope_warning_flag": {
+			"arg": 125,
+			"description": "HSI_glideslope_warning_flag"
+		},
+		"arg.HSI_heading": {
+			"arg": 112,
+			"description": "HSI_heading"
+		},
+		"arg.HSI_heading_warning_flag": {
+			"arg": 119,
+			"description": "HSI_heading_warning_flag"
+		},
+		"arg.HSI_lateral_deviation": {
+			"arg": 128,
+			"description": "HSI_lateral_deviation"
+		},
+		"arg.HSI_longitudinal_deviation": {
+			"arg": 127,
+			"description": "HSI_longitudinal_deviation"
+		},
+		"arg.HSI_range_counter_hundreds": {
+			"arg": 117,
+			"description": "HSI_range_counter_hundreds"
+		},
+		"arg.HSI_range_counter_tenth": {
+			"arg": 527,
+			"description": "HSI_range_counter_tenth"
+		},
+		"arg.HSI_range_counter_units": {
+			"arg": 528,
+			"description": "HSI_range_counter_units"
+		},
+		"arg.HSI_range_unavailable_flag": {
+			"arg": 116,
+			"description": "HSI_range_unavailable_flag"
+		},
+		"arg.IAS": {
+			"arg": 51,
+			"description": "IAS"
+		},
+		"arg.KI_13_bank": {
+			"arg": 14,
+			"description": "KI_13_bank"
+		},
+		"arg.KI_13_course": {
+			"arg": 11,
+			"description": "KI_13_course"
+		},
+		"arg.KI_13_pitch": {
+			"arg": 12,
+			"description": "KI_13_pitch"
+		},
+		"arg.LGCP_Lamp_LeftMainGearDown": {
+			"arg": 60,
+			"description": "LGCP_Lamp_LeftMainGearDown"
+		},
+		"arg.LGCP_Lamp_LeftMainGearUp": {
+			"arg": 59,
+			"description": "LGCP_Lamp_LeftMainGearUp"
+		},
+		"arg.LGCP_Lamp_NoseGearDown": {
+			"arg": 64,
+			"description": "LGCP_Lamp_NoseGearDown"
+		},
+		"arg.LGCP_Lamp_NoseGearUp": {
+			"arg": 63,
+			"description": "LGCP_Lamp_NoseGearUp"
+		},
+		"arg.LGCP_Lamp_RightMainGearDown": {
+			"arg": 62,
+			"description": "LGCP_Lamp_RightMainGearDown"
+		},
+		"arg.LGCP_Lamp_RightMainGearUp": {
+			"arg": 61,
+			"description": "LGCP_Lamp_RightMainGearUp"
+		},
+		"arg.LWS_LampAzimuth_0": {
+			"arg": 25,
+			"description": "LWS_LampAzimuth_0"
+		},
+		"arg.LWS_LampAzimuth_180": {
+			"arg": 26,
+			"description": "LWS_LampAzimuth_180"
+		},
+		"arg.LWS_LampAzimuth_270": {
+			"arg": 27,
+			"description": "LWS_LampAzimuth_270"
+		},
+		"arg.LWS_LampAzimuth_90": {
+			"arg": 28,
+			"description": "LWS_LampAzimuth_90"
+		},
+		"arg.LWS_LampAzimuth_LaserRangefinder": {
+			"arg": 33,
+			"description": "LWS_LampAzimuth_LaserRangefinder"
+		},
+		"arg.LWS_LampAzimuth_LaserTargetingSystem": {
+			"arg": 34,
+			"description": "LWS_LampAzimuth_LaserTargetingSystem"
+		},
+		"arg.LWS_LampAzimuth_LowerHemisphere": {
+			"arg": 32,
+			"description": "LWS_LampAzimuth_LowerHemisphere"
+		},
+		"arg.LWS_LampAzimuth_UpperHemisphere": {
+			"arg": 31,
+			"description": "LWS_LampAzimuth_UpperHemisphere"
+		},
+		"arg.LWS_LampReady": {
+			"arg": 582,
+			"description": "LWS_LampReady"
+		},
+		"arg.LeftEngineMode": {
+			"arg": 234,
+			"description": "LeftEngineMode"
+		},
+		"arg.LeftEngineRPM": {
+			"arg": 135,
+			"description": "LeftEngineRPM"
+		},
+		"arg.LeftEngineTemperatureHund": {
+			"arg": 133,
+			"description": "LeftEngineTemperatureHund"
+		},
+		"arg.LeftEngineTemperatureTenth": {
+			"arg": 566,
+			"description": "LeftEngineTemperatureTenth"
+		},
+		"arg.NeedleOilPressureEngineLeft": {
+			"arg": 252,
+			"description": "NeedleOilPressureEngineLeft"
+		},
+		"arg.NeedleOilPressureEngineRight": {
+			"arg": 253,
+			"description": "NeedleOilPressureEngineRight"
+		},
+		"arg.NeedleOilPressureGearBox": {
+			"arg": 254,
+			"description": "NeedleOilPressureGearBox"
+		},
+		"arg.NeedleOilTemperatureEngineLeft": {
+			"arg": 255,
+			"description": "NeedleOilTemperatureEngineLeft"
+		},
+		"arg.NeedleOilTemperatureEngineRight": {
+			"arg": 256,
+			"description": "NeedleOilTemperatureEngineRight"
+		},
+		"arg.NeedleOilTemperatureGearBox": {
+			"arg": 257,
+			"description": "NeedleOilTemperatureGearBox"
+		},
+		"arg.PShK7_LampAuto": {
+			"arg": 342,
+			"description": "PShK7_LampAuto"
+		},
+		"arg.PShK7_Latitude_counter_tenth": {
+			"arg": 339,
+			"description": "PShK7_Latitude_counter_tenth"
+		},
+		"arg.PShK7_Latitude_counter_units": {
+			"arg": 594,
+			"description": "PShK7_Latitude_counter_units"
+		},
+		"arg.Panels_buttons_light": {
+			"arg": 551,
+			"description": "Panels_buttons_light"
+		},
+		"arg.Plafond": {
+			"arg": 1000,
+			"description": "Plafond"
+		},
+		"arg.R800Revolve1": {
+			"arg": 424,
+			"description": "R800Revolve1"
+		},
+		"arg.R800Revolve2": {
+			"arg": 425,
+			"description": "R800Revolve2"
+		},
+		"arg.R800Revolve3": {
+			"arg": 426,
+			"description": "R800Revolve3"
+		},
+		"arg.R800Revolve4": {
+			"arg": 427,
+			"description": "R800Revolve4"
+		},
+		"arg.R800Rotary1": {
+			"arg": 577,
+			"description": "R800Rotary1"
+		},
+		"arg.R800Rotary2": {
+			"arg": 574,
+			"description": "R800Rotary2"
+		},
+		"arg.R800Rotary3": {
+			"arg": 575,
+			"description": "R800Rotary3"
+		},
+		"arg.R800Rotary4": {
+			"arg": 576,
+			"description": "R800Rotary4"
+		},
+		"arg.R828_channel_selector": {
+			"arg": 581,
+			"description": "R828_channel_selector"
+		},
+		"arg.Radio_ASU_lamp": {
+			"arg": 375,
+			"description": "Radio_ASU_lamp"
+		},
+		"arg.Radio_Test_lamp": {
+			"arg": 419,
+			"description": "Radio_Test_lamp"
+		},
+		"arg.RearTankAmount": {
+			"arg": 138,
+			"description": "RearTankAmount"
+		},
+		"arg.RightEngineMode": {
+			"arg": 235,
+			"description": "RightEngineMode"
+		},
+		"arg.RightEngineRPM": {
+			"arg": 136,
+			"description": "RightEngineRPM"
+		},
+		"arg.RightEngineTemperatureHund": {
+			"arg": 134,
+			"description": "RightEngineTemperatureHund"
+		},
+		"arg.RightEngineTemperatureTenth": {
+			"arg": 567,
+			"description": "RightEngineTemperatureTenth"
+		},
+		"arg.RotorPitch": {
+			"arg": 53,
+			"description": "RotorPitch"
+		},
+		"arg.RotorRPM": {
+			"arg": 52,
+			"description": "RotorRPM"
+		},
+		"arg.UV26_lampLeftBoard": {
+			"arg": 541,
+			"description": "UV26_lampLeftBoard"
+		},
+		"arg.UV26_lampRightBoard": {
+			"arg": 542,
+			"description": "UV26_lampRightBoard"
+		},
+		"arg.VM_15PV_BALT_CommandedAlt": {
+			"arg": 89,
+			"description": "VM_15PV_BALT_CommandedAlt"
+		},
+		"arg.VM_15PV_BALT_tenth": {
+			"arg": 573,
+			"description": "VM_15PV_BALT_tenth"
+		},
+		"arg.VM_15PV_BALT_thousands": {
+			"arg": 87,
+			"description": "VM_15PV_BALT_thousands"
+		},
+		"arg.VM_15PV_BaroPressure": {
+			"arg": 88,
+			"description": "VM_15PV_BaroPressure"
+		},
+		"arg.ZMS3_MagVar_counter_hundreds_tenth": {
+			"arg": 337,
+			"description": "ZMS3_MagVar_counter_hundreds_tenth"
+		},
+		"arg.ZMS3_MagVar_counter_units": {
+			"arg": 596,
+			"description": "ZMS3_MagVar_counter_units"
+		},
+		"arg.ambientTemperature": {
+			"arg": 587,
+			"description": "ambientTemperature"
+		},
+		"arg.coll_ROUTE_DESCENT_sw": {
+			"arg": 560,
+			"description": "coll_ROUTE_DESCENT_sw"
+		},
+		"arg.coll_ReadjustFreeTurbRPM_sw": {
+			"arg": 558,
+			"description": "coll_ReadjustFreeTurbRPM_sw"
+		},
+		"arg.collective_position": {
+			"arg": 104,
+			"description": "collective_position"
+		},
+		"arg.collective_stopper": {
+			"arg": 580,
+			"description": "collective_stopper"
+		},
+		"arg.filter": {
+			"arg": 509,
+			"description": "filter"
+		},
+		"arg.gun_trigger": {
+			"arg": 615,
+			"description": "gun_trigger"
+		},
+		"arg.hydro_acc_brake_pressure": {
+			"arg": 473,
+			"description": "hydro_acc_brake_pressure"
+		},
+		"arg.hydro_common_pressure": {
+			"arg": 471,
+			"description": "hydro_common_pressure"
+		},
+		"arg.hydro_common_temperature": {
+			"arg": 475,
+			"description": "hydro_common_temperature"
+		},
+		"arg.hydro_gear_brake_pressure": {
+			"arg": 474,
+			"description": "hydro_gear_brake_pressure"
+		},
+		"arg.hydro_main_pressure": {
+			"arg": 472,
+			"description": "hydro_main_pressure"
+		},
+		"arg.hydro_main_temperature": {
+			"arg": 476,
+			"description": "hydro_main_temperature"
+		},
+		"arg.illumination_panels": {
+			"arg": 803,
+			"description": "illumination_panels"
+		},
+		"arg.illumination_panels2": {
+			"arg": 799,
+			"description": "illumination_panels2"
+		},
+		"arg.lamp_ABRIS_button1": {
+			"arg": 561,
+			"description": "lamp_ABRIS_button1"
+		},
+		"arg.lamp_ABRIS_button2": {
+			"arg": 562,
+			"description": "lamp_ABRIS_button2"
+		},
+		"arg.lamp_ABRIS_button3": {
+			"arg": 563,
+			"description": "lamp_ABRIS_button3"
+		},
+		"arg.lamp_ABRIS_button4": {
+			"arg": 564,
+			"description": "lamp_ABRIS_button4"
+		},
+		"arg.lamp_ABRIS_button5": {
+			"arg": 565,
+			"description": "lamp_ABRIS_button5"
+		},
+		"arg.lamp_AC_Ground_Power": {
+			"arg": 586,
+			"description": "lamp_AC_Ground_Power"
+		},
+		"arg.lamp_APUOilPres": {
+			"arg": 168,
+			"description": "lamp_APUOilPres"
+		},
+		"arg.lamp_APUStoppedByRPM": {
+			"arg": 169,
+			"description": "lamp_APUStoppedByRPM"
+		},
+		"arg.lamp_APUValveOpen": {
+			"arg": 162,
+			"description": "lamp_APUValveOpen"
+		},
+		"arg.lamp_APU_IsON": {
+			"arg": 174,
+			"description": "lamp_APU_IsON"
+		},
+		"arg.lamp_ActuatorsOilPress": {
+			"arg": 204,
+			"description": "lamp_ActuatorsOilPress"
+		},
+		"arg.lamp_AntiIceLeftEngine": {
+			"arg": 181,
+			"description": "lamp_AntiIceLeftEngine"
+		},
+		"arg.lamp_AntiIceRightEngine": {
+			"arg": 182,
+			"description": "lamp_AntiIceRightEngine"
+		},
+		"arg.lamp_AntiIceRotors": {
+			"arg": 183,
+			"description": "lamp_AntiIceRotors"
+		},
+		"arg.lamp_BackupModeLeftEngine": {
+			"arg": 207,
+			"description": "lamp_BackupModeLeftEngine"
+		},
+		"arg.lamp_BackupModeRightEngine": {
+			"arg": 208,
+			"description": "lamp_BackupModeRightEngine"
+		},
+		"arg.lamp_Burst": {
+			"arg": 178,
+			"description": "lamp_Burst"
+		},
+		"arg.lamp_CC_failure": {
+			"arg": 206,
+			"description": "lamp_CC_failure"
+		},
+		"arg.lamp_CC_test": {
+			"arg": 189,
+			"description": "lamp_CC_test"
+		},
+		"arg.lamp_CannonMovingBarr": {
+			"arg": 173,
+			"description": "lamp_CannonMovingBarr"
+		},
+		"arg.lamp_CannonMovingBarr2": {
+			"arg": 177,
+			"description": "lamp_CannonMovingBarr2"
+		},
+		"arg.lamp_CouplerOff": {
+			"arg": 187,
+			"description": "lamp_CouplerOff"
+		},
+		"arg.lamp_DC_AC_Inverter": {
+			"arg": 212,
+			"description": "lamp_DC_AC_Inverter"
+		},
+		"arg.lamp_DC_Ground_Power": {
+			"arg": 261,
+			"description": "lamp_DC_Ground_Power"
+		},
+		"arg.lamp_Descent": {
+			"arg": 172,
+			"description": "lamp_Descent"
+		},
+		"arg.lamp_DustProtectLeftEngine": {
+			"arg": 190,
+			"description": "lamp_DustProtectLeftEngine"
+		},
+		"arg.lamp_DustProtectRightEngine": {
+			"arg": 191,
+			"description": "lamp_DustProtectRightEngine"
+		},
+		"arg.lamp_EndOfRoute": {
+			"arg": 166,
+			"description": "lamp_EndOfRoute"
+		},
+		"arg.lamp_EnginesStartValve": {
+			"arg": 163,
+			"description": "lamp_EnginesStartValve"
+		},
+		"arg.lamp_Exting_APU_Fire": {
+			"arg": 239,
+			"description": "lamp_Exting_APU_Fire"
+		},
+		"arg.lamp_Exting_HydraulicsFire": {
+			"arg": 568,
+			"description": "lamp_Exting_HydraulicsFire"
+		},
+		"arg.lamp_Exting_Lamp1": {
+			"arg": 244,
+			"description": "lamp_Exting_Lamp1"
+		},
+		"arg.lamp_Exting_Lamp2": {
+			"arg": 245,
+			"description": "lamp_Exting_Lamp2"
+		},
+		"arg.lamp_Exting_LeftEngineFire": {
+			"arg": 237,
+			"description": "lamp_Exting_LeftEngineFire"
+		},
+		"arg.lamp_Exting_RightEngineFire": {
+			"arg": 241,
+			"description": "lamp_Exting_RightEngineFire"
+		},
+		"arg.lamp_Exting_VentilatorFire": {
+			"arg": 243,
+			"description": "lamp_Exting_VentilatorFire"
+		},
+		"arg.lamp_Fire": {
+			"arg": 85,
+			"description": "lamp_Fire"
+		},
+		"arg.lamp_ForwardTank": {
+			"arg": 200,
+			"description": "lamp_ForwardTank"
+		},
+		"arg.lamp_ForwardTankTest": {
+			"arg": 139,
+			"description": "lamp_ForwardTankTest"
+		},
+		"arg.lamp_FuelCrossfeedOn": {
+			"arg": 211,
+			"description": "lamp_FuelCrossfeedOn"
+		},
+		"arg.lamp_H_RALT_stab": {
+			"arg": 170,
+			"description": "lamp_H_RALT_stab"
+		},
+		"arg.lamp_Hover": {
+			"arg": 175,
+			"description": "lamp_Hover"
+		},
+		"arg.lamp_IAS_max": {
+			"arg": 83,
+			"description": "lamp_IAS_max"
+		},
+		"arg.lamp_IFFfailure": {
+			"arg": 86,
+			"description": "lamp_IFFfailure"
+		},
+		"arg.lamp_I_251V": {
+			"arg": 205,
+			"description": "lamp_I_251V"
+		},
+		"arg.lamp_LeftInnerTank": {
+			"arg": 202,
+			"description": "lamp_LeftInnerTank"
+		},
+		"arg.lamp_LeftOuterTank": {
+			"arg": 185,
+			"description": "lamp_LeftOuterTank"
+		},
+		"arg.lamp_LeftPitotHeatTest": {
+			"arg": 155,
+			"description": "lamp_LeftPitotHeatTest"
+		},
+		"arg.lamp_LeftValveClosed": {
+			"arg": 209,
+			"description": "lamp_LeftValveClosed"
+		},
+		"arg.lamp_LockOff": {
+			"arg": 213,
+			"description": "lamp_LockOff"
+		},
+		"arg.lamp_LowerGear": {
+			"arg": 48,
+			"description": "lamp_LowerGear"
+		},
+		"arg.lamp_MasterWarning_brightness": {
+			"arg": 1015,
+			"description": "lamp_MasterWarning_brightness"
+		},
+		"arg.lamp_NyMax": {
+			"arg": 80,
+			"description": "lamp_NyMax"
+		},
+		"arg.lamp_OBZOR_800": {
+			"arg": 179,
+			"description": "lamp_OBZOR_800"
+		},
+		"arg.lamp_PUI800_Sta1_WeapIsPresent": {
+			"arg": 392,
+			"description": "lamp_PUI800_Sta1_WeapIsPresent"
+		},
+		"arg.lamp_PUI800_Sta1_WeapIsReady": {
+			"arg": 388,
+			"description": "lamp_PUI800_Sta1_WeapIsReady"
+		},
+		"arg.lamp_PUI800_Sta2_WeapIsPresent": {
+			"arg": 393,
+			"description": "lamp_PUI800_Sta2_WeapIsPresent"
+		},
+		"arg.lamp_PUI800_Sta2_WeapIsReady": {
+			"arg": 389,
+			"description": "lamp_PUI800_Sta2_WeapIsReady"
+		},
+		"arg.lamp_PUI800_Sta3_WeapIsPresent": {
+			"arg": 394,
+			"description": "lamp_PUI800_Sta3_WeapIsPresent"
+		},
+		"arg.lamp_PUI800_Sta3_WeapIsReady": {
+			"arg": 390,
+			"description": "lamp_PUI800_Sta3_WeapIsReady"
+		},
+		"arg.lamp_PUI800_Sta4_WeapIsPresent": {
+			"arg": 395,
+			"description": "lamp_PUI800_Sta4_WeapIsPresent"
+		},
+		"arg.lamp_PUI800_Sta4_WeapIsReady": {
+			"arg": 391,
+			"description": "lamp_PUI800_Sta4_WeapIsReady"
+		},
+		"arg.lamp_RANET": {
+			"arg": 188,
+			"description": "lamp_RANET"
+		},
+		"arg.lamp_RPM_leftEngineMax": {
+			"arg": 78,
+			"description": "lamp_RPM_leftEngineMax"
+		},
+		"arg.lamp_RPM_rightEngineMax": {
+			"arg": 79,
+			"description": "lamp_RPM_rightEngineMax"
+		},
+		"arg.lamp_RearTank": {
+			"arg": 201,
+			"description": "lamp_RearTank"
+		},
+		"arg.lamp_RearTankTest": {
+			"arg": 140,
+			"description": "lamp_RearTankTest"
+		},
+		"arg.lamp_RightInnerTank": {
+			"arg": 203,
+			"description": "lamp_RightInnerTank"
+		},
+		"arg.lamp_RightOuterTank": {
+			"arg": 186,
+			"description": "lamp_RightOuterTank"
+		},
+		"arg.lamp_RightPitotHeatTest": {
+			"arg": 157,
+			"description": "lamp_RightPitotHeatTest"
+		},
+		"arg.lamp_RightValveClosed": {
+			"arg": 210,
+			"description": "lamp_RightValveClosed"
+		},
+		"arg.lamp_RotorRPM_brightness": {
+			"arg": 1016,
+			"description": "lamp_RotorRPM_brightness"
+		},
+		"arg.lamp_RoughNAVcalc": {
+			"arg": 164,
+			"description": "lamp_RoughNAVcalc"
+		},
+		"arg.lamp_RouteCourseSteering": {
+			"arg": 171,
+			"description": "lamp_RouteCourseSteering"
+		},
+		"arg.lamp_RouteHeadingSteering": {
+			"arg": 165,
+			"description": "lamp_RouteHeadingSteering"
+		},
+		"arg.lamp_TrainingMode": {
+			"arg": 180,
+			"description": "lamp_TrainingMode"
+		},
+		"arg.lamp_UNDERFIREwarning": {
+			"arg": 47,
+			"description": "lamp_UNDERFIREwarning"
+		},
+		"arg.lamp_VUO_Heat": {
+			"arg": 184,
+			"description": "lamp_VUO_Heat"
+		},
+		"arg.lamp_Waypoint": {
+			"arg": 176,
+			"description": "lamp_Waypoint"
+		},
+		"arg.lamp_WeapSysBUS_ON": {
+			"arg": 167,
+			"description": "lamp_WeapSysBUS_ON"
+		},
+		"arg.lamp_flap_hydro_1": {
+			"arg": 469,
+			"description": "lamp_flap_hydro_1"
+		},
+		"arg.lamp_flap_hydro_2": {
+			"arg": 470,
+			"description": "lamp_flap_hydro_2"
+		},
+		"arg.lamp_mainTransmission": {
+			"arg": 84,
+			"description": "lamp_mainTransmission"
+		},
+		"arg.lamp_vibr_leftEngine": {
+			"arg": 81,
+			"description": "lamp_vibr_leftEngine"
+		},
+		"arg.lamp_vibr_rightEngine": {
+			"arg": 82,
+			"description": "lamp_vibr_rightEngine"
+		},
+		"arg.left_door": {
+			"arg": 533,
+			"description": "left_door"
+		},
+		"arg.left_engine_throttle": {
+			"arg": 578,
+			"description": "left_engine_throttle"
+		},
+		"arg.mirrors_draw": {
+			"arg": 545,
+			"description": "mirrors_draw"
+		},
+		"arg.missile_trigger": {
+			"arg": 614,
+			"description": "missile_trigger"
+		},
+		"arg.pilot_draw": {
+			"arg": 540,
+			"description": "pilot_draw"
+		},
+		"arg.right_engine_throttle": {
+			"arg": 557,
+			"description": "right_engine_throttle"
+		},
+		"arg.rudder": {
+			"arg": 266,
+			"description": "rudder"
+		},
+		"arg.stick_pitch": {
+			"arg": 74,
+			"description": "stick_pitch"
+		},
+		"arg.stick_roll": {
+			"arg": 71,
+			"description": "stick_roll"
+		},
+		"arg.throttle_cover": {
+			"arg": 579,
+			"description": "throttle_cover"
+		},
+		"arg.vy": {
+			"arg": 24,
+			"description": "vy"
+		},
+		"arg.wheel_brakes": {
+			"arg": 571,
+			"description": "wheel_brakes"
+		},
+		"arg.windscreen_wiper": {
+			"arg": 546,
+			"description": "windscreen_wiper"
+		},
+		"dev0.COMM-PWR-SA-TLF-PTR": {
+			"arg": 289,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Radio equipment datalink SA-TLF power switch",
+			"deviceId": 0,
+			"elementName": "COMM-PWR-SA-TLF-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"dev0.FEEDING-OZH-PTR": {
+			"arg": 148,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Windshield washer fluid switch",
+			"deviceId": 0,
+			"elementName": "FEEDING-OZH-PTR",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"dev0.cmd_3255": {
+			"bindings": [
+				{
+					"name": "Flashlight Color - Toggle Green/White",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3255,
+			"description": "Flashlight Color - Toggle Green/White",
+			"deviceId": 0,
+			"type": "raw"
+		},
+		"dev0.cmd_3256": {
+			"bindings": [
+				{
+					"name": "Flashlight",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3256,
+			"description": "Flashlight",
+			"deviceId": 0,
+			"type": "raw"
+		},
+		"dev100.Button_1": {
+			"bindings": [
+				{
+					"name": "Kneeboard Next Page",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3001,
+			"description": "Kneeboard Next Page",
+			"deviceId": 100,
+			"type": "raw"
+		},
+		"dev100.Button_2": {
+			"bindings": [
+				{
+					"name": "Kneeboard Previous Page",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "Kneeboard Previous Page",
+			"deviceId": 100,
+			"type": "raw"
+		},
+		"dev100.Button_3": {
+			"bindings": [
+				{
+					"name": "Kneeboard current position mark point",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Kneeboard current position mark point",
+			"deviceId": 100,
+			"type": "raw"
+		},
+		"ind.1": {
+			"description": "ccHUD (all fields)",
+			"indicationId": 1
+		},
+		"ind.1.IAS_deviation_index": {
+			"description": "IAS_deviation_index",
+			"fieldName": "IAS_deviation_index",
+			"indicationId": 1
+		},
+		"ind.1.IAS_deviation_scale": {
+			"description": "IAS_deviation_scale",
+			"fieldName": "IAS_deviation_scale",
+			"indicationId": 1
+		},
+		"ind.1.IAS_index": {
+			"description": "IAS_index",
+			"fieldName": "IAS_index",
+			"indicationId": 1
+		},
+		"ind.1.IAS_max_index": {
+			"description": "IAS_max_index",
+			"fieldName": "IAS_max_index",
+			"indicationId": 1
+		},
+		"ind.1.IAS_scale": {
+			"description": "IAS_scale",
+			"fieldName": "IAS_scale",
+			"indicationId": 1
+		},
+		"ind.1.W_vector": {
+			"description": "W_vector",
+			"fieldName": "W_vector",
+			"indicationId": 1
+		},
+		"ind.1.alt_deviation_scale": {
+			"description": "alt_deviation_scale",
+			"fieldName": "alt_deviation_scale",
+			"indicationId": 1
+		},
+		"ind.1.alt_deviation_scale_index": {
+			"description": "alt_deviation_scale_index",
+			"fieldName": "alt_deviation_scale_index",
+			"indicationId": 1
+		},
+		"ind.1.azimuth_deviation_scale": {
+			"description": "azimuth_deviation_scale",
+			"fieldName": "azimuth_deviation_scale",
+			"indicationId": 1
+		},
+		"ind.1.azimuth_deviation_scale_180": {
+			"description": "azimuth_deviation_scale_180",
+			"fieldName": "azimuth_deviation_scale_180",
+			"indicationId": 1
+		},
+		"ind.1.azimuth_deviation_scale_30": {
+			"description": "azimuth_deviation_scale_30",
+			"fieldName": "azimuth_deviation_scale_30",
+			"indicationId": 1
+		},
+		"ind.1.bank_scale": {
+			"description": "bank_scale",
+			"fieldName": "bank_scale",
+			"indicationId": 1
+		},
+		"ind.1.bird_base": {
+			"description": "bird_base",
+			"fieldName": "bird_base",
+			"indicationId": 1
+		},
+		"ind.1.bird_mark": {
+			"description": "bird_mark",
+			"fieldName": "bird_mark",
+			"indicationId": 1
+		},
+		"ind.1.bird_mark_dummy": {
+			"description": "bird_mark_dummy",
+			"fieldName": "bird_mark_dummy",
+			"indicationId": 1
+		},
+		"ind.1.bomb_fall_line": {
+			"description": "bomb_fall_line",
+			"fieldName": "bomb_fall_line",
+			"indicationId": 1
+		},
+		"ind.1.bombs_distance_sector": {
+			"description": "bombs_distance_sector",
+			"fieldName": "bombs_distance_sector",
+			"indicationId": 1
+		},
+		"ind.1.bombs_max_range_tick": {
+			"description": "bombs_max_range_tick",
+			"fieldName": "bombs_max_range_tick",
+			"indicationId": 1
+		},
+		"ind.1.bombs_min_range_tick": {
+			"description": "bombs_min_range_tick",
+			"fieldName": "bombs_min_range_tick",
+			"indicationId": 1
+		},
+		"ind.1.bombs_piper": {
+			"description": "bombs_piper",
+			"fieldName": "bombs_piper",
+			"indicationId": 1
+		},
+		"ind.1.break_symbol": {
+			"description": "break_symbol",
+			"fieldName": "break_symbol",
+			"indicationId": 1
+		},
+		"ind.1.cannon_distance_sector_dummy": {
+			"description": "cannon_distance_sector_dummy",
+			"fieldName": "cannon_distance_sector_dummy",
+			"indicationId": 1
+		},
+		"ind.1.cannon_distance_sector_piper": {
+			"description": "cannon_distance_sector_piper",
+			"fieldName": "cannon_distance_sector_piper",
+			"indicationId": 1
+		},
+		"ind.1.cannon_limits_left": {
+			"description": "cannon_limits_left",
+			"fieldName": "cannon_limits_left",
+			"indicationId": 1
+		},
+		"ind.1.cannon_limits_right": {
+			"description": "cannon_limits_right",
+			"fieldName": "cannon_limits_right",
+			"indicationId": 1
+		},
+		"ind.1.cannon_limits_up": {
+			"description": "cannon_limits_up",
+			"fieldName": "cannon_limits_up",
+			"indicationId": 1
+		},
+		"ind.1.cannon_max_range_tick": {
+			"description": "cannon_max_range_tick",
+			"fieldName": "cannon_max_range_tick",
+			"indicationId": 1
+		},
+		"ind.1.cannon_max_range_tick_dumm": {
+			"description": "cannon_max_range_tick_dumm",
+			"fieldName": "cannon_max_range_tick_dumm",
+			"indicationId": 1
+		},
+		"ind.1.cannon_min_range_tick": {
+			"description": "cannon_min_range_tick",
+			"fieldName": "cannon_min_range_tick",
+			"indicationId": 1
+		},
+		"ind.1.cannon_min_range_tick_dumm": {
+			"description": "cannon_min_range_tick_dumm",
+			"fieldName": "cannon_min_range_tick_dumm",
+			"indicationId": 1
+		},
+		"ind.1.cannon_piper": {
+			"description": "cannon_piper",
+			"fieldName": "cannon_piper",
+			"indicationId": 1
+		},
+		"ind.1.dir_alt_hor_line": {
+			"description": "dir_alt_hor_line",
+			"fieldName": "dir_alt_hor_line",
+			"indicationId": 1
+		},
+		"ind.1.dir_alt_vert_line": {
+			"description": "dir_alt_vert_line",
+			"fieldName": "dir_alt_vert_line",
+			"indicationId": 1
+		},
+		"ind.1.dir_alt_vert_line_down": {
+			"description": "dir_alt_vert_line_down",
+			"fieldName": "dir_alt_vert_line_down",
+			"indicationId": 1
+		},
+		"ind.1.dummy_TDC": {
+			"description": "dummy_TDC",
+			"fieldName": "dummy_TDC",
+			"indicationId": 1
+		},
+		"ind.1.exceed_HUD_zone": {
+			"description": "exceed_HUD_zone",
+			"fieldName": "exceed_HUD_zone",
+			"indicationId": 1
+		},
+		"ind.1.filter": {
+			"description": "filter",
+			"fieldName": "filter",
+			"indicationId": 1
+		},
+		"ind.1.grid": {
+			"description": "grid",
+			"fieldName": "grid",
+			"indicationId": 1
+		},
+		"ind.1.hardware_glass_base": {
+			"description": "hardware_glass_base",
+			"fieldName": "hardware_glass_base",
+			"indicationId": 1
+		},
+		"ind.1.heading_deviation_diamond": {
+			"description": "heading_deviation_diamond",
+			"fieldName": "heading_deviation_diamond",
+			"indicationId": 1
+		},
+		"ind.1.heading_index": {
+			"description": "heading_index",
+			"fieldName": "heading_index",
+			"indicationId": 1
+		},
+		"ind.1.heading_tape1": {
+			"description": "heading_tape1",
+			"fieldName": "heading_tape1",
+			"indicationId": 1
+		},
+		"ind.1.heading_tape2": {
+			"description": "heading_tape2",
+			"fieldName": "heading_tape2",
+			"indicationId": 1
+		},
+		"ind.1.heading_tape_base": {
+			"description": "heading_tape_base",
+			"fieldName": "heading_tape_base",
+			"indicationId": 1
+		},
+		"ind.1.heading_tape_border": {
+			"description": "heading_tape_border",
+			"fieldName": "heading_tape_border",
+			"indicationId": 1
+		},
+		"ind.1.missile_ASE_circle": {
+			"description": "missile_ASE_circle",
+			"fieldName": "missile_ASE_circle",
+			"indicationId": 1
+		},
+		"ind.1.ny_index": {
+			"description": "ny_index",
+			"fieldName": "ny_index",
+			"indicationId": 1
+		},
+		"ind.1.ny_max_index": {
+			"description": "ny_max_index",
+			"fieldName": "ny_max_index",
+			"indicationId": 1
+		},
+		"ind.1.ny_scale": {
+			"description": "ny_scale",
+			"fieldName": "ny_scale",
+			"indicationId": 1
+		},
+		"ind.1.pitch_bank_scale1": {
+			"description": "pitch_bank_scale1",
+			"fieldName": "pitch_bank_scale1",
+			"indicationId": 1
+		},
+		"ind.1.pitch_bank_scale2": {
+			"description": "pitch_bank_scale2",
+			"fieldName": "pitch_bank_scale2",
+			"indicationId": 1
+		},
+		"ind.1.pitch_bank_scale_border1": {
+			"description": "pitch_bank_scale_border1",
+			"fieldName": "pitch_bank_scale_border1",
+			"indicationId": 1
+		},
+		"ind.1.pitch_bank_scale_border2": {
+			"description": "pitch_bank_scale_border2",
+			"fieldName": "pitch_bank_scale_border2",
+			"indicationId": 1
+		},
+		"ind.1.point_hovering_deviation_rect": {
+			"description": "point_hovering_deviation_rect",
+			"fieldName": "point_hovering_deviation_rect",
+			"indicationId": 1
+		},
+		"ind.1.ralt_scale": {
+			"description": "ralt_scale",
+			"fieldName": "ralt_scale",
+			"indicationId": 1
+		},
+		"ind.1.ralt_scale_index": {
+			"description": "ralt_scale_index",
+			"fieldName": "ralt_scale_index",
+			"indicationId": 1
+		},
+		"ind.1.ring_hovering_deviation": {
+			"description": "ring_hovering_deviation",
+			"fieldName": "ring_hovering_deviation",
+			"indicationId": 1
+		},
+		"ind.1.rockets_distance_sector": {
+			"description": "rockets_distance_sector",
+			"fieldName": "rockets_distance_sector",
+			"indicationId": 1
+		},
+		"ind.1.rockets_max_range_tick": {
+			"description": "rockets_max_range_tick",
+			"fieldName": "rockets_max_range_tick",
+			"indicationId": 1
+		},
+		"ind.1.rockets_min_range_tick": {
+			"description": "rockets_min_range_tick",
+			"fieldName": "rockets_min_range_tick",
+			"indicationId": 1
+		},
+		"ind.1.rockets_piper": {
+			"description": "rockets_piper",
+			"fieldName": "rockets_piper",
+			"indicationId": 1
+		},
+		"ind.1.shkval_TDC": {
+			"description": "shkval_TDC",
+			"fieldName": "shkval_TDC",
+			"indicationId": 1
+		},
+		"ind.1.shkval_distance_sector": {
+			"description": "shkval_distance_sector",
+			"fieldName": "shkval_distance_sector",
+			"indicationId": 1
+		},
+		"ind.1.shkval_limits_left": {
+			"description": "shkval_limits_left",
+			"fieldName": "shkval_limits_left",
+			"indicationId": 1
+		},
+		"ind.1.shkval_limits_up": {
+			"description": "shkval_limits_up",
+			"fieldName": "shkval_limits_up",
+			"indicationId": 1
+		},
+		"ind.1.shkval_piper": {
+			"description": "shkval_piper",
+			"fieldName": "shkval_piper",
+			"indicationId": 1
+		},
+		"ind.1.total_field_of_view": {
+			"description": "total_field_of_view",
+			"fieldName": "total_field_of_view",
+			"indicationId": 1
+		},
+		"ind.1.track_deviation_diamond": {
+			"description": "track_deviation_diamond",
+			"fieldName": "track_deviation_diamond",
+			"indicationId": 1
+		},
+		"ind.1.track_deviation_index": {
+			"description": "track_deviation_index",
+			"fieldName": "track_deviation_index",
+			"indicationId": 1
+		},
+		"ind.1.track_deviation_scale": {
+			"description": "track_deviation_scale",
+			"fieldName": "track_deviation_scale",
+			"indicationId": 1
+		},
+		"ind.1.txt_BALT": {
+			"description": "txt_BALT",
+			"fieldName": "txt_BALT",
+			"indicationId": 1
+		},
+		"ind.1.txt_IMU_malfunction": {
+			"description": "txt_IMU_malfunction",
+			"fieldName": "txt_IMU_malfunction",
+			"indicationId": 1
+		},
+		"ind.1.txt_INS_status": {
+			"description": "txt_INS_status",
+			"fieldName": "txt_INS_status",
+			"indicationId": 1
+		},
+		"ind.1.txt_LR_PAUSE_symbol": {
+			"description": "txt_LR_PAUSE_symbol",
+			"fieldName": "txt_LR_PAUSE_symbol",
+			"indicationId": 1
+		},
+		"ind.1.txt_LR_countdown": {
+			"description": "txt_LR_countdown",
+			"fieldName": "txt_LR_countdown",
+			"indicationId": 1
+		},
+		"ind.1.txt_NavFix": {
+			"description": "txt_NavFix",
+			"fieldName": "txt_NavFix",
+			"indicationId": 1
+		},
+		"ind.1.txt_RALT": {
+			"description": "txt_RALT",
+			"fieldName": "txt_RALT",
+			"indicationId": 1
+		},
+		"ind.1.txt_RALT_R_symbol": {
+			"description": "txt_RALT_R_symbol",
+			"fieldName": "txt_RALT_R_symbol",
+			"indicationId": 1
+		},
+		"ind.1.txt_RU_TA_symbol": {
+			"description": "txt_RU_TA_symbol",
+			"fieldName": "txt_RU_TA_symbol",
+			"indicationId": 1
+		},
+		"ind.1.txt_TA_symbol": {
+			"description": "txt_TA_symbol",
+			"fieldName": "txt_TA_symbol",
+			"indicationId": 1
+		},
+		"ind.1.txt_TgtEntry": {
+			"description": "txt_TgtEntry",
+			"fieldName": "txt_TgtEntry",
+			"indicationId": 1
+		},
+		"ind.1.txt_V_H": {
+			"description": "txt_V_H",
+			"fieldName": "txt_V_H",
+			"indicationId": 1
+		},
+		"ind.1.txt_Vy": {
+			"description": "txt_Vy",
+			"fieldName": "txt_Vy",
+			"indicationId": 1
+		},
+		"ind.1.txt_W": {
+			"description": "txt_W",
+			"fieldName": "txt_W",
+			"indicationId": 1
+		},
+		"ind.1.txt_launch_permission": {
+			"description": "txt_launch_permission",
+			"fieldName": "txt_launch_permission",
+			"indicationId": 1
+		},
+		"ind.1.txt_range": {
+			"description": "txt_range",
+			"fieldName": "txt_range",
+			"indicationId": 1
+		},
+		"ind.1.txt_test": {
+			"description": "txt_test",
+			"fieldName": "txt_test",
+			"indicationId": 1
+		},
+		"ind.1.txt_training_mode": {
+			"description": "txt_training_mode",
+			"fieldName": "txt_training_mode",
+			"indicationId": 1
+		},
+		"ind.1.underline": {
+			"description": "underline",
+			"fieldName": "underline",
+			"indicationId": 1
+		},
+		"ind.1.vy_scale": {
+			"description": "vy_scale",
+			"fieldName": "vy_scale",
+			"indicationId": 1
+		},
+		"ind.1.vy_scale_index": {
+			"description": "vy_scale_index",
+			"fieldName": "vy_scale_index",
+			"indicationId": 1
+		},
+		"ind.2": {
+			"description": "ccSHKVAL_V (all fields)",
+			"indicationId": 2
+		},
+		"ind.2.SHKVAL_border": {
+			"description": "SHKVAL_border",
+			"fieldName": "SHKVAL_border",
+			"indicationId": 2
+		},
+		"ind.2.camera_lim_H": {
+			"description": "camera_lim_H",
+			"fieldName": "camera_lim_H",
+			"indicationId": 2
+		},
+		"ind.2.camera_lim_V": {
+			"description": "camera_lim_V",
+			"fieldName": "camera_lim_V",
+			"indicationId": 2
+		},
+		"ind.2.camera_lim_index_H": {
+			"description": "camera_lim_index_H",
+			"fieldName": "camera_lim_index_H",
+			"indicationId": 2
+		},
+		"ind.2.camera_lim_index_V": {
+			"description": "camera_lim_index_V",
+			"fieldName": "camera_lim_index_V",
+			"indicationId": 2
+		},
+		"ind.2.gun_lim_H": {
+			"description": "gun_lim_H",
+			"fieldName": "gun_lim_H",
+			"indicationId": 2
+		},
+		"ind.2.gun_lim_V": {
+			"description": "gun_lim_V",
+			"fieldName": "gun_lim_V",
+			"indicationId": 2
+		},
+		"ind.2.narrow_cam_border": {
+			"description": "narrow_cam_border",
+			"fieldName": "narrow_cam_border",
+			"indicationId": 2
+		},
+		"ind.2.pitch_bank_line": {
+			"description": "pitch_bank_line",
+			"fieldName": "pitch_bank_line",
+			"indicationId": 2
+		},
+		"ind.2.plane_symbol": {
+			"description": "plane_symbol",
+			"fieldName": "plane_symbol",
+			"indicationId": 2
+		},
+		"ind.2.ralt_scale": {
+			"description": "ralt_scale",
+			"fieldName": "ralt_scale",
+			"indicationId": 2
+		},
+		"ind.2.ralt_scale_index": {
+			"description": "ralt_scale_index",
+			"fieldName": "ralt_scale_index",
+			"indicationId": 2
+		},
+		"ind.2.txt_IAS": {
+			"description": "txt_IAS",
+			"fieldName": "txt_IAS",
+			"indicationId": 2
+		},
+		"ind.2.txt_P_symbol": {
+			"description": "txt_P_symbol",
+			"fieldName": "txt_P_symbol",
+			"indicationId": 2
+		},
+		"ind.2.txt_TA_symbol": {
+			"description": "txt_TA_symbol",
+			"fieldName": "txt_TA_symbol",
+			"indicationId": 2
+		},
+		"ind.2.txt_TG_symbol": {
+			"description": "txt_TG_symbol",
+			"fieldName": "txt_TG_symbol",
+			"indicationId": 2
+		},
+		"ind.2.txt_V_H": {
+			"description": "txt_V_H",
+			"fieldName": "txt_V_H",
+			"indicationId": 2
+		},
+		"ind.2.txt_range": {
+			"description": "txt_range",
+			"fieldName": "txt_range",
+			"indicationId": 2
+		},
+		"ind.2.txt_range_C": {
+			"description": "txt_range_C",
+			"fieldName": "txt_range_C",
+			"indicationId": 2
+		},
+		"ind.3": {
+			"description": "ccABRIS (all fields)",
+			"indicationId": 3
+		},
+		"ind.3.ABRIS_workspace_common": {
+			"description": "ABRIS_workspace_common",
+			"fieldName": "ABRIS_workspace_common",
+			"indicationId": 3
+		},
+		"ind.3.SNR_row": {
+			"description": "SNR_row",
+			"fieldName": "SNR_row",
+			"indicationId": 3
+		},
+		"ind.3.SNR_row_label": {
+			"description": "SNR_row_label",
+			"fieldName": "SNR_row_label",
+			"indicationId": 3
+		},
+		"ind.3.bios_base": {
+			"description": "bios_base",
+			"fieldName": "bios_base",
+			"indicationId": 3
+		},
+		"ind.3.climb_dive_point_border": {
+			"description": "climb_dive_point_border",
+			"fieldName": "climb_dive_point_border",
+			"indicationId": 3
+		},
+		"ind.3.climb_dive_point_mark": {
+			"description": "climb_dive_point_mark",
+			"fieldName": "climb_dive_point_mark",
+			"indicationId": 3
+		},
+		"ind.3.cursor_symbol": {
+			"description": "cursor_symbol",
+			"fieldName": "cursor_symbol",
+			"indicationId": 3
+		},
+		"ind.3.cwpt_": {
+			"description": "cwpt_",
+			"fieldName": "cwpt_",
+			"indicationId": 3
+		},
+		"ind.3.down_line": {
+			"description": "down_line",
+			"fieldName": "down_line",
+			"indicationId": 3
+		},
+		"ind.3.dummy": {
+			"description": "dummy",
+			"fieldName": "dummy",
+			"indicationId": 3
+		},
+		"ind.3.el_SPI_line": {
+			"description": "el_SPI_line",
+			"fieldName": "el_SPI_line",
+			"indicationId": 3
+		},
+		"ind.3.el_additional_info_current_line": {
+			"description": "el_additional_info_current_line",
+			"fieldName": "el_additional_info_current_line",
+			"indicationId": 3
+		},
+		"ind.3.el_additional_info_line": {
+			"description": "el_additional_info_line",
+			"fieldName": "el_additional_info_line",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_CIVILIAN": {
+			"description": "el_airport_CIVILIAN",
+			"fieldName": "el_airport_CIVILIAN",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_CIVILIAN_fon": {
+			"description": "el_airport_CIVILIAN_fon",
+			"fieldName": "el_airport_CIVILIAN_fon",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_MILITARY": {
+			"description": "el_airport_MILITARY",
+			"fieldName": "el_airport_MILITARY",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_NEW_fon": {
+			"description": "el_airport_NEW_fon",
+			"fieldName": "el_airport_NEW_fon",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_RESTRICTED": {
+			"description": "el_airport_RESTRICTED",
+			"fieldName": "el_airport_RESTRICTED",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_RESTRICTED_fon": {
+			"description": "el_airport_RESTRICTED_fon",
+			"fieldName": "el_airport_RESTRICTED_fon",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_heli_MILITARY": {
+			"description": "el_airport_heli_MILITARY",
+			"fieldName": "el_airport_heli_MILITARY",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_heli_MILITARY_fon": {
+			"description": "el_airport_heli_MILITARY_fon",
+			"fieldName": "el_airport_heli_MILITARY_fon",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_hydro_MILITARY": {
+			"description": "el_airport_hydro_MILITARY",
+			"fieldName": "el_airport_hydro_MILITARY",
+			"indicationId": 3
+		},
+		"ind.3.el_airport_hydro_MILITARY_fon": {
+			"description": "el_airport_hydro_MILITARY_fon",
+			"fieldName": "el_airport_hydro_MILITARY_fon",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_DME": {
+			"description": "el_beacon_DME",
+			"fieldName": "el_beacon_DME",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_NDB": {
+			"description": "el_beacon_NDB",
+			"fieldName": "el_beacon_NDB",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_TACAN": {
+			"description": "el_beacon_TACAN",
+			"fieldName": "el_beacon_TACAN",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_VOR": {
+			"description": "el_beacon_VOR",
+			"fieldName": "el_beacon_VOR",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_VORDME": {
+			"description": "el_beacon_VORDME",
+			"fieldName": "el_beacon_VORDME",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_VORTACAN": {
+			"description": "el_beacon_VORTACAN",
+			"fieldName": "el_beacon_VORTACAN",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_wpt": {
+			"description": "el_beacon_wpt",
+			"fieldName": "el_beacon_wpt",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_wpt_arrow": {
+			"description": "el_beacon_wpt_arrow",
+			"fieldName": "el_beacon_wpt_arrow",
+			"indicationId": 3
+		},
+		"ind.3.el_beacon_wpt_solid": {
+			"description": "el_beacon_wpt_solid",
+			"fieldName": "el_beacon_wpt_solid",
+			"indicationId": 3
+		},
+		"ind.3.el_landmark": {
+			"description": "el_landmark",
+			"fieldName": "el_landmark",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_AIRDEFENCE": {
+			"description": "el_marker_DLPT_AIRDEFENCE",
+			"fieldName": "el_marker_DLPT_AIRDEFENCE",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_AIRDEFENCE_TARGET": {
+			"description": "el_marker_DLPT_AIRDEFENCE_TARGET",
+			"fieldName": "el_marker_DLPT_AIRDEFENCE_TARGET",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_ARMOR": {
+			"description": "el_marker_DLPT_ARMOR",
+			"fieldName": "el_marker_DLPT_ARMOR",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_ARMOR_TARGET": {
+			"description": "el_marker_DLPT_ARMOR_TARGET",
+			"fieldName": "el_marker_DLPT_ARMOR_TARGET",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_LEADER": {
+			"description": "el_marker_DLPT_GROUP_LEADER",
+			"fieldName": "el_marker_DLPT_GROUP_LEADER",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_LEADER_plashka": {
+			"description": "el_marker_DLPT_GROUP_LEADER_plashka",
+			"fieldName": "el_marker_DLPT_GROUP_LEADER_plashka",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_LEADER_with_course": {
+			"description": "el_marker_DLPT_GROUP_LEADER_with_course",
+			"fieldName": "el_marker_DLPT_GROUP_LEADER_with_course",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_LEADER_with_course_plashka": {
+			"description": "el_marker_DLPT_GROUP_LEADER_with_course_plashka",
+			"fieldName": "el_marker_DLPT_GROUP_LEADER_with_course_plashka",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_MEMBER": {
+			"description": "el_marker_DLPT_GROUP_MEMBER",
+			"fieldName": "el_marker_DLPT_GROUP_MEMBER",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_MEMBER_plashka": {
+			"description": "el_marker_DLPT_GROUP_MEMBER_plashka",
+			"fieldName": "el_marker_DLPT_GROUP_MEMBER_plashka",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_MEMBER_with_course": {
+			"description": "el_marker_DLPT_GROUP_MEMBER_with_course",
+			"fieldName": "el_marker_DLPT_GROUP_MEMBER_with_course",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_GROUP_MEMBER_with_course_plashka": {
+			"description": "el_marker_DLPT_GROUP_MEMBER_with_course_plashka",
+			"fieldName": "el_marker_DLPT_GROUP_MEMBER_with_course_plashka",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_OTHER": {
+			"description": "el_marker_DLPT_OTHER",
+			"fieldName": "el_marker_DLPT_OTHER",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_OTHER_TARGET": {
+			"description": "el_marker_DLPT_OTHER_TARGET",
+			"fieldName": "el_marker_DLPT_OTHER_TARGET",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_PREPLANNED_FRIEND": {
+			"description": "el_marker_DLPT_PREPLANNED_FRIEND",
+			"fieldName": "el_marker_DLPT_PREPLANNED_FRIEND",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_PREPLANNED_THREAT": {
+			"description": "el_marker_DLPT_PREPLANNED_THREAT",
+			"fieldName": "el_marker_DLPT_PREPLANNED_THREAT",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_REFPOINT": {
+			"description": "el_marker_DLPT_REFPOINT",
+			"fieldName": "el_marker_DLPT_REFPOINT",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_DLPT_REFPOINT_TARGET": {
+			"description": "el_marker_DLPT_REFPOINT_TARGET",
+			"fieldName": "el_marker_DLPT_REFPOINT_TARGET",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_airport_beacon": {
+			"description": "el_marker_airport_beacon",
+			"fieldName": "el_marker_airport_beacon",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_wpt": {
+			"description": "el_marker_wpt",
+			"fieldName": "el_marker_wpt",
+			"indicationId": 3
+		},
+		"ind.3.el_marker_wpt_solid": {
+			"description": "el_marker_wpt_solid",
+			"fieldName": "el_marker_wpt_solid",
+			"indicationId": 3
+		},
+		"ind.3.el_moving_route_segment": {
+			"description": "el_moving_route_segment",
+			"fieldName": "el_moving_route_segment",
+			"indicationId": 3
+		},
+		"ind.3.el_obstacle": {
+			"description": "el_obstacle",
+			"fieldName": "el_obstacle",
+			"indicationId": 3
+		},
+		"ind.3.el_refpoint": {
+			"description": "el_refpoint",
+			"fieldName": "el_refpoint",
+			"indicationId": 3
+		},
+		"ind.3.el_route_segment_NEXT": {
+			"description": "el_route_segment_NEXT",
+			"fieldName": "el_route_segment_NEXT",
+			"indicationId": 3
+		},
+		"ind.3.el_route_segment_OK": {
+			"description": "el_route_segment_OK",
+			"fieldName": "el_route_segment_OK",
+			"indicationId": 3
+		},
+		"ind.3.el_smpl_wpt": {
+			"description": "el_smpl_wpt",
+			"fieldName": "el_smpl_wpt",
+			"indicationId": 3
+		},
+		"ind.3.el_smpl_wpt_big_solid": {
+			"description": "el_smpl_wpt_big_solid",
+			"fieldName": "el_smpl_wpt_big_solid",
+			"indicationId": 3
+		},
+		"ind.3.el_smpl_wpt_curr": {
+			"description": "el_smpl_wpt_curr",
+			"fieldName": "el_smpl_wpt_curr",
+			"indicationId": 3
+		},
+		"ind.3.el_smpl_wpt_solid": {
+			"description": "el_smpl_wpt_solid",
+			"fieldName": "el_smpl_wpt_solid",
+			"indicationId": 3
+		},
+		"ind.3.el_smpl_wpt_solid_blue": {
+			"description": "el_smpl_wpt_solid_blue",
+			"fieldName": "el_smpl_wpt_solid_blue",
+			"indicationId": 3
+		},
+		"ind.3.error_remover": {
+			"description": "error_remover",
+			"fieldName": "error_remover",
+			"indicationId": 3
+		},
+		"ind.3.gnss_satellite_border": {
+			"description": "gnss_satellite_border",
+			"fieldName": "gnss_satellite_border",
+			"indicationId": 3
+		},
+		"ind.3.gnss_satellite_label": {
+			"description": "gnss_satellite_label",
+			"fieldName": "gnss_satellite_label",
+			"indicationId": 3
+		},
+		"ind.3.gnss_satellite_mark": {
+			"description": "gnss_satellite_mark",
+			"fieldName": "gnss_satellite_mark",
+			"indicationId": 3
+		},
+		"ind.3.gps_satellite_border": {
+			"description": "gps_satellite_border",
+			"fieldName": "gps_satellite_border",
+			"indicationId": 3
+		},
+		"ind.3.gps_satellite_label": {
+			"description": "gps_satellite_label",
+			"fieldName": "gps_satellite_label",
+			"indicationId": 3
+		},
+		"ind.3.gps_satellite_mark": {
+			"description": "gps_satellite_mark",
+			"fieldName": "gps_satellite_mark",
+			"indicationId": 3
+		},
+		"ind.3.jscdf_": {
+			"description": "jscdf_",
+			"fieldName": "jscdf_",
+			"indicationId": 3
+		},
+		"ind.3.jscdg_": {
+			"description": "jscdg_",
+			"fieldName": "jscdg_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_1_": {
+			"description": "jsd_1_",
+			"fieldName": "jsd_1_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_2_": {
+			"description": "jsd_2_",
+			"fieldName": "jsd_2_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_3_": {
+			"description": "jsd_3_",
+			"fieldName": "jsd_3_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_4_": {
+			"description": "jsd_4_",
+			"fieldName": "jsd_4_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_55_": {
+			"description": "jsd_55_",
+			"fieldName": "jsd_55_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_5_": {
+			"description": "jsd_5_",
+			"fieldName": "jsd_5_",
+			"indicationId": 3
+		},
+		"ind.3.jsd_6_": {
+			"description": "jsd_6_",
+			"fieldName": "jsd_6_",
+			"indicationId": 3
+		},
+		"ind.3.north_direction": {
+			"description": "north_direction",
+			"fieldName": "north_direction",
+			"indicationId": 3
+		},
+		"ind.3.scale_window": {
+			"description": "scale_window",
+			"fieldName": "scale_window",
+			"indicationId": 3
+		},
+		"ind.3.screen": {
+			"description": "screen",
+			"fieldName": "screen",
+			"indicationId": 3
+		},
+		"ind.3.spi_mark": {
+			"description": "spi_mark",
+			"fieldName": "spi_mark",
+			"indicationId": 3
+		},
+		"ind.3.threat_friendly": {
+			"description": "threat_friendly",
+			"fieldName": "threat_friendly",
+			"indicationId": 3
+		},
+		"ind.3.threat_hostile": {
+			"description": "threat_hostile",
+			"fieldName": "threat_hostile",
+			"indicationId": 3
+		},
+		"ind.3.tid_": {
+			"description": "tid_",
+			"fieldName": "tid_",
+			"indicationId": 3
+		},
+		"ind.3.tid_2": {
+			"description": "tid_2",
+			"fieldName": "tid_2",
+			"indicationId": 3
+		},
+		"ind.3.tin_": {
+			"description": "tin_",
+			"fieldName": "tin_",
+			"indicationId": 3
+		},
+		"ind.3.txt_BSOD": {
+			"description": "txt_BSOD",
+			"fieldName": "txt_BSOD",
+			"indicationId": 3
+		},
+		"ind.3.txt_BSOD_header": {
+			"description": "txt_BSOD_header",
+			"fieldName": "txt_BSOD_header",
+			"indicationId": 3
+		},
+		"ind.3.txt_buttons_status": {
+			"description": "txt_buttons_status",
+			"fieldName": "txt_buttons_status",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_1": {
+			"description": "txt_journal_header_1",
+			"fieldName": "txt_journal_header_1",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_2": {
+			"description": "txt_journal_header_2",
+			"fieldName": "txt_journal_header_2",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_3": {
+			"description": "txt_journal_header_3",
+			"fieldName": "txt_journal_header_3",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_4": {
+			"description": "txt_journal_header_4",
+			"fieldName": "txt_journal_header_4",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_5": {
+			"description": "txt_journal_header_5",
+			"fieldName": "txt_journal_header_5",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_6": {
+			"description": "txt_journal_header_6",
+			"fieldName": "txt_journal_header_6",
+			"indicationId": 3
+		},
+		"ind.3.txt_journal_header_7": {
+			"description": "txt_journal_header_7",
+			"fieldName": "txt_journal_header_7",
+			"indicationId": 3
+		},
+		"ind.3.up_line": {
+			"description": "up_line",
+			"fieldName": "up_line",
+			"indicationId": 3
+		},
+		"ind.3.up_line2": {
+			"description": "up_line2",
+			"fieldName": "up_line2",
+			"indicationId": 3
+		},
+		"ind.4": {
+			"description": "ccEkranIndicator (all fields)",
+			"indicationId": 4
+		},
+		"ind.4.frame": {
+			"description": "frame",
+			"fieldName": "frame",
+			"indicationId": 4
+		},
+		"ind.5": {
+			"description": "ccPVI (all fields)",
+			"indicationId": 5
+		},
+		"ind.5.txt_NIT": {
+			"description": "txt_NIT",
+			"fieldName": "txt_NIT",
+			"indicationId": 5
+		},
+		"ind.5.txt_NIT_apostrophe1": {
+			"description": "txt_NIT_apostrophe1",
+			"fieldName": "txt_NIT_apostrophe1",
+			"indicationId": 5
+		},
+		"ind.5.txt_NIT_apostrophe2": {
+			"description": "txt_NIT_apostrophe2",
+			"fieldName": "txt_NIT_apostrophe2",
+			"indicationId": 5
+		},
+		"ind.5.txt_NIT_sign": {
+			"description": "txt_NIT_sign",
+			"fieldName": "txt_NIT_sign",
+			"indicationId": 5
+		},
+		"ind.5.txt_OIT_NOT": {
+			"description": "txt_OIT_NOT",
+			"fieldName": "txt_OIT_NOT",
+			"indicationId": 5
+		},
+		"ind.5.txt_OIT_PPM": {
+			"description": "txt_OIT_PPM",
+			"fieldName": "txt_OIT_PPM",
+			"indicationId": 5
+		},
+		"ind.5.txt_VIT": {
+			"description": "txt_VIT",
+			"fieldName": "txt_VIT",
+			"indicationId": 5
+		},
+		"ind.5.txt_VIT_apostrophe1": {
+			"description": "txt_VIT_apostrophe1",
+			"fieldName": "txt_VIT_apostrophe1",
+			"indicationId": 5
+		},
+		"ind.5.txt_VIT_apostrophe2": {
+			"description": "txt_VIT_apostrophe2",
+			"fieldName": "txt_VIT_apostrophe2",
+			"indicationId": 5
+		},
+		"ind.5.txt_VIT_sign": {
+			"description": "txt_VIT_sign",
+			"fieldName": "txt_VIT_sign",
+			"indicationId": 5
+		},
+		"ind.6": {
+			"description": "ccPUI_800 (all fields)",
+			"indicationId": 6
+		},
+		"ind.6.txt_cannon_count": {
+			"description": "txt_cannon_count",
+			"fieldName": "txt_cannon_count",
+			"indicationId": 6
+		},
+		"ind.6.txt_weap_count": {
+			"description": "txt_weap_count",
+			"fieldName": "txt_weap_count",
+			"indicationId": 6
+		},
+		"ind.6.txt_weap_type_AT": {
+			"description": "txt_weap_type_AT",
+			"fieldName": "txt_weap_type_AT",
+			"indicationId": 6
+		},
+		"ind.6.txt_weap_type_Gun_Pod": {
+			"description": "txt_weap_type_Gun_Pod",
+			"fieldName": "txt_weap_type_Gun_Pod",
+			"indicationId": 6
+		},
+		"ind.6.txt_weap_type_Iron_Bomb": {
+			"description": "txt_weap_type_Iron_Bomb",
+			"fieldName": "txt_weap_type_Iron_Bomb",
+			"indicationId": 6
+		},
+		"ind.6.txt_weap_type_RT": {
+			"description": "txt_weap_type_RT",
+			"fieldName": "txt_weap_type_RT",
+			"indicationId": 6
+		},
+		"ind.7": {
+			"description": "ccUV_26 (all fields)",
+			"indicationId": 7
+		},
+		"ind.7.txt_digits": {
+			"description": "txt_digits",
+			"fieldName": "txt_digits",
+			"indicationId": 7
+		},
+		"ind.8": {
+			"description": "ccControlsIndicator (all fields)",
+			"indicationId": 8
+		},
+		"ind.8.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 8
+		},
+		"ind.8.pitch_scale": {
+			"description": "pitch_scale",
+			"fieldName": "pitch_scale",
+			"indicationId": 8
+		},
+		"ind.8.roll_scale": {
+			"description": "roll_scale",
+			"fieldName": "roll_scale",
+			"indicationId": 8
+		},
+		"ind.8.stick_position": {
+			"description": "stick_position",
+			"fieldName": "stick_position",
+			"indicationId": 8
+		},
+		"ind.8.txt_autopilot": {
+			"description": "txt_autopilot",
+			"fieldName": "txt_autopilot",
+			"indicationId": 8
+		},
+		"ind.8.txt_autopilot_hover": {
+			"description": "txt_autopilot_hover",
+			"fieldName": "txt_autopilot_hover",
+			"indicationId": 8
+		},
+		"ind.8.txt_brakes": {
+			"description": "txt_brakes",
+			"fieldName": "txt_brakes",
+			"indicationId": 8
+		},
+		"ind.8.wheel_brake": {
+			"description": "wheel_brake",
+			"fieldName": "wheel_brake",
+			"indicationId": 8
+		},
+		"ind.8.wheel_brake_mask": {
+			"description": "wheel_brake_mask",
+			"fieldName": "wheel_brake_mask",
+			"indicationId": 8
+		},
+		"ind.9": {
+			"description": "ccARK (all fields)",
+			"indicationId": 9
+		},
+		"ind.9.ARK_table_main_dummy": {
+			"description": "ARK_table_main_dummy",
+			"fieldName": "ARK_table_main_dummy",
+			"indicationId": 9
+		}
+	},
+	"moduleName": "Ka-50"
+}

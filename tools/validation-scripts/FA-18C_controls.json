@@ -1,0 +1,6045 @@
+{
+	"module": "FA-18C",
+	"devices": {
+		"FM_PROXY": 1,
+		"CONTROL_INTERFACE": 2,
+		"ELEC_INTERFACE": 3,
+		"HYDRAULIC_INTERFACE": 4,
+		"GEAR_INTERFACE": 5,
+		"FUEL_INTERFACE": 6,
+		"CPT_MECHANICS": 7,
+		"EXT_LIGHTS": 8,
+		"CPT_LIGHTS": 9,
+		"OXYGEN_INTERFACE": 10,
+		"ECS_INTERFACE": 11,
+		"ENGINES_INTERFACE": 12,
+		"HOTAS": 13,
+		"MUX": 14,
+		"SDC": 15,
+		"MISSION_COMPUTER_NO_1": 16,
+		"MISSION_COMPUTER_NO_2": 17,
+		"FCCA": 18,
+		"FCCB": 19,
+		"ADC": 20,
+		"ARMAMENT_COMPUTER": 21,
+		"CONTROL_CONVERTER": 22,
+		"SMS": 23,
+		"DIGITAL_MAP_COMPUTER": 24,
+		"UFC": 25,
+		"AAU52": 26,
+		"AVU35": 27,
+		"AVU53": 28,
+		"STANDBY_COMPASS": 29,
+		"ID2163A": 30,
+		"RADAR_ALTIMETER": 31,
+		"SAI": 32,
+		"IFEI": 33,
+		"HUD": 34,
+		"MDI_LEFT": 35,
+		"MDI_RIGHT": 36,
+		"AMPCD": 37,
+		"UHF1": 38,
+		"UHF2": 39,
+		"INTERCOM": 40,
+		"KY58": 41,
+		"RADAR": 42,
+		"FLIR": 43,
+		"INS": 44,
+		"GPS": 45,
+		"MAD": 46,
+		"SIDEWINDER_INTERFACE": 47,
+		"MAVERICK_INTERFACE": 48,
+		"ADF": 49,
+		"ANTENNA_SELECTOR": 50,
+		"MIDS": 51,
+		"ILS": 52,
+		"RWR": 53,
+		"CMDS": 54,
+		"MACROS": 55,
+		"IFF": 56,
+		"HELMET": 57,
+		"HMD_INTERFACE": 58,
+		"MIDS_RT": 59,
+		"CLC": 60,
+		"HARM_INTERFACE": 61,
+		"TGP_INTERFACE": 62,
+		"WALLEYE_INTERFACE": 63,
+		"DATALINK_INTERFACE": 64,
+		"SLAM_INTERFACE": 65,
+		"ASPJ": 66,
+		"BCN": 67,
+		"KNEEBOARD": 68,
+		"LINK4": 69,
+		"HEAD_WRAPPER": 70,
+		"MDL": 71
+	},
+	"controls": {
+		"345": {
+			"arg": 345,
+			"type": "potentiometer",
+			"description": "RUD TRIM Control",
+			"deviceId": 2,
+			"commandId": 3001,
+			"commandRef": "ctrl_commands.RudderTrim",
+			"argLim": [
+				[
+					-1.0,
+					1.0
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.RudderTrim"
+		},
+		"346": {
+			"arg": 346,
+			"type": "button",
+			"description": "T/O TRIM Button",
+			"deviceId": 2,
+			"commandId": 3002,
+			"commandRef": "ctrl_commands.TOTrimSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.TOTrimSw"
+		},
+		"349": {
+			"arg": 349,
+			"type": "button",
+			"description": "FCS RESET Button",
+			"deviceId": 2,
+			"commandId": 3003,
+			"commandRef": "ctrl_commands.ResetSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.ResetSw"
+		},
+		"348": {
+			"arg": 348,
+			"type": "twoPositionSwitch",
+			"description": "GAIN Switch Cover, OPEN/CLOSE",
+			"deviceId": 2,
+			"commandId": 3005,
+			"commandRef": "ctrl_commands.GainSwCover",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.GainSwCover"
+		},
+		"347": {
+			"arg": 347,
+			"type": "twoPositionSwitch",
+			"description": "GAIN Switch, NORM/ORIDE",
+			"deviceId": 2,
+			"commandId": 3006,
+			"commandRef": "ctrl_commands.GainSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.GainSw"
+		},
+		"234": {
+			"arg": 234,
+			"type": "threePositionSwitch",
+			"description": "FLAP Switch, AUTO/HALF/FULL",
+			"deviceId": 2,
+			"commandId": 3007,
+			"commandRef": "ctrl_commands.FlapSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.FlapSw"
+		},
+		"139": {
+			"arg": 139,
+			"type": "twoPositionSwitch",
+			"description": "Spin Recovery Switch Cover, OPEN/CLOSE",
+			"deviceId": 2,
+			"commandId": 3008,
+			"commandRef": "ctrl_commands.SpinRecCover",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.SpinRecCover"
+		},
+		"138": {
+			"arg": 138,
+			"type": "twoPositionSwitch",
+			"description": "Spin Recovery Switch, RCVY/NORM",
+			"deviceId": 2,
+			"commandId": 3009,
+			"commandRef": "ctrl_commands.SpinRec",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.SpinRec"
+		},
+		"470": {
+			"arg": 470,
+			"type": "springLoadedSwitch",
+			"description": "FCS BIT Switch",
+			"deviceId": 2,
+			"commandId": 3004,
+			"commandRef": "ctrl_commands.FcsBitSw",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.FcsBitSw"
+		},
+		"504": {
+			"arg": 504,
+			"type": "potentiometer",
+			"description": "Throttles Friction Adjusting Lever",
+			"deviceId": 2,
+			"commandId": 3012,
+			"commandRef": "ctrl_commands.FrictionLever",
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.FrictionLever"
+		},
+		"404": {
+			"arg": 404,
+			"type": "threePositionSwitch",
+			"description": "Battery Switch, ON/OFF/ORIDE",
+			"deviceId": 3,
+			"commandId": 3001,
+			"commandRef": "elec_commands.BattSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.BattSw"
+		},
+		"402": {
+			"arg": 402,
+			"type": "twoPositionSwitch",
+			"description": "Left Generator Control Switch, NORM/OFF",
+			"deviceId": 3,
+			"commandId": 3002,
+			"commandRef": "elec_commands.LGenSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.LGenSw"
+		},
+		"403": {
+			"arg": 403,
+			"type": "twoPositionSwitch",
+			"description": "Right Generator Control Switch, NORM/OFF",
+			"deviceId": 3,
+			"commandId": 3003,
+			"commandRef": "elec_commands.RGenSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.RGenSw"
+		},
+		"379": {
+			"arg": 379,
+			"type": "twoPositionSwitch",
+			"description": "Generator TIE Control Switch Cover, OPEN/CLOSE",
+			"deviceId": 3,
+			"commandId": 3007,
+			"commandRef": "elec_commands.GenTieControlSwCover",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.GenTieControlSwCover"
+		},
+		"378": {
+			"arg": 378,
+			"type": "twoPositionSwitch",
+			"description": "Generator TIE Control Switch, NORM/RESET",
+			"deviceId": 3,
+			"commandId": 3006,
+			"commandRef": "elec_commands.GenTieControlSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.GenTieControlSw"
+		},
+		"336": {
+			"arg": 336,
+			"type": "buttonTumb",
+			"description": "External Power Switch, RESET/NORM/OFF",
+			"deviceId": 3,
+			"commandId": 3004,
+			"commandRef": "elec_commands.ExtPwrSw",
+			"commandId2": 3005,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.ExtPwrSw"
+		},
+		"332": {
+			"arg": 332,
+			"type": "springLoaded3PosSwitch",
+			"description": "Ground Power Switch 1, A ON/AUTO/B ON",
+			"deviceId": 3,
+			"commandId": 3009,
+			"commandRef": "elec_commands.GndPwr1SwB",
+			"commandId2": 3008,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.GndPwr1SwB"
+		},
+		"333": {
+			"arg": 333,
+			"type": "springLoaded3PosSwitch",
+			"description": "Ground Power Switch 2, A ON/AUTO/B ON",
+			"deviceId": 3,
+			"commandId": 3011,
+			"commandRef": "elec_commands.GndPwr2SwB",
+			"commandId2": 3010,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.GndPwr2SwB"
+		},
+		"334": {
+			"arg": 334,
+			"type": "springLoaded3PosSwitch",
+			"description": "Ground Power Switch 3, A ON/AUTO/B ON",
+			"deviceId": 3,
+			"commandId": 3013,
+			"commandRef": "elec_commands.GndPwr3SwB",
+			"commandId2": 3012,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.GndPwr3SwB"
+		},
+		"335": {
+			"arg": 335,
+			"type": "springLoaded3PosSwitch",
+			"description": "Ground Power Switch 4, A ON/AUTO/B ON",
+			"deviceId": 3,
+			"commandId": 3015,
+			"commandRef": "elec_commands.GndPwr4SwB",
+			"commandId2": 3014,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.GndPwr4SwB"
+		},
+		"409": {
+			"arg": 409,
+			"type": "springLoadedSwitch",
+			"description": "Pitot Heater Switch, ON/AUTO",
+			"deviceId": 3,
+			"commandId": 3016,
+			"commandRef": "elec_commands.PitotHeater",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.PitotHeater"
+		},
+		"410": {
+			"arg": 410,
+			"type": "threePositionSwitch",
+			"description": "Engine Anti-Ice Switch, ON/OFF/TEST",
+			"deviceId": 12,
+			"commandId": 3014,
+			"commandRef": "engines_commands.AntiIceSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.AntiIceSw"
+		},
+		"381": {
+			"arg": 381,
+			"type": "twoPositionSwitch",
+			"description": "CB FCS CHAN 1, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3017,
+			"commandRef": "elec_commands.CB_FCS_CHAN1",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_FCS_CHAN1"
+		},
+		"382": {
+			"arg": 382,
+			"type": "twoPositionSwitch",
+			"description": "CB FCS CHAN 2, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3018,
+			"commandRef": "elec_commands.CB_FCS_CHAN2",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_FCS_CHAN2"
+		},
+		"383": {
+			"arg": 383,
+			"type": "twoPositionSwitch",
+			"description": "CB SPD BRK, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3019,
+			"commandRef": "elec_commands.CB_SPD_BRK",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_SPD_BRK"
+		},
+		"384": {
+			"arg": 384,
+			"type": "twoPositionSwitch",
+			"description": "CB LAUNCH BAR, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3020,
+			"commandRef": "elec_commands.CB_LAUNCH_BAR",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_LAUNCH_BAR"
+		},
+		"454": {
+			"arg": 454,
+			"type": "twoPositionSwitch",
+			"description": "CB FCS CHAN 3, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3021,
+			"commandRef": "elec_commands.CB_FCS_CHAN3",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_FCS_CHAN3"
+		},
+		"455": {
+			"arg": 455,
+			"type": "twoPositionSwitch",
+			"description": "CB FCS CHAN 4, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3022,
+			"commandRef": "elec_commands.CB_FCS_CHAN4",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_FCS_CHAN4"
+		},
+		"456": {
+			"arg": 456,
+			"type": "twoPositionSwitch",
+			"description": "CB HOOK, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3023,
+			"commandRef": "elec_commands.CB_HOOK",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_HOOK"
+		},
+		"457": {
+			"arg": 457,
+			"type": "twoPositionSwitch",
+			"description": "CB LG, ON/OFF",
+			"deviceId": 3,
+			"commandId": 3024,
+			"commandRef": "elec_commands.CB_LG",
+			"argValue": [
+				1,
+				0
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.CB_LG"
+		},
+		"368": {
+			"arg": 368,
+			"type": "springLoaded3PosSwitch",
+			"description": "MC Switch, 1 OFF/NORM/2 OFF",
+			"deviceId": 3,
+			"commandId": 3026,
+			"commandRef": "elec_commands.MC2OffSw",
+			"commandId2": 3025,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ELEC_INTERFACE",
+			"commandName": "elec_commands.MC2OffSw"
+		},
+		"375": {
+			"arg": 375,
+			"type": "springLoadedSwitch",
+			"description": "APU Control Switch, ON/OFF",
+			"deviceId": 12,
+			"commandId": 3001,
+			"commandRef": "engines_commands.APU_ControlSw",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"updatable": true,
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.APU_ControlSw"
+		},
+		"377": {
+			"arg": 377,
+			"type": "springLoaded3PosSwitch",
+			"description": "Engine Crank Switch, LEFT/OFF/RIGHT",
+			"deviceId": 12,
+			"commandId": 3002,
+			"commandRef": "engines_commands.EngineCrankLSw",
+			"commandId2": 3003,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.EngineCrankLSw"
+		},
+		"331": {
+			"arg": 331,
+			"type": "springLoaded3PosSwitch",
+			"description": "Fire and Bleed Air Test Switch, (RMB) TEST A/(LMB) TEST B",
+			"deviceId": 12,
+			"commandId": 3007,
+			"commandRef": "engines_commands.FireTestBSw",
+			"commandId2": 3006,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.FireTestBSw"
+		},
+		"369": {
+			"arg": 369,
+			"type": "twoPositionSwitch",
+			"description": "Hydraulic Isolate Override Switch, NORM/ORIDE",
+			"deviceId": 4,
+			"commandId": 3001,
+			"commandRef": "hydro_commands.HydIsolSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HYDRAULIC_INTERFACE",
+			"commandName": "hydro_commands.HydIsolSw"
+		},
+		"226": {
+			"arg": 226,
+			"type": "specialGearHandle",
+			"description": "Landing Gear Control Handle, (RMB)UP/(LMB)DOWN/(MW)EMERGENCY DOWN",
+			"deviceId": 5,
+			"commandId": 3001,
+			"commandRef": "gear_commands.GearHandle",
+			"commandId2": 3002,
+			"arg2": 228,
+			"deviceName": "GEAR_INTERFACE",
+			"commandName": "gear_commands.GearHandle"
+		},
+		"229": {
+			"arg": 229,
+			"type": "button",
+			"description": "Down Lock Override Button - Push to unlock",
+			"deviceId": 5,
+			"commandId": 3003,
+			"commandRef": "gear_commands.DownLockOverrideBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "GEAR_INTERFACE",
+			"commandName": "gear_commands.DownLockOverrideBtn"
+		},
+		"238": {
+			"arg": 238,
+			"type": "twoPositionSwitch",
+			"description": "Anti Skid Switch, ON/OFF",
+			"deviceId": 5,
+			"commandId": 3004,
+			"commandRef": "gear_commands.AntiSkidSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "GEAR_INTERFACE",
+			"commandName": "gear_commands.AntiSkidSw"
+		},
+		"233": {
+			"arg": 233,
+			"type": "springLoadedSwitch",
+			"description": "Launch Bar Control Switch, EXTEND/RETRACT",
+			"deviceId": 5,
+			"commandId": 3008,
+			"commandRef": "gear_commands.LaunchBarSw",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"updatable": true,
+			"deviceName": "GEAR_INTERFACE",
+			"commandName": "gear_commands.LaunchBarSw"
+		},
+		"293": {
+			"arg": 293,
+			"type": "twoPositionSwitch",
+			"description": "Arresting Hook Handle, UP/DOWN",
+			"deviceId": 5,
+			"commandId": 3009,
+			"commandRef": "gear_commands.HookHandle",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"updatable": true,
+			"deviceName": "GEAR_INTERFACE",
+			"commandName": "gear_commands.HookHandle"
+		},
+		"340": {
+			"arg": 340,
+			"type": "twoPositionSwitch",
+			"description": "Internal Wing Tank Fuel Control Switch, INHIBIT/NORM",
+			"deviceId": 6,
+			"commandId": 3001,
+			"commandRef": "fuel_commands.IntrWingInhibitSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "FUEL_INTERFACE",
+			"commandName": "fuel_commands.IntrWingInhibitSw"
+		},
+		"341": {
+			"arg": 341,
+			"type": "threePositionSwitch",
+			"description": "Probe Control Switch, EXTEND/RETRACT/EMERG EXTD",
+			"deviceId": 6,
+			"commandId": 3002,
+			"commandRef": "fuel_commands.ProbeControlSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "FUEL_INTERFACE",
+			"commandName": "fuel_commands.ProbeControlSw"
+		},
+		"344": {
+			"arg": 344,
+			"type": "springLoadedSwitch",
+			"description": "Fuel Dump Switch, ON/OFF",
+			"deviceId": 6,
+			"commandId": 3003,
+			"commandRef": "fuel_commands.DumpSw",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "FUEL_INTERFACE",
+			"commandName": "fuel_commands.DumpSw"
+		},
+		"343": {
+			"arg": 343,
+			"type": "threePositionSwitch",
+			"description": "External Centerline Tank Fuel Control Switch, STOP/NORM/ORIDE",
+			"deviceId": 6,
+			"commandId": 3004,
+			"commandRef": "fuel_commands.ExtTanksCtrSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "FUEL_INTERFACE",
+			"commandName": "fuel_commands.ExtTanksCtrSw"
+		},
+		"342": {
+			"arg": 342,
+			"type": "threePositionSwitch",
+			"description": "External Wing Tanks Fuel Control Switch, STOP/NORM/ORIDE",
+			"deviceId": 6,
+			"commandId": 3005,
+			"commandRef": "fuel_commands.ExtTanksWingSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "FUEL_INTERFACE",
+			"commandName": "fuel_commands.ExtTanksWingSw"
+		},
+		"453": {
+			"arg": 453,
+			"type": "springLoaded3PosSwitch",
+			"description": "Canopy Control Switch, OPEN/HOLD/CLOSE",
+			"deviceId": 7,
+			"commandId": 3002,
+			"commandRef": "cpt_commands.CanopySwitchClose",
+			"commandId2": 3001,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.CanopySwitchClose"
+		},
+		"43": {
+			"arg": 43,
+			"type": "button",
+			"description": "Canopy Jettison Handle Unlock Button - Press to unlock",
+			"deviceId": 7,
+			"commandId": 3004,
+			"commandRef": "cpt_commands.CanopyJettLeverButton",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"updatable": true,
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.CanopyJettLeverButton"
+		},
+		"42": {
+			"arg": 42,
+			"type": "twoPositionSwitch",
+			"description": "Canopy Jettison Handle - Pull to jettison",
+			"deviceId": 7,
+			"commandId": 3003,
+			"commandRef": "cpt_commands.CanopyJettLever",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.CanopyJettLever"
+		},
+		"510": {
+			"arg": 510,
+			"type": "button",
+			"description": "Ejection Control Handle (3 times)",
+			"deviceId": 7,
+			"commandId": 3008,
+			"commandRef": "cpt_commands.SeatEjectionControlHandle",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.SeatEjectionControlHandle"
+		},
+		"511": {
+			"arg": 511,
+			"type": "twoPositionSwitch",
+			"description": "Ejection Seat SAFE/ARMED Handle, SAFE/ARMED",
+			"deviceId": 7,
+			"commandId": 3006,
+			"commandRef": "cpt_commands.EjectionSeatSafeArmedHandle",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.EjectionSeatSafeArmedHandle"
+		},
+		"512": {
+			"arg": 512,
+			"type": "twoPositionSwitch",
+			"description": "Ejection Seat Manual Override Handle, PULL/PUSH",
+			"deviceId": 7,
+			"commandId": 3007,
+			"commandRef": "cpt_commands.EjectionSeatManualOverrideHandle",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.EjectionSeatManualOverrideHandle"
+		},
+		"513": {
+			"arg": 513,
+			"type": "twoPositionSwitch",
+			"description": "Shoulder Harness Control Handle, LOCK/UNLOCK",
+			"deviceId": 7,
+			"commandId": 3009,
+			"commandRef": "cpt_commands.ShoulderHarnessControlHandle",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.ShoulderHarnessControlHandle"
+		},
+		"514": {
+			"arg": 514,
+			"type": "springLoaded3PosSwitch",
+			"description": "Seat Height Adjustment Switch, UP/HOLD/DOWN",
+			"deviceId": 7,
+			"commandId": 3010,
+			"commandRef": "cpt_commands.SeatHeightAdjustmentSwitchUp",
+			"commandId2": 3011,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.SeatHeightAdjustmentSwitchUp"
+		},
+		"260": {
+			"arg": 260,
+			"type": "button",
+			"description": "Rudder Pedal Adjust Lever",
+			"deviceId": 7,
+			"commandId": 3012,
+			"commandRef": "cpt_commands.RudderPedalAdjustLever",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.RudderPedalAdjustLever"
+		},
+		"575": {
+			"arg": 575,
+			"type": "twoPositionSwitch",
+			"description": "Hide Stick toggle",
+			"deviceId": 7,
+			"commandId": 3013,
+			"commandRef": "cpt_commands.StickHide",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_MECHANICS",
+			"commandName": "cpt_commands.StickHide"
+		},
+		"0": {
+			"arg": 0,
+			"type": "twoPositionSwitch",
+			"description": "Toggle Mirrors",
+			"deviceId": 0,
+			"commandId": 3002,
+			"commandRef": "3002",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"commandName": "3002"
+		},
+		"338": {
+			"arg": 338,
+			"type": "potentiometer",
+			"description": "POSITION Lights Dimmer Control",
+			"deviceId": 8,
+			"commandId": 3001,
+			"commandRef": "extlights_commands.Position",
+			"argLim": [
+				[
+					-90.0,
+					-135.0
+				]
+			],
+			"deviceName": "EXT_LIGHTS",
+			"commandName": "extlights_commands.Position"
+		},
+		"337": {
+			"arg": 337,
+			"type": "potentiometer",
+			"description": "FORMATION Lights Dimmer Control",
+			"deviceId": 8,
+			"commandId": 3002,
+			"commandRef": "extlights_commands.Formation",
+			"argLim": [
+				[
+					-90.0,
+					-135.0
+				]
+			],
+			"deviceName": "EXT_LIGHTS",
+			"commandName": "extlights_commands.Formation"
+		},
+		"339": {
+			"arg": 339,
+			"type": "threePositionSwitch",
+			"description": "STROBE Lights Switch, BRT/OFF/DIM",
+			"deviceId": 8,
+			"commandId": 3003,
+			"commandRef": "extlights_commands.Strobe",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "EXT_LIGHTS",
+			"commandName": "extlights_commands.Strobe"
+		},
+		"237": {
+			"arg": 237,
+			"type": "twoPositionSwitch",
+			"description": "LDG/TAXI LIGHT Switch, ON/OFF",
+			"deviceId": 8,
+			"commandId": 3004,
+			"commandRef": "extlights_commands.LdgTaxi",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "EXT_LIGHTS",
+			"commandName": "extlights_commands.LdgTaxi"
+		},
+		"413": {
+			"arg": 413,
+			"type": "potentiometer",
+			"description": "CONSOLES Lights Dimmer Control",
+			"deviceId": 9,
+			"commandId": 3001,
+			"commandRef": "cptlights_commands.Consoles",
+			"argLim": [
+				[
+					90.0,
+					-135.0
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.Consoles"
+		},
+		"414": {
+			"arg": 414,
+			"type": "potentiometer",
+			"description": "INST PNL Dimmer Control",
+			"deviceId": 9,
+			"commandId": 3002,
+			"commandRef": "cptlights_commands.InstPnl",
+			"argLim": [
+				[
+					90.0,
+					-135.0
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.InstPnl"
+		},
+		"415": {
+			"arg": 415,
+			"type": "potentiometer",
+			"description": "FLOOD Light Dimmer Control",
+			"deviceId": 9,
+			"commandId": 3003,
+			"commandRef": "cptlights_commands.Flood",
+			"argLim": [
+				[
+					90.0,
+					-135.0
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.Flood"
+		},
+		"419": {
+			"arg": 419,
+			"type": "threePositionSwitch",
+			"description": "MODE Switch, NVG/NITE/DAY",
+			"deviceId": 9,
+			"commandId": 3004,
+			"commandRef": "cptlights_commands.ModeSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.ModeSw"
+		},
+		"418": {
+			"arg": 418,
+			"type": "potentiometer",
+			"description": "CHART Light Dimmer Control",
+			"deviceId": 9,
+			"commandId": 3005,
+			"commandRef": "cptlights_commands.Chart",
+			"argLim": [
+				[
+					90.0,
+					-135.0
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.Chart"
+		},
+		"417": {
+			"arg": 417,
+			"type": "potentiometer",
+			"description": "WARN/CAUTION Dimmer Control",
+			"deviceId": 9,
+			"commandId": 3006,
+			"commandRef": "cptlights_commands.WarnCaution",
+			"argLim": [
+				[
+					90.0,
+					-135.0
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.WarnCaution"
+		},
+		"416": {
+			"arg": 416,
+			"type": "springLoadedSwitch",
+			"description": "Lights Test Switch, TEST/OFF",
+			"deviceId": 9,
+			"commandId": 3007,
+			"commandRef": "cptlights_commands.LtTestSw",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.LtTestSw"
+		},
+		"14": {
+			"arg": 14,
+			"type": "button",
+			"description": "MASTER CAUTION Reset Button - Press to reset",
+			"deviceId": 9,
+			"commandId": 3008,
+			"commandRef": "cptlights_commands.MasterCaution",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.MasterCaution"
+		},
+		"239": {
+			"arg": 239,
+			"type": "springLoadedSwitch",
+			"description": "HOOK BYPASS Switch, FIELD/CARRIER",
+			"deviceId": 9,
+			"commandId": 3009,
+			"commandRef": "cptlights_commands.HookBypass",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CPT_LIGHTS",
+			"commandName": "cptlights_commands.HookBypass"
+		},
+		"365": {
+			"arg": 365,
+			"type": "twoPositionSwitch",
+			"description": "OBOGS Control Switch, ON/OFF",
+			"deviceId": 10,
+			"commandId": 3001,
+			"commandRef": "oxygen_commands.OBOGS_ControlSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "OXYGEN_INTERFACE",
+			"commandName": "oxygen_commands.OBOGS_ControlSw"
+		},
+		"366": {
+			"arg": 366,
+			"type": "potentiometer",
+			"description": "OXY Flow Knob",
+			"deviceId": 10,
+			"commandId": 3002,
+			"commandRef": "oxygen_commands.OxyFlowControlValve",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "OXYGEN_INTERFACE",
+			"commandName": "oxygen_commands.OxyFlowControlValve"
+		},
+		"411": {
+			"arg": 411,
+			"type": "multipositionSwitch",
+			"description": "Bleed Air Knob, R OFF/NORM/L OFF/OFF",
+			"deviceId": 11,
+			"commandId": 3001,
+			"commandRef": "ECS_commands.BleedAirSw",
+			"positions": 4,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.30000000000000004
+				],
+				[
+					0.0,
+					0.30000000000000004
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.BleedAirSw"
+		},
+		"412": {
+			"arg": 412,
+			"type": "button",
+			"description": "Bleed Air Knob, AUG PULL",
+			"deviceId": 11,
+			"commandId": 3002,
+			"commandRef": "ECS_commands.BleedAirSwAugPull",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.BleedAirSwAugPull"
+		},
+		"405": {
+			"arg": 405,
+			"type": "threePositionSwitch",
+			"description": "ECS Mode Switch, AUTO/MAN/ OFF/RAM",
+			"deviceId": 11,
+			"commandId": 3003,
+			"commandRef": "ECS_commands.ECSModeSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.ECSModeSw"
+		},
+		"408": {
+			"arg": 408,
+			"type": "threePositionSwitch",
+			"description": "Cabin Pressure Switch, NORM/DUMP/ RAM/DUMP",
+			"deviceId": 11,
+			"commandId": 3004,
+			"commandRef": "ECS_commands.CabinPressSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.CabinPressSw"
+		},
+		"451": {
+			"arg": 451,
+			"type": "potentiometer",
+			"description": "Defog Handle",
+			"deviceId": 11,
+			"commandId": 3005,
+			"commandRef": "ECS_commands.DefogHandle",
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.DefogHandle"
+		},
+		"407": {
+			"arg": 407,
+			"type": "potentiometer",
+			"description": "Cabin Temperature Knob",
+			"deviceId": 11,
+			"commandId": 3006,
+			"commandRef": "ECS_commands.CabinTemperatureRst",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.CabinTemperatureRst"
+		},
+		"406": {
+			"arg": 406,
+			"type": "potentiometer",
+			"description": "Suit Temperature Knob",
+			"deviceId": 11,
+			"commandId": 3007,
+			"commandRef": "ECS_commands.SuitTemperatureRst",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.SuitTemperatureRst"
+		},
+		"297": {
+			"arg": 297,
+			"type": "springLoadedSwitch",
+			"description": "AV COOL Switch, NORM/EMERG",
+			"deviceId": 11,
+			"commandId": 3008,
+			"commandRef": "ECS_commands.AV_COOL_Sw",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.AV_COOL_Sw"
+		},
+		"452": {
+			"arg": 452,
+			"type": "threePositionSwitch",
+			"description": "Windshield Anti-Ice/Rain Switch, ANTI ICE/OFF/RAIN",
+			"deviceId": 11,
+			"commandId": 3009,
+			"commandRef": "ECS_commands.WindshieldSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.WindshieldSw"
+		},
+		"505": {
+			"arg": 505,
+			"type": "potentiometer",
+			"description": "Left Louver",
+			"deviceId": 11,
+			"commandId": 3010,
+			"commandRef": "ECS_commands.LeftLouver",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.LeftLouver"
+		},
+		"506": {
+			"arg": 506,
+			"type": "potentiometer",
+			"description": "Right Louver",
+			"deviceId": 11,
+			"commandId": 3011,
+			"commandRef": "ECS_commands.RightLouver",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "ECS_INTERFACE",
+			"commandName": "ECS_commands.RightLouver"
+		},
+		"475": {
+			"arg": 475,
+			"type": "button",
+			"description": "Weapon Release Button",
+			"deviceId": 13,
+			"commandId": 3003,
+			"commandRef": "hotas_commands.STICK_WEAPON_RELEASE",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_WEAPON_RELEASE"
+		},
+		"476": {
+			"arg": 476,
+			"type": "button",
+			"description": "Sensor Control Switch, Fwd",
+			"deviceId": 13,
+			"commandId": 3005,
+			"commandRef": "hotas_commands.STICK_SENSOR_CONTROL_FWD",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_SENSOR_CONTROL_FWD"
+		},
+		"477": {
+			"arg": 477,
+			"type": "button",
+			"description": "RECCE Event Mark Switch",
+			"deviceId": 13,
+			"commandId": 3004,
+			"commandRef": "hotas_commands.STICK_RECCE_EVENT_MARK",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_RECCE_EVENT_MARK"
+		},
+		"478": {
+			"arg": 478,
+			"type": "button",
+			"description": "Trimmer Switch, PUSH(DESCEND)",
+			"deviceId": 13,
+			"commandId": 3014,
+			"commandRef": "hotas_commands.STICK_TRIMMER_UP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_TRIMMER_UP"
+		},
+		"479": {
+			"arg": 479,
+			"type": "button",
+			"description": "Gun Trigger, FIRST DETENT)",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			]
+		},
+		"482": {
+			"arg": 482,
+			"type": "button",
+			"description": "Autopilot/Nosewheel Steering Disengage (Paddle) Switch",
+			"deviceId": 13,
+			"commandId": 3018,
+			"commandRef": "hotas_commands.STICK_PADDLE",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_PADDLE"
+		},
+		"481": {
+			"arg": 481,
+			"type": "button",
+			"description": "Select Sparrow",
+			"deviceId": 13,
+			"commandId": 3009,
+			"commandRef": "hotas_commands.STICK_WEAPON_SELECT_FWD",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_WEAPON_SELECT_FWD"
+		},
+		"480": {
+			"arg": 480,
+			"type": "button",
+			"description": "Undesignate/Nose Wheel Steer Switch",
+			"deviceId": 13,
+			"commandId": 3013,
+			"commandRef": "hotas_commands.STICK_UNDESIGNATE",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.STICK_UNDESIGNATE"
+		},
+		"486": {
+			"arg": 486,
+			"type": "button",
+			"description": "COMM Switch, COMM 1",
+			"deviceId": 13,
+			"commandId": 3027,
+			"commandRef": "hotas_commands.THROTTLE_COMMS_COMM1",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_COMMS_COMM1"
+		},
+		"487": {
+			"arg": 487,
+			"type": "button",
+			"description": "Cage/Uncage Button",
+			"deviceId": 13,
+			"commandId": 3031,
+			"commandRef": "hotas_commands.THROTTLE_CAGE",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_CAGE"
+		},
+		"313": {
+			"arg": 313,
+			"type": "springLoaded3PosSwitch",
+			"description": "Dispense Switch, CHAFF/OFF/FLARE",
+			"deviceId": 13,
+			"commandId": 3032,
+			"commandRef": "hotas_commands.THROTTLE_DISPENSE_FWD",
+			"commandId2": 3033,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_DISPENSE_FWD"
+		},
+		"488": {
+			"arg": 488,
+			"type": "button",
+			"description": "Dispense Switch, Forward(CHAFF)/Center(OFF)",
+			"deviceId": 13,
+			"commandId": 3032,
+			"commandRef": "hotas_commands.THROTTLE_DISPENSE_FWD",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_DISPENSE_FWD"
+		},
+		"489": {
+			"arg": 489,
+			"type": "threePositionSwitch",
+			"description": "Speed Brake Switch, EXTEND/OFF/RETRACT",
+			"deviceId": 13,
+			"commandId": 3035,
+			"commandRef": "hotas_commands.THROTTLE_SPEED_BRAKE",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_SPEED_BRAKE"
+		},
+		"490": {
+			"arg": 490,
+			"type": "button",
+			"description": "Throttle Designator Controller, Up",
+			"deviceId": 13,
+			"commandId": 3019,
+			"commandRef": "hotas_commands.THROTTLE_DESIGNATOR_CONTROLLER_UP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_DESIGNATOR_CONTROLLER_UP"
+		},
+		"491": {
+			"arg": 491,
+			"type": "button",
+			"description": "ATC Engage/Disengage Switch",
+			"deviceId": 13,
+			"commandId": 3037,
+			"commandRef": "hotas_commands.THROTTLE_ATC",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_ATC"
+		},
+		"492": {
+			"arg": 492,
+			"type": "button",
+			"description": "RAID/FLIR FOV Select Button",
+			"deviceId": 13,
+			"commandId": 3034,
+			"commandRef": "hotas_commands.THROTTLE_RAID_FOV",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_RAID_FOV"
+		},
+		"493": {
+			"arg": 493,
+			"type": "potentiometer",
+			"description": "Radar Elevation Control, Up",
+			"deviceId": 13,
+			"commandId": 3024,
+			"commandRef": "hotas_commands.THROTTLE_ELEVATION_CONTROL_UP",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_ELEVATION_CONTROL_UP"
+		},
+		"494": {
+			"arg": 494,
+			"type": "twoPositionSwitch",
+			"description": "Exterior Lights Switch, ON/OFF",
+			"deviceId": 13,
+			"commandId": 3041,
+			"commandRef": "hotas_commands.THROTTLE_EXTERIOR_LIGHTS",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HOTAS",
+			"commandName": "hotas_commands.THROTTLE_EXTERIOR_LIGHTS"
+		},
+		"458": {
+			"arg": 458,
+			"type": "button",
+			"description": "Master Mode Button, A/A",
+			"deviceId": 23,
+			"commandId": 3001,
+			"commandRef": "SMS_commands.AA_MasterModeSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.AA_MasterModeSw"
+		},
+		"459": {
+			"arg": 459,
+			"type": "button",
+			"description": "Master Mode Button, A/G",
+			"deviceId": 23,
+			"commandId": 3002,
+			"commandRef": "SMS_commands.AG_MasterModeSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.AG_MasterModeSw"
+		},
+		"49": {
+			"arg": 49,
+			"type": "twoPositionSwitch",
+			"description": "Master Arm Switch, ARM/SAFE",
+			"deviceId": 23,
+			"commandId": 3003,
+			"commandRef": "SMS_commands.MasterArmSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.MasterArmSw"
+		},
+		"50": {
+			"arg": 50,
+			"type": "button",
+			"description": "Emergency Jettison Button",
+			"deviceId": 23,
+			"commandId": 3004,
+			"commandRef": "SMS_commands.EmerJettSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.EmerJettSw"
+		},
+		"258": {
+			"arg": 258,
+			"type": "twoPositionSwitch",
+			"description": "Auxiliary Release Switch, ENABLE/NORM",
+			"deviceId": 23,
+			"commandId": 3012,
+			"commandRef": "SMS_commands.AuxRelSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.AuxRelSw"
+		},
+		"153": {
+			"arg": 153,
+			"type": "toggleButton",
+			"description": "Station Jettison Select Button, CENTER",
+			"deviceId": 23,
+			"commandId": 3005,
+			"commandRef": "SMS_commands.JettStationCntrBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.JettStationCntrBtn"
+		},
+		"155": {
+			"arg": 155,
+			"type": "toggleButton",
+			"description": "Station Jettison Select Button, LEFT IN",
+			"deviceId": 23,
+			"commandId": 3006,
+			"commandRef": "SMS_commands.JettStationLIBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.JettStationLIBtn"
+		},
+		"157": {
+			"arg": 157,
+			"type": "toggleButton",
+			"description": "Station Jettison Select Button, LEFT OUT",
+			"deviceId": 23,
+			"commandId": 3007,
+			"commandRef": "SMS_commands.JettStationLOBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.JettStationLOBtn"
+		},
+		"159": {
+			"arg": 159,
+			"type": "toggleButton",
+			"description": "Station Jettison Select Button, RIGHT IN",
+			"deviceId": 23,
+			"commandId": 3008,
+			"commandRef": "SMS_commands.JettStationRIBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.JettStationRIBtn"
+		},
+		"161": {
+			"arg": 161,
+			"type": "toggleButton",
+			"description": "Station Jettison Select Button, RIGHT OUT",
+			"deviceId": 23,
+			"commandId": 3009,
+			"commandRef": "SMS_commands.JettStationROBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.JettStationROBtn"
+		},
+		"235": {
+			"arg": 235,
+			"type": "button",
+			"description": "Selective Jettison Pushbutton",
+			"deviceId": 23,
+			"commandId": 3010,
+			"commandRef": "SMS_commands.SelJettBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.SelJettBtn"
+		},
+		"236": {
+			"arg": 236,
+			"type": "multipositionSwitch",
+			"description": "Selective Jettison Knob, L FUS MSL/SAFE/R FUS MSL/ RACK/LCHR /STORES",
+			"deviceId": 23,
+			"commandId": 3011,
+			"commandRef": "SMS_commands.SelJettLvr",
+			"positions": 5,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					-0.1,
+					0.30000000000000004
+				],
+				[
+					-0.1,
+					0.30000000000000004
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.SelJettLvr"
+		},
+		"135": {
+			"arg": 135,
+			"type": "threePositionSwitch",
+			"description": "IR Cooling Switch, ORIDE/NORM/OFF",
+			"deviceId": 23,
+			"commandId": 3013,
+			"commandRef": "SMS_commands.IRCoolingSw",
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "SMS",
+			"commandName": "SMS_commands.IRCoolingSw"
+		},
+		"46": {
+			"arg": 46,
+			"type": "button",
+			"description": "Fire Extinguisher Pushbutton",
+			"deviceId": 12,
+			"commandId": 3008,
+			"commandRef": "engines_commands.FireExtghDischSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.FireExtghDischSw"
+		},
+		"30": {
+			"arg": 30,
+			"type": "toggleButton",
+			"description": "APU Fire Warning/Extinguisher Light",
+			"deviceId": 12,
+			"commandId": 3009,
+			"commandRef": "engines_commands.APU_FireSw",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.APU_FireSw"
+		},
+		"11": {
+			"arg": 11,
+			"type": "doubleTumb",
+			"description": "Left Engine/AMAD Fire Warning/Extinguisher Light - (LMB) depress/(RMB) cover control",
+			"deviceId": 12,
+			"commandId": 3010,
+			"commandRef": "engines_commands.LENG_FireSw",
+			"commandId2": 3012,
+			"arg2": 12,
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.LENG_FireSw"
+		},
+		"27": {
+			"arg": 27,
+			"type": "doubleTumb",
+			"description": "Right Engine/AMAD Fire Warning/Extinguisher Light - (LMB) depress/(RMB) cover control",
+			"deviceId": 12,
+			"commandId": 3011,
+			"commandRef": "engines_commands.RENG_FireSw",
+			"commandId2": 3013,
+			"arg2": 28,
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "ENGINES_INTERFACE",
+			"commandName": "engines_commands.RENG_FireSw"
+		},
+		"140": {
+			"arg": 140,
+			"type": "threePositionSwitch",
+			"description": "HUD Symbology Reject Switch, NORM/REJ 1/REJ 2",
+			"deviceId": 34,
+			"commandId": 3001,
+			"commandRef": "HUD_commands.HUD_SymbRejectSw",
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_SymbRejectSw"
+		},
+		"141": {
+			"arg": 141,
+			"type": "potentiometer",
+			"description": "HUD Symbology Brightness Control Knob",
+			"deviceId": 34,
+			"commandId": 3002,
+			"commandRef": "HUD_commands.HUD_SymbBrightCtrl",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_SymbBrightCtrl"
+		},
+		"142": {
+			"arg": 142,
+			"type": "twoPositionSwitch",
+			"description": "HUD Symbology Brightness Selector Knob, DAY/NIGHT",
+			"deviceId": 34,
+			"commandId": 3003,
+			"commandRef": "HUD_commands.HUD_SymbBrightSelKnob",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_SymbBrightSelKnob"
+		},
+		"143": {
+			"arg": 143,
+			"type": "potentiometer",
+			"description": "Black Level Control Knob",
+			"deviceId": 34,
+			"commandId": 3004,
+			"commandRef": "HUD_commands.HUD_BlackLevelCtrl",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_BlackLevelCtrl"
+		},
+		"144": {
+			"arg": 144,
+			"type": "threePositionSwitch",
+			"description": "HUD Video Control Switch, W/B /VID/OFF",
+			"deviceId": 34,
+			"commandId": 3005,
+			"commandRef": "HUD_commands.HUD_VideoCtrlSw",
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_VideoCtrlSw"
+		},
+		"145": {
+			"arg": 145,
+			"type": "potentiometer",
+			"description": "Balance Control Knob",
+			"deviceId": 34,
+			"commandId": 3006,
+			"commandRef": "HUD_commands.HUD_BalanceCtrl",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_BalanceCtrl"
+		},
+		"146": {
+			"arg": 146,
+			"type": "potentiometer",
+			"description": "AOA Indexer Control Knob",
+			"deviceId": 34,
+			"commandId": 3007,
+			"commandRef": "HUD_commands.HUD_AoA_IndexerCtrl",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_AoA_IndexerCtrl"
+		},
+		"147": {
+			"arg": 147,
+			"type": "twoPositionSwitch",
+			"description": "Altitude Switch, BARO/RDR",
+			"deviceId": 34,
+			"commandId": 3008,
+			"commandRef": "HUD_commands.HUD_AltitudeSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_AltitudeSw"
+		},
+		"148": {
+			"arg": 148,
+			"type": "threePositionSwitch",
+			"description": "Attitude Selector Switch, INS/AUTO/STBY",
+			"deviceId": 34,
+			"commandId": 3009,
+			"commandRef": "HUD_commands.HUD_AttitudeSelSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "HUD",
+			"commandName": "HUD_commands.HUD_AttitudeSelSw"
+		},
+		"51": {
+			"arg": 51,
+			"type": "threePositionSwitch",
+			"description": "Left MDI Brightness Selector Knob, OFF/NIGHT/DAY",
+			"deviceId": 35,
+			"commandId": 3001,
+			"commandRef": "MDI_commands.MDI_off_night_day",
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_off_night_day"
+		},
+		"52": {
+			"arg": 52,
+			"type": "potentiometer",
+			"description": "Left MDI Brightness Control Knob",
+			"deviceId": 35,
+			"commandId": 3002,
+			"commandRef": "MDI_commands.MDI_brightness",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_brightness"
+		},
+		"53": {
+			"arg": 53,
+			"type": "potentiometer",
+			"description": "Left MDI Contrast Control Knob",
+			"deviceId": 35,
+			"commandId": 3003,
+			"commandRef": "MDI_commands.MDI_contrast",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_contrast"
+		},
+		"54": {
+			"arg": 54,
+			"type": "button",
+			"description": "Left MDI PB 1",
+			"deviceId": 35,
+			"commandId": 3011,
+			"commandRef": "MDI_commands.MDI_PB_1",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_1"
+		},
+		"55": {
+			"arg": 55,
+			"type": "button",
+			"description": "Left MDI PB 2",
+			"deviceId": 35,
+			"commandId": 3012,
+			"commandRef": "MDI_commands.MDI_PB_2",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_2"
+		},
+		"56": {
+			"arg": 56,
+			"type": "button",
+			"description": "Left MDI PB 3",
+			"deviceId": 35,
+			"commandId": 3013,
+			"commandRef": "MDI_commands.MDI_PB_3",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_3"
+		},
+		"57": {
+			"arg": 57,
+			"type": "button",
+			"description": "Left MDI PB 4",
+			"deviceId": 35,
+			"commandId": 3014,
+			"commandRef": "MDI_commands.MDI_PB_4",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_4"
+		},
+		"58": {
+			"arg": 58,
+			"type": "button",
+			"description": "Left MDI PB 5",
+			"deviceId": 35,
+			"commandId": 3015,
+			"commandRef": "MDI_commands.MDI_PB_5",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_5"
+		},
+		"59": {
+			"arg": 59,
+			"type": "button",
+			"description": "Left MDI PB 6",
+			"deviceId": 35,
+			"commandId": 3016,
+			"commandRef": "MDI_commands.MDI_PB_6",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_6"
+		},
+		"60": {
+			"arg": 60,
+			"type": "button",
+			"description": "Left MDI PB 7",
+			"deviceId": 35,
+			"commandId": 3017,
+			"commandRef": "MDI_commands.MDI_PB_7",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_7"
+		},
+		"61": {
+			"arg": 61,
+			"type": "button",
+			"description": "Left MDI PB 8",
+			"deviceId": 35,
+			"commandId": 3018,
+			"commandRef": "MDI_commands.MDI_PB_8",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_8"
+		},
+		"62": {
+			"arg": 62,
+			"type": "button",
+			"description": "Left MDI PB 9",
+			"deviceId": 35,
+			"commandId": 3019,
+			"commandRef": "MDI_commands.MDI_PB_9",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_9"
+		},
+		"63": {
+			"arg": 63,
+			"type": "button",
+			"description": "Left MDI PB 10",
+			"deviceId": 35,
+			"commandId": 3020,
+			"commandRef": "MDI_commands.MDI_PB_10",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_10"
+		},
+		"64": {
+			"arg": 64,
+			"type": "button",
+			"description": "Left MDI PB 11",
+			"deviceId": 35,
+			"commandId": 3021,
+			"commandRef": "MDI_commands.MDI_PB_11",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_11"
+		},
+		"65": {
+			"arg": 65,
+			"type": "button",
+			"description": "Left MDI PB 12",
+			"deviceId": 35,
+			"commandId": 3022,
+			"commandRef": "MDI_commands.MDI_PB_12",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_12"
+		},
+		"66": {
+			"arg": 66,
+			"type": "button",
+			"description": "Left MDI PB 13",
+			"deviceId": 35,
+			"commandId": 3023,
+			"commandRef": "MDI_commands.MDI_PB_13",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_13"
+		},
+		"67": {
+			"arg": 67,
+			"type": "button",
+			"description": "Left MDI PB 14",
+			"deviceId": 35,
+			"commandId": 3024,
+			"commandRef": "MDI_commands.MDI_PB_14",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_14"
+		},
+		"68": {
+			"arg": 68,
+			"type": "button",
+			"description": "Left MDI PB 15",
+			"deviceId": 35,
+			"commandId": 3025,
+			"commandRef": "MDI_commands.MDI_PB_15",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_15"
+		},
+		"69": {
+			"arg": 69,
+			"type": "button",
+			"description": "Left MDI PB 16",
+			"deviceId": 35,
+			"commandId": 3026,
+			"commandRef": "MDI_commands.MDI_PB_16",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_16"
+		},
+		"70": {
+			"arg": 70,
+			"type": "button",
+			"description": "Left MDI PB 17",
+			"deviceId": 35,
+			"commandId": 3027,
+			"commandRef": "MDI_commands.MDI_PB_17",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_17"
+		},
+		"72": {
+			"arg": 72,
+			"type": "button",
+			"description": "Left MDI PB 18",
+			"deviceId": 35,
+			"commandId": 3028,
+			"commandRef": "MDI_commands.MDI_PB_18",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_18"
+		},
+		"73": {
+			"arg": 73,
+			"type": "button",
+			"description": "Left MDI PB 19",
+			"deviceId": 35,
+			"commandId": 3029,
+			"commandRef": "MDI_commands.MDI_PB_19",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_19"
+		},
+		"75": {
+			"arg": 75,
+			"type": "button",
+			"description": "Left MDI PB 20",
+			"deviceId": 35,
+			"commandId": 3030,
+			"commandRef": "MDI_commands.MDI_PB_20",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_PB_20"
+		},
+		"312": {
+			"arg": 312,
+			"type": "springLoaded3PosSwitch",
+			"description": "Heading Set Switch",
+			"deviceId": 35,
+			"commandId": 3005,
+			"commandRef": "MDI_commands.MDI_Left_HDG_Negative",
+			"commandId2": 3004,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_LEFT",
+			"commandName": "MDI_commands.MDI_Left_HDG_Negative"
+		},
+		"76": {
+			"arg": 76,
+			"type": "threePositionSwitch",
+			"description": "Right MDI Brightness Selector Knob, OFF/NIGHT/DAY",
+			"deviceId": 36,
+			"commandId": 3001,
+			"commandRef": "MDI_commands.MDI_off_night_day",
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_off_night_day"
+		},
+		"77": {
+			"arg": 77,
+			"type": "potentiometer",
+			"description": "Right MDI Brightness Control Knob",
+			"deviceId": 36,
+			"commandId": 3002,
+			"commandRef": "MDI_commands.MDI_brightness",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_brightness"
+		},
+		"78": {
+			"arg": 78,
+			"type": "potentiometer",
+			"description": "Right MDI Contrast Control Knob",
+			"deviceId": 36,
+			"commandId": 3003,
+			"commandRef": "MDI_commands.MDI_contrast",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_contrast"
+		},
+		"79": {
+			"arg": 79,
+			"type": "button",
+			"description": "Right MDI PB 1",
+			"deviceId": 36,
+			"commandId": 3011,
+			"commandRef": "MDI_commands.MDI_PB_1",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_1"
+		},
+		"80": {
+			"arg": 80,
+			"type": "button",
+			"description": "Right MDI PB 2",
+			"deviceId": 36,
+			"commandId": 3012,
+			"commandRef": "MDI_commands.MDI_PB_2",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_2"
+		},
+		"81": {
+			"arg": 81,
+			"type": "button",
+			"description": "Right MDI PB 3",
+			"deviceId": 36,
+			"commandId": 3013,
+			"commandRef": "MDI_commands.MDI_PB_3",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_3"
+		},
+		"82": {
+			"arg": 82,
+			"type": "button",
+			"description": "Right MDI PB 4",
+			"deviceId": 36,
+			"commandId": 3014,
+			"commandRef": "MDI_commands.MDI_PB_4",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_4"
+		},
+		"83": {
+			"arg": 83,
+			"type": "button",
+			"description": "Right MDI PB 5",
+			"deviceId": 36,
+			"commandId": 3015,
+			"commandRef": "MDI_commands.MDI_PB_5",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_5"
+		},
+		"84": {
+			"arg": 84,
+			"type": "button",
+			"description": "Right MDI PB 6",
+			"deviceId": 36,
+			"commandId": 3016,
+			"commandRef": "MDI_commands.MDI_PB_6",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_6"
+		},
+		"85": {
+			"arg": 85,
+			"type": "button",
+			"description": "Right MDI PB 7",
+			"deviceId": 36,
+			"commandId": 3017,
+			"commandRef": "MDI_commands.MDI_PB_7",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_7"
+		},
+		"86": {
+			"arg": 86,
+			"type": "button",
+			"description": "Right MDI PB 8",
+			"deviceId": 36,
+			"commandId": 3018,
+			"commandRef": "MDI_commands.MDI_PB_8",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_8"
+		},
+		"87": {
+			"arg": 87,
+			"type": "button",
+			"description": "Right MDI PB 9",
+			"deviceId": 36,
+			"commandId": 3019,
+			"commandRef": "MDI_commands.MDI_PB_9",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_9"
+		},
+		"88": {
+			"arg": 88,
+			"type": "button",
+			"description": "Right MDI PB 10",
+			"deviceId": 36,
+			"commandId": 3020,
+			"commandRef": "MDI_commands.MDI_PB_10",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_10"
+		},
+		"89": {
+			"arg": 89,
+			"type": "button",
+			"description": "Right MDI PB 11",
+			"deviceId": 36,
+			"commandId": 3021,
+			"commandRef": "MDI_commands.MDI_PB_11",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_11"
+		},
+		"90": {
+			"arg": 90,
+			"type": "button",
+			"description": "Right MDI PB 12",
+			"deviceId": 36,
+			"commandId": 3022,
+			"commandRef": "MDI_commands.MDI_PB_12",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_12"
+		},
+		"91": {
+			"arg": 91,
+			"type": "button",
+			"description": "Right MDI PB 13",
+			"deviceId": 36,
+			"commandId": 3023,
+			"commandRef": "MDI_commands.MDI_PB_13",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_13"
+		},
+		"92": {
+			"arg": 92,
+			"type": "button",
+			"description": "Right MDI PB 14",
+			"deviceId": 36,
+			"commandId": 3024,
+			"commandRef": "MDI_commands.MDI_PB_14",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_14"
+		},
+		"93": {
+			"arg": 93,
+			"type": "button",
+			"description": "Right MDI PB 15",
+			"deviceId": 36,
+			"commandId": 3025,
+			"commandRef": "MDI_commands.MDI_PB_15",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_15"
+		},
+		"94": {
+			"arg": 94,
+			"type": "button",
+			"description": "Right MDI PB 16",
+			"deviceId": 36,
+			"commandId": 3026,
+			"commandRef": "MDI_commands.MDI_PB_16",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_16"
+		},
+		"95": {
+			"arg": 95,
+			"type": "button",
+			"description": "Right MDI PB 17",
+			"deviceId": 36,
+			"commandId": 3027,
+			"commandRef": "MDI_commands.MDI_PB_17",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_17"
+		},
+		"96": {
+			"arg": 96,
+			"type": "button",
+			"description": "Right MDI PB 18",
+			"deviceId": 36,
+			"commandId": 3028,
+			"commandRef": "MDI_commands.MDI_PB_18",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_18"
+		},
+		"97": {
+			"arg": 97,
+			"type": "button",
+			"description": "Right MDI PB 19",
+			"deviceId": 36,
+			"commandId": 3029,
+			"commandRef": "MDI_commands.MDI_PB_19",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_19"
+		},
+		"98": {
+			"arg": 98,
+			"type": "button",
+			"description": "Right MDI PB 20",
+			"deviceId": 36,
+			"commandId": 3030,
+			"commandRef": "MDI_commands.MDI_PB_20",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "MDI_RIGHT",
+			"commandName": "MDI_commands.MDI_PB_20"
+		},
+		"203": {
+			"arg": 203,
+			"type": "potentiometer",
+			"description": "AMPCD Off/Brightness Control Knob",
+			"deviceId": 37,
+			"commandId": 3001,
+			"commandRef": "AMPCD_commands.AMPCD_off_brightness",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_off_brightness"
+		},
+		"177": {
+			"arg": 177,
+			"type": "button",
+			"description": "AMPCD Night/Day Brightness Selector, DAY",
+			"deviceId": 37,
+			"commandId": 3002,
+			"commandRef": "AMPCD_commands.AMPCD_nite_day_DAY",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_nite_day_DAY"
+		},
+		"179": {
+			"arg": 179,
+			"type": "button",
+			"description": "AMPCD Symbology Control Switch, UP",
+			"deviceId": 37,
+			"commandId": 3004,
+			"commandRef": "AMPCD_commands.AMPCD_symbology_UP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_symbology_UP"
+		},
+		"182": {
+			"arg": 182,
+			"type": "button",
+			"description": "AMPCD Contrast Control Switch, UP",
+			"deviceId": 37,
+			"commandId": 3006,
+			"commandRef": "AMPCD_commands.AMPCD_contrast_UP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_contrast_UP"
+		},
+		"180": {
+			"arg": 180,
+			"type": "button",
+			"description": "AMPCD Gain Control Switch, UP",
+			"deviceId": 37,
+			"commandId": 3008,
+			"commandRef": "AMPCD_commands.AMPCD_gain_UP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_gain_UP"
+		},
+		"183": {
+			"arg": 183,
+			"type": "button",
+			"description": "AMPCD PB 1",
+			"deviceId": 37,
+			"commandId": 3011,
+			"commandRef": "AMPCD_commands.AMPCD_PB_1",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_1"
+		},
+		"184": {
+			"arg": 184,
+			"type": "button",
+			"description": "AMPCD PB 2",
+			"deviceId": 37,
+			"commandId": 3012,
+			"commandRef": "AMPCD_commands.AMPCD_PB_2",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_2"
+		},
+		"185": {
+			"arg": 185,
+			"type": "button",
+			"description": "AMPCD PB 3",
+			"deviceId": 37,
+			"commandId": 3013,
+			"commandRef": "AMPCD_commands.AMPCD_PB_3",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_3"
+		},
+		"186": {
+			"arg": 186,
+			"type": "button",
+			"description": "AMPCD PB 4",
+			"deviceId": 37,
+			"commandId": 3014,
+			"commandRef": "AMPCD_commands.AMPCD_PB_4",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_4"
+		},
+		"187": {
+			"arg": 187,
+			"type": "button",
+			"description": "AMPCD PB 5",
+			"deviceId": 37,
+			"commandId": 3015,
+			"commandRef": "AMPCD_commands.AMPCD_PB_5",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_5"
+		},
+		"188": {
+			"arg": 188,
+			"type": "button",
+			"description": "AMPCD PB 6",
+			"deviceId": 37,
+			"commandId": 3016,
+			"commandRef": "AMPCD_commands.AMPCD_PB_6",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_6"
+		},
+		"189": {
+			"arg": 189,
+			"type": "button",
+			"description": "AMPCD PB 7",
+			"deviceId": 37,
+			"commandId": 3017,
+			"commandRef": "AMPCD_commands.AMPCD_PB_7",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_7"
+		},
+		"190": {
+			"arg": 190,
+			"type": "button",
+			"description": "AMPCD PB 8",
+			"deviceId": 37,
+			"commandId": 3018,
+			"commandRef": "AMPCD_commands.AMPCD_PB_8",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_8"
+		},
+		"191": {
+			"arg": 191,
+			"type": "button",
+			"description": "AMPCD PB 9",
+			"deviceId": 37,
+			"commandId": 3019,
+			"commandRef": "AMPCD_commands.AMPCD_PB_9",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_9"
+		},
+		"192": {
+			"arg": 192,
+			"type": "button",
+			"description": "AMPCD PB 10",
+			"deviceId": 37,
+			"commandId": 3020,
+			"commandRef": "AMPCD_commands.AMPCD_PB_10",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_10"
+		},
+		"193": {
+			"arg": 193,
+			"type": "button",
+			"description": "AMPCD PB 11",
+			"deviceId": 37,
+			"commandId": 3021,
+			"commandRef": "AMPCD_commands.AMPCD_PB_11",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_11"
+		},
+		"194": {
+			"arg": 194,
+			"type": "button",
+			"description": "AMPCD PB 12",
+			"deviceId": 37,
+			"commandId": 3022,
+			"commandRef": "AMPCD_commands.AMPCD_PB_12",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_12"
+		},
+		"195": {
+			"arg": 195,
+			"type": "button",
+			"description": "AMPCD PB 13",
+			"deviceId": 37,
+			"commandId": 3023,
+			"commandRef": "AMPCD_commands.AMPCD_PB_13",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_13"
+		},
+		"196": {
+			"arg": 196,
+			"type": "button",
+			"description": "AMPCD PB 14",
+			"deviceId": 37,
+			"commandId": 3024,
+			"commandRef": "AMPCD_commands.AMPCD_PB_14",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_14"
+		},
+		"197": {
+			"arg": 197,
+			"type": "button",
+			"description": "AMPCD PB 15",
+			"deviceId": 37,
+			"commandId": 3025,
+			"commandRef": "AMPCD_commands.AMPCD_PB_15",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_15"
+		},
+		"198": {
+			"arg": 198,
+			"type": "button",
+			"description": "AMPCD PB 16",
+			"deviceId": 37,
+			"commandId": 3026,
+			"commandRef": "AMPCD_commands.AMPCD_PB_16",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_16"
+		},
+		"199": {
+			"arg": 199,
+			"type": "button",
+			"description": "AMPCD PB 17",
+			"deviceId": 37,
+			"commandId": 3027,
+			"commandRef": "AMPCD_commands.AMPCD_PB_17",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_17"
+		},
+		"200": {
+			"arg": 200,
+			"type": "button",
+			"description": "AMPCD PB 18",
+			"deviceId": 37,
+			"commandId": 3028,
+			"commandRef": "AMPCD_commands.AMPCD_PB_18",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_18"
+		},
+		"201": {
+			"arg": 201,
+			"type": "button",
+			"description": "AMPCD PB 19",
+			"deviceId": 37,
+			"commandId": 3029,
+			"commandRef": "AMPCD_commands.AMPCD_PB_19",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_19"
+		},
+		"202": {
+			"arg": 202,
+			"type": "button",
+			"description": "AMPCD PB 20",
+			"deviceId": 37,
+			"commandId": 3030,
+			"commandRef": "AMPCD_commands.AMPCD_PB_20",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "AMPCD",
+			"commandName": "AMPCD_commands.AMPCD_PB_20"
+		},
+		"224": {
+			"arg": 224,
+			"type": "potentiometer",
+			"description": "AAU-52 Altimeter Pressure Setting Knob",
+			"deviceId": 26,
+			"commandId": 3001,
+			"commandRef": "aau52_commands.AAU52_ClkCmd_ZeroSetting",
+			"argLim": [
+				[
+					0.0,
+					-120.0
+				]
+			],
+			"deviceName": "AAU52",
+			"commandName": "aau52_commands.AAU52_ClkCmd_ZeroSetting"
+		},
+		"291": {
+			"arg": 291,
+			"type": "buttonAxis",
+			"description": "Push to Test Switch, (LMB) activate BIT checks/(MW) rotate clockwise to apply power and set low altitude index pointer",
+			"deviceId": 30,
+			"commandId": 3001,
+			"commandRef": "id2163a_commands.ID2163A_PushToTest",
+			"commandId2": 3002,
+			"arg2": 291,
+			"deviceName": "ID2163A",
+			"commandName": "id2163a_commands.ID2163A_PushToTest"
+		},
+		"215": {
+			"arg": 215,
+			"type": "button",
+			"description": "SAI Test Button - Push to test",
+			"deviceId": 32,
+			"commandId": 3001,
+			"commandRef": "sai_commands.SAI_test",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "SAI",
+			"commandName": "sai_commands.SAI_test"
+		},
+		"168": {
+			"arg": 168,
+			"type": "button",
+			"description": "IFEI Mode Button",
+			"deviceId": 33,
+			"commandId": 3001,
+			"commandRef": "IFEI_commands.IFEI_BTN_MODE",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_BTN_MODE"
+		},
+		"169": {
+			"arg": 169,
+			"type": "button",
+			"description": "IFEI QTY Button",
+			"deviceId": 33,
+			"commandId": 3002,
+			"commandRef": "IFEI_commands.IFEI_BTN_QTY",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_BTN_QTY"
+		},
+		"170": {
+			"arg": 170,
+			"type": "button",
+			"description": "IFEI Up Arrow Button",
+			"deviceId": 33,
+			"commandId": 3003,
+			"commandRef": "IFEI_commands.IFEI_BTN_UP_ARROW",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_BTN_UP_ARROW"
+		},
+		"171": {
+			"arg": 171,
+			"type": "button",
+			"description": "IFEI Down Arrow Button",
+			"deviceId": 33,
+			"commandId": 3004,
+			"commandRef": "IFEI_commands.IFEI_BTN_DOWN_ARROW",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_BTN_DOWN_ARROW"
+		},
+		"172": {
+			"arg": 172,
+			"type": "button",
+			"description": "IFEI ZONE Button",
+			"deviceId": 33,
+			"commandId": 3005,
+			"commandRef": "IFEI_commands.IFEI_BTN_ZONE",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_BTN_ZONE"
+		},
+		"173": {
+			"arg": 173,
+			"type": "button",
+			"description": "IFEI ET Button",
+			"deviceId": 33,
+			"commandId": 3006,
+			"commandRef": "IFEI_commands.IFEI_BTN_ET",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_BTN_ET"
+		},
+		"174": {
+			"arg": 174,
+			"type": "potentiometer",
+			"description": "IFEI Brightness Control Knob",
+			"deviceId": 33,
+			"commandId": 3007,
+			"commandRef": "IFEI_commands.IFEI_Brightness",
+			"argLim": [
+				[
+					0.0,
+					-90.0
+				]
+			],
+			"deviceName": "IFEI",
+			"commandName": "IFEI_commands.IFEI_Brightness"
+		},
+		"440": {
+			"arg": 440,
+			"type": "multipositionSwitchWithPull",
+			"description": "RADAR Switch (MW to pull), OFF/STBY/OPR/EMERG(PULL)",
+			"deviceId": 42,
+			"commandId": 3001,
+			"commandRef": "RADAR_commands.RADAR_SwitchChange",
+			"commandIdPull": 3002,
+			"commandPullRef": "RADAR_commands.RADAR_SwitchPull",
+			"argPull": 0,
+			"positions": 4,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.30000000000000004
+				],
+				[
+					0.0,
+					0.30000000000000004
+				]
+			],
+			"deviceName": "RADAR",
+			"commandName": "RADAR_commands.RADAR_SwitchChange"
+		},
+		"443": {
+			"arg": 443,
+			"type": "multipositionSwitch",
+			"description": "INS switch",
+			"deviceId": 44,
+			"commandId": 3001,
+			"commandRef": "INS_commands.INS_SwitchChange",
+			"positions": 9,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					-0.1,
+					0.7000000000000001
+				],
+				[
+					-0.1,
+					0.7000000000000001
+				]
+			],
+			"deviceName": "INS",
+			"commandName": "INS_commands.INS_SwitchChange"
+		},
+		"128": {
+			"arg": 128,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, A/P",
+			"deviceId": 25,
+			"commandId": 3001,
+			"commandRef": "UFC_commands.FuncSwAP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwAP"
+		},
+		"129": {
+			"arg": 129,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, IFF",
+			"deviceId": 25,
+			"commandId": 3002,
+			"commandRef": "UFC_commands.FuncSwIFF",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwIFF"
+		},
+		"130": {
+			"arg": 130,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, TCN",
+			"deviceId": 25,
+			"commandId": 3003,
+			"commandRef": "UFC_commands.FuncSwTCN",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwTCN"
+		},
+		"131": {
+			"arg": 131,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, ILS",
+			"deviceId": 25,
+			"commandId": 3004,
+			"commandRef": "UFC_commands.FuncSwILS",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwILS"
+		},
+		"132": {
+			"arg": 132,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, D/L",
+			"deviceId": 25,
+			"commandId": 3005,
+			"commandRef": "UFC_commands.FuncSwDL",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwDL"
+		},
+		"133": {
+			"arg": 133,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, BCN",
+			"deviceId": 25,
+			"commandId": 3006,
+			"commandRef": "UFC_commands.FuncSwBCN",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwBCN"
+		},
+		"134": {
+			"arg": 134,
+			"type": "button",
+			"description": "UFC Function Selector Pushbutton, ON/OFF",
+			"deviceId": 25,
+			"commandId": 3007,
+			"commandRef": "UFC_commands.FuncSwOnOff",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.FuncSwOnOff"
+		},
+		"100": {
+			"arg": 100,
+			"type": "button",
+			"description": "UFC Option Select Pushbutton 1",
+			"deviceId": 25,
+			"commandId": 3010,
+			"commandRef": "UFC_commands.OptSw1",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.OptSw1"
+		},
+		"101": {
+			"arg": 101,
+			"type": "button",
+			"description": "UFC Option Select Pushbutton 2",
+			"deviceId": 25,
+			"commandId": 3011,
+			"commandRef": "UFC_commands.OptSw2",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.OptSw2"
+		},
+		"102": {
+			"arg": 102,
+			"type": "button",
+			"description": "UFC Option Select Pushbutton 3",
+			"deviceId": 25,
+			"commandId": 3012,
+			"commandRef": "UFC_commands.OptSw3",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.OptSw3"
+		},
+		"103": {
+			"arg": 103,
+			"type": "button",
+			"description": "UFC Option Select Pushbutton 4",
+			"deviceId": 25,
+			"commandId": 3013,
+			"commandRef": "UFC_commands.OptSw4",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.OptSw4"
+		},
+		"106": {
+			"arg": 106,
+			"type": "button",
+			"description": "UFC Option Select Pushbutton 5",
+			"deviceId": 25,
+			"commandId": 3014,
+			"commandRef": "UFC_commands.OptSw5",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.OptSw5"
+		},
+		"111": {
+			"arg": 111,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 1",
+			"deviceId": 25,
+			"commandId": 3019,
+			"commandRef": "UFC_commands.KbdSw1",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw1"
+		},
+		"112": {
+			"arg": 112,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 2",
+			"deviceId": 25,
+			"commandId": 3020,
+			"commandRef": "UFC_commands.KbdSw2",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw2"
+		},
+		"113": {
+			"arg": 113,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 3",
+			"deviceId": 25,
+			"commandId": 3021,
+			"commandRef": "UFC_commands.KbdSw3",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw3"
+		},
+		"114": {
+			"arg": 114,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 4",
+			"deviceId": 25,
+			"commandId": 3022,
+			"commandRef": "UFC_commands.KbdSw4",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw4"
+		},
+		"115": {
+			"arg": 115,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 5",
+			"deviceId": 25,
+			"commandId": 3023,
+			"commandRef": "UFC_commands.KbdSw5",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw5"
+		},
+		"116": {
+			"arg": 116,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 6",
+			"deviceId": 25,
+			"commandId": 3024,
+			"commandRef": "UFC_commands.KbdSw6",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw6"
+		},
+		"117": {
+			"arg": 117,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 7",
+			"deviceId": 25,
+			"commandId": 3025,
+			"commandRef": "UFC_commands.KbdSw7",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw7"
+		},
+		"118": {
+			"arg": 118,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 8",
+			"deviceId": 25,
+			"commandId": 3026,
+			"commandRef": "UFC_commands.KbdSw8",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw8"
+		},
+		"119": {
+			"arg": 119,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 9",
+			"deviceId": 25,
+			"commandId": 3027,
+			"commandRef": "UFC_commands.KbdSw9",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw9"
+		},
+		"120": {
+			"arg": 120,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, 0",
+			"deviceId": 25,
+			"commandId": 3018,
+			"commandRef": "UFC_commands.KbdSw0",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSw0"
+		},
+		"121": {
+			"arg": 121,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, CLR",
+			"deviceId": 25,
+			"commandId": 3028,
+			"commandRef": "UFC_commands.KbdSwCLR",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSwCLR"
+		},
+		"122": {
+			"arg": 122,
+			"type": "button",
+			"description": "UFC Keyboard Pushbutton, ENT",
+			"deviceId": 25,
+			"commandId": 3029,
+			"commandRef": "UFC_commands.KbdSwENT",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.KbdSwENT"
+		},
+		"99": {
+			"arg": 99,
+			"type": "button",
+			"description": "UFC I/P Pushbutton",
+			"deviceId": 25,
+			"commandId": 3015,
+			"commandRef": "UFC_commands.SwIP",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.SwIP"
+		},
+		"110": {
+			"arg": 110,
+			"type": "button",
+			"description": "UFC Emission Control Pushbutton",
+			"deviceId": 25,
+			"commandId": 3017,
+			"commandRef": "UFC_commands.SwEMCON",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.SwEMCON"
+		},
+		"107": {
+			"arg": 107,
+			"type": "threePositionSwitch",
+			"description": "UFC ADF Function Select Switch, 1/OFF/2",
+			"deviceId": 25,
+			"commandId": 3016,
+			"commandRef": "UFC_commands.SwADF",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.SwADF"
+		},
+		"108": {
+			"arg": 108,
+			"type": "potentiometer",
+			"description": "UFC COMM 1 Volume Control Knob",
+			"deviceId": 25,
+			"commandId": 3030,
+			"commandRef": "UFC_commands.Comm1Vol",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.Comm1Vol"
+		},
+		"123": {
+			"arg": 123,
+			"type": "potentiometer",
+			"description": "UFC COMM 2 Volume Control Knob",
+			"deviceId": 25,
+			"commandId": 3031,
+			"commandRef": "UFC_commands.Comm2Vol",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.Comm2Vol"
+		},
+		"109": {
+			"arg": 109,
+			"type": "potentiometer",
+			"description": "UFC Brightness Control Knob",
+			"deviceId": 25,
+			"commandId": 3032,
+			"commandRef": "UFC_commands.BrtDim",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.BrtDim"
+		},
+		"124": {
+			"arg": 124,
+			"type": "buttonAxisTumb",
+			"description": "UFC COMM 1 Channel Selector Knob",
+			"deviceId": 25,
+			"commandId": 3008,
+			"commandRef": "UFC_commands.Comm1Fcn",
+			"commandId2": 3033,
+			"arg2": 124,
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.Comm1Fcn"
+		},
+		"126": {
+			"arg": 126,
+			"type": "buttonAxisTumb",
+			"description": "UFC COMM 2 Channel Selector Knob",
+			"deviceId": 25,
+			"commandId": 3009,
+			"commandRef": "UFC_commands.Comm2Fcn",
+			"commandId2": 3034,
+			"arg2": 126,
+			"deviceName": "UFC",
+			"commandName": "UFC_commands.Comm2Fcn"
+		},
+		"357": {
+			"arg": 357,
+			"type": "potentiometer",
+			"description": "VOX Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3002,
+			"commandRef": "intercom_commands.VOX_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.VOX_Volume"
+		},
+		"358": {
+			"arg": 358,
+			"type": "potentiometer",
+			"description": "ICS Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3003,
+			"commandRef": "intercom_commands.ICS_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.ICS_Volume"
+		},
+		"359": {
+			"arg": 359,
+			"type": "potentiometer",
+			"description": "RWR Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3004,
+			"commandRef": "intercom_commands.RWR_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.RWR_Volume"
+		},
+		"360": {
+			"arg": 360,
+			"type": "potentiometer",
+			"description": "WPN Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3005,
+			"commandRef": "intercom_commands.WPN_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.WPN_Volume"
+		},
+		"361": {
+			"arg": 361,
+			"type": "potentiometer",
+			"description": "MIDS B Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3007,
+			"commandRef": "intercom_commands.MIDS_B_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.MIDS_B_Volume"
+		},
+		"362": {
+			"arg": 362,
+			"type": "potentiometer",
+			"description": "MIDS A Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3006,
+			"commandRef": "intercom_commands.MIDS_A_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.MIDS_A_Volume"
+		},
+		"363": {
+			"arg": 363,
+			"type": "potentiometer",
+			"description": "TACAN Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3008,
+			"commandRef": "intercom_commands.TCN_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.TCN_Volume"
+		},
+		"364": {
+			"arg": 364,
+			"type": "potentiometer",
+			"description": "AUX Volume Control Knob",
+			"deviceId": 40,
+			"commandId": 3009,
+			"commandRef": "intercom_commands.AUX_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.AUX_Volume"
+		},
+		"350": {
+			"arg": 350,
+			"type": "threePositionSwitch",
+			"description": "Comm Relay Switch, CIPHER/OFF/PLAIN",
+			"deviceId": 40,
+			"commandId": 3010,
+			"commandRef": "intercom_commands.COMM_RLY_Sw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.COMM_RLY_Sw"
+		},
+		"351": {
+			"arg": 351,
+			"type": "threePositionSwitch",
+			"description": "COMM G XMT Switch, COMM 1/OFF/COMM 2",
+			"deviceId": 40,
+			"commandId": 3011,
+			"commandRef": "intercom_commands.G_XMT_Sw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.G_XMT_Sw"
+		},
+		"356": {
+			"arg": 356,
+			"type": "twoPositionSwitch",
+			"description": "IFF Master Switch, EMER/NORM",
+			"deviceId": 40,
+			"commandId": 3012,
+			"commandRef": "intercom_commands.IFF_MasterSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.IFF_MasterSw"
+		},
+		"355": {
+			"arg": 355,
+			"type": "threePositionSwitch",
+			"description": "IFF Mode 4 Switch, DIS/AUD /DIS/OFF",
+			"deviceId": 40,
+			"commandId": 3013,
+			"commandRef": "intercom_commands.IFF_Mode4Sw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.IFF_Mode4Sw"
+		},
+		"354": {
+			"arg": 354,
+			"type": "springLoaded3PosSwitch",
+			"description": "CRYPTO Switch, HOLD/NORM/ZERO",
+			"deviceId": 40,
+			"commandId": 3014,
+			"commandRef": "intercom_commands.IFF_CryptoSw_Zero",
+			"commandId2": 3015,
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					0
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.IFF_CryptoSw_Zero"
+		},
+		"353": {
+			"arg": 353,
+			"type": "twoPositionSwitch",
+			"description": "ILS UFC/MAN Switch, UFC/MAN",
+			"deviceId": 40,
+			"commandId": 3016,
+			"commandRef": "intercom_commands.ILS_UFC_MAN_Sw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.ILS_UFC_MAN_Sw"
+		},
+		"352": {
+			"arg": 352,
+			"type": "multipositionSwitch",
+			"description": "ILS Channel Selector Switch",
+			"deviceId": 40,
+			"commandId": 3017,
+			"commandRef": "intercom_commands.ILS_ChannelSelector",
+			"positions": 20,
+			"step": 0.05,
+			"argValue": [
+				-0.05,
+				0.05
+			],
+			"argLim": [
+				[
+					0.0,
+					0.9500000000000001
+				],
+				[
+					0.0,
+					0.9500000000000001
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.ILS_ChannelSelector"
+		},
+		"444": {
+			"arg": 444,
+			"type": "multipositionSwitch",
+			"description": "KY-58 Mode Select Knob, P/C/LD/RV",
+			"deviceId": 41,
+			"commandId": 3001,
+			"commandRef": "ky58_commands.KY58_ModeSw",
+			"positions": 4,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.30000000000000004
+				],
+				[
+					0.0,
+					0.30000000000000004
+				]
+			],
+			"deviceName": "KY58",
+			"commandName": "ky58_commands.KY58_ModeSw"
+		},
+		"445": {
+			"arg": 445,
+			"type": "potentiometer",
+			"description": "KY-58 Volume Control Knob",
+			"deviceId": 41,
+			"commandId": 3005,
+			"commandRef": "ky58_commands.KY58_Volume",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "KY58",
+			"commandName": "ky58_commands.KY58_Volume"
+		},
+		"446": {
+			"arg": 446,
+			"type": "multipositionSwitch",
+			"description": "KY-58 Fill Select Knob, Z 1-5/1/2/3/4/5/6/Z ALL",
+			"deviceId": 41,
+			"commandId": 3002,
+			"commandRef": "ky58_commands.KY58_FillSw",
+			"positions": 8,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.7000000000000001
+				],
+				[
+					0.0,
+					0.7000000000000001
+				]
+			],
+			"deviceName": "KY58",
+			"commandName": "ky58_commands.KY58_FillSw"
+		},
+		"447": {
+			"arg": 447,
+			"type": "multipositionSwitch",
+			"description": "KY-58 Power Select Knob, OFF/ON/TD",
+			"deviceId": 41,
+			"commandId": 3004,
+			"commandRef": "ky58_commands.KY58_PowerSw",
+			"positions": 3,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "KY58",
+			"commandName": "ky58_commands.KY58_PowerSw"
+		},
+		"230": {
+			"arg": 230,
+			"type": "button",
+			"description": "Warning Tone Silence Button - Push to silence",
+			"deviceId": 40,
+			"commandId": 3018,
+			"commandRef": "intercom_commands.WarnToneSilBtn",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "INTERCOM",
+			"commandName": "intercom_commands.WarnToneSilBtn"
+		},
+		"373": {
+			"arg": 373,
+			"type": "threePositionSwitch",
+			"description": "COMM 1 Antenna Selector Switch, UPPER/AUTO/LOWER",
+			"deviceId": 50,
+			"commandId": 3001,
+			"commandRef": "antsel_commands.Comm1AntSelSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ANTENNA_SELECTOR",
+			"commandName": "antsel_commands.Comm1AntSelSw"
+		},
+		"374": {
+			"arg": 374,
+			"type": "threePositionSwitch",
+			"description": "IFF Antenna Selector Switch, UPPER/BOTH/LOWER",
+			"deviceId": 50,
+			"commandId": 3002,
+			"commandRef": "antsel_commands.AntSelIFFSw",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "ANTENNA_SELECTOR",
+			"commandName": "antsel_commands.AntSelIFFSw"
+		},
+		"277": {
+			"arg": 277,
+			"type": "twoPositionSwitch",
+			"description": "ALR-67 POWER Pushbutton",
+			"deviceId": 53,
+			"commandId": 3001,
+			"commandRef": "rwr_commands.Power",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.Power"
+		},
+		"275": {
+			"arg": 275,
+			"type": "button",
+			"description": "ALR-67 DISPLAY Pushbutton",
+			"deviceId": 53,
+			"commandId": 3002,
+			"commandRef": "rwr_commands.Display",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.Display"
+		},
+		"272": {
+			"arg": 272,
+			"type": "button",
+			"description": "ALR-67 SPECIAL Pushbutton",
+			"deviceId": 53,
+			"commandId": 3003,
+			"commandRef": "rwr_commands.Special",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.Special"
+		},
+		"269": {
+			"arg": 269,
+			"type": "button",
+			"description": "ALR-67 OFFSET Pushbutton",
+			"deviceId": 53,
+			"commandId": 3004,
+			"commandRef": "rwr_commands.Offset",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.Offset"
+		},
+		"266": {
+			"arg": 266,
+			"type": "button",
+			"description": "ALR-67 BIT Pushbutton",
+			"deviceId": 53,
+			"commandId": 3005,
+			"commandRef": "rwr_commands.Bit",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.Bit"
+		},
+		"263": {
+			"arg": 263,
+			"type": "potentiometer",
+			"description": "ALR-67 DMR Control Knob",
+			"deviceId": 53,
+			"commandId": 3006,
+			"commandRef": "rwr_commands.DmrControl",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.DmrControl"
+		},
+		"262": {
+			"arg": 262,
+			"type": "potentiometer",
+			"description": "ALR-67 AUDIO Control Knob (no function)",
+			"deviceId": 0,
+			"commandId": 3130,
+			"commandRef": "3130",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"commandName": "3130"
+		},
+		"261": {
+			"arg": 261,
+			"type": "multipositionSwitch",
+			"description": "ALR-67 DIS TYPE Switch, N/I/A/U/F",
+			"deviceId": 53,
+			"commandId": 3007,
+			"commandRef": "rwr_commands.DisType",
+			"positions": 5,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.4
+				],
+				[
+					0.0,
+					0.4
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.DisType"
+		},
+		"216": {
+			"arg": 216,
+			"type": "potentiometer",
+			"description": "RWR Intensity Knob",
+			"deviceId": 53,
+			"commandId": 3008,
+			"commandRef": "rwr_commands.IntControl",
+			"argLim": [
+				[
+					0.0,
+					1.0
+				]
+			],
+			"deviceName": "RWR",
+			"commandName": "rwr_commands.IntControl"
+		},
+		"380": {
+			"arg": 380,
+			"type": "button",
+			"description": "Dispense Button - Push to dispense flares and chaff",
+			"deviceId": 54,
+			"commandId": 3002,
+			"commandRef": "cmds_commands.EcmDisp",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CMDS",
+			"commandName": "cmds_commands.EcmDisp"
+		},
+		"517": {
+			"arg": 517,
+			"type": "threePositionSwitch",
+			"description": "DISPENSER Switch, BYPASS/ON/OFF",
+			"deviceId": 54,
+			"commandId": 3001,
+			"commandRef": "cmds_commands.Dispenser",
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.2
+				],
+				[
+					0.0,
+					0.2
+				]
+			],
+			"deviceName": "CMDS",
+			"commandName": "cmds_commands.Dispenser"
+		},
+		"515": {
+			"arg": 515,
+			"type": "toggleButton",
+			"description": "ECM JETT JETT SEL Button - Push to jettison",
+			"deviceId": 54,
+			"commandId": 3003,
+			"commandRef": "cmds_commands.EcmJett",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "CMDS",
+			"commandName": "cmds_commands.EcmJett"
+		},
+		"248": {
+			"arg": 248,
+			"type": "multipositionSwitch",
+			"description": "ECM Mode Switch, XMIT/REC/BIT/STBY/OFF",
+			"deviceId": 66,
+			"commandId": 3001,
+			"commandRef": "ASPJ_commands.ASPJ_SwitchChange",
+			"positions": 5,
+			"step": 0.1,
+			"argValue": [
+				-0.1,
+				0.1
+			],
+			"argLim": [
+				[
+					0.0,
+					0.4
+				],
+				[
+					0.0,
+					0.4
+				]
+			],
+			"deviceName": "ASPJ",
+			"commandName": "ASPJ_commands.ASPJ_SwitchChange"
+		},
+		"439": {
+			"arg": 439,
+			"type": "threePositionSwitch",
+			"description": "FLIR Switch, ON/STBY/OFF",
+			"deviceId": 62,
+			"commandId": 3001,
+			"commandRef": "tgp_commands.Flir",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"deviceName": "TGP_INTERFACE",
+			"commandName": "tgp_commands.Flir"
+		},
+		"441": {
+			"arg": 441,
+			"type": "springLoadedSwitch",
+			"description": "LTD/R Switch, ARM/SAFE",
+			"deviceId": 62,
+			"commandId": 3002,
+			"commandRef": "tgp_commands.LtdrArm",
+			"argValue": [
+				1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "TGP_INTERFACE",
+			"commandName": "tgp_commands.LtdrArm"
+		},
+		"442": {
+			"arg": 442,
+			"type": "twoPositionSwitch",
+			"description": "LST/NFLR Switch, ON/OFF",
+			"deviceId": 62,
+			"commandId": 3003,
+			"commandRef": "tgp_commands.Lst",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"deviceName": "TGP_INTERFACE",
+			"commandName": "tgp_commands.Lst"
+		},
+		"136": {
+			"arg": 136,
+			"type": "potentiometer",
+			"description": "HMD OFF/BRT Knob",
+			"deviceId": 58,
+			"commandId": 3001,
+			"commandRef": "hmd_commands.BrtKnob",
+			"argLim": [
+				[
+					0.0,
+					0.75
+				]
+			],
+			"deviceName": "HMD_INTERFACE",
+			"commandName": "hmd_commands.BrtKnob"
+		},
+		"507": {
+			"arg": 507,
+			"type": "twoPositionSwitch",
+			"description": "NUC WPN Switch, ENABLE/DISABLE (no function)",
+			"deviceId": 0,
+			"commandId": 3100,
+			"commandRef": "3100",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				],
+				[
+					0,
+					1
+				]
+			],
+			"commandName": "3100"
+		},
+		"175": {
+			"arg": 175,
+			"type": "threePositionSwitch",
+			"description": "Selector Switch, HMD/LDDI/RDDI",
+			"deviceId": 0,
+			"commandId": 3104,
+			"commandRef": "3104",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"commandName": "3104"
+		},
+		"176": {
+			"arg": 176,
+			"type": "threePositionSwitch",
+			"description": "Selector Switch, HUD/LDIR/RDDI",
+			"deviceId": 0,
+			"commandId": 3105,
+			"commandRef": "3105",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"commandName": "3105"
+		},
+		"314": {
+			"arg": 314,
+			"type": "threePositionSwitch",
+			"description": "Mode Selector Switch, MAN/OFF/AUTO",
+			"deviceId": 0,
+			"commandId": 3106,
+			"commandRef": "3106",
+			"argValue": [
+				-1,
+				1
+			],
+			"argLim": [
+				[
+					-1,
+					1
+				],
+				[
+					-1,
+					1
+				]
+			],
+			"commandName": "3106"
+		},
+		"7": {
+			"arg": 7,
+			"type": "button",
+			"description": "HUD Video BIT Initiate Pushbutton - Push to initiate BIT",
+			"deviceId": 0,
+			"commandId": 3107,
+			"commandRef": "3107",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"commandName": "3107"
+		},
+		"315": {
+			"arg": 315,
+			"type": "button",
+			"description": "Left Video Sensor BIT Initiate Pushbutton - Push to initiate BIT",
+			"deviceId": 0,
+			"commandId": 3127,
+			"commandRef": "3127",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"updatable": true,
+			"commandName": "3127"
+		},
+		"318": {
+			"arg": 318,
+			"type": "button",
+			"description": "Right Video Sensor BIT Initiate Pushbutton - Push to initiate BIT",
+			"deviceId": 0,
+			"commandId": 3128,
+			"commandRef": "3128",
+			"argValue": [
+				1
+			],
+			"argLim": [
+				[
+					0,
+					1
+				]
+			],
+			"updatable": true,
+			"commandName": "3128"
+		},
+		"295": {
+			"arg": 295,
+			"type": "inlineComplex",
+			"description": "Wing Fold Control Handle, (RMB)CW/(LMB)CCW/ (MW)PULL/STOW",
+			"deviceId": 2,
+			"commandId": 3011,
+			"commandIds": [
+				3011,
+				3011,
+				3010
+			],
+			"args": [
+				295,
+				295,
+				296
+			],
+			"argValue": [
+				-1.0,
+				1.0,
+				1.0
+			],
+			"classTypes": [
+				"TUMB",
+				"TUMB",
+				"LEV"
+			],
+			"deviceName": "CONTROL_INTERFACE"
+		},
+		"296": {
+			"arg": 296,
+			"type": "inlineComplex",
+			"description": "Wing Fold Control Handle, (RMB)CW/(LMB)CCW/ (MW)PULL/STOW",
+			"deviceId": 2,
+			"commandId": 3010,
+			"commandRef": "ctrl_commands.WingFoldPull",
+			"deviceName": "CONTROL_INTERFACE",
+			"commandName": "ctrl_commands.WingFoldPull"
+		},
+		"240": {
+			"arg": 241,
+			"type": "inlineComplex",
+			"description": "Emergency/Parking Brake Handle, (LMB)Rotate Left/(RMB)Rotate Right/(MW)Pull-Stow",
+			"deviceId": 5,
+			"commandId": 3006,
+			"commandIds": [
+				3006,
+				3007,
+				3005
+			],
+			"args": [
+				241,
+				241,
+				240
+			],
+			"argValue": [
+				0.333,
+				-0.666,
+				1.0
+			],
+			"classTypes": [
+				"BTN",
+				"TUMB",
+				"LEV"
+			],
+			"deviceName": "GEAR_INTERFACE"
+		},
+		"241": {
+			"arg": 241,
+			"type": "inlineComplex",
+			"description": "Emergency/Parking Brake Handle, (LMB)Rotate Left/(RMB)Rotate Right/(MW)Pull-Stow",
+			"deviceId": 5,
+			"commandId": 3007,
+			"commandRef": "gear_commands.EmergParkHandleSelectEmerg",
+			"deviceName": "GEAR_INTERFACE",
+			"commandName": "gear_commands.EmergParkHandleSelectEmerg"
+		},
+		"213": {
+			"arg": 213,
+			"type": "inlineComplex",
+			"description": "SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust miniature airplane",
+			"deviceId": 32,
+			"commandId": 3002,
+			"commandIds": [
+				3002,
+				3003
+			],
+			"args": [
+				213,
+				214
+			],
+			"argValue": [
+				1.0,
+				0.5
+			],
+			"classTypes": [
+				"BTN",
+				"LEV"
+			],
+			"deviceName": "SAI"
+		},
+		"214": {
+			"arg": 214,
+			"type": "inlineComplex",
+			"description": "SAI Cage Knob, (LMB) Pull to cage (hold RMB and rotate MW to uncage)/(MW) Adjust miniature airplane",
+			"deviceId": 32,
+			"commandId": 3003,
+			"commandRef": "sai_commands.SAI_rotate",
+			"deviceName": "SAI",
+			"commandName": "sai_commands.SAI_rotate"
+		}
+	},
+	"stats": {
+		"totalDevices": 71,
+		"totalCommandTables": 36,
+		"totalControls": 294
+	}
+}

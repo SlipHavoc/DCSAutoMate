@@ -1,42 +1,100 @@
 # Return a Dictionary of script data.  The 'scripts' key is a list of scripts that users will be selecting from.  Each script has an associated 'function', which is the name of the function in this file that will be called to generate the command sequence, and a dictionary of 'vars' that the user will be prompted to choose from before running the script, and will be passed into the sequence generating function.
 def getScriptData():
 	return {
+		'moduleName': 'F-4E-45MC',
 		'scripts': [
 			{
 				'name': 'Cold Start With Jester',
 				'function': 'ColdStartWithJester',
 				'vars': {
-					'Time': ['Day', 'Night'],
-					'Alignment': ['BATH', 'Full'],
+					'time': {
+						'label': 'Time',
+						'options': {
+							'day': 'Day',
+							'night': 'Night',
+						},
+					},
+					'alignment': {
+						'label': 'Alignment',
+						'options': {
+							'bath': 'BATH',
+							'full': 'Full',
+						},
+					},
+					'engineStart': {
+						'label': 'Engine Start',
+						'options': {
+							'external': 'External Air',
+							'cartridge': 'Cartridge',
+						},
+					},
 				},
 			},
-			#{
-			#	'name': 'Cold Start No Jester',
-			#	'function': 'ColdStartNoJester',
-			#	'vars': {
-			#		'Time': ['Day', 'Night'],
-			#		'Alignment': ['BATH', 'Full'],
-			#	},
-			#},
+			{
+				'name': 'Cold Start No Jester',
+				'function': 'ColdStartNoJester',
+				'autoSelectHook': 'Cold Start',
+				'vars': {
+					'time': {
+						'label': 'Time',
+						'options': {
+							'day': 'Day',
+							'night': 'Night',
+						},
+					},
+					'alignment': {
+						'label': 'Alignment',
+						'options': {
+							'bath': 'BATH',
+							'full': 'Full',
+						},
+					},
+					'engineStart': {
+						'label': 'Engine Start',
+						'options': {
+							'external': 'External Air',
+							'cartridge': 'Cartridge',
+						},
+					},
+				},
+			},
 			{
 				'name': 'Auto Start (run after auto start is complete)',
-				'function': 'HotStart',
+				'function': 'AutoStart',
 				'vars': {
-					'Time': ['Day', 'Night'],
+					'time': {
+						'label': 'Time',
+						'options': {
+							'day': 'Day',
+							'night': 'Night',
+						},
+					},
 				},
 			},
 			{
 				'name': 'Hot Start',
 				'function': 'HotStart',
 				'vars': {
-					'Time': ['Day', 'Night'],
+					'time': {
+						'label': 'Time',
+						'options': {
+							'day': 'Day',
+							'night': 'Night',
+						},
+					},
 				},
 			},
 			{
 				'name': 'Air Start',
 				'function': 'AirStart',
 				'vars': {
-					'Time': ['Day', 'Night'],
+					'time': {
+						'label': 'Time',
+						'options': {
+							'day': 'Day',
+							'night': 'Night',
+						},
+					},
 				},
 			},
 			#{
@@ -48,16 +106,40 @@ def getScriptData():
 			#	'name': 'Test',
 			#	'function': 'Test',
 			#	'vars': {
-			#		'Time': ['Day', 'Night'],
-			#		'Alignment': ['BATH', 'Full'],
+			#		'time': {
+			#			'label': 'Time',
+			#			'options': {
+			#				'day': 'Day',
+			#				'night': 'Night',
+			#			},
+			#		},
+			#		'alignment': {
+			#			'label': 'Alignment',
+			#			'options': {
+			#				'bath': 'BATH',
+			#				'full': 'Full',
+			#			},
+			#		},
 			#	},
 			#},
 			#{
 			#	'name': 'Jester Command Test',
 			#	'function': 'JesterCommandTest',
 			#	'vars': {
-			#		'Time': ['Day', 'Night'],
-			#		'Alignment': ['BATH', 'Full'],
+			#		'time': {
+			#			'label': 'Time',
+			#			'options': {
+			#				'day': 'Day',
+			#				'night': 'Night',
+			#			},
+			#		},
+			#		'alignment': {
+			#			'label': 'Alignment',
+			#			'options': {
+			#				'bath': 'BATH',
+			#				'full': 'Full',
+			#			},
+			#		},
 			#	},
 			#},
 		],
@@ -71,65 +153,126 @@ def int16(mult = 1):
 	int16 = 65535
 	return int(mult * int16)
 
-def Test(config, vars):
+def Test(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	# Test code here...
 
+	# Put on helmet.
+	pushSeqCmd(dt, 'COCKPITMECHANICS.HIDE_HELMET_PILOT', 0) # 0 = Helmet On, 1 = Helmet Off
+	pushSeqCmd(14, '', '', 'Wait for boarding ladder to be removed.')
+
+	if vars.get('time') == 'day':
+		# Interior lights
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		# Radar screen night filter
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 0) # 0 = Off, 1 = On
+		# Exterior lights
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+	else:
+		# Interior lights
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		# Radar screen night filter
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 1) # 0 = Off, 1 = On
+		# Exterior lights
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+
+	# Radios
+	pushSeqCmd(dt, 'ARC164.UHF_Mode_Selector_Knob', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
+	pushSeqCmd(dt, 'ARC164.RIO_UHF_Mode_Selector_Knob', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
+
+	# Engine Master Switches ... ON
+	# Turning on master switches before loading cartridges makes the crew chief respond by voice.  If switches aren't on, cartridges will be installed, but crew chief won't tell you.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftMasterSwitch', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightMasterSwitch', 1)
+	pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, insert starter cartridges.', asyncFlag=False)
+	pushSeqCmd(1, '', '', 'Wait for Jester/Crew Chief to be ready.')
+
+	# Tell Crew Chief to insert starter cartridges.
+	pushSeqCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES', 0) # Send 0 to reset the command after triggering it.
+	pushSeqCmd(14, '', '', 'Wait for cartridges to be installed.')
+
+	# Start right engine
+	pushSeqCmd(dt, 'scriptSpeech', "Starting right engine.")
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_StartSwitch', 2) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	# Release after 1 second.
+	pushSeqCmd(1, 'ENGINECONTROLS.ENGINES_StartSwitch', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	# Wait to get past 10% RPM.
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
+	# At 10% RPM, press and hold ignition button.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 1)
+	# Advance throttle to idle detent.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopRight_TOGGLE', 1)
+	# Wait for engine to light off.
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_RIGHT_GAUGE', value=0.15, condition='>=', duration=0)
+	#pushSeqCmd(5, '', '', 'Wait 5 seconds for engine to light off.')
+	# Release ignition.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 0)
+	# Wait for RPM to reach idle (65%).
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.64, condition='>=', duration=3)
+	# Right generator ... ON
+	pushSeqCmd(dt, 'ELECTRICS.PILOT_R_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+
+	# Start left engine
+	pushSeqCmd(dt, 'scriptSpeech', "Starting left engine.")
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_StartSwitch', 0) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	# Release after 1 second.
+	pushSeqCmd(1, 'ENGINECONTROLS.ENGINES_StartSwitch', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	# Wait to get past 10% RPM.
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
+	# At 10% RPM, press and hold ignition button.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 1)
+	# Advance throttle to idle detent.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopLeft_TOGGLE', 1)
+	# Wait for engine to light off.
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_LEFT_GAUGE', value=0.15, condition='>=', duration=0)
+	# Release ignition.
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 0)
+	# Wait for RPM to reach idle (65%).
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_LEFT_GAUGE', value=0.64, condition='>=', duration=3)
+	# Right generator ... ON
+	pushSeqCmd(dt, 'ELECTRICS.PILOT_L_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+
+	pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_START_ALIGNMENT', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_START_ALIGNMENT', 0)
+
+	pushSeqCmd(dt, '', '', 'Wait for Jester prompt')
+	pushSeqCmd(5, '', '', 'Prompt should be visible')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_CENTER', 1) # Jester UI Middle/Select (W)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_CENTER', 0)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_2', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_2', 0)
 
 	return seq
 
 
-def JesterCommandTest(config, vars):
+def JesterCommandTest(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.3
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	"""
-	The only one of these that seems to work is F-4E/PLT_JESTER_COMMAND_CREW_PRESENCE_DISABLED.  None of the others seem do to anything.
+	The only one of these that seems to work is JESTER_WHEEL.JESTER_COMMAND_CREW_PRESENCE_DISABLED.  None of the others seem to do anything.
 	"""
-	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_CREW_PRESENCE_DISABLED', 'TOGGLE')
-	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_CREW_PRESENCE_AUTO', 'TOGGLE')
+	#pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_PRESENCE_DISABLED', 1)
+	#pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_PRESENCE_AUTO', 1)
 	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_RADAR_OPERATION_STANDBY ', 'TOGGLE')
 	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_RADAR_OPERATION_ACTIVE', 'TOGGLE')
 	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_RADAR_RANGE_25_NARROW', 'TOGGLE')
@@ -141,19 +284,17 @@ def JesterCommandTest(config, vars):
 	"""
 
 	# This will open the wheel, return to the base menu, and close it.
-	pushSeqCmd(dt, 'scriptKeyboard', 'a')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_UI_ACTION', 1) # Jester UI Action, opens the wheel (A)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_UI_ACTION', 0)
 	pushSeqCmd(1, '', '', 'wait')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LShift down')
-	pushSeqCmd(dt, 'scriptKeyboard', '1')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LShift up')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_BACK', 1) # Jester UI Back (LShift+1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_BACK', 0)
 	pushSeqCmd(1, '', '', 'wait')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LShift down')
-	pushSeqCmd(dt, 'scriptKeyboard', '1')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LShift up')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_BACK', 1) # Jester UI Back (LShift+1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_BACK', 0)
 	pushSeqCmd(1, '', '', 'wait')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LShift down')
-	pushSeqCmd(dt, 'scriptKeyboard', '1')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LShift up')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_BACK', 1) # Jester UI Back (LShift+1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_BACK', 0)
 
 	## Enable Jester using the wheel interface.
 	#pushSeqCmd(dt, 'scriptKeyboard', 'a')
@@ -188,233 +329,209 @@ def JesterCommandTest(config, vars):
 	#pushSeqCmd(dt, 'scriptKeyboard', 'w')
 
 	# Jester radar 25nm narrow.
-	pushSeqCmd(dt, 'scriptKeyboard', 'a')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_UI_ACTION', 1) # Jester UI Action, opens the wheel (A)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_UI_ACTION', 0)
 	pushSeqCmd(1, '', '', 'wait')
 	# Radar
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl down')
-	pushSeqCmd(dt, 'scriptKeyboard', '2')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl up')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_2', 1) # Jester UI Option 2 (LCtrl+2)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_2', 0)
 	pushSeqCmd(1, '', '', 'wait')
 	# ScanType
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl down')
-	pushSeqCmd(dt, 'scriptKeyboard', '5')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl up')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_5', 1) # Jester UI Option 5 (LCtrl+5)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_5', 0)
 	pushSeqCmd(1, '', '', 'wait')
 	# 25 nm narrow
-	pushSeqCmd(dt, 'scriptKeyboard', 'e')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_RIGHT', 1) # Jester UI Right (E)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_RIGHT', 0)
 	pushSeqCmd(1, '', '', 'wait')
-	pushSeqCmd(dt, 'scriptKeyboard', 'w')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_CENTER', 1) # Jester UI Middle/Select (W)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_CENTER', 0)
 
 	return seq
 
 
-def ColdStartWithJester(config, vars):
+def ColdStartWithJester(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.2
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
-
-	alignTime = 3 * 60 + 10 # 3m10s max for BATH align?  Seems to be randomized.  Can take as little as 2m30s in testing.
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
 
 	# Put on helmet.
-	pushSeqCmd(dt, 'PLT_COCKPIT_HELMET', 0) # 0 = Helmet On, 1 = Helmet Off
+	pushSeqCmd(dt, 'COCKPITMECHANICS.HIDE_HELMET_PILOT', 0) # 0 = Helmet On, 1 = Helmet Off
 	pushSeqCmd(14, '', '', 'Wait for boarding ladder to be removed.')
 
-	if vars.get('Time') == 'Day':
+	if vars.get('time') == 'day':
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 0) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 0) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 	else:
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 1) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 1) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 
 	# Radios
-	pushSeqCmd(dt, 'PLT_ARC_164_MODE', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
-	pushSeqCmd(dt, 'WSO_ARC_164_MODE', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
+	pushSeqCmd(dt, 'ARC164.UHF_Mode_Selector_Knob', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
+	pushSeqCmd(dt, 'ARC164.RIO_UHF_Mode_Selector_Knob', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
 
 	# Engine Master Switches ... ON
 	# Turning on master switches before loading cartridges makes the crew chief respond by voice.  If switches aren't on, cartridges will be installed, but crew chief won't tell you.
-	pushSeqCmd(dt, 'PLT_ENGINE_MASTER_L', 1)
-	pushSeqCmd(dt, 'PLT_ENGINE_MASTER_R', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftMasterSwitch', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightMasterSwitch', 1)
 	pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, insert starter cartridges.')
-	pushSeqCmd(1, '', '', 'Wait for Jester/Crew Chief to be ready.')
+	pushSeqCmd(2, '', '', 'Wait for Crew Chief to be ready.')
 
 	# Tell Crew Chief to insert starter cartridges.
-	pushSeqCmd(dt, 'PLT_CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES', 'TOGGLE') # Pass 'TOGGLE' to trigger command.
+	pushSeqCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES', 0) # Send 0 to reset the command after triggering it.
 	pushSeqCmd(14, '', '', 'Wait for cartridges to be installed.')
 
 	# Start right engine
 	pushSeqCmd(dt, 'scriptSpeech', "Starting right engine.")
-	pushSeqCmd(dt, 'PLT_ENGINE_START', 2) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_StartSwitch', 2) # 0 = LEFT, 1 = OFF, 2 = RIGHT
 	# Release after 1 second.
-	pushSeqCmd(1, 'PLT_ENGINE_START', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	pushSeqCmd(1, 'ENGINECONTROLS.ENGINES_StartSwitch', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
 	# Wait to get past 10% RPM.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_R_LARGE', value=int16(0.1), condition='>=', duration=0)
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
 	# At 10% RPM, press and hold ignition button.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_R', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 1)
 	# Advance throttle to idle detent.
-	pushSeqCmd(dt, 'PLT_THROTTLE_DETENT_R', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopRight_TOGGLE', 1)
 	# Wait for engine to light off.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_EXHAUST_R_LARGE', value=int16(0.15), condition='>=', duration=0)
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_RIGHT_GAUGE', value=0.15, condition='>=', duration=0)
 	#pushSeqCmd(5, '', '', 'Wait 5 seconds for engine to light off.')
 	# Release ignition.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_R', 0)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 0)
 	# Wait for RPM to reach idle (65%).
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_R_LARGE', value=int16(0.64), condition='>=', duration=3)
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.64, condition='>=', duration=3)
 	# Right generator ... ON
-	pushSeqCmd(dt, 'PLT_ELECTRICS_GENERATOR_R', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+	pushSeqCmd(dt, 'ELECTRICS.PILOT_R_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
 
 	# Start left engine
 	pushSeqCmd(dt, 'scriptSpeech', "Starting left engine.")
-	pushSeqCmd(dt, 'PLT_ENGINE_START', 0) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_StartSwitch', 0) # 0 = LEFT, 1 = OFF, 2 = RIGHT
 	# Release after 1 second.
-	pushSeqCmd(1, 'PLT_ENGINE_START', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+	pushSeqCmd(1, 'ENGINECONTROLS.ENGINES_StartSwitch', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
 	# Wait to get past 10% RPM.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_R_LARGE', value=int16(0.1), condition='>=', duration=0)
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
 	# At 10% RPM, press and hold ignition button.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_L', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 1)
 	# Advance throttle to idle detent.
-	pushSeqCmd(dt, 'PLT_THROTTLE_DETENT_L', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopLeft_TOGGLE', 1)
 	# Wait for engine to light off.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_EXHAUST_L_LARGE', value=int16(0.15), condition='>=', duration=0)
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_LEFT_GAUGE', value=0.15, condition='>=', duration=0)
 	# Release ignition.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_L', 0)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 0)
 	# Wait for RPM to reach idle (65%).
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_L_LARGE', value=int16(0.64), condition='>=', duration=3)
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_LEFT_GAUGE', value=0.64, condition='>=', duration=3)
 	# Right generator ... ON
-	pushSeqCmd(dt, 'PLT_ELECTRICS_GENERATOR_L', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+	pushSeqCmd(dt, 'ELECTRICS.PILOT_L_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
 
-	pushSeqCmd(4, '', '', 'Wait for Jester prompt.')
-	#pushSeqCmd(dt, 'PLT_JESTER_COMMAND_CREW_START_ALIGNMENT', 'TOGGLE') # Pass 'TOGGLE' to trigger command.
-	pushSeqCmd(dt, 'scriptKeyboard', 'w')
-	pushSeqCmd(2, '', '', 'Wait for Jester prompt.')
-	#pushSeqCmd(dt, 'PILOT_JESTER_OPTION_2 ', 'TOGGLE') # Pass 'TOGGLE' to trigger command.
-	# Select "BATH alignment".
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl down')
-	pushSeqCmd(dt, 'scriptKeyboard', '2')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl up')
+	# Prompt Jester to start alignment as soon as the generator is on.
+	pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_START_ALIGNMENT', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_START_ALIGNMENT', 0)
+	pushSeqCmd(dt, '', '', 'Wait for Jester prompt')
+	pushSeqCmd(5, '', '', 'Prompt should be visible')
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_CENTER', 1) # Jester UI Middle/Select (W)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_CENTER', 0)
+	# Option 1 for Full alignment.  Option 2 for BATH alignment.
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_2', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.PILOT_JESTER_OPTION_2', 0)
 
-	pushSeqCmd(5, '', '', 'Wait for Jester prompt.')
-	pushSeqCmd(dt, 'scriptKeyboard', 'w')
-	pushSeqCmd(2, '', '', 'Wait for Jester prompt.')
-	# Select "Yep".
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl down')
-	pushSeqCmd(dt, 'scriptKeyboard', '1')
-	pushSeqCmd(dt, 'scriptKeyboard', 'LCtrl up')
-
-	pushSeqCmd(dt, 'PLT_CANOPY_CONTROL', 0) # 0 = Close, 1 = Open
+	pushSeqCmd(dt, 'CANOPYCONTROLS.CANOPYCONTROLS_ActuatePilotCanopy', 0) # 0 = Close, 1 = Open
 
 	# Radar altimeter ... ON, but leave bug at 0 ft
-	pushSeqCmd(dt, 'PLT_RADAR_ALT_MOVE_BUG', "+3200")
+	pushSeqCmd(dt, 'RADARALTIMETER.RADAR_ALTIMETER_LowAltSet', 0.1)
 
 	# DSCG screen mode switch
-	pushSeqCmd(dt, 'PLT_RADAR_SCREEN_MODE', 0) # 0 = RADAR, 1 = OFF, 2 = TV
+	pushSeqCmd(dt, 'RADAR.PILOT_DSCG_MODE', 0) # 0 = RADAR, 1 = OFF, 2 = TV
 
 	# IFF
-	pushSeqCmd(dt, 'PLT_IFF_MASTER', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NOR, 4 = EMER
+	pushSeqCmd(dt, 'IFF.PILOT_IFF_MASTER_Knob', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NOR, 4 = EMER
 
 	# Antiskid
-	pushSeqCmd(dt, 'PLT_GEAR_ANTI_SKID', 1)
+	pushSeqCmd(dt, 'GEARANDHOOK.LANDING_GEAR_AntiSkid', 1)
 
 	# Backup ADI
-	pushSeqCmd(dt, 'PLT_SAI_CAGE', 0)
+	pushSeqCmd(dt, 'EMERGENCYATTITUDEINDICATOR.EMERG_ADI_Cage', 0)
 
 	# Sight mode
-	pushSeqCmd(dt, 'PLT_HUD_MODE', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
+	pushSeqCmd(dt, 'HUD_AN_ASG_26.HUD_SelectHUDMode', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
 
 	# ADI flight director switch
-	pushSeqCmd(dt, 'PLT_FDC_FLIGHT_DIRECTOR', 1)
+	pushSeqCmd(dt, 'FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_FD_KNOB', 1)
 
 	# Wait for alignment to complete.  With Jester, that's when he moves the INS Power knob to NAV.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/WSO_INS_POWER', value=3, condition='=', duration=0)
-	pushSeqCmd(7, '', '', 'Wait for Jester to finish talking.')
+	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/INS_AN_ASN_63.INS_WSO_POWER_KNOB', value=3, condition='=', duration=0)
+	pushSeqCmd(dt, '', '', 'Wait for Jester to finish talking.')
+	pushSeqCmd(7, '', '', 'Finished')
 	pushSeqCmd(dt, 'scriptSpeech', "Alignment complete.")
 
 	# Reference System switch ... PRIM
-	pushSeqCmd(dt, 'PLT_ADI_REFERENCE_SYSTEM  ', 0) # 0 = PRIM, 1 = STBY
+	pushSeqCmd(dt, 'ADI_ARU_11_A.MAINADI_reference_absolute', 0) # 0 = PRIM, 1 = STBY
 	pushSeqCmd(5, '', '', 'Wait for compass.')
 
 	# Compass Sync knob ... SYNC for a few seconds, then release back to SLAVED
-	pushSeqCmd(dt, 'PLT_COMPASS_MODE_SYNC', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
-	pushSeqCmd(4, 'PLT_COMPASS_MODE_SYNC', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(dt, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(4, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
 
 	# CADC correction
-	pushSeqCmd(dt, 'PLT_CADC_CORRECTION', 2) # 0 = OFF, 1 = NORM, 2 = RESET
-	pushSeqCmd(4, 'PLT_CADC_CORRECTION', 1) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(dt, 'CADC.SPC_switch', 2) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(4, 'CADC.SPC_switch', 1) # 0 = OFF, 1 = NORM, 2 = RESET
 
 	# Altimeter (only do this after CADC correction?)
-	pushSeqCmd(dt, 'PLT_BARO_MODE', 2)
+	pushSeqCmd(dt, 'BAROMETRICALTIMETER.ALTIMETER_Mode', 2)
 	# No need to move the lever back after setting it, just wait 3 seconds.
 	pushSeqCmd(3, '', '', 'Wait for STBY flag to disappear.')
 
 	# Countermeasures
-	pushSeqCmd(dt, 'WSO_CM_CHAFF_MODE', 1) # 0 = OFF, 1 = SGL, 2 = MULT, 3 = PROG
-	pushSeqCmd(dt, 'WSO_CM_FLARE_MODE', 1) # 0 = OFF, 1 = SGL, 2 = PROG
+	pushSeqCmd(dt, 'COUNTERMEASURES.CHAFF_MODE', 1) # 0 = OFF, 1 = SGL, 2 = MULT, 3 = PROG
+	pushSeqCmd(dt, 'COUNTERMEASURES.FLARE_MODE', 1) # 0 = OFF, 1 = SGL, 2 = PROG
 
 	# Stab Aug
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_PITCH', 1)
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_ROLL', 1)
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_YAW', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_PITCH', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_ROLL', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_YAW', 1)
 
 	# Oxygen
-	pushSeqCmd(dt, 'PLT_O2_MIXTURE', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
-	pushSeqCmd(dt, 'PLT_O2_SUPPLY', 0) # 0 = ON, 1 = OFF
-	pushSeqCmd(dt, 'WSO_O2_MIXTURE', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
-	pushSeqCmd(dt, 'WSO_O2_SUPPLY', 0) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Ratio', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Supply', 0) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Ratio', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Supply', 0) # 0 = ON, 1 = OFF
 
 	# RDR MSL CW switch ... CW ON
-	pushSeqCmd(dt, 'PLT_WPN_RADAR_MISSILE_CW', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_CW_Switch', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
 
 	# Fuze switch
-	pushSeqCmd(dt, 'PLT_WPN_FUZE_ARM', 2) # 0 = SAFE, 1 = NOSE, 2 = NOSE & TAIL, 3 = TAIL
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Arm_Switch', 2) # 0 = SAFE, 1 = NOSE, 2 = NOSE & TAIL, 3 = TAIL
 
 	# Bomb quantity
-	pushSeqCmd(dt, 'PLT_WPN_BOMB_QUANTITY', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_SelectBombQty', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
 
 	# Arm gun
-	pushSeqCmd(dt, 'PLT_WPN_GUN_ARM', 1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Gun_Arm', 1)
 
 	# Master Arm
-	pushSeqCmd(dt, 'PLT_WPN_MASTER_ARM',  1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Master_Arm',  1)
 
 	# Jester, radar to active.
 	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_RADAR_OPERATION_ACTIVE', 'TOGGLE') # FIXME This doesn't work.
@@ -427,235 +544,286 @@ def ColdStartWithJester(config, vars):
 	return seq
 
 
-def ColdStartNoJester(config, vars):
+def ColdStartNoJester(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.2
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	def pushJesterCmd(dt, command):
+		pushSeqCmd(dt, command, 1)
+		pushSeqCmd(dt, command, 0)
 
 	pushSeqCmd(0, '', '', "Running Cold Start sequence")
 
 	# Put on helmet.
-	pushSeqCmd(dt, 'PLT_COCKPIT_HELMET', 0) # 0 = Helmet On, 1 = Helmet Off
+	pushSeqCmd(dt, 'COCKPITMECHANICS.HIDE_HELMET_PILOT', 0) # 0 = Helmet On, 1 = Helmet Off
 	pushSeqCmd(14, '', '', 'Wait for boarding ladder to be removed.')
 
 	# Disable Jester.
-	pushSeqCmd(dt, 'PLT_JESTER_COMMAND_CREW_PRESENCE_DISABLED', 'TOGGLE')
+	pushSeqCmd(dt, 'scriptSpeech', 'Disabling Jester for the start sequence.')
+	pushJesterCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_PRESENCE_DISABLED')
 
-	if vars.get('Time') == 'Day':
+	if vars.get('time') == 'day':
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 0) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 0) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 	else:
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 1) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 1) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 
 	# Radios
-	pushSeqCmd(dt, 'PLT_ARC_164_MODE', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
-	pushSeqCmd(dt, 'WSO_ARC_164_MODE', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
+	pushSeqCmd(dt, 'ARC164.UHF_Mode_Selector_Knob', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
+	pushSeqCmd(dt, 'ARC164.RIO_UHF_Mode_Selector_Knob', 1) # 0 = OFF, 1 = T/R, 2 = T/R+G, 3 = ADF+G, 4 = ADF, 5 = GUARD
 
 	# Engine Master Switches ... ON
 	# Turning on master switches before loading cartridges makes the crew chief respond by voice.  If switches aren't on, cartridges will be installed, but crew chief won't tell you.
-	pushSeqCmd(dt, 'PLT_ENGINE_MASTER_L', 1)
-	pushSeqCmd(dt, 'PLT_ENGINE_MASTER_R', 1)
-	pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, insert starter cartridges.')
-	pushSeqCmd(2, '', '', 'Wait for Jester/Crew Chief to be ready.')
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftMasterSwitch', 1)
+	pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightMasterSwitch', 1)
+	pushSeqCmd(2, '', '', 'Wait for Crew Chief to be ready.')
 
-	# Tell Crew Chief to insert starter cartridges.
-	pushSeqCmd(dt, 'PLT_CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES', 'TOGGLE') # Pass 'TOGGLE' to trigger command.
-	pushSeqCmd(14, '', '', 'Wait for cartridges to be installed.')
+	if vars.get('engineStart') == 'cartridge':
+		# Tell Crew Chief to insert starter cartridges.
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, insert starter cartridges.')
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_LOAD_CARTRIDGES')
+		pushSeqCmd(14, '', '', 'Wait for cartridges to be installed.')
 
-	# Start right engine
-	pushSeqCmd(dt, 'scriptSpeech', "Starting right engine.")
-	pushSeqCmd(dt, 'PLT_ENGINE_START', 2) # 0 = LEFT, 1 = OFF, 2 = RIGHT
-	# Release after 1 second.
-	pushSeqCmd(1, 'PLT_ENGINE_START', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
-	# Wait to get past 10% RPM.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_R_LARGE', value=int16(0.1), condition='>=', duration=0)
-	# At 10% RPM, press and hold ignition button.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_R', 1)
-	# Advance throttle to idle detent.
-	pushSeqCmd(dt, 'PLT_THROTTLE_DETENT_R', 1)
-	# Wait for engine to light off.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_EXHAUST_R_LARGE', value=int16(0.15), condition='>=', duration=0)
-	#pushSeqCmd(5, '', '', 'Wait 5 seconds for engine to light off.')
-	# Release ignition.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_R', 0)
-	# Wait for RPM to reach idle (65%).
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_R_LARGE', value=int16(0.64), condition='>=', duration=3)
-	# Right generator ... ON
-	pushSeqCmd(dt, 'PLT_ELECTRICS_GENERATOR_R', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+		# Start right engine
+		pushSeqCmd(dt, 'scriptSpeech', "Starting right engine.")
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_StartSwitch', 2) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+		# Release after 1 second.
+		pushSeqCmd(1, 'ENGINECONTROLS.ENGINES_StartSwitch', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+		# Wait to get past 10% RPM.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
+		# At 10% RPM, press and hold ignition button.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 1)
+		# Advance throttle to idle detent.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopRight_TOGGLE', 1)
+		# Wait for engine to light off.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_RIGHT_GAUGE', value=0.15, condition='>=', duration=0)
+		#pushSeqCmd(5, '', '', 'Wait 5 seconds for engine to light off.')
+		# Release ignition.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 0)
+		# Wait for RPM to reach idle (65%).
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.64, condition='>=', duration=3)
+		# Right generator ... ON
+		pushSeqCmd(dt, 'ELECTRICS.PILOT_R_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
 
-	# Start left engine
-	pushSeqCmd(dt, 'scriptSpeech', "Starting left engine.")
-	pushSeqCmd(dt, 'PLT_ENGINE_START', 0) # 0 = LEFT, 1 = OFF, 2 = RIGHT
-	# Release after 1 second.
-	pushSeqCmd(1, 'PLT_ENGINE_START', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
-	# Wait to get past 10% RPM.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_R_LARGE', value=int16(0.1), condition='>=', duration=0)
-	# At 10% RPM, press and hold ignition button.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_L', 1)
-	# Advance throttle to idle detent.
-	pushSeqCmd(dt, 'PLT_THROTTLE_DETENT_L', 1)
-	# Wait for engine to light off.
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_EXHAUST_L_LARGE', value=int16(0.15), condition='>=', duration=0)
-	# Release ignition.
-	pushSeqCmd(dt, 'PLT_THROTTLE_IGNITION_L', 0)
-	# Wait for RPM to reach idle (65%).
-	pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/PLT_ENGINE_TACH_L_LARGE', value=int16(0.64), condition='>=', duration=3)
-	# Right generator ... ON
-	pushSeqCmd(dt, 'PLT_ELECTRICS_GENERATOR_L', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+		# Start left engine
+		pushSeqCmd(dt, 'scriptSpeech', "Starting left engine.")
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_StartSwitch', 0) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+		# Release after 1 second.
+		pushSeqCmd(1, 'ENGINECONTROLS.ENGINES_StartSwitch', 1) # 0 = LEFT, 1 = OFF, 2 = RIGHT
+		# Wait to get past 10% RPM.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
+		# At 10% RPM, press and hold ignition button.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 1)
+		# Advance throttle to idle detent.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopLeft_TOGGLE', 1)
+		# Wait for engine to light off.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_LEFT_GAUGE', value=0.15, condition='>=', duration=0)
+		# Release ignition.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 0)
+		# Wait for RPM to reach idle (65%).
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_LEFT_GAUGE', value=0.64, condition='>=', duration=3)
+		# Right generator ... ON
+		pushSeqCmd(dt, 'ELECTRICS.PILOT_L_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+	else:
+		# Tell Crew Chief to attach external air to right engine.
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, connect ground air supply to right engine.', asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_CONNECT_RIGHT')
+		pushSeqCmd(14, '', '', 'Wait for external air to be connected.')
+
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, start ground air supply.', asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_START')
+		# Start right engine
+		pushSeqCmd(dt, 'scriptSpeech', "Starting right engine.")
+		# Wait to get past 10% RPM.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.1, condition='>=', duration=0)
+		# At 10% RPM, press and hold ignition button.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 1)
+		# Advance throttle to idle detent.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopRight_TOGGLE', 1)
+		# Wait for engine to light off.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_RIGHT_GAUGE', value=0.15, condition='>=', duration=0)
+		#pushSeqCmd(5, '', '', 'Wait 5 seconds for engine to light off.')
+		# Release ignition.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_RightIgnition', 0)
+		# Wait for RPM to reach 45% and turn off air.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.45, condition='>=', duration=0)
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, stop ground air supply.', asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_STOP')
+		pushSeqCmd(5, '', '', 'Wait for external air to stop.')
+		# Connect air to left engine.
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, connect ground air supply to left engine.', asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_CONNECT_LEFT')
+		pushSeqCmd(5, '', '', 'Wait for external air to be connected.')
+		# Wait for RPM to reach idle (65%).
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_RIGHT_GAUGE', value=0.64, condition='>=', duration=3)
+		# Right generator ... ON
+		pushSeqCmd(dt, 'ELECTRICS.PILOT_R_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
+
+		# Start left engine
+		pushSeqCmd(dt, 'scriptSpeech', "Crew Chief, start ground air supply.", asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_START')
+		# Wait to get past 10% RPM.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_LEFT_GAUGE', value=0.1, condition='>=', duration=0)
+		# At 10% RPM, press and hold ignition button.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 1)
+		# Advance throttle to idle detent.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_IdleStopLeft_TOGGLE', 1)
+		# Wait for engine to light off.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_EXHAUST_TEMP_LEFT_GAUGE', value=0.15, condition='>=', duration=0)
+		# Release ignition.
+		pushSeqCmd(dt, 'ENGINECONTROLS.ENGINES_LeftIgnition', 0)
+		# Wait for RPM to reach 45% and turn off air.
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_LEFT_GAUGE', value=0.45, condition='>=', duration=0)
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, stop ground air supply.', asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_STOP')
+		pushSeqCmd(5, '', '', 'Wait for external air to stop.')
+		# Disconnect air supply.
+		pushSeqCmd(dt, 'scriptSpeech', 'Crew Chief, disconnect ground air supply.', asyncFlag=False)
+		pushJesterCmd(dt, 'JESTER_WHEEL.CREW_CHIEF_COMMAND_AIR_SOURCE_DISCONNECT')
+		# Wait for RPM to reach idle (65%).
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.ENGINES_TACHOMETER_LEFT_GAUGE', value=0.64, condition='>=', duration=3)
+		# Left generator ... ON
+		pushSeqCmd(dt, 'ELECTRICS.PILOT_L_GEN_SWITCH', 2) # 0 = EXTERNAL, 1 = OFF, 2 = GEN
 
 	# Navigation Computer Mode knob ... STBY
-	pushSeqCmd(dt, 'WSO_NAV_MODE', 1) # 0 = OFF, 1 = STBY, 2 = TGT1, 3 = TGT2, 4 = RESET
+	pushSeqCmd(dt, 'NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_FUNCTION_SELECTOR_KNOB', 1) # 0 = OFF, 1 = STBY, 2 = TGT1, 3 = TGT2, 4 = RESET
 
 	# Begin alignment.
-	if vars.get('Alignment') == 'BATH':
+	if vars.get('alignment') == 'bath':
 		# BATH alignment:
 		pushSeqCmd(dt, 'scriptSpeech', "Starting BATH alignment.")
 		# INS Power knob ... STBY
-		pushSeqCmd(dt, 'WSO_INS_POWER', 1) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
+		pushSeqCmd(dt, 'INS_AN_ASN_63.INS_WSO_POWER_KNOB', 1) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
 		# After 1 second, INS Power knob ... ALIGN
-		pushSeqCmd(1, 'WSO_INS_POWER', 2) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
+		pushSeqCmd(1, 'INS_AN_ASN_63.INS_WSO_POWER_KNOB', 2) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
 	else:
 		# Full alignment:
 		pushSeqCmd(dt, 'scriptSpeech', "Starting full alignment.")
 		# INS Power knob ... STBY
-		pushSeqCmd(dt, 'WSO_INS_POWER', 1) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
+		pushSeqCmd(dt, 'INS_AN_ASN_63.INS_WSO_POWER_KNOB', 1) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
 
-	pushSeqCmd(dt, 'PLT_CANOPY_CONTROL', 0) # 0 = Close, 1 = Open
-	pushSeqCmd(dt, 'WSO_CANOPY_CONTROL', 0) # 0 = Close, 1 = Open
+	# Close pilot and WSO canopies.
+	pushSeqCmd(dt, 'CANOPYCONTROLS.CANOPYCONTROLS_ActuatePilotCanopy', 0) # 0 = Close, 1 = Open
+	pushSeqCmd(dt, 'CANOPYCONTROLS.CANOPYCONTROLS_ActuateCopilotCanopy', 0) # 0 = Close, 1 = Open
 
 	# Turn on radar.
-	pushSeqCmd(dt, 'WSO_RADAR_POWER', 3) # 0 = OFF, 1 = TEST, 2 = STBY, 3 = OPR, 4 = EMER
+	pushSeqCmd(dt, 'RADAR.RADAR_Power_Knob_RIO', 3) # 0 = OFF, 1 = TEST, 2 = STBY, 3 = OPR, 4 = EMER
 	# Turn on DSCG screen..
-	pushSeqCmd(dt, 'WSO_RADAR_SCREEN', 4) # 0 = OFF, 1 = STBY, 2 = DSCG TEST, 3 = RDR BIT, 4 = RDR, 5 = TV
+	pushSeqCmd(dt, 'RADAR.RADAR_SCREEN_MODE', 4) # 0 = OFF, 1 = STBY, 2 = DSCG TEST, 3 = RDR BIT, 4 = RDR, 5 = TV
 
 	# Radar altimeter ... ON, but leave bug at 0 ft
-	pushSeqCmd(dt, 'PLT_RADAR_ALT_MOVE_BUG', "+3200")
+	pushSeqCmd(dt, 'RADARALTIMETER.RADAR_ALTIMETER_LowAltSet', 0.1)
 
 	# DSCG screen mode switch
-	pushSeqCmd(dt, 'PLT_RADAR_SCREEN_MODE', 0) # 0 = RADAR, 1 = OFF, 2 = TV
+	pushSeqCmd(dt, 'RADAR.PILOT_DSCG_MODE', 0) # 0 = RADAR, 1 = OFF, 2 = TV
 
 	# IFF
-	pushSeqCmd(dt, 'PLT_IFF_MASTER', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NOR, 4 = EMER
+	pushSeqCmd(dt, 'IFF.PILOT_IFF_MASTER_Knob', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NOR, 4 = EMER
 
 	# Antiskid
-	pushSeqCmd(dt, 'PLT_GEAR_ANTI_SKID', 1)
+	pushSeqCmd(dt, 'GEARANDHOOK.LANDING_GEAR_AntiSkid', 1)
 
 	# Backup ADI
-	pushSeqCmd(dt, 'PLT_SAI_CAGE', 0)
+	pushSeqCmd(dt, 'EMERGENCYATTITUDEINDICATOR.EMERG_ADI_Cage', 0)
 
 	# Sight mode
-	pushSeqCmd(dt, 'PLT_HUD_MODE', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
+	pushSeqCmd(dt, 'HUD_AN_ASG_26.HUD_SelectHUDMode', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
 
 	# ADI flight director switch
-	pushSeqCmd(dt, 'PLT_FDC_FLIGHT_DIRECTOR', 1)
+	pushSeqCmd(dt, 'FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_FD_KNOB', 1)
 
 	# Wait for alignment to complete.
-	if vars.get('Alignment') == 'BATH':
+	if vars.get('alignment') == 'bath':
 		# Wait for ALIGN light to be lit for 2 seconds.  This prevents accidentally triggering the codition if you briefly click the light to test it.  However if the light is completely dimmed, it will never be detected.  Takes ~3 mins.
-		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/WSO_INS_ALIGN', value=0, condition='>', duration=2)
-		pushSeqCmd(dt, 'WSO_INS_POWER', 3) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.INS_WSO_ALIGN_LIGHT', value=0, condition='>', duration=2)
+		pushSeqCmd(dt, 'INS_AN_ASN_63.INS_WSO_POWER_KNOB', 3) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
 	else:
 		# The HEAT light should come on almost immediately.  Wait for HEAT light to go out, ~5-6 mins.
-		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/WSO_INS_HEAT', value=0, condition='=', duration=2)
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.INS_WSO_HEAT_LIGHT', value=0, condition='=', duration=2)
 		# After the system is warmed up, INS Power knob ... ALIGN
-		pushSeqCmd(1, 'WSO_INS_POWER', 2) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
+		pushSeqCmd(1, 'INS_AN_ASN_63.INS_WSO_POWER_KNOB', 2) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
 		# Wait for ALIGN light to be lit for 2 seconds.  This means the BATH alignment is complete.  Takes ~3 mins.
-		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/WSO_INS_ALIGN', value=0, condition='>', duration=2)
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.INS_WSO_ALIGN_LIGHT', value=0, condition='>', duration=2)
 		# Wait for ALIGN ilght to start flashing.  This means the full alignment is complete.  Takes ~3m45s.
-		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/WSO_INS_ALIGN', value=0, condition='=', duration=0)
-		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E/WSO_INS_ALIGN', value=0, condition='>', duration=0)
-		pushSeqCmd(dt, 'WSO_INS_POWER', 3) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.INS_WSO_ALIGN_LIGHT', value=0, condition='=', duration=0)
+		pushSeqCmd(dt, 'scriptCockpitState', control='F-4E-45MC/arg.INS_WSO_ALIGN_LIGHT', value=0, condition='>', duration=0)
+		pushSeqCmd(dt, 'INS_AN_ASN_63.INS_WSO_POWER_KNOB', 3) # 0 = OFF, 1 = STBY, 2 = ALIGN, 3 = NAV
 	pushSeqCmd(dt, 'scriptSpeech', "Alignment complete.")
 
 	# Reference System switch ... PRIM
-	pushSeqCmd(dt, 'PLT_ADI_REFERENCE_SYSTEM  ', 0) # 0 = PRIM, 1 = STBY
+	pushSeqCmd(dt, 'ADI_ARU_11_A.MAINADI_reference_absolute', 0) # 0 = PRIM, 1 = STBY
 	pushSeqCmd(5, '', '', 'Wait for compass.')
 
 	# Compass Sync knob ... SYNC for a few seconds, then release back to SLAVED
-	pushSeqCmd(dt, 'PLT_COMPASS_MODE_SYNC', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
-	pushSeqCmd(4, 'PLT_COMPASS_MODE_SYNC', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(dt, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(4, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
 
 	# CADC correction
-	pushSeqCmd(dt, 'PLT_CADC_CORRECTION', 2) # 0 = OFF, 1 = NORM, 2 = RESET
-	pushSeqCmd(4, 'PLT_CADC_CORRECTION', 1) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(dt, 'CADC.SPC_switch', 2) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(4, 'CADC.SPC_switch', 1) # 0 = OFF, 1 = NORM, 2 = RESET
 
 	# Altimeter (only do this after CADC correction?)
-	pushSeqCmd(dt, 'PLT_BARO_MODE', 2)
+	pushSeqCmd(dt, 'BAROMETRICALTIMETER.ALTIMETER_Mode', 2)
 	# No need to move the lever back after setting it, just wait 3 seconds.
 	pushSeqCmd(3, '', '', 'Wait for STBY flag to disappear.')
 
 	# Countermeasures
-	pushSeqCmd(dt, 'WSO_CM_CHAFF_MODE', 1) # 0 = OFF, 1 = SGL, 2 = MULT, 3 = PROG
-	pushSeqCmd(dt, 'WSO_CM_FLARE_MODE', 1) # 0 = OFF, 1 = SGL, 2 = PROG
+	pushSeqCmd(dt, 'COUNTERMEASURES.CHAFF_MODE', 1) # 0 = OFF, 1 = SGL, 2 = MULT, 3 = PROG
+	pushSeqCmd(dt, 'COUNTERMEASURES.FLARE_MODE', 1) # 0 = OFF, 1 = SGL, 2 = PROG
 
 	# Stab Aug
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_PITCH', 1)
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_ROLL', 1)
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_YAW', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_PITCH', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_ROLL', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_YAW', 1)
 
 	# Oxygen
-	pushSeqCmd(dt, 'PLT_O2_MIXTURE', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
-	pushSeqCmd(dt, 'PLT_O2_SUPPLY', 0) # 0 = ON, 1 = OFF
-	pushSeqCmd(dt, 'WSO_O2_MIXTURE', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
-	pushSeqCmd(dt, 'WSO_O2_SUPPLY', 0) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Ratio', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Supply', 0) # 0 = ON, 1 = OFF
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Ratio', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Supply', 0) # 0 = ON, 1 = OFF
 
 	# RDR MSL CW switch ... CW ON
-	pushSeqCmd(dt, 'PLT_WPN_RADAR_MISSILE_CW', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_CW_Switch', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
 
 	# Fuze switch
-	pushSeqCmd(dt, 'PLT_WPN_FUZE_ARM', 2) # 0 = SAFE, 1 = NOSE, 2 = NOSE & TAIL, 3 = TAIL
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Arm_Switch', 2) # 0 = SAFE, 1 = NOSE, 2 = NOSE & TAIL, 3 = TAIL
 
 	# Bomb quantity
-	pushSeqCmd(dt, 'PLT_WPN_BOMB_QUANTITY', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_SelectBombQty', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
 
 	# Arm gun
-	pushSeqCmd(dt, 'PLT_WPN_GUN_ARM', 1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Gun_Arm', 1)
 
 	# Master Arm
-	pushSeqCmd(dt, 'PLT_WPN_MASTER_ARM',  1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Master_Arm',  1)
 
 	# Enable Jester.
-	pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_CREW_PRESENCE_AUTO', 'TOGGLE')
+	pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_PRESENCE_AUTO', 1)
+	pushSeqCmd(dt, 'JESTER_WHEEL.JESTER_COMMAND_CREW_PRESENCE_AUTO', 0)
+	pushSeqCmd(dt, 'scriptSpeech', 'Jester enabled.')
 	# Jester, radar to active.
 	#pushSeqCmd(dt, 'F-4E/PLT_JESTER_COMMAND_RADAR_OPERATION_ACTIVE', 'TOGGLE')
 	# Jester, radar auto-focus on.
@@ -666,273 +834,219 @@ def ColdStartNoJester(config, vars):
 	return seq
 
 
-def AutoStart(config, vars):
+def AutoStart(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.2
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Auto Start sequence")
 
-	if vars.get('Time') == 'Day':
+	if vars.get('time') == 'day':
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 0) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 0) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 	else:
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 1) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 1) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 
-	pushSeqCmd(dt, 'PLT_CANOPY_CONTROL', 0) # 0 = Close, 1 = Open
+	pushSeqCmd(dt, 'CANOPYCONTROLS.CANOPYCONTROLS_ActuatePilotCanopy', 0) # 0 = Close, 1 = Open
 
 	# Radar altimeter ... ON, but leave bug at 0 ft
-	pushSeqCmd(dt, 'PLT_RADAR_ALT_MOVE_BUG', "+3200")
+	pushSeqCmd(dt, 'RADARALTIMETER.RADAR_ALTIMETER_LowAltSet', 0.1)
 
 	# DSCG screen mode switch
-	pushSeqCmd(dt, 'PLT_RADAR_SCREEN_MODE', 0) # 0 = RADAR, 1 = OFF, 2 = TV
+	pushSeqCmd(dt, 'RADAR.PILOT_DSCG_MODE', 0) # 0 = RADAR, 1 = OFF, 2 = TV
 
 	# IFF
-	pushSeqCmd(dt, 'PLT_IFF_MASTER', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NOR, 4 = EMER
+	pushSeqCmd(dt, 'IFF.PILOT_IFF_MASTER_Knob', 3) # 0 = OFF, 1 = STBY, 2 = LOW, 3 = NOR, 4 = EMER
 
 	# Antiskid
-	pushSeqCmd(dt, 'PLT_GEAR_ANTI_SKID', 1)
+	pushSeqCmd(dt, 'GEARANDHOOK.LANDING_GEAR_AntiSkid', 1)
 
 	# Backup ADI
-	pushSeqCmd(dt, 'PLT_SAI_CAGE', 0)
+	pushSeqCmd(dt, 'EMERGENCYATTITUDEINDICATOR.EMERG_ADI_Cage', 0)
 
 	# Sight mode
-	pushSeqCmd(dt, 'PLT_HUD_MODE', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
+	pushSeqCmd(dt, 'HUD_AN_ASG_26.HUD_SelectHUDMode', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
 
 	# ADI flight director switch
-	pushSeqCmd(dt, 'PLT_FDC_FLIGHT_DIRECTOR', 1)
+	pushSeqCmd(dt, 'FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_FD_KNOB', 1)
 
 	# Compass Sync knob ... SYNC for a few seconds, then release back to SLAVED
-	pushSeqCmd(dt, 'PLT_COMPASS_MODE_SYNC', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
-	pushSeqCmd(4, 'PLT_COMPASS_MODE_SYNC', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(dt, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(4, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
 
 	# CADC correction
-	pushSeqCmd(dt, 'PLT_CADC_CORRECTION', 2) # 0 = OFF, 1 = NORM, 2 = RESET
-	pushSeqCmd(4, 'PLT_CADC_CORRECTION', 1) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(dt, 'CADC.SPC_switch', 2) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(4, 'CADC.SPC_switch', 1) # 0 = OFF, 1 = NORM, 2 = RESET
 
 	# Stab Aug
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_PITCH', 1)
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_ROLL', 1)
-	pushSeqCmd(dt, 'PLT_AFCS_STAB_AUG_YAW', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_PITCH', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_ROLL', 1)
+	pushSeqCmd(dt, 'INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_YAW', 1)
 
 	# Oxygen
-	pushSeqCmd(dt, 'PLT_O2_MIXTURE', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
+	pushSeqCmd(dt, 'OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Ratio', 0) # 0 = NORMAL OXYGEN, 1 = 100% OXYGEN
 
 	# RDR MSL CW switch ... CW ON
-	pushSeqCmd(dt, 'PLT_WPN_RADAR_MISSILE_CW', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_CW_Switch', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
 
 	# Master Arm
-	pushSeqCmd(dt, 'PLT_WPN_MASTER_ARM',  1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Master_Arm',  1)
 
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Lights, Radios.  If carrying drop tanks set External Tanks Feed switch.")
 
 	return seq
 
 
-def HotStart(config, vars):
+def HotStart(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.2
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Hot Start sequence")
 
-	if vars.get('Time') == 'Day':
+	if vars.get('time') == 'day':
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 0) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 0) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 	else:
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 1) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 1) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 
 	# Sight mode
-	pushSeqCmd(dt, 'PLT_HUD_MODE', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
+	pushSeqCmd(dt, 'HUD_AN_ASG_26.HUD_SelectHUDMode', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
 
 	# ADI flight director switch
-	pushSeqCmd(dt, 'PLT_FDC_FLIGHT_DIRECTOR', 1)
+	pushSeqCmd(dt, 'FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_FD_KNOB', 1)
 
 	# Compass Sync knob ... SYNC for a few seconds, then release back to SLAVED
-	pushSeqCmd(dt, 'PLT_COMPASS_MODE_SYNC', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
-	pushSeqCmd(4, 'PLT_COMPASS_MODE_SYNC', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(dt, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 3) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
+	pushSeqCmd(4, 'COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB', 2) # 0 = COMP, 1 = DC, 2 = SLAVED, 3 = SYNC
 
 	# CADC correction
-	pushSeqCmd(dt, 'PLT_CADC_CORRECTION', 2) # 0 = OFF, 1 = NORM, 2 = RESET
-	pushSeqCmd(4, 'PLT_CADC_CORRECTION', 1) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(dt, 'CADC.SPC_switch', 2) # 0 = OFF, 1 = NORM, 2 = RESET
+	pushSeqCmd(4, 'CADC.SPC_switch', 1) # 0 = OFF, 1 = NORM, 2 = RESET
 
 	# Countermeasures
-	pushSeqCmd(dt, 'WSO_CM_CHAFF_MODE', 1) # 0 = OFF, 1 = SGL, 2 = MULT, 3 = PROG
-	pushSeqCmd(dt, 'WSO_CM_FLARE_MODE', 1) # 0 = OFF, 1 = SGL, 2 = PROG
+	pushSeqCmd(dt, 'COUNTERMEASURES.CHAFF_MODE', 1) # 0 = OFF, 1 = SGL, 2 = MULT, 3 = PROG
+	pushSeqCmd(dt, 'COUNTERMEASURES.FLARE_MODE', 1) # 0 = OFF, 1 = SGL, 2 = PROG
 
 	# RDR MSL CW switch ... CW ON
-	pushSeqCmd(dt, 'PLT_WPN_RADAR_MISSILE_CW', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_CW_Switch', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
 
 	# Fuze switch
-	pushSeqCmd(dt, 'PLT_WPN_FUZE_ARM', 2) # 0 = SAFE, 1 = NOSE, 2 = NOSE & TAIL, 3 = TAIL
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Arm_Switch', 2) # 0 = SAFE, 1 = NOSE, 2 = NOSE & TAIL, 3 = TAIL
 
 	# Bomb quantity
-	pushSeqCmd(dt, 'PLT_WPN_BOMB_QUANTITY', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_SelectBombQty', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
 
 	# Arm gun
-	pushSeqCmd(dt, 'PLT_WPN_GUN_ARM', 1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Gun_Arm', 1)
 
 	# Master Arm
-	pushSeqCmd(dt, 'PLT_WPN_MASTER_ARM',  1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Master_Arm',  1)
 
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Lights, Radios.  If carrying drop tanks set External Tanks Feed switch.")
 
 	return seq
 
 
-def AirStart(config, vars):
+def AirStart(config, vars, helper, *args, **kwargs):
 	seq = []
-	seqTime = 0
 	dt = 0.2
 
-	def pushSeqCmd(dt, cmd, *args, **kwargs):
-		nonlocal seq, seqTime
-
-		if len(args):
-			seq.append({
-				'time': round(dt, 2),
-				'cmd': cmd,
-				'arg': args[0],
-				'msg': args[1] if len(args) > 1 else '',
-			})
-		else:
-			step = {
-				'time': round(dt, 2),
-				'cmd': cmd,
-			}
-			for key in kwargs:
-				step[key] = kwargs[key]
-			seq.append(step)
+	pushSeqCmd = helper.makePushSeqCmd(seq)
 
 	pushSeqCmd(0, '', '', "Running Air Start sequence")
 
-	if vars.get('Time') == 'Day':
+	if vars.get('time') == 'day':
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(1))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(1))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 0) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 0) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 	else:
 		# Interior lights
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
-		pushSeqCmd(dt, 'PLT_INT_LIGHT_FLOOD_INST_BRIGHTNESS', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_INSTRUMENT_PANEL_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_CONSOLE_BRIGHTNESS', int16(0.5))
-		pushSeqCmd(dt, 'WSO_INT_LIGHT_FLOOD_RED_BRIGHTNESS', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # Also controls WSO panel.  0 = DIM, 1 = OFF, 2 = BRT
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB', int16(0.5))
+		pushSeqCmd(dt, 'INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH', 1) # 0 = MED, 1 = DIM, 2 = BRT
 		# Radar screen night filter
-		pushSeqCmd(dt, 'PLT_RADAR_NIGHT_FILTER', 1) # 0 = Off, 1 = On
+		pushSeqCmd(dt, 'RADAR.PILOT_DSCG_NIGHT_FILTER', 1) # 0 = Off, 1 = On
 		# Exterior lights
-		pushSeqCmd(dt, 'PLT_EXT_LIGHT_FLASH_MODE', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
+		pushSeqCmd(dt, 'EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH', 1) # 0 = STEADY, 1 = OFF, 2 = FLASH
 
 	# Sight mode
-	pushSeqCmd(dt, 'PLT_HUD_MODE', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
+	pushSeqCmd(dt, 'HUD_AN_ASG_26.HUD_SelectHUDMode', 2) # 0 = OFF, 1 = STBY, 2 = CAGE, 3 = A/G, 4 = A/A, 5 = BIT 1, 6 = BIT 2
 
 	# ADI flight director switch
-	pushSeqCmd(dt, 'PLT_FDC_FLIGHT_DIRECTOR', 1)
+	pushSeqCmd(dt, 'FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_FD_KNOB', 1)
 
 	# RDR MSL CW switch ... CW ON
-	pushSeqCmd(dt, 'PLT_WPN_RADAR_MISSILE_CW', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_CW_Switch', 2) # 0 = OFF, 1 = STBY, 2 = CW ON
 
 	# Fuze switch
 	# Air Start defaults to NOSE & TAIL.
 
 	# Bomb quantity
-	pushSeqCmd(dt, 'PLT_WPN_BOMB_QUANTITY', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_SelectBombQty', 11) # 0 = P, 1 = S, 2 = C, 3 = 18, 4 = 12, 5 = 9, 6 = 6, 7 = 5, 8 = 4, 9 = 3, 10 = 2, 11 = 1
 
 	# Arm gun
-	pushSeqCmd(dt, 'PLT_WPN_GUN_ARM', 1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Gun_Arm', 1)
 
 	# Master Arm
-	pushSeqCmd(dt, 'PLT_WPN_MASTER_ARM',  1)
+	pushSeqCmd(dt, 'WEAPONS.WEAPONS_Master_Arm',  1)
 
 	pushSeqCmd(dt, 'scriptSpeech', "Manual steps remaining: Lights, Radios.  If carrying drop tanks set External Tanks Feed switch.")
 

@@ -1,0 +1,2519 @@
+{
+	"module": "C-101CC",
+	"timestamp": "2026-05-25T11:46:47",
+	"delay": 0.08,
+	"elapsed": 292.8,
+	"counts": {
+		"pass": 466,
+		"fail": 4,
+		"skip": 31,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "ADF_60.PNT-ADF-1-RP",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "ADF_60.PNT-ADF-2-RP_arg677",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ADF_60.PNT-ADF-2-RP_arg678",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ADF_60.PNT-ADF-3-RP",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "ADF_60.PNT-ADF-ONOFF-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADF_60.PNT-ADF-TFR-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-ADF-RP-BACK_arg1140",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-ADF-RP-BACK_arg1141",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-ADF-RP_arg849",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-ADF-RP_arg853",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-CALL-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-CALL-RP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-DME-RP-BACK_arg888",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-DME-RP-BACK_arg898",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-DME-RP_arg284",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-DME-RP_arg398",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-HVOL-RP-BACK_arg887",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-HVOL-RP-BACK_arg897",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-HVOL-RP_arg283",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-HVOL-RP_arg397",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-IVOL-RP-BACK_arg884",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-IVOL-RP-BACK_arg894",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-IVOL-RP_arg280",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-IVOL-RP_arg394",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MAINS-RP",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MAINS-RP-BACK",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MAINV-RP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MAINV-RP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MVOL-RP-BACK_arg890",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MVOL-RP-BACK_arg901",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MVOL-RP_arg286",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-MVOL-RP_arg400",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-P-HTBT-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-P-HTBT-RP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VOVOL-RP-BACK_arg889",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VOVOL-RP-BACK_arg899",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VOVOL-RP_arg285",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VOVOL-RP_arg399",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VUHF-RP-BACK_arg1109",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VUHF-RP-BACK_arg1110",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VUHF-RP_arg268",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VUHF-RP_arg269",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VVOL-RP-BACK_arg886",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VVOL-RP-BACK_arg896",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VVOL-RP_arg282",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERCOM.PNT-INT-VVOL-RP_arg396",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-ALUM-RP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-ALUM-RP-BACK",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-ANCO-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-CAB-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-CAB-RP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-CNS-KNB-RP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-CNS-KNB-RP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-FOR-RP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-INTR-KNB-RP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-INTR-KNB-RP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-LNDG-L-CPL",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-LNDG-L-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-LNDG-R-CPL",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-LNDG-R-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-MAG-COM-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-POSI-RP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-SIGHTGLASS-KNB-RP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "LIGHTS.PNT-SIGHTGLASS-KNB-RP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-997-OXY-REGU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-999-OXY-REGU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ABRT-SW-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ABRT-SW-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AC-ACOND-RP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AC-MAN-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AC-SELFLU-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AC-TEMP-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AC-TEMPKNB-RP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AC-VEMERG-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ACELKNB-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ACELKNB-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-ATTBT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-ATTBT-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-DH-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-DH-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-DH-DIM-RP-BACK_arg923",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-DH-DIM-RP-BACK_arg924",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-DH-DIM-RP_arg411",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ADI-DH-DIM-RP_arg412",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AFL-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AFL-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AFT-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AFT-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AH-BT-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AH-BT-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AILBTN-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AILBTN-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AILCOV-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AILCOV-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AIRINLET-RP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AIRINLET-RP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AL-YLL-BT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AL-YLL-BT-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ALT-KNB-CP",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ALT-KNB-CP-BACK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ANTISKID-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ANTISKID-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AOA-IN-KB-CP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AOA-IN-KB-CP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-APL-TEST-CPL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-APL-TEST-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-APR-CPL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-APR-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AUHF-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AVISO-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-AVISO-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BACK-ALT-GL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BACK-ALT-GL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BATTERY-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBI-CP-BACK_arg1258",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBI-CP-BACK_arg970",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBI-CP_arg1253",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBI-CP_arg529",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBM-CP-BACK_arg1259",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBM-CP-BACK_arg969",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBM-CP_arg1254",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBM-CP_arg527",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBO-CP-BACK_arg1260",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBO-CP-BACK_arg968",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBO-CP_arg1255",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BE-MBO-CP_arg528",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BKADI-K02-CP-BACK_arg782",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BKADI-K02-CP-BACK_arg783",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BKADI-K02-CP_arg41",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BKADI-K02-CP_arg533",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BLACKOUT-CURTAIN",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BOMSUM-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BOMSUM-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BOX-FRONT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BOX-FRONT-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-01-CPL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-01-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-01-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-01-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-02-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-02-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-03-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-03-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-ANRA-CPL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-FLUX-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-NAV-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-NAV-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-UHF-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-UHF-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-VHF-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-BTN-VHF-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANO-FRAC",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANO-FRAC-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANO-FRAC-PIN",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANO-FRAC-PIN-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANOPY-EME",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANOPY-EME-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANTCOM-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CANTCOM-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-01-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-02-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-03-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-03-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-04-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-05-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-06-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-07-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-08-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-09-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-10-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-11-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-12-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-12-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-12B-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-13-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-13-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-14-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-14-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-15-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-15-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-16-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-17-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-17-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-18-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-18-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-19-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-20-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-21-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-22-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-23-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-23-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-24-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-24B-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-25-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-26-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-27-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-28-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-28-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-29-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-30-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-31-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-32-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-33-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-34-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-34-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-35-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-36-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-36B-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-37-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-37-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-38-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-39-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-40-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-40-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-41-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-42-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-43-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-44-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-44-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-45-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-45-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-46-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-47-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-48-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-48B-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-49-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-1-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-10-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-11-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-12-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-13-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-14-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-2-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-3-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-4-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-5-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-7-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-8-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-ARM-9-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-FUEL-EMER-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-FUEL-EMER-TA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-GPS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-GPS-REAR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-TELEBRIEFING-LP_arg718",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-TELEBRIEFING-LP_arg851",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-TRIM-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-TRIM-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CB-UHF-RACAL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CBOMSUM-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CBOMSUM-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLKC-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLKC-BT-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLKT-KNB-CP-BACK_arg809",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLKT-KNB-CP-BACK_arg810",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLKT-KNB-CP_arg517",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLKT-KNB-CP_arg518",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLLAVCOM-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CLLAVCOM-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CODE-KNB-CPD",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-COMP-BT-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-COMP-BT-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CONV-CPR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-COV01-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-COV01-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CRS-KNB-CPD",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-CRS-KNB-CPD-BACK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ELT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-EMERGAB-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-EMERGAB-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-EMERGTRP-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-EMERGTRP-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-EMETBREAK-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-EMETBREAK-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ERCR-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FALLO-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FALLO-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-ALT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-APR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-BC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-HDG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-IAS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-KNB-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-KNB-RP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-NAV",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-SBY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-VOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FD-VS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FFLW-KNB-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FFLW-KNB-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FLAPSH-LP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FLAPSH-LP-BACK",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FRICT-TH",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FUEGO-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FUEGO-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-FUEL-2-RE-CP",
+			"status": "pass",
+			"details": "9 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-GA-SW-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-GA-SW-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-GENL-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-GENR-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-GPU-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-GPU-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HARN-SEAT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HARN-SEAT-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HDG-KNB-CPD",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HDG-KNB-CPD-BACK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HND-CNPY",
+			"status": "fail",
+			"details": "Could not normalise to state 0 (got 1.0000)"
+		},
+		{
+			"name": "SYSTEMS.PNT-HND-CNPY-BACK",
+			"status": "fail",
+			"details": "Could not normalise to state 0 (got 1.0000)"
+		},
+		{
+			"name": "SYSTEMS.PNT-HSI-BR-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HSI-BR-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-1-RE-CP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-1-RE-CP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-1S-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-2S-CP",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-3S-CP",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-MS-SW-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-HUD-ON-SW-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IDENT-CPD",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-1",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-2",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-3",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-6",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-REP-CP_arg1256",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-REP-CP_arg530",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-TEST-CP_arg1257",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFF-TEST-CP_arg531",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFFCS-CPD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-IFFM4L-CPD",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LDNG-H-CPL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LDNG-H-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LG-RESET-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LG-RESET-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LLAVCOM-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LLAVCOM-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LOCK-CNPY",
+			"status": "pass",
+			"details": "toggle 0→1→0 OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-LOCK-CNPY-BACK",
+			"status": "pass",
+			"details": "toggle 0→1→0 OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-M1D1-CPD",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-M1D2-CPD",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-M3A1-CPD",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-M3A2-CPD",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-M3A3-CPD",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-M3A4-CPD",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-MIRROR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-MPR-LGT-BACK_arg1317",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-MPR-LGT-BACK_arg1318",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-MPR-LGT_arg1312",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-MPR-LGT_arg1313",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-MST-KNB-CPD",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-OXIGENE-RP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-OXIGENE-RP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-OXYGEN-PRO-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-PARKING-CPL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-PARKING-CPL-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RA-KB-CP",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RA-KB-CP-BACK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RAD-CPD",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RALT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-LC",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-LC-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-LCP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-LCP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-RC",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-RC-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-RCP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RL-RCP-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RT-ES-ST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RT-ES-ST-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RUDREG-CPD-BACK_arg1202",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "SYSTEMS.PNT-RUDREG-CPD-BACK_arg1280",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RUDREG-CPD_arg1279",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-RUDREG-CPD_arg311",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "SYSTEMS.PNT-SC-ES-ST",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SC-ES-ST-BACK",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-1P-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-2P-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-3P-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-4P-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-5P-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-6P-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-BA-KB-CP",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-EJ-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-EJ-BT-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-JS-KB-CP",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-LT-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-LT-BT-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-MA-SW-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-MS-KB-CP",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-RC-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-RC-SW-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-RT-KB-CP",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCAR-SJ-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCARD-CB-BT-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCARD-CB-BT-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCARD-IC-KB-CP",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SCARD-IC-KB-CP-BACK",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SEAT-1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SEATADJ-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-SEATADJ-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-START-SW-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-START-SW-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-STICK-CPD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-STICK-CPD-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TESTFUEL-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-THRT-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-THRT-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TM1-CPD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TM2-CPD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TM3-CPD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TMC-CPD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF01-LP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF01-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF02-LP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF02-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF03-LP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF03-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF04-LP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-TRANSF04-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-UNIONB-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-VIDEO-1-SW-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-EP-LP-BACK_arg1275",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-EP-LP-BACK_arg828",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-EP-LP_arg1273",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-EP-LP_arg525",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-TRIM-LP-BACK_arg1276",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-TRIM-LP-BACK_arg534",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-TRIM-LP_arg1274",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-YB-TRIM-LP_arg526",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PTN-COV02-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PTN-COV02-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PTN-COV03-CPR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PTN-COV03-CPR-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-PWR-RP-BACK_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-PWR-RP-BACK_arg917",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-PWR-RP_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-PWR-RP_arg653",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-VOL-RP-BACK_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-VOL-RP-BACK_arg919",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-VOL-RP_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VHF20B.PNT-COMM-VOL-RP_arg655",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-COMMN-TB-RP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-DME-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-DME-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-MS-RP-BACK_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-MS-RP-BACK_arg921",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-MS-RP_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-MS-RP_arg657",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-VOL-RP-BACK_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-VOL-RP-BACK_arg923",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-VOL-RP_arg0",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "VIR31A_DME40.PNT-NAV-VOL-RP_arg659",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-1S-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-1S-CP-BACK",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-2S-CP",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-2S-CP-BACK",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-3S-CP",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-3S-CP-BACK",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-4S-CP",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-4S-CP-BACK",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-5S-CP",
+			"status": "pass",
+			"details": "wheel OK (5 positions, step 0.25)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-5S-CP-BACK",
+			"status": "pass",
+			"details": "wheel OK (5 positions, step 0.25)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-CHS-CP",
+			"status": "pass",
+			"details": "wheel OK (21 positions, step 0.05)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-CHS-CP-BACK",
+			"status": "pass",
+			"details": "wheel OK (21 positions, step 0.05)"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-FS-CP",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-FS-CP-BACK",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-MD-CP",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-MD-CP-BACK",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-PW-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-PW-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-SQL-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-SQL-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-TS-CP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VTWU740.PNT-UHF-TS-CP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.BackSeat",
+			"status": "pass",
+			"details": "arg 1003 = 0.0000"
+		},
+		{
+			"name": "arg.FrontSeat",
+			"status": "pass",
+			"details": "arg 1001 = 0.0000"
+		},
+		{
+			"name": "arg.InstructorBody",
+			"status": "pass",
+			"details": "arg 1002 = 0.0000"
+		},
+		{
+			"name": "arg.PilotBody",
+			"status": "pass",
+			"details": "arg 1000 = 1.0000"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.HelmetGlass",
+			"status": "skip",
+			"details": "field \"HelmetGlass\" declared in extraction but not currently emitted by indication 0"
+		},
+		{
+			"name": "ind.1",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.1.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.pitch_scale",
+			"status": "skip",
+			"details": "field \"pitch_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.roll_scale",
+			"status": "skip",
+			"details": "field \"roll_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.rudder_scale",
+			"status": "skip",
+			"details": "field \"rudder_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.stick_other_seat_position",
+			"status": "skip",
+			"details": "field \"stick_other_seat_position\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.throttle_scale",
+			"status": "skip",
+			"details": "field \"throttle_scale\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.trimmer_stick_position",
+			"status": "skip",
+			"details": "field \"trimmer_stick_position\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_CCM_enabled",
+			"status": "skip",
+			"details": "field \"txt_CCM_enabled\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_brakes",
+			"status": "skip",
+			"details": "field \"txt_brakes\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.txt_control_priority",
+			"status": "skip",
+			"details": "field \"txt_control_priority\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.wheel_brake_1",
+			"status": "skip",
+			"details": "field \"wheel_brake_1\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.wheel_brake_2",
+			"status": "skip",
+			"details": "field \"wheel_brake_2\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.wheel_brake_actual_1",
+			"status": "skip",
+			"details": "field \"wheel_brake_actual_1\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.wheel_brake_actual_2",
+			"status": "skip",
+			"details": "field \"wheel_brake_actual_2\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.wheel_brake_mask_1",
+			"status": "skip",
+			"details": "field \"wheel_brake_mask_1\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.wheel_brake_mask_2",
+			"status": "skip",
+			"details": "field \"wheel_brake_mask_2\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.2",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.2.TFOV",
+			"status": "skip",
+			"details": "field \"TFOV\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "SYSTEMS.PNT-ETP-GUARD-LP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SYSTEMS.PNT-ETP-GUARD-LP-BACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

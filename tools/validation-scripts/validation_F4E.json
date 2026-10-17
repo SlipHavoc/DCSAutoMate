@@ -1,0 +1,3179 @@
+{
+	"module": "F-4E-45MC",
+	"timestamp": "2026-05-03T11:55:36",
+	"delay": 0.08,
+	"elapsed": 404.1,
+	"counts": {
+		"pass": 533,
+		"fail": 88,
+		"skip": 12,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "ACCELEROMETER.Accelerometer_Pilot_Reset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ACCELEROMETER.Accelerometer_Rio_Reset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ADI_ARU_11_A.MAINADI_pitchtrim",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ADI_ARU_11_A.MAINADI_reference_absolute",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.PILOT_AVTR_CLOSE_DOOR_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.PILOT_AVTR_EJECT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.PILOT_AVTR_SWAP_CASSETTE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.PILOT_AVTR_UNTHREAD_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.PILOT_RECORDER_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.PILOT_RECORDER_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.WSO_MAIN_PANEL_AVTR_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AIRBORNE_VIDEO_TAPE_RECORDER.WSO_MAIN_PANEL_RCD_EOT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AOASYSTEM.PILOT_AURAL_TONE_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AOASYSTEM.PILOT_RIGHT_WALL_STALL_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AOASYSTEM.WSO_LEFT_WALL_MISSILE_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AOASYSTEM.WSO_STALL_WARNING_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC164.ANTENNA_SELECTION_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_AUX_Channel_Control_Knob",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_AUX_Volume_Control",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_COMM_CMD_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Communication_Channel_Control_Knob",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Freq_Knob_DecHundreds",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Freq_Knob_DecOnes",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Freq_Knob_Ones",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Freq_Knob_Tens",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.3333; pos 1: expected 0.1111, got 0.3333; pos 2: expected 0.2222, got 0.3333"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Mode_Selector_Knob",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Set_Channel_Pushbutton",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.RIO_UHF_Volume_Control",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_AUX_Channel_Control_Knob",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_AUX_Volume_Control",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_COMM_CMD_Brightness",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_COMM_CMD_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Communication_Channel_Control_Knob",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_FREQ_KNOB_HUNDREDS",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Freq_Knob_DecHundreds",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Freq_Knob_DecOnes",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Freq_Knob_Ones",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Freq_Knob_Tens",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.3333; pos 1: expected 0.1111, got 0.3333; pos 2: expected 0.2222, got 0.3333"
+		},
+		{
+			"name": "ARC164.UHF_MODE_SELECTOR_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Mode_Selector_Knob",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_SQUELCH_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Set_Channel_Pushbutton",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_TONE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_Volume_Control",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_WSO_FREQ_KNOB_HUNDREDS",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_WSO_MODE_SELECTOR_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_WSO_SQUELCH_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.UHF_WSO_TONE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC164.WSO_UHF_COMM_CMD_Brightness",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ATTITUDEINDICATOR_ARU13A.RIO_ADI_Trim_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ATTITUDEREFERENCE.WEAPONS_ARBCS_High_Angle",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ATTITUDEREFERENCE.WEAPONS_ARBCS_Low_Angle",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ATTITUDEREFERENCE.WEAPONS_ARBCS_Pullup_Timer",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ATTITUDEREFERENCE.WEAPONS_ARBCS_Release_Timer",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "BAROMETRICALTIMETER.ALTIMETER_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "BAROMETRICALTIMETER.ALTIMETER_Mode",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "BAROMETRICALTIMETER.ALTIMETER_Rio_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "BAROMETRICALTIMETER.ALTIMETER_Rio_Mode",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CADC.SPC_switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CANOPYCONTROLS.CANOPYCONTROLS_ActuateCopilotCanopy",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CANOPYCONTROLS.CANOPYCONTROLS_ActuatePilotCanopy",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CANOPYCONTROLS.CANOPYCONTROLS_JettisonCopilotCanopy",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CANOPYCONTROLS.CANOPYCONTROLS_JettisonPilotCanopy",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CANOPYCONTROLS.CANOPYCONTROLS_ManualUnlockCopilotCanopy",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "CANOPYCONTROLS.CANOPYCONTROLS_ManualUnlockPilotCanopy",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.ARI_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_LEFT_WALL_SAI_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_SUB_PANEL_MODE_LT_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_SUB_PANEL_PRIM_INST_LT_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_AIL_FEEL_TRIM_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_FEEL_TRIM_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_FLAPS_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_LANDING_GEAR_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_RUD_TRIM_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_SPEED_BRAKE_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CIRCUIT_BREAKERS.PILOT_RIGHT_WALL_TRIM_CONT_CIRCUIT_BREAKER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.CLOCK_PILOT_KNOB_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.CLOCK_PILOT_KNOB_ROTATE",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK.CLOCK_RIO_KNOB_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.CLOCK_RIO_KNOB_ROTATE",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK.STOPWATCH_PILOT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK.STOPWATCH_RIO_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CNI_AN_ASQ_19A.RIO_TACAN_NAVIGATION_SELECTOR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.HIDE_HELMET_PILOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.HIDE_HELMET_WSO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.TOGGLE_MIRROR_C",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.TOGGLE_MIRROR_L",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.TOGGLE_MIRROR_R",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.TOGGLE_WSO_MIRROR_L",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COCKPITMECHANICS.TOGGLE_WSO_MIRROR_R",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMPASSSYSTEM.PILOT_COMPASS_HEMISPHERE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMPASSSYSTEM.PILOT_COMPASS_PILOT_LATITUDE_CTRL_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMPASSSYSTEM.PILOT_COMPASS_PILOT_MODE_SELECTOR_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COMPASSSYSTEM.PILOT_COMPASS_PILOT_SET_HDG_KNOB",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got 0.0000; 25%: expected -0.5000, got 0.0000; 75%: expected 0.5000, got 0.0000; 100%: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "COMPASSSYSTEM.PILOT_COMPASS_PILOT_SET_HDG_KNOB_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMPASSSYSTEM.PILOT_GYRO_FAST_ERECT_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.CONTROLSURFACES_BrakeExtendRetract",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.CONTROLSURFACES_FlapsSlatsSwitch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.CONTROLSURFACES_PilotEmergencyFlapsSlats",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.CONTROLSURFACES_RIOEmergencyFlapsSlats",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.PILOT_CENTER_PANEL_PEDAL_CRANK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CONTROLSURFACES.PILOT_RUDDER_TRIM_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.PILOT_SLATS_OVERRIDE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CONTROLSURFACES.WSO_CENTER_PANEL_PEDAL_CRANK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CONTROLSURFACES.WSO_CONTROLSURFACES_BrakeExtendRetract",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_CCU_CHAFF_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_CCU_CHAFF_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_CCU_FLARE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_CCU_FLARE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_CCU_RIPPLE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_FLARES_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_FLARES_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_ON_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_ON_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.CHAFF_BURST_COUNT",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.CHAFF_BURST_INTERVAL",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.CHAFF_MODE",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.CHAFF_SALVO_COUNT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.CHAFF_SALVO_INTERVAL",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.FLARES_SELECT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.FLARE_BURST_COUNT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.FLARE_BURST_INTERVAL",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.FLARE_MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.PILOT_COUNTERMEASURES_DISPENSE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.WSO_COUNTERMEASURES_DISPENSE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECM.WSO_ECM_LEFT_MODE_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ECM.WSO_ECM_LEFT_RESET_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECM.WSO_ECM_RIGHT_MODE_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ECM.WSO_ECM_RIGHT_RESET_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EFB.PILOT_EFB_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECTION_SEAT_SYSTEM.PILOT_EJECT_LIGHT_PUSH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECTION_SEAT_SYSTEM.WSO_EJECTION_COMMAND_SELECTOR_VALVE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EJECTION_SEAT_SYSTEM.WSO_EJECT_LIGHT_PUSH_TEST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRICS.PILOT_L_GEN_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELECTRICS.PILOT_R_GEN_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELECTRICS.WSO_AP_TEST_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRICS.WSO_RIGHT_WALL_BATTERY_BYPASS_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRICS.WSO_RIGHT_WALL_INSTRUMENT_GROUND_POWER_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCYATTITUDEINDICATOR.EMERG_ADI_Cage",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_IdleStopLeft_TOGGLE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_IdleStopRight_TOGGLE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_LeftIgnition",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_LeftMasterSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_RightIgnition",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_RightMasterSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.ENGINES_StartSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINECONTROLS.PILOT_MAIN_PANEL_FIRE_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.PILOT_RANGE_INDICATOR_DESIRED_RANGE_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.PILOT_RANGE_INDICATOR_DISPLAY_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.PILOT_RANGE_INDICATOR_MODE_SELECTOR_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.PILOT_RANGE_INDICATOR_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_LASER_CODER_CONTROL_ENTER_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_LASER_CODER_CONTROL_HUNDREDS_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_LASER_CODER_CONTROL_ONES_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_LASER_CODER_CONTROL_TENS_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_LASER_CODER_CONTROL_THOUSANDS_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_ACQUISITION_MODE_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_BIT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_BIT_STATUS_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_BORESIGHT_AZIMUTH_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_BORESIGHT_ELEVATION_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_BORESIGHT_ROLL_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_INS_OUT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_LASER_READY_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_LIGHT_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_POWER_ON_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_REJECT_OVERRIDE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_RETICLE_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_STOW_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EO_TGT_DESIGNATOR_SYSTEM_AN_ASQ_153.WSO_TGT_DESIGNATOR_WRCS_OUT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.LANDING_TAXI_LIGHTS_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_FUSELAGE_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_MODE_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_TAIL_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.PILOT_EXTERIOR_LIGHTS_PANEL_WING_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.PILOT_RIGHT_WALL_FORMATION_LIGHTS_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EXTERIOR_LIGHTS.PILOT_RIGHT_WALL_FORMATION_LIGHTS_MODE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_BRG_DIST_SELECTOR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_FD_KNOB",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FLIGHTDIRECTORCOMPUTER.NAV_FUNCT_SEL_PANEL_SOURCE_MODE_SELECTOR",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_AIR_REFUEL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_EXT_WING_TRANS_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_FEED_TANK_CHECK_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_INT_WING_DUMP_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_INT_WING_TRANS_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_REFUEL_SEL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUEL_PANEL_LEFT_BOOST_PUMP_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUEL_PANEL_RIGHT_BOOST_PUMP_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.LANDING_GEAR_AntiSkid",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.LANDING_GEAR_PILOT_ENGAGE_NOSEWHEEL_STEERING",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.LANDING_GEAR_PilotHandle",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.LANDING_GEAR_Pilot_Emergency_Brakes",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.LANDING_GEAR_RIO_Emergency_Brakes",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.LANDING_GEAR_WSO_ENGAGE_NOSEWHEEL_STEERING",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.PARACHUTE_DEPLOY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.PARACHUTE_RELEASE",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "GEARANDHOOK.PILOT_EMERGENCY_LANDING_GEAR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.PILOT_HOOK_HANDLE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEARANDHOOK.WSO_EMERG_GEAR_HANDLE",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "GREASE_PENCIL.PILOT_GREASE_PENCIL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GREASE_PENCIL.WSO_GREASE_PENCIL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HSI_AF_A24J_1.PILOT_HSI_COURSE_SET_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "HSI_AF_A24J_1.PILOT_HSI_HEADING_SET_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "HUD_AN_ASG_26.HUD_AdjustIntensity",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HUD_AN_ASG_26.HUD_AdjustReticle",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HUD_AN_ASG_26.HUD_AdjustShutter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HUD_AN_ASG_26.HUD_SelectHUDMode",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_ICS_PANEL_AMPLIFIER_SELECTOR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_ICS_PANEL_MIC_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_ICS_PANEL_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_KY28_C_MODE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_KY28_C_MODE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_KY28_P_MODE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_KY28_P_MODE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.PILOT_THROTTLE_MIC_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.WSO_ICS_PANEL_AMPLIFIER_SELECTOR",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ICS.WSO_ICS_PANEL_MIC_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.WSO_ICS_PANEL_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_BAND_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_C_MODE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_C_MODE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_MODE_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_P_MODE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_P_MODE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ICS.WSO_KY28_ZEROIZE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ICS.WSO_THROTTLE_MIC_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_AUDIO_LIGHT_SW",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_CODE_Knob",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_IDENT_MIC_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_M1_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_M2_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_M3_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_M4_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MASTER_Knob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MC_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MODE1_CODE_ONES",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MODE1_CODE_TENS",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MODE3_CODE_HUNDREDS",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MODE3_CODE_ONES",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MODE3_CODE_TENS",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_MODE3_CODE_THOUSANDS",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_RAD_TEST_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_REPLY_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_REPLY_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_TEST_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.PILOT_IFF_TEST_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CHALLENGE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CHALLENGE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_HUNDREDS_DEC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_HUNDREDS_INC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_MODE_DEC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_MODE_INC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_ONES_DEC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_ONES_INC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_TENS_DEC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_TENS_INC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_THOUSANDS_DEC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_CODE_THOUSANDS_INC_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_COMBAT_TREE_CHALLENGE_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_COMBAT_TREE_CHALLENGE_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_COMBAT_TREE_MODE_2_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_COMBAT_TREE_MODE_3_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_COMBAT_TREE_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF_INTERROGATOR_AN_APX_80A.WSO_IFF_APX_PANEL_TEST_CHALLENGE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INDICATORSANDLIGHTS.COCKPIT_MECHANICS_MASTER_CAUTION_Reset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INDICATORSANDLIGHTS.PILOT_WARNING_LIGHTS_TEST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INDICATORSANDLIGHTS.WSO_WARNING_LIGHTS_TEST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.AFCS_ENGAGE_AFCS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.AFCS_ENGAGE_ALT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_PITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_ROLL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.AFCS_ENGAGE_STAB_AUG_YAW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.PILOT_EMERGENCY_QUICK_RELEASE_LEVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INPUTCONTROLS.WSO_EMERGENCY_QUICK_RELEASE_LEVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.INS_WSO_ALIGN_MODE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.INS_WSO_POWER_KNOB",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.WSO_INS_PANEL_ALIGN_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.WSO_INS_PANEL_ALIGN_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.WSO_INS_PANEL_HEAT_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.WSO_INS_PANEL_HEAT_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_COCKPIT_LIGHTS_WHITE_FLOODLIGHT_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_FLT_INST_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_INSTRUMENT_LIGHT_PANEL_AAI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_INSTRUMENT_LIGHT_PANEL_ADI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_INSTRUMENT_LIGHT_PANEL_ALT_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_INSTRUMENT_LIGHT_PANEL_HSI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_INSTRUMENT_LIGHT_PANEL_MASI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_INSTRUMENT_LIGHT_PANEL_VVI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_LEFT_WALL_SAI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INDEXER_LIGHT_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.PILOT_RIGHT_WALL_INSTRUMENT_FLOODLIGHT_BRIGHTNESS_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_CONSOLE_FLOODLIGHT_BRIGHTNESS_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INDEXER_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_INSTRUMENT_PANEL_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_STANDBY_COMPASS_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INTERIOR_LIGHTS.WSO_COCKPIT_LIGHTS_WHITE_FLOODLIGHT_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MACHANDSPEEDINDICATOR.AIRSPEED_Knob",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "MACHANDSPEEDINDICATOR.AIRSPEED_KnobSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MACHANDSPEEDINDICATOR.AIRSPEED_Rio_Knob",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "MACHANDSPEEDINDICATOR.AIRSPEED_Rio_KnobSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_FUNCTION_SELECTOR_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_POSITION_UPDATE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_POS_LATITUDE_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_POS_LATITUDE_KNOB_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_POS_LONGITUDE_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_POS_LONGITUDE_KNOB_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_RIO_MAG_VAR_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_RIO_MAG_VAR_KNOB_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_RIO_TARGET_LATITUDE_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_RIO_TARGET_LONGITUDE_KNOB",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_WIND_DIR_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NavigationComputer_AN_ASN_46A.RIO_NAV_COMP_WIND_MAG_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Pressure",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Ratio",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_Pilot_Set_Ox_Supply",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Pressure",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Ratio",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_RIO_Set_Ox_Supply",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.OXYGENSYSTEM_Test_System",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "OXYGENSYSTEM.PILOT_EMERGENCY_PRESSURE_PLUG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PILOT_FRONT_PANEL.PILOT_HIDE_SHOW_STICK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PITOTSTATIC.Pitot_Heat_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_BRIGHTNESS",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_CONTRAST",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_HORIZONTAL_LINE",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_NIGHT_FILTER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_POLARITY",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PILOT_DSCG_SCALE",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_ANTENNA_HAND_CONTROL_CHALLENGE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_ANTENNA_HAND_CONTROL_ELEVATION",
+			"status": "fail",
+			"details": "pos 0: expected -1.0000, got 0.4107; pos 1: expected 0.0000, got 0.0373"
+		},
+		{
+			"name": "RADAR.RADAR_Display_Knob_RIO",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Mode_Knob_RIO",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Power_Knob_RIO",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Pulse_Knob_WSO",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Range_Knob_RIO",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Rcvr_Gain_Coarse",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Rcvr_Gain_Fine",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_SCREEN_BRTNESS",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_SCREEN_CONTRAST",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_SCREEN_MODE",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_SCREEN_OFS",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_SCREEN_RNG",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_Scan_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_ASPECT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_MANUEVER_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_METER_SELECTOR_KNOB",
+			"status": "pass",
+			"details": "16 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_METER_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_POLAR_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_STAB_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_TEST_KNOB",
+			"status": "pass",
+			"details": "12 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_TRACK_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_VC_KNOB",
+			"status": "pass",
+			"details": "12 positions OK"
+		},
+		{
+			"name": "RADAR.RADAR_WSO_VC_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.WSO_AIR_TO_AIR_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.WSO_DSCG_GRID",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.WSO_DSCG_SCALE",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADARALTIMETER.RADAR_ALTIMETER_LowAltSet",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADARALTIMETER.RADAR_ALTIMETER_Test",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_APR_AUDIO_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_APR_DIM_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RIGHT_WALL_ML_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_AAA_DEFEAT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_AAA_GCI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_ACTIVITY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_AI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_E_BAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_G_BAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_I_BAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_LORO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_MISSILE_LAUNCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.PILOT_RWR_SYSTEM_POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_APR_AUDIO_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_APR_DIM_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_MAIN_PANEL_ML_AUDIO_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_AAA_DEFEAT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_AAA_GCI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_ACTIVITY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_AI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_E_BAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_G_BAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_I_BAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_LORO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_MISSILE_LAUNCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR_INTERFACE.WSO_RWR_SYSTEM_POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SEAT.PILOT_SEAT_POS_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SEAT.WSO_SEAT_POS_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.RIO_TACAN_CHAN_Ones",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.RIO_TACAN_CHAN_TensAndMore",
+			"status": "pass",
+			"details": "13 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.RIO_TACAN_CHAN_XY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.RIO_TACAN_Function_Selector",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.RIO_TACAN_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.RIO_TACAN_Volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_CHAN_Ones",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_CHAN_TensAndMore",
+			"status": "pass",
+			"details": "13 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_CHAN_XY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_Function_Selector",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_PILOT_COMMAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_RIO_COMMAND",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.TACAN_Volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.UHF_NAV_CMD_Brightness",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TACAN_AN_ARN_118.WSO_UHF_NAV_CMD_Brightness",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.AUTO_CLEAR_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.BAND_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_CANOPY_LOW_ALT_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_COOLING_RESET_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_ARM_CL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_ARM_LI_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_ARM_LO_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_ARM_RI_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_ARM_RO_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_ARM_SLIDER_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_BOMB_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_LAMP_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_MASTER_RELEASE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_MODE_KNOB",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_MSL_TEST_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DSCG_OPR_ERASE_KNOB",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_ENGINE_DEICE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_ENGINE_PANEL_DVST_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_ENGINE_PANEL_LCOSS_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_GUN_CAMERA_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_GUN_CAMERA_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_MAIN_PANEL_VOR_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_RAIN_REMOVAL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_RIGHT_CONSOLE_DEFOG_HANDLE",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_RIGHT_WALL_LIGHT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_RIGHT_WALL_STANDBY_AI_BRIGHTNESS_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_WEAPON_PANEL_JETTISON_NUCLEAR_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.TARGET_CONTRAST_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TODO.TEMP_CONTROL_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.TEMP_CONTROL_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TODO.WSO_ANTENNA_CONTROL_PANEL_BORESIGHT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.WSO_COOLING_RESET_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.WSO_CORRECTION_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TODO.WSO_GUN_CAMERA_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.WSO_IFF_APX_PANEL_ANTIJAM_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.WSO_IFF_APX_PANEL_MODE_4_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TODO.WSO_OXYGEN_GENERAL_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.WSO_PULSE_SEL_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TODO.WSO_RIGHT_CONSOLE_CANOPY_LOW_ALT_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TODO.WSO_RIGHT_CONSOLE_NUCLEAR_CONSENT_SWITCH",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_ILS_PANEL_FREQ_DECIMALS_KNOB",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_ILS_PANEL_FREQ_HUNDREDS_KNOB",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_ILS_PANEL_MB_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_ILS_PANEL_NAV_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_ILS_PANEL_TEST_MARKER_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_MARKER_BEACON_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VOR_ILS.PILOT_MARKER_BEACON_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VOR_ILS.WSO_LEFT_CONSOLE_MARKER_BEACON_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VOR_ILS.WSO_LEFT_CONSOLE_VOR_ILS_VOLUME_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VOR_ILS.WSO_LOCALIZER_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VOR_ILS.WSO_LOCALIZER_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.CURSOR_CTRL_PANEL_WSO_ALONG_TRACK_THUMBWHEEL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.CURSOR_CTRL_PANEL_WSO_CROSS_TRACK_THUMBWHEEL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.CURSOR_CTRL_PANEL_WSO_FREEZE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.CURSOR_CTRL_PANEL_WSO_RESET_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.CURSOR_CTRL_PANEL_WSO_TGT_INSERT_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.LABS_AURAL_TONE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.PILOT_EXT_STORES_EMERG_RELEASE_BUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.PILOT_PULL_UP_LIGHT_PRESS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.PILOT_PULL_UP_LIGHT_ROTATION",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.PILOT_STATION_SELECT_DIM_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.TGT_MSL_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_ARR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Arm_Switch",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Armament_Safety_Override",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_BombIntervalSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_CTR_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_CW_Switch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Cage",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Gun_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Gun_Rate",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Interlock_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Jettison_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Jettison_Selection_Knob",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_LI_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_LO_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Master_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_RI_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_RO_Arm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_Round_Counter_Rounds",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_SelectBombInterval",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_SelectBombQty",
+			"status": "pass",
+			"details": "12 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_SelectDeliveryMode",
+			"status": "pass",
+			"details": "13 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_SelectWeapon",
+			"status": "pass",
+			"details": "8 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_Advance",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_Alt_Range",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_Delivery_Mode",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_Drag",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_EW_Distance",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_NS_Distance",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPONS_WRCS_Range",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPON_DELIV_PANEL_WSO_ACTIVATE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPON_DELIV_PANEL_WSO_RANGE_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPONS.WEAPON_DELIV_PANEL_WSO_TGT_FIND_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WSO_COURSEINDICATOR.WSO_LOCALIZER_COURSE_SET_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WSO_FRONT_PANEL.WSO_HIDE_SHOW_DSCG_GLARE_SHIELD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WSO_FRONT_PANEL.WSO_HIDE_SHOW_STICK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WSO_FRONT_PANEL.WSO_VIDEO_SELECT_WEAPON_ASQ_153_SWITCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.3035",
+			"status": "pass",
+			"details": "arg 3035 = 1.0000"
+		},
+		{
+			"name": "arg.3060",
+			"status": "pass",
+			"details": "arg 3060 = 1.0000"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.0.guid-1",
+			"status": "fail",
+			"details": "field \"guid-1\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.guid-2",
+			"status": "fail",
+			"details": "field \"guid-2\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.guid-3",
+			"status": "fail",
+			"details": "field \"guid-3\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.guid-4",
+			"status": "fail",
+			"details": "field \"guid-4\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.guid-5",
+			"status": "fail",
+			"details": "field \"guid-5\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.guid-6",
+			"status": "fail",
+			"details": "field \"guid-6\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.rangebarMask",
+			"status": "fail",
+			"details": "field \"rangebarMask\" not found in indication 0 (fields: ['glass', 'total_field_of_view', '{2672587C-F6C0-43b0-AA8B-16FEAE04441B}', 'children are {', '{33788B2A-9C6F-4eb9-8DAE-184BE2A4BE34}'])"
+		},
+		{
+			"name": "ind.0.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.10",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.10.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.10.freq_background",
+			"status": "pass",
+			"details": "field \"freq_background\" = \"**\""
+		},
+		{
+			"name": "ind.10.freq_foreground",
+			"status": "pass",
+			"details": "field \"freq_foreground\" = \"1\""
+		},
+		{
+			"name": "ind.10.freq_symbology",
+			"status": "pass",
+			"details": "field \"freq_symbology\" = \"\""
+		},
+		{
+			"name": "ind.11",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.11.base",
+			"status": "fail",
+			"details": "field \"base\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-1",
+			"status": "fail",
+			"details": "field \"guid-1\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-10",
+			"status": "fail",
+			"details": "field \"guid-10\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-11",
+			"status": "fail",
+			"details": "field \"guid-11\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-12",
+			"status": "fail",
+			"details": "field \"guid-12\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-13",
+			"status": "fail",
+			"details": "field \"guid-13\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-14",
+			"status": "fail",
+			"details": "field \"guid-14\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-15",
+			"status": "fail",
+			"details": "field \"guid-15\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-16",
+			"status": "fail",
+			"details": "field \"guid-16\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-17",
+			"status": "fail",
+			"details": "field \"guid-17\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-18",
+			"status": "fail",
+			"details": "field \"guid-18\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-19",
+			"status": "fail",
+			"details": "field \"guid-19\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-2",
+			"status": "fail",
+			"details": "field \"guid-2\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-20",
+			"status": "fail",
+			"details": "field \"guid-20\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-21",
+			"status": "fail",
+			"details": "field \"guid-21\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-22",
+			"status": "fail",
+			"details": "field \"guid-22\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-23",
+			"status": "fail",
+			"details": "field \"guid-23\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-24",
+			"status": "fail",
+			"details": "field \"guid-24\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-3",
+			"status": "fail",
+			"details": "field \"guid-3\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-4",
+			"status": "fail",
+			"details": "field \"guid-4\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-5",
+			"status": "fail",
+			"details": "field \"guid-5\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-6",
+			"status": "fail",
+			"details": "field \"guid-6\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-7",
+			"status": "fail",
+			"details": "field \"guid-7\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-8",
+			"status": "fail",
+			"details": "field \"guid-8\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.guid-9",
+			"status": "fail",
+			"details": "field \"guid-9\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.rwr_launch_circle",
+			"status": "fail",
+			"details": "field \"rwr_launch_circle\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.11.rwr_priority_diamond",
+			"status": "fail",
+			"details": "field \"rwr_priority_diamond\" not found in indication 11 (fields: [])"
+		},
+		{
+			"name": "ind.13",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.13.DebugText",
+			"status": "fail",
+			"details": "field \"DebugText\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.base",
+			"status": "fail",
+			"details": "field \"base\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.pitch_scale",
+			"status": "fail",
+			"details": "field \"pitch_scale\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.roll_scale",
+			"status": "fail",
+			"details": "field \"roll_scale\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.rudder_scale",
+			"status": "fail",
+			"details": "field \"rudder_scale\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.stick_position",
+			"status": "fail",
+			"details": "field \"stick_position\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.stick_position_commanded",
+			"status": "fail",
+			"details": "field \"stick_position_commanded\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.throttle_scale_l",
+			"status": "fail",
+			"details": "field \"throttle_scale_l\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.throttle_scale_r",
+			"status": "fail",
+			"details": "field \"throttle_scale_r\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.trimmer_stick_position",
+			"status": "fail",
+			"details": "field \"trimmer_stick_position\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.wheel_brake_l",
+			"status": "fail",
+			"details": "field \"wheel_brake_l\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.13.wheel_brake_r",
+			"status": "fail",
+			"details": "field \"wheel_brake_r\" not found in indication 13 (fields: [])"
+		},
+		{
+			"name": "ind.14",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.14.avtr_time_indicator_wso_background",
+			"status": "pass",
+			"details": "field \"avtr_time_indicator_wso_background\" = \"888\""
+		},
+		{
+			"name": "ind.14.avtr_time_indicator_wso_foreground",
+			"status": "pass",
+			"details": "field \"avtr_time_indicator_wso_foreground\" = \"\""
+		},
+		{
+			"name": "ind.14.avtr_time_indicator_wso_symbology",
+			"status": "pass",
+			"details": "field \"avtr_time_indicator_wso_symbology\" = \"\""
+		},
+		{
+			"name": "ind.14.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.15",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.15.avtr_time_indicator_pilot_background",
+			"status": "pass",
+			"details": "field \"avtr_time_indicator_pilot_background\" = \"888\""
+		},
+		{
+			"name": "ind.15.avtr_time_indicator_pilot_foreground",
+			"status": "pass",
+			"details": "field \"avtr_time_indicator_pilot_foreground\" = \"\""
+		},
+		{
+			"name": "ind.15.avtr_time_indicator_pilot_symbology",
+			"status": "pass",
+			"details": "field \"avtr_time_indicator_pilot_symbology\" = \"\""
+		},
+		{
+			"name": "ind.15.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.2",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.2.RADAR_WINGS",
+			"status": "fail",
+			"details": "field \"RADAR_WINGS\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.ag_range_cursor",
+			"status": "fail",
+			"details": "field \"ag_range_cursor\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.ase_circle",
+			"status": "fail",
+			"details": "field \"ase_circle\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.base",
+			"status": "fail",
+			"details": "field \"base\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-1",
+			"status": "fail",
+			"details": "field \"guid-1\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-10",
+			"status": "fail",
+			"details": "field \"guid-10\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-11",
+			"status": "fail",
+			"details": "field \"guid-11\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-12",
+			"status": "fail",
+			"details": "field \"guid-12\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-13",
+			"status": "fail",
+			"details": "field \"guid-13\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-15",
+			"status": "fail",
+			"details": "field \"guid-15\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-16",
+			"status": "fail",
+			"details": "field \"guid-16\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-17",
+			"status": "fail",
+			"details": "field \"guid-17\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-18",
+			"status": "fail",
+			"details": "field \"guid-18\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-19",
+			"status": "fail",
+			"details": "field \"guid-19\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-2",
+			"status": "fail",
+			"details": "field \"guid-2\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-20",
+			"status": "fail",
+			"details": "field \"guid-20\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-21",
+			"status": "fail",
+			"details": "field \"guid-21\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-3",
+			"status": "fail",
+			"details": "field \"guid-3\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-4",
+			"status": "fail",
+			"details": "field \"guid-4\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-5",
+			"status": "fail",
+			"details": "field \"guid-5\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-6",
+			"status": "fail",
+			"details": "field \"guid-6\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-7",
+			"status": "fail",
+			"details": "field \"guid-7\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.guid-9",
+			"status": "fail",
+			"details": "field \"guid-9\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.radar_bscope_grid",
+			"status": "fail",
+			"details": "field \"radar_bscope_grid\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.2.radar_ppi_grid",
+			"status": "fail",
+			"details": "field \"radar_ppi_grid\" not found in indication 2 (fields: [])"
+		},
+		{
+			"name": "ind.3",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.3.base",
+			"status": "fail",
+			"details": "field \"base\" not found in indication 3 (fields: [])"
+		},
+		{
+			"name": "ind.3.hobos_symbology",
+			"status": "fail",
+			"details": "field \"hobos_symbology\" not found in indication 3 (fields: [])"
+		},
+		{
+			"name": "ind.3.mav_symbology",
+			"status": "fail",
+			"details": "field \"mav_symbology\" not found in indication 3 (fields: [])"
+		},
+		{
+			"name": "ind.3.pave_spike_symbology",
+			"status": "fail",
+			"details": "field \"pave_spike_symbology\" not found in indication 3 (fields: [])"
+		},
+		{
+			"name": "ind.3.walleye_symbology",
+			"status": "fail",
+			"details": "field \"walleye_symbology\" not found in indication 3 (fields: [])"
+		},
+		{
+			"name": "ind.4",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.4.base",
+			"status": "fail",
+			"details": "field \"base\" not found in indication 4 (fields: [])"
+		},
+		{
+			"name": "ind.4.maverick_sensor",
+			"status": "fail",
+			"details": "field \"maverick_sensor\" not found in indication 4 (fields: [])"
+		},
+		{
+			"name": "ind.4.pave_spike_sensor",
+			"status": "fail",
+			"details": "field \"pave_spike_sensor\" not found in indication 4 (fields: [])"
+		},
+		{
+			"name": "ind.4.pave_spike_symbology",
+			"status": "fail",
+			"details": "field \"pave_spike_symbology\" not found in indication 4 (fields: [])"
+		},
+		{
+			"name": "ind.4.walleye_sensor",
+			"status": "fail",
+			"details": "field \"walleye_sensor\" not found in indication 4 (fields: [])"
+		},
+		{
+			"name": "ind.7",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.7.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.7.bit_background",
+			"status": "pass",
+			"details": "field \"bit_background\" = \"8\""
+		},
+		{
+			"name": "ind.7.bit_display_symbology",
+			"status": "pass",
+			"details": "field \"bit_display_symbology\" = \"\""
+		},
+		{
+			"name": "ind.7.bit_foreground",
+			"status": "pass",
+			"details": "field \"bit_foreground\" = \"\""
+		},
+		{
+			"name": "ind.8",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.8.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.8.range_indicator_background",
+			"status": "pass",
+			"details": "field \"range_indicator_background\" = \"888\""
+		},
+		{
+			"name": "ind.8.range_indicator_foreground",
+			"status": "pass",
+			"details": "field \"range_indicator_foreground\" = \"\""
+		},
+		{
+			"name": "ind.8.range_indicator_symbology",
+			"status": "pass",
+			"details": "field \"range_indicator_symbology\" = \"\""
+		},
+		{
+			"name": "ind.9",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.9.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.9.freq_background",
+			"status": "pass",
+			"details": "field \"freq_background\" = \"**\""
+		},
+		{
+			"name": "ind.9.freq_foreground",
+			"status": "pass",
+			"details": "field \"freq_foreground\" = \"1\""
+		},
+		{
+			"name": "ind.9.freq_symbology",
+			"status": "pass",
+			"details": "field \"freq_symbology\" = \"\""
+		},
+		{
+			"name": "CONTROLSURFACES.PILOT_SLATS_OVERRIDE_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.ALE40_CCU_RIPPLE_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FuelControls.PILOT_FUELSYS_REFUEL_SEL_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INS_AN_ASN_63.INS_WSO_ALIGN_MODE_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TODO.PILOT_DCU_PANEL_MASTER_RELEASE_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

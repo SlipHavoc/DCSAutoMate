@@ -1,0 +1,1789 @@
+{
+	"module": "A-4E-C",
+	"timestamp": "2026-06-10T22:54:21",
+	"delay": 0.08,
+	"elapsed": 111.5,
+	"counts": {
+		"pass": 339,
+		"fail": 2,
+		"skip": 14,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "AFCS.PNT_135",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_136",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_160",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_161",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_162",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_163",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_164",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AFCS.PNT_165",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_166",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_258",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AFCS.PNT_259",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AIRBRAKES.PNT_128",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AIRBRAKES.PNT_85",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_106",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_107",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_108",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_110",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_125",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_133",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_134",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_139",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_24",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_257",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_662_arg662",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AVIONICS.PNT_662_arg663",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_720",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_723",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_827",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AVIONICS.PNT_853",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "AVIONICS.PNT_884_arg884",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AVIONICS.PNT_884_arg885",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CANOPY.Canopy",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "CLOCK.PNT_146",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.PNT_522",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.PNT_523",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COUNTERMEASURES.PNT_524",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "COUNTERMEASURES.PNT_525",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "COUNTERMEASURES.PNT_530",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRIC_SYSTEM.PNT_1243",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRIC_SYSTEM.PNT_1251",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRIC_SYSTEM.PNT_225",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELECTRIC_SYSTEM.PNT_226",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELECTRIC_SYSTEM.PNT_252",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELECTRIC_SYSTEM.PNT_709",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_100",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_101",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_103",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_104",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_130",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_131",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_256",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE.PNT_80",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_217",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_218",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_219",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_220",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_221",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_222",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_223",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS.PNT_83",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FLAPS.PNT_132",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GEAR.PNT_10",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEAR.PNT_1240",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GEAR.PNT_8",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "GUNSIGHT.PNT_891",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GUNSIGHT.PNT_892",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "GUNSIGHT.PNT_895",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "HYDRAULIC_SYSTEM.PNT_1242",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MCL.PNT_250",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "MCL.PNT_253",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_170",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAV.PNT_176",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "NAV.PNT_177_arg177",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_177_arg236",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_183_arg183",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_183_arg237",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_190_arg190",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_190_arg238",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_196_arg196",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_196_arg239",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_203_arg203",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_203_arg240",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_209_arg209",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_209_arg241",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_213_arg213",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "NAV.PNT_213_arg242",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_247",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_248",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_249",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_254",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "NAV.PNT_255",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "NAV.PNT_724",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_120",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_121",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_122",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_123",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_400",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_401",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_402",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_403",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_404",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_405",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_721",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR.PNT_722",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADARWARN.PNT_602_arg602",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "RADARWARN.PNT_602_arg603",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_361",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_365",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_366",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_367",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_368",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_369",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_370",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADIO.PNT_372",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "RWR.PNT_501",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR.PNT_502",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "RWR.PNT_503",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR.PNT_504",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR.PNT_505",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR.PNT_506",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RWR.PNT_507",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RWR.PNT_510",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SEAT.PNT_251",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPOILERS.PNT_84",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TACAN.PNT_900",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "TACAN.PNT_901",
+			"status": "pass",
+			"details": "13 positions OK"
+		},
+		{
+			"name": "TACAN.PNT_902",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "TACAN.PNT_903",
+			"status": "fail",
+			"details": "0%: expected -1.0000, got 0.8000 (actual range [-0.5000, 1.0000] vs expected [-1.0, 1.0])"
+		},
+		{
+			"name": "TRIM.PNT_82",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_1241",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_390",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_391",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_392",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_393",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_700",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_701",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_702",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_703",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_704",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_705",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_706",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_707",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_708",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_725",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_726",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_740",
+			"status": "pass",
+			"details": "12 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_742",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_743",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAPON_SYSTEM.PNT_744",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "arg.ADIHeading",
+			"status": "pass",
+			"details": "arg 385 = 0.4608"
+		},
+		{
+			"name": "arg.ADIOFF",
+			"status": "pass",
+			"details": "arg 387 = 0.0000"
+		},
+		{
+			"name": "arg.ADIPitch",
+			"status": "pass",
+			"details": "arg 383 = 0.0000"
+		},
+		{
+			"name": "arg.ADIRoll",
+			"status": "pass",
+			"details": "arg 384 = 0.0000"
+		},
+		{
+			"name": "arg.ADISlip",
+			"status": "pass",
+			"details": "arg 388 = 0.0000"
+		},
+		{
+			"name": "arg.ADITurn",
+			"status": "pass",
+			"details": "arg 389 = 0.0000"
+		},
+		{
+			"name": "arg.AFCS_HDG_100s",
+			"status": "pass",
+			"details": "arg 167 = 0.0000"
+		},
+		{
+			"name": "arg.AFCS_HDG_10s",
+			"status": "pass",
+			"details": "arg 168 = 0.0000"
+		},
+		{
+			"name": "arg.AFCS_HDG_1s",
+			"status": "pass",
+			"details": "arg 169 = 0.0000"
+		},
+		{
+			"name": "arg.AFCS_TEST_PITCH",
+			"status": "pass",
+			"details": "arg 262 = 0.0000"
+		},
+		{
+			"name": "arg.AFCS_TEST_ROLL",
+			"status": "pass",
+			"details": "arg 260 = 0.0000"
+		},
+		{
+			"name": "arg.AFCS_TEST_YAW",
+			"status": "pass",
+			"details": "arg 261 = 0.0000"
+		},
+		{
+			"name": "arg.AOA_BRIGHTNESS",
+			"status": "pass",
+			"details": "arg 857 = 0.6000"
+		},
+		{
+			"name": "arg.APCLight",
+			"status": "pass",
+			"details": "arg 147 = 0.0000"
+		},
+		{
+			"name": "arg.APG53A_BottomRange",
+			"status": "pass",
+			"details": "arg 407 = 0.0000"
+		},
+		{
+			"name": "arg.APG53A_Glow",
+			"status": "pass",
+			"details": "arg 115 = 0.0000"
+		},
+		{
+			"name": "arg.APG53A_LeftRange",
+			"status": "pass",
+			"details": "arg 406 = 0.0000"
+		},
+		{
+			"name": "arg.ARC51_Freq_Preset",
+			"status": "pass",
+			"details": "arg 371 = 0.0000"
+		},
+		{
+			"name": "arg.ARC51_Freq_XXxxx",
+			"status": "pass",
+			"details": "arg 362 = 0.1500"
+		},
+		{
+			"name": "arg.ARC51_Freq_xxXxx",
+			"status": "pass",
+			"details": "arg 363 = 0.4000"
+		},
+		{
+			"name": "arg.ARC51_Freq_xxxXX",
+			"status": "pass",
+			"details": "arg 364 = 0.0000"
+		},
+		{
+			"name": "arg.AWRSPower",
+			"status": "pass",
+			"details": "arg 741 = 0.0000"
+		},
+		{
+			"name": "arg.Accel_cur",
+			"status": "pass",
+			"details": "arg 360 = 0.1000"
+		},
+		{
+			"name": "arg.Accel_max",
+			"status": "pass",
+			"details": "arg 137 = 0.1000"
+		},
+		{
+			"name": "arg.Accel_min",
+			"status": "pass",
+			"details": "arg 138 = 0.1000"
+		},
+		{
+			"name": "arg.Advisory_Dive",
+			"status": "pass",
+			"details": "arg 868 = 0.0000"
+		},
+		{
+			"name": "arg.Advisory_InRange",
+			"status": "pass",
+			"details": "arg 866 = 0.0000"
+		},
+		{
+			"name": "arg.Advisory_SetRange",
+			"status": "pass",
+			"details": "arg 867 = 0.0000"
+		},
+		{
+			"name": "arg.AltAdjNNxx",
+			"status": "pass",
+			"details": "arg 824 = 0.0000"
+		},
+		{
+			"name": "arg.AltAdjxxNx",
+			"status": "pass",
+			"details": "arg 825 = 0.9000"
+		},
+		{
+			"name": "arg.AltAdjxxxN",
+			"status": "pass",
+			"details": "arg 826 = 0.2000"
+		},
+		{
+			"name": "arg.Altimeter",
+			"status": "pass",
+			"details": "arg 820 = 0.4432"
+		},
+		{
+			"name": "arg.Altimeter100s",
+			"status": "pass",
+			"details": "arg 823 = 0.4432"
+		},
+		{
+			"name": "arg.Altimeter10K",
+			"status": "pass",
+			"details": "arg 821 = 0.0586"
+		},
+		{
+			"name": "arg.Altimeter1K",
+			"status": "pass",
+			"details": "arg 822 = 0.6443"
+		},
+		{
+			"name": "arg.AngleOfAttack",
+			"status": "pass",
+			"details": "arg 840 = 0.0000"
+		},
+		{
+			"name": "arg.AoA_Green",
+			"status": "pass",
+			"details": "arg 850 = 0.0000"
+		},
+		{
+			"name": "arg.AoA_Red",
+			"status": "pass",
+			"details": "arg 852 = 0.0000"
+		},
+		{
+			"name": "arg.AoA_Yellow",
+			"status": "pass",
+			"details": "arg 851 = 0.0000"
+		},
+		{
+			"name": "arg.AttGyroStbyOFF",
+			"status": "pass",
+			"details": "arg 664 = 0.0000"
+		},
+		{
+			"name": "arg.AttGyroStbyPitch",
+			"status": "pass",
+			"details": "arg 660 = 0.0000"
+		},
+		{
+			"name": "arg.AttGyroStbyRoll",
+			"status": "pass",
+			"details": "arg 661 = 0.0000"
+		},
+		{
+			"name": "arg.BDHI_DME_Flag",
+			"status": "pass",
+			"details": "arg 786 = 0.0000"
+		},
+		{
+			"name": "arg.BDHI_DME_Xxx",
+			"status": "pass",
+			"details": "arg 785 = 0.0000"
+		},
+		{
+			"name": "arg.BDHI_DME_xXx",
+			"status": "pass",
+			"details": "arg 784 = 0.0000"
+		},
+		{
+			"name": "arg.BDHI_DME_xxX",
+			"status": "pass",
+			"details": "arg 783 = 0.0000"
+		},
+		{
+			"name": "arg.BDHI_Heading",
+			"status": "pass",
+			"details": "arg 780 = 0.9804"
+		},
+		{
+			"name": "arg.BDHI_ILS_GS",
+			"status": "pass",
+			"details": "arg 381 = -1.0000"
+		},
+		{
+			"name": "arg.BDHI_ILS_LOC",
+			"status": "pass",
+			"details": "arg 382 = 1.0000"
+		},
+		{
+			"name": "arg.BDHI_Needle1",
+			"status": "pass",
+			"details": "arg 781 = 0.9700"
+		},
+		{
+			"name": "arg.BDHI_Needle2",
+			"status": "pass",
+			"details": "arg 782 = 0.9000"
+		},
+		{
+			"name": "arg.BackupCompass",
+			"status": "pass",
+			"details": "arg 148 = -0.4608"
+		},
+		{
+			"name": "arg.CM_bank1_Xx",
+			"status": "pass",
+			"details": "arg 526 = 0.3000"
+		},
+		{
+			"name": "arg.CM_bank1_xX",
+			"status": "pass",
+			"details": "arg 527 = 0.1000"
+		},
+		{
+			"name": "arg.CM_bank2_Xx",
+			"status": "pass",
+			"details": "arg 528 = 0.3000"
+		},
+		{
+			"name": "arg.CM_bank2_xX",
+			"status": "pass",
+			"details": "arg 529 = 0.1000"
+		},
+		{
+			"name": "arg.CabinAlt",
+			"status": "pass",
+			"details": "arg 710 = 0.1311"
+		},
+		{
+			"name": "arg.Canopy",
+			"status": "pass",
+			"details": "arg 26 = 0.0000"
+		},
+		{
+			"name": "arg.CanopyLever",
+			"status": "pass",
+			"details": "arg 129 = 1.0000"
+		},
+		{
+			"name": "arg.ConsoleLights",
+			"status": "pass",
+			"details": "arg 119 = 0.0000"
+		},
+		{
+			"name": "arg.CurrTime_hours",
+			"status": "pass",
+			"details": "arg 440 = 0.6802"
+		},
+		{
+			"name": "arg.CurrTime_mins",
+			"status": "pass",
+			"details": "arg 441 = 0.1628"
+		},
+		{
+			"name": "arg.CurrTime_secs",
+			"status": "pass",
+			"details": "arg 442 = 0.7499"
+		},
+		{
+			"name": "arg.Doppler_Drift",
+			"status": "pass",
+			"details": "arg 172 = 0.0000"
+		},
+		{
+			"name": "arg.Doppler_MemoryLight",
+			"status": "pass",
+			"details": "arg 171 = 0.0000"
+		},
+		{
+			"name": "arg.Doppler_Speed_Xnn",
+			"status": "pass",
+			"details": "arg 173 = 0.0000"
+		},
+		{
+			"name": "arg.Doppler_Speed_nXn",
+			"status": "pass",
+			"details": "arg 174 = 0.0000"
+		},
+		{
+			"name": "arg.Doppler_Speed_nnX",
+			"status": "pass",
+			"details": "arg 175 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_GO",
+			"status": "pass",
+			"details": "arg 515 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_NO_GO",
+			"status": "pass",
+			"details": "arg 516 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_REC",
+			"status": "pass",
+			"details": "arg 500 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_RPT",
+			"status": "pass",
+			"details": "arg 518 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_SAM",
+			"status": "pass",
+			"details": "arg 517 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_STBY",
+			"status": "pass",
+			"details": "arg 519 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_TEST",
+			"status": "pass",
+			"details": "arg 514 = 0.0000"
+		},
+		{
+			"name": "arg.ECM_Visibilty",
+			"status": "pass",
+			"details": "arg 531 = 0.0000"
+		},
+		{
+			"name": "arg.EGT",
+			"status": "pass",
+			"details": "arg 540 = 0.0000"
+		},
+		{
+			"name": "arg.Engine_Fuel_Flow",
+			"status": "pass",
+			"details": "arg 560 = 0.0000"
+		},
+		{
+			"name": "arg.Engine_RPM",
+			"status": "pass",
+			"details": "arg 520 = 0.1268"
+		},
+		{
+			"name": "arg.Engine_RPMsub",
+			"status": "pass",
+			"details": "arg 521 = 0.3061"
+		},
+		{
+			"name": "arg.FlapsIndicator",
+			"status": "pass",
+			"details": "arg 23 = 0.0000"
+		},
+		{
+			"name": "arg.FloodRed",
+			"status": "pass",
+			"details": "arg 114 = 0.0000"
+		},
+		{
+			"name": "arg.FloodWhite",
+			"status": "pass",
+			"details": "arg 111 = 0.0000"
+		},
+		{
+			"name": "arg.FuelGauge",
+			"status": "pass",
+			"details": "arg 580 = 0.8165"
+		},
+		{
+			"name": "arg.GearLeft",
+			"status": "pass",
+			"details": "arg 21 = 0.0000"
+		},
+		{
+			"name": "arg.GearLight",
+			"status": "pass",
+			"details": "arg 27 = 0.0000"
+		},
+		{
+			"name": "arg.GearNose",
+			"status": "pass",
+			"details": "arg 20 = 0.0000"
+		},
+		{
+			"name": "arg.GearRight",
+			"status": "pass",
+			"details": "arg 22 = 0.0000"
+		},
+		{
+			"name": "arg.Glareshield_BRIGHTNESS",
+			"status": "pass",
+			"details": "arg 858 = 0.1000"
+		},
+		{
+			"name": "arg.Glareshield_FIRE",
+			"status": "pass",
+			"details": "arg 159 = 0.0000"
+		},
+		{
+			"name": "arg.Glareshield_IFF",
+			"status": "pass",
+			"details": "arg 158 = 0.0000"
+		},
+		{
+			"name": "arg.Glareshield_LABS",
+			"status": "pass",
+			"details": "arg 155 = 0.0000"
+		},
+		{
+			"name": "arg.Glareshield_LAWS",
+			"status": "pass",
+			"details": "arg 156 = 0.0000"
+		},
+		{
+			"name": "arg.Glareshield_OBST",
+			"status": "pass",
+			"details": "arg 157 = 0.0000"
+		},
+		{
+			"name": "arg.Glareshield_WHEELS",
+			"status": "pass",
+			"details": "arg 154 = 0.0000"
+		},
+		{
+			"name": "arg.GunsightReflector",
+			"status": "pass",
+			"details": "arg 894 = 0.0000"
+		},
+		{
+			"name": "arg.HideStick",
+			"status": "pass",
+			"details": "arg 153 = 0.0000"
+		},
+		{
+			"name": "arg.IASGauge",
+			"status": "pass",
+			"details": "arg 880 = 0.5323"
+		},
+		{
+			"name": "arg.IASIndex",
+			"status": "pass",
+			"details": "arg 882 = 0.0000"
+		},
+		{
+			"name": "arg.INDICATOR_BRIGHTNESS",
+			"status": "pass",
+			"details": "arg 856 = 1.0000"
+		},
+		{
+			"name": "arg.InstLightsPrimary",
+			"status": "pass",
+			"details": "arg 117 = 0.0000"
+		},
+		{
+			"name": "arg.LAWS_OFF",
+			"status": "pass",
+			"details": "arg 604 = 1.0000"
+		},
+		{
+			"name": "arg.LAWS_indexer",
+			"status": "pass",
+			"details": "arg 601 = 0.5000"
+		},
+		{
+			"name": "arg.LAWS_light_gauge",
+			"status": "pass",
+			"details": "arg 605 = 0.0000"
+		},
+		{
+			"name": "arg.Ladder_Brightness",
+			"status": "pass",
+			"details": "arg 859 = 0.5000"
+		},
+		{
+			"name": "arg.Ladder_ControlHydraulicCaution",
+			"status": "pass",
+			"details": "arg 861 = 1.0000"
+		},
+		{
+			"name": "arg.Ladder_FuelBoostCaution",
+			"status": "pass",
+			"details": "arg 860 = 1.0000"
+		},
+		{
+			"name": "arg.Ladder_FuelTransCaution",
+			"status": "pass",
+			"details": "arg 863 = 1.0000"
+		},
+		{
+			"name": "arg.Ladder_SpdBrkCaution",
+			"status": "pass",
+			"details": "arg 864 = 0.0000"
+		},
+		{
+			"name": "arg.Ladder_SpoilerCaution",
+			"status": "pass",
+			"details": "arg 865 = 0.0000"
+		},
+		{
+			"name": "arg.Ladder_UtilityHydraulicCaution",
+			"status": "pass",
+			"details": "arg 862 = 1.0000"
+		},
+		{
+			"name": "arg.LeftBrakePedal",
+			"status": "pass",
+			"details": "arg 5 = 0.5000"
+		},
+		{
+			"name": "arg.LiquidOxygen",
+			"status": "pass",
+			"details": "arg 760 = 0.9584"
+		},
+		{
+			"name": "arg.MachDisc",
+			"status": "pass",
+			"details": "arg 881 = 0.0336"
+		},
+		{
+			"name": "arg.MachIndex",
+			"status": "pass",
+			"details": "arg 883 = 0.0000"
+		},
+		{
+			"name": "arg.ManualFuelControl_Warn",
+			"status": "pass",
+			"details": "arg 105 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lat_Xnnnn",
+			"status": "pass",
+			"details": "arg 178 = 0.4000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lat_nXnnn",
+			"status": "pass",
+			"details": "arg 179 = 0.3000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lat_nnXnn",
+			"status": "pass",
+			"details": "arg 180 = 0.5000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lat_nnnXn",
+			"status": "pass",
+			"details": "arg 181 = 0.9609"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lat_nnnnX",
+			"status": "pass",
+			"details": "arg 182 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lon_Xnnnnn",
+			"status": "pass",
+			"details": "arg 184 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lon_nXnnnn",
+			"status": "pass",
+			"details": "arg 185 = 0.4000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lon_nnXnnn",
+			"status": "pass",
+			"details": "arg 186 = 0.3000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lon_nnnXnn",
+			"status": "pass",
+			"details": "arg 187 = 0.4000"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lon_nnnnXn",
+			"status": "pass",
+			"details": "arg 188 = 0.3449"
+		},
+		{
+			"name": "arg.Nav_CurPos_Lon_nnnnnX",
+			"status": "pass",
+			"details": "arg 189 = 0.5000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lat_Xnnnn",
+			"status": "pass",
+			"details": "arg 191 = 0.4000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lat_nXnnn",
+			"status": "pass",
+			"details": "arg 192 = 0.3000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lat_nnXnn",
+			"status": "pass",
+			"details": "arg 193 = 0.3000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lat_nnnXn",
+			"status": "pass",
+			"details": "arg 194 = 0.0748"
+		},
+		{
+			"name": "arg.Nav_Dest_Lat_nnnnX",
+			"status": "pass",
+			"details": "arg 195 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lon_Xnnnnn",
+			"status": "pass",
+			"details": "arg 197 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lon_nXnnnn",
+			"status": "pass",
+			"details": "arg 198 = 0.4000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lon_nnXnnn",
+			"status": "pass",
+			"details": "arg 199 = 0.3000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lon_nnnXnn",
+			"status": "pass",
+			"details": "arg 200 = 0.3000"
+		},
+		{
+			"name": "arg.Nav_Dest_Lon_nnnnXn",
+			"status": "pass",
+			"details": "arg 201 = 0.8228"
+		},
+		{
+			"name": "arg.Nav_Dest_Lon_nnnnnX",
+			"status": "pass",
+			"details": "arg 202 = 0.5000"
+		},
+		{
+			"name": "arg.Nav_Magvar_Xxxxx",
+			"status": "pass",
+			"details": "arg 204 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_Magvar_xXxxx",
+			"status": "pass",
+			"details": "arg 205 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_Magvar_xxXxx",
+			"status": "pass",
+			"details": "arg 206 = 0.7000"
+		},
+		{
+			"name": "arg.Nav_Magvar_xxxXx",
+			"status": "pass",
+			"details": "arg 207 = 0.1000"
+		},
+		{
+			"name": "arg.Nav_Magvar_xxxxX",
+			"status": "pass",
+			"details": "arg 208 = 1.0000"
+		},
+		{
+			"name": "arg.Nav_WindDir_Xxx",
+			"status": "pass",
+			"details": "arg 214 = 0.1000"
+		},
+		{
+			"name": "arg.Nav_WindDir_xXx",
+			"status": "pass",
+			"details": "arg 215 = 0.7000"
+		},
+		{
+			"name": "arg.Nav_WindDir_xxX",
+			"status": "pass",
+			"details": "arg 216 = 0.4843"
+		},
+		{
+			"name": "arg.Nav_WindSpeed_Xxx",
+			"status": "pass",
+			"details": "arg 210 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_WindSpeed_xXx",
+			"status": "pass",
+			"details": "arg 211 = 0.0000"
+		},
+		{
+			"name": "arg.Nav_WindSpeed_xxX",
+			"status": "pass",
+			"details": "arg 212 = 0.2147"
+		},
+		{
+			"name": "arg.OilPressure",
+			"status": "pass",
+			"details": "arg 152 = 0.3500"
+		},
+		{
+			"name": "arg.Oil_light_gauge",
+			"status": "pass",
+			"details": "arg 150 = 0.0000"
+		},
+		{
+			"name": "arg.Oxygen_flag_gauge",
+			"status": "pass",
+			"details": "arg 762 = 0.0000"
+		},
+		{
+			"name": "arg.Oxygen_light_gauge",
+			"status": "pass",
+			"details": "arg 761 = 0.0000"
+		},
+		{
+			"name": "arg.PitchTrim",
+			"status": "pass",
+			"details": "arg 870 = 0.1650"
+		},
+		{
+			"name": "arg.PitchTrimKnob",
+			"status": "pass",
+			"details": "arg 28 = 0.0000"
+		},
+		{
+			"name": "arg.PressureRatio",
+			"status": "pass",
+			"details": "arg 151 = 0.0000"
+		},
+		{
+			"name": "arg.RadarAltimeter",
+			"status": "pass",
+			"details": "arg 600 = 0.0000"
+		},
+		{
+			"name": "arg.RightBrakePedal",
+			"status": "pass",
+			"details": "arg 6 = 0.5000"
+		},
+		{
+			"name": "arg.RollTrim",
+			"status": "pass",
+			"details": "arg 871 = 0.0000"
+		},
+		{
+			"name": "arg.RollTrimKnob",
+			"status": "pass",
+			"details": "arg 29 = 0.0000"
+		},
+		{
+			"name": "arg.RudderPedals",
+			"status": "pass",
+			"details": "arg 4 = 0.0000"
+		},
+		{
+			"name": "arg.StandbyAttHorizon",
+			"status": "pass",
+			"details": "arg 665 = 0.0000"
+		},
+		{
+			"name": "arg.StickBank",
+			"status": "pass",
+			"details": "arg 3 = 0.0000"
+		},
+		{
+			"name": "arg.StickPitch",
+			"status": "pass",
+			"details": "arg 2 = 0.0673"
+		},
+		{
+			"name": "arg.Stopwatch_mins",
+			"status": "pass",
+			"details": "arg 144 = 0.0257"
+		},
+		{
+			"name": "arg.Stopwatch_secs",
+			"status": "pass",
+			"details": "arg 145 = 0.5402"
+		},
+		{
+			"name": "arg.Throttle",
+			"status": "pass",
+			"details": "arg 80 = 0.0000"
+		},
+		{
+			"name": "arg.VerticalVelocity",
+			"status": "pass",
+			"details": "arg 800 = 0.0000"
+		},
+		{
+			"name": "arg.mirrors_draw",
+			"status": "pass",
+			"details": "arg 16 = 1.0000"
+		},
+		{
+			"name": "devNone.COMPASS_free_slaved_switch",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "devNone.COMPASS_latitude",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "devNone.COMPASS_push_to_sync",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "devNone.COMPASS_set_heading",
+			"status": "fail",
+			"details": "pos 0: arg unchanged at 0.0000; pos 2: arg unchanged at 0.0000"
+		},
+		{
+			"name": "ind.0",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.0.glass",
+			"status": "pass",
+			"details": "field \"glass\" = \"\""
+		},
+		{
+			"name": "ind.0.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.1",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.1.debug_screen",
+			"status": "pass",
+			"details": "field \"debug_screen\" = \"\""
+		},
+		{
+			"name": "ind.2",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.2.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.3",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.3.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.pitch_scale",
+			"status": "skip",
+			"details": "field \"pitch_scale\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.roll_scale",
+			"status": "skip",
+			"details": "field \"roll_scale\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.stick_position",
+			"status": "skip",
+			"details": "field \"stick_position\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.4",
+			"status": "skip",
+			"details": "Missing indicationId or fieldName"
+		},
+		{
+			"name": "ind.4.txt_chn[10]",
+			"status": "pass",
+			"details": "field \"txt_chn[10]\" = \"259.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[11]",
+			"status": "pass",
+			"details": "field \"txt_chn[11]\" = \"268.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[12]",
+			"status": "pass",
+			"details": "field \"txt_chn[12]\" = \"269.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[13]",
+			"status": "pass",
+			"details": "field \"txt_chn[13]\" = \"260.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[14]",
+			"status": "pass",
+			"details": "field \"txt_chn[14]\" = \"263.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[15]",
+			"status": "pass",
+			"details": "field \"txt_chn[15]\" = \"261.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[16]",
+			"status": "pass",
+			"details": "field \"txt_chn[16]\" = \"267.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[17]",
+			"status": "pass",
+			"details": "field \"txt_chn[17]\" = \"251.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[18]",
+			"status": "pass",
+			"details": "field \"txt_chn[18]\" = \"253.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[19]",
+			"status": "pass",
+			"details": "field \"txt_chn[19]\" = \"266.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[1]",
+			"status": "pass",
+			"details": "field \"txt_chn[1]\" = \"254.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[20]",
+			"status": "pass",
+			"details": "field \"txt_chn[20]\" = \"252.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[2]",
+			"status": "pass",
+			"details": "field \"txt_chn[2]\" = \"265.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[3]",
+			"status": "pass",
+			"details": "field \"txt_chn[3]\" = \"256.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[4]",
+			"status": "pass",
+			"details": "field \"txt_chn[4]\" = \"254.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[5]",
+			"status": "pass",
+			"details": "field \"txt_chn[5]\" = \"250.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[6]",
+			"status": "pass",
+			"details": "field \"txt_chn[6]\" = \"270.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[7]",
+			"status": "pass",
+			"details": "field \"txt_chn[7]\" = \"257.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[8]",
+			"status": "pass",
+			"details": "field \"txt_chn[8]\" = \"258.00\""
+		},
+		{
+			"name": "ind.4.txt_chn[9]",
+			"status": "pass",
+			"details": "field \"txt_chn[9]\" = \"262.00\""
+		}
+	]
+}

@@ -1,0 +1,3164 @@
+{
+	"module": "AH-64D_BLK_II",
+	"timestamp": "2026-05-01T22:43:57",
+	"delay": 0.08,
+	"elapsed": 282.1,
+	"counts": {
+		"pass": 618,
+		"fail": 12,
+		"skip": 0,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "BARO_ALTIMETER.PressureSet",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_ARM_SAFE_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_AUDIO_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_BYPASS_AUTO_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_CMWS_NAV_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_JETT_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_LAMP_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CMWS.CMWS_PWR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.ADF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.ADF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.ATA_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.FM1_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.FM1_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.FM1_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.FM2_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.FM2_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.FM2_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.HF_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.HF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.HF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.ICS_MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.IDENT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.IFF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.MASTER_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.RLWR_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.SensControl",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.UHF_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.UHF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.UHF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.VCR_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.VCR_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.VHF_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.VHF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_CPG.VHF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.ADF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.ADF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.ATA_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.FM1_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.FM1_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.FM1_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.FM2_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.FM2_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.FM2_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.HF_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.HF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.HF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.ICS_MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.IDENT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.IFF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.MASTER_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.RLWR_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.SensControl",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.UHF_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.UHF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.UHF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.VCR_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.VCR_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.VHF_SQL_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.VHF_disable",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_PLT.VHF_volume",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CONTROL_INTERFACE.FrictionLever",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.FloodCPG",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.FloodPLT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.MasterCautionCPG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.MasterCautionPLT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.MasterWarningCPG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.MasterWarningPLT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.PrimaryCPG",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.PrimaryPLT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.SignalCPG",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.SignalPLT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.StbyInstPLT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.TestLightsCPG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPTLIGHTS_SYSTEM.TestLightsPLT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.CPG_DefogBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.CPG_Door_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.CPG_M4_Safety",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CPT_MECH.CPG_M4_Trigger",
+			"status": "fail",
+			"details": "pos 1: expected 0.5000, got 0.0000; pos 2: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "CPT_MECH.CPG_WiperSw",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PLT_DefogBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PLT_Door_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PLT_M4_Safety",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PLT_M4_Trigger",
+			"status": "fail",
+			"details": "pos 1: expected 0.5000, got 0.0000; pos 2: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "CPT_MECH.PLT_SunvisorLeft",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PLT_SunvisorRight",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "CPT_MECH.PLT_WiperSw",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ARM_SAFE_CPG_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ARM_SAFE_PLT_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GEN1_RST_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GND_ORIDE_CPG_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GND_ORIDE_PLT_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.MIK",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.NVS_MODE_CPG_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.NVS_MODE_PLT_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.SP_SELECT_SW",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VCP_ACM_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VCP_FLIR_GAIN_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VCP_FLIR_LEV_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VCP_IHADSS_BRT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VCP_IHADSS_CON_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.VCP_SYM_BRT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.CPG_MasterZeroizeSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.CPG_XPNDR_Btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.CPG_ZEROIZE_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.PLT_MasterZeroizeSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.PLT_XPNDR_Btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.PLT_ZEROIZE_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.APU_StartBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_ApuFireBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_Eng1FireBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_Eng2FireBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_FireDetTestSw1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_L_PowerLever",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.2500; 100%: expected 1.0000, got 0.9000 (actual range [0.2500, 0.9000] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_PrimaryDischBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_R_PowerLever",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.2500; 100%: expected 1.0000, got 0.9000 (actual range [0.2500, 0.9000] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_ReserveDischBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ChkOvspTestSwENG2A",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ChkOvspTestSwENG2B",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.Eng1IgnOrideSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.Eng2IgnOrideSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_ApuFireBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_Eng1FireBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_Eng2FireBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_FireDetTestSw1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_L_PowerLever",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.2500; 100%: expected 1.0000, got 0.9000 (actual range [0.2500, 0.9000] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_PrimaryDischBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_R_PowerLever",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.2500; 100%: expected 1.0000, got 0.9000 (actual range [0.2500, 0.9000] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_ReserveDischBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.BRT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.Enter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.IDM_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.IDM_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.Preset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.RTS_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.RTS_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.Stopwatch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.Swap",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.WCA_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_CPG.WCA_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.BRT",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.Enter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.IDM_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.IDM_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.Preset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.RTS_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.RTS_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.Stopwatch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.Swap",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.WCA_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUFD_PLT.WCA_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXTLIGHTS_SYSTEM.AntiCollLights",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXTLIGHTS_SYSTEM.FormationLights",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EXTLIGHTS_SYSTEM.NavLights",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GEAR_INTERFACE.AH64_ParkingBrake",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.Emergency_HYD_CPG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.Emergency_HYD_PLT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.Rotor_Brake",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.TailWheelUnLock_CPG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_INTERFACE.TailWheelUnLock_PLT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORES_JETT_PUSHBUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORE_JETTISON_LEFT_WINGTIP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORE_JETTISON_RIGHT_WINGTIP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORE_LI_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORE_LO_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORE_RI_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_CPG.STORE_RO_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORES_JETT_PUSHBUTTON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORE_JETTISON_LEFT_WINGTIP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORE_JETTISON_RIGHT_WINGTIP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORE_LI_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORE_LO_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORE_RI_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JETT_PANEL_PLT.STORE_RO_JETTISON_ARMED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.BrightnessKnob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "KU_CPG.key0",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key8",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.key9",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyB",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyBKS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyCLR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyDivide",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyDot",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyEnter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyJ",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyMinus",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyMultiply",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyPlus",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyQ",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keySPC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keySign",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keySlash",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyV",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyX",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_CPG.keyZ",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.BrightnessKnob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "KU_PLT.key0",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key7",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key8",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.key9",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyB",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyBKS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyCLR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyDivide",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyDot",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyEnter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyJ",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyMinus",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyMultiply",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyPlus",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyQ",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keySPC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keySign",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keySlash",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyV",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyX",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyY",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "KU_PLT.keyZ",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.AC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.Asterisk",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.B1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.B2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.B4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.B5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.B6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.BRT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.COM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.FCR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.L1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.L2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.L3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.L4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.L5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.L6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.MODE_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.R1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.R2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.R3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.R4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.R5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.R6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.T1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.T2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.T3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.T4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.T5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.T6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.TSD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.VID",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.VID_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_CPG_LEFT.WPN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.AC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.Asterisk",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.B1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.B2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.B4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.B5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.B6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.BRT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.COM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.FCR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.L1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.L2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.L3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.L4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.L5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.L6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.MODE_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.R1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.R2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.R3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.R4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.R5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.R6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.T1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.T2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.T3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.T4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.T5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.T6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.TSD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.VID",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.VID_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_CPG_RIGHT.WPN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.AC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.Asterisk",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.B1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.B2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.B4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.B5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.B6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.BRT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.COM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.FCR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.L1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.L2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.L3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.L4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.L5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.L6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.MODE_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.R1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.R2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.R3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.R4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.R5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.R6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.T1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.T2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.T3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.T4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.T5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.T6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.TSD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.VID",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.VID_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_PLT_LEFT.WPN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.AC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.Asterisk",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.B1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.B2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.B4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.B5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.B6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.BRT_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.COM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.FCR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.L1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.L2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.L3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.L4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.L5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.L6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.MODE_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.R1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.R2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.R3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.R4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.R5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.R6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.T1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.T2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.T3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.T4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.T5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.T6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.TSD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.VID",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.VID_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "MFD_PLT_RIGHT.WPN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PrestonAI.StickFolding",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SAI.CageKnobPull",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SAI.CageKnobRotate",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.5000; 100%: expected 1.0000, got 0.7500 (actual range [0.2500, 0.7500] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "TEDAC.LHG_CUED_SEARCH_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_CURSOR_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_CURSOR_ENTER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_CURSOR_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_CURSOR_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_CURSOR_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_FCR_MODE_SW_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_FCR_MODE_SW_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_FCR_MODE_SW_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_FCR_MODE_SW_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_FCR_SCAN_SW_C",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_IAT_OFS_SW_OFS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_LMC_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_LR_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_STORE_UPDT_SW_UPDT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_TADS_FOV_SW_M",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_TADS_FOV_SW_N",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_TADS_FOV_SW_W",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_TADS_FOV_SW_Z",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_TADS_SENSOR_SELECT_SW",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_WEAPONS_ACTION_SW_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_WEAPONS_ACTION_SW_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_WEAPONS_ACTION_SW_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.LHG_WEAPONS_ACTION_SW_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_C_SCOPE_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_DISPLAY_ZOOM_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_ENTER_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_FCR_SCAN_SIZE_SW_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_FCR_SCAN_SIZE_SW_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_FCR_SCAN_SIZE_SW_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_FCR_SCAN_SIZE_SW_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_FLIR_PLRT_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_HDD_SW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_IAT_POLARITY_SW",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_LT_SW",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_MAN_TRK_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_MAN_TRK_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_MAN_TRK_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_MAN_TRK_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_SIGHT_SELECT_SW_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_SIGHT_SELECT_SW_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_SIGHT_SELECT_SW_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_SIGHT_SELECT_SW_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_SIGHT_SLAVE_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.RHG_SPARE_SW_AFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_ASTERISK_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_AZ_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_AZ_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_B1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_B2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_B3",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_B4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_BRT_DEC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_BRT_INC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_CON_DEC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_CON_INC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_EL_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_EL_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_GAIN_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_LEV_KNOB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_MODE_KNOB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_RF_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_RF_UP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_SYM_DEC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_SYM_INC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_VIDEO_SELECT_FCR_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_VIDEO_SELECT_GS_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_VIDEO_SELECT_PNV_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TEDAC.TDU_VIDEO_SELECT_TAD_BTN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.402",
+			"status": "pass",
+			"details": "arg 402 = 0.0000"
+		},
+		{
+			"name": "arg.403",
+			"status": "pass",
+			"details": "arg 403 = 0.0000"
+		},
+		{
+			"name": "arg.404",
+			"status": "pass",
+			"details": "arg 404 = 0.0000"
+		},
+		{
+			"name": "arg.405",
+			"status": "pass",
+			"details": "arg 405 = 0.0000"
+		},
+		{
+			"name": "arg.406",
+			"status": "pass",
+			"details": "arg 406 = 1.0000"
+		},
+		{
+			"name": "arg.407",
+			"status": "pass",
+			"details": "arg 407 = 1.0000"
+		},
+		{
+			"name": "arg.408",
+			"status": "pass",
+			"details": "arg 408 = 1.0000"
+		},
+		{
+			"name": "arg.409",
+			"status": "pass",
+			"details": "arg 409 = 1.0000"
+		},
+		{
+			"name": "arg.410",
+			"status": "pass",
+			"details": "arg 410 = 1.0000"
+		},
+		{
+			"name": "arg.411",
+			"status": "pass",
+			"details": "arg 411 = 0.0000"
+		},
+		{
+			"name": "arg.412",
+			"status": "pass",
+			"details": "arg 412 = 0.0000"
+		},
+		{
+			"name": "arg.413",
+			"status": "pass",
+			"details": "arg 413 = 0.0000"
+		},
+		{
+			"name": "arg.414",
+			"status": "pass",
+			"details": "arg 414 = 1.0000"
+		},
+		{
+			"name": "arg.415",
+			"status": "pass",
+			"details": "arg 415 = 0.0000"
+		},
+		{
+			"name": "arg.416",
+			"status": "pass",
+			"details": "arg 416 = 0.0000"
+		},
+		{
+			"name": "arg.417",
+			"status": "pass",
+			"details": "arg 417 = 0.0000"
+		},
+		{
+			"name": "arg.418",
+			"status": "pass",
+			"details": "arg 418 = 0.0000"
+		},
+		{
+			"name": "arg.419",
+			"status": "pass",
+			"details": "arg 419 = 0.0000"
+		},
+		{
+			"name": "arg.420",
+			"status": "pass",
+			"details": "arg 420 = 0.0000"
+		},
+		{
+			"name": "arg.421",
+			"status": "pass",
+			"details": "arg 421 = 0.0000"
+		},
+		{
+			"name": "arg.422",
+			"status": "pass",
+			"details": "arg 422 = 0.0000"
+		},
+		{
+			"name": "arg.423",
+			"status": "pass",
+			"details": "arg 423 = 0.0000"
+		},
+		{
+			"name": "arg.424",
+			"status": "pass",
+			"details": "arg 424 = 0.0000"
+		},
+		{
+			"name": "arg.425",
+			"status": "pass",
+			"details": "arg 425 = 1.0000"
+		},
+		{
+			"name": "arg.426",
+			"status": "pass",
+			"details": "arg 426 = 0.0000"
+		},
+		{
+			"name": "arg.427",
+			"status": "pass",
+			"details": "arg 427 = 0.0000"
+		},
+		{
+			"name": "arg.428",
+			"status": "pass",
+			"details": "arg 428 = 0.0000"
+		},
+		{
+			"name": "arg.429",
+			"status": "pass",
+			"details": "arg 429 = 0.0000"
+		},
+		{
+			"name": "arg.430",
+			"status": "pass",
+			"details": "arg 430 = 1.0000"
+		},
+		{
+			"name": "arg.431",
+			"status": "pass",
+			"details": "arg 431 = 1.0000"
+		},
+		{
+			"name": "arg.432",
+			"status": "pass",
+			"details": "arg 432 = 1.0000"
+		},
+		{
+			"name": "arg.433",
+			"status": "pass",
+			"details": "arg 433 = 1.0000"
+		},
+		{
+			"name": "arg.434",
+			"status": "pass",
+			"details": "arg 434 = 0.0000"
+		},
+		{
+			"name": "arg.435",
+			"status": "pass",
+			"details": "arg 435 = 0.0000"
+		},
+		{
+			"name": "arg.436",
+			"status": "pass",
+			"details": "arg 436 = 0.0000"
+		},
+		{
+			"name": "arg.437",
+			"status": "pass",
+			"details": "arg 437 = 1.0000"
+		},
+		{
+			"name": "arg.438",
+			"status": "pass",
+			"details": "arg 438 = 0.0000"
+		},
+		{
+			"name": "arg.439",
+			"status": "pass",
+			"details": "arg 439 = 1.0000"
+		},
+		{
+			"name": "arg.440",
+			"status": "pass",
+			"details": "arg 440 = 0.0000"
+		},
+		{
+			"name": "arg.441",
+			"status": "pass",
+			"details": "arg 441 = 0.0000"
+		},
+		{
+			"name": "arg.442",
+			"status": "pass",
+			"details": "arg 442 = 0.0000"
+		},
+		{
+			"name": "arg.443",
+			"status": "pass",
+			"details": "arg 443 = 0.0000"
+		},
+		{
+			"name": "arg.444",
+			"status": "pass",
+			"details": "arg 444 = 0.0000"
+		},
+		{
+			"name": "arg.445",
+			"status": "pass",
+			"details": "arg 445 = 0.0000"
+		},
+		{
+			"name": "arg.446",
+			"status": "pass",
+			"details": "arg 446 = 0.0000"
+		},
+		{
+			"name": "arg.447",
+			"status": "pass",
+			"details": "arg 447 = 0.0000"
+		},
+		{
+			"name": "arg.448",
+			"status": "pass",
+			"details": "arg 448 = 0.0000"
+		},
+		{
+			"name": "arg.469",
+			"status": "pass",
+			"details": "arg 469 = 0.4456"
+		},
+		{
+			"name": "arg.470",
+			"status": "pass",
+			"details": "arg 470 = 0.0000"
+		},
+		{
+			"name": "arg.471",
+			"status": "pass",
+			"details": "arg 471 = 0.0000"
+		},
+		{
+			"name": "arg.472",
+			"status": "pass",
+			"details": "arg 472 = 0.0000"
+		},
+		{
+			"name": "arg.473",
+			"status": "pass",
+			"details": "arg 473 = 0.0000"
+		},
+		{
+			"name": "arg.474",
+			"status": "pass",
+			"details": "arg 474 = 0.0000"
+		},
+		{
+			"name": "arg.475",
+			"status": "pass",
+			"details": "arg 475 = 0.0000"
+		},
+		{
+			"name": "arg.476",
+			"status": "pass",
+			"details": "arg 476 = 0.0000"
+		},
+		{
+			"name": "arg.478",
+			"status": "pass",
+			"details": "arg 478 = 0.0000"
+		},
+		{
+			"name": "arg.479",
+			"status": "pass",
+			"details": "arg 479 = 0.6111"
+		},
+		{
+			"name": "arg.480",
+			"status": "pass",
+			"details": "arg 480 = 0.0000"
+		},
+		{
+			"name": "arg.481",
+			"status": "pass",
+			"details": "arg 481 = 0.0000"
+		},
+		{
+			"name": "arg.482",
+			"status": "pass",
+			"details": "arg 482 = 0.0000"
+		},
+		{
+			"name": "arg.483",
+			"status": "pass",
+			"details": "arg 483 = 0.0000"
+		},
+		{
+			"name": "arg.605",
+			"status": "pass",
+			"details": "arg 605 = 0.1000"
+		},
+		{
+			"name": "arg.606",
+			"status": "pass",
+			"details": "arg 606 = 0.0000"
+		},
+		{
+			"name": "arg.607",
+			"status": "pass",
+			"details": "arg 607 = 0.6000"
+		},
+		{
+			"name": "arg.608",
+			"status": "pass",
+			"details": "arg 608 = 0.9000"
+		},
+		{
+			"name": "arg.609",
+			"status": "pass",
+			"details": "arg 609 = 0.2134"
+		},
+		{
+			"name": "arg.622",
+			"status": "pass",
+			"details": "arg 622 = -0.0003"
+		},
+		{
+			"name": "arg.623",
+			"status": "pass",
+			"details": "arg 623 = -0.0041"
+		},
+		{
+			"name": "arg.624",
+			"status": "pass",
+			"details": "arg 624 = 0.0000"
+		},
+		{
+			"name": "arg.625",
+			"status": "pass",
+			"details": "arg 625 = 0.2402"
+		},
+		{
+			"name": "arg.626",
+			"status": "pass",
+			"details": "arg 626 = -0.0000"
+		},
+		{
+			"name": "arg.627",
+			"status": "pass",
+			"details": "arg 627 = 0.0000"
+		},
+		{
+			"name": "arg.635",
+			"status": "pass",
+			"details": "arg 635 = 0.0000"
+		},
+		{
+			"name": "arg.636",
+			"status": "pass",
+			"details": "arg 636 = 0.7107"
+		},
+		{
+			"name": "arg.712",
+			"status": "pass",
+			"details": "arg 712 = 0.0000"
+		},
+		{
+			"name": "arg.787",
+			"status": "pass",
+			"details": "arg 787 = 0.0000"
+		},
+		{
+			"name": "arg.788",
+			"status": "pass",
+			"details": "arg 788 = 0.0000"
+		},
+		{
+			"name": "arg.789",
+			"status": "pass",
+			"details": "arg 789 = 0.0000"
+		},
+		{
+			"name": "arg.790",
+			"status": "pass",
+			"details": "arg 790 = 0.0000"
+		},
+		{
+			"name": "arg.791",
+			"status": "pass",
+			"details": "arg 791 = 0.0000"
+		},
+		{
+			"name": "arg.793",
+			"status": "pass",
+			"details": "arg 793 = 1.0000"
+		},
+		{
+			"name": "arg.794",
+			"status": "pass",
+			"details": "arg 794 = 1.0000"
+		},
+		{
+			"name": "arg.795",
+			"status": "pass",
+			"details": "arg 795 = 0.0000"
+		},
+		{
+			"name": "arg.798",
+			"status": "pass",
+			"details": "arg 798 = 0.0000"
+		},
+		{
+			"name": "arg.806",
+			"status": "pass",
+			"details": "arg 806 = 0.0000"
+		},
+		{
+			"name": "arg.808",
+			"status": "pass",
+			"details": "arg 808 = 1.0000"
+		},
+		{
+			"name": "arg.813",
+			"status": "pass",
+			"details": "arg 813 = 1.0000"
+		},
+		{
+			"name": "arg.814",
+			"status": "pass",
+			"details": "arg 814 = 1.0000"
+		},
+		{
+			"name": "arg.820",
+			"status": "pass",
+			"details": "arg 820 = -0.9989"
+		},
+		{
+			"name": "arg.821",
+			"status": "pass",
+			"details": "arg 821 = -0.3511"
+		},
+		{
+			"name": "arg.822",
+			"status": "pass",
+			"details": "arg 822 = -0.7614"
+		},
+		{
+			"name": "arg.823",
+			"status": "pass",
+			"details": "arg 823 = 0.5229"
+		},
+		{
+			"name": "arg.824",
+			"status": "pass",
+			"details": "arg 824 = -0.7076"
+		},
+		{
+			"name": "arg.890",
+			"status": "pass",
+			"details": "arg 890 = 0.0012"
+		},
+		{
+			"name": "arg.891",
+			"status": "pass",
+			"details": "arg 891 = -1.0000"
+		},
+		{
+			"name": "arg.892",
+			"status": "pass",
+			"details": "arg 892 = 0.0000"
+		},
+		{
+			"name": "arg.893",
+			"status": "pass",
+			"details": "arg 893 = 0.0000"
+		},
+		{
+			"name": "arg.894",
+			"status": "pass",
+			"details": "arg 894 = 0.0000"
+		},
+		{
+			"name": "arg.895",
+			"status": "pass",
+			"details": "arg 895 = 0.0000"
+		},
+		{
+			"name": "arg.900",
+			"status": "pass",
+			"details": "arg 900 = 0.0000"
+		},
+		{
+			"name": "arg.901",
+			"status": "pass",
+			"details": "arg 901 = 0.0000"
+		},
+		{
+			"name": "arg.902",
+			"status": "pass",
+			"details": "arg 902 = 0.0000"
+		},
+		{
+			"name": "arg.903",
+			"status": "pass",
+			"details": "arg 903 = 0.0000"
+		},
+		{
+			"name": "arg.906",
+			"status": "pass",
+			"details": "arg 906 = 0.0000"
+		},
+		{
+			"name": "arg.907",
+			"status": "pass",
+			"details": "arg 907 = 0.2000"
+		},
+		{
+			"name": "arg.908",
+			"status": "pass",
+			"details": "arg 908 = 0.0000"
+		},
+		{
+			"name": "arg.909",
+			"status": "pass",
+			"details": "arg 909 = 1.0000"
+		},
+		{
+			"name": "arg.910",
+			"status": "pass",
+			"details": "arg 910 = 0.0000"
+		},
+		{
+			"name": "arg.911",
+			"status": "pass",
+			"details": "arg 911 = 0.0000"
+		},
+		{
+			"name": "arg.912",
+			"status": "pass",
+			"details": "arg 912 = 0.0000"
+		},
+		{
+			"name": "arg.913",
+			"status": "pass",
+			"details": "arg 913 = 0.0000"
+		},
+		{
+			"name": "arg.916",
+			"status": "pass",
+			"details": "arg 916 = 0.0000"
+		},
+		{
+			"name": "arg.917",
+			"status": "pass",
+			"details": "arg 917 = 0.2000"
+		},
+		{
+			"name": "arg.918",
+			"status": "pass",
+			"details": "arg 918 = 0.0000"
+		},
+		{
+			"name": "arg.919",
+			"status": "pass",
+			"details": "arg 919 = 1.0000"
+		},
+		{
+			"name": "arg.920",
+			"status": "pass",
+			"details": "arg 920 = 0.7140"
+		},
+		{
+			"name": "arg.921",
+			"status": "pass",
+			"details": "arg 921 = 0.0000"
+		},
+		{
+			"name": "arg.940",
+			"status": "pass",
+			"details": "arg 940 = 0.7120"
+		},
+		{
+			"name": "arg.941",
+			"status": "pass",
+			"details": "arg 941 = 0.0000"
+		},
+		{
+			"name": "arg.942",
+			"status": "pass",
+			"details": "arg 942 = 0.0000"
+		},
+		{
+			"name": "arg.943",
+			"status": "pass",
+			"details": "arg 943 = 0.0000"
+		},
+		{
+			"name": "arg.944",
+			"status": "pass",
+			"details": "arg 944 = 0.0000"
+		},
+		{
+			"name": "arg.946",
+			"status": "pass",
+			"details": "arg 946 = 0.0000"
+		},
+		{
+			"name": "arg.947",
+			"status": "pass",
+			"details": "arg 947 = 0.0000"
+		},
+		{
+			"name": "arg.948",
+			"status": "pass",
+			"details": "arg 948 = 0.0000"
+		},
+		{
+			"name": "arg.949",
+			"status": "pass",
+			"details": "arg 949 = 0.0000"
+		},
+		{
+			"name": "arg.950",
+			"status": "pass",
+			"details": "arg 950 = 0.0000"
+		},
+		{
+			"name": "arg.951",
+			"status": "pass",
+			"details": "arg 951 = 0.0000"
+		},
+		{
+			"name": "arg.952",
+			"status": "pass",
+			"details": "arg 952 = 0.0000"
+		},
+		{
+			"name": "arg.953",
+			"status": "pass",
+			"details": "arg 953 = 0.0000"
+		},
+		{
+			"name": "arg.956",
+			"status": "pass",
+			"details": "arg 956 = 1.0000"
+		},
+		{
+			"name": "arg.957",
+			"status": "pass",
+			"details": "arg 957 = 0.0000"
+		},
+		{
+			"name": "ind.17.parking_brake_lbl",
+			"status": "fail",
+			"details": "field \"parking_brake_lbl\" not found in indication 17 (fields: [])"
+		},
+		{
+			"name": "ind.17.txt_chan_name0",
+			"status": "fail",
+			"details": "field \"txt_chan_name0\" not found in indication 17 (fields: [])"
+		},
+		{
+			"name": "ind.17.txt_chan_name1",
+			"status": "fail",
+			"details": "field \"txt_chan_name1\" not found in indication 17 (fields: [])"
+		},
+		{
+			"name": "ind.17.txt_chan_name2",
+			"status": "fail",
+			"details": "field \"txt_chan_name2\" not found in indication 17 (fields: [])"
+		},
+		{
+			"name": "ind.17.txt_chan_name3",
+			"status": "fail",
+			"details": "field \"txt_chan_name3\" not found in indication 17 (fields: [])"
+		},
+		{
+			"name": "CMWS.CMWS_JETT_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.CPG_MasterZeroizeSwCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.CPG_UHF_GUARD_Btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.PLT_MasterZeroizeSwCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EMERGENCY_PANEL.PLT_UHF_GUARD_Btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.APU_StartBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_ApuFireBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_Eng1FireBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CPG_Eng2FireBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_ApuFireBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_Eng1FireBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.PLT_Eng2FireBtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

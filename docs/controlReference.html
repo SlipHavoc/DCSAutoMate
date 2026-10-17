@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DCSAutoMate Control Reference</title>
+<style>
+	:root {
+		color-scheme: light dark;
+		--border: #8884;
+		--muted: #888;
+		--highlight: #4a90e222;
+	}
+	body {
+		font-family: Segoe UI, Arial, sans-serif;
+		font-size: 13px;
+		margin: 0;
+	}
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 16px;
+		align-items: center;
+		padding: 8px 10px;
+		background: Canvas;
+		border-bottom: 1px solid var(--border);
+	}
+	header h1 {
+		font-size: 15px;
+		margin: 0;
+	}
+	#search {
+		width: 260px;
+	}
+	#status {
+		color: var(--muted);
+	}
+	table {
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%;
+	}
+	th, td {
+		text-align: left;
+		vertical-align: top;
+		padding: 3px 8px;
+		border-bottom: 1px solid var(--border);
+		overflow-wrap: break-word;
+	}
+	th {
+		position: sticky;
+		top: var(--headerHeight, 44px);
+		background: Canvas;
+	}
+	tr:hover td {
+		background: var(--highlight);
+	}
+	td.name {
+		font-family: Consolas, monospace;
+	}
+	td.details {
+		color: var(--muted);
+		font-size: 12px;
+	}
+	td.raw {
+		color: #d80;
+		cursor: help;
+	}
+	button.copy {
+		border: none;
+		background: none;
+		padding: 0 2px;
+		margin-left: 4px;
+		cursor: pointer;
+		color: var(--muted);
+		vertical-align: middle;
+	}
+	button.copy:hover {
+		color: CanvasText;
+	}
+	button.copy.copied {
+		color: #3a3;
+	}
+	button.copy svg {
+		width: 12px;
+		height: 12px;
+		display: block;
+	}
+	#message {
+		padding: 10px;
+	}
+</style>
+</head>
+<body>
+<header>
+	<h1>Control Reference</h1>
+	<label>Module <select id="module"></select></label>
+	<label>Device <select id="group"></select></label>
+	<input id="search" type="search" placeholder="Search name, description, arg, command..." autofocus>
+	<label><input id="showArgs" type="checkbox" checked> arg. reads</label>
+	<label><input id="showDisplays" type="checkbox"> ind. display fields</label>
+	<span id="status"></span>
+</header>
+<div id="message"></div>
+<table>
+	<colgroup>
+		<col style="width: 24%">
+		<col style="width: 22%">
+		<col style="width: 10%">
+		<col style="width: 13%">
+		<col style="width: 31%">
+	</colgroup>
+	<thead>
+		<tr><th>Name</th><th>Description</th><th>Type</th><th>Values</th><th>Details</th></tr>
+	</thead>
+	<tbody id="rows"></tbody>
+</table>
+<script>
+	window.controlReferenceData = {};
+</script>
+<script src="controlData/modules.js"></script>
+<script>
+	'use strict';
+	const maxRows = 2000;
+	const copyIcon = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M11 5V3.5A1.5 1.5 0 0 0 9.5 2h-6A1.5 1.5 0 0 0 2 3.5v6A1.5 1.5 0 0 0 3.5 11H5"/></svg>';
+	const rawNote = 'Raw command, use at your own risk: no known range, step or readback arg, so experiment to find the right values.  A good starting point is the value in the key or axis binding (the module\'s Input/<variant>/keyboard/default.lua and joystick/default.lua).';
+	const moduleSelect = document.getElementById('module');
+	const groupSelect = document.getElementById('group');
+	const searchInput = document.getElementById('search');
+	const showArgs = document.getElementById('showArgs');
+	const showDisplays = document.getElementById('showDisplays');
+	const statusText = document.getElementById('status');
+	const message = document.getElementById('message');
+	const tableBody = document.getElementById('rows');
+
+	function showMessage(text) {
+		message.textContent = text;
+		message.hidden = !text;
+	}
+
+	function storedSetting(name, fallback) {
+		try {
+			return localStorage.getItem(`controlReference.${name}`) ?? fallback;
+		}
+		catch (error) {
+			return fallback;
+		}
+	}
+
+	function storeSetting(name, value) {
+		try {
+			localStorage.setItem(`controlReference.${name}`, value);
+		}
+		catch (error) {
+			// Some browsers don't allow storage for pages opened from disk; the page still works, it just won't remember the choice.
+		}
+	}
+
+	async function copyText(text, button) {
+		try {
+			await navigator.clipboard.writeText(text);
+		}
+		catch (error) {
+			const textArea = document.createElement('textarea');
+			textArea.value = text;
+			document.body.appendChild(textArea);
+			textArea.select();
+			document.execCommand('copy');
+			textArea.remove();
+		}
+		button.classList.add('copied');
+		setTimeout(() => button.classList.remove('copied'), 800);
+	}
+
+	function cellWithCopy(className, text) {
+		const tableCell = cell(className, text);
+		if (text) {
+			const button = document.createElement('button');
+			button.className = 'copy';
+			button.title = 'Copy';
+			button.innerHTML = copyIcon;
+			button.dataset.copy = text;
+			tableCell.append(button);
+		}
+		return tableCell;
+	}
+
+	function cell(className, text) {
+		const tableCell = document.createElement('td');
+		tableCell.className = className;
+		tableCell.textContent = text;
+		return tableCell;
+	}
+
+	function groupOrder(group) {
+		if (group === 'arg') {
+			return [1, 0, group];
+		}
+		const indicator = group.match(/^ind\.(\d+)/);
+		return indicator ? [2, Number(indicator[1]), group] : [0, 0, group.toLowerCase()];
+	}
+
+	function compareGroups(a, b) {
+		const orderA = groupOrder(a);
+		const orderB = groupOrder(b);
+		for (let i = 0; i < orderA.length; i++) {
+			if (orderA[i] < orderB[i]) {
+				return -1;
+			}
+			else if (orderA[i] > orderB[i]) {
+				return 1;
+			}
+		}
+		return 0;
+	}
+
+	function fillGroups(rows) {
+		const counts = new Map();
+		for (const row of rows) {
+			counts.set(row.group, (counts.get(row.group) || 0) + 1);
+		}
+		groupSelect.replaceChildren(new Option(`All (${rows.length})`, ''));
+		for (const group of [...counts.keys()].sort(compareGroups)) {
+			groupSelect.append(new Option(`${group} (${counts.get(group)})`, group));
+		}
+	}
+
+	function currentRows() {
+		return window.controlReferenceData[moduleSelect.value] || [];
+	}
+
+	function render() {
+		const rows = currentRows();
+		const group = groupSelect.value;
+		const words = searchInput.value.toLowerCase().split(/\s+/).filter(word => word);
+		const matches = rows.filter(row => {
+			if (group) {
+				if (row.group !== group) {
+					return false;
+				}
+			}
+			else if ((row.kind === 'arg' && !showArgs.checked) || (row.kind === 'ind' && !showDisplays.checked)) {
+				return false;
+			}
+			if (!words.length) {
+				return true;
+			}
+			row.searchText ??= `${row.name} ${row.description} ${row.type} ${row.values} ${row.details}`.toLowerCase();
+			return words.every(word => row.searchText.includes(word));
+		});
+		const fragment = document.createDocumentFragment();
+		for (const row of matches.slice(0, maxRows)) {
+			const tableRow = document.createElement('tr');
+			const typeCell = cell('type', row.type);
+			if (row.type === 'raw') {
+				typeCell.classList.add('raw');
+				typeCell.title = rawNote;
+			}
+			tableRow.append(cellWithCopy('name', row.name), cellWithCopy('description', row.description), typeCell, cell('values', row.values), cell('details', row.details));
+			fragment.append(tableRow);
+		}
+		tableBody.replaceChildren(fragment);
+		statusText.textContent = matches.length > maxRows ? `Showing the first ${maxRows} of ${matches.length} matches; search or pick a device to narrow it down.` : `${matches.length} of ${rows.length} controls`;
+	}
+
+	function loadModule(moduleName) {
+		storeSetting('module', moduleName);
+		if (window.controlReferenceData[moduleName]) {
+			fillGroups(currentRows());
+			render();
+			return;
+		}
+		tableBody.replaceChildren();
+		statusText.textContent = 'Loading...';
+		const script = document.createElement('script');
+		script.src = `controlData/${encodeURIComponent(moduleName)}.js`;
+		script.onload = () => {
+			showMessage('');
+			if (moduleSelect.value === moduleName) {
+				fillGroups(currentRows());
+				render();
+			}
+		};
+		script.onerror = () => {
+			statusText.textContent = '';
+			showMessage(`Couldn't load the data for ${moduleName}.  Start DCSAutoMate to rebuild it.`);
+		};
+		document.head.append(script);
+	}
+
+	function start() {
+		const modules = window.controlReferenceModules;
+		if (!modules) {
+			showMessage('No control data yet.  Start DCSAutoMate (or run "python -m utils.controlReference") to build it.');
+			return;
+		}
+		showMessage('');
+		for (const module of modules) {
+			moduleSelect.append(new Option(`${module.name} (${module.count})`, module.name));
+		}
+		const savedModule = storedSetting('module', '');
+		if (modules.some(module => module.name === savedModule)) {
+			moduleSelect.value = savedModule;
+		}
+		showArgs.checked = storedSetting('showArgs', 'true') === 'true';
+		showDisplays.checked = storedSetting('showDisplays', 'false') === 'true';
+		document.documentElement.style.setProperty('--headerHeight', `${document.querySelector('header').offsetHeight}px`);
+		loadModule(moduleSelect.value);
+	}
+
+	let searchTimer = null;
+	searchInput.addEventListener('input', () => {
+		clearTimeout(searchTimer);
+		searchTimer = setTimeout(render, 150);
+	});
+	moduleSelect.addEventListener('change', () => loadModule(moduleSelect.value));
+	groupSelect.addEventListener('change', render);
+	for (const checkbox of [showArgs, showDisplays]) {
+		checkbox.addEventListener('change', () => {
+			storeSetting(checkbox.id, checkbox.checked);
+			render();
+		});
+	}
+	tableBody.addEventListener('click', event => {
+		const button = event.target.closest('button.copy');
+		if (button) {
+			copyText(button.dataset.copy, button);
+		}
+	});
+	window.addEventListener('resize', () => {
+		document.documentElement.style.setProperty('--headerHeight', `${document.querySelector('header').offsetHeight}px`);
+	});
+	start();
+</script>
+</body>
+</html>

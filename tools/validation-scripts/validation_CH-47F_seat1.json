@@ -1,0 +1,904 @@
+{
+	"module": "CH-47Fbl1",
+	"timestamp": "2026-05-09T21:59:49",
+	"delay": 0.08,
+	"elapsed": 94.6,
+	"counts": {
+		"pass": 66,
+		"fail": 112,
+		"skip": 0,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_CALL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_HOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_ICS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N1_arg638",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N1_arg639",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N2_arg640",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N2_arg641",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N3_arg642",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N3_arg643",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N4_arg644",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_N4_arg645",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R1_arg624",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R1_arg625",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R2_arg626",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R2_arg627",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R3_arg628",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R3_arg629",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R4_arg630",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R4_arg631",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R5_arg632",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R5_arg633",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R6_arg634",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R6_arg635",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R7_arg636",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_R7_arg637",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_TX",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_VOL",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "COMM_PANEL_LEFT.ICS2_VOX",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXTERNAL_CARGO_EQUIPMENT.C2_HOOKREL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_ACK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_ACT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_CDREL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_CMDS",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_CRSR_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_CRSR_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_FDREL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_TRIM_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_TRIM_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.C2_XMIT",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.MAIN_MCAUTION_L",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_R1",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S1_H",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S1_V",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S1_Z",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S2_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S2_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S3_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S3_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.MFCU2_S6",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_BRAKE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_DAFCSMODE_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_DAFCSMODE_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_FRQ_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_FRQ_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_GA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_HUDMODE_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_HUDMODE_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_IRWHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_MARK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_SRCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_SRCH_H",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_SRCH_V",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GRIPS.T2_UPDN",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "PDP1.1A06",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A07",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A08",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A09",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A10",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A11",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A12",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A13",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A14",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A15",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A16",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A17",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A18",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A19",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A20",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A21",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A22",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A23",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A24",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A26",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A29",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1A31",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B01",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B02",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B03",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B04",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B05",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B06",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B07",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B08",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B09",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B10",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B11",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1B12",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1B13",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B14",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B15",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B16",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B17",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B18",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B19",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B20",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B21",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B22",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B26",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B29",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B31",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B32",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1B33",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C08",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1C09",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1C10",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C11",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C12",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1C13",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C14",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C15",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C16",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C17",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C18",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C19",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C20",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C21",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C22",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C26",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C29",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C31",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1C32",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D04",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D05",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D06",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D07",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D08",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D09",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D10",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D11",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D12",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D13",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D14",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D15",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D16",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D17",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D18",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D19",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D20",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1D21",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1D22",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1D23",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D24",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D26",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1D29",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E04",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E05",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E06",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E07",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1E08",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.8000; pos 1: expected 0.9000, got 0.8000"
+		},
+		{
+			"name": "PDP1.1E14",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E15",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E16",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E17",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E18",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E19",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E20",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E22",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E23",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E24",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E25",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E26",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E27",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E29",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E32",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "PDP1.1E33",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.6000; pos 1: expected 0.9000, got 1.0000"
+		},
+		{
+			"name": "EXTERNAL_CARGO_EQUIPMENT.C2_HOOKREL_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}

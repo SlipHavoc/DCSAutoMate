@@ -1,0 +1,4882 @@
+{
+	"controls": {
+		"A4_GUNSIGHT.Bomb_wind_control": {
+			"arg": 727,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "Bomb-Target Wind Control Knob",
+			"deviceId": 22,
+			"elementName": "Bomb_wind_control",
+			"type": "continuous"
+		},
+		"A4_GUNSIGHT.Button_18": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Manual Ranging Control (Throttle Twist Grip) - CCW/Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3018,
+			"description": "A-4 Sight Manual Ranging Control (Throttle Twist Grip) - CCW/Increase",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_19": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Manual Ranging Control (Throttle Twist Grip) - CW/Decrease",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3019,
+			"description": "A-4 Sight Manual Ranging Control (Throttle Twist Grip) - CW/Decrease",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_20": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Manual Ranging Control (Throttle Twist Grip) - Return to CCW spring-loaded position",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3020,
+			"description": "A-4 Sight Manual Ranging Control (Throttle Twist Grip) - Return to CCW spring-loaded position",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_21": {
+			"bindings": [
+				{
+					"name": "Bomb-Target Wind Control Knob - CCW",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Bomb-Target Wind Control Knob - CW",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3021,
+			"description": "Bomb-Target Wind Control Knob - CCW (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_22": {
+			"bindings": [
+				{
+					"name": "Variable Sight Selector Unit - Target Speed Switch - CCW/Left",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Variable Sight Selector Unit - Target Speed Switch - CW/Right",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3022,
+			"description": "Variable Sight Selector Unit - Target Speed Switch - CCW/Left (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_23": {
+			"bindings": [
+				{
+					"name": "Variable Sight Selector Unit - Rocket Depression Angle Selector - CCW/Decrease",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Variable Sight Selector Unit - Rocket Depression Angle Selector - CW/Increase",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3023,
+			"description": "Variable Sight Selector Unit - Rocket Depression Angle Selector - CCW/Decrease (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_24": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Filament Selector Switch - SECONDARY/PRIMARY",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3024,
+			"description": "A-4 Sight Filament Selector Switch - SECONDARY/PRIMARY",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_28": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Bomb-Target Wind Control Knob"
+				}
+			],
+			"commandId": 3028,
+			"description": "Bomb-Target Wind Control Knob",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_5": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Reticle Dimmer Control - CCW/DIM",
+					"valuePressed": -0.2
+				},
+				{
+					"name": "A-4 Sight Reticle Dimmer Control - CW/BRIGHT",
+					"valuePressed": 0.2
+				}
+			],
+			"commandId": 3005,
+			"description": "A-4 Sight Reticle Dimmer Control - CCW/DIM (+1 more)",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Button_8": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "A-4 Sight Reticle Dimmer Control"
+				}
+			],
+			"commandId": 3008,
+			"description": "A-4 Sight Reticle Dimmer Control",
+			"deviceId": 22,
+			"type": "raw"
+		},
+		"A4_GUNSIGHT.Grip_Rotation": {
+			"arg": 210,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3026,
+			"description": "A-4 Sight Rotating Grip - Mouse Wheel for manual ranging, Right Click for return to CCW spring-loaded position",
+			"deviceId": 22,
+			"elementName": "Grip_Rotation",
+			"type": "continuous"
+		},
+		"A4_GUNSIGHT.Radar_Target_Selector_Button": {
+			"arg": 208,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "A-4 Sight Radar Target Selector Button",
+			"deviceId": 22,
+			"elementName": "Radar_Target_Selector_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"A4_GUNSIGHT.Rocket-Gun-Bomb_selector": {
+			"arg": 721,
+			"argLim": [
+				0.0,
+				0.2
+			],
+			"commandId": 3011,
+			"description": "Variable Sight Selector Unit - Sight Function Selector Lever, ROCKET/GUN/BOMB",
+			"deviceId": 22,
+			"elementName": "Rocket-Gun-Bomb_selector",
+			"positions": 3,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"A4_GUNSIGHT.Rocket_depression_angle_pointer": {
+			"arg": 722,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Variable Sight Selector Unit - Rocket Depression Angle Selector",
+			"deviceId": 22,
+			"elementName": "Rocket_depression_angle_pointer",
+			"type": "continuous"
+		},
+		"A4_GUNSIGHT.SIGHT_FILAMENT_SWITCH": {
+			"arg": 642,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "A-4 Sight Filament Selector Switch, SECONDARY/PRIMARY",
+			"deviceId": 22,
+			"elementName": "SIGHT_FILAMENT_SWITCH",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"A4_GUNSIGHT.Sight_Electrical_Caging_Button": {
+			"arg": 212,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3025,
+			"description": "A-4 Sight Electrical Caging Button",
+			"deviceId": 22,
+			"elementName": "Sight_Electrical_Caging_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"A4_GUNSIGHT.Sight_mechanical_caging_lever": {
+			"arg": 755,
+			"description": "A-4 Sight Mechanical Caging Lever, CAGE/UNCAGE",
+			"elementName": "Sight_mechanical_caging_lever",
+			"positionMap": [
+				{
+					"commandId": 3017,
+					"deviceId": 22,
+					"value": 0.0
+				},
+				{
+					"commandId": 3016,
+					"deviceId": 22,
+					"value": 0.001
+				},
+				{
+					"commandId": 3017,
+					"deviceId": 22,
+					"value": 1.0
+				},
+				{
+					"commandId": 3016,
+					"deviceId": 22,
+					"value": 0.999
+				}
+			],
+			"positions": 4,
+			"type": "discrete"
+		},
+		"A4_GUNSIGHT.Sight_reticle_dimmer_control_knob": {
+			"arg": 734,
+			"argLim": [
+				0.0,
+				0.74
+			],
+			"commandId": 3003,
+			"description": "A-4 Sight Reticle Dimmer Control",
+			"deviceId": 22,
+			"elementName": "Sight_reticle_dimmer_control_knob",
+			"type": "continuous"
+		},
+		"A4_GUNSIGHT.Target_speed_switch": {
+			"arg": 720,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Variable Sight Selector Unit - Target Speed Switch, TR/HI/LO",
+			"deviceId": 22,
+			"elementName": "Target_speed_switch",
+			"positions": 3,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"A4_GUNSIGHT.Wing_span_adjustment_knob": {
+			"arg": 716,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "A-4 Sight Wing Span Adjustment Knob",
+			"deviceId": 22,
+			"elementName": "Wing_span_adjustment_knob",
+			"type": "continuous"
+		},
+		"ACCELEROMETER.Accelerometer_button": {
+			"arg": 1004,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Accelerometer Reset Button - Push to reset",
+			"deviceId": 12,
+			"elementName": "Accelerometer_button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AIHelper.AIHelperIgnorePrompt": {
+			"bindings": [
+				{
+					"name": "Ignore Current AI Helper Prompt",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "Ignore Current AI Helper Prompt",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"AIHelper.AIHelperOnOff": {
+			"bindings": [
+				{
+					"name": "Toggle AI Helper - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3001,
+			"description": "Toggle AI Helper - ON/OFF",
+			"deviceId": 34,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_275PSI_5PSI_Sw": {
+			"arg": 651,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Cockpit Pressure Schedule Selector Switch, 5 PSI/2.75 PSI",
+			"deviceId": 16,
+			"elementName": "Cockpit_Pressure_Schedule_Selector_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_275PSI_5PSI_Sw_EXT": {
+			"bindings": [
+				{
+					"name": "Cockpit Pressure Schedule Selector Switch - 2.75 PSI/5 PSI",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "Cockpit Pressure Schedule Selector Switch - 2.75 PSI/5 PSI",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_AirOutletSelectorLever": {
+			"arg": 741,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Air Outlet Selector Lever, FLOOR/BOTH/DEFROST",
+			"deviceId": 16,
+			"elementName": "Air_Outlet_Selector_Lever",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_AirOutletSelectorLever_EXT": {
+			"bindings": [
+				{
+					"name": "Air Outlet Selector Lever - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Air Outlet Selector Lever - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3018,
+			"description": "Air Outlet Selector Lever - Down (+1 more)",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_EngineAntiIceScreen": {
+			"arg": 645,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Engine Anti-Ice & Screen Switch, EXTEND/RET./ANTI-ICE",
+			"deviceId": 16,
+			"elementName": "ANTI-ICE_Switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_EngineAntiIceScreen_EXT": {
+			"bindings": [
+				{
+					"name": "Engine Anti-Ice & Screen Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Engine Anti-Ice & Screen Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3010,
+			"description": "Engine Anti-Ice & Screen Switch - Down (+1 more)",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_HeaterReostat": {
+			"arg": 740,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Cockpit Air Temperature Control Rheostat",
+			"deviceId": 16,
+			"elementName": "Cockpit_Air_Temperature_Control_Rheostat",
+			"type": "continuous"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_HeaterReostat_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Cockpit Air Temperature Control Rheostat"
+				}
+			],
+			"commandId": 3021,
+			"description": "Cockpit Air Temperature Control Rheostat",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_HeaterReostat_EXT": {
+			"bindings": [
+				{
+					"name": "Cockpit Air Temperature Control Rheostat - CCW/COLD",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Cockpit Air Temperature Control Rheostat - CW/HOT",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3015,
+			"description": "Cockpit Air Temperature Control Rheostat - CCW/COLD (+1 more)",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_PitotHeater_Sw": {
+			"arg": 646,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Pitot Heater Switch, ON/OFF",
+			"deviceId": 16,
+			"elementName": "PITOT_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_PitotHeater_Sw_EXT": {
+			"bindings": [
+				{
+					"name": "Pitot Heater Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "Pitot Heater Switch - ON/OFF",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_PressRAM_Sw": {
+			"arg": 650,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Cockpit Pressure Control Switch, PRESS/RAM",
+			"deviceId": 16,
+			"elementName": "Cockpit_Pressure_Control_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_PressRAM_Sw_EXT": {
+			"bindings": [
+				{
+					"name": "Cockpit Pressure Control Switch - PRESS/RAM",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "Cockpit Pressure Control Switch - PRESS/RAM",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_TemperatureControl": {
+			"arg": 737,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3005,
+			"description": "Cockpit Air Temperature Control Switch, AUTO/OFF/HOT/COLD",
+			"deviceId": 16,
+			"elementName": "Cockpit_Air_Temperature_Control_Switch",
+			"positions": 6,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_TemperatureControlSwCover": {
+			"arg": 736,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Cockpit Air Temperature Control Switch Cover",
+			"deviceId": 16,
+			"elementName": "Cockpit_Air_Temperature_Control_Switch_Cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_TemperatureControlSwCover_EXT": {
+			"bindings": [
+				{
+					"name": "Cockpit Air Temperature Control Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3017,
+			"description": "Cockpit Air Temperature Control Switch Cover - OPEN/CLOSE",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_TemperatureControl_EXT": {
+			"bindings": [
+				{
+					"name": "Cockpit Air Temperature Control Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Cockpit Air Temperature Control Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3016,
+			"description": "Cockpit Air Temperature Control Switch - CCW (+1 more)",
+			"deviceId": 16,
+			"type": "raw"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_WindshieldAntiIceOverheatLmpTest": {
+			"arg": 691,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Windshield Anti-Ice Overheat Warning Light (Push to test)",
+			"deviceId": 16,
+			"elementName": "Windshield_anti-icing_overheat_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AIR_INTERFACE.F86_CockpitDeviceCommand_WindshieldAntiIcingLever": {
+			"arg": 202,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Windshield Anti-Icing Lever, ON/OFF",
+			"deviceId": 16,
+			"elementName": "Windshield_Anti-icing_Lever",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APG_30.Button_2": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Radar Range Sweep Rheostat - CCW/Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "A-4 Sight Radar Range Sweep Rheostat - CW/Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "A-4 Sight Radar Range Sweep Rheostat - CCW/Decrease (+1 more)",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"AN_APG_30.Button_3": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "A-4 Sight Radar Range Sweep Rheostat"
+				}
+			],
+			"commandId": 3003,
+			"description": "A-4 Sight Radar Range Sweep Rheostat",
+			"deviceId": 21,
+			"type": "raw"
+		},
+		"AN_APG_30.Radar_range_sweep": {
+			"arg": 715,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "A-4 Sight Radar Range Sweep Rheostat",
+			"deviceId": 21,
+			"elementName": "Radar_range_sweep",
+			"type": "continuous"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DestructSw": {
+			"arg": 809,
+			"argLim": [
+				0.0,
+				-1.0
+			],
+			"commandId": 3004,
+			"description": "AN/APX-6 IFF Destruct Switch, OFF/ON",
+			"deviceId": 29,
+			"elementName": "IFF_Destruct_Switch",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DestructSwCover": {
+			"arg": 808,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "AN/APX-6 IFF Destruct Switch Cover",
+			"deviceId": 29,
+			"elementName": "IFF_Destruct_Switch_Cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DestructSwCover_EXT": {
+			"bindings": [
+				{
+					"name": "AN/APX-6 IFF Destruct Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "AN/APX-6 IFF Destruct Switch Cover - OPEN/CLOSE",
+			"deviceId": 29,
+			"type": "raw"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DialStopBtn": {
+			"arg": 203,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "AN/APX-6 IFF Dial Stop Button",
+			"deviceId": 29,
+			"elementName": "IFF_Dial_Stop_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_DialStopBtn_EXT": {
+			"bindings": [
+				{
+					"name": "AN/APX-6 IFF Dial Stop Button - PRESSED/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3011,
+			"description": "AN/APX-6 IFF Dial Stop Button - PRESSED/OFF",
+			"deviceId": 29,
+			"type": "raw"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode": {
+			"arg": 810,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3001,
+			"description": "AN/APX-6 IFF Master Switch, EMERGENCY/NORM/LOW/STDBY/OFF",
+			"deviceId": 29,
+			"elementName": "IFF_Master_Mode_Selector_Knob",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode2Sw": {
+			"arg": 659,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "AN/APX-6 IFF Mode 2 Switch, MODE 2/OUT/I/P",
+			"deviceId": 29,
+			"elementName": "IFF_PANEL_MODE2",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode2Sw_EXT": {
+			"bindings": [
+				{
+					"name": "AN/APX-6 IFF Mode 2 Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/APX-6 IFF Mode 2 Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "AN/APX-6 IFF Mode 2 Switch - Down (+1 more)",
+			"deviceId": 29,
+			"type": "raw"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode3Sw": {
+			"arg": 660,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "AN/APX-6 IFF Mode 3 Switch, MODE 3/OUT",
+			"deviceId": 29,
+			"elementName": "IFF_PANEL_MODE3",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode3Sw_EXT": {
+			"bindings": [
+				{
+					"name": "AN/APX-6 IFF Mode 3 Switch - MODE 3/OUT",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "AN/APX-6 IFF Mode 3 Switch - MODE 3/OUT",
+			"deviceId": 29,
+			"type": "raw"
+		},
+		"AN_APX6_IFF.F86_CockpitDeviceCommand_APX6_Mode_EXT": {
+			"bindings": [
+				{
+					"name": "AN/APX-6 IFF Master Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/APX-6 IFF Master Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "AN/APX-6 IFF Master Switch - CCW (+1 more)",
+			"deviceId": 29,
+			"type": "raw"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_MicrophoneBtn": {
+			"arg": 213,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Microphone Button",
+			"deviceId": 26,
+			"elementName": "Microphone_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Mode": {
+			"arg": 805,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3003,
+			"description": "AN/ARC-27 UHF Power Switch, OFF/T/R/T/R + G REC/ADF",
+			"deviceId": 26,
+			"elementName": "UHF_Power_Switch",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Mode_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARC-27 UHF Power Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/ARC-27 UHF Power Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "AN/ARC-27 UHF Power Switch - CCW (+1 more)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_PresetChannel": {
+			"arg": 807,
+			"argLim": [
+				0.0,
+				0.18
+			],
+			"commandId": 3001,
+			"description": "AN/ARC-27 UHF Preset Channel Selector",
+			"deviceId": 26,
+			"elementName": "UHF_Preset_Channel_Selector",
+			"positions": 19,
+			"step": 0.01,
+			"type": "discrete"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_PresetChannel_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARC-27 UHF Preset Channel Selector - CCW/Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/ARC-27 UHF Preset Channel Selector - CW/Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "AN/ARC-27 UHF Preset Channel Selector - CCW/Decrease (+1 more)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Volume": {
+			"arg": 806,
+			"argLim": [
+				0.1,
+				0.9
+			],
+			"commandId": 3002,
+			"description": "AN/ARC-27 UHF Audio Volume Knob",
+			"deviceId": 26,
+			"elementName": "UHF_Volume_Knob",
+			"type": "continuous"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Volume_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/ARC-27 UHF Audio Volume Knob"
+				}
+			],
+			"commandId": 3008,
+			"description": "AN/ARC-27 UHF Audio Volume Knob",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"AN_ARC_27_COMMAND_SET.F86_CockpitDeviceCommand_ARC27_Volume_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARC-27 UHF Audio Volume Knob - CCW/Down",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "AN/ARC-27 UHF Audio Volume Knob - CW/Up",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3006,
+			"description": "AN/ARC-27 UHF Audio Volume Knob - CCW/Down (+1 more)",
+			"deviceId": 26,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_BAND_SELECT": {
+			"arg": 803,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3002,
+			"description": "AN/ARN-6 Frequency Band Switch",
+			"deviceId": 27,
+			"elementName": "Bandswitch",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_BAND_SELECT_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 Frequency Band Switch - CCW/Decrease",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/ARN-6 Frequency Band Switch - CW/Increase",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "AN/ARN-6 Frequency Band Switch - CCW/Decrease (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_BFO_SWITCH": {
+			"arg": 658,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "AN/ARN-6 CW-VOICE Switch, CW/VOICE",
+			"deviceId": 27,
+			"elementName": "RADIO_COMPASS_PANEL_CW / VOICE",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_BFO_SWITCH_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 CW-VOICE Switch - CW/VOICE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "AN/ARN-6 CW-VOICE Switch - CW/VOICE",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_GAIN_CONTROL": {
+			"arg": 802,
+			"argLim": [
+				0.1,
+				0.9
+			],
+			"commandId": 3004,
+			"description": "AN/ARN-6 Audio Volume Control",
+			"deviceId": 27,
+			"elementName": "VOLUME_CONTROL",
+			"type": "continuous"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_GAIN_CONTROL_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "AN/ARN-6 Audio Volume Control"
+				}
+			],
+			"commandId": 3016,
+			"description": "AN/ARN-6 Audio Volume Control",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_GAIN_CONTROL_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 Audio Volume Control - Down",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "AN/ARN-6 Audio Volume Control - Up",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3011,
+			"description": "AN/ARN-6 Audio Volume Control - Down (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_LIGHT_SW": {
+			"arg": 657,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "AN/ARN-6 Scale Light Switch, HI/OFF/LO",
+			"deviceId": 27,
+			"elementName": "RADIO_COMPASS_PANEL_LIGHTS",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_LIGHT_SW_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 Scale Light Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/ARN-6 Scale Light Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3015,
+			"description": "AN/ARN-6 Scale Light Switch - Down (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_LOOP_LR_SWITCH": {
+			"arg": 666,
+			"description": "AN/ARN-6 LOOP L-R Switch",
+			"elementName": "LOOP L-R_Switch",
+			"positionMap": [
+				{
+					"commandId": 3005,
+					"deviceId": 27,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3005,
+					"deviceId": 27,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_MODE_SELECT": {
+			"arg": 667,
+			"argLim": [
+				0.0,
+				0.4
+			],
+			"commandId": 3001,
+			"description": "AN/ARN-6 Function Selector Switch, OFF/COMP/ANT./LOOP/CONT.",
+			"deviceId": 27,
+			"elementName": "LOOP-ANT-COMP-OFF_Switch",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_MODE_SELECT_ITER": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 Function Selector Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "AN/ARN-6 Function Selector Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "AN/ARN-6 Function Selector Switch - CCW (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_SCALE_POS": {
+			"arg": 826,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "AN/ARN-6 East/West Variation Knob",
+			"deviceId": 27,
+			"elementName": "Rotating_compass_cart_Helper",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_SCALE_POS_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 East/West Variation Knob - CCW/East",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "AN/ARN-6 East/West Variation Knob - CW/West",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3009,
+			"description": "AN/ARN-6 East/West Variation Knob - CCW/East (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_TUNE_FREQUENCY": {
+			"arg": 801,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "AN/ARN-6 Tuning Crank",
+			"deviceId": 27,
+			"elementName": "TUNING_CONTROL",
+			"indicatorArgLim": [
+				0.0,
+				0.2
+			],
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"AN_ARN_6_RADIO_COMPASS.ARN6_TUNE_FREQUENCY_EXT": {
+			"bindings": [
+				{
+					"name": "AN/ARN-6 Tuning Crank - CCW/Decrease Frequency",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "AN/ARN-6 Tuning Crank - CW/Increase Frequency",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3010,
+			"description": "AN/ARN-6 Tuning Crank - CCW/Decrease Frequency (+1 more)",
+			"deviceId": 27,
+			"type": "raw"
+		},
+		"ATTITUDE_INDICATOR.F86_CockpitDeviceCommand_Cage": {
+			"arg": 714,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "J-8 Attitude Indicator Cage Knob - Pull to cage",
+			"deviceId": 24,
+			"elementName": "PULL_TO_CAGE",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ATTITUDE_INDICATOR.F86_CockpitDeviceCommand_PitchTrim": {
+			"arg": 200,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "J-8 Attitude Indicator Pitch Trim Knob",
+			"deviceId": 24,
+			"elementName": "PITCH_ TRIM_ KNOB",
+			"type": "continuous"
+		},
+		"ATTITUDE_INDICATOR.F86_CockpitDeviceCommand_PitchTrim_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "J-8 Attitude Indicator Pitch Trim Knob"
+				}
+			],
+			"commandId": 3004,
+			"description": "J-8 Attitude Indicator Pitch Trim Knob",
+			"deviceId": 24,
+			"type": "raw"
+		},
+		"ATTITUDE_INDICATOR.F86_CockpitDeviceCommand_PitchTrim_EXT": {
+			"bindings": [
+				{
+					"name": "J-8 Attitude Indicator Pitch Trim Knob - CCW/Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "J-8 Attitude Indicator Pitch Trim Knob - CW/Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "J-8 Attitude Indicator Pitch Trim Knob - CCW/Decrease (+1 more)",
+			"deviceId": 24,
+			"type": "raw"
+		},
+		"BARO_ALTIMETER.Altimeter_Pressure": {
+			"arg": 218,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Altimeter reference pressure adjusting knob",
+			"deviceId": 7,
+			"elementName": "Altimeter_Pressure",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"BARO_ALTIMETER.Button_2": {
+			"bindings": [
+				{
+					"name": "Barometric Pressure QFE Knob - CCW/Decrease",
+					"valuePressed": -0.2
+				},
+				{
+					"name": "Barometric Pressure QFE Knob - CW/Increase",
+					"valuePressed": 0.2
+				}
+			],
+			"commandId": 3002,
+			"description": "Barometric Pressure QFE Knob - CCW/Decrease (+1 more)",
+			"deviceId": 7,
+			"type": "raw"
+		},
+		"CLOCK.Clock_button_1_arg227": {
+			"arg": 227,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Set Clock Knob",
+			"deviceId": 10,
+			"elementName": "Clock_button_1",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CLOCK.Clock_button_1_arg228": {
+			"arg": 228,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Set Clock Knob",
+			"deviceId": 10,
+			"elementName": "Clock_button_1",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"CLOCK.Clock_button_2": {
+			"arg": 831,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Elapsed Time Mechanism Button",
+			"deviceId": 10,
+			"elementName": "Clock_button_2",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CanopyAlternateEmergencyJettisonHandle": {
+			"arg": 817,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Canopy Alternate Emergency Jettison Handle, IN/OUT",
+			"deviceId": 25,
+			"elementName": "Canopy_Alternate_Emergency_Jettison_Handle",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CanopyAlternateEmergencyJettisonHandle_EXT": {
+			"bindings": [
+				{
+					"name": "Canopy Alternate Emergency Jettison Handle - PULL/PUSH",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "Canopy Alternate Emergency Jettison Handle - PULL/PUSH",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CanopyDeclutchHandle": {
+			"arg": 816,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Canopy Declutch Handle, IN/OUT",
+			"deviceId": 25,
+			"elementName": "Canopy_declutch_handle",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CanopyDeclutchHandle_EXT": {
+			"bindings": [
+				{
+					"name": "Canopy Declutch Handle - PULL/PUSH",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Canopy Declutch Handle - PULL/PUSH",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CockpitCanopyControlSw": {
+			"arg": 718,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3001,
+			"description": "Canopy Switch, OPEN/OFF/CLOSE",
+			"deviceId": 25,
+			"elementName": "Cockpit_Switch_ON-OFF",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_CockpitCanopyControlSw_EXT": {
+			"bindings": [
+				{
+					"name": "Canopy Switch - CLOSE",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Canopy Switch - OFF",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Canopy Switch - OPEN",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3015,
+			"description": "Canopy Switch - CLOSE (+2 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandleCover": {
+			"arg": 220,
+			"argLim": [
+				0.0,
+				0.83
+			],
+			"commandId": 3016,
+			"description": "Emergency Jettison Handle Cover, OPEN/CLOSE",
+			"deviceId": 25,
+			"elementName": "Emergency_Jettison_Cover",
+			"positions": 2,
+			"step": 0.83,
+			"type": "discrete"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandleCover_EXT": {
+			"bindings": [
+				{
+					"name": "Emergency Jettison Handle Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3017,
+			"description": "Emergency Jettison Handle Cover - OPEN/CLOSE",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandle_EXT": {
+			"bindings": [
+				{
+					"name": "Emergency Jettison Handle (All) - PULL",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Emergency Jettison Handle (All) - PUSH",
+					"valueDown": 0.0
+				}
+			],
+			"commandId": 3013,
+			"description": "Emergency Jettison Handle (All) - PULL (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandle_OnlyOutbdTanks": {
+			"arg": 818,
+			"description": "Emergency Jettison Handle, IN/RELEASE ALL(LMB)/RELEASE OUTBD ONLY(RMB)",
+			"elementName": "Emergency_Jettison_Handle",
+			"indicatorArgLim": [
+				0.0,
+				1.0
+			],
+			"positionMap": [
+				{
+					"commandId": 3018,
+					"deviceId": 25,
+					"value": 0.0
+				},
+				null,
+				{
+					"commandId": 3008,
+					"deviceId": 25,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_EmergencyJettisonHandle_OnlyOutbdTanks_EXT": {
+			"bindings": [
+				{
+					"name": "Emergency Jettison Handle (Only Outbd Tanks) - PUSH-ROTATE CCW",
+					"valueDown": 0.0
+				},
+				{
+					"name": "Emergency Jettison Handle (Only Outbd Tanks) - ROTATE CW-PULL",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3019,
+			"description": "Emergency Jettison Handle (Only Outbd Tanks) - PUSH-ROTATE CCW (+1 more)",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"COCKPIT_MECHANICS.F86_CockpitDeviceCommand_ManualCanopyJettison": {
+			"bindings": [
+				{
+					"name": "Manual Canopy Jettison",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3011,
+			"description": "Manual Canopy Jettison",
+			"deviceId": 25,
+			"type": "raw"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_EngineStart": {
+			"bindings": [
+				{
+					"name": "Throttle - Start Engine",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3002,
+			"description": "Throttle - Start Engine",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_EngineStop": {
+			"bindings": [
+				{
+					"name": "Throttle - Stop Engine",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Throttle - Stop Engine",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_FlapsHandle": {
+			"arg": 735,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Wing Flaps Handle",
+			"deviceId": 13,
+			"elementName": "Wing_Flap_Lever",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_LatAltTrim": {
+			"arg": 649,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3008,
+			"description": "Lateral Alternate Trim Switch - Left mouse button for LEFT/OFF, Right mouse button for RIGHT/OFF, Mouse wheel for NORMAL/OFF",
+			"deviceId": 13,
+			"elementName": "Lateral_Alternate_Trim_Switch",
+			"positions": 2,
+			"step": 0.3,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_LongAltTrim": {
+			"arg": 739,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3009,
+			"description": "Longitudinal Alternate Trim Switch - Mouse wheel for NORMAL GRIP CONT/OFF, Left mouse button for NOSE UP/OFF, Right mouse button for NOSE DOWN/OFF",
+			"deviceId": 13,
+			"elementName": "Longitudinal_Alternate_Trim_Switch",
+			"positions": 2,
+			"step": 0.5,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_LongAltTrimSwCover": {
+			"arg": 738,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Longitudinal Alternate Trim Switch Cover",
+			"deviceId": 13,
+			"elementName": "Longitudinal_Alternate_Trim_Switch_Cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_LongAltTrimSwCover_EXT": {
+			"bindings": [
+				{
+					"name": "Longitudinal Alternate Trim Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3016,
+			"description": "Longitudinal Alternate Trim Switch Cover - OPEN/CLOSE",
+			"deviceId": 13,
+			"type": "raw"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_RudderTrim": {
+			"arg": 648,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Rudder Trim Switch, LEFT/OFF/RIGHT",
+			"deviceId": 13,
+			"elementName": "Rudder_Trim_Switch",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_TakeOffPosIndTest": {
+			"arg": 683,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Take-off (Trim) Position Indicator Light (Push to test)",
+			"deviceId": 13,
+			"elementName": "Take-off_Position_Indicator_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimDown": {
+			"arg": 204,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3007,
+			"description": "Normal Trim Switch, NOSE DOWN/OFF",
+			"deviceId": 13,
+			"elementName": "Trim_Switch_Up",
+			"indicatorArgLim": [
+				-1,
+				1
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimLeft": {
+			"arg": 205,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3004,
+			"description": "Normal Trim Switch, LEFT/OFF",
+			"deviceId": 13,
+			"elementName": "Trim_Switch_Left",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimRight": {
+			"arg": 205,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Normal Trim Switch, RIGHT/OFF",
+			"deviceId": 13,
+			"elementName": "Trim_Switch_Right",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"CONTROL_INTERFACE.F86_CockpitDeviceCommand_TrimUp": {
+			"arg": 204,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Normal Trim Switch, NOSE UP/OFF",
+			"deviceId": 13,
+			"elementName": "Trim_Switch_Down",
+			"indicatorArgLim": [
+				-1,
+				1
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_BatteryStarterSw": {
+			"arg": 653,
+			"description": "Battery-Starter Switch, BATTERY/OFF/STARTER",
+			"elementName": "BATTERY-STARTER_SWITCH",
+			"positionMap": [
+				{
+					"commandId": 3001,
+					"deviceId": 1,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3001,
+					"deviceId": 1,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_BatteryStarterSw_EXT": {
+			"bindings": [
+				{
+					"name": "Battery-Starter Switch - STARTER",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3052,
+			"description": "Battery-Starter Switch - STARTER",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_BatteryStarterSw_ITER": {
+			"bindings": [
+				{
+					"name": "Battery-Starter Switch - Down",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Battery-Starter Switch - Up",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3055,
+			"description": "Battery-Starter Switch - Down (+1 more)",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_BothInstInvertersOff_PTLmp": {
+			"arg": 681,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Both Instrument (Main and alternate three-phase) Inverter Failure Warning Light (Push to test)",
+			"deviceId": 1,
+			"elementName": "Both_Instrument_Failure_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_3fInverter": {
+			"arg": 763,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "3f Inverter",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_004",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANAPC3Radio": {
+			"arg": 794,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3047,
+			"description": "AN/APC 3 Radio",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_012",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANAPC3Radio_EXT": {
+			"bindings": [
+				{
+					"name": "CB AN/ARC-27 Radio Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3092,
+			"description": "CB AN/ARC-27 Radio Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANAPX6RadioIFF": {
+			"arg": 795,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3048,
+			"description": "AN/APX-6 Radio IFF",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_013",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANAPX6RadioIFF_EXT": {
+			"bindings": [
+				{
+					"name": "CB AN/APX-6 Radar IFF Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3093,
+			"description": "CB AN/APX-6 Radar IFF Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANARN6RadioCompass": {
+			"arg": 782,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3035,
+			"description": "AN/ARN-6 Radio Compass",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_023",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ANARN6RadioCompass_EXT": {
+			"bindings": [
+				{
+					"name": "CB AN/ARN-6 Radio Compass Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3080,
+			"description": "CB AN/ARN-6 Radio Compass Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AilHorizTrimAltHorizTrim": {
+			"arg": 767,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Ail & Horiz. Trim & Alt Horiz. Trim",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_008",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AilHorizTrimAltHorizTrim_EXT": {
+			"bindings": [
+				{
+					"name": "CB Aileron and Horizontal Stabilizer Trim Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3064,
+			"description": "CB Aileron and Horizontal Stabilizer Trim Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AltAilTrim": {
+			"arg": 766,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Alt Ail. Trim",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_007",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AltAilTrim_EXT": {
+			"bindings": [
+				{
+					"name": "CB Alternate Aileron Trim Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3063,
+			"description": "CB Alternate Aileron Trim Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AltEmergHydContHydPressInd": {
+			"arg": 778,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3031,
+			"description": "Alt Emerg. Hyd. Cont. & Hyd. Press Ind.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_019",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AltEmergHydContHydPressInd_EXT": {
+			"bindings": [
+				{
+					"name": "CB Alternate Emergency Hydraulic Control Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3076,
+			"description": "CB Alternate Emergency Hydraulic Control Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AntiIceScreens": {
+			"bindings": [
+				{
+					"name": "CB Anti-Ice and Screens Switch - OFF",
+					"valueDown": 0.0
+				},
+				{
+					"name": "CB Anti-Ice and Screens Switch - ON",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3014,
+			"description": "CB Anti-Ice and Screens Switch - OFF (+1 more)",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_AntiIceScreens_EXT": {
+			"bindings": [
+				{
+					"name": "CB Anti-Ice and Screens Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3059,
+			"description": "CB Anti-Ice and Screens Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BombRocketTankSalvo": {
+			"arg": 760,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Bomb Rocket Tank Salvo",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_001",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BombRocketTankSalvo_EXT": {
+			"bindings": [
+				{
+					"name": "CB Bomb-Rocket-Tank Jettison Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3056,
+			"description": "CB Bomb-Rocket-Tank Jettison Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BombSel": {
+			"arg": 761,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Bomb Sel.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_002",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BombSel_EXT": {
+			"bindings": [
+				{
+					"name": "CB Bomb Sel Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3057,
+			"description": "CB Bomb Sel Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BusTieInControl": {
+			"arg": 771,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3024,
+			"description": "Bus Tie-In Control",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_012",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_BusTieInControl_EXT": {
+			"bindings": [
+				{
+					"name": "CB Bus Tie-In Control Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3069,
+			"description": "CB Bus Tie-In Control Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ConsolePedLTS": {
+			"arg": 788,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3041,
+			"description": "Console & Ped LTS",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_006",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_ConsolePedLTS_EXT": {
+			"bindings": [
+				{
+					"name": "CB Console-Pedestal-Instrument Lights Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3086,
+			"description": "CB Console-Pedestal-Instrument Lights Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_EngIgn": {
+			"arg": 784,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3037,
+			"description": "Eng. Ign.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_002",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_EngIgn_EXT": {
+			"bindings": [
+				{
+					"name": "CB Engine Ignition Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3082,
+			"description": "CB Engine Ignition Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_EngMasterFuelShutOff": {
+			"arg": 783,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3036,
+			"description": "Eng. Master Fuel Shut-Off",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_001",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_EngMasterFuelShutOff_EXT": {
+			"bindings": [
+				{
+					"name": "CB Engine Master Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3081,
+			"description": "CB Engine Master Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FireWarn": {
+			"arg": 770,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3023,
+			"description": "Fire Warn.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_011",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FreeAirOzTempAirSel": {
+			"arg": 773,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3026,
+			"description": "Free Air & Oil Temp & Air Sel.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_014",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelBoostFwd": {
+			"arg": 789,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3042,
+			"description": "Fuel Boost FWD",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_007",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelBoostFwd_EXT": {
+			"bindings": [
+				{
+					"name": "CB Fwd. Fuel Booster Pump Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3087,
+			"description": "CB Fwd. Fuel Booster Pump Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelBoosterAft": {
+			"arg": 777,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3030,
+			"description": "Fuel Booster AFT",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_018",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelBoosterAft_EXT": {
+			"bindings": [
+				{
+					"name": "CB Aft. Fuel Booster Pump Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3075,
+			"description": "CB Aft. Fuel Booster Pump Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelDropTank": {
+			"bindings": [
+				{
+					"name": "CB Fuel Drop Tank Switch - OFF",
+					"valueDown": 0.0
+				},
+				{
+					"name": "CB Fuel Drop Tank Switch - ON",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3022,
+			"description": "CB Fuel Drop Tank Switch - OFF (+1 more)",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelDropTank_EXT": {
+			"bindings": [
+				{
+					"name": "CB Fuel Drop Tank Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3067,
+			"description": "CB Fuel Drop Tank Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelLevel": {
+			"arg": 785,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3038,
+			"description": "Fuel Level",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_003",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_FuelLevel_EXT": {
+			"bindings": [
+				{
+					"name": "CB Fuel Level Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3083,
+			"description": "CB Fuel Level Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_GyrSynCompass": {
+			"arg": 762,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "Gyr'Syn Compass",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_003",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_GyrSynCompass_EXT": {
+			"bindings": [
+				{
+					"name": "CB Gyrosyn Compass Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3058,
+			"description": "CB Gyrosyn Compass Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_InvGenFailureOvervoltLtsTest": {
+			"arg": 786,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3039,
+			"description": "Inv Gen. Failure Overvolt LTS Test",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_004",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_InvGenFailureOvervoltLtsTest_EXT": {
+			"bindings": [
+				{
+					"name": "CB Inverter-Generator Failure Lights Test Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3084,
+			"description": "CB Inverter-Generator Failure Lights Test Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearControl": {
+			"arg": 775,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3028,
+			"description": "LDG Gear Control",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_016",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearControl_EXT": {
+			"bindings": [
+				{
+					"name": "CB Landing Gear Control Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3073,
+			"description": "CB Landing Gear Control Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearPosInd": {
+			"arg": 776,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3029,
+			"description": "LDG Gear Pos Ind.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_017",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearPosInd_EXT": {
+			"bindings": [
+				{
+					"name": "CB Landing Gear Position Indicator Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3074,
+			"description": "CB Landing Gear Position Indicator Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearWarn": {
+			"arg": 774,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3027,
+			"description": "LDG Gear Warn.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_015",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGGearWarn_EXT": {
+			"bindings": [
+				{
+					"name": "CB Landing Gear Warning Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3072,
+			"description": "CB Landing Gear Warning Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGLightControl": {
+			"arg": 768,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "LDG Light Control",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_009",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGLightControl_EXT": {
+			"bindings": [
+				{
+					"name": "CB Landing Light Control Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3065,
+			"description": "CB Landing Light Control Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGLights": {
+			"arg": 769,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "LDG Lights",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_010",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LDGLights_EXT": {
+			"bindings": [
+				{
+					"name": "CB Landing Lights Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3066,
+			"description": "CB Landing Lights Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LightFluor": {
+			"arg": 792,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3045,
+			"description": "Light Fluor",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_010",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LightFluor_EXT": {
+			"bindings": [
+				{
+					"name": "CB Canopy Control Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3090,
+			"description": "CB Canopy Control Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_LightPostIndCode": {
+			"arg": 787,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3040,
+			"description": "Light Post IndCode",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_005",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_RudderTrimTakeOffInd": {
+			"arg": 765,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Rudder Trim & Take-Off Ind.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_006",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_RudderTrimTakeOffInd_EXT": {
+			"bindings": [
+				{
+					"name": "CB Rudder Trim and TakeOff Indicator Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3062,
+			"description": "CB Rudder Trim and TakeOff Indicator Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightACPowerUnit": {
+			"arg": 781,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3034,
+			"description": "Sight A.C. Power Unit",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_022",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightACPowerUnit_EXT": {
+			"bindings": [
+				{
+					"name": "CB Sight AC Power Unit Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3079,
+			"description": "CB Sight AC Power Unit Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightControl": {
+			"arg": 793,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3046,
+			"description": "Sight Control",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_011",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightControl_EXT": {
+			"bindings": [
+				{
+					"name": "CB Sight Control Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3091,
+			"description": "CB Sight Control Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightHeater": {
+			"arg": 780,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3033,
+			"description": "Sight Heater",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_021",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightHeater_EXT": {
+			"bindings": [
+				{
+					"name": "CB Sight Heater Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3078,
+			"description": "CB Sight Heater Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightPower": {
+			"arg": 779,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3032,
+			"description": "Sight Power",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_020",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SightPower_EXT": {
+			"bindings": [
+				{
+					"name": "CB Sight Power Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3077,
+			"description": "CB Sight Power Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SpeedBrake": {
+			"arg": 772,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3025,
+			"description": "Speed Brake",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_013",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_SpeedBrake_EXT": {
+			"bindings": [
+				{
+					"name": "CB Speed Brake Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3070,
+			"description": "CB Speed Brake Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_TurnBankInd": {
+			"arg": 764,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "Turn Bank Ind.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_LP_005",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_TurnBankInd_EXT": {
+			"bindings": [
+				{
+					"name": "CB Turn and Bank Indicator Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3061,
+			"description": "CB Turn and Bank Indicator Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_WingFlapLh": {
+			"arg": 790,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3043,
+			"description": "Wing Flap LH.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_008",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_WingFlapLh_EXT": {
+			"bindings": [
+				{
+					"name": "CB Left Wing Flap Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3088,
+			"description": "CB Left Wing Flap Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_WingFlapRh": {
+			"arg": 791,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3044,
+			"description": "Wing Flap RH.",
+			"deviceId": 1,
+			"elementName": "Circuit_Breaker_RP_009",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_CB_WingFlapRh_EXT": {
+			"bindings": [
+				{
+					"name": "CB Right Wing Flap Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3089,
+			"description": "CB Right Wing Flap Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_EngineMasterSw": {
+			"arg": 652,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Engine Master Switch, ON/OFF",
+			"deviceId": 1,
+			"elementName": "Engine_Master_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_EngineMasterSw_EXT": {
+			"bindings": [
+				{
+					"name": "Engine Master Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3051,
+			"description": "Engine Master Switch - ON/OFF",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_GenOff_PTLmp": {
+			"arg": 687,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Generator Warning Light (Push To Test)",
+			"deviceId": 1,
+			"elementName": "Generator_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSw": {
+			"arg": 670,
+			"description": "Generator Switch, ON/OFF/RESET",
+			"elementName": "Generator_Switch",
+			"positionMap": [
+				{
+					"commandId": 3005,
+					"deviceId": 1,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3005,
+					"deviceId": 1,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSwCover": {
+			"arg": 671,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Generator Switch Cover",
+			"deviceId": 1,
+			"elementName": "Generator_Switch_Cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSwCover_EXT": {
+			"bindings": [
+				{
+					"name": "Generator Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3049,
+			"description": "Generator Switch Cover - OPEN/CLOSE",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSw_EXT": {
+			"bindings": [
+				{
+					"name": "Generator Switch - RESET",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3050,
+			"description": "Generator Switch - RESET",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_GeneratorSw_ITER": {
+			"bindings": [
+				{
+					"name": "Generator Switch - Down",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Generator Switch - Up",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3054,
+			"description": "Generator Switch - Down (+1 more)",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_InverterSw": {
+			"arg": 643,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Instrument Power Switch, ALTERNATE/NORMAL",
+			"deviceId": 1,
+			"elementName": "INSTRUMENT_POWER_ALTERNATE",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_InverterSw_EXT": {
+			"bindings": [
+				{
+					"name": "Instrument Power Switch - ALTERNATE/NORMAL",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3053,
+			"description": "Instrument Power Switch - ALTERNATE/NORMAL",
+			"deviceId": 1,
+			"type": "raw"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_MainInstInverterOffSelectAlt_PTLmp": {
+			"arg": 680,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Main Instrument (Three-phase) Inverter Failure Warning Light (Push to test)",
+			"deviceId": 1,
+			"elementName": "Main_Instrument_Failure_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_MainRadarInverterOff_PTLmp": {
+			"arg": 682,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Main Radar (Single-phase) Inverter Failure Warning Light (Push to test)",
+			"deviceId": 1,
+			"elementName": "Main_Radar_Failure_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ELEC_INTERFACE.F86_CockpitDeviceCommand_StopStarterBtn": {
+			"arg": 664,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Stop-Starter Button (Push to de-energize starter in case of malfunction)",
+			"deviceId": 1,
+			"elementName": "Stop Starter Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.F86_CockpitDeviceCommand_AirStart": {
+			"arg": 733,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3001,
+			"description": "Emergency (In-air) Ignition Switch, ON/OFF",
+			"deviceId": 4,
+			"elementName": "Emergency_Ingition_Switch",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.F86_CockpitDeviceCommand_AirStart_Cover": {
+			"arg": 732,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Emergency (In-air) Ignition Switch Cover",
+			"deviceId": 4,
+			"elementName": "Emergency_Ingition_Switch_Cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.F86_CockpitDeviceCommand_AirStart_Cover_EXT": {
+			"bindings": [
+				{
+					"name": "Emergency (In-air) Ignition Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Emergency (In-air) Ignition Switch Cover - OPEN/CLOSE",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.F86_CockpitDeviceCommand_AirStart_EXT": {
+			"bindings": [
+				{
+					"name": "Emergency (In-air) Ignition Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Emergency (In-air) Ignition Switch - ON/OFF",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"ENGINE_INTERFACE.F86_CockpitDeviceCommand_EmergFuel": {
+			"arg": 630,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Emergency Fuel Switch, ON/OFF",
+			"deviceId": 4,
+			"elementName": "Emergency_Fuel_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"ENGINE_INTERFACE.F86_CockpitDeviceCommand_EmergFuel_EXT": {
+			"bindings": [
+				{
+					"name": "Emergency Fuel Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "Emergency Fuel Switch - ON/OFF",
+			"deviceId": 4,
+			"type": "raw"
+		},
+		"FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_AftWarning_TPLmp": {
+			"arg": 686,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Aft Engine Compartment Fire-warning Light (Push to test)",
+			"deviceId": 15,
+			"elementName": "Fire-Warning_AFT_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_FireDetectionTest": {
+			"arg": 635,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Engine Fire Warning Light Test Switch",
+			"deviceId": 15,
+			"elementName": "Fire-Warning Light Test Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_FireDetectionTest_EXT": {
+			"bindings": [
+				{
+					"name": "Engine Fire Warning Light Test Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Engine Fire Warning Light Test Switch - ON/OFF",
+			"deviceId": 15,
+			"type": "raw"
+		},
+		"FIRE_DETECTION_INTERFACE.F86_CockpitDeviceCommand_FwdWarning_TPLmp": {
+			"arg": 685,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Forward Engine Compartment Fire-warning Light (Push to test)",
+			"deviceId": 15,
+			"elementName": "Fire-Warning_FWD_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_DensitometerCorrection": {
+			"arg": 672,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Fuel Densitometer Selection Switch, IN/OUT",
+			"deviceId": 3,
+			"elementName": "Fuel_density_correction_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_DensitometerCorrectionCover": {
+			"arg": 673,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Fuel Densitometer Selection Switch Cover",
+			"deviceId": 3,
+			"elementName": "Fuel_density_correction_Switch_Cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_DensitometerCorrectionCover_EXT": {
+			"bindings": [
+				{
+					"name": "Fuel Densitometer Selection Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "Fuel Densitometer Selection Switch Cover - OPEN/CLOSE",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_DensitometerCorrection_EXT": {
+			"bindings": [
+				{
+					"name": "Fuel Densitometer Selection Switch - OUT/IN",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3008,
+			"description": "Fuel Densitometer Selection Switch - OUT/IN",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_OutDropTanksEmpty_TPLmp": {
+			"arg": 695,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Outboard Drop Tank Empty Indicator Light (Push to test)",
+			"deviceId": 3,
+			"elementName": "Tanks_Empty_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_TankJettison_Btn": {
+			"arg": 701,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Drop Tank Jettison Button - Push to release drop tank(s)",
+			"deviceId": 3,
+			"elementName": "TANKS_JETTISON",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_TankSelector_Sw": {
+			"arg": 662,
+			"argLim": [
+				0.0,
+				0.6
+			],
+			"commandId": 3003,
+			"description": "Drop Tank Selector Switch",
+			"deviceId": 3,
+			"elementName": "JETT_SELECTOR",
+			"positions": 7,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"FUEL_INTERFACE.F86_CockpitDeviceCommand_TankSelector_Sw_EXT": {
+			"bindings": [
+				{
+					"name": "Drop Tank Selector Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Drop Tank Selector Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "Drop Tank Selector Switch - CCW (+1 more)",
+			"deviceId": 3,
+			"type": "raw"
+		},
+		"GYROMAG_COMPASS.F86_CockpitDeviceCommand_FastSlave": {
+			"arg": 598,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Directional Indicator Fast Slaving Button - Push for fast slaving",
+			"deviceId": 20,
+			"elementName": "Directional_Indicator_Fast_Slaving_Switch",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"GYROMAG_COMPASS.F86_CockpitDeviceCommand_Heading_Correction": {
+			"arg": 199,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Compass Correction",
+			"deviceId": 20,
+			"elementName": "DIRECTIONAL_INDICATOR",
+			"sendProtocol": "C",
+			"type": "relative"
+		},
+		"GYROMAG_COMPASS.F86_CockpitDeviceCommand_Heading_Correction_EXT": {
+			"bindings": [
+				{
+					"name": "Directional Indicator East/West Variation Knob - CCW/East",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Directional Indicator East/West Variation Knob - CW/West",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3002,
+			"description": "Directional Indicator East/West Variation Knob - CCW/East (+1 more)",
+			"deviceId": 20,
+			"type": "raw"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_AirBrakesHandle": {
+			"arg": 211,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Speed Brake Switch, OUT/HOLD/IN",
+			"deviceId": 2,
+			"elementName": "Speed_Brake_Switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_AlternateFltContSysOper_PTLmp": {
+			"arg": 684,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Alternate-on Warning Light (Push to test)",
+			"deviceId": 2,
+			"elementName": "Alternate-on_Warning_Light",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_AlternateHydraulicOverrideSw": {
+			"arg": 706,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Alternate Hydraulic Emergency Override Handle, IN/OUT",
+			"deviceId": 2,
+			"elementName": "Alternate_Hydraulic_Override_Switch",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_AlternateHydraulicOverrideSw_EXT": {
+			"bindings": [
+				{
+					"name": "Alternate Hydraulic Emergency Override Handle - PULL/PUSH",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3012,
+			"description": "Alternate Hydraulic Emergency Override Handle - PULL/PUSH",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_EmergUpBtn": {
+			"arg": 710,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Landing Gear Emergency-up Button (Ground-use only! Hold in until gear retracts completely)",
+			"deviceId": 2,
+			"elementName": "EMERG_UP",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_EmergencyLdgGearsReleaseHandle": {
+			"arg": 819,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Landing Gear Emergency Release Handle",
+			"deviceId": 2,
+			"elementName": "Landing_gear_emergency_release_handle",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_FlightControl": {
+			"arg": 647,
+			"description": "Flight Control Switch, ALTERNATE ON/NORMAL/RESET",
+			"elementName": "Flight_Control_Switch",
+			"positionMap": [
+				{
+					"commandId": 3003,
+					"deviceId": 2,
+					"value": -1.0
+				},
+				null,
+				{
+					"commandId": 3003,
+					"deviceId": 2,
+					"value": 1.0
+				}
+			],
+			"positions": 3,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_FlightControlReset_EXT": {
+			"bindings": [
+				{
+					"name": "Flight Control Switch - RESET",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3017,
+			"description": "Flight Control Switch - RESET",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_FlightControl_EXT": {
+			"bindings": [
+				{
+					"name": "Flight Control Switch - Down",
+					"valueDown": -1.0,
+					"valueUp": 0.0
+				},
+				{
+					"name": "Flight Control Switch - Up",
+					"valueDown": 1.0,
+					"valueUp": 0.0
+				}
+			],
+			"commandId": 3011,
+			"description": "Flight Control Switch - Down (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_HornCutOut": {
+			"arg": 815,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Landing Gear Warning Horn Cutout Button (Push to silence horn)",
+			"deviceId": 2,
+			"elementName": "Horn_Cutout_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_HydPressIndicatorSelector": {
+			"arg": 631,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Hydraulic Pressure Gage and Selector Switch, UTILITY/NORMAL/ALTERNATE",
+			"deviceId": 2,
+			"elementName": "Hydraulic_Pressure_Gage_Selector_Switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_HydPressIndicatorSelector_EXT": {
+			"bindings": [
+				{
+					"name": "Hydraulic Pressure Gage Selector Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Hydraulic Pressure Gage Selector Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3013,
+			"description": "Hydraulic Pressure Gage Selector Switch - Down (+1 more)",
+			"deviceId": 2,
+			"type": "raw"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_LandingGearHandle": {
+			"arg": 599,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Landing Gear Handle, UP/DOWN",
+			"deviceId": 2,
+			"elementName": "Landing_Gear_Handle",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_NoseWheelSteeringBtn": {
+			"arg": 209,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3016,
+			"description": "Nose Wheel Steering Button",
+			"deviceId": 2,
+			"elementName": "Nose_Wheel_Steering_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"HYDRO_INTERFACE.F86_CockpitDeviceCommand_ParkingBrakeHandle": {
+			"arg": 217,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "Parking Brake Handle, ON/OFF",
+			"deviceId": 2,
+			"elementName": "Parking_Brake",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_ConsoleAndPanelLightControl": {
+			"arg": 812,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Console and Panel Light Rheostat",
+			"deviceId": 17,
+			"elementName": "Console_Panel_Light_Control",
+			"type": "continuous"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_ConsoleAndPanelLightControl_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Console and Panel Light Rheostat"
+				}
+			],
+			"commandId": 3012,
+			"description": "Console and Panel Light Rheostat",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_ConsoleAndPanelLightControl_EXT": {
+			"bindings": [
+				{
+					"name": "Console and Panel Light Rheostat - CCW/Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Console and Panel Light Rheostat - CW/Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3009,
+			"description": "Console and Panel Light Rheostat - CCW/Decrease (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelAuxLightControl": {
+			"arg": 811,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Instrument Panel Auxiliary Light Rheostat",
+			"deviceId": 17,
+			"elementName": "Instrument_Panel_Auxiliary_Light_Control",
+			"type": "continuous"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelAuxLightControl_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Instrument Panel Auxiliary Light Rheostat"
+				}
+			],
+			"commandId": 3011,
+			"description": "Instrument Panel Auxiliary Light Rheostat",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelAuxLightControl_EXT": {
+			"bindings": [
+				{
+					"name": "Instrument Panel Auxiliary Light Rheostat - CCW/Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Instrument Panel Auxiliary Light Rheostat - CW/Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3008,
+			"description": "Instrument Panel Auxiliary Light Rheostat - CCW/Decrease (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelPrimLightControl": {
+			"arg": 813,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Instrument Panel Primary Light Rheostat",
+			"deviceId": 17,
+			"elementName": "Instrument_Panel_Primary_Light_Control",
+			"type": "continuous"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelPrimLightControl_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Instrument Panel Primary Light Rheostat"
+				}
+			],
+			"commandId": 3010,
+			"description": "Instrument Panel Primary Light Rheostat",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_InstPanelPrimLightControl_EXT": {
+			"bindings": [
+				{
+					"name": "Instrument Panel Primary Light Rheostat - CCW/Decrease",
+					"valuePressed": -0.5
+				},
+				{
+					"name": "Instrument Panel Primary Light Rheostat - CW/Increase",
+					"valuePressed": 0.5
+				}
+			],
+			"commandId": 3007,
+			"description": "Instrument Panel Primary Light Rheostat - CCW/Decrease (+1 more)",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_StandByCompassLightSw": {
+			"arg": 654,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Compass Light Switch, ON/OFF",
+			"deviceId": 17,
+			"elementName": "Compass_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"LIGHT_INTERFACE.F86_CockpitDeviceCommand_StandByCompassLightSw_EXT": {
+			"bindings": [
+				{
+					"name": "Compass Light Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "Compass Light Switch - ON/OFF",
+			"deviceId": 17,
+			"type": "raw"
+		},
+		"NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_LandAndTaxiLights": {
+			"arg": 661,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Landing & Taxi Lights Switch, EXTEND&ON/OFF/RETRACT",
+			"deviceId": 18,
+			"elementName": "TMB-TAXILGT_Switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_LandAndTaxiLights_EXT": {
+			"bindings": [
+				{
+					"name": "Landing & Taxi Lights Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Landing & Taxi Lights Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3005,
+			"description": "Landing & Taxi Lights Switch - Down (+1 more)",
+			"deviceId": 18,
+			"type": "raw"
+		},
+		"NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_PosAndFusLts": {
+			"arg": 656,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Position and Fuselage Light Selector Switch, STEADY/OFF/FLASH",
+			"deviceId": 18,
+			"elementName": "Pos. Lt. Steady_Switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_PosAndFusLtsDimmer": {
+			"arg": 655,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3003,
+			"description": "Exterior Lighting Dimmer Switch, BRIGHT/DIM",
+			"deviceId": 18,
+			"elementName": "Ext. Ltng. Bright Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_PosAndFusLtsDimmer_EXT": {
+			"bindings": [
+				{
+					"name": "Exterior Lighting Dimmer Switch - BRIGHT/DIM",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3004,
+			"description": "Exterior Lighting Dimmer Switch - BRIGHT/DIM",
+			"deviceId": 18,
+			"type": "raw"
+		},
+		"NAV_LIGHTS_INTERFACE.F86_CockpitDeviceCommand_PosAndFusLts_EXT": {
+			"bindings": [
+				{
+					"name": "Position and Fuselage Light Selector Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Position and Fuselage Light Selector Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3006,
+			"description": "Position and Fuselage Light Selector Switch - Down (+1 more)",
+			"deviceId": 18,
+			"type": "raw"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_EmergencyBtn": {
+			"arg": 229,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Oxygen Regulator Emergency Lever",
+			"deviceId": 14,
+			"elementName": "Emergency_Test",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_EmergencySw": {
+			"arg": 223,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3008,
+			"description": "Oxygen Regulator Emergency Lever",
+			"deviceId": 14,
+			"elementName": "Emergency_Test",
+			"type": "continuous"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_EmergencySw_EXT": {
+			"bindings": [
+				{
+					"name": "Oxygen Regulator Emergency Lever - Left",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Oxygen Regulator Emergency Lever - Right",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3009,
+			"description": "Oxygen Regulator Emergency Lever - Left (+1 more)",
+			"deviceId": 14,
+			"type": "raw"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenDiluterLever": {
+			"arg": 703,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Oxygen Regulator Diluter Lever, NORMAL OXYGEN/100% OXYGEN",
+			"deviceId": 14,
+			"elementName": "OXYGEN_SWITCH",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenDiluterLever_EXT": {
+			"bindings": [
+				{
+					"name": "Oxygen Regulator Diluter Lever - NORMAL/100%",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3003,
+			"description": "Oxygen Regulator Diluter Lever - NORMAL/100%",
+			"deviceId": 14,
+			"type": "raw"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenSupplyLever": {
+			"arg": 704,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3002,
+			"description": "Oxygen Regulator Supply Lever",
+			"deviceId": 14,
+			"elementName": "Pressure_demand_oxygen_regulator",
+			"type": "continuous"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenSupplyLever_AXIS": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Oxygen Regulator Supply Lever"
+				}
+			],
+			"commandId": 3005,
+			"description": "Oxygen Regulator Supply Lever",
+			"deviceId": 14,
+			"type": "raw"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_OxygenSupplyLever_EXT": {
+			"bindings": [
+				{
+					"name": "Oxygen Regulator Supply Lever - CCW/OFF",
+					"valuePressed": -0.1
+				},
+				{
+					"name": "Oxygen Regulator Supply Lever - CW/ON",
+					"valuePressed": 0.1
+				}
+			],
+			"commandId": 3004,
+			"description": "Oxygen Regulator Supply Lever - CCW/OFF (+1 more)",
+			"deviceId": 14,
+			"type": "raw"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_WarningSystemSw": {
+			"arg": 230,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Oxygen Regulator Warning Light Switch, ON/OFF",
+			"deviceId": 14,
+			"elementName": "Warning_System_Off",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"OXYGEN_INTERFACE.F86_CockpitDeviceCommand_WarningSystemSw_EXT": {
+			"bindings": [
+				{
+					"name": "Oxygen Regulator Warning Light Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3007,
+			"description": "Oxygen Regulator Warning Light Switch - ON/OFF",
+			"deviceId": 14,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.ARM_SWITCH": {
+			"arg": 641,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3007,
+			"description": "Demolition Bomb Arming Switch (Fuze Selection), ARM NOSE&TAIL/OFF/TAIL ONLY",
+			"deviceId": 5,
+			"elementName": "ARM_SWITCH",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Auto_Release_Switch": {
+			"arg": 639,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3006,
+			"description": "Demolition Bomb Release Selector Switch, AUTO RELEASE/MANUAL RELEASE",
+			"deviceId": 5,
+			"elementName": "Auto_Release_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.BOMB_NORMAL_Switch": {
+			"arg": 663,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3004,
+			"description": "Manual Pip Control Switch, BOMB/NORMAL",
+			"deviceId": 5,
+			"elementName": "BOMB_NORMAL_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Bomb_Rocket_Release_Button": {
+			"arg": 207,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3047,
+			"description": "Bomb-Rocket Release Button - Push to release",
+			"deviceId": 5,
+			"elementName": "Bomb_Rocket_Release_Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Bomb_Rocket_Tank Jettison Button": {
+			"arg": 702,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3017,
+			"description": "Bomb-Rocket-Tank Jettison Button",
+			"deviceId": 5,
+			"elementName": "Bomb_Rocket_Tank Jettison Button",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Bombing_Altimeter_Handler1": {
+			"arg": 731,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3022,
+			"description": "A-4 Sight Bombing Altimeter Index Altitude Handle",
+			"deviceId": 5,
+			"elementName": "Bombing_Altimeter_Handler1",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.Button_25": {
+			"bindings": [
+				{
+					"name": "Gun-Missile Selector Switch - CCW",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Gun-Missile Selector Switch - CW",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3025,
+			"description": "Gun-Missile Selector Switch - CCW (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_26": {
+			"bindings": [
+				{
+					"name": "Gun Heater Switch - HEATER/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3026,
+			"description": "Gun Heater Switch - HEATER/OFF",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_27": {
+			"bindings": [
+				{
+					"name": "Rocket Release Selector Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Rocket Release Selector Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3027,
+			"description": "Rocket Release Selector Switch - Down (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_28": {
+			"bindings": [
+				{
+					"name": "Rocket Release Selector Switch Cover - OPEN/CLOSE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3028,
+			"description": "Rocket Release Selector Switch Cover - OPEN/CLOSE",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_29": {
+			"bindings": [
+				{
+					"name": "Variable Sight Selector Unit - Sight Function Selector Lever - CCW",
+					"valueDown": 1.0
+				},
+				{
+					"name": "Variable Sight Selector Unit - Sight Function Selector Lever - CW",
+					"valueDown": -1.0
+				}
+			],
+			"commandId": 3029,
+			"description": "Variable Sight Selector Unit - Sight Function Selector Lever - CCW (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_30": {
+			"bindings": [
+				{
+					"name": "Rocket Jettison Switch - READY/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3030,
+			"description": "Rocket Jettison Switch - READY/OFF",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_31": {
+			"bindings": [
+				{
+					"name": "Rocket Fuze (Arming) Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Rocket Fuze (Arming) Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3031,
+			"description": "Rocket Fuze (Arming) Switch - Down (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_32": {
+			"bindings": [
+				{
+					"name": "Demolition Bomb Release Selector Switch - AUTO/MANUAL",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3032,
+			"description": "Demolition Bomb Release Selector Switch - AUTO/MANUAL",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_33": {
+			"bindings": [
+				{
+					"name": "Demolition Bomb Sequence Selector Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Demolition Bomb Sequence Selector Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3033,
+			"description": "Demolition Bomb Sequence Selector Switch - CCW (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_34": {
+			"bindings": [
+				{
+					"name": "Demolition Bomb Arming Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Demolition Bomb Arming Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3034,
+			"description": "Demolition Bomb Arming Switch - Down (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_35": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Bombing Altimeter Target Altitude Knob - CCW/Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "A-4 Sight Bombing Altimeter Target Altitude Knob - CW/Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3035,
+			"description": "A-4 Sight Bombing Altimeter Target Altitude Knob - CCW/Decrease (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_36": {
+			"bindings": [
+				{
+					"name": "A-4 Sight Bombing Altimeter Index Altitude Handle - CCW/Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "A-4 Sight Bombing Altimeter Index Altitude Handle - CW/Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3036,
+			"description": "A-4 Sight Bombing Altimeter Index Altitude Handle - CCW/Decrease (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_37": {
+			"bindings": [
+				{
+					"name": "Missile Control Switch - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Missile Control Switch - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3037,
+			"description": "Missile Control Switch - Down (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_38": {
+			"bindings": [
+				{
+					"name": "Missile Tone Volume - CCW/Decrease",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "Missile Tone Volume - CW/Increase",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3038,
+			"description": "Missile Tone Volume - CCW/Decrease (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_39": {
+			"bindings": [
+				{
+					"name": "Gun Selector Switch - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Gun Selector Switch - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3039,
+			"description": "Gun Selector Switch - CCW (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_40": {
+			"bindings": [
+				{
+					"name": "Rocket Intervalometer Knob - CCW",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Rocket Intervalometer Knob - CW",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3040,
+			"description": "Rocket Intervalometer Knob - CCW (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_41": {
+			"bindings": [
+				{
+					"name": "Manual Pip Control Switch - BOMB/NORMAL",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3041,
+			"description": "Manual Pip Control Switch - BOMB/NORMAL",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_42": {
+			"bindings": [
+				{
+					"name": "Manual Pip Control Knob - CCW",
+					"valuePressed": -0.3
+				},
+				{
+					"name": "Manual Pip Control Knob - CW",
+					"valuePressed": 0.3
+				}
+			],
+			"commandId": 3042,
+			"description": "Manual Pip Control Knob - CCW (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_43": {
+			"bindings": [
+				{
+					"name": "Manual Pip Control Change Calibrated Dials (Presets) - Down",
+					"valueDown": -1.0
+				},
+				{
+					"name": "Manual Pip Control Change Calibrated Dials (Presets) - Up",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3043,
+			"description": "Manual Pip Control Change Calibrated Dials (Presets) - Down (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_44": {
+			"bindings": [
+				{
+					"name": "LABS Gyro Caging Switch - UNCAGE/CAGE",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3044,
+			"description": "LABS Gyro Caging Switch - UNCAGE/CAGE",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_45": {
+			"bindings": [
+				{
+					"name": "LABS Start Switch - ON/OFF",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3045,
+			"description": "LABS Start Switch - ON/OFF",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_46": {
+			"bindings": [
+				{
+					"name": "LABS Change-over Switch - LABS/A-4",
+					"valueDown": 1.0
+				}
+			],
+			"commandId": 3046,
+			"description": "LABS Change-over Switch - LABS/A-4",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_49": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "A-4 Sight Bombing Altimeter Index Altitude Handle"
+				}
+			],
+			"commandId": 3049,
+			"description": "A-4 Sight Bombing Altimeter Index Altitude Handle",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_50": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "A-4 Sight Bombing Altimeter Target Altitude Knob"
+				}
+			],
+			"commandId": 3050,
+			"description": "A-4 Sight Bombing Altimeter Target Altitude Knob",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_51": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Missile Tone Volume"
+				}
+			],
+			"commandId": 3051,
+			"description": "Missile Tone Volume",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_52": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "Manual Pip Control Knob"
+				}
+			],
+			"commandId": 3052,
+			"description": "Manual Pip Control Knob",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_55": {
+			"bindings": [
+				{
+					"axis": true,
+					"name": "G-Limit Indicator Light Brightness"
+				}
+			],
+			"commandId": 3055,
+			"description": "G-Limit Indicator Light Brightness",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Button_56": {
+			"bindings": [
+				{
+					"name": "G-Limit Indicator Light Brightness - CCW/Increase",
+					"valuePressed": -1.0
+				},
+				{
+					"name": "G-Limit Indicator Light Brightness - CW/Decrease",
+					"valuePressed": 1.0
+				}
+			],
+			"commandId": 3056,
+			"description": "G-Limit Indicator Light Brightness - CCW/Increase (+1 more)",
+			"deviceId": 5,
+			"type": "raw"
+		},
+		"WEAPON_SYSTEM.Fuze_Delay_Switch": {
+			"arg": 638,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3011,
+			"description": "Rocket Fuze (Arming) Switch, DELAY/OFF/INSTANT",
+			"deviceId": 5,
+			"elementName": "Fuze_Delay_Switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.G_LIMIT_arg225": {
+			"arg": 225,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3053,
+			"description": "G-Limit Light - Push to test(LMB), Rotate to adjust brightness(MW)",
+			"deviceId": 5,
+			"elementName": "G_LIMIT",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.G_LIMIT_arg226": {
+			"arg": 226,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3054,
+			"description": "G-Limit Light - Push to test(LMB), Rotate to adjust brightness(MW)",
+			"deviceId": 5,
+			"elementName": "G_LIMIT",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.Gun_Heater_Switch": {
+			"arg": 636,
+			"argLim": [
+				-1.0,
+				0.0
+			],
+			"commandId": 3003,
+			"description": "Gun Heater Switch, HEATER/OFF/(N/F)",
+			"deviceId": 5,
+			"elementName": "Gun_Heater_Switch",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Gun_Trigger": {
+			"arg": 206,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3048,
+			"description": "Gun Trigger, SECOND DETENT(LMB)/FIRST DETENT(RMB)",
+			"deviceId": 5,
+			"elementName": "Gun_Trigger",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Guns_Selector": {
+			"arg": 668,
+			"argLim": [
+				-0.2,
+				0.2
+			],
+			"commandId": 3001,
+			"description": "Gun Selector Switch",
+			"deviceId": 5,
+			"elementName": "Guns_Selector",
+			"positions": 5,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.LABS_Selector_Switch_1": {
+			"arg": 632,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3013,
+			"description": "LABS Gyro Caging Switch, UNCAGE/CAGE",
+			"deviceId": 5,
+			"elementName": "LABS_Selector_Switch_1",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.LABS_Selector_Switch_2": {
+			"arg": 633,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3014,
+			"description": "LABS Start Switch, ON/OFF",
+			"deviceId": 5,
+			"elementName": "LABS_Selector_Switch_2",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.LABS_Selector_Switch_3": {
+			"arg": 634,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3015,
+			"description": "LABS Change-over Switch, LABS/A-4",
+			"deviceId": 5,
+			"elementName": "LABS_Selector_Switch_3",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.MISSILE_GUNS_RADAR-Selector": {
+			"arg": 665,
+			"argLim": [
+				0.0,
+				0.3
+			],
+			"commandId": 3002,
+			"description": "Gun-Missile Selector Switch, OFF/SIGHT CAMERA & RADAR/GUNS/MISSILE",
+			"deviceId": 5,
+			"elementName": "MISSILE_GUNS_RADAR-Selector",
+			"positions": 4,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.MISSILE_PANEL_SAFE_LAUNCH": {
+			"arg": 822,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3020,
+			"description": "Safe Launch Button",
+			"deviceId": 5,
+			"elementName": "MISSILE_PANEL_SAFE_LAUNCH",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.MISSILE_PANEL_TONE_VOLUME": {
+			"arg": 821,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3019,
+			"description": "Tone Volume",
+			"deviceId": 5,
+			"elementName": "MISSILE_PANEL_TONE_VOLUME",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.MISSILE_Switch_LH-RH-SALVO": {
+			"arg": 820,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3018,
+			"description": "Missile Control Switch, LH & RH/RH/SALVO",
+			"deviceId": 5,
+			"elementName": "MISSILE_Switch_LH-RH-SALVO",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.PIP_adjustment_knob": {
+			"arg": 797,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3005,
+			"description": "Manual Pip Control Knob",
+			"deviceId": 5,
+			"elementName": "PIP_adjustment_knob",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.Rocket_Intervalometer": {
+			"arg": 1001,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3024,
+			"decrementCommandId": 3023,
+			"decrementValue": -0.0625,
+			"description": "Rocket Intervalometer",
+			"deviceId": 5,
+			"elementName": "Rocket_Intervalometer",
+			"incrementValue": 0.0625,
+			"type": "relative",
+			"wheel": true
+		},
+		"WEAPON_SYSTEM.Rockets_Jett_Switch": {
+			"arg": 637,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3012,
+			"description": "Rocket Jettison Switch, READY/OFF",
+			"deviceId": 5,
+			"elementName": "Rockets_Jett_Switch",
+			"positions": 2,
+			"step": 2.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Rockets_switch": {
+			"arg": 751,
+			"argLim": [
+				-1.0,
+				1.0
+			],
+			"commandId": 3009,
+			"description": "Rocket Release Selector Switch, SINGLE/OFF/AUTO",
+			"deviceId": 5,
+			"elementName": "Rockets_switch",
+			"positions": 3,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Rockets_switch_cover": {
+			"arg": 750,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3010,
+			"description": "Rocket Release Selector Switch Cover",
+			"deviceId": 5,
+			"elementName": "Rockets_switch_cover",
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Station_selector_switch": {
+			"arg": 752,
+			"argLim": [
+				0.0,
+				0.5
+			],
+			"commandId": 3008,
+			"description": "Demolition Bomb Sequence Selector Switch, ALL/OFF/LEFT/RIGHT",
+			"deviceId": 5,
+			"elementName": "Station_selector_switch",
+			"positions": 6,
+			"step": 0.1,
+			"type": "discrete"
+		},
+		"WEAPON_SYSTEM.Target_altitude_knob": {
+			"arg": 729,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3021,
+			"description": "A-4 Sight Bombing Altimeter Target Altitude Knob",
+			"deviceId": 5,
+			"elementName": "Target_altitude_knob",
+			"type": "continuous"
+		},
+		"WEAPON_SYSTEM.Templates_rotation_helper": {
+			"arg": 796,
+			"argLim": [
+				0.0,
+				0.9
+			],
+			"commandId": 3016,
+			"description": "Manual Pip Control Change Calibrated Dials (Presets)",
+			"deviceId": 5,
+			"elementName": "Templates_rotation_helper",
+			"positions": 4,
+			"step": 0.3,
+			"type": "discrete"
+		},
+		"arg.ARN6_Band": {
+			"arg": 804,
+			"description": "ARN6_Band"
+		},
+		"arg.ARN6_Bearing": {
+			"arg": 600,
+			"description": "ARN6_Bearing"
+		},
+		"arg.ARN6_FreqScale": {
+			"arg": 830,
+			"description": "ARN6_FreqScale"
+		},
+		"arg.ARN6_Scale": {
+			"arg": 814,
+			"description": "ARN6_Scale"
+		},
+		"arg.ARN6_ScaleLight": {
+			"arg": 219,
+			"description": "ARN6_ScaleLight"
+		},
+		"arg.ARN6_TuningMeter": {
+			"arg": 800,
+			"description": "ARN6_TuningMeter"
+		},
+		"arg.Accelerometer": {
+			"arg": 6,
+			"description": "Accelerometer"
+		},
+		"arg.AccelerometerMax": {
+			"arg": 1002,
+			"description": "AccelerometerMax"
+		},
+		"arg.AccelerometerMin": {
+			"arg": 1003,
+			"description": "AccelerometerMin"
+		},
+		"arg.Airspeeed": {
+			"arg": 178,
+			"description": "Airspeeed"
+		},
+		"arg.AirspeeedDrum": {
+			"arg": 709,
+			"description": "AirspeeedDrum"
+		},
+		"arg.AirspeeedM1": {
+			"arg": 8,
+			"description": "AirspeeedM1"
+		},
+		"arg.Altimeter100": {
+			"arg": 524,
+			"description": "Altimeter100"
+		},
+		"arg.Altimeter1000": {
+			"arg": 523,
+			"description": "Altimeter1000"
+		},
+		"arg.Altimeter10000": {
+			"arg": 707,
+			"description": "Altimeter10000"
+		},
+		"arg.AltimeterHG": {
+			"arg": 700,
+			"description": "AltimeterHG"
+		},
+		"arg.AttitudeIndicatorBank": {
+			"arg": 606,
+			"description": "AttitudeIndicatorBank"
+		},
+		"arg.AttitudeIndicatorBankNeedle": {
+			"arg": 1005,
+			"description": "AttitudeIndicatorBankNeedle"
+		},
+		"arg.AttitudeIndicatorOffFlag": {
+			"arg": 713,
+			"description": "AttitudeIndicatorOffFlag"
+		},
+		"arg.AttitudeIndicatorPitch": {
+			"arg": 605,
+			"description": "AttitudeIndicatorPitch"
+		},
+		"arg.AttitudeIndicatorPitchShift": {
+			"arg": 214,
+			"description": "AttitudeIndicatorPitchShift"
+		},
+		"arg.AttitudeIndicatorPitchSphere": {
+			"arg": 81,
+			"description": "AttitudeIndicatorPitchSphere"
+		},
+		"arg.AuxiliaryInstrumentLights": {
+			"arg": 185,
+			"description": "AuxiliaryInstrumentLights"
+		},
+		"arg.CLOCK_currtime_hours": {
+			"arg": 19,
+			"description": "CLOCK_currtime_hours"
+		},
+		"arg.CLOCK_currtime_minutes": {
+			"arg": 18,
+			"description": "CLOCK_currtime_minutes"
+		},
+		"arg.CLOCK_seconds_meter_time_minutes": {
+			"arg": 37,
+			"description": "CLOCK_seconds_meter_time_minutes"
+		},
+		"arg.CLOCK_seconds_meter_time_seconds": {
+			"arg": 1006,
+			"description": "CLOCK_seconds_meter_time_seconds"
+		},
+		"arg.CockpitAltimeter": {
+			"arg": 114,
+			"description": "CockpitAltimeter"
+		},
+		"arg.CockpitCanopy": {
+			"arg": 181,
+			"description": "CockpitCanopy"
+		},
+		"arg.EmergencyJettisonHandleRot": {
+			"arg": 221,
+			"description": "EmergencyJettisonHandleRot"
+		},
+		"arg.ExhaustTemperature": {
+			"arg": 12,
+			"description": "ExhaustTemperature"
+		},
+		"arg.FuelFlow": {
+			"arg": 531,
+			"description": "FuelFlow"
+		},
+		"arg.FuelQuantity": {
+			"arg": 22,
+			"description": "FuelQuantity"
+		},
+		"arg.GyroCompassNeedle": {
+			"arg": 711,
+			"description": "GyroCompassNeedle"
+		},
+		"arg.GyroCompassScale": {
+			"arg": 712,
+			"description": "GyroCompassScale"
+		},
+		"arg.HydPress": {
+			"arg": 109,
+			"description": "HydPress"
+		},
+		"arg.IlluminationLights": {
+			"arg": 182,
+			"description": "IlluminationLights"
+		},
+		"arg.LABS_pitch_needle": {
+			"arg": 604,
+			"description": "LABS_pitch_needle"
+		},
+		"arg.LABS_roll_needle": {
+			"arg": 603,
+			"description": "LABS_roll_needle"
+		},
+		"arg.LandingGearUnsafe": {
+			"arg": 222,
+			"description": "LandingGearUnsafe"
+		},
+		"arg.Left_Wheel_Brake": {
+			"arg": 215,
+			"description": "Left_Wheel_Brake"
+		},
+		"arg.Loadmeter": {
+			"arg": 602,
+			"description": "Loadmeter"
+		},
+		"arg.MachNumber": {
+			"arg": 179,
+			"description": "MachNumber"
+		},
+		"arg.OilPressure": {
+			"arg": 112,
+			"description": "OilPressure"
+		},
+		"arg.OxygenFlowBlinker": {
+			"arg": 705,
+			"description": "OxygenFlowBlinker"
+		},
+		"arg.OxygenPressure": {
+			"arg": 353,
+			"description": "OxygenPressure"
+		},
+		"arg.PilotDraw": {
+			"arg": 540,
+			"description": "PilotDraw"
+		},
+		"arg.PrimaryInstLights": {
+			"arg": 180,
+			"description": "PrimaryInstLights"
+		},
+		"arg.Right_Wheel_Brake": {
+			"arg": 216,
+			"description": "Right_Wheel_Brake"
+		},
+		"arg.Rudder": {
+			"arg": 500,
+			"description": "Rudder"
+		},
+		"arg.SlipIndicator": {
+			"arg": 31,
+			"description": "SlipIndicator"
+		},
+		"arg.StandByCompassLight": {
+			"arg": 825,
+			"description": "StandByCompassLight"
+		},
+		"arg.StickPitch": {
+			"arg": 74,
+			"description": "StickPitch"
+		},
+		"arg.StickRoll": {
+			"arg": 71,
+			"description": "StickRoll"
+		},
+		"arg.Tachometer": {
+			"arg": 16,
+			"description": "Tachometer"
+		},
+		"arg.Throttle": {
+			"arg": 104,
+			"description": "Throttle"
+		},
+		"arg.TurnIndicator": {
+			"arg": 25,
+			"description": "TurnIndicator"
+		},
+		"arg.Variometer": {
+			"arg": 24,
+			"description": "Variometer"
+		},
+		"arg.VoltageDC": {
+			"arg": 601,
+			"description": "VoltageDC"
+		},
+		"arg.lamp_CONTROL_TakeOffPosInd": {
+			"arg": 613,
+			"description": "lamp_CONTROL_TakeOffPosInd"
+		},
+		"arg.lamp_ELEC_BothInstInvertersOff": {
+			"arg": 611,
+			"description": "lamp_ELEC_BothInstInvertersOff"
+		},
+		"arg.lamp_ELEC_GenOff": {
+			"arg": 617,
+			"description": "lamp_ELEC_GenOff"
+		},
+		"arg.lamp_ELEC_MainInstInverterOffSelectAlt": {
+			"arg": 610,
+			"description": "lamp_ELEC_MainInstInverterOffSelectAlt"
+		},
+		"arg.lamp_ELEC_MainRadarInverterOff": {
+			"arg": 612,
+			"description": "lamp_ELEC_MainRadarInverterOff"
+		},
+		"arg.lamp_FIRE_DETECTION_AftFireWarning": {
+			"arg": 616,
+			"description": "lamp_FIRE_DETECTION_AftFireWarning"
+		},
+		"arg.lamp_FIRE_DETECTION_FwdFireWarning": {
+			"arg": 615,
+			"description": "lamp_FIRE_DETECTION_FwdFireWarning"
+		},
+		"arg.lamp_FUEL_OutbdTanksEmpty": {
+			"arg": 625,
+			"description": "lamp_FUEL_OutbdTanksEmpty"
+		},
+		"arg.lamp_HYDRO_AltFltContSysOper": {
+			"arg": 614,
+			"description": "lamp_HYDRO_AltFltContSysOper"
+		},
+		"arg.lamp_HYDRO_LeftGear": {
+			"arg": 39,
+			"description": "lamp_HYDRO_LeftGear"
+		},
+		"arg.lamp_HYDRO_NoseGear": {
+			"arg": 40,
+			"description": "lamp_HYDRO_NoseGear"
+		},
+		"arg.lamp_HYDRO_RightGear": {
+			"arg": 41,
+			"description": "lamp_HYDRO_RightGear"
+		},
+		"arg.lamp_WindshieldAntiIceOverheatWarning": {
+			"arg": 621,
+			"description": "lamp_WindshieldAntiIceOverheatWarning"
+		},
+		"dev0.cmd_3001": {
+			"arg": 3,
+			"argLim": [
+				0.0,
+				1.0
+			],
+			"commandId": 3001,
+			"description": "Toggle Mirrors",
+			"deviceId": 0,
+			"elementName": "MIRRORS",
+			"indicatorArgLim": [
+				0,
+				1
+			],
+			"positions": 2,
+			"step": 1.0,
+			"type": "discrete"
+		},
+		"ind.0": {
+			"description": "ccControlsIndicator_F86F (all fields)",
+			"indicationId": 0
+		},
+		"ind.0.base": {
+			"description": "base",
+			"fieldName": "base",
+			"indicationId": 0
+		},
+		"ind.0.pitch_scale": {
+			"description": "pitch_scale",
+			"fieldName": "pitch_scale",
+			"indicationId": 0
+		},
+		"ind.0.roll_scale": {
+			"description": "roll_scale",
+			"fieldName": "roll_scale",
+			"indicationId": 0
+		},
+		"ind.0.rudder_scale": {
+			"description": "rudder_scale",
+			"fieldName": "rudder_scale",
+			"indicationId": 0
+		},
+		"ind.0.stick_position": {
+			"description": "stick_position",
+			"fieldName": "stick_position",
+			"indicationId": 0
+		},
+		"ind.0.throttle_scale": {
+			"description": "throttle_scale",
+			"fieldName": "throttle_scale",
+			"indicationId": 0
+		},
+		"ind.0.trimmer_stick_position": {
+			"description": "trimmer_stick_position",
+			"fieldName": "trimmer_stick_position",
+			"indicationId": 0
+		},
+		"ind.0.wheel_brake_1": {
+			"description": "wheel_brake_1",
+			"fieldName": "wheel_brake_1",
+			"indicationId": 0
+		},
+		"ind.0.wheel_brake_2": {
+			"description": "wheel_brake_2",
+			"fieldName": "wheel_brake_2",
+			"indicationId": 0
+		},
+		"ind.0.wheel_brake_actual_1": {
+			"description": "wheel_brake_actual_1",
+			"fieldName": "wheel_brake_actual_1",
+			"indicationId": 0
+		},
+		"ind.0.wheel_brake_actual_2": {
+			"description": "wheel_brake_actual_2",
+			"fieldName": "wheel_brake_actual_2",
+			"indicationId": 0
+		},
+		"ind.0.wheel_brake_mask_1": {
+			"description": "wheel_brake_mask_1",
+			"fieldName": "wheel_brake_mask_1",
+			"indicationId": 0
+		},
+		"ind.0.wheel_brake_mask_2": {
+			"description": "wheel_brake_mask_2",
+			"fieldName": "wheel_brake_mask_2",
+			"indicationId": 0
+		},
+		"ind.1": {
+			"description": "ccGunCamera (all fields)",
+			"indicationId": 1
+		},
+		"ind.1.132": {
+			"description": "132",
+			"fieldName": "132",
+			"indicationId": 1
+		},
+		"ind.1.frame_number": {
+			"description": "frame_number",
+			"fieldName": "frame_number",
+			"indicationId": 1
+		},
+		"ind.1.frame_time": {
+			"description": "frame_time",
+			"fieldName": "frame_time",
+			"indicationId": 1
+		},
+		"ind.1.picture": {
+			"description": "picture",
+			"fieldName": "picture",
+			"indicationId": 1
+		},
+		"ind.2": {
+			"description": "ccA4_GunSight (all fields)",
+			"indicationId": 2
+		},
+		"ind.2.2_mils_pipper": {
+			"description": "2_mils_pipper",
+			"fieldName": "2_mils_pipper",
+			"indicationId": 2
+		},
+		"ind.2.SymbologyBox": {
+			"description": "SymbologyBox",
+			"fieldName": "SymbologyBox",
+			"indicationId": 2
+		},
+		"ind.2.total_field_of_view": {
+			"description": "total_field_of_view",
+			"fieldName": "total_field_of_view",
+			"indicationId": 2
+		}
+	},
+	"moduleName": "F-86F Sabre"
+}

@@ -1,0 +1,5984 @@
+{
+	"module": "Mi-24P",
+	"timestamp": "2026-05-01T23:02:45",
+	"delay": 0.08,
+	"elapsed": 304.3,
+	"counts": {
+		"pass": 1006,
+		"fail": 16,
+		"skip": 172,
+		"error": 0
+	},
+	"results": [
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_Ammeter",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_GLAZING_O",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_GLAZING_P",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_LeftEng",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_ManAuto",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_Off",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ANTI_ICE_INTERFACE.ANTIICE_RightEng",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.BACKUP_100KHz",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.BACKUP_10KHz",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.BACKUP_1KHz",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.DIAL_SELECT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.LOOP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.MODE",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.PRIMARY_100KHz",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.PRIMARY_10KHz",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.PRIMARY_1KHz",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.TLF_TLG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_O.VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.BACKUP_100KHz",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.BACKUP_10KHz",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.BACKUP_1KHz",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.DIAL_SELECT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.LOOP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.MODE",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.PRIMARY_100KHz",
+			"status": "pass",
+			"details": "18 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.PRIMARY_10KHz",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.PRIMARY_1KHz",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.TLF_TLG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_15_PANEL_P.VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ARC_U2.CMD_ARC_U2_COMPASS_CONNECT",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ARC_U2.CMD_ARC_U2_FRAME_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_U2.CMD_ARC_U2_ON_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ARC_U2.CMD_ARC_U2_SENS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Interval_2_4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Left",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Release",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Release_Pilot",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Right",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Series_4_16",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASO_2V.ASO_2V_Set_I_II_III",
+			"status": "fail",
+			"details": "pos 0: expected 0.0000, got 0.1000"
+		},
+		{
+			"name": "ASP_17V.Azimuth_Delta",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.4254; 25%: expected 0.2500, got 0.4541; 75%: expected 0.7500, got 0.5467; 100%: expected 1.0000, got 0.5403 (actual range [0.4254, 0.5467] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ASP_17V.Backup_Light_NS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Backup_Light_PM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Base_Range",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ASP_17V.Brightness_NS",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ASP_17V.Brightness_PM",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ASP_17V.Control",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Elevation_Delta",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.0350; 25%: expected 0.2500, got 0.2850; 50%: expected 0.5000, got 0.5350; 100%: expected 1.0000, got 0.8103 (actual range [0.0350, 0.8103] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ASP_17V.Manual_Auto",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Range_Auto_Manual",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Range_Value",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ASP_17V.Reflector_Fix",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Reflector_Move",
+			"status": "fail",
+			"details": "0%: expected 0.0000, got 0.6000; 25%: expected 0.2500, got 0.5000; 75%: expected 0.7500, got 0.6000; 100%: expected 1.0000, got 0.7000 (actual range [0.5000, 0.7000] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "ASP_17V.Sight_Null",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.Sync_Async",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.USR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ASP_17V.USR_check",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonBoff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonBon",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonHoff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonHon",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonKoff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonKon",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonToff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ButtonTon",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.ControlDown",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.DeltaH",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AUTOPILOT.DeltaK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AUTOPILOT.DeltaT",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AUTOPILOT.HeightOff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.HeightOn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.HoverOn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.Lighting",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.RouteAngle",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "AUTOPILOT.RouteHoverOff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.RouteOn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.SpeedOff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.SpeedOn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "AUTOPILOT.Trimmer",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "AUTOPILOT.TrimmerMULT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "BAROALT_O.CMD_ADJUST_PRESSURE",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "BAROALT_P.CMD_ADJUST_PRESSURE",
+			"status": "fail",
+			"details": "increment had no effect (stayed at 0.2960)"
+		},
+		{
+			"name": "CLOCK_O.CLOCK-LEFT-OP-PTR_arg687",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK_O.CLOCK-LEFT-OP-PTR_arg688",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK_O.CLOCK-RIGHT-OP-PTR_arg693",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK_O.CLOCK-RIGHT-OP-PTR_arg694",
+			"status": "fail",
+			"details": "0%: expected -0.1500, got 0.0000; 25%: expected -0.0750, got 0.0000; 75%: expected 0.0750, got 0.1500 (actual range [0.0000, 0.1500] vs expected [-0.15, 0.15])"
+		},
+		{
+			"name": "CLOCK_P.CLOCK-LEFT-PTR_arg57",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK_P.CLOCK-LEFT-PTR_arg58",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "CLOCK_P.CLOCK-RIGHT-PTR_arg59",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CLOCK_P.CLOCK-RIGHT-PTR_arg60",
+			"status": "fail",
+			"details": "0%: expected -0.1500, got 0.0000; 25%: expected -0.0750, got 0.0000; 75%: expected 0.0750, got 0.1500 (actual range [0.0000, 0.1500] vs expected [-0.15, 0.15])"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Canopy",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_ClockHeatCPG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_ClockHeatPLT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_CollectiveStopper",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Elements_Hide",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_EmeregencyGear",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_FAN_OPERATOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_FAN_PILOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Gear_Operator",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Gear_Pilot",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Gear_Pilot_LightsOff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Gear_Pilot_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_OPERATOR_MODE_WIPER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_PILOT_MODE_WIPER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_ParkingBrake",
+			"status": "fail",
+			"details": "pos 0: arg stuck at 0.0000, pos 1: arg stuck at 0.0000 (indicator-range; check manually)"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_PilotDoor_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_PilotDoor_Safety_Lock_Button",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_PitotTotalAndAoASideslip",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_PitotTotalLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_PitotTotalRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_TouchFanCPG",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_TouchFanPLT",
+			"status": "skip",
+			"details": "Missing arg, deviceId, or commandId"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_WheelBrake",
+			"status": "pass",
+			"details": "2 positions OK (indicator-range; exact value not verified)"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_WindSprayerOperator",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_WindSprayerPilot",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Trimmer_myself",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.CHECK_SWITCH",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_DEC_DEVIATION_KM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_DEC_MAP_ANGLE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_DEC_PATH_KM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_INC_DEVIATION_KM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_INC_MAP_ANGLE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_INC_PATH_KM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_OFF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.COORD_ON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.DVS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.W_CHECK_WORK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "DISS_15.W_LAND_SEA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.AutomaticHotCold",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.BlowdownConditioning",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.CabinUnseal",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.Filter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.Heating",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.HeatingAirFlowSight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.Sealing_valve",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "ECS_INTERFACE.Temperature",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ACGangSwitcher",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ACGeneratorLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ACGeneratorRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.ACGroundPower",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.BatteryHeating",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.BatteryLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.BatteryRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_FRAME_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_FRAME_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_AIRSPEED_SENSOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_AUTOPILOT_ALARM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_BEACON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_BOMB_EMERGENCY_DETACH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_BOMB_EXPLOSION",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_EXT_CARGO_EMERGENCY_DROP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_FIRE_1_AUTO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_FIRE_1_MANUAL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_FIRE_ALARM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_GEAR_ALARM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_GEAR_EXTENT_HANDLE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_GLASS_SPRINKLER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_GLASS_WIPER_OP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_GLASS_WIPER_PILOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_HEADLIGHT_CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_HOMING_MISSILE_POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_PILOTING_DEVICE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_PT125Ts",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_PUMP_TANK_1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_PUMP_TANK_5",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_RADIOCOMPASS_HF",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_RECORDER_PARAMS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_SPEECH_INFORMER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_STARTUP_BLOCK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_STARTUP_IGNITION",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_UNGUIDED_ROCKETS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_VALVE_FIRE_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_VALVE_SEPARATION",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_LEFT_VALVE_TANK_1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ANTIICE_ALARM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ANTIICE_CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ARMAMENT_CAMERA_SHUTTER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ARMAMENT_CANNON",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ARMAMENT_CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ARMAMENT_SIGNAL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_BOMB_COMBAT_DROP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_CONDITIONER_CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_CONNECTION_DISTRIBUTION_DEVICE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_CONTROL_CLUTCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_CONTROL_FORCE_MECHANISM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_DUAS_V_HEATING",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_EMERGENCY_DOOR_DETACH_OP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_EMERGENCY_DOOR_DETACH_PILOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ENGINE_TEMP_ADJUST_LEFT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ENGINE_TEMP_ADJUST_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_EXT_STORES_LOCK_RELEASE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_EXT_STORES_TACTICAL_DROP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_FIRE_2_AUTO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_FIRE_2_MANUAL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_FUEL_METER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_GEAR_EXTENT_HANDLE_BACKUP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_LAUNCHER_DETACH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_PILOT_AIM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_PILOT_SEAT_MECHANISM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_PUMP_TANK_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_PUMP_TANK_4",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_ROTOR_RPM_ADJUST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_VALVE_FIRE_RIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.CB_RIGHT_VALVE_TANK_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.DCGangSwitcher",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.DCGenerator",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.DCGroundPower",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GroundCheck",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.NetworkToBatteries",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RectifierLeft",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.RectifierRight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Rotary115vConverter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Rotary36vConverter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Transformer115vMainBackup",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Transformer36vDIMMainBackup",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Transformer36vMainBackup",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ANTIDUST_On",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.COLLECTIVE",
+			"status": "skip",
+			"details": "Missing arg"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CONTROL_LEFT_THROTTLE_CLICK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.CONTROL_RIGHT_THROTTLE_CLICK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.IA6_COLD",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.IA6_HOT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.LEVER_Left_Engine_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.LEVER_Right_Engine_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.LEVER_Rotor_Lock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.OP_COLLECTIVE",
+			"status": "skip",
+			"details": "Missing arg"
+		},
+		{
+			"name": "ENGINE_INTERFACE.READJUST_DOWN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_APU_Launch_Method",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_APU_StartUp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_APU_Stop",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_Engine_InterruptStartUp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_Engine_Launch_Method",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_Engine_Select",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.STARTUP_Engine_StartUp",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUCALYPT_M24.ASU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUCALYPT_M24.CHANNEL_CHANGE",
+			"status": "pass",
+			"details": "10 positions OK"
+		},
+		{
+			"name": "EUCALYPT_M24.NOISE_REDUCTOR_ON_OFF2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUCALYPT_M24.POWER_ON_OFF2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EUCALYPT_M24.VOLUME_CHANGE",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_AutoReleaseSw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_EmergencyReleaseBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_OperatorEmergencyReleaseBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_RemoveRelease",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_TacticalReleaseBtn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.FormationLights",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.HeadlightControl",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.Headlight_Operator_Switch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.NavCodeButton",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.NavLtSwitch",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.OperatorTaxiLight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.PilotTaxiLight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.StrobeLight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.TipLights",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.DisableAlarm",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushAPU1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushAPU2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushLE1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushLE2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushMRED1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushMRED2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushRE1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.ExtingiushRE2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.Pyro1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.SensorControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FIRE_EXTING_INTERFACE.SensorGroup",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "FM_PROXY.STATIC_SYS_MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ExtTank",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FuelMeter",
+			"status": "pass",
+			"details": "7 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FuelMeterButtonH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.FuelMeterButtonP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.Tank1Pump",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.Tank2Pump",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.Tank4Pump",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.Tank5Pump",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveDelimiter",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveLeftEngine",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveRightEngine",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveTank1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveTank2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GREBEN.LATITUDE",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "GREBEN.MATCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GREBEN.MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "GREBEN.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GREBEN.SETUP_OPER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "GREBEN.ZK",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "G_Meter.Command_AccelReset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HELPER_AI.DisengageOperatorStickButton",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HELPER_AI.EngageOperatorStickLever",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.DisableAuxiliaryHydro",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.GearHydro",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.Hydro_Damper_O",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.Hydro_Damper_P",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.Hydro_Damper_Switch_P",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.MainHydro",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_0_04",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_9k113_Backlight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_CHECKING",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_CHECK_LAMPS",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "I9K113.Command_COD1_COD2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_DIAFR_OTKR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_GENER_EMIT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_HIGH_K",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_Heat_O",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_KONTR_T1_B9_KONTR_T2",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "I9K113.Command_NABL",
+			"status": "fail",
+			"details": "pos 1: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "I9K113.Command_OS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_OTKL_BLOCK_ARU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_POWER_PN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_RadiationReset",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_SES",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_SSP_VKL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_START_PM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_STVORKI",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_SWITCHER_IN_OUT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_TABLO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_VHOD_BVK_KV",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "I9K113.Command_WORK_CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "I9K113.Command_ZOOM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_1_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Device_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Disaster_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Erase_Btn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Mode_Sw",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Power_Sw",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.BlinkerSystem",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.CargoLightingWhiteBlue",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.CargoWhiteLightingOn",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.DayNight",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.OperatorCabinLightingWhiteRed",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.PilotCabinLightingWhiteRed",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsOperatorPanel_1",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsOperatorPanel_2",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsPilotBuiltInRedLights",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsPilotInstrumentPanelRightPanel_1",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsPilotInstrumentPanelRightPanel_2",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsPilotLeftPanel_1",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.RedLightsPilotLeftPanel_2",
+			"status": "pass",
+			"details": "11 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.SpecialEquipmentPanelRedLights",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.TestLightsOperator",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.TestLightsPilot",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JADRO_1I.CTL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JADRO_1I.FREQ_100HZ",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "JADRO_1I.FREQ_100KHZ",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "JADRO_1I.FREQ_10KHZ",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "JADRO_1I.FREQ_1KHZ",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "JADRO_1I.FREQ_1MHZ",
+			"status": "pass",
+			"details": "wheel OK (11 positions, step 0.1)"
+		},
+		{
+			"name": "JADRO_1I.MODE",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "JADRO_1I.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "JADRO_1I.SQUELCH",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "JADRO_1I.VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "KM_2.MagneticDeclRotary",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "KM_2.TEST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MAP_DISPLAY.HorAdj",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "MAP_DISPLAY.Lights",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "MAP_DISPLAY.Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MAP_DISPLAY.Scale",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MAP_DISPLAY.VertAdj",
+			"status": "fail",
+			"details": "increment had no effect (stayed at 0.0000)"
+		},
+		{
+			"name": "MGV1SU_1.CAGE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MGV1SU_1.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MGV1SU_2.CAGE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MGV1SU_2.CAGE_OP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "MGV1SU_2.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PKP72M_INTERFACE.GyroverticalSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PKP72M_INTERFACE.PKP72MoperatorSwitch",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PKP72M_O.PitchTrimKnob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "PKP72M_O.TestControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PKP72M_P.PitchTrimKnob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "PKP72M_P.TestControl",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PKV.Brightness",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "PKV.Lock_Unlock",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "PKV.Reflector_Move",
+			"status": "fail",
+			"details": "25%: expected 0.2500, got 0.0000; 50%: expected 0.5000, got 0.0000; 75%: expected 0.7500, got 0.0000; 100%: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "R60_INTERFACE.NC_VC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R60_INTERFACE.Power_OnOff",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R60_INTERFACE.StationSelector",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RADAR_ALTIMETER.ROTARY",
+			"status": "fail",
+			"details": "50%: expected 0.5000, got 0.7500; 75%: expected 0.7500, got 0.5000; 100%: expected 1.0000, got 0.5000 (actual range [0.0000, 0.7500] vs expected [0.0, 1.0])"
+		},
+		{
+			"name": "RADAR_ALTIMETER.TEST",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RMI2_O.MODE_RIGHTSW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "RMI2_P.MODE_RIGHTSW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_852.CHANNEL",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "R_852.VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "R_863.AM_FM",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_863.ARC",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_863.CHANNEL_SEL",
+			"status": "pass",
+			"details": "20 positions OK"
+		},
+		{
+			"name": "R_863.EMERG_RCV",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_863.POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_863.SQUELCH",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "R_863.VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "Recorder_MC61.CMD_Auto_Work",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "Recorder_MC61.CMD_Laryngophone",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "Recorder_MC61.CMD_LightRst",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "Recorder_MC61.CMD_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SARPP12I1.CMD_Mode",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_Cassette1_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_Cassette2_Power",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette1_GREEN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette1_RED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette1_WHITE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette1_YELLOW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette2_GREEN",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette2_RED",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette2_WHITE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SIGNAL_FLARES.CMD_drop_Cassette2_YELLOW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPO_10.Command_DAY_NIGHT",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPO_10.Command_SPO_CHECK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPO_10.Command_SPO_POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPO_10.Command_SPO_SIGNAL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPUU_52.On_Off",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPUU_52.button_off",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPUU_52.control",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SPUU_52.switchDown",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_NETWORK_1",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_NETWORK_2",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_CIRC_FLOW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_ICS",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_ICS_RADIO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_MAIN_VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_MODE",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_NETWORK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_O_RADIO_VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_P_CIRC_FLOW",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_P_ICS_RADIO",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_P_MAIN_VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_P_MODE",
+			"status": "pass",
+			"details": "6 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_P_NETWORK",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_P_RADIO_VOLUME",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_TRIGGER_O",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "SPU_8.CMD_SPU8_TRIGGER_P",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TIMER.CMD_Timer_Left_Right",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "TIMER.CMD_Timer_Left_Rot",
+			"status": "fail",
+			"details": "25%: expected 0.2500, got 0.0000; 50%: expected 0.5000, got 0.0000; 75%: expected 0.7500, got 0.0000; 100%: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "TIMER.CMD_Timer_Left_Up_Down",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TIMER.CMD_Timer_On_Off",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "TIMER.CMD_Timer_Right_Rot",
+			"status": "fail",
+			"details": "25%: expected 0.2500, got 0.0000; 50%: expected 0.5000, got 0.0000; 75%: expected 0.7500, got 0.0000; 100%: expected 1.0000, got 0.0000"
+		},
+		{
+			"name": "TIMER.CMD_Timer_Right_Up_Down",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "UKT_2.PitchTrimKnob",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "VMS.CMD_RI_Mi24_Check",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VMS.CMD_RI_Mi24_Off",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "VMS.CMD_RI_Mi24_Repeat",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_CHAIN_LENGTH_SHORT_MED_LONG",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_CHECK_LAMPS_9C475",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_CHECK_RELEASE_PU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_EMERGE_RELEASE_PU_OPERATOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_EMERG_EXPLODE_OPERATOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_EMERG_RELEASE_OPERATOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_OPERATOR_RATE_MORE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_POWER_SHO_SWITCHER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_RELOAD_NPU30",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_RUV_FIRE_OPERATOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_START_KMG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_STOP_KMG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_SWITCHER_BOMB_BLOCK_BOMB",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_SWITCHER_CONTROL_On_ME_OPERATOR",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_SWITCHER_LAUNCH_STATION",
+			"status": "pass",
+			"details": "9 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_SWITCHER_SAFE_WEAP",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_SWITCHER_WEAP_TYPE_AB",
+			"status": "pass",
+			"details": "5 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_URS_POWER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_BOTH_LEFT_RIGHT",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_Counter1",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_Counter2",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_Counter3",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_Counter4",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_Counter5",
+			"status": "pass",
+			"details": "increment/decrement OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_EMERG_EXPLODE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_EMERG_RELEASE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_EMERG_RELEASE_PU",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_FKP_CAMERA",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_NPU_CHAIN",
+			"status": "pass",
+			"details": "3 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_PUS_ARMING",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_RELOAD_LEFT",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_RELOAD_NPU30",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_RELOAD_RIGHT",
+			"status": "pass",
+			"details": "4 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_RUV_FIRE",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_STOP_KMG",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_SWITCHER_FIRE_CONTROL",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_SWITCHER_OFF_GM_URS_NPU",
+			"status": "pass",
+			"details": "9 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_TEMP_NPU30",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "arg.1",
+			"status": "pass",
+			"details": "arg 1 = -0.0876"
+		},
+		{
+			"name": "arg.102",
+			"status": "pass",
+			"details": "arg 102 = 0.0001"
+		},
+		{
+			"name": "arg.1021",
+			"status": "pass",
+			"details": "arg 1021 = 1.0000"
+		},
+		{
+			"name": "arg.1022",
+			"status": "pass",
+			"details": "arg 1022 = 0.0427"
+		},
+		{
+			"name": "arg.1023",
+			"status": "pass",
+			"details": "arg 1023 = 0.1088"
+		},
+		{
+			"name": "arg.1026",
+			"status": "pass",
+			"details": "arg 1026 = 0.0000"
+		},
+		{
+			"name": "arg.1027",
+			"status": "pass",
+			"details": "arg 1027 = 0.0891"
+		},
+		{
+			"name": "arg.1028",
+			"status": "pass",
+			"details": "arg 1028 = 1.0000"
+		},
+		{
+			"name": "arg.1029",
+			"status": "pass",
+			"details": "arg 1029 = 0.0000"
+		},
+		{
+			"name": "arg.103",
+			"status": "pass",
+			"details": "arg 103 = 0.0000"
+		},
+		{
+			"name": "arg.1030",
+			"status": "pass",
+			"details": "arg 1030 = 0.0000"
+		},
+		{
+			"name": "arg.1031",
+			"status": "pass",
+			"details": "arg 1031 = 0.0000"
+		},
+		{
+			"name": "arg.104",
+			"status": "pass",
+			"details": "arg 104 = 0.0000"
+		},
+		{
+			"name": "arg.105",
+			"status": "pass",
+			"details": "arg 105 = 0.0000"
+		},
+		{
+			"name": "arg.106",
+			"status": "pass",
+			"details": "arg 106 = 0.0000"
+		},
+		{
+			"name": "arg.107",
+			"status": "pass",
+			"details": "arg 107 = 0.0000"
+		},
+		{
+			"name": "arg.108",
+			"status": "pass",
+			"details": "arg 108 = 0.0000"
+		},
+		{
+			"name": "arg.1080",
+			"status": "pass",
+			"details": "arg 1080 = 0.5000"
+		},
+		{
+			"name": "arg.1081",
+			"status": "pass",
+			"details": "arg 1081 = 0.5000"
+		},
+		{
+			"name": "arg.1082",
+			"status": "pass",
+			"details": "arg 1082 = 0.0000"
+		},
+		{
+			"name": "arg.1090",
+			"status": "pass",
+			"details": "arg 1090 = -0.2377"
+		},
+		{
+			"name": "arg.1091",
+			"status": "pass",
+			"details": "arg 1091 = -1.0000"
+		},
+		{
+			"name": "arg.1092",
+			"status": "pass",
+			"details": "arg 1092 = -0.3395"
+		},
+		{
+			"name": "arg.1093",
+			"status": "pass",
+			"details": "arg 1093 = 0.0779"
+		},
+		{
+			"name": "arg.1094",
+			"status": "pass",
+			"details": "arg 1094 = 0.0000"
+		},
+		{
+			"name": "arg.1095",
+			"status": "pass",
+			"details": "arg 1095 = 0.0000"
+		},
+		{
+			"name": "arg.11",
+			"status": "pass",
+			"details": "arg 11 = 0.0000"
+		},
+		{
+			"name": "arg.1100",
+			"status": "pass",
+			"details": "arg 1100 = 0.0000"
+		},
+		{
+			"name": "arg.1101",
+			"status": "pass",
+			"details": "arg 1101 = 0.0000"
+		},
+		{
+			"name": "arg.1102",
+			"status": "pass",
+			"details": "arg 1102 = 0.0000"
+		},
+		{
+			"name": "arg.1103",
+			"status": "pass",
+			"details": "arg 1103 = 0.0000"
+		},
+		{
+			"name": "arg.1106",
+			"status": "pass",
+			"details": "arg 1106 = 0.0000"
+		},
+		{
+			"name": "arg.1108",
+			"status": "pass",
+			"details": "arg 1108 = 0.0000"
+		},
+		{
+			"name": "arg.1109",
+			"status": "pass",
+			"details": "arg 1109 = 1.0000"
+		},
+		{
+			"name": "arg.1110",
+			"status": "pass",
+			"details": "arg 1110 = -0.0111"
+		},
+		{
+			"name": "arg.1111",
+			"status": "pass",
+			"details": "arg 1111 = -0.0876"
+		},
+		{
+			"name": "arg.1112",
+			"status": "pass",
+			"details": "arg 1112 = -1.0000"
+		},
+		{
+			"name": "arg.1113",
+			"status": "pass",
+			"details": "arg 1113 = 0.6083"
+		},
+		{
+			"name": "arg.1116",
+			"status": "pass",
+			"details": "arg 1116 = 0.0000"
+		},
+		{
+			"name": "arg.1118",
+			"status": "pass",
+			"details": "arg 1118 = 0.0000"
+		},
+		{
+			"name": "arg.1119",
+			"status": "pass",
+			"details": "arg 1119 = 1.0000"
+		},
+		{
+			"name": "arg.1120",
+			"status": "pass",
+			"details": "arg 1120 = 0.1320"
+		},
+		{
+			"name": "arg.1121",
+			"status": "pass",
+			"details": "arg 1121 = 0.0000"
+		},
+		{
+			"name": "arg.1125",
+			"status": "pass",
+			"details": "arg 1125 = 0.0000"
+		},
+		{
+			"name": "arg.1126",
+			"status": "pass",
+			"details": "arg 1126 = 0.0000"
+		},
+		{
+			"name": "arg.1129",
+			"status": "pass",
+			"details": "arg 1129 = 0.0000"
+		},
+		{
+			"name": "arg.1140",
+			"status": "pass",
+			"details": "arg 1140 = 0.1380"
+		},
+		{
+			"name": "arg.1141",
+			"status": "pass",
+			"details": "arg 1141 = 0.0000"
+		},
+		{
+			"name": "arg.1145",
+			"status": "pass",
+			"details": "arg 1145 = 0.0000"
+		},
+		{
+			"name": "arg.1149",
+			"status": "pass",
+			"details": "arg 1149 = 0.0000"
+		},
+		{
+			"name": "arg.115",
+			"status": "pass",
+			"details": "arg 115 = 0.0000"
+		},
+		{
+			"name": "arg.1156",
+			"status": "pass",
+			"details": "arg 1156 = 1.0000"
+		},
+		{
+			"name": "arg.1157",
+			"status": "pass",
+			"details": "arg 1157 = 0.0000"
+		},
+		{
+			"name": "arg.116",
+			"status": "pass",
+			"details": "arg 116 = 0.0000"
+		},
+		{
+			"name": "arg.117",
+			"status": "pass",
+			"details": "arg 117 = 0.0000"
+		},
+		{
+			"name": "arg.118",
+			"status": "pass",
+			"details": "arg 118 = 0.0000"
+		},
+		{
+			"name": "arg.13",
+			"status": "pass",
+			"details": "arg 13 = 0.5858"
+		},
+		{
+			"name": "arg.131",
+			"status": "pass",
+			"details": "arg 131 = 0.0000"
+		},
+		{
+			"name": "arg.132",
+			"status": "pass",
+			"details": "arg 132 = 0.0000"
+		},
+		{
+			"name": "arg.135",
+			"status": "pass",
+			"details": "arg 135 = 0.0000"
+		},
+		{
+			"name": "arg.137",
+			"status": "pass",
+			"details": "arg 137 = 0.0000"
+		},
+		{
+			"name": "arg.138",
+			"status": "pass",
+			"details": "arg 138 = 0.0000"
+		},
+		{
+			"name": "arg.139",
+			"status": "pass",
+			"details": "arg 139 = 0.0000"
+		},
+		{
+			"name": "arg.140",
+			"status": "pass",
+			"details": "arg 140 = 0.0000"
+		},
+		{
+			"name": "arg.150",
+			"status": "pass",
+			"details": "arg 150 = 0.0000"
+		},
+		{
+			"name": "arg.151",
+			"status": "pass",
+			"details": "arg 151 = 0.0000"
+		},
+		{
+			"name": "arg.152",
+			"status": "pass",
+			"details": "arg 152 = 0.0000"
+		},
+		{
+			"name": "arg.153",
+			"status": "pass",
+			"details": "arg 153 = 0.0000"
+		},
+		{
+			"name": "arg.154",
+			"status": "pass",
+			"details": "arg 154 = 0.0000"
+		},
+		{
+			"name": "arg.155",
+			"status": "pass",
+			"details": "arg 155 = 0.0000"
+		},
+		{
+			"name": "arg.156",
+			"status": "pass",
+			"details": "arg 156 = 0.0000"
+		},
+		{
+			"name": "arg.157",
+			"status": "pass",
+			"details": "arg 157 = 0.0000"
+		},
+		{
+			"name": "arg.158",
+			"status": "pass",
+			"details": "arg 158 = 0.0000"
+		},
+		{
+			"name": "arg.16",
+			"status": "pass",
+			"details": "arg 16 = 0.2960"
+		},
+		{
+			"name": "arg.161",
+			"status": "pass",
+			"details": "arg 161 = 0.0000"
+		},
+		{
+			"name": "arg.162",
+			"status": "pass",
+			"details": "arg 162 = 0.0000"
+		},
+		{
+			"name": "arg.163",
+			"status": "pass",
+			"details": "arg 163 = 0.0000"
+		},
+		{
+			"name": "arg.17",
+			"status": "pass",
+			"details": "arg 17 = 0.2960"
+		},
+		{
+			"name": "arg.172",
+			"status": "pass",
+			"details": "arg 172 = 0.0000"
+		},
+		{
+			"name": "arg.175",
+			"status": "pass",
+			"details": "arg 175 = 0.0000"
+		},
+		{
+			"name": "arg.176",
+			"status": "pass",
+			"details": "arg 176 = 0.0000"
+		},
+		{
+			"name": "arg.177",
+			"status": "pass",
+			"details": "arg 177 = 0.0000"
+		},
+		{
+			"name": "arg.178",
+			"status": "pass",
+			"details": "arg 178 = 0.0000"
+		},
+		{
+			"name": "arg.179",
+			"status": "pass",
+			"details": "arg 179 = 0.2501"
+		},
+		{
+			"name": "arg.180",
+			"status": "pass",
+			"details": "arg 180 = 0.1824"
+		},
+		{
+			"name": "arg.181",
+			"status": "pass",
+			"details": "arg 181 = 0.0005"
+		},
+		{
+			"name": "arg.182",
+			"status": "pass",
+			"details": "arg 182 = 0.0005"
+		},
+		{
+			"name": "arg.183",
+			"status": "pass",
+			"details": "arg 183 = 0.1581"
+		},
+		{
+			"name": "arg.184",
+			"status": "pass",
+			"details": "arg 184 = 0.0005"
+		},
+		{
+			"name": "arg.185",
+			"status": "pass",
+			"details": "arg 185 = 0.1564"
+		},
+		{
+			"name": "arg.186",
+			"status": "pass",
+			"details": "arg 186 = 0.0005"
+		},
+		{
+			"name": "arg.188",
+			"status": "pass",
+			"details": "arg 188 = 0.1824"
+		},
+		{
+			"name": "arg.19",
+			"status": "pass",
+			"details": "arg 19 = 0.0491"
+		},
+		{
+			"name": "arg.190",
+			"status": "pass",
+			"details": "arg 190 = 0.1963"
+		},
+		{
+			"name": "arg.197",
+			"status": "pass",
+			"details": "arg 197 = 0.0000"
+		},
+		{
+			"name": "arg.2",
+			"status": "pass",
+			"details": "arg 2 = -0.0111"
+		},
+		{
+			"name": "arg.20",
+			"status": "pass",
+			"details": "arg 20 = 0.4913"
+		},
+		{
+			"name": "arg.200",
+			"status": "pass",
+			"details": "arg 200 = 0.0000"
+		},
+		{
+			"name": "arg.201",
+			"status": "pass",
+			"details": "arg 201 = 0.0000"
+		},
+		{
+			"name": "arg.202",
+			"status": "pass",
+			"details": "arg 202 = 0.0000"
+		},
+		{
+			"name": "arg.209",
+			"status": "pass",
+			"details": "arg 209 = 0.0000"
+		},
+		{
+			"name": "arg.21",
+			"status": "pass",
+			"details": "arg 21 = 0.7500"
+		},
+		{
+			"name": "arg.210",
+			"status": "pass",
+			"details": "arg 210 = 0.7653"
+		},
+		{
+			"name": "arg.211",
+			"status": "pass",
+			"details": "arg 211 = 0.0000"
+		},
+		{
+			"name": "arg.212",
+			"status": "pass",
+			"details": "arg 212 = 0.0000"
+		},
+		{
+			"name": "arg.22",
+			"status": "pass",
+			"details": "arg 22 = 0.0040"
+		},
+		{
+			"name": "arg.220",
+			"status": "pass",
+			"details": "arg 220 = 0.7653"
+		},
+		{
+			"name": "arg.221",
+			"status": "pass",
+			"details": "arg 221 = 0.7653"
+		},
+		{
+			"name": "arg.222",
+			"status": "pass",
+			"details": "arg 222 = 0.0000"
+		},
+		{
+			"name": "arg.225",
+			"status": "pass",
+			"details": "arg 225 = 0.0000"
+		},
+		{
+			"name": "arg.226",
+			"status": "pass",
+			"details": "arg 226 = 0.0000"
+		},
+		{
+			"name": "arg.227",
+			"status": "pass",
+			"details": "arg 227 = 0.0000"
+		},
+		{
+			"name": "arg.229",
+			"status": "pass",
+			"details": "arg 229 = 0.7653"
+		},
+		{
+			"name": "arg.23",
+			"status": "pass",
+			"details": "arg 23 = 0.0040"
+		},
+		{
+			"name": "arg.230",
+			"status": "pass",
+			"details": "arg 230 = 0.7653"
+		},
+		{
+			"name": "arg.231",
+			"status": "pass",
+			"details": "arg 231 = 0.7653"
+		},
+		{
+			"name": "arg.233",
+			"status": "pass",
+			"details": "arg 233 = 0.0000"
+		},
+		{
+			"name": "arg.235",
+			"status": "pass",
+			"details": "arg 235 = -0.0000"
+		},
+		{
+			"name": "arg.238",
+			"status": "pass",
+			"details": "arg 238 = 0.0000"
+		},
+		{
+			"name": "arg.239",
+			"status": "pass",
+			"details": "arg 239 = 0.0000"
+		},
+		{
+			"name": "arg.24",
+			"status": "pass",
+			"details": "arg 24 = 0.0040"
+		},
+		{
+			"name": "arg.241",
+			"status": "pass",
+			"details": "arg 241 = 0.0000"
+		},
+		{
+			"name": "arg.244",
+			"status": "pass",
+			"details": "arg 244 = 0.0000"
+		},
+		{
+			"name": "arg.245",
+			"status": "pass",
+			"details": "arg 245 = 0.0000"
+		},
+		{
+			"name": "arg.247",
+			"status": "pass",
+			"details": "arg 247 = 0.0000"
+		},
+		{
+			"name": "arg.25",
+			"status": "pass",
+			"details": "arg 25 = 0.0027"
+		},
+		{
+			"name": "arg.251",
+			"status": "pass",
+			"details": "arg 251 = -0.0000"
+		},
+		{
+			"name": "arg.256",
+			"status": "pass",
+			"details": "arg 256 = -0.0000"
+		},
+		{
+			"name": "arg.263",
+			"status": "pass",
+			"details": "arg 263 = 1.0000"
+		},
+		{
+			"name": "arg.264",
+			"status": "pass",
+			"details": "arg 264 = 1.0000"
+		},
+		{
+			"name": "arg.265",
+			"status": "pass",
+			"details": "arg 265 = 1.0000"
+		},
+		{
+			"name": "arg.266",
+			"status": "pass",
+			"details": "arg 266 = 0.6083"
+		},
+		{
+			"name": "arg.27",
+			"status": "pass",
+			"details": "arg 27 = 0.0027"
+		},
+		{
+			"name": "arg.271",
+			"status": "pass",
+			"details": "arg 271 = -1.0000"
+		},
+		{
+			"name": "arg.278",
+			"status": "pass",
+			"details": "arg 278 = 0.7653"
+		},
+		{
+			"name": "arg.279",
+			"status": "pass",
+			"details": "arg 279 = 0.0000"
+		},
+		{
+			"name": "arg.28",
+			"status": "pass",
+			"details": "arg 28 = 0.0000"
+		},
+		{
+			"name": "arg.280",
+			"status": "pass",
+			"details": "arg 280 = 0.7653"
+		},
+		{
+			"name": "arg.281",
+			"status": "pass",
+			"details": "arg 281 = 0.0000"
+		},
+		{
+			"name": "arg.282",
+			"status": "pass",
+			"details": "arg 282 = 0.0000"
+		},
+		{
+			"name": "arg.283",
+			"status": "pass",
+			"details": "arg 283 = 0.0000"
+		},
+		{
+			"name": "arg.284",
+			"status": "pass",
+			"details": "arg 284 = 0.0000"
+		},
+		{
+			"name": "arg.288",
+			"status": "pass",
+			"details": "arg 288 = 0.0000"
+		},
+		{
+			"name": "arg.292",
+			"status": "pass",
+			"details": "arg 292 = 0.0176"
+		},
+		{
+			"name": "arg.293",
+			"status": "pass",
+			"details": "arg 293 = 0.7653"
+		},
+		{
+			"name": "arg.294",
+			"status": "pass",
+			"details": "arg 294 = 0.0000"
+		},
+		{
+			"name": "arg.295",
+			"status": "pass",
+			"details": "arg 295 = 0.7653"
+		},
+		{
+			"name": "arg.296",
+			"status": "pass",
+			"details": "arg 296 = 0.0000"
+		},
+		{
+			"name": "arg.297",
+			"status": "pass",
+			"details": "arg 297 = 0.0000"
+		},
+		{
+			"name": "arg.298",
+			"status": "pass",
+			"details": "arg 298 = 0.7653"
+		},
+		{
+			"name": "arg.299",
+			"status": "pass",
+			"details": "arg 299 = 0.0000"
+		},
+		{
+			"name": "arg.3",
+			"status": "pass",
+			"details": "arg 3 = -1.0000"
+		},
+		{
+			"name": "arg.302",
+			"status": "pass",
+			"details": "arg 302 = 0.7653"
+		},
+		{
+			"name": "arg.303",
+			"status": "pass",
+			"details": "arg 303 = 0.7653"
+		},
+		{
+			"name": "arg.304",
+			"status": "pass",
+			"details": "arg 304 = 0.0000"
+		},
+		{
+			"name": "arg.305",
+			"status": "pass",
+			"details": "arg 305 = 0.0023"
+		},
+		{
+			"name": "arg.306",
+			"status": "pass",
+			"details": "arg 306 = 0.0000"
+		},
+		{
+			"name": "arg.309",
+			"status": "pass",
+			"details": "arg 309 = 0.0000"
+		},
+		{
+			"name": "arg.310",
+			"status": "pass",
+			"details": "arg 310 = 0.0000"
+		},
+		{
+			"name": "arg.316",
+			"status": "pass",
+			"details": "arg 316 = 0.0000"
+		},
+		{
+			"name": "arg.317",
+			"status": "pass",
+			"details": "arg 317 = 0.0000"
+		},
+		{
+			"name": "arg.32",
+			"status": "pass",
+			"details": "arg 32 = 0.9999"
+		},
+		{
+			"name": "arg.323",
+			"status": "pass",
+			"details": "arg 323 = 0.0000"
+		},
+		{
+			"name": "arg.33",
+			"status": "pass",
+			"details": "arg 33 = 0.8360"
+		},
+		{
+			"name": "arg.333",
+			"status": "pass",
+			"details": "arg 333 = 0.0000"
+		},
+		{
+			"name": "arg.335",
+			"status": "pass",
+			"details": "arg 335 = 0.0000"
+		},
+		{
+			"name": "arg.338",
+			"status": "pass",
+			"details": "arg 338 = 0.0000"
+		},
+		{
+			"name": "arg.342",
+			"status": "pass",
+			"details": "arg 342 = 0.0000"
+		},
+		{
+			"name": "arg.358",
+			"status": "pass",
+			"details": "arg 358 = 0.7653"
+		},
+		{
+			"name": "arg.36",
+			"status": "pass",
+			"details": "arg 36 = 0.0000"
+		},
+		{
+			"name": "arg.37",
+			"status": "pass",
+			"details": "arg 37 = 0.0041"
+		},
+		{
+			"name": "arg.379",
+			"status": "pass",
+			"details": "arg 379 = 1.0000"
+		},
+		{
+			"name": "arg.38",
+			"status": "pass",
+			"details": "arg 38 = 0.0037"
+		},
+		{
+			"name": "arg.388",
+			"status": "pass",
+			"details": "arg 388 = 0.0000"
+		},
+		{
+			"name": "arg.39",
+			"status": "pass",
+			"details": "arg 39 = 0.6264"
+		},
+		{
+			"name": "arg.390",
+			"status": "pass",
+			"details": "arg 390 = 0.0000"
+		},
+		{
+			"name": "arg.391",
+			"status": "pass",
+			"details": "arg 391 = 0.0000"
+		},
+		{
+			"name": "arg.393",
+			"status": "pass",
+			"details": "arg 393 = 0.0000"
+		},
+		{
+			"name": "arg.395",
+			"status": "pass",
+			"details": "arg 395 = 0.0000"
+		},
+		{
+			"name": "arg.398",
+			"status": "pass",
+			"details": "arg 398 = 0.0000"
+		},
+		{
+			"name": "arg.40",
+			"status": "pass",
+			"details": "arg 40 = 0.0000"
+		},
+		{
+			"name": "arg.401",
+			"status": "pass",
+			"details": "arg 401 = 0.0000"
+		},
+		{
+			"name": "arg.403",
+			"status": "pass",
+			"details": "arg 403 = 0.0000"
+		},
+		{
+			"name": "arg.405",
+			"status": "pass",
+			"details": "arg 405 = 0.0000"
+		},
+		{
+			"name": "arg.407",
+			"status": "pass",
+			"details": "arg 407 = 0.7653"
+		},
+		{
+			"name": "arg.409",
+			"status": "pass",
+			"details": "arg 409 = 0.0000"
+		},
+		{
+			"name": "arg.41",
+			"status": "pass",
+			"details": "arg 41 = 0.0000"
+		},
+		{
+			"name": "arg.412",
+			"status": "pass",
+			"details": "arg 412 = 0.0000"
+		},
+		{
+			"name": "arg.413",
+			"status": "pass",
+			"details": "arg 413 = 0.0000"
+		},
+		{
+			"name": "arg.42",
+			"status": "pass",
+			"details": "arg 42 = 0.1982"
+		},
+		{
+			"name": "arg.422",
+			"status": "pass",
+			"details": "arg 422 = 0.0000"
+		},
+		{
+			"name": "arg.424",
+			"status": "pass",
+			"details": "arg 424 = 0.0000"
+		},
+		{
+			"name": "arg.425",
+			"status": "pass",
+			"details": "arg 425 = 0.0000"
+		},
+		{
+			"name": "arg.43",
+			"status": "pass",
+			"details": "arg 43 = 0.0004"
+		},
+		{
+			"name": "arg.44",
+			"status": "pass",
+			"details": "arg 44 = 0.0044"
+		},
+		{
+			"name": "arg.440",
+			"status": "pass",
+			"details": "arg 440 = 0.5000"
+		},
+		{
+			"name": "arg.441",
+			"status": "pass",
+			"details": "arg 441 = 0.7000"
+		},
+		{
+			"name": "arg.442",
+			"status": "pass",
+			"details": "arg 442 = 0.6000"
+		},
+		{
+			"name": "arg.443",
+			"status": "pass",
+			"details": "arg 443 = 0.0000"
+		},
+		{
+			"name": "arg.444",
+			"status": "pass",
+			"details": "arg 444 = 0.5000"
+		},
+		{
+			"name": "arg.445",
+			"status": "pass",
+			"details": "arg 445 = 0.7000"
+		},
+		{
+			"name": "arg.446",
+			"status": "pass",
+			"details": "arg 446 = 0.6000"
+		},
+		{
+			"name": "arg.447",
+			"status": "pass",
+			"details": "arg 447 = 1.0000"
+		},
+		{
+			"name": "arg.45",
+			"status": "pass",
+			"details": "arg 45 = 0.0004"
+		},
+		{
+			"name": "arg.46",
+			"status": "pass",
+			"details": "arg 46 = 0.0049"
+		},
+		{
+			"name": "arg.470",
+			"status": "pass",
+			"details": "arg 470 = 0.0000"
+		},
+		{
+			"name": "arg.471",
+			"status": "pass",
+			"details": "arg 471 = 0.7653"
+		},
+		{
+			"name": "arg.472",
+			"status": "pass",
+			"details": "arg 472 = 0.7653"
+		},
+		{
+			"name": "arg.473",
+			"status": "pass",
+			"details": "arg 473 = 0.0000"
+		},
+		{
+			"name": "arg.474",
+			"status": "pass",
+			"details": "arg 474 = 0.7653"
+		},
+		{
+			"name": "arg.475",
+			"status": "pass",
+			"details": "arg 475 = 0.7653"
+		},
+		{
+			"name": "arg.476",
+			"status": "pass",
+			"details": "arg 476 = 0.0000"
+		},
+		{
+			"name": "arg.477",
+			"status": "pass",
+			"details": "arg 477 = 0.7653"
+		},
+		{
+			"name": "arg.478",
+			"status": "pass",
+			"details": "arg 478 = 0.7653"
+		},
+		{
+			"name": "arg.479",
+			"status": "pass",
+			"details": "arg 479 = 0.0000"
+		},
+		{
+			"name": "arg.480",
+			"status": "pass",
+			"details": "arg 480 = 0.7653"
+		},
+		{
+			"name": "arg.481",
+			"status": "pass",
+			"details": "arg 481 = 0.7653"
+		},
+		{
+			"name": "arg.483",
+			"status": "pass",
+			"details": "arg 483 = 0.0000"
+		},
+		{
+			"name": "arg.49",
+			"status": "pass",
+			"details": "arg 49 = 0.6691"
+		},
+		{
+			"name": "arg.50",
+			"status": "pass",
+			"details": "arg 50 = 0.0290"
+		},
+		{
+			"name": "arg.508",
+			"status": "pass",
+			"details": "arg 508 = 0.0000"
+		},
+		{
+			"name": "arg.51",
+			"status": "pass",
+			"details": "arg 51 = 0.7458"
+		},
+		{
+			"name": "arg.512",
+			"status": "pass",
+			"details": "arg 512 = 0.0000"
+		},
+		{
+			"name": "arg.519",
+			"status": "pass",
+			"details": "arg 519 = 0.0000"
+		},
+		{
+			"name": "arg.52",
+			"status": "pass",
+			"details": "arg 52 = 0.0000"
+		},
+		{
+			"name": "arg.525",
+			"status": "pass",
+			"details": "arg 525 = 0.5057"
+		},
+		{
+			"name": "arg.53",
+			"status": "pass",
+			"details": "arg 53 = 0.0000"
+		},
+		{
+			"name": "arg.532",
+			"status": "pass",
+			"details": "arg 532 = 0.0000"
+		},
+		{
+			"name": "arg.533",
+			"status": "pass",
+			"details": "arg 533 = 0.0000"
+		},
+		{
+			"name": "arg.534",
+			"status": "pass",
+			"details": "arg 534 = 0.0000"
+		},
+		{
+			"name": "arg.535",
+			"status": "pass",
+			"details": "arg 535 = 0.0000"
+		},
+		{
+			"name": "arg.539",
+			"status": "pass",
+			"details": "arg 539 = 0.0000"
+		},
+		{
+			"name": "arg.54",
+			"status": "pass",
+			"details": "arg 54 = 0.0002"
+		},
+		{
+			"name": "arg.540",
+			"status": "pass",
+			"details": "arg 540 = 0.0000"
+		},
+		{
+			"name": "arg.543",
+			"status": "pass",
+			"details": "arg 543 = 0.0000"
+		},
+		{
+			"name": "arg.544",
+			"status": "pass",
+			"details": "arg 544 = 0.0000"
+		},
+		{
+			"name": "arg.548",
+			"status": "pass",
+			"details": "arg 548 = 0.0000"
+		},
+		{
+			"name": "arg.55",
+			"status": "pass",
+			"details": "arg 55 = 0.0132"
+		},
+		{
+			"name": "arg.555",
+			"status": "pass",
+			"details": "arg 555 = 0.7611"
+		},
+		{
+			"name": "arg.558",
+			"status": "pass",
+			"details": "arg 558 = 0.0000"
+		},
+		{
+			"name": "arg.559",
+			"status": "pass",
+			"details": "arg 559 = 0.0000"
+		},
+		{
+			"name": "arg.56",
+			"status": "pass",
+			"details": "arg 56 = 0.0000"
+		},
+		{
+			"name": "arg.560",
+			"status": "pass",
+			"details": "arg 560 = 0.0000"
+		},
+		{
+			"name": "arg.561",
+			"status": "pass",
+			"details": "arg 561 = 0.0000"
+		},
+		{
+			"name": "arg.562",
+			"status": "pass",
+			"details": "arg 562 = 0.0000"
+		},
+		{
+			"name": "arg.563",
+			"status": "pass",
+			"details": "arg 563 = 0.0000"
+		},
+		{
+			"name": "arg.565",
+			"status": "pass",
+			"details": "arg 565 = 0.5005"
+		},
+		{
+			"name": "arg.571",
+			"status": "pass",
+			"details": "arg 571 = 0.0000"
+		},
+		{
+			"name": "arg.63",
+			"status": "pass",
+			"details": "arg 63 = 0.7653"
+		},
+		{
+			"name": "arg.64",
+			"status": "pass",
+			"details": "arg 64 = 0.7653"
+		},
+		{
+			"name": "arg.646",
+			"status": "pass",
+			"details": "arg 646 = 0.9983"
+		},
+		{
+			"name": "arg.648",
+			"status": "pass",
+			"details": "arg 648 = 0.0000"
+		},
+		{
+			"name": "arg.649",
+			"status": "pass",
+			"details": "arg 649 = 0.7000"
+		},
+		{
+			"name": "arg.650",
+			"status": "pass",
+			"details": "arg 650 = 0.0000"
+		},
+		{
+			"name": "arg.651",
+			"status": "pass",
+			"details": "arg 651 = 0.0000"
+		},
+		{
+			"name": "arg.652",
+			"status": "pass",
+			"details": "arg 652 = 0.0000"
+		},
+		{
+			"name": "arg.653",
+			"status": "pass",
+			"details": "arg 653 = 0.0000"
+		},
+		{
+			"name": "arg.654",
+			"status": "pass",
+			"details": "arg 654 = 0.0000"
+		},
+		{
+			"name": "arg.655",
+			"status": "pass",
+			"details": "arg 655 = 0.0000"
+		},
+		{
+			"name": "arg.662",
+			"status": "pass",
+			"details": "arg 662 = 0.0000"
+		},
+		{
+			"name": "arg.663",
+			"status": "pass",
+			"details": "arg 663 = 0.0000"
+		},
+		{
+			"name": "arg.67",
+			"status": "pass",
+			"details": "arg 67 = 0.0000"
+		},
+		{
+			"name": "arg.678",
+			"status": "pass",
+			"details": "arg 678 = 0.0000"
+		},
+		{
+			"name": "arg.679",
+			"status": "pass",
+			"details": "arg 679 = 0.0000"
+		},
+		{
+			"name": "arg.68",
+			"status": "pass",
+			"details": "arg 68 = 0.0002"
+		},
+		{
+			"name": "arg.683",
+			"status": "pass",
+			"details": "arg 683 = 0.7653"
+		},
+		{
+			"name": "arg.684",
+			"status": "pass",
+			"details": "arg 684 = 0.7653"
+		},
+		{
+			"name": "arg.685",
+			"status": "pass",
+			"details": "arg 685 = 0.7653"
+		},
+		{
+			"name": "arg.689",
+			"status": "pass",
+			"details": "arg 689 = 0.0000"
+		},
+		{
+			"name": "arg.690",
+			"status": "pass",
+			"details": "arg 690 = 0.4033"
+		},
+		{
+			"name": "arg.691",
+			"status": "pass",
+			"details": "arg 691 = 0.0000"
+		},
+		{
+			"name": "arg.692",
+			"status": "pass",
+			"details": "arg 692 = 0.0000"
+		},
+		{
+			"name": "arg.695",
+			"status": "pass",
+			"details": "arg 695 = 0.6742"
+		},
+		{
+			"name": "arg.697",
+			"status": "pass",
+			"details": "arg 697 = 0.0000"
+		},
+		{
+			"name": "arg.698",
+			"status": "pass",
+			"details": "arg 698 = 0.0000"
+		},
+		{
+			"name": "arg.702",
+			"status": "pass",
+			"details": "arg 702 = 0.0000"
+		},
+		{
+			"name": "arg.703",
+			"status": "pass",
+			"details": "arg 703 = 0.0000"
+		},
+		{
+			"name": "arg.704",
+			"status": "pass",
+			"details": "arg 704 = 0.0000"
+		},
+		{
+			"name": "arg.705",
+			"status": "pass",
+			"details": "arg 705 = 0.0000"
+		},
+		{
+			"name": "arg.706",
+			"status": "pass",
+			"details": "arg 706 = 0.0000"
+		},
+		{
+			"name": "arg.707",
+			"status": "pass",
+			"details": "arg 707 = 0.0000"
+		},
+		{
+			"name": "arg.708",
+			"status": "pass",
+			"details": "arg 708 = 0.0000"
+		},
+		{
+			"name": "arg.716",
+			"status": "pass",
+			"details": "arg 716 = 0.0000"
+		},
+		{
+			"name": "arg.717",
+			"status": "pass",
+			"details": "arg 717 = 0.0526"
+		},
+		{
+			"name": "arg.718",
+			"status": "pass",
+			"details": "arg 718 = 0.0000"
+		},
+		{
+			"name": "arg.72",
+			"status": "pass",
+			"details": "arg 72 = 0.0000"
+		},
+		{
+			"name": "arg.720",
+			"status": "pass",
+			"details": "arg 720 = 0.0000"
+		},
+		{
+			"name": "arg.721",
+			"status": "pass",
+			"details": "arg 721 = 0.0526"
+		},
+		{
+			"name": "arg.722",
+			"status": "pass",
+			"details": "arg 722 = 0.0000"
+		},
+		{
+			"name": "arg.724",
+			"status": "pass",
+			"details": "arg 724 = 0.0526"
+		},
+		{
+			"name": "arg.725",
+			"status": "pass",
+			"details": "arg 725 = 0.3158"
+		},
+		{
+			"name": "arg.726",
+			"status": "pass",
+			"details": "arg 726 = 0.0000"
+		},
+		{
+			"name": "arg.728",
+			"status": "pass",
+			"details": "arg 728 = 0.0000"
+		},
+		{
+			"name": "arg.729",
+			"status": "pass",
+			"details": "arg 729 = 0.0526"
+		},
+		{
+			"name": "arg.730",
+			"status": "pass",
+			"details": "arg 730 = 0.0000"
+		},
+		{
+			"name": "arg.732",
+			"status": "pass",
+			"details": "arg 732 = 0.0000"
+		},
+		{
+			"name": "arg.733",
+			"status": "pass",
+			"details": "arg 733 = 0.0526"
+		},
+		{
+			"name": "arg.734",
+			"status": "pass",
+			"details": "arg 734 = 0.0000"
+		},
+		{
+			"name": "arg.739",
+			"status": "pass",
+			"details": "arg 739 = 0.0000"
+		},
+		{
+			"name": "arg.746",
+			"status": "pass",
+			"details": "arg 746 = 0.0000"
+		},
+		{
+			"name": "arg.754",
+			"status": "pass",
+			"details": "arg 754 = 0.0000"
+		},
+		{
+			"name": "arg.76",
+			"status": "pass",
+			"details": "arg 76 = 0.0160"
+		},
+		{
+			"name": "arg.760",
+			"status": "pass",
+			"details": "arg 760 = 0.0000"
+		},
+		{
+			"name": "arg.766",
+			"status": "pass",
+			"details": "arg 766 = 0.0000"
+		},
+		{
+			"name": "arg.767",
+			"status": "pass",
+			"details": "arg 767 = 0.0000"
+		},
+		{
+			"name": "arg.77",
+			"status": "pass",
+			"details": "arg 77 = 0.0160"
+		},
+		{
+			"name": "arg.776",
+			"status": "pass",
+			"details": "arg 776 = 0.3396"
+		},
+		{
+			"name": "arg.777",
+			"status": "pass",
+			"details": "arg 777 = 1.0000"
+		},
+		{
+			"name": "arg.778",
+			"status": "pass",
+			"details": "arg 778 = 1.0000"
+		},
+		{
+			"name": "arg.779",
+			"status": "pass",
+			"details": "arg 779 = 1.0000"
+		},
+		{
+			"name": "arg.78",
+			"status": "pass",
+			"details": "arg 78 = 0.0001"
+		},
+		{
+			"name": "arg.780",
+			"status": "pass",
+			"details": "arg 780 = 0.0000"
+		},
+		{
+			"name": "arg.781",
+			"status": "pass",
+			"details": "arg 781 = 1.0000"
+		},
+		{
+			"name": "arg.783",
+			"status": "pass",
+			"details": "arg 783 = 0.0000"
+		},
+		{
+			"name": "arg.784",
+			"status": "pass",
+			"details": "arg 784 = 0.0000"
+		},
+		{
+			"name": "arg.786",
+			"status": "pass",
+			"details": "arg 786 = 0.0199"
+		},
+		{
+			"name": "arg.789",
+			"status": "pass",
+			"details": "arg 789 = 0.0491"
+		},
+		{
+			"name": "arg.79",
+			"status": "pass",
+			"details": "arg 79 = 0.0000"
+		},
+		{
+			"name": "arg.790",
+			"status": "pass",
+			"details": "arg 790 = 0.3396"
+		},
+		{
+			"name": "arg.791",
+			"status": "pass",
+			"details": "arg 791 = 0.0058"
+		},
+		{
+			"name": "arg.792",
+			"status": "pass",
+			"details": "arg 792 = 0.2000"
+		},
+		{
+			"name": "arg.793",
+			"status": "pass",
+			"details": "arg 793 = 1.0000"
+		},
+		{
+			"name": "arg.794",
+			"status": "pass",
+			"details": "arg 794 = 1.0000"
+		},
+		{
+			"name": "arg.795",
+			"status": "pass",
+			"details": "arg 795 = 1.0000"
+		},
+		{
+			"name": "arg.799",
+			"status": "pass",
+			"details": "arg 799 = 0.0000"
+		},
+		{
+			"name": "arg.800",
+			"status": "pass",
+			"details": "arg 800 = 0.0000"
+		},
+		{
+			"name": "arg.801",
+			"status": "pass",
+			"details": "arg 801 = 0.0005"
+		},
+		{
+			"name": "arg.802",
+			"status": "pass",
+			"details": "arg 802 = 1.0000"
+		},
+		{
+			"name": "arg.805",
+			"status": "pass",
+			"details": "arg 805 = 0.0000"
+		},
+		{
+			"name": "arg.806",
+			"status": "pass",
+			"details": "arg 806 = 0.0000"
+		},
+		{
+			"name": "arg.807",
+			"status": "pass",
+			"details": "arg 807 = 0.0000"
+		},
+		{
+			"name": "arg.808",
+			"status": "pass",
+			"details": "arg 808 = 0.2679"
+		},
+		{
+			"name": "arg.81",
+			"status": "pass",
+			"details": "arg 81 = 0.5857"
+		},
+		{
+			"name": "arg.811",
+			"status": "pass",
+			"details": "arg 811 = 0.3000"
+		},
+		{
+			"name": "arg.812",
+			"status": "pass",
+			"details": "arg 812 = 0.5375"
+		},
+		{
+			"name": "arg.813",
+			"status": "pass",
+			"details": "arg 813 = 0.9375"
+		},
+		{
+			"name": "arg.814",
+			"status": "pass",
+			"details": "arg 814 = 0.9375"
+		},
+		{
+			"name": "arg.817",
+			"status": "pass",
+			"details": "arg 817 = 0.0000"
+		},
+		{
+			"name": "arg.82",
+			"status": "pass",
+			"details": "arg 82 = 0.7653"
+		},
+		{
+			"name": "arg.821",
+			"status": "pass",
+			"details": "arg 821 = 0.0000"
+		},
+		{
+			"name": "arg.823",
+			"status": "pass",
+			"details": "arg 823 = 0.0000"
+		},
+		{
+			"name": "arg.824",
+			"status": "pass",
+			"details": "arg 824 = 0.0000"
+		},
+		{
+			"name": "arg.825",
+			"status": "pass",
+			"details": "arg 825 = 0.0000"
+		},
+		{
+			"name": "arg.828",
+			"status": "pass",
+			"details": "arg 828 = 0.0005"
+		},
+		{
+			"name": "arg.829",
+			"status": "pass",
+			"details": "arg 829 = 0.0007"
+		},
+		{
+			"name": "arg.830",
+			"status": "pass",
+			"details": "arg 830 = -0.0007"
+		},
+		{
+			"name": "arg.831",
+			"status": "pass",
+			"details": "arg 831 = 0.0000"
+		},
+		{
+			"name": "arg.832",
+			"status": "pass",
+			"details": "arg 832 = 1.0000"
+		},
+		{
+			"name": "arg.833",
+			"status": "pass",
+			"details": "arg 833 = 1.0000"
+		},
+		{
+			"name": "arg.834",
+			"status": "pass",
+			"details": "arg 834 = 0.7500"
+		},
+		{
+			"name": "arg.835",
+			"status": "pass",
+			"details": "arg 835 = 0.8220"
+		},
+		{
+			"name": "arg.836",
+			"status": "pass",
+			"details": "arg 836 = 1.0000"
+		},
+		{
+			"name": "arg.837",
+			"status": "pass",
+			"details": "arg 837 = 1.0000"
+		},
+		{
+			"name": "arg.838",
+			"status": "pass",
+			"details": "arg 838 = 0.0000"
+		},
+		{
+			"name": "arg.839",
+			"status": "pass",
+			"details": "arg 839 = 0.0000"
+		},
+		{
+			"name": "arg.84",
+			"status": "pass",
+			"details": "arg 84 = 0.7653"
+		},
+		{
+			"name": "arg.840",
+			"status": "pass",
+			"details": "arg 840 = 0.0027"
+		},
+		{
+			"name": "arg.841",
+			"status": "pass",
+			"details": "arg 841 = 0.0027"
+		},
+		{
+			"name": "arg.842",
+			"status": "pass",
+			"details": "arg 842 = 0.0000"
+		},
+		{
+			"name": "arg.845",
+			"status": "pass",
+			"details": "arg 845 = 0.1982"
+		},
+		{
+			"name": "arg.849",
+			"status": "pass",
+			"details": "arg 849 = 0.0000"
+		},
+		{
+			"name": "arg.850",
+			"status": "pass",
+			"details": "arg 850 = -0.0110"
+		},
+		{
+			"name": "arg.851",
+			"status": "pass",
+			"details": "arg 851 = -0.0842"
+		},
+		{
+			"name": "arg.852",
+			"status": "pass",
+			"details": "arg 852 = 0.0000"
+		},
+		{
+			"name": "arg.86",
+			"status": "pass",
+			"details": "arg 86 = 0.0000"
+		},
+		{
+			"name": "arg.860",
+			"status": "pass",
+			"details": "arg 860 = 0.0000"
+		},
+		{
+			"name": "arg.866",
+			"status": "pass",
+			"details": "arg 866 = 0.0000"
+		},
+		{
+			"name": "arg.867",
+			"status": "pass",
+			"details": "arg 867 = 0.0000"
+		},
+		{
+			"name": "arg.868",
+			"status": "pass",
+			"details": "arg 868 = 0.0000"
+		},
+		{
+			"name": "arg.869",
+			"status": "pass",
+			"details": "arg 869 = 0.0000"
+		},
+		{
+			"name": "arg.874",
+			"status": "pass",
+			"details": "arg 874 = 0.0000"
+		},
+		{
+			"name": "arg.876",
+			"status": "pass",
+			"details": "arg 876 = 0.0000"
+		},
+		{
+			"name": "arg.881",
+			"status": "pass",
+			"details": "arg 881 = 0.0000"
+		},
+		{
+			"name": "arg.888",
+			"status": "pass",
+			"details": "arg 888 = 0.0000"
+		},
+		{
+			"name": "arg.889",
+			"status": "pass",
+			"details": "arg 889 = 0.0000"
+		},
+		{
+			"name": "arg.891",
+			"status": "pass",
+			"details": "arg 891 = 0.0000"
+		},
+		{
+			"name": "arg.892",
+			"status": "pass",
+			"details": "arg 892 = 0.0000"
+		},
+		{
+			"name": "arg.893",
+			"status": "pass",
+			"details": "arg 893 = 0.0000"
+		},
+		{
+			"name": "arg.894",
+			"status": "pass",
+			"details": "arg 894 = 0.0000"
+		},
+		{
+			"name": "arg.895",
+			"status": "pass",
+			"details": "arg 895 = 0.0000"
+		},
+		{
+			"name": "arg.896",
+			"status": "pass",
+			"details": "arg 896 = 0.0000"
+		},
+		{
+			"name": "arg.897",
+			"status": "pass",
+			"details": "arg 897 = 0.0000"
+		},
+		{
+			"name": "arg.898",
+			"status": "pass",
+			"details": "arg 898 = 0.0000"
+		},
+		{
+			"name": "arg.9",
+			"status": "pass",
+			"details": "arg 9 = 0.0000"
+		},
+		{
+			"name": "arg.90",
+			"status": "pass",
+			"details": "arg 90 = 0.0006"
+		},
+		{
+			"name": "arg.900",
+			"status": "pass",
+			"details": "arg 900 = 0.0000"
+		},
+		{
+			"name": "arg.901",
+			"status": "pass",
+			"details": "arg 901 = 0.0000"
+		},
+		{
+			"name": "arg.902",
+			"status": "pass",
+			"details": "arg 902 = 0.0000"
+		},
+		{
+			"name": "arg.904",
+			"status": "pass",
+			"details": "arg 904 = 0.0000"
+		},
+		{
+			"name": "arg.914",
+			"status": "pass",
+			"details": "arg 914 = 0.0000"
+		},
+		{
+			"name": "arg.915",
+			"status": "pass",
+			"details": "arg 915 = 0.0000"
+		},
+		{
+			"name": "arg.916",
+			"status": "pass",
+			"details": "arg 916 = 0.8220"
+		},
+		{
+			"name": "arg.917",
+			"status": "pass",
+			"details": "arg 917 = 0.0000"
+		},
+		{
+			"name": "arg.918",
+			"status": "pass",
+			"details": "arg 918 = 0.0000"
+		},
+		{
+			"name": "arg.919",
+			"status": "pass",
+			"details": "arg 919 = 0.0000"
+		},
+		{
+			"name": "arg.92",
+			"status": "pass",
+			"details": "arg 92 = 0.0000"
+		},
+		{
+			"name": "arg.920",
+			"status": "pass",
+			"details": "arg 920 = 0.0000"
+		},
+		{
+			"name": "arg.921",
+			"status": "pass",
+			"details": "arg 921 = 0.0000"
+		},
+		{
+			"name": "arg.922",
+			"status": "pass",
+			"details": "arg 922 = 0.0000"
+		},
+		{
+			"name": "arg.923",
+			"status": "pass",
+			"details": "arg 923 = 0.0000"
+		},
+		{
+			"name": "arg.924",
+			"status": "pass",
+			"details": "arg 924 = 0.0000"
+		},
+		{
+			"name": "arg.925",
+			"status": "pass",
+			"details": "arg 925 = 0.0000"
+		},
+		{
+			"name": "arg.926",
+			"status": "pass",
+			"details": "arg 926 = 0.0000"
+		},
+		{
+			"name": "arg.927",
+			"status": "pass",
+			"details": "arg 927 = 0.0000"
+		},
+		{
+			"name": "arg.928",
+			"status": "pass",
+			"details": "arg 928 = 0.0000"
+		},
+		{
+			"name": "arg.929",
+			"status": "pass",
+			"details": "arg 929 = 0.0000"
+		},
+		{
+			"name": "arg.93",
+			"status": "pass",
+			"details": "arg 93 = 0.7653"
+		},
+		{
+			"name": "arg.930",
+			"status": "pass",
+			"details": "arg 930 = 0.0000"
+		},
+		{
+			"name": "arg.936",
+			"status": "pass",
+			"details": "arg 936 = 1.0000"
+		},
+		{
+			"name": "arg.937",
+			"status": "pass",
+			"details": "arg 937 = 1.0000"
+		},
+		{
+			"name": "arg.938",
+			"status": "pass",
+			"details": "arg 938 = 1.0000"
+		},
+		{
+			"name": "arg.939",
+			"status": "pass",
+			"details": "arg 939 = 0.0000"
+		},
+		{
+			"name": "arg.94",
+			"status": "pass",
+			"details": "arg 94 = 0.5857"
+		},
+		{
+			"name": "arg.940",
+			"status": "pass",
+			"details": "arg 940 = 1.0000"
+		},
+		{
+			"name": "arg.942",
+			"status": "pass",
+			"details": "arg 942 = 0.0000"
+		},
+		{
+			"name": "arg.943",
+			"status": "pass",
+			"details": "arg 943 = 0.0000"
+		},
+		{
+			"name": "arg.945",
+			"status": "pass",
+			"details": "arg 945 = 0.0199"
+		},
+		{
+			"name": "arg.948",
+			"status": "pass",
+			"details": "arg 948 = 1.0000"
+		},
+		{
+			"name": "arg.949",
+			"status": "pass",
+			"details": "arg 949 = 0.0000"
+		},
+		{
+			"name": "arg.95",
+			"status": "pass",
+			"details": "arg 95 = 0.0000"
+		},
+		{
+			"name": "arg.950",
+			"status": "pass",
+			"details": "arg 950 = 0.0000"
+		},
+		{
+			"name": "arg.952",
+			"status": "pass",
+			"details": "arg 952 = 1.0000"
+		},
+		{
+			"name": "arg.957",
+			"status": "pass",
+			"details": "arg 957 = 0.0000"
+		},
+		{
+			"name": "arg.958",
+			"status": "pass",
+			"details": "arg 958 = 0.0000"
+		},
+		{
+			"name": "arg.959",
+			"status": "pass",
+			"details": "arg 959 = 0.0000"
+		},
+		{
+			"name": "arg.960",
+			"status": "pass",
+			"details": "arg 960 = 0.0000"
+		},
+		{
+			"name": "arg.961",
+			"status": "pass",
+			"details": "arg 961 = 0.0000"
+		},
+		{
+			"name": "arg.962",
+			"status": "pass",
+			"details": "arg 962 = 0.0000"
+		},
+		{
+			"name": "arg.964",
+			"status": "pass",
+			"details": "arg 964 = 0.6083"
+		},
+		{
+			"name": "arg.966",
+			"status": "pass",
+			"details": "arg 966 = 0.0000"
+		},
+		{
+			"name": "arg.967",
+			"status": "pass",
+			"details": "arg 967 = 0.0000"
+		},
+		{
+			"name": "arg.972",
+			"status": "pass",
+			"details": "arg 972 = 0.4922"
+		},
+		{
+			"name": "arg.973",
+			"status": "pass",
+			"details": "arg 973 = 0.4922"
+		},
+		{
+			"name": "arg.975",
+			"status": "pass",
+			"details": "arg 975 = 0.0000"
+		},
+		{
+			"name": "arg.976",
+			"status": "pass",
+			"details": "arg 976 = 0.0000"
+		},
+		{
+			"name": "arg.977",
+			"status": "pass",
+			"details": "arg 977 = 0.0000"
+		},
+		{
+			"name": "arg.978",
+			"status": "pass",
+			"details": "arg 978 = 0.0000"
+		},
+		{
+			"name": "arg.979",
+			"status": "pass",
+			"details": "arg 979 = 0.0000"
+		},
+		{
+			"name": "arg.980",
+			"status": "pass",
+			"details": "arg 980 = 0.5863"
+		},
+		{
+			"name": "arg.981",
+			"status": "pass",
+			"details": "arg 981 = 0.0000"
+		},
+		{
+			"name": "arg.982",
+			"status": "pass",
+			"details": "arg 982 = 0.0000"
+		},
+		{
+			"name": "arg.986",
+			"status": "pass",
+			"details": "arg 986 = 0.5000"
+		},
+		{
+			"name": "arg.987",
+			"status": "pass",
+			"details": "arg 987 = 0.5000"
+		},
+		{
+			"name": "arg.988",
+			"status": "pass",
+			"details": "arg 988 = 0.4913"
+		},
+		{
+			"name": "arg.991",
+			"status": "pass",
+			"details": "arg 991 = 0.0000"
+		},
+		{
+			"name": "arg.992",
+			"status": "pass",
+			"details": "arg 992 = 0.0000"
+		},
+		{
+			"name": "arg.993",
+			"status": "pass",
+			"details": "arg 993 = 0.0000"
+		},
+		{
+			"name": "arg.994",
+			"status": "pass",
+			"details": "arg 994 = 0.0000"
+		},
+		{
+			"name": "arg.995",
+			"status": "pass",
+			"details": "arg 995 = 0.0000"
+		},
+		{
+			"name": "arg.996",
+			"status": "pass",
+			"details": "arg 996 = 0.0000"
+		},
+		{
+			"name": "arg.997",
+			"status": "pass",
+			"details": "arg 997 = 0.0000"
+		},
+		{
+			"name": "arg.998",
+			"status": "pass",
+			"details": "arg 998 = 0.0000"
+		},
+		{
+			"name": "arg.999",
+			"status": "pass",
+			"details": "arg 999 = 0.0000"
+		},
+		{
+			"name": "ind.0.BG_9k113",
+			"status": "pass",
+			"details": "field \"BG_9k113\" = \"\""
+		},
+		{
+			"name": "ind.0.BG_9k113_Green",
+			"status": "pass",
+			"details": "field \"BG_9k113_Green\" = \"\""
+		},
+		{
+			"name": "ind.0.BG_9k113_Orange",
+			"status": "pass",
+			"details": "field \"BG_9k113_Orange\" = \"\""
+		},
+		{
+			"name": "ind.0.Grid_10x_9k113",
+			"status": "pass",
+			"details": "field \"Grid_10x_9k113\" = \"\""
+		},
+		{
+			"name": "ind.0.Grid_10x_9k113_backlight",
+			"status": "pass",
+			"details": "field \"Grid_10x_9k113_backlight\" = \"\""
+		},
+		{
+			"name": "ind.0.Grid_3x_9k113",
+			"status": "pass",
+			"details": "field \"Grid_3x_9k113\" = \"\""
+		},
+		{
+			"name": "ind.0.Grid_3x_9k113_backlight",
+			"status": "pass",
+			"details": "field \"Grid_3x_9k113_backlight\" = \"\""
+		},
+		{
+			"name": "ind.0.Grid_9k113",
+			"status": "pass",
+			"details": "field \"Grid_9k113\" = \"\""
+		},
+		{
+			"name": "ind.0.Ready_9k113",
+			"status": "pass",
+			"details": "field \"Ready_9k113\" = \"\""
+		},
+		{
+			"name": "ind.0.SCENE",
+			"status": "pass",
+			"details": "field \"SCENE\" = \"\""
+		},
+		{
+			"name": "ind.0.SteeringLine",
+			"status": "pass",
+			"details": "field \"SteeringLine\" = \"\""
+		},
+		{
+			"name": "ind.0.baseFrame",
+			"status": "pass",
+			"details": "field \"baseFrame\" = \"\""
+		},
+		{
+			"name": "ind.0.fr1",
+			"status": "pass",
+			"details": "field \"fr1\" = \"\""
+		},
+		{
+			"name": "ind.0.txt_NABLTips",
+			"status": "pass",
+			"details": "field \"txt_NABLTips\" = \"OPEN SIGHT DOORS\""
+		},
+		{
+			"name": "ind.0.txt_Tips",
+			"status": "pass",
+			"details": "field \"txt_Tips\" = \"HIDE/SHOW TIPS  [LWIN+H]\""
+		},
+		{
+			"name": "ind.1.SymbologyBox",
+			"status": "pass",
+			"details": "field \"SymbologyBox\" = \"\""
+		},
+		{
+			"name": "ind.1.pkv_grid",
+			"status": "skip",
+			"details": "field \"pkv_grid\" declared in extraction but not currently emitted by indication 1"
+		},
+		{
+			"name": "ind.1.total_field_of_view",
+			"status": "pass",
+			"details": "field \"total_field_of_view\" = \"\""
+		},
+		{
+			"name": "ind.2.Distance_Sector",
+			"status": "skip",
+			"details": "field \"Distance_Sector\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.FlexCross",
+			"status": "skip",
+			"details": "field \"FlexCross\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.FlexCrossLine1",
+			"status": "skip",
+			"details": "field \"FlexCrossLine1\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.FlexCrossLine2",
+			"status": "skip",
+			"details": "field \"FlexCrossLine2\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.FlexCrossLine3",
+			"status": "skip",
+			"details": "field \"FlexCrossLine3\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.FlexCrossLine4",
+			"status": "skip",
+			"details": "field \"FlexCrossLine4\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.RollPointer",
+			"status": "skip",
+			"details": "field \"RollPointer\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.SymbologyBox",
+			"status": "pass",
+			"details": "field \"SymbologyBox\" = \"\""
+		},
+		{
+			"name": "ind.2.asp17_grid",
+			"status": "skip",
+			"details": "field \"asp17_grid\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.distance_border",
+			"status": "skip",
+			"details": "field \"distance_border\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.effective_distance_sector",
+			"status": "skip",
+			"details": "field \"effective_distance_sector\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.2.total_field_of_view",
+			"status": "skip",
+			"details": "field \"total_field_of_view\" declared in extraction but not currently emitted by indication 2"
+		},
+		{
+			"name": "ind.3.au_B_30_limit-1",
+			"status": "pass",
+			"details": "field \"au_B_30_limit-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_B_30_limit1",
+			"status": "pass",
+			"details": "field \"au_B_30_limit1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit1-10",
+			"status": "pass",
+			"details": "field \"au_HP_limit1-10\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit110",
+			"status": "pass",
+			"details": "field \"au_HP_limit110\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit2-1-1",
+			"status": "pass",
+			"details": "field \"au_HP_limit2-1-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit2-10",
+			"status": "pass",
+			"details": "field \"au_HP_limit2-10\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit2-11",
+			"status": "pass",
+			"details": "field \"au_HP_limit2-11\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit21-1",
+			"status": "pass",
+			"details": "field \"au_HP_limit21-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit210",
+			"status": "pass",
+			"details": "field \"au_HP_limit210\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit211",
+			"status": "pass",
+			"details": "field \"au_HP_limit211\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit3-1-1",
+			"status": "pass",
+			"details": "field \"au_HP_limit3-1-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit3-10",
+			"status": "pass",
+			"details": "field \"au_HP_limit3-10\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit3-11",
+			"status": "pass",
+			"details": "field \"au_HP_limit3-11\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit31-1",
+			"status": "pass",
+			"details": "field \"au_HP_limit31-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit310",
+			"status": "pass",
+			"details": "field \"au_HP_limit310\" = \"\""
+		},
+		{
+			"name": "ind.3.au_HP_limit311",
+			"status": "pass",
+			"details": "field \"au_HP_limit311\" = \"\""
+		},
+		{
+			"name": "ind.3.au_R_limit-1-1",
+			"status": "pass",
+			"details": "field \"au_R_limit-1-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_R_limit-11",
+			"status": "pass",
+			"details": "field \"au_R_limit-11\" = \"\""
+		},
+		{
+			"name": "ind.3.au_R_limit0-1",
+			"status": "pass",
+			"details": "field \"au_R_limit0-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_R_limit01",
+			"status": "pass",
+			"details": "field \"au_R_limit01\" = \"\""
+		},
+		{
+			"name": "ind.3.au_R_limit1-1",
+			"status": "pass",
+			"details": "field \"au_R_limit1-1\" = \"\""
+		},
+		{
+			"name": "ind.3.au_R_limit11",
+			"status": "pass",
+			"details": "field \"au_R_limit11\" = \"\""
+		},
+		{
+			"name": "ind.3.au_height_position",
+			"status": "pass",
+			"details": "field \"au_height_position\" = \"\""
+		},
+		{
+			"name": "ind.3.au_pitch_position",
+			"status": "pass",
+			"details": "field \"au_pitch_position\" = \"\""
+		},
+		{
+			"name": "ind.3.au_roll_position",
+			"status": "pass",
+			"details": "field \"au_roll_position\" = \"\""
+		},
+		{
+			"name": "ind.3.au_roll_scale",
+			"status": "pass",
+			"details": "field \"au_roll_scale\" = \"\""
+		},
+		{
+			"name": "ind.3.au_rudder_position",
+			"status": "pass",
+			"details": "field \"au_rudder_position\" = \"\""
+		},
+		{
+			"name": "ind.3.autopilot_base",
+			"status": "pass",
+			"details": "field \"autopilot_base\" = \"\""
+		},
+		{
+			"name": "ind.3.base",
+			"status": "pass",
+			"details": "field \"base\" = \"\""
+		},
+		{
+			"name": "ind.3.pitch_scale",
+			"status": "pass",
+			"details": "field \"pitch_scale\" = \"\""
+		},
+		{
+			"name": "ind.3.roll_scale",
+			"status": "pass",
+			"details": "field \"roll_scale\" = \"\""
+		},
+		{
+			"name": "ind.3.stick_position",
+			"status": "pass",
+			"details": "field \"stick_position\" = \"\""
+		},
+		{
+			"name": "ind.3.txt_autopilot",
+			"status": "skip",
+			"details": "field \"txt_autopilot\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.txt_autopilot_hover",
+			"status": "skip",
+			"details": "field \"txt_autopilot_hover\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.txt_brakes",
+			"status": "pass",
+			"details": "field \"txt_brakes\" = \"B\""
+		},
+		{
+			"name": "ind.3.txt_chan_name0",
+			"status": "pass",
+			"details": "field \"txt_chan_name0\" = \"H\""
+		},
+		{
+			"name": "ind.3.txt_chan_name1",
+			"status": "pass",
+			"details": "field \"txt_chan_name1\" = \"K\""
+		},
+		{
+			"name": "ind.3.txt_chan_name2",
+			"status": "pass",
+			"details": "field \"txt_chan_name2\" = \"T\""
+		},
+		{
+			"name": "ind.3.txt_chan_name3",
+			"status": "pass",
+			"details": "field \"txt_chan_name3\" = \"B\""
+		},
+		{
+			"name": "ind.3.txt_goes_left",
+			"status": "skip",
+			"details": "field \"txt_goes_left\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.txt_goes_right",
+			"status": "skip",
+			"details": "field \"txt_goes_right\" declared in extraction but not currently emitted by indication 3"
+		},
+		{
+			"name": "ind.3.wheel_brake",
+			"status": "pass",
+			"details": "field \"wheel_brake\" = \"\""
+		},
+		{
+			"name": "ind.3.wheel_brake_mask",
+			"status": "pass",
+			"details": "field \"wheel_brake_mask\" = \"\""
+		},
+		{
+			"name": "ind.4.back",
+			"status": "pass",
+			"details": "field \"back\" = \"\""
+		},
+		{
+			"name": "ind.4.caption_line",
+			"status": "skip",
+			"details": "field \"caption_line\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.line",
+			"status": "skip",
+			"details": "field \"line\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.text_az",
+			"status": "skip",
+			"details": "field \"text_az\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.text_dist",
+			"status": "skip",
+			"details": "field \"text_dist\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.text_time",
+			"status": "skip",
+			"details": "field \"text_time\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.4.waypoint",
+			"status": "skip",
+			"details": "field \"waypoint\" declared in extraction but not currently emitted by indication 4"
+		},
+		{
+			"name": "ind.6.alt_add_text",
+			"status": "skip",
+			"details": "field \"alt_add_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.alt_holder_white",
+			"status": "skip",
+			"details": "field \"alt_holder_white\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.alt_holder_yellow",
+			"status": "skip",
+			"details": "field \"alt_holder_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.alt_text",
+			"status": "skip",
+			"details": "field \"alt_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.alt_text_top",
+			"status": "skip",
+			"details": "field \"alt_text_top\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.az_holder_beige",
+			"status": "skip",
+			"details": "field \"az_holder_beige\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.az_holder_green",
+			"status": "skip",
+			"details": "field \"az_holder_green\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.az_holder_red",
+			"status": "skip",
+			"details": "field \"az_holder_red\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.az_holder_yellow",
+			"status": "skip",
+			"details": "field \"az_holder_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.az_text",
+			"status": "skip",
+			"details": "field \"az_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.compass_arrow",
+			"status": "skip",
+			"details": "field \"compass_arrow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.compass_base",
+			"status": "skip",
+			"details": "field \"compass_base\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.compass_cross",
+			"status": "skip",
+			"details": "field \"compass_cross\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.compass_marks_white",
+			"status": "skip",
+			"details": "field \"compass_marks_white\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.compass_marks_yellow",
+			"status": "skip",
+			"details": "field \"compass_marks_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.compass_scale",
+			"status": "skip",
+			"details": "field \"compass_scale\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_frame",
+			"status": "skip",
+			"details": "field \"countermeasures_frame\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_interval_2",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_2\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_interval_4",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_4\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_interval_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_bug\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_interval_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_caption\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_interval_circle",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_circle\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_series_16",
+			"status": "skip",
+			"details": "field \"countermeasures_series_16\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_series_4",
+			"status": "skip",
+			"details": "field \"countermeasures_series_4\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_series_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_series_bug\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_series_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_series_caption\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_series_circle",
+			"status": "skip",
+			"details": "field \"countermeasures_series_circle\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_side_bar",
+			"status": "skip",
+			"details": "field \"countermeasures_side_bar\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_side_both",
+			"status": "skip",
+			"details": "field \"countermeasures_side_both\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_side_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_side_bug\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_side_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_side_caption\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_side_left",
+			"status": "skip",
+			"details": "field \"countermeasures_side_left\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_side_right",
+			"status": "skip",
+			"details": "field \"countermeasures_side_right\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_type_bar",
+			"status": "skip",
+			"details": "field \"countermeasures_type_bar\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_type_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_type_bug\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_type_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_type_caption\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_type_chaff",
+			"status": "skip",
+			"details": "field \"countermeasures_type_chaff\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.countermeasures_type_flare",
+			"status": "skip",
+			"details": "field \"countermeasures_type_flare\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.course_holder_white",
+			"status": "skip",
+			"details": "field \"course_holder_white\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.course_text",
+			"status": "skip",
+			"details": "field \"course_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.course_with_head",
+			"status": "skip",
+			"details": "field \"course_with_head\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.crosshair",
+			"status": "skip",
+			"details": "field \"crosshair\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.el_holder_beige",
+			"status": "skip",
+			"details": "field \"el_holder_beige\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.el_holder_green",
+			"status": "skip",
+			"details": "field \"el_holder_green\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.el_holder_red",
+			"status": "skip",
+			"details": "field \"el_holder_red\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.el_holder_yellow",
+			"status": "skip",
+			"details": "field \"el_holder_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.el_text",
+			"status": "skip",
+			"details": "field \"el_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.hdg_holder_beige",
+			"status": "skip",
+			"details": "field \"hdg_holder_beige\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.hdg_holder_green",
+			"status": "skip",
+			"details": "field \"hdg_holder_green\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.hdg_holder_red",
+			"status": "skip",
+			"details": "field \"hdg_holder_red\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.hdg_holder_yellow",
+			"status": "skip",
+			"details": "field \"hdg_holder_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.hdg_text",
+			"status": "skip",
+			"details": "field \"hdg_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.lower_list_text",
+			"status": "skip",
+			"details": "field \"lower_list_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.lower_lower_list_text",
+			"status": "skip",
+			"details": "field \"lower_lower_list_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.middle_list_arrow",
+			"status": "skip",
+			"details": "field \"middle_list_arrow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.middle_list_holder",
+			"status": "skip",
+			"details": "field \"middle_list_holder\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.middle_list_text",
+			"status": "skip",
+			"details": "field \"middle_list_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.mode_holder_white",
+			"status": "skip",
+			"details": "field \"mode_holder_white\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.mode_holder_yellow",
+			"status": "skip",
+			"details": "field \"mode_holder_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.mode_text",
+			"status": "skip",
+			"details": "field \"mode_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.speed_holder_white",
+			"status": "skip",
+			"details": "field \"speed_holder_white\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.speed_holder_yellow",
+			"status": "skip",
+			"details": "field \"speed_holder_yellow\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.speed_text",
+			"status": "skip",
+			"details": "field \"speed_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.speed_text_top",
+			"status": "skip",
+			"details": "field \"speed_text_top\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.upper_list_text",
+			"status": "skip",
+			"details": "field \"upper_list_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.6.upper_upper_list_text",
+			"status": "skip",
+			"details": "field \"upper_upper_list_text\" declared in extraction but not currently emitted by indication 6"
+		},
+		{
+			"name": "ind.7.alt_add_text",
+			"status": "skip",
+			"details": "field \"alt_add_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.alt_holder_white",
+			"status": "skip",
+			"details": "field \"alt_holder_white\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.alt_holder_yellow",
+			"status": "skip",
+			"details": "field \"alt_holder_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.alt_text",
+			"status": "skip",
+			"details": "field \"alt_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.alt_text_top",
+			"status": "skip",
+			"details": "field \"alt_text_top\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.az_holder_beige",
+			"status": "skip",
+			"details": "field \"az_holder_beige\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.az_holder_green",
+			"status": "skip",
+			"details": "field \"az_holder_green\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.az_holder_red",
+			"status": "skip",
+			"details": "field \"az_holder_red\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.az_holder_yellow",
+			"status": "skip",
+			"details": "field \"az_holder_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.az_text",
+			"status": "skip",
+			"details": "field \"az_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.compass_arrow",
+			"status": "skip",
+			"details": "field \"compass_arrow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.compass_base",
+			"status": "skip",
+			"details": "field \"compass_base\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.compass_cross",
+			"status": "skip",
+			"details": "field \"compass_cross\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.compass_marks_white",
+			"status": "skip",
+			"details": "field \"compass_marks_white\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.compass_marks_yellow",
+			"status": "skip",
+			"details": "field \"compass_marks_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.compass_scale",
+			"status": "skip",
+			"details": "field \"compass_scale\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_frame",
+			"status": "skip",
+			"details": "field \"countermeasures_frame\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_interval_2",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_2\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_interval_4",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_4\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_interval_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_bug\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_interval_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_caption\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_interval_circle",
+			"status": "skip",
+			"details": "field \"countermeasures_interval_circle\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_series_16",
+			"status": "skip",
+			"details": "field \"countermeasures_series_16\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_series_4",
+			"status": "skip",
+			"details": "field \"countermeasures_series_4\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_series_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_series_bug\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_series_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_series_caption\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_series_circle",
+			"status": "skip",
+			"details": "field \"countermeasures_series_circle\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_side_bar",
+			"status": "skip",
+			"details": "field \"countermeasures_side_bar\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_side_both",
+			"status": "skip",
+			"details": "field \"countermeasures_side_both\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_side_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_side_bug\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_side_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_side_caption\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_side_left",
+			"status": "skip",
+			"details": "field \"countermeasures_side_left\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_side_right",
+			"status": "skip",
+			"details": "field \"countermeasures_side_right\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_type_bar",
+			"status": "skip",
+			"details": "field \"countermeasures_type_bar\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_type_bug",
+			"status": "skip",
+			"details": "field \"countermeasures_type_bug\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_type_caption",
+			"status": "skip",
+			"details": "field \"countermeasures_type_caption\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_type_chaff",
+			"status": "skip",
+			"details": "field \"countermeasures_type_chaff\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.countermeasures_type_flare",
+			"status": "skip",
+			"details": "field \"countermeasures_type_flare\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.course_holder_white",
+			"status": "skip",
+			"details": "field \"course_holder_white\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.course_text",
+			"status": "skip",
+			"details": "field \"course_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.course_with_head",
+			"status": "skip",
+			"details": "field \"course_with_head\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.crosshair",
+			"status": "skip",
+			"details": "field \"crosshair\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.el_holder_beige",
+			"status": "skip",
+			"details": "field \"el_holder_beige\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.el_holder_green",
+			"status": "skip",
+			"details": "field \"el_holder_green\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.el_holder_red",
+			"status": "skip",
+			"details": "field \"el_holder_red\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.el_holder_yellow",
+			"status": "skip",
+			"details": "field \"el_holder_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.el_text",
+			"status": "skip",
+			"details": "field \"el_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.hdg_holder_beige",
+			"status": "skip",
+			"details": "field \"hdg_holder_beige\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.hdg_holder_green",
+			"status": "skip",
+			"details": "field \"hdg_holder_green\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.hdg_holder_red",
+			"status": "skip",
+			"details": "field \"hdg_holder_red\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.hdg_holder_yellow",
+			"status": "skip",
+			"details": "field \"hdg_holder_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.hdg_text",
+			"status": "skip",
+			"details": "field \"hdg_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.lower_list_text",
+			"status": "skip",
+			"details": "field \"lower_list_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.lower_lower_list_text",
+			"status": "skip",
+			"details": "field \"lower_lower_list_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.middle_list_arrow",
+			"status": "skip",
+			"details": "field \"middle_list_arrow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.middle_list_holder",
+			"status": "skip",
+			"details": "field \"middle_list_holder\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.middle_list_text",
+			"status": "skip",
+			"details": "field \"middle_list_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mode_holder_white",
+			"status": "skip",
+			"details": "field \"mode_holder_white\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mode_holder_yellow",
+			"status": "skip",
+			"details": "field \"mode_holder_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.mode_text",
+			"status": "skip",
+			"details": "field \"mode_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.speed_holder_white",
+			"status": "skip",
+			"details": "field \"speed_holder_white\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.speed_holder_yellow",
+			"status": "skip",
+			"details": "field \"speed_holder_yellow\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.speed_text",
+			"status": "skip",
+			"details": "field \"speed_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.speed_text_top",
+			"status": "skip",
+			"details": "field \"speed_text_top\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.upper_list_text",
+			"status": "skip",
+			"details": "field \"upper_list_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.7.upper_upper_list_text",
+			"status": "skip",
+			"details": "field \"upper_upper_list_text\" declared in extraction but not currently emitted by indication 7"
+		},
+		{
+			"name": "ind.8.base",
+			"status": "skip",
+			"details": "field \"base\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.mem_base0",
+			"status": "skip",
+			"details": "field \"mem_base0\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.mem_base1",
+			"status": "skip",
+			"details": "field \"mem_base1\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_Gunner_Key",
+			"status": "skip",
+			"details": "field \"txt_Gunner_Key\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_Hints",
+			"status": "skip",
+			"details": "field \"txt_Hints\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_Status",
+			"status": "skip",
+			"details": "field \"txt_Status\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_ammo0",
+			"status": "skip",
+			"details": "field \"txt_ammo0\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_ammo1",
+			"status": "skip",
+			"details": "field \"txt_ammo1\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_burst0",
+			"status": "skip",
+			"details": "field \"txt_burst0\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_burst1",
+			"status": "skip",
+			"details": "field \"txt_burst1\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_mem0",
+			"status": "skip",
+			"details": "field \"txt_mem0\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_mem1",
+			"status": "skip",
+			"details": "field \"txt_mem1\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_status0",
+			"status": "skip",
+			"details": "field \"txt_status0\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "ind.8.txt_status1",
+			"status": "skip",
+			"details": "field \"txt_status1\" declared in extraction but not currently emitted by indication 8"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Gear_Operator_Cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Command_CPT_MECH_Gear_Pilot_LightsOff_Cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "CPT_MECH.Trimmer_myself_cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.GroundCheckCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.NetworkToBatteriesCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Rotary115vConverterCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ELEC_INTERFACE.Rotary36vConverterCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "ENGINE_INTERFACE.ANTIDUST_On_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_EmergencyReleaseBtn_Cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_OperatorEmergencyReleaseBtn_Cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_CARGO_EQUIPMENT.CMD_TacticalReleaseBtn_Cover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "EXT_LIGHTS_SYSTEM.Headlight_Operator_Switch_PCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveLeftEngineCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "FUELSYS_INTERFACE.ValveRightEngineCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HELPER_AI.DisengageOperatorStickButtonCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.DisableAuxiliaryHydroCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.GearHydroCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.Hydro_Damper_OCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.Hydro_Damper_PCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.Hydro_Damper_Switch_PCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "HYDRO_SYS_INTERFACE.MainHydroCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Disaster_SwCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "IFF.CMD_IFF_Erase_BtnCover",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "INT_LIGHTS_SYSTEM.CargoWhiteLightingOn_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_CONTROL_On_ME_OPERATOR_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_EMERG_EXPLODE_OPERATOR_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_EMERG_RELEASE_OPERATOR_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_EMERG_RELEASE_PU_OPERATOR_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_RUV_FIRE_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Operator_SWITCHER_BOMB_BLOCK_BOMB_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_EMERG_EXPLODE_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_EMERG_RELEASE_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_EMERG_RELEASE_PU_COVER",
+			"status": "pass",
+			"details": "2 positions OK"
+		},
+		{
+			"name": "WEAP_SYS.Pilot_RUV_FIRE_Cvr",
+			"status": "pass",
+			"details": "2 positions OK"
+		}
+	]
+}
